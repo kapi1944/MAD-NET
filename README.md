@@ -83,3 +83,5 @@ Publikacja repozytorium na GitHubie **nie oznacza publikacji witryny**. Do produ
 - **Dostępność:** formularz technologii/pakietów, umowy, adresu i mapy; geokodowanie zależne od internetu. E-mail wysyła wyłącznie produkcyjny backend po skonfigurowaniu.
 
 Więcej: [plan rozwoju](docs/PLAN_ROZWOJU.md) · [architektura](docs/ARCHITEKTURA.md) · [ustalenia](docs/DECYZJE.md) · [instrukcje dla Codexa](docs/WYTYCZNE_DLA_CODEXA.md).
+
+Integracja V21: [audyt](docs/AUDYT_MIGRACJI_V21.md) i [raport](docs/RAPORT_INTEGRACJI_V21.md). `npm run test:browser` sprawdza również 64 kombinacje tabel na ośmiu szerokościach i zapisuje porównania w `test-results/v21/`.

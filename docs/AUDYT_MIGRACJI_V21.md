@@ -25,3 +25,5 @@ A: obecna; B: uboższa; C: brak; D: zastąpiona lepszą; E: osobna decyzja. Klas
 | `selectPlan` | obecna | obecna | identyczna implementacja | A — zachować | P0 |
 
 Mapa: zachowujemy uruchamianie na żądanie, ręczną pinezkę, wyszukiwanie Nominatim, fallback CDN i możliwość podania adresu. Leaflet nie wymaga WebGL, klucza ani płatnego API; obecne opóźnione ładowanie ogranicza koszt startu. Nie stwierdzono przewagi MapLibre uzasadniającej wymianę silnika. W obu wariantach potrzebny jest internet i atrybucja OSM; dla stylu OpenFreeMap dodatkowo atrybucja dostawcy. Ręczne współrzędne działają niezależnie od biblioteki i zachowują istniejący format lokalizacji API. Osadzony iframe nie pozwala wybierać pinezki, dlatego zastępuje go jawny link do OSM oraz pola współrzędnych, zamiast drugiego silnika mapowego.
+
+Źródła techniczne: [Leaflet API i atrybucja](https://leafletjs.com/reference), [MapLibre — wymaganie WebGL](https://maplibre.org/maplibre-gl-js/docs/), [licencja BSD MapLibre](https://github.com/maplibre/maplibre-gl-js/blob/main/LICENSE.txt). Ocena wyboru silnika jest decyzją projektową, nie wynikiem benchmarku obu bibliotek.

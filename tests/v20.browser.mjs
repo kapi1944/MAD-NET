@@ -126,7 +126,7 @@ try {
         assert.deepEqual(await strona.locator('#plans .price strong').allTextContents(), pakiety.map(pakiet => okres === 'none' ? 'Wycena indywidualna' : String(pakiet[okres === '12' ? 3 : 2])));
       }
       assert.equal(await strona.locator('[data-term="12"]').isDisabled(), technologia === 'FIBER');
-      await strona.locator(`[data-table-technology="${technologia}"]`).click();
+      if (await strona.locator('#compare-show-all').isEnabled()) await strona.locator('#compare-show-all').click();
       const tabela = await strona.locator('#comparison-panel').innerText();
       for (const pakiet of pakiety) assert.ok(tabela.includes(`${technologia}-${pakiet[0]}`));
 
