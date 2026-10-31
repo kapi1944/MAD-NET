@@ -16,3 +16,7 @@ Weryfikacja: `npm run verify` i `npm run test:browser` przeszły (istniejąca we
 
 1. Wyizoluj tylko centralną szafę z referencji, bez strony, PCB i panelu, na przezroczystym tle. Zachowaj kamerę, proporcje, stal, otwarty front, kolorowe LAN/FIBER/AIR, logo, 5/3/5 kanałów, dokładnie 12 śrub i osadzony zamek. Usuń zwisające klucze. Bez nowego projektu szafy.
 2. Usunięcie tła: zachowaj szafę, porty, 12 śrub, logo i oświetlenie. Poza rzeczywistą sylwetką pełne przezroczyste alfa, bez czarnego tła, cienia i wklejonej szachownicy.
+
+## Wariant ciemny v2
+
+Na życzenie użytkownika aktualny podgląd korzysta z rack-ciemny-v2.png. Wbudowany image_gen: przyciemnij stal w kierunku referencji; zachowaj bryłę, alfa, logo, porty i 12 śrub; zmień prawe oznaczenia na jednoliniowe 5-PORT, 3-PORT, 5-CH, bez zer wiodących, mniejsza czcionka, cyfra nieco większa od przyrostka. Oryginalny kandydat pozostaje zachowany. To nadal proof przed integracją interakcji.
