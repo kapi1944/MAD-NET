@@ -268,17 +268,22 @@ try {
         const etykieta = karta.querySelector('.card-terminal-label').getBoundingClientRect();
         const port = karta.querySelector('.mini-interface').getBoundingClientRect();
         const liczba = karta.querySelector('.predkosc-pobierania strong');
+        const jednostka = karta.querySelector('.predkosc-pobierania small').getBoundingClientRect();
+        const pobieranie = karta.querySelector('.spec:first-child'), wysylanie = karta.querySelector('.spec:last-child');
+        const ramkaPobierania = pobieranie.getBoundingClientRect(), ramkaWysylania = wysylanie.getBoundingClientRect();
         const nazwa = karta.querySelector('.plan-speed'), technologia = nazwa.querySelector('.nazwa-technologii');
         return { nazwa: nazwa.textContent, oczekiwana: karta.dataset.technology + '-' + karta.dataset.speed,
           kolorTechnologii: getComputedStyle(technologia).color, kolorNumeru: getComputedStyle(nazwa).color,
           numeracja: !!karta.querySelector('.plan-index'), etykietaNad: etykieta.bottom <= port.top,
-          rozmiar: parseFloat(getComputedStyle(liczba).fontSize), przepelnienie: karta.scrollWidth > karta.clientWidth + 1 };
+          rozmiar: parseFloat(getComputedStyle(liczba).fontSize), przepelnienie: karta.scrollWidth > karta.clientWidth + 1,
+          separator: parseFloat(getComputedStyle(pobieranie).borderLeftWidth) === 0 && (ramkaWysylania.top >= ramkaPobierania.bottom - 1 || ramkaWysylania.height >= ramkaPobierania.height - 1),
+          bezKolizji: ramkaWysylania.top >= ramkaPobierania.bottom - 1 || jednostka.right <= ramkaWysylania.left + 1 };
       }));
       kafelki.forEach(karta => {
         assert.equal(karta.nazwa, karta.oczekiwana); assert.equal(karta.numeracja, false);
         assert.equal(karta.kolorTechnologii, { LAN: 'rgb(255, 32, 62)', FIBER: 'rgb(255, 123, 25)', AIR: 'rgb(45, 156, 255)' }[technologia]);
         assert.equal(karta.kolorNumeru, 'rgb(245, 246, 248)');
-        assert.ok(karta.etykietaNad && !karta.przepelnienie); assert.equal(karta.rozmiar, 42);
+        assert.ok(karta.etykietaNad && !karta.przepelnienie && karta.separator && karta.bezKolizji); assert.equal(karta.rozmiar, 35.7);
       });
       await strona.locator('#central-device .speed-port').last().click();
       await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));
