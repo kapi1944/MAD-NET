@@ -777,3 +777,108 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 @keyframes impuls-pcb{from{stroke-dashoffset:800}to{stroke-dashoffset:0}}
 .mot-off .pcb-impulsy{display:none}
 @media(prefers-reduced-motion:reduce){.pcb-impulsy{display:none}}
+
+.availability-contract-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;gap:13px;padding:0;margin:16px 0 0;min-width:0}
+.availability-contract-options label{display:block;min-width:0;position:relative;cursor:pointer}
+.availability-contract-options input{position:absolute;width:1px;height:1px;margin:0;opacity:0;pointer-events:none}
+.availability-contract-options .availability-contract-card{display:flex;align-items:center;gap:12px;min-height:68px;width:100%;padding:15px 14px;border-radius:12px;border:1px solid #445365;background:#0d1520;color:#f4f7fc;transition:border-color .18s,background .18s,box-shadow .18s}
+.availability-contract-options .availability-contract-icon{display:grid;place-items:center;width:20px;height:20px;min-width:20px;border:2px solid #63758a;border-radius:6px;background:#151e2a;color:transparent;font-size:12px;font-weight:900;transition:all .18s}
+.availability-contract-options .availability-contract-copy{display:flex;flex-direction:column;gap:4px;min-width:0}
+.availability-contract-options .availability-contract-copy b{font-size:14px;line-height:1.25}
+.availability-contract-options .availability-contract-copy small{font-size:10.5px;font-weight:500;line-height:1.3;color:#a8b7c7}
+.availability-contract-options label:hover .availability-contract-card{border-color:#b97b8a}
+.availability-contract-options label:has(input:checked) .availability-contract-card{border-color:#ff3151;background:linear-gradient(145deg,rgba(255,32,62,.17),#101722);box-shadow:inset 0 0 0 1px rgba(255,32,62,.16),0 0 16px rgba(255,32,62,.08)}
+.availability-contract-options label:has(input:checked) .availability-contract-icon{border-color:#ff3151;background:#ff203e;color:#fff}
+.availability-contract-options label input:focus-visible+.availability-contract-card{outline:3px solid white;outline-offset:3px}
+@media(max-width:720px){.availability-contract-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.availability-contract-options{grid-template-columns:1fr;gap:9px}.availability-contract-options .availability-contract-card{min-height:59px;padding:12px 13px}}
+
+.compare-filter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 10px}
+.compare-filter{--choice:#ff7b19;display:flex;align-items:center;gap:11px;min-width:0;min-height:76px;padding:13px 14px;text-align:left;color:#e4edf6;background:#0e1722;border:1px solid color-mix(in srgb,var(--choice) 40%,#435262);border-radius:12px;transition:border-color .17s,background .17s,box-shadow .17s;cursor:pointer}
+.compare-filter[data-table-technology="LAN"]{--choice:#ff203e}
+.compare-filter[data-table-technology="AIR"]{--choice:#3fa8ff}
+.compare-filter:hover{border-color:var(--choice);background:#152030}
+.compare-filter[aria-pressed="true"]{border-color:var(--choice);background:linear-gradient(115deg,color-mix(in srgb,var(--choice) 18%,#0f1824),#101924);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--choice) 22%,transparent),0 0 22px color-mix(in srgb,var(--choice) 11%,transparent)}
+.compare-filter:focus-visible,.compare-action:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.compare-filter-check{display:grid;place-items:center;flex:0 0 19px;width:19px;height:19px;border-radius:4px;border:1.5px solid #84919d;color:transparent;font-size:12px;font-weight:900;background:#25313d;transition:background .18s}
+.compare-filter[aria-pressed="true"] .compare-filter-check{border-color:var(--choice);background:var(--choice);color:#070c13}
+.compare-filter-symbol{font-size:22px;line-height:1;color:var(--choice)}
+.compare-filter-copy{min-width:0;display:block}
+.compare-filter-copy strong{display:block;font-size:13px;line-height:1.3}
+.compare-filter-copy small{display:block;color:#9bafc1;font-size:10.5px;line-height:1.5;margin-top:3px}
+.compare-filter-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#9baabc;font-size:11px;margin:10px 0 23px}
+.compare-filter-actions>div{display:flex;gap:7px;flex-wrap:wrap}
+.compare-action{border:1px solid #455569;border-radius:7px;background:#16212f;color:#dee9f4;padding:8px 12px;font-size:11px;font-weight:800}
+.compare-action:hover:not(:disabled){border-color:#a0b0c2;color:#fff}
+.compare-action:disabled{opacity:.4;cursor:default}
+.compare-panel-list{display:flex;flex-direction:column;gap:23px}
+.compare-tech-panel{--table-accent:#ff7b19;--table-edge:rgba(255,123,25,.52);border:1px solid var(--table-edge);border-radius:16px;padding:15px;background:linear-gradient(145deg,color-mix(in srgb,var(--table-accent) 7%,#101721),#0c1119 65%);min-width:0}
+.compare-tech-panel[data-tech="LAN"]{--table-accent:#ff203e;--table-edge:rgba(255,32,62,.52)}
+.compare-tech-panel[data-tech="AIR"]{--table-accent:#3fa8ff;--table-edge:rgba(63,168,255,.52)}
+.compare-tech-header{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:2px 5px 14px}
+.compare-tech-kicker{display:block;font:850 10px ui-monospace,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--table-accent)}
+.compare-tech-header h4{margin:6px 0 0;font-size:22px;line-height:1.25;letter-spacing:-.02em;color:#fff}
+.compare-tech-header h4 small{font-size:13px;font-weight:650;color:#9daab7;letter-spacing:0}
+.compare-tech-count{flex:0 0 auto;border:1px solid var(--table-edge);border-radius:999px;padding:7px 10px;font-size:10px;color:#d1dae6;font-weight:800}
+.compare-tech-panel .compare-scroll{border-color:var(--table-edge)}
+.compare-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px;border:1px dashed #46566b;border-radius:14px;background:#0e1620;text-align:center;min-height:180px}
+.compare-empty>span{font-size:32px;color:#8798ac;margin-bottom:8px}.compare-empty strong{font-size:16px;color:#e9eef4}.compare-empty p{font-size:12px;line-height:1.6;max-width:420px;color:#a4b3c4;margin:8px 0 0}
+@media(max-width:850px){.compare-filter-grid{grid-template-columns:1fr;gap:9px}.compare-filter{min-height:64px}.compare-tech-panel{padding:10px}.compare-tech-header h4{font-size:19px}}
+@media(max-width:560px){.compare-filter-actions{align-items:stretch}.compare-filter-actions>div{width:100%}.compare-action{flex:1}.compare-tech-header{padding:4px 5px 10px}.compare-tech-header h4{font-size:17px}.compare-tech-count{font-size:9px}.compare-tech-kicker{font-size:9px}.compare-table{min-width:700px}}
+
+
+/* MAD-NET V21 — dekoracyjne miniporty w nagłówkach tabel; bez akcji podłączania.
+   Układ pionowy jest domyślny (brak powiększania szerokości mobilnych kolumn).
+   Poziom stosujemy tylko przy faktycznie szerokiej porównywarce. */
+.compare-tech-panel{container-type:inline-size}
+.compare-table .plan-head{height:auto;vertical-align:middle;padding:9px 7px}
+.compare-package-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:87px;min-width:0}
+.compare-table .compare-package-name,
+.compare-block[data-tech="FIBER"] .compare-package-name{
+  display:block;min-height:0;margin:0;color:#fff;
+  font-size:18px;line-height:1.13;letter-spacing:-.02em;white-space:nowrap;
+}
+.compare-table .compare-package-name::after{display:none}
+.compare-head-port{
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  gap:2px;flex:0 0 auto;width:56px;height:56px;min-width:56px;
+  border:1px solid #536273;border-radius:7px;
+  padding:4px 3px 3px;
+  background:linear-gradient(150deg,#344150,#070e16 40%,#0d1823);
+  box-shadow:inset 0 1px 0 #aabed13c,inset 0 -2px 5px #030609,0 2px 4px #0005;
+  pointer-events:none;user-select:none;
+}
+.compare-head-port .port-leds{display:flex;align-items:center;justify-content:center;gap:5px;height:7px;min-height:7px}
+.compare-head-port .port-leds i{width:7px;height:6px;border:1px solid #23653f;border-radius:2px;background:#6fff80;box-shadow:0 0 7px #64ff81b8}
+.compare-head-port .port-leds i:last-child{animation:rj45-activity var(--pulse-ms,900ms) linear infinite}
+.compare-head-port .jack-rj{width:38px;height:33px;border-width:2px;flex:0 0 auto}
+.compare-head-port .jack-rj:after{left:5px;right:5px}
+.compare-head-port .rj-mouth{left:4px;right:4px;top:6px;bottom:2px}
+.compare-head-port .sc-simplex{width:38px;height:34px;flex:0 0 auto;border-width:2px}
+.compare-head-port .sc-bays,.compare-head-port .sc-dustcaps{inset:4px 6px}
+.compare-head-port--AIR{justify-content:center;box-shadow:inset 0 1px 0 #83c8ff42,0 2px 7px #001322a0}
+.compare-head-port--AIR .air-virtual{width:44px;height:38px;flex:0 0 auto}
+.compare-head-port--AIR .air-virtual svg{width:43px;height:38px}
+@media(max-width:350px){.nav-in{gap:5px}.brand{width:136px}.nav-cta{font-size:9px;padding:9px 7px}}
+/* Ruch zawsze zgodny z globalnym przełącznikiem animacji i preferencjami systemowymi. */
+.mot-off .compare-head-port .port-leds i:last-child{animation:none!important;opacity:.6!important;filter:none!important}
+.mot-off .compare-head-port--AIR svg path{animation:none!important;opacity:.7!important}
+@media(prefers-reduced-motion:reduce){
+ .compare-head-port .port-leds i:last-child,.compare-head-port--AIR svg path{animation:none!important;opacity:.7!important}
+}
+/* Przy >= 1100px szerokości kontenera tabela ma miejsce na port obok nazwy.
+   Gdy CSS container queries nie są wspierane, zostaje bezpieczny układ pionowy. */
+@container (min-width:1100px){
+ .compare-package-inner{flex-direction:row;gap:8px;min-height:58px}
+ .compare-table .plan-head{padding:8px 5px}
+ .compare-table .compare-package-name,.compare-block[data-tech="FIBER"] .compare-package-name{font-size:17px}
+}
+@media(max-width:760px){
+ .compare-table .plan-head{height:auto;padding:8px 5px}
+ .compare-package-inner{min-height:82px;gap:4px}
+ .compare-table .compare-package-name,.compare-block[data-tech="FIBER"] .compare-package-name{font-size:16px}
+ .compare-head-port{width:52px;min-width:52px;height:53px;padding:3px 2px 2px}
+}
+
+
+.compare-tech-panel[data-tech="FIBER"]{--table-accent:#ff7b19;--table-edge:#ff7b1988}.compare-tech-panel[data-tech="LAN"]{--table-accent:#ff203e;--table-edge:#ff203e88}.compare-tech-panel[data-tech="AIR"]{--table-accent:#3fa8ff;--table-edge:#3fa8ff88}

@@ -492,7 +492,7 @@ function render(){
 }
 buttonsTech.forEach(b=>b.addEventListener('click',()=>{
  if(technology!==b.dataset.technology){
-  technology=b.dataset.technology;tableTechnology=technology;selectedPlanId=null;hoveredPlanId=null;
+  technology=b.dataset.technology;selectedPlanId=null;hoveredPlanId=null;
   document.getElementById('connection-state').textContent='Przytrzymaj, aby podejrzeć połączenie; dotknij krótko, aby podłączyć.';
  }render();
 }));
@@ -513,49 +513,61 @@ window.addEventListener('resize',scheduleLinks,{passive:true});
 window.addEventListener('scroll',scheduleLinks,{passive:true});
 if(typeof ResizeObserver!=='undefined')new ResizeObserver(scheduleLinks).observe(zone);
 
-let tableTechnology='FIBER';
-const compareBlock=document.querySelector('.compare-block');
-const comparisonPanel=document.getElementById('comparison-panel');
-const tableButtons=[...document.querySelectorAll('[data-table-technology]')];
-const compareChip=document.getElementById('compare-chip');
-const compareHead=document.getElementById('compare-head');
-const compareBody=document.getElementById('compare-body');
-function moneyCell(value){return value==null?'<span class="muted">Brak ceny w cenniku</span>':`<strong>${value} zł</strong>`;}
-function compareLabel(){
- return tableTechnology==='LAN'?'LAN / kablowy':tableTechnology==='FIBER'?'FIBER / światłowód':'AIR / bezprzewodowy';
+const kolejnoscTabel=['FIBER','LAN','AIR'];
+const widoczneTechnologieTabel=new Set(['FIBER']);
+const listaTabel=document.getElementById('comparison-panel');
+const przelacznikiTabel=[...document.querySelectorAll('[data-table-technology]')];
+const licznikTabel=document.getElementById('compare-chip');
+const opisyTabel={
+ FIBER:{name:'Światłowód',medium:'Złącze SC/UPC simplex',symbol:'✦'},
+ LAN:{name:'Kablowy',medium:'Ethernet RJ-45',symbol:'▣'},
+ AIR:{name:'Bezprzewodowy',medium:'Sieć radiowa',symbol:'◉'}
+};
+function komorkaCeny(wartosc){return wartosc==null?'<span class="muted">Brak ceny w cenniku</span>':`<strong>${wartosc} zł</strong>`;}
+// Miniatury odpowiadają technologii i prędkości pakietu: RJ-45, SC/UPC lub fale radiowe.
+// Są dekoracyjne: tylko span, bez przycisk, tabindex i eventów, nie podłączają kabla.
+function utworzMiniport(technologia,pakiet){
+ const okres=Math.round(1000/(blinkHz(pakiet.down)*1.5));
+ const kontrolki=technologia==='AIR'?'':'<span class="port-leds"><i></i><i></i></span>';
+ return `<span class="compare-head-port compare-head-port--${technologia}" aria-hidden="true" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms;--wifi-okres:${radioPeriod(pakiet.down)}ms">${kontrolki}${socketHtml(technologia,true)}</span>`;
+}
+function utworzTabele(technologia){
+ const pakiety=PLAN_DATA[technologia],opis=opisyTabel[technologia];
+ // Nazwy pakietów pochodzą z PLAN_DATA; wszystkie wiersze są identyczne dla każdej technologii.
+ const naglowek='<tr><th class="stub-top" scope="col">Parametr / pakiet</th>'+pakiety.map(pakiet=>`<th class="plan-head" scope="col" aria-etykieta="Pakiet ${escapeText(pakiet.id)}, pobieranie ${pakiet.down} megabitów na sekundę"><span class="compare-package-inner">${utworzMiniport(technologia,pakiet)}<span class="compare-package-name">${escapeText(pakiet.id.replace(/M$/,''))}</span></span></th>`).join('')+'</tr>';
+ const wiersze=[
+  ['Prędkość pobierania',pakiety.map(pakiet=>`${pakiet.down} Mbit/s`)],
+  ['Prędkość wysyłania',pakiety.map(pakiet=>`${pakiet.up} Mbit/s`)],
+  ['Abonament — 1 rok',pakiety.map(pakiet=>komorkaCeny(pakiet .monthly12))],
+  ['Abonament — 2 lata',pakiety.map(pakiet=>komorkaCeny(pakiet .monthly24))],
+  ['Abonament — bezterminowo',pakiety.map(_=>'<span class="muted">Wycena indywidualna</span>')]
+ ];
+ const zawartosc=wiersze.map(([etykieta,komorki])=>'<tr><th class="stub" scope="row">'+etykieta+'</th>'+komorki.map(komorka=>`<td>${komorka}</td>`).join('')+'</tr>').join('');
+ return `<section class="compare-tech-panel" id="comparison-${technologia}" data-tech="${technologia}" aria-labelledby="compare-tech-title-${technologia}"><header class="compare-tech-naglowek"><div><span class="compare-tech-kicker">${opis.symbol} ${technologia} / ${opis.medium}</span><h4 id="compare-tech-title-${technologia}">${opis.name} <small>· ${pakiety.length} ${pakiety.length===3?'pakiety':'pakietów'}</small></h4></div><span class="compare-tech-count">${pakiety.length} wariantów</span></header><div class="compare-scroll" role="region" tabindex="0" aria-etykieta="Przewijalna tabela cen ${opis.name}"><table class="compare-table"><caption class="sr-only">MAD-NET: cennik technologii ${opis.name}; ceny za miesiąc w złotych</caption><thead>${naglowek}</thead><tbody>${zawartosc}</tbody></table></div></section>`;
 }
 function renderComparisonTable(){
- const plans=PLAN_DATA[tableTechnology];
- const descriptions={LAN:'KABEL RJ-45',FIBER:'ZŁĄCZE SC/UPC SIMPLEX',AIR:'TRANSMISJA RADIOWA'};
- compareBlock.dataset.tech=tableTechnology;
- compareChip.textContent=compareLabel()+' • '+descriptions[tableTechnology];
- tableButtons.forEach(button=>{
-  const active=button.dataset.tableTechnology===tableTechnology;
-  button.setAttribute('aria-selected',String(active));
-  button.tabIndex=active?0:-1;
- });
- comparisonPanel.setAttribute('aria-labelledby','tab-'+tableTechnology);
- // Wspólne informacje o technologii są WYŁĄCZNIE w nagłówku całej tabeli.
- // W nagłówkach kolumn nie powtarzamy fraz LAN/FIBER/AIR ani typu połączenia.
- compareHead.innerHTML='<tr><th class="stub-top" scope="col">Parametr / pakiet</th>'+plans.map(plan=>`<th class="plan-head" scope="col" aria-label="Pakiet ${escapeText(plan.id)}"><span class="compare-package-name">${escapeText(plan.id.replace(/M$/,''))}</span></th>`).join('')+'</tr>';
- const rows=[
-  ['Prędkość pobierania',plans.map(plan=>`${plan.down} Mbit/s`)],
-  ['Prędkość wysyłania',plans.map(plan=>`${plan.up} Mbit/s`)],
-  ['Abonament — 1 rok',plans.map(plan=>moneyCell(plan.monthly12))],
-  ['Abonament — 2 lata',plans.map(plan=>moneyCell(plan.monthly24))],
-  ['Abonament — bezterminowo',plans.map(_=>'<span class="muted">Wycena indywidualna</span>')]
- ];
- compareBody.innerHTML=rows.map(([label,cells])=>'<tr><th class="stub" scope="row">'+label+'</th>'+cells.map(cell=>`<td>${cell}</td>`).join('')+'</tr>').join('');
+ przelacznikiTabel.forEach(przycisk=>przycisk.setAttribute('aria-pressed',String(widoczneTechnologieTabel.has(przycisk.dataset.tableTechnology))));
+ const wybrane=kolejnoscTabel.filter(technologia=>widoczneTechnologieTabel.has(technologia));
+ licznikTabel.textContent=wybrane.length+' z 3 '+(wybrane.length===1?'technologii':'technologii');
+ listaTabel.innerHTML=wybrane.length?
+  wybrane.map(utworzTabele).join(''):
+  '<div class="compare-empty" role="status"><span aria-hidden="true">▤</span><strong>Nie wybrano żadnego cennika</strong><p>Zaznacz powyżej jedną lub kilka technologii albo wybierz „Pokaż wszystkie”.</p></div>';
+ document.getElementById('compare-show-all').disabled=wybrane.length===kolejnoscTabel.length;
+ document.getElementById('compare-clear').disabled=wybrane.length===0;
 }
-// Zakładki tabeli działają niezależnie od technologii wybranej dla urządzenia.
-tableButtons.forEach((button,index)=>{
- button.addEventListener('click',()=>{tableTechnology=button.dataset.tableTechnology;renderComparisonTable();});
- button.addEventListener('keydown',event=>{
-  const keys=['ArrowRight','ArrowLeft','Home','End'];if(!keys.includes(event.key))return;
-  event.preventDefault();
-  let next=event.key==='Home'?0:event.key==='End'?tableButtons.length-1:(index+(event.key==='ArrowRight'?1:-1)+tableButtons.length)%tableButtons.length;
-  tableButtons[next].focus();tableButtons[next].click();
+przelacznikiTabel.forEach(przycisk=>{
+ przycisk.addEventListener('click',()=>{
+  const technologia=przycisk.dataset.tableTechnology;
+  if(widoczneTechnologieTabel.has(technologia))widoczneTechnologieTabel.delete(technologia);else widoczneTechnologieTabel.add(technologia);
+  renderComparisonTable();
  });
+});
+document.getElementById('compare-show-all').addEventListener('click',()=>{
+ kolejnoscTabel.forEach(technologia=>widoczneTechnologieTabel.add(technologia));
+ renderComparisonTable();
+});
+document.getElementById('compare-clear').addEventListener('click',()=>{
+ widoczneTechnologieTabel.clear();renderComparisonTable();
 });
 const feesBody=document.getElementById('fees-body');
 feesBody.innerHTML=FEES.map(row=>'<tr>'+row.map(t=>`<td>${escapeText(t)}</td>`).join('')+'</tr>').join('');
