@@ -69,7 +69,7 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
     const oczekiwanyCien = await strona.evaluate(technologia => {
       const kolory = { LAN: '#ff203e', FIBER: '#FF7B19', AIR: '#3fa8ff' };
       const probka = document.createElement('div');
-      probka.style.boxShadow = `inset 0 0 0 2px color-mix(in srgb,${kolory[technologia]} 82%,transparent),inset 0 0 16px color-mix(in srgb,${kolory[technologia]} 19%,transparent)`;
+      probka.style.boxShadow = `inset 0 0 3px 3px color-mix(in srgb,${kolory[technologia]} 90%,transparent),inset 0 0 18px 3px color-mix(in srgb,${kolory[technologia]} 30%,transparent)`;
       document.body.append(probka);
       const cien = getComputedStyle(probka).boxShadow;
       probka.remove();

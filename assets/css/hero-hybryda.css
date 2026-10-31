@@ -9,9 +9,9 @@
 .hero-rack-hybryda [data-rack-tech="AIR"]{--kolor-podswietlenia:#3fa8ff}
 /* Wybór panelu (is-active) nie nadpisuje podświetlenia wskazywanego urządzenia. */
 @media(hover:hover) and (pointer:fine){
- .hero-rack-stage.hero-rack-hybryda .rack-device:hover{background:color-mix(in srgb,var(--kolor-podswietlenia) 3.5%,transparent);box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--kolor-podswietlenia) 82%,transparent),inset 0 0 16px color-mix(in srgb,var(--kolor-podswietlenia) 19%,transparent);transition-duration:.25s}
+ .hero-rack-stage.hero-rack-hybryda .rack-device:hover{background:color-mix(in srgb,var(--kolor-podswietlenia) 3.5%,transparent);box-shadow:inset 0 0 3px 3px color-mix(in srgb,var(--kolor-podswietlenia) 90%,transparent),inset 0 0 18px 3px color-mix(in srgb,var(--kolor-podswietlenia) 30%,transparent);transition-duration:.25s}
 }
-.hero-rack-stage.hero-rack-hybryda .rack-device:focus-visible{background:color-mix(in srgb,var(--kolor-podswietlenia) 3.5%,transparent);box-shadow:inset 0 0 0 3px #fff,inset 0 0 16px color-mix(in srgb,var(--kolor-podswietlenia) 19%,transparent)}
+.hero-rack-stage.hero-rack-hybryda .rack-device:focus-visible{background:color-mix(in srgb,var(--kolor-podswietlenia) 3.5%,transparent);box-shadow:inset 0 0 0 3px #fff,inset 0 0 18px 3px color-mix(in srgb,var(--kolor-podswietlenia) 30%,transparent)}
 .hero-rack-stage.hero-rack-hybryda .rack-sidewall{display:block;position:absolute;left:81.85%;top:8.44%;width:16.45%;height:79.9%;border:0;background:none;box-shadow:none;transform:none;clip-path:none;pointer-events:none}
 .hero-rack-stage.hero-rack-hybryda .tylna-krawedz{position:absolute;right:0;top:0;bottom:0;width:1px}
 .hero-rack-hybryda .rj-link,.hero-rack-hybryda .fiber-activity{animation:kanal-szafy var(--pulse) steps(2,end) infinite;animation-delay:var(--phase);filter:none}
