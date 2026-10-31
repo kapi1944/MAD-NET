@@ -66,6 +66,16 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
     await urzadzenie.hover();
     await strona.waitForTimeout(350);
     const aktywne = await odczytaj(urzadzenie);
+    const oczekiwanyCien = await strona.evaluate(technologia => {
+      const kolory = { LAN: '#ff203e', FIBER: '#FF7B19', AIR: '#3fa8ff' };
+      const probka = document.createElement('div');
+      probka.style.boxShadow = `inset 0 0 0 2px color-mix(in srgb,${kolory[technologia]} 82%,transparent),inset 0 0 16px color-mix(in srgb,${kolory[technologia]} 19%,transparent)`;
+      document.body.append(probka);
+      const cien = getComputedStyle(probka).boxShadow;
+      probka.remove();
+      return cien;
+    }, technologia);
+    assert.equal(aktywne.cien, oczekiwanyCien, `Kolor podświetlenia ${technologia}`);
     assert.notEqual(aktywne.cien, poczatek.cien, `Brak podświetlenia ${technologia} po aktualizacji panelu`);
     assert.notEqual(aktywne.tlo, poczatek.tlo);
     assert.deepEqual(aktywne.obrys, poczatek.obrys, 'Podświetlenie nie zmienia geometrii');
@@ -124,7 +134,7 @@ try {
   for (const szerokosc of [390, 768, 1024, 1440]) await sprawdzPodswietlenie(strona, szerokosc);
   await sprawdzPodswietlenie(strona, 1440, true);
   await strona.emulateMedia({ reducedMotion: 'no-preference' });
-  for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1100, 1280, 1440, 1510, 1920]) {
+  for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1100, 1231, 1280, 1440, 1500, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
     await strona.evaluate(() => document.fonts.ready);
@@ -146,6 +156,13 @@ try {
           wysokoscTylnejKrawedzi: krawedz.height, goraTylu: granice.top - krawedz.top, dolTylu: krawedz.bottom - granice.bottom,
           lewyBorder: getComputedStyle(panel).borderLeftWidth, przepelnienie: document.documentElement.scrollWidth - innerWidth,
           trescMiesciSie: panel.scrollHeight <= panel.clientHeight,
+          trescNieNachodzi: (() => {
+            const opis = document.querySelector('#hero-tech-description').getBoundingClientRect();
+            const fakty = document.querySelector('.hero-tech-facts').getBoundingClientRect();
+            const przycisk = document.querySelector('#hero-tech-link').getBoundingClientRect();
+            return opis.bottom <= fakty.top && (fakty.right <= przycisk.left || fakty.bottom <= przycisk.top)
+              && fakty.bottom <= granice.bottom && przycisk.bottom <= granice.bottom;
+          })(),
           szafaMiesciSie: tyl.right <= innerWidth && document.querySelector('.rack-box').getBoundingClientRect().left >= 0,
           portyDostepne: urzadzenia.every(urzadzenie => {
             const obszar = urzadzenie.getBoundingClientRect();
@@ -156,6 +173,7 @@ try {
       pomiary.push(pomiar);
       assert.equal(pomiar.przepelnienie, 0);
       assert.ok(pomiar.trescMiesciSie && pomiar.szafaMiesciSie && pomiar.portyDostepne);
+      assert.ok(pomiar.trescNieNachodzi, `Informacje i przycisk panelu nie mogą się zasłaniać: ${szerokosc}px ${technologia}`);
       assert.equal(await strona.locator('.hero-rack-hybryda .rack-device').count(), 3);
       assert.equal(await strona.locator('.grafika-hybrydowa [data-speed]').count(), 13);
       assert.equal(await strona.locator('#grafika-szafy').getAttribute('href'), './assets/img/hero-rack.png');
@@ -172,10 +190,9 @@ try {
       });
       assert.ok(zgodnosc, 'Kontrolki muszą skalować się razem z obrazem i odpowiadającym im obszarem wyboru');
       if (szerokosc > 1230) {
-        assert.ok(pomiar.wysokoscPanelu <= pomiar.wysokoscSciany + 2);
-        assert.ok(pomiar.wysokoscPanelu <= pomiar.wysokoscTylnejKrawedzi && pomiar.goraTylu >= 0 && pomiar.dolTylu >= 0);
+        assert.ok(pomiar.wysokoscPanelu >= pomiar.wysokoscTylnejKrawedzi - 16 - 1 && pomiar.goraTylu >= 0);
         assert.ok(pomiar.zakladka >= 24 && pomiar.zakladka <= 44);
-        assert.ok(pomiar.gora >= 0 && pomiar.dol >= 0);
+        assert.ok(pomiar.gora >= 0);
         assert.equal(pomiar.lewyBorder, '0px');
         const odslonietaTresc = await strona.evaluate(() => {
           const krawedz = document.querySelector('.tylna-krawedz').getBoundingClientRect();

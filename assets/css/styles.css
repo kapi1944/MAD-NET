@@ -721,11 +721,11 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 .hero-tech-link{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;padding:10px 12px;background:color-mix(in srgb,var(--panel-tech) 12%,#0e141b);border:1px solid color-mix(in srgb,var(--panel-tech) 45%,#33404c);border-radius:7px;color:#f5f9fd;font-weight:800;font-size:12px;transition:border-color .3s,background .3s}
 .hero-tech-link:hover{border-color:var(--panel-tech);background:color-mix(in srgb,var(--panel-tech) 20%,#0e141b)}
 @media(min-width:1231px){
- .hero-tech-panel{position:absolute;left:var(--panel-lewo,73%);right:32px;top:var(--panel-gora,80px);height:var(--panel-wysokosc,310px)}
- .hero-tech-panel-content{grid-template-rows:54px auto auto;align-content:space-between;gap:18px 12px}
+ .hero-tech-panel{position:absolute;left:var(--panel-lewo,73%);right:32px;top:var(--panel-gora,80px);height:auto;min-height:var(--panel-wysokosc,310px)}
+ .hero-tech-panel-content{min-height:min-content;grid-template-rows:54px auto auto;align-content:space-between;gap:18px 12px}
  .hero-tech-panel h2{font-size:31px}
  .hero-tech-panel h2 span{font-size:13px}
- .hero-tech-panel p{font-size:14px;line-height:1.6}
+ .hero-tech-panel p{font-size:14px;line-height:1.6;min-height:4.8em}
  .hero-tech-facts{padding-top:14px}
 }
 @media(min-width:1500px){
