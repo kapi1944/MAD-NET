@@ -213,7 +213,7 @@ try {
   await strona.locator('[data-rack-tech="FIBER"]').hover();
   assert.equal(await strona.locator('#hero-tech-panel').getAttribute('data-tech'), 'FIBER');
   await strona.locator('#animation-toggle').click();
-  assert.ok(await strona.evaluate(() => document.querySelector('.pcb-impulsy use').getAnimations().some(animacja => animacja.playState === 'running')));
+  assert.ok(await strona.evaluate(() => !document.querySelector('.pcb-tlo').animationsPaused() && getComputedStyle(document.querySelector('.pcb-impulsy')).display !== 'none'));
 
   // Rzeczywista sekwencja wpięcia działa także z włączonymi animacjami.
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
@@ -282,7 +282,7 @@ try {
   }
   animacjeKanalow.push(...miganie);
   await strona.emulateMedia({ reducedMotion: 'reduce' });
-  assert.equal(await strona.locator('.pcb-impulsy').evaluate(element => getComputedStyle(element).display), 'none');
+  assert.ok(await strona.locator('.pcb-impulsy').evaluateAll(grupy => grupy.every(grupa => getComputedStyle(grupa).display === 'none')));
   assert.equal(await strona.locator('.pcb-hero').count(), 0);
   await strona.locator('[data-rack-tech="AIR"]').hover();
   assert.equal(await strona.locator('#hero-tech-panel').getAttribute('data-tech'), 'AIR');

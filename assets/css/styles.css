@@ -857,14 +857,19 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
  .ustawienia-ruchu{margin-left:0}
 }
 
-/* V20: istniejące PCB rozciąga się pod treścią; impulsy korzystają z tych samych tras. */
-.pricing{background:linear-gradient(180deg,#0c0f14,#0a0c11 72%)}
-.pcb-tlo{position:absolute;z-index:0;pointer-events:none;top:0;left:50%;width:max(100%,1000px);height:100%;transform:translateX(-50%);fill:none;stroke-linecap:round;stroke-linejoin:round;color:#a45260}
-.pcb-trasy{stroke:currentColor;stroke-width:1.4;opacity:.16}
-.pcb-trasy use:nth-child(3n){stroke-width:2}
-.pcb-impulsy{stroke:#d96e80;stroke-width:2.4;opacity:.6;filter:drop-shadow(0 0 3px #cf425955)}
-.pcb-impulsy use{stroke-dasharray:9 791;animation:impuls-pcb var(--czas) linear infinite;animation-delay:var(--faza)}
-@keyframes impuls-pcb{from{stroke-dashoffset:800}to{stroke-dashoffset:0}}
+/* PCB 4.1: niezależne kadry zachowują kąty mimo zmiany wysokości cennika. */
+.pricing{background:linear-gradient(180deg,#05070B,#090C12 52%,#05070B)}
+.pcb-tlo{position:absolute;z-index:0;pointer-events:none;top:0;left:50%;width:max(100%,1000px);height:auto;max-height:33.333%;aspect-ratio:1440/640;transform:translateX(-50%);fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pcb-trasy,.pcb-kontakty{mask-image:linear-gradient(90deg,#000 8%,#0006 28%,#0008 68%,#000 92%)}
+.pcb-tlo-srodek{top:50%;transform:translate(-50%,-50%)}
+.pcb-tlo-dol{top:auto;bottom:0}
+.pcb-trasa-cicha{stroke:#751025;stroke-width:1;opacity:.52}
+.pcb-trasa-widoczna{stroke:#B80E2B;stroke-width:1.5;opacity:.72}
+.pcb-trasa-aktywna{stroke:#F01436;stroke-width:1.7;opacity:.78}
+.pcb-kontakty{stroke:#B80E2B;stroke-width:1.2;fill:#05070B;opacity:.8}
+.pcb-led-otoczka{fill:#FF4057;opacity:.55}
+.pcb-led-rdzen{fill:#FF98A3}
+@media(max-width:600px){.pcb-led-dodatkowa{display:none}}
 .mot-off .pcb-impulsy{display:none}
 @media(prefers-reduced-motion:reduce){.pcb-impulsy{display:none}}
 
