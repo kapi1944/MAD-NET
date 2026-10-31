@@ -986,5 +986,8 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 #plans .specs{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:8px;align-items:end}
 @container(max-width:180px){#plans .specs{grid-template-columns:minmax(0,1fr);gap:12px}}
 #plans .predkosc-pobierania{display:flex;align-items:baseline;gap:3px;white-space:nowrap}
-#plans .predkosc-pobierania strong{font-size:48px;line-height:1;letter-spacing:-.06em}
+#plans .predkosc-pobierania strong{font-size:38.4px;line-height:1;letter-spacing:-.06em}
 #plans .predkosc-pobierania span,#plans .predkosc-pobierania small{display:inline;font-size:10px;margin:0}
+
+/* Wybór technologii i umowy we wspólnym kontenerze urządzenia. */
+.central-area>.device-techbar{width:100%;margin:0 0 8px;padding:0 0 12px;border-top:0}
