@@ -20,3 +20,7 @@ Weryfikacja: `npm run verify` i `npm run test:browser` przeszły (istniejąca we
 ## Wariant ciemny v2
 
 Na życzenie użytkownika aktualny podgląd korzysta z rack-ciemny-v2.png. Wbudowany image_gen: przyciemnij stal w kierunku referencji; zachowaj bryłę, alfa, logo, porty i 12 śrub; zmień prawe oznaczenia na jednoliniowe 5-PORT, 3-PORT, 5-CH, bez zer wiodących, mniejsza czcionka, cyfra nieco większa od przyrostka. Oryginalny kandydat pozostaje zachowany. To nadal proof przed integracją interakcji.
+
+## Logo v3
+
+Aktualny podgląd: rack-logo-v3.png. Edycja wbudowanym image_gen według logo załączonego przez użytkownika: popraw cztery znaki MAD-NET (górny front i trzy tabliczki), zachowaj charakterystyczną czerwoną orbitę, biało-czerwony napis i mały dopisek. Zachowaj ciemny wariant, geometrię, alfa, 12 śrub i oznaczenia 5-PORT/3-PORT/5-CH. Logo w bitmapie jest odtworzeniem; w docelowej integracji można nałożyć oryginalny plik marki dla dokładności typograficznej.
