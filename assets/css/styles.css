@@ -978,9 +978,13 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 .lokalizacja-reczna button,.lokalizacja-reczna a{padding:12px;border:1px solid #63758a;border-radius:6px;background:#182331;color:white;min-height:44px}
 
 /* Układ kafelków: opis nad złączem, nazwa pakietu i wyeksponowane pobieranie. */
-#plans .card-terminal-label{order:0;margin:0 0 4px}
+#plans .card-terminal-label{order:0;margin:0 0 4px;font-size:12px;white-space:normal}
+#plans .card-terminal-label small{font-size:10px;font-weight:600}
+#plans .card-terminal-label strong{font-size:inherit}
 #plans .plan-speed{font-size:clamp(24px,2.1vw,36px);letter-spacing:-.04em}
-#plans .specs{grid-template-columns:minmax(0,1fr);gap:12px}
+#plans .plan-body{container-type:inline-size}
+#plans .specs{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:8px;align-items:end}
+@container(max-width:180px){#plans .specs{grid-template-columns:minmax(0,1fr);gap:12px}}
 #plans .predkosc-pobierania{display:flex;align-items:baseline;gap:3px;white-space:nowrap}
-#plans .predkosc-pobierania strong{font-size:60px;line-height:1;letter-spacing:-.06em}
+#plans .predkosc-pobierania strong{font-size:48px;line-height:1;letter-spacing:-.06em}
 #plans .predkosc-pobierania span,#plans .predkosc-pobierania small{display:inline;font-size:10px;margin:0}

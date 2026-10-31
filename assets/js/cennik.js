@@ -112,10 +112,10 @@ function makePlan(p){
  const priceHtml=phone?'<strong class="individual-label">Wycena indywidualna</strong>':`<strong>${price}</strong><span>zł / mies.</span>`;
  const termText=phone?'Abonament — bezterminowo':`Abonament • ${term==='12'?'1 rok':'2 lata'}`;
  const selected=p.id===selectedPlanId;
- const cardSocket=technology==='AIR'?'WĘZEŁ RADIOWY / BEZ KABLA':technology==='FIBER'?'1 × SC/UPC SIMPLEX':'1 × RJ-45';
+ const etykietaPortu=technology==='AIR'?'<strong>WĘZEŁ RADIOWY</strong> <small>/ BEZ KABLA</small>':`<small>1 ×</small> <strong>${technology==='FIBER'?'SC/UPC SIMPLEX':'RJ-45'}</strong>`;
  return `<article class="plan${selected?' is-selected':''}" data-plan-id="${escapeText(p.id)}" data-technology="${technology}" data-speed="${p.down}" data-port-count="1" data-blink-hz="${hz.toFixed(2)}" data-blink-ms="${interval}" aria-label="Pakiet ${escapeText(p.id)}: pobieranie ${p.down}, wysyłanie ${p.up} Mbit/s" style="--pulse-ms:${interval}ms;--wifi-period:${radioPeriod(p.down)}ms">
  <button class="plan-hit" type="button" data-select-plan="${escapeText(p.id)}" aria-pressed="${selected}" aria-label="Wybierz ${escapeText(p.id)}: ${p.down} Mbit/s, ${phone?'wycena indywidualna':price+' zł miesięcznie'}"></button>
- <div class="card-terminal"><span class="card-terminal-label">${cardSocket}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${socketHtml(technology,true)}${technology==='FIBER'?'<span class="mini-plug"></span>':''}</div></div>
+ <div class="card-terminal"><span class="card-terminal-label">${etykietaPortu}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${socketHtml(technology,true)}${technology==='FIBER'?'<span class="mini-plug"></span>':''}</div></div>
  <div class="plan-body"><div class="plan-name"><span>● MAD-NET</span></div>
  <div class="plan-speed">${technology}-${p.down}</div>
  <div class="specs"><div class="spec"><span>POBIERANIE</span><b class="predkosc-pobierania"><span aria-hidden="true">↓</span> <strong>${p.down}</strong> <small>Mbit/s</small></b></div><div class="spec"><span>WYSYŁANIE</span><b>↑ ${p.up} Mbit/s</b></div></div></div>
