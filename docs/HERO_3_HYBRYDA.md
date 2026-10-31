@@ -29,7 +29,7 @@ Historyczne warianty PoC zachowano w dokumentacji. Akceptacja assetu nie oznacza
 
 ## Korekta kafelków i sekwencji AIR
 
-Etykiety wyśrodkowano nad portami. Usunięto numerację kart; nagłówki pokazują LAN-10 / FIBER-100 / AIR-40 itd., bez zmiany identyfikatorów ofert. Pobieranie ma cyfry 38,4 px (po kolejnych dwóch zmniejszeniach wcześniejszych 60 px o 20%); wysyłanie zachowuje wcześniejszy rozmiar. Parametry są domyślnie obok siebie, a przy szerokości wnętrza karty do 180 px przechodzą w układ pionowy. Etykieta nazwy portu ma 12 px, oznaczenie „1 ×” — 10 px. Test przeglądarkowy sprawdza wszystkie 13 kafelków, pozycje etykiet, nazwy, brak numeracji i overflow oraz osobne szczyty jasności trzech łuków każdego z pięciu kanałów.
+Etykiety wyśrodkowano nad portami. Usunięto numerację kart; nagłówki pokazują LAN-10 / FIBER-100 / AIR-40 itd., bez zmiany identyfikatorów ofert. Pobieranie ma cyfry 42 px, wysyłanie — 21 px; etykiety parametrów są pod wartościami. Parametry są domyślnie obok siebie, a przy szerokości wnętrza karty do 180 px przechodzą w układ pionowy. Etykieta nazwy portu ma 12 px, oznaczenie „1 ×” — 10 px. Test przeglądarkowy sprawdza wszystkie 13 kafelków, pozycje etykiet, nazwy, brak numeracji i overflow oraz osobne szczyty jasności trzech łuków każdego z pięciu kanałów.
 
 Materiały odbiorowe: `test-results/hero-3-0/kafelki-LAN.png`, `kafelek-FIBER-mobile.png`, `air-sekwencja-final.png` i `air-sekwencja.webm`.
 

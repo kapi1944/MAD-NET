@@ -180,7 +180,7 @@ try {
       }));
       kafelki.forEach(karta => {
         assert.equal(karta.nazwa, karta.oczekiwana); assert.equal(karta.numeracja, false);
-        assert.ok(karta.etykietaNad && !karta.przepelnienie); assert.equal(karta.rozmiar, 38.4);
+        assert.ok(karta.etykietaNad && !karta.przepelnienie); assert.equal(karta.rozmiar, 42);
       });
       await strona.locator('#central-device .speed-port').last().click();
       await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));

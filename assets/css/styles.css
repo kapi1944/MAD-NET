@@ -988,10 +988,10 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 #plans .card-terminal-label strong{font-size:inherit}
 #plans .plan-speed{font-size:clamp(24px,2.1vw,36px);letter-spacing:-.04em}
 #plans .plan-body{container-type:inline-size}
-#plans .specs{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:8px;align-items:end}
+#plans .specs{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:8px;align-items:end}
 @container(max-width:180px){#plans .specs{grid-template-columns:minmax(0,1fr);gap:12px}}
 #plans .predkosc-pobierania{display:flex;align-items:baseline;gap:3px;white-space:nowrap}
-#plans .predkosc-pobierania strong{font-size:38.4px;line-height:1;letter-spacing:-.06em}
+#plans .predkosc-pobierania strong{font-size:42px;line-height:1;letter-spacing:-.06em}
 #plans .predkosc-pobierania span,#plans .predkosc-pobierania small{display:inline;font-size:10px;margin:0}
 
 /* Wybór technologii i umowy we wspólnym kontenerze urządzenia. */
@@ -1000,5 +1000,5 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 /* Parametry: etykiety pod wartościami, większa liczba wysyłania i wyraźna strzałka. */
 #plans .spec>b+span{margin:6px 0 0}
 #plans .predkosc-wysylania{display:block;white-space:nowrap}
-#plans .predkosc-wysylania strong{font-size:24px;line-height:1}
+#plans .predkosc-wysylania strong{font-size:21px;line-height:1}
 #plans .predkosc-pobierania>span{font-weight:900;-webkit-text-stroke:.35px currentColor;color:#e7edf4}
