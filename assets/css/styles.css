@@ -859,7 +859,7 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 
 /* PCB 4.1: niezależne kadry zachowują kąty mimo zmiany wysokości cennika. */
 .pricing{background:linear-gradient(180deg,#05070B,#090C12 52%,#05070B)}
-.pcb-tlo{position:absolute;z-index:0;pointer-events:none;top:0;left:50%;width:max(100%,1000px);height:auto;max-height:33.333%;aspect-ratio:1440/640;transform:translateX(-50%);fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pcb-tlo{position:absolute;z-index:0;pointer-events:none;top:0;left:50%;width:max(100%,1000px);height:auto;max-height:33.333%;overflow:visible;aspect-ratio:1440/640;transform:translateX(-50%);fill:none;stroke-linecap:round;stroke-linejoin:round}
 .pcb-trasy,.pcb-kontakty{mask-image:linear-gradient(90deg,#000 8%,#0006 28%,#0008 68%,#000 92%)}
 .pcb-tlo-srodek{top:50%;transform:translate(-50%,-50%)}
 .pcb-tlo-dol{top:auto;bottom:0}
