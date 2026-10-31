@@ -197,7 +197,7 @@ try {
     dioda: getComputedStyle(document.querySelector('.hero-rack-stage .rj-link')).animationName,
   }));
   assert.deepEqual(bezRuchu, { pcb: 'none', dioda: 'none' });
-  assert.equal(await strona.locator('.impulsy-hero').evaluate(element => getComputedStyle(element).display), 'none');
+  assert.equal(await strona.locator('.pcb-hero').count(), 0);
   await strona.locator('[data-rack-tech="FIBER"]').hover();
   assert.equal(await strona.locator('#hero-tech-panel').getAttribute('data-tech'), 'FIBER');
   await strona.locator('#animation-toggle').click();
@@ -254,7 +254,7 @@ try {
   animacjeKanalow.push(...miganie);
   await strona.emulateMedia({ reducedMotion: 'reduce' });
   assert.equal(await strona.locator('.pcb-impulsy').evaluate(element => getComputedStyle(element).display), 'none');
-  assert.equal(await strona.locator('.impulsy-hero').evaluate(element => getComputedStyle(element).display), 'none');
+  assert.equal(await strona.locator('.pcb-hero').count(), 0);
   await strona.locator('[data-rack-tech="AIR"]').hover();
   assert.equal(await strona.locator('#hero-tech-panel').getAttribute('data-tech'), 'AIR');
   assert.equal(await strona.locator('.hero-rack-stage .wi').first().evaluate(element => getComputedStyle(element).animationName), 'none');

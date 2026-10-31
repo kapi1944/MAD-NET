@@ -609,6 +609,7 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 /* V18: pełnowymiarowe 3 kolumny w hero, responsive i kontrolowany realizm hardware. */
 .hero--rack-3col{--rack-accent:#ff3150;background:#07090c url("../img/hero/plyta-pcb.webp") center center / cover no-repeat}
 .hero--rack-3col:before{background:linear-gradient(90deg,rgba(3,5,8,.78),rgba(3,5,8,.38) 26%,transparent 50%);transition:background .35s}
+@media(max-width:800px){.hero--rack-3col:before{background:linear-gradient(180deg,rgba(3,5,8,.72),rgba(3,5,8,.58) 22%,transparent 42%)}}
 .hero--rack-3col .hero-in{position:relative;isolation:isolate;max-width:1672px;min-height:650px;grid-template-columns:minmax(290px,1fr) minmax(440px,1.36fr) minmax(260px,.84fr);gap:23px;align-items:center;padding-top:64px;padding-bottom:76px}
 .hero--rack-3col .hero-copy{min-width:0;position:relative;z-index:2}
 .hero--rack-3col .hero h1{max-width:unset}

@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {spawn,execFileSync} from 'node:child_process';
 import {mkdir} from 'node:fs/promises';
 const katalog='test-results/v21';await mkdir(katalog+'/po',{recursive:true});await mkdir(katalog+'/przed',{recursive:true});
-const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:'4182'}});
+const port=process.env.MADNET_PORT_TESTOW_V21 || '4182';
+const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port}});
 let przegladarka;
 try{
  await new Promise((ok,blad)=>{serwer.stdout.once('data',ok);serwer.once('error',blad)});
@@ -13,9 +14,9 @@ try{
  await strona.setViewportSize({width:szerokosc,height:1100});
  if([390,1440].includes(szerokosc)){
  for(const plik of ['index.html','assets/css/styles.css','assets/js/cennik.js','assets/js/dostepnosc.js']){const zawartosc=execFileSync('git',['show','f759900:'+plik],{encoding:'utf8'});await strona.route('**/'+(plik==='index.html'?'':plik),r=>r.fulfill({body:zawartosc,contentType:plik.endsWith('.css')?'text/css':plik.endsWith('.js')?'text/javascript':'text/html'}));}
- await strona.goto('http://127.0.0.1:4182/');await strona.locator('.compare-block').scrollIntoViewIfNeeded();await strona.screenshot({path:`${katalog}/przed/tabele-${szerokosc}.png`});await strona.unrouteAll();
+ await strona.goto(`http://127.0.0.1:${port}/`);await strona.locator('.compare-block').scrollIntoViewIfNeeded();await strona.screenshot({path:`${katalog}/przed/tabele-${szerokosc}.png`});await strona.unrouteAll();
  }
- await strona.goto('http://127.0.0.1:4182/');
+ await strona.goto(`http://127.0.0.1:${port}/`);
  const poczatek=await strona.locator('.device-tech-tabs [aria-pressed=true]').getAttribute('data-technology');
  for(let maska=0;maska<8;maska++){
  if(await strona.locator('#compare-clear').isEnabled())await strona.locator('#compare-clear').click();
