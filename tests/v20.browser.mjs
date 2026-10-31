@@ -69,6 +69,18 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
     assert.notEqual(aktywne.cien, poczatek.cien, `Brak podświetlenia ${technologia} po aktualizacji panelu`);
     assert.notEqual(aktywne.tlo, poczatek.tlo);
     assert.deepEqual(aktywne.obrys, poczatek.obrys, 'Podświetlenie nie zmienia geometrii');
+    const kolor = await urzadzenie.evaluate((element, technologia) => {
+      const kolory = { LAN: '#ff203e', FIBER: '#ff7b19', AIR: '#3fa8ff' };
+      const proba = document.createElement('i');
+      proba.style.boxShadow = 'inset 0 0 0 2px color-mix(in srgb,' + kolory[technologia] + ' 82%,transparent), inset 0 0 16px color-mix(in srgb,' + kolory[technologia] + ' 19%,transparent)';
+      document.body.append(proba);
+      const cien = getComputedStyle(proba).boxShadow;
+      proba.remove();
+      return cien;
+    }, technologia);
+    assert.equal(aktywne.cien, kolor, 'Kolor podświetlenia technologii');
+    await strona.waitForTimeout(1650);
+    await strona.screenshot({ path: fileURLToPath(new URL(`hover-2s-${szerokosc}-${technologia}.png`, katalog)) });
     // Próbki w każdej klatce wychwycą przerwy podczas animacji HERO.
     const probki = await urzadzenie.evaluate(element => new Promise(zakoncz => {
       const poczatek = performance.now(), probki = [];
