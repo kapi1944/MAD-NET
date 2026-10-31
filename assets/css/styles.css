@@ -998,4 +998,5 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 #plans .spec>b+span{margin:6px 0 0}
 #plans .predkosc-wysylania{display:block;white-space:nowrap}
 #plans .predkosc-wysylania strong{font-size:21px;line-height:1}
-#plans .predkosc-pobierania>span{font-weight:900;-webkit-text-stroke:.35px currentColor;color:#e7edf4}
+#plans .predkosc-pobierania>span{font-size:16px;font-weight:900;-webkit-text-stroke:.35px currentColor;color:#e7edf4}
+#plans .predkosc-wysylania>span{display:inline;font-size:1.6em;color:inherit;margin:0}
