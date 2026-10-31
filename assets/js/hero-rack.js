@@ -52,6 +52,14 @@
   const cel=document.querySelector('.device-tech-tabs button[data-technology="'+aktualna+'"]');
   if(cel)cel.click();
  });
+ function zatrzymajPrzejscie(){
+  if(ograniczonyRuch.matches||document.body.classList.contains('mot-off')){
+   clearTimeout(zegar);
+   zastosuj(aktualna);
+  }
+ }
+ ograniczonyRuch.addEventListener('change',zatrzymajPrzejscie);
+ document.getElementById('animation-toggle').addEventListener('click',zatrzymajPrzejscie);
  zastosuj(aktualna);
 
  // Mierzymy tylko szafę i kontener. Zapis geometrii panelu nie zmienia ich rozmiaru.
