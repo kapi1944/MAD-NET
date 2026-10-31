@@ -529,21 +529,21 @@ function komorkaCeny(wartosc){return wartosc==null?'<span class="muted">Brak cen
 function utworzMiniport(technologia,pakiet){
  const okres=Math.round(1000/(blinkHz(pakiet.down)*1.5));
  const kontrolki=technologia==='AIR'?'':'<span class="port-leds"><i></i><i></i></span>';
- return `<span class="compare-head-port compare-head-port--${technologia}" aria-hidden="true" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms;--wifi-okres:${radioPeriod(pakiet.down)}ms">${kontrolki}${socketHtml(technologia,true)}</span>`;
+ return `<span class="compare-head-port compare-head-port--${technologia}" aria-hidden="true" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms;--wifi-period:${radioPeriod(pakiet.down)}ms">${kontrolki}${socketHtml(technologia,true)}</span>`;
 }
 function utworzTabele(technologia){
  const pakiety=PLAN_DATA[technologia],opis=opisyTabel[technologia];
  // Nazwy pakietów pochodzą z PLAN_DATA; wszystkie wiersze są identyczne dla każdej technologii.
- const naglowek='<tr><th class="stub-top" scope="col">Parametr / pakiet</th>'+pakiety.map(pakiet=>`<th class="plan-head" scope="col" aria-etykieta="Pakiet ${escapeText(pakiet.id)}, pobieranie ${pakiet.down} megabitów na sekundę"><span class="compare-package-inner">${utworzMiniport(technologia,pakiet)}<span class="compare-package-name">${escapeText(pakiet.id.replace(/M$/,''))}</span></span></th>`).join('')+'</tr>';
+ const naglowek='<tr><th class="stub-top" scope="col">Parametr / pakiet</th>'+pakiety.map(pakiet=>`<th class="plan-head" scope="col" aria-label="Pakiet ${escapeText(pakiet.id)}, pobieranie ${pakiet.down} megabitów na sekundę"><span class="compare-package-inner">${utworzMiniport(technologia,pakiet)}<span class="compare-package-name">${escapeText(pakiet.id.replace(/M$/,''))}</span></span></th>`).join('')+'</tr>';
  const wiersze=[
   ['Prędkość pobierania',pakiety.map(pakiet=>`${pakiet.down} Mbit/s`)],
   ['Prędkość wysyłania',pakiety.map(pakiet=>`${pakiet.up} Mbit/s`)],
-  ['Abonament — 1 rok',pakiety.map(pakiet=>komorkaCeny(pakiet .monthly12))],
-  ['Abonament — 2 lata',pakiety.map(pakiet=>komorkaCeny(pakiet .monthly24))],
+  ['Abonament — 1 rok',pakiety.map(pakiet=>komorkaCeny(pakiet.monthly12))],
+  ['Abonament — 2 lata',pakiety.map(pakiet=>komorkaCeny(pakiet.monthly24))],
   ['Abonament — bezterminowo',pakiety.map(_=>'<span class="muted">Wycena indywidualna</span>')]
  ];
  const zawartosc=wiersze.map(([etykieta,komorki])=>'<tr><th class="stub" scope="row">'+etykieta+'</th>'+komorki.map(komorka=>`<td>${komorka}</td>`).join('')+'</tr>').join('');
- return `<section class="compare-tech-panel" id="comparison-${technologia}" data-tech="${technologia}" aria-labelledby="compare-tech-title-${technologia}"><header class="compare-tech-naglowek"><div><span class="compare-tech-kicker">${opis.symbol} ${technologia} / ${opis.medium}</span><h4 id="compare-tech-title-${technologia}">${opis.name} <small>· ${pakiety.length} ${pakiety.length===3?'pakiety':'pakietów'}</small></h4></div><span class="compare-tech-count">${pakiety.length} wariantów</span></header><div class="compare-scroll" role="region" tabindex="0" aria-etykieta="Przewijalna tabela cen ${opis.name}"><table class="compare-table"><caption class="sr-only">MAD-NET: cennik technologii ${opis.name}; ceny za miesiąc w złotych</caption><thead>${naglowek}</thead><tbody>${zawartosc}</tbody></table></div></section>`;
+ return `<section class="compare-tech-panel" id="comparison-${technologia}" data-tech="${technologia}" aria-labelledby="compare-tech-title-${technologia}"><header class="compare-tech-header"><div><span class="compare-tech-kicker">${opis.symbol} ${technologia} / ${opis.medium}</span><h4 id="compare-tech-title-${technologia}">${opis.name} <small>· ${pakiety.length} ${pakiety.length===3?'pakiety':'pakietów'}</small></h4></div><span class="compare-tech-count">${pakiety.length} wariantów</span></header><div class="compare-scroll" role="region" tabindex="0" aria-label="Przewijalna tabela cen ${opis.name}"><table class="compare-table"><caption class="sr-only">MAD-NET: cennik technologii ${opis.name}; ceny za miesiąc w złotych</caption><thead>${naglowek}</thead><tbody>${zawartosc}</tbody></table></div></section>`;
 }
 function renderComparisonTable(){
  przelacznikiTabel.forEach(przycisk=>przycisk.setAttribute('aria-pressed',String(widoczneTechnologieTabel.has(przycisk.dataset.tableTechnology))));

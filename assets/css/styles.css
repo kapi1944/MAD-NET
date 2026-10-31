@@ -566,8 +566,8 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 .availability-option:hover{border-color:#b8c7d5}
 .availability-contract{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid #364452;padding-top:20px;margin-top:20px;flex-wrap:wrap}
 .availability-contract-options{border:0;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap}
-.availability-contract-options label{cursor:pointer}.availability-contract-options input{position:absolute;opacity:0;pointer-events:none}.availability-contract-options span{display:block;border:1px solid #455364;background:#111a25;color:#cbd4df;border-radius:8px;padding:11px 14px;font-size:11px;font-weight:850}
-.availability-contract-options label:has(input:checked) span{color:#fff;background:#941529;border-color:#ff3151;box-shadow:0 0 0 2px #ff274223}
+.availability-contract-options label{cursor:pointer}.availability-contract-options input{position:absolute;opacity:0;pointer-events:none}.availability-contract-options label>span{display:block;border:1px solid #455364;background:#111a25;color:#cbd4df;border-radius:8px;padding:11px 14px;font-size:11px;font-weight:850}
+.availability-contract-options label:has(input:checked)>span{color:#fff;background:#941529;border-color:#ff3151;box-shadow:0 0 0 2px #ff274223}
 .availability-contract-options input:focus-visible+span{outline:3px solid white;outline-offset:2px}
 .availability-choice-summary{border-left:3px solid #ff2f52;padding:10px 12px;background:#131a25;border-radius:0 8px 8px 0;margin-top:16px;color:#bfcbd7;font-size:12px;line-height:1.6}
 .availability-help{display:block;margin-top:5px;font-size:11px;line-height:1.55;color:#8999a9}
@@ -581,7 +581,7 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 .availability-map-tools button:focus-visible,.availability-copy:focus-visible,.availability-submit:focus-visible,.availability-geo-search:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .availability-feedback[data-error="false"]{color:#baf4d4!important}
 @media(max-width:970px){.availability-interest-grid{grid-template-columns:1fr 1fr}.availability-interest-grid>:last-child{grid-column:1/-1}}
-@media(max-width:670px){.availability-interest{padding:19px 14px}.availability-interest-grid{grid-template-columns:1fr}.availability-interest-grid>:last-child{grid-column:auto}.availability-contract{align-items:stretch}.availability-contract-options{width:100%}.availability-contract-options label{flex:1}.availability-contract-options span{text-align:center;padding:12px 8px}.availability-field-row{grid-template-columns:1fr;gap:0}}
+@media(max-width:670px){.availability-interest{padding:19px 14px}.availability-interest-grid{grid-template-columns:1fr}.availability-interest-grid>:last-child{grid-column:auto}.availability-contract{align-items:stretch}.availability-contract-options{width:100%}.availability-contract-options label{flex:1}.availability-contract-options label>span{text-align:center;padding:12px 8px}.availability-field-row{grid-template-columns:1fr;gap:0}}
 
 
 /* MAD-NET V17 / Nieprzerywany routing cable management + poprawki czytelności */
@@ -882,3 +882,7 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 
 
 .compare-tech-panel[data-tech="FIBER"]{--table-accent:#ff7b19;--table-edge:#ff7b1988}.compare-tech-panel[data-tech="LAN"]{--table-accent:#ff203e;--table-edge:#ff203e88}.compare-tech-panel[data-tech="AIR"]{--table-accent:#3fa8ff;--table-edge:#3fa8ff88}
+
+.lokalizacja-reczna{display:flex;flex-wrap:wrap;gap:10px;border:1px solid #415066;border-radius:9px;margin:16px 0;padding:12px;font-size:12px}
+.lokalizacja-reczna label{flex:1 1 160px;min-width:0}.lokalizacja-reczna input{display:block;width:100%;background:#0c1119;color:white;border:1px solid #63758a;padding:12px;border-radius:6px;margin-top:6px}
+.lokalizacja-reczna button,.lokalizacja-reczna a{padding:12px;border:1px solid #63758a;border-radius:6px;background:#182331;color:white;min-height:44px}
