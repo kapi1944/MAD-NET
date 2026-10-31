@@ -1,28 +1,15 @@
-# HERO RACK 2.1 — przegląd przed akceptacją
+# HERO 3.0 — ocena integracji
 
-Wersja 2.0 została odrzucona wizualnie. Poprzedni wpis passed nie oznaczał akceptacji użytkownika i został zastąpiony tą oceną.
+Użytkownik zaakceptował końcowy projekt szafy i polecił umieszczenie go w HERO. Wcześniejszy status blocked dotyczył niezaakceptowanej wersji 2.1. Obecnym wzorcem jest docs/prototypy/hero-3-0/rack-finalny.png.
 
-## Dowody
+Wdrożona bitmapa assets/img/hero-rack.png jest identyczna z zaakceptowanym plikiem; test sprawdza jej SHA-256. Materiały, logo, typografia urządzeń, kolorowe fronty i 12 śrub pozostają częścią zaakceptowanej grafiki. Nie modelowano ponownie szafy gradientami CSS.
 
-- Wzorzec: Nowoczesna oferta internetu MAD-NET.png, 1774 × 887 px.
-- Dokument i schematy: MADNET_HERO_REALIZM_2_1_DO_REPO/docs/PROMPT_HERO_REALIZM_2_1.md i podkatalog referencje/hero-2-1/. Schematy mechaniczne nie zastępują projektu wizualnego.
-- Rendering: test-results/realizm-2-1/po/hero-AIR-1774.png, viewport 1774 × 887 CSS px, gęstość 1. Stan AIR po obu stronach.
-- Wspólne porównanie: test-results/realizm-2-1/referencja-AIR.png. Oba obrazy zmniejszone jednakowo do 887 × 443,5 px.
-- Detal 1:1: test-results/realizm-2-1/detal-referencja.png.
-- Przed/po: test-results/realizm-2-1/przed-po-AIR-1774.png i przed-po-AIR-1024.png.
-- Mocowania: test-results/realizm-2-1/12-srub.png i trzy osobne zbliżenia w po/.
+Oceniono rzeczywisty rendering w test-results/v20/po/hero-{szerokość}.png oraz test-results/hero-3-0/integracja-{szerokość}.png: skala i proporcje obrazu pozostają stałe, nakładka nie przesuwa się względem grafiki, treść jest czytelna, a panel pozostaje za prawą ścianką na desktopie i pod modelem na telefonie. W trakcie iteracji poprawiono odstęp od nagłówka i podkład masek, aby tło PCB nie prześwitywało przez wygaszane symbole Wi-Fi.
 
-## Iteracje i ocena
+Cały obraz i wycinki kontrolek pracują w jednym viewBox 100 40 1350 970. Trzy przyciski z wielokątnymi obszarami pokrywają fronty. Dodatkowe trzy małe LED nad adapterami FIBER sygnalizują ich niezależną aktywność. Zmiana jasności kontrolek jest zamierzonym zachowaniem interaktywnym, nie zmianą materiału lub proporcji zaakceptowanego modelu.
 
-1. Bazowy rendering potwierdził P1: 6 zamiast 12 śrub, płaski rant, zbyt wąska ścianka, prawie czarne fronty i mało widoczne PCB.
-2. Dodano drugi rząd śrub i obejrzano trzy zbliżenia. W walidacji wykryto i poprawiono przesunięcie dolnych punktów o 2 px wynikające z obramowania uchwytów.
-3. Zmieniono bryłę i pokrywę, powiązano panel z tylną krawędzią ściany i sprawdzono odsłonięcie treści. Przywrócono kolory frontów.
-4. Poprawiono skalę nagłówka oraz układ ikon i faktów panelu. Dodano perspektywiczną warstwę PCB; pierwsze nieregularne linie zastąpiono uporządkowanymi wiązkami ścieżek. Ponownie obejrzano porównania całości i detalu.
+Testy obejmują 11 szerokości, 13 animacji i ich dokładne okresy, hover, focus, touch, przewijanie, CTA i ograniczony ruch. Osobno sprawdzono geometrię odsłoniętego panelu i faktyczne położenie wszystkich 13 kanałów względem przycisków. Regresja V21 obejmuje tabele, formularz i mapę. Brak wyjątków JS i błędów konsoli.
 
-Typografia zachowuje rodzinę projektu; hierarchia i skala nagłówka są bliższe wzorcowi. Układ ma głębszą bryłę i większą powierzchnię boku. Burgund, miedź, niebieski, SC/UPC Simplex i 5 symboli AIR są czytelne. Zachowano istniejące logo, treści, liczbę ofert oraz interaktywne elementy HTML/CSS/SVG. Nawigacja, cennik i formularz pozostają poza zakresem korekty.
+Nie testowano fizycznego telefonu, Safari ani Firefox. Akceptacja projektu graficznego nie oznacza publikacji witryny. Szczegóły: docs/HERO_3_HYBRYDA.md.
 
-**Niedokończony aspekt wierności:** stal i PCB nadal mają bardziej regularny, wektorowy charakter niż referencja; mikrodetal i fotograficzne oświetlenie nie są w pełni odtworzone. Nie ma podstaw do deklaracji pełnej zgodności ani zatwierdzenia wyglądu przez użytkownika. Wersja 2.1 jest przedstawiana do oceny z rzeczywistymi screenshotami.
-
-Oddzielna regresja funkcjonalna obejmuje 13 animacji, hover/focus/touch, CTA, reduced motion, 11 szerokości i funkcje V21. Pozytywne testy nie zamykają powyższej różnicy wizualnej. Fizyczny telefon, Firefox i Safari nie były testowane.
-
-final result: blocked
+final result: passed

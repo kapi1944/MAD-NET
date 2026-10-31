@@ -607,19 +607,8 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 .rack--signal .rack-box{border-color:#c2d6f08a;background:linear-gradient(150deg,#41556a,#060b12 15%,#030509 60%,#536677);box-shadow:inset 0 1px #e7f6ff99,0 0 0 1px #ffffff1e,0 25px 43px #000c,0 0 21px #1f83e72e}.rack--signal .rack-body{border-color:#33465c;background:radial-gradient(circle at 50% 20%,#24659c19,#030912 80%)}.rack--signal .rack-device{border-left-width:6px;border-color:color-mix(in srgb,var(--tech) 60%,#172b3b);border-left-color:var(--tech);background:linear-gradient(90deg,color-mix(in srgb,var(--tech) 39%,#05090e),color-mix(in srgb,var(--tech) 13%,#03080d) 48%,#070d12);box-shadow:inset 0 1px #fff4,0 0 15px color-mix(in srgb,var(--tech) 24%,transparent)}.rack--signal .rack-side{border-color:#4e799a;background:linear-gradient(90deg,#0a1724,#18364a,#08121e)}.rack--signal .rack-side i{border-color:#5686ae;box-shadow:0 0 5px #2d99dd88;background:#0d273a}.rack--signal .rack-floor{border-top:1px solid #23455c}.rack--signal .rack-aura{background:radial-gradient(ellipse at 50% 60%,#165aaf50,transparent 69%)}.rack--signal .rack-roof{border-bottom:1px solid #50b4fc4c}
 
 /* V18: pełnowymiarowe 3 kolumny w hero, responsive i kontrolowany realizm hardware. */
-.hero--rack-3col{--rack-accent:#ff3150;background:radial-gradient(ellipse at 60% 100%,#64132235,transparent 50%),linear-gradient(#070b10,#0a0c11)}
-.hero--rack-3col:before{background:radial-gradient(ellipse at 91% 32%,#fb23401b,transparent 36%);transition:background .35s}
-.pcb-hero{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;fill:none;stroke-linejoin:round;stroke-linecap:round;mask-image:radial-gradient(ellipse at 20% 42%,#0002 0%,#0006 32%,#000 72%)}
-.sciezki-hero{stroke:#792536;stroke-width:1.1;opacity:.45}
-.podklad-pcb{stroke:#252630;stroke-width:4;opacity:.65}
-.sciezki-podlogi{stroke:#ad2038;opacity:.55}
-.pady-hero{fill:#360c18;stroke:#b42a44;stroke-width:1;opacity:.75}
-.pady-hero circle:nth-child(5n){fill:#ef3152;filter:drop-shadow(0 0 3px #de234c)}
-.sciezki-hero path:nth-child(3n){stroke-width:2;opacity:.6}
-.impulsy-hero{stroke:#f44764;stroke-width:2;opacity:.7;filter:drop-shadow(0 0 2px #f02b4e88)}
-.impulsy-hero path{stroke-dasharray:5 795;animation:impuls-pcb var(--czas) linear infinite;animation-delay:var(--faza)}
-.mot-off .impulsy-hero{display:none}
-@media(prefers-reduced-motion:reduce){.impulsy-hero{display:none}}
+.hero--rack-3col{--rack-accent:#ff3150;background:#07090c url("../img/hero/plyta-pcb.webp") center center / cover no-repeat}
+.hero--rack-3col:before{background:linear-gradient(90deg,rgba(3,5,8,.78),rgba(3,5,8,.38) 26%,transparent 50%);transition:background .35s}
 .hero--rack-3col .hero-in{position:relative;isolation:isolate;max-width:1672px;min-height:650px;grid-template-columns:minmax(290px,1fr) minmax(440px,1.36fr) minmax(260px,.84fr);gap:23px;align-items:center;padding-top:64px;padding-bottom:76px}
 .hero--rack-3col .hero-copy{min-width:0;position:relative;z-index:2}
 .hero--rack-3col .hero h1{max-width:unset}

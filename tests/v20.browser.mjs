@@ -1,6 +1,7 @@
 /* Regresja V20 w prawdziwym Chromium: geometria, obsługa i istniejące oferty. */
 import assert from 'node:assert/strict';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright-core';
@@ -97,36 +98,21 @@ try {
       pomiary.push(pomiar);
       assert.equal(pomiar.przepelnienie, 0);
       assert.ok(pomiar.trescMiesciSie && pomiar.szafaMiesciSie && pomiar.portyDostepne);
-      const mocowania = await strona.locator('.rack-ear > i').evaluateAll(sruby => sruby.every(sruba => {
-        const lewa = sruba.parentElement.classList.contains('rack-ear-left');
-        const szyna = document.querySelector(lewa ? '.rail-left' : '.rail-right').getBoundingClientRect();
-        const granice = sruba.getBoundingClientRect(), srodek = (granice.left + granice.right) / 2;
-        return srodek >= szyna.left && srodek <= szyna.right;
-      }));
-      assert.ok(mocowania, 'Śruby muszą trafiać w szyny');
-      assert.equal(await strona.locator('.rack-ear').count(), 6);
-      assert.equal(await strona.locator('.rack-ear > i').count(), 12);
-      const montaz = await strona.locator('.rack-mounted').evaluateAll(urzadzenia => urzadzenia.every(urzadzenie => {
-        const przycisk = urzadzenie.querySelector('.rack-device');
-        return [...urzadzenie.querySelectorAll('.rack-ear')].every(uchwyt => {
-          const sruby = [...uchwyt.children];
-          if (sruby.length !== 2 || sruby[0].offsetTop + sruby[0].offsetHeight >= sruby[1].offsetTop) return false;
-          if (uchwyt.offsetHeight !== przycisk.offsetHeight) return false;
-          const lewy = uchwyt.classList.contains('rack-ear-left');
-          if (lewy ? uchwyt.offsetLeft + uchwyt.offsetWidth !== przycisk.offsetLeft : uchwyt.offsetLeft !== przycisk.offsetLeft + przycisk.offsetWidth) return false;
-          const szyna = document.querySelector(lewy ? '.rail-left' : '.rail-right');
-          const styl = getComputedStyle(szyna, '::before');
-          const rozstaw = parseFloat(getComputedStyle(szyna).getPropertyValue('--rozstaw-otworow'));
-          const srodekOtworu = szyna.clientTop + parseFloat(styl.top) + (innerWidth <= 480 ? 2 : 3.5);
-          return sruby.every(sruba => {
-            const srodek = urzadzenie.offsetTop + sruba.offsetTop + sruba.offsetHeight / 2;
-            const odchylenie = (srodek - srodekOtworu) / rozstaw;
-            const granice = sruba.getBoundingClientRect();
-            return Math.abs(odchylenie - Math.round(odchylenie)) * rozstaw <= 1.5 && granice.width > 3 && granice.height > 3 && getComputedStyle(sruba).display !== 'none';
-          });
+      assert.equal(await strona.locator('.hero-rack-hybryda .rack-device').count(), 3);
+      assert.equal(await strona.locator('.grafika-hybrydowa [data-speed]').count(), 13);
+      assert.equal(await strona.locator('#grafika-szafy').getAttribute('href'), './assets/img/hero-rack.png');
+      const zgodnosc = await strona.evaluate(() => {
+        const rysunek = document.querySelector('.grafika-hybrydowa');
+        const przeliczenie = rysunek.getScreenCTM();
+        return [...rysunek.querySelectorAll('[data-speed]')].every(kanal => {
+          const wycinek = kanal.querySelector('[clip-path]');
+          const rys = wycinek ? document.querySelector(wycinek.getAttribute('clip-path').slice(4, -1)).querySelector('rect').getBBox() : kanal.querySelector('circle').getBBox();
+          const punkt = new DOMPoint(rys.x + rys.width / 2, rys.y + rys.height / 2).matrixTransform(przeliczenie);
+          const przycisk = document.querySelector('[data-rack-tech="' + kanal.dataset.technologiaKanalu + '"]');
+          return przycisk.contains(document.elementFromPoint(punkt.x, punkt.y));
         });
-      }));
-      assert.ok(montaz, 'Dwie widoczne śruby na uchwyt, zgodne otwory i brak szczelin przy froncie');
+      });
+      assert.ok(zgodnosc, 'Kontrolki muszą skalować się razem z obrazem i odpowiadającym im obszarem wyboru');
       if (szerokosc > 1230) {
         assert.ok(pomiar.wysokoscPanelu <= pomiar.wysokoscSciany + 2);
         assert.ok(pomiar.wysokoscPanelu <= pomiar.wysokoscTylnejKrawedzi && pomiar.goraTylu >= 0 && pomiar.dolTylu >= 0);
@@ -238,7 +224,7 @@ try {
 
   const oczekiwaneOkresy = { LAN: [5, 2.5, 1.25, .714, .455], FIBER: [1, .333, .167], AIR: [2.4, 1.818, 1.224, .923, .741] };
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
-    const okresy = await strona.locator(`[data-rack-tech="${technologia}"] [data-speed]`).evaluateAll(kanaly => kanaly.map(kanal => parseFloat(getComputedStyle(kanal.querySelector('.rj-link,.fiber-activity,.wi')).animationDuration)));
+    const okresy = await strona.locator(`[data-technologia-kanalu="${technologia}"]`).evaluateAll(kanaly => kanaly.map(kanal => parseFloat(getComputedStyle(kanal.querySelector('.rj-link,.fiber-activity,.wi')).animationDuration)));
     assert.equal(okresy.length, oferta[technologia].length);
     assert.deepEqual(okresy, oczekiwaneOkresy[technologia]);
     assert.ok(okresy.every((okres, indeks) => okres > 0 && (!indeks || okres < okresy[indeks - 1])));
@@ -246,7 +232,7 @@ try {
   // Mierzymy rzeczywiste miganie przez pełny okres najwolniejszego kanału.
   const miganie = await strona.evaluate(async () => {
     const kanaly = [...document.querySelectorAll('.hero-rack-stage [data-speed]')].map(kanal => ({
-      nazwa: kanal.title, dioda: kanal.querySelector('.rj-link,.fiber-activity,.wi'), probki: [],
+      nazwa: kanal.querySelector('title').textContent, dioda: kanal.querySelector('.rj-link,.fiber-activity,.wi'), probki: [],
     }));
     for (let numer = 0; numer < 32; numer++) {
       kanaly.forEach(kanal => kanal.probki.push(Number(getComputedStyle(kanal.dioda).opacity)));

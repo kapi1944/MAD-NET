@@ -32,3 +32,7 @@ Aktualny asset: rack-tabliczki-v4.png. Wbudowany image_gen, edycja lokalna wedł
 ## Finalny asset — struktura blachy
 
 Aktualny plik: rack-finalny.png. Przygotowany wbudowanym image_gen na podstawie wskazanej starszej wersji i zdjęcia prawdziwej powłoki proszkowej. Prompt: zachowaj drobne, równomierne ziarno oryginalnej blachy, ciemną ekspozycję i kamerę; przenieś wyłącznie poprawione cztery logotypy, nadruk górny, trzy zaokrąglone czarne szczotkowane tabliczki i jednoliniowe oznaczenia 5-PORT/3-PORT/5-CH. Zachowaj 12 śrub, układ 5/3/5 kanałów i alfa. Odrzucono próbę o zbyt silnej nieregularnej fakturze. To finalny asset graficzny przedstawiany użytkownikowi, bez automatycznej akceptacji integracji HERO.
+
+## Akceptacja i integracja
+
+Użytkownik zaakceptował ostatni projekt graficzny i zlecił jego umieszczenie w HERO. Asset rack-finalny.png skopiowano bez zmian do assets/img/hero-rack.png. Etapy integracji 3–6 opisano w ../../HERO_3_HYBRYDA.md. Dawne informacje o oczekiwaniu na akceptację powyżej opisują historię PoC.
