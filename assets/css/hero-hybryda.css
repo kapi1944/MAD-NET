@@ -2,7 +2,8 @@
 .hero-rack-stage.hero-rack-hybryda{width:calc(100% + 90px);max-width:770px;flex-shrink:0;margin:0 auto 0 32px;padding:0;transform:translateY(-16px)}
 .hero-rack-stage.hero-rack-hybryda .rack-box{width:100%;max-width:none;aspect-ratio:1350/970;position:relative;isolation:isolate;transform:none;border:0;border-radius:0;margin:0;padding:0;background:none;box-shadow:none}
 .hero-rack-stage.hero-rack-hybryda .rack-box::before,.hero-rack-stage.hero-rack-hybryda .rack-box::after{display:none}
-.grafika-hybrydowa{display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
+.grafika-hybrydowa{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;filter:drop-shadow(0 0 28px #0009)}
+.hero--rack-3col .hero-tech-panel{box-shadow:0 0 38px 6px #0009}
 .hero-rack-stage.hero-rack-hybryda .rack-device{all:unset;box-sizing:border-box;position:absolute;z-index:3;left:10.37%;top:var(--gora);width:62.6%;height:var(--wysokosc);clip-path:var(--obrys);cursor:pointer;touch-action:pan-y;border-radius:0;outline:0;filter:none;background:transparent;box-shadow:none;transition:box-shadow .2s ease,background-color .2s ease}
 /* Wybór panelu (is-active) nie nadpisuje podświetlenia wskazywanego urządzenia. */
 @media(hover:hover) and (pointer:fine){
