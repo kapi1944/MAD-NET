@@ -51,6 +51,61 @@ async function sprawdzWybor(strona, technologia, poczatek) {
   }
 }
 
+async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) {
+  await strona.setViewportSize({ width: szerokosc, height: 1250 });
+  await strona.emulateMedia({ reducedMotion: ograniczonyRuch ? 'reduce' : 'no-preference' });
+  await strona.goto(adres);
+  await strona.mouse.move(2, 100);
+  const odczytaj = urzadzenie => urzadzenie.evaluate(element => {
+    const styl = getComputedStyle(element);
+    return { tlo: styl.backgroundColor, cien: styl.boxShadow, obrys: element.getBoundingClientRect().toJSON() };
+  });
+  for (const technologia of ['LAN', 'FIBER', 'AIR']) {
+    const urzadzenie = strona.locator(`[data-rack-tech="${technologia}"]`);
+    const poczatek = await odczytaj(urzadzenie);
+    await urzadzenie.hover();
+    await strona.waitForTimeout(350);
+    const aktywne = await odczytaj(urzadzenie);
+    assert.notEqual(aktywne.cien, poczatek.cien, `Brak podświetlenia ${technologia} po aktualizacji panelu`);
+    assert.notEqual(aktywne.tlo, poczatek.tlo);
+    assert.deepEqual(aktywne.obrys, poczatek.obrys, 'Podświetlenie nie zmienia geometrii');
+    // Próbki w każdej klatce wychwycą przerwy podczas animacji HERO.
+    const probki = await urzadzenie.evaluate(element => new Promise(zakoncz => {
+      const poczatek = performance.now(), probki = [];
+      function zmierz() {
+        const styl = getComputedStyle(element);
+        probki.push({ czas: performance.now() - poczatek, cien: styl.boxShadow, tlo: styl.backgroundColor });
+        if (performance.now() - poczatek >= 5000) zakoncz(probki);
+        else requestAnimationFrame(zmierz);
+      }
+      zmierz();
+    }));
+    assert.ok(probki.some(probka => probka.czas >= 2000) && probki.at(-1).czas >= 5000);
+    assert.ok(probki.every(probka => probka.cien === aktywne.cien && probka.tlo === aktywne.tlo), `Przerwane podświetlenie ${technologia}`);
+    await urzadzenie.hover({ position: { x: poczatek.obrys.width * .7, y: poczatek.obrys.height * .65 } });
+    assert.equal((await odczytaj(urzadzenie)).cien, aktywne.cien, 'Ruch wewnątrz urządzenia');
+    await strona.screenshot({ path: fileURLToPath(new URL(`hover-${szerokosc}-${technologia}${ograniczonyRuch ? '-reduce' : ''}.png`, katalog)) });
+    const nastepna = technologia === 'AIR' ? 'LAN' : technologia === 'LAN' ? 'FIBER' : 'AIR';
+    await strona.locator(`[data-rack-tech="${nastepna}"]`).hover();
+    if (!ograniczonyRuch) {
+      await strona.waitForTimeout(100);
+      const wygaszanie = await odczytaj(urzadzenie);
+      assert.notEqual(wygaszanie.cien, aktywne.cien, 'Wygaszanie rozpoczyna się po wyjściu');
+      assert.notEqual(wygaszanie.cien, poczatek.cien, 'Wygaszanie jest płynne');
+    }
+    await strona.waitForTimeout(450);
+    assert.equal((await odczytaj(urzadzenie)).cien, poczatek.cien);
+    for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
+      await urzadzenie.hover();
+      await strona.mouse.move(2, 100);
+    }
+    await strona.waitForTimeout(450);
+    assert.equal((await odczytaj(urzadzenie)).cien, poczatek.cien);
+    assert.equal((await odczytaj(urzadzenie)).tlo, poczatek.tlo);
+  }
+  console.log(`PASS trwałe podświetlenie 2/5 s, ruch i wyjście: ${szerokosc}px, reduced-motion=${ograniczonyRuch}`);
+}
+
 try {
   await new Promise((zakoncz, odrzuc) => {
     const zegar = setTimeout(() => odrzuc(new Error('Serwer testowy nie wystartował')), 8000);
@@ -66,6 +121,9 @@ try {
   });
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1250 } });
   sledzBledy(strona);
+  for (const szerokosc of [390, 768, 1024, 1440]) await sprawdzPodswietlenie(strona, szerokosc);
+  await sprawdzPodswietlenie(strona, 1440, true);
+  await strona.emulateMedia({ reducedMotion: 'no-preference' });
   for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1100, 1280, 1440, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
@@ -302,10 +360,13 @@ try {
   const sesja = await dotyk.context().newCDPSession(dotyk);
   const urzadzenie = await dotyk.locator('[data-rack-tech="LAN"]').boundingBox();
   const punkt = { x: urzadzenie.x + 80, y: urzadzenie.y + 25 };
+  const przewiniecie = await dotyk.evaluate(() => scrollY);
   await sesja.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [punkt] });
   await sesja.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: punkt.x, y: punkt.y - 90 }] });
   await sesja.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await dotyk.waitForFunction(poczatek => scrollY > poczatek, przewiniecie);
   assert.equal(await dotyk.locator('#hero-tech-panel').getAttribute('data-tech'), 'AIR');
+  assert.equal(await dotyk.locator('[data-rack-tech="LAN"]').evaluate(element => getComputedStyle(element).boxShadow), 'none', 'Dotyk nie pozostawia podświetlenia hover');
   await dotyk.emulateMedia({ reducedMotion: 'reduce' });
   await dotyk.locator('[data-rack-tech="FIBER"]').tap();
   assert.equal(await dotyk.locator('#hero-tech-panel').getAttribute('data-tech'), 'FIBER');
