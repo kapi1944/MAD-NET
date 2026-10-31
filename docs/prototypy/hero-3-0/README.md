@@ -24,3 +24,7 @@ Na życzenie użytkownika aktualny podgląd korzysta z rack-ciemny-v2.png. Wbudo
 ## Logo v3
 
 Aktualny podgląd: rack-logo-v3.png. Edycja wbudowanym image_gen według logo załączonego przez użytkownika: popraw cztery znaki MAD-NET (górny front i trzy tabliczki), zachowaj charakterystyczną czerwoną orbitę, biało-czerwony napis i mały dopisek. Zachowaj ciemny wariant, geometrię, alfa, 12 śrub i oznaczenia 5-PORT/3-PORT/5-CH. Logo w bitmapie jest odtworzeniem; w docelowej integracji można nałożyć oryginalny plik marki dla dokładności typograficznej.
+
+## Materiały oznakowania v4
+
+Aktualny asset: rack-tabliczki-v4.png. Wbudowany image_gen, edycja lokalna według referencji materiału użytkownika: logo górne jako płaski nadruk farbą bezpośrednio na obudowie; trzy logo urządzeń na cienkich tabliczkach ze szczotkowanego czarnego aluminium z lekko zaokrąglonymi narożnikami. Bez dodatkowych śrub tabliczek, z zachowaniem 12 mocowań, portów, napisów i przezroczystości.
