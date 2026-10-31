@@ -1,0 +1,16 @@
+{
+  "source": "V18",
+  "original_sha256": "451f2f50295289ceefc56c61fe9f01fd0e715b96e7bdbe8aff37114fb5cbf6d3",
+  "css_bytes": 103305,
+  "scripts": {
+    "cennik.js": 32485,
+    "dostepnosc.js": 16945,
+    "hero-rack.js": 3651
+  },
+  "logo_bytes": 100268,
+  "technology_packages": {
+    "LAN": 5,
+    "FIBER": 3,
+    "AIR": 5
+  }
+}

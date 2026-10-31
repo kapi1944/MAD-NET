@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b10">
+<meta name="description" content="Interaktywny cennik internetu MAD-NET. Porównaj pakiety światłowodowe, kablowe i bezprzewodowe w Trzebiatowie i okolicach.">
+<title>Cennik internetu — MAD-NET | Interaktywne technologie V18</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+<link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+<header class="nav" id="start"><div class="container nav-in"><a class="brand" href="#start" aria-label="MAD-NET — początek"><img alt="MAD-NET — Internet | Monitoring | IT" src="./assets/img/mad-net-logo.png"></a><nav class="links" aria-label="Menu strony"><a href="#start">Start</a><a class="active" href="#cennik">Cennik internetu</a><a href="#oplaty">Inne opłaty</a><a href="#kontakt">Kontakt</a></nav><a class="nav-cta" href="#kontakt">Zapytaj o dostępność <span aria-hidden="true">↗</span></a></div></header>
+<div class="signal" aria-hidden="true"></div>
+<main>
+<section class="hero hero--rack-3col" aria-labelledby="hero-heading"><div class="container hero-in">
+ <div class="hero-copy"><div class="eyebrow">MAD-NET / TRZEBIATÓW I OKOLICE / OFERTA INTERNETU</div>
+  <h1 id="hero-heading">Wybierz łącze.<br><em>Zobacz różnicę.</em></h1>
+  <p class="lead">Internet światłowodowy, kablowy i bezprzewodowy. <strong>Trzy technologie, jedna lokalna sieć.</strong> Wskaż urządzenie w szafie, poznaj różnicę i porównaj pakiety.</p>
+  <div class="hero-actions"><a class="btn-primary" href="#cennik">Przeglądaj pakiety <span aria-hidden="true">↘</span></a><a class="btn-ghost" href="#kontakt">Zapytaj o podłączenie →</a></div>
+  <div class="hero-foot"><span>3 technologie transmisji</span><span>13 pakietów w cenniku</span><span>Lokalny operator</span></div>
+ </div>
+ <div class="hero-rack-center" aria-label="Trzy urządzenia MAD-NET w szafie RACK"><div class="hero-rack-stage" id="hero-rack-stage" data-current-tech="LAN">
+  <div class="rack-stage rack--industrial rack--hybrid" role="group" aria-label="Szafa RACK MAD-NET, wybierz technologię: LAN, FIBER lub AIR">
+   <div class="rack-aura" aria-hidden="true"></div>
+   <div class="rack-box">
+    <div class="rack-roof"><span class="roof-vent" aria-hidden="true">||||||||||||||||||||</span><span class="roof-text">MAD-NET / 6U</span></div>
+    <div class="rack-body">
+     <div class="rack-side rail-left" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+     <div class="rack-equipment">
+      <div class="rack-mounted">
+     <i class="rack-ear rack-ear-left" aria-hidden="true"><i></i><i></i></i>
+     <button type="button" class="rack-device rd-lan" data-rack-tech="LAN" aria-label="LAN: 5 portów, pokaż opis technologii">
+       <span class="device-mark"><img alt="" data-hero-rack-logo><span class="device-key">LAN <small>ETHERNET / RJ-45</small></span></span>
+       <span class="port-strip"><span class="rj-port" title="LAN – 10 Mbit/s" data-speed="10" style="--pulse:5000ms;--phase:-4877ms"><i class="rj-pins"></i><i class="rj-cavity"></i><i class="rj-link"></i></span><span class="rj-port" title="LAN – 20 Mbit/s" data-speed="20" style="--pulse:2500ms;--phase:-2180ms"><i class="rj-pins"></i><i class="rj-cavity"></i><i class="rj-link"></i></span><span class="rj-port" title="LAN – 40 Mbit/s" data-speed="40" style="--pulse:1250ms;--phase:-733ms"><i class="rj-pins"></i><i class="rj-cavity"></i><i class="rj-link"></i></span><span class="rj-port" title="LAN – 60 Mbit/s" data-speed="60" style="--pulse:714ms;--phase:-0ms"><i class="rj-pins"></i><i class="rj-cavity"></i><i class="rj-link"></i></span><span class="rj-port" title="LAN – 80 Mbit/s" data-speed="80" style="--pulse:455ms;--phase:-454ms"><i class="rj-pins"></i><i class="rj-cavity"></i><i class="rj-link"></i></span></span>
+       <span class="device-diags"><span class="online-dot" aria-hidden="true"></span><span class="diag-text">05 PORT</span></span>
+     </button>
+     <i class="rack-ear rack-ear-right" aria-hidden="true"><i></i><i></i></i>
+    </div>
+      <div class="rack-mounted">
+     <i class="rack-ear rack-ear-left" aria-hidden="true"><i></i><i></i></i>
+     <button type="button" class="rack-device rd-fiber" data-rack-tech="FIBER" aria-label="FIBER: 3 portów, pokaż opis technologii">
+       <span class="device-mark"><img alt="" data-hero-rack-logo><span class="device-key">FIBER <small>SC/UPC SIMPLEX</small></span></span>
+       <span class="port-strip"><span class="fiber-port" title="FIBER – 50 Mbit/s, SC/UPC Simplex" data-speed="50" style="--pulse:1000ms;--phase:-877ms"><i class="fiber-cavity"></i><i class="fiber-dustcap"></i><i class="fiber-activity"></i></span><span class="fiber-port" title="FIBER – 100 Mbit/s, SC/UPC Simplex" data-speed="100" style="--pulse:333ms;--phase:-13ms"><i class="fiber-cavity"></i><i class="fiber-dustcap"></i><i class="fiber-activity"></i></span><span class="fiber-port" title="FIBER – 300 Mbit/s, SC/UPC Simplex" data-speed="300" style="--pulse:167ms;--phase:-151ms"><i class="fiber-cavity"></i><i class="fiber-dustcap"></i><i class="fiber-activity"></i></span></span>
+       <span class="device-diags"><span class="online-dot" aria-hidden="true"></span><span class="diag-text">03 PORT</span></span>
+     </button>
+     <i class="rack-ear rack-ear-right" aria-hidden="true"><i></i><i></i></i>
+    </div>
+      <div class="rack-mounted">
+     <i class="rack-ear rack-ear-left" aria-hidden="true"><i></i><i></i></i>
+     <button type="button" class="rack-device rd-air" data-rack-tech="AIR" aria-label="AIR: 5 kanałów radiowych, pokaż opis technologii">
+       <span class="device-mark"><img alt="" data-hero-rack-logo><span class="device-key">AIR <small>RADIO / RF</small></span></span>
+       <span class="port-strip"><span class="air-port" title="AIR – kanał 10 Mbit/s" data-speed="10" style="--air-cycle:2400ms"><svg class="wifi-svg" viewBox="0 0 28 24" aria-hidden="true"><path class="wi w3" d="M2 9Q14 -1 26 9"/><path class="wi w2" d="M6 14Q14 7 22 14"/><path class="wi w1" d="M10 19Q14 16 18 19"/><circle cx="14" cy="22" r="1.7"/></svg></span><span class="air-port" title="AIR – kanał 20 Mbit/s" data-speed="20" style="--air-cycle:1818ms"><svg class="wifi-svg" viewBox="0 0 28 24" aria-hidden="true"><path class="wi w3" d="M2 9Q14 -1 26 9"/><path class="wi w2" d="M6 14Q14 7 22 14"/><path class="wi w1" d="M10 19Q14 16 18 19"/><circle cx="14" cy="22" r="1.7"/></svg></span><span class="air-port" title="AIR – kanał 40 Mbit/s" data-speed="40" style="--air-cycle:1224ms"><svg class="wifi-svg" viewBox="0 0 28 24" aria-hidden="true"><path class="wi w3" d="M2 9Q14 -1 26 9"/><path class="wi w2" d="M6 14Q14 7 22 14"/><path class="wi w1" d="M10 19Q14 16 18 19"/><circle cx="14" cy="22" r="1.7"/></svg></span><span class="air-port" title="AIR – kanał 60 Mbit/s" data-speed="60" style="--air-cycle:923ms"><svg class="wifi-svg" viewBox="0 0 28 24" aria-hidden="true"><path class="wi w3" d="M2 9Q14 -1 26 9"/><path class="wi w2" d="M6 14Q14 7 22 14"/><path class="wi w1" d="M10 19Q14 16 18 19"/><circle cx="14" cy="22" r="1.7"/></svg></span><span class="air-port" title="AIR – kanał 80 Mbit/s" data-speed="80" style="--air-cycle:741ms"><svg class="wifi-svg" viewBox="0 0 28 24" aria-hidden="true"><path class="wi w3" d="M2 9Q14 -1 26 9"/><path class="wi w2" d="M6 14Q14 7 22 14"/><path class="wi w1" d="M10 19Q14 16 18 19"/><circle cx="14" cy="22" r="1.7"/></svg></span></span>
+       <span class="device-diags"><span class="online-dot" aria-hidden="true"></span><span class="diag-text">05 CH</span></span>
+     </button>
+     <i class="rack-ear rack-ear-right" aria-hidden="true"><i></i><i></i></i>
+    </div>
+      <div class="rack-space" aria-hidden="true"><span class="space-vent">••••••••••••••••••••••••••••••••••</span><small>INFRASTRUCTURE / MAD-NET</small></div>
+     </div>
+     <div class="rack-side rail-right" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="rack-floor"><span class="floor-serial">MAD-NET // TRZEBIATÓW</span><span class="floor-leds" aria-hidden="true"><i></i><i></i><i></i></span></div>
+    <div class="rack-sidewall" aria-hidden="true"><i class="sidevent"></i><i class="sidevent"></i><i class="sidevent"></i></div>
+   </div>
+   <div class="rack-feet" aria-hidden="true"><i></i><i></i></div>
+  </div>
+  <div class="rack-stage-caption"><span class="rack-active-indicator"></span><span>INFRASTRUKTURA MAD-NET</span><span class="rack-stage-caption-divider">/</span><strong id="rack-current-label">LAN · Ethernet</strong></div>
+ </div></div>
+ <aside class="hero-tech-panel" id="hero-tech-panel" data-tech="LAN" aria-label="Opis wskazanej technologii">
+   <div class="hero-tech-panel-top"><span class="hero-tech-overline">TECHNOLOGIA / <strong id="hero-tech-index">01</strong></span><span class="hero-tech-status"><i></i> TRANSMISJA</span></div>
+   <div class="hero-tech-panel-content" id="hero-tech-panel-content" aria-live="polite" aria-atomic="true">
+      <div class="hero-tech-icon" id="hero-tech-icon" aria-hidden="true">▣</div>
+      <h2 id="hero-tech-title">LAN <span>/ kablowy</span></h2>
+      <p id="hero-tech-description">Stabilne połączenie przewodowe Ethernet przez RJ-45. Pięć pakietów o prędkości od 10 do 80 Mbit/s.</p>
+      <div class="hero-tech-facts"><div><small>DOSTĘPNE PAKIETY</small><strong id="hero-tech-count">5 wariantów</strong></div><div><small>TECHNOLOGIA</small><strong id="hero-tech-socket">RJ-45 / Ethernet</strong></div></div>
+   </div>
+   <a class="hero-tech-link" id="hero-tech-link" href="#cennik">Zobacz pakiety LAN <span aria-hidden="true">↗</span></a>
+   <div class="hero-tech-hint">Najedź lub dotknij urządzenia w szafie RACK, aby zmienić opis.</div>
+ </aside>
+ </div></section>
+<section class="pricing" id="cennik" aria-labelledby="pricing-heading"><div class="container"><div class="title-row"><div><div class="eyebrow">01 / CENNIK INTERNETU</div><h2 id="pricing-heading">Twój pakiet. <span>Twoje tempo.</span></h2><p class="intro">Zamiast zwykłej tabeli — prawdziwie techniczna prezentacja. Wybierz technologię i okres umowy. Jedno centralne urządzenie zmienia kolor i interfejsy razem z technologią. Każdy port symbolizuje <strong style="color:#f4f6f8">konkretny pakiet</strong>: najedź na niego, aby połączyć go wizualnie z ofertą. Kliknięcie uruchamia wpięcie RJ-45, sekwencję SC/UPC Simplex (zaślepka → wtyk) lub fale radiowe AIR — im szybszy pakiet AIR, tym częściej wysyłany jest sygnał.</p></div><div class="hint"><b>● Cennik źródłowy</b><br>Wszystkie prędkości i kwoty odczytano z oficjalnej strony mad-net.pl/cennik.php (29.10.2026).</div></div>
+<div class="control-panel"><div class="controls-top"><div><p class="contract-label">OKRES UMOWY</p><div class="segmented" role="group" aria-label="Wybierz okres umowy"><button type="button" data-term="24" aria-pressed="true">24 miesiące</button><button type="button" data-term="12" aria-pressed="false">12 miesięcy</button><button type="button" data-term="none" aria-pressed="false">Bezterminowo</button></div></div></div><div class="utility"><span class="legend-led"></span><span><strong style="color:#dde9e0">LAN</strong> — RJ-45 • <strong style="color:#dde9e0">FIBER</strong> — SC/UPC simplex • <strong style="color:#dde9e0">AIR</strong> — pulsujący sygnał Wi-Fi</span><span class="divider"></span><span>Animacje:</span><button type="button" id="animation-toggle" class="toggle" aria-pressed="true" aria-label="Włącz lub wyłącz animacje diod ACT, przewodów, zdejmowania zaślepek i fal radiowych">WŁ.</button><span class="right-note">Animacja poglądowa — nie przedstawia ruchu sieciowego na żywo.</span></div></div>
+<div class="pack-top"><h3 id="selected-title">Światłowód / FIBER</h3><span id="selected-count">3 dostępne pakiety</span></div>
+<div class="connection-note" id="connection-state" role="status" aria-live="polite">Najedź na port lub kartę, aby zobaczyć powiązanie. Kliknij, aby połączyć.</div>
+<div class="device-techbar" aria-label="Technologia centralnego urządzenia"><span class="device-techbar-title">TECHNOLOGIA URZĄDZENIA</span><div class="segmented device-tech-tabs" role="group" aria-label="Wybierz technologię urządzenia"><button type="button" data-technology="FIBER" aria-pressed="true">✦ FIBER <small>światłowód</small></button><button type="button" data-technology="LAN" aria-pressed="false">▣ LAN <small>kablowy</small></button><button type="button" data-technology="AIR" aria-pressed="false">◉ AIR <small>bezprzewodowy</small></button></div></div>
+<div class="connection-zone" id="connection-zone">
+ <div class="central-area" id="central-area"><div class="central-badge"><span class="central-badge-dot"></span> JEDNO URZĄDZENIE · WIELE PRĘDKOŚCI <small id="central-count">3 WARIANTY</small></div><div id="central-device"></div><div class="device-guide" id="device-guide">Wskaż kursorem lub przytrzymaj palcem, aby zobaczyć połączenie ↓</div></div>
+ <svg id="link-layer" class="link-layer" aria-hidden="true" preserveAspectRatio="none"><path id="link-casing" class="link-casing"></path><path id="link-active" class="link-active"></path><path id="link-hover" class="link-hover"/></svg>
+ <div class="cards cards-3" id="plans" aria-label="Pakiety cenowe"></div>
+</div><div class="wide-connect" aria-hidden="true"></div><div class="under" id="disclaimer"><strong>Warto wiedzieć:</strong> Urządzenie jest wizualizacją wariantów cenowych, a nie specyfikacją rzeczywistego switcha operatora. Dostępność danej technologii i pakietu zależy od lokalizacji. Cena dotyczy abonamentu dla wybranego czasu trwania umowy; inne opłaty są podane poniżej.</div><section class="compare-block" aria-labelledby="compare-heading"><div class="compare-head"><div><div class="eyebrow">01A / TABELA PARAMETRÓW I CEN</div><h3 class="compare-title" id="compare-heading">Pakiety w tabeli. <span>Na spokojnie i czytelnie.</span></h3><p class="compare-sub">Poniżej znajdziesz to samo zestawienie w formie technicznej tabeli dopasowanej wizualnie do interfejsu. Nagłówki pakietów oraz obramowania zmieniają kolor razem z aktualnie wybraną technologią.</p></div><div class="compare-chip" id="compare-chip">FIBER / aktywna tabela</div></div><div class="compare-tabs" role="tablist" aria-label="Technologia tabeli porównawczej"><button type="button" role="tab" id="tab-FIBER" data-table-technology="FIBER" aria-selected="true" aria-controls="comparison-panel">✦ FIBER</button><button type="button" role="tab" id="tab-LAN" data-table-technology="LAN" aria-selected="false" aria-controls="comparison-panel">▣ LAN</button><button type="button" role="tab" id="tab-AIR" data-table-technology="AIR" aria-selected="false" aria-controls="comparison-panel">◉ AIR</button></div><div id="comparison-panel" role="tabpanel" aria-labelledby="tab-FIBER"><div class="compare-scroll"><table class="compare-table" aria-describedby="compare-caption"><caption id="compare-caption" class="sr-only">Tabela parametrów i cen aktualnie wybranej technologii internetu MAD-NET</caption><thead id="compare-head"></thead><tbody id="compare-body"></tbody></table></div></div><div class="compare-note"><span><b>Wskazówka:</b> tabela aktualizuje się po zmianie technologii, ale pokazuje wszystkie ceny opublikowane dla tej technologii — 24 miesiące, 12 miesięcy i bezterminowo.</span><span>Kolor obramowania i nagłówków = aktywna technologia.</span></div></section></div></section>
+<section class="other" id="oplaty"><div class="container"><div class="eyebrow">02 / WARUNKI I OPŁATY</div><h2 class="other-title">Pozostałe opłaty. <span style="color:var(--red)">Bez zgadywania.</span></h2><p class="intro">Wszystkie poniższe pozycje są przepisane z opublikowanego cennika MAD-NET. Ceny poniżej nie są doliczane automatycznie do abonamentu.</p><details><summary>Otwórz zestawienie opłat jednorazowych i dodatkowych</summary><div style="overflow-x:auto"><table class="fees"><thead><tr><th>Rodzaj opłaty</th><th>Kwota</th><th>Częstotliwość</th></tr></thead><tbody id="fees-body"></tbody></table></div></details><p class="fee-note">Źródło: <a href="https://www.mad-net.pl/cennik.php" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;color:#d8e0e8">aktualnie opublikowany cennik MAD-NET</a>. W razie zmian warunków handlowych należy zaktualizować dane w prototypie przed publikacją.</p></div></section>
+<section class="contact contact--with-map" id="kontakt" aria-labelledby="availability-heading">
+ <div class="container">
+  <div class="availability-intro">
+   <div><div class="eyebrow">03 / INTERNET W TWOIM MIEJSCU</div><h2 id="availability-heading">Sprawdź dostępność <span>pod swoim adresem.</span></h2>
+    <p>Wybierz interesujące Cię technologie i pakiety, określ czas umowy oraz wskaż lokalizację. <strong>Mad-Net potwierdzi możliwość podłączenia</strong> — sam znacznik na mapie nie oznacza dostępności usługi.</p></div>
+   <div class="availability-direct"><a class="btn-primary" href="tel:+48608144747">☎ 608 144 747</a><a class="btn-ghost" href="mailto:biuro@mad-net.pl">✉ biuro@mad-net.pl</a></div>
+  </div>
+  <form id="availability-form" novalidate>
+   <div class="availability-interest">
+    <div class="availability-interest-top"><div class="availability-label"><span class="availability-step">01</span><span>Technologia i pakiet internetowy</span></div><span class="availability-tag">MOŻESZ WYBRAĆ KILKA OPCJI</span></div>
+    <p class="availability-mini">Zaznacz jedną lub więcej technologii, następnie wybierz pakiety. Opcja „Dowolny pakiet” oznacza prośbę o przedstawienie dostępnych możliwości.</p>
+    <div id="availability-interests" class="availability-interest-grid" aria-label="Zainteresowanie ofertami MAD-NET"></div>
+    <div class="availability-contract"><div class="availability-label"><span class="availability-step">02</span><span>Preferowany czas umowy</span></div><fieldset class="availability-contract-options"><legend class="sr-only">Czas trwania umowy</legend><label><input type="radio" name="umowa" value="24" checked><span>24 miesiące</span></label><label><input type="radio" name="umowa" value="12"><span>12 miesięcy</span></label><label><input type="radio" name="umowa" value="none"><span>Bezterminowo</span></label></fieldset></div>
+    <div id="availability-choice-summary" class="availability-choice-summary" role="status" aria-live="polite">Nie wybrano jeszcze technologii.</div>
+   </div>
+   <div class="availability-panel" id="lokalizacja-formularz">
+    <div class="availability-fields"><div class="availability-label"><span class="availability-step">03</span><span>Adres i dane kontaktowe</span></div>
+     <p class="availability-mini">Podaj miejscowość i ulicę lub wskaż punkt na mapie. Potrzebujemy też przynajmniej jednej formy kontaktu.</p>
+     <div class="availability-field"><label for="availability-name">Imię i nazwisko <small>(opcjonalnie)</small></label><input id="availability-name" name="imie" type="text" autocomplete="name" maxlength="100" placeholder="Jak mamy się do Ciebie zwracać?"></div>
+     <div class="availability-field"><label for="availability-town">Miejscowość</label><input id="availability-town" name="miejscowosc" type="text" autocomplete="address-level2" maxlength="90" placeholder="np. Trzebiatów"></div>
+     <div class="availability-field"><label for="availability-street">Ulica i numer budynku</label><input id="availability-street" name="ulica" type="text" autocomplete="street-address" maxlength="130" placeholder="np. Kołobrzeska 12"></div>
+     <div class="availability-field"><button type="button" id="availability-address-search" class="availability-geo-search">⌖ Wyszukaj adres na mapie</button><small class="availability-help">Po zakończeniu wpisywania adresu spróbujemy także automatycznie ustawić znacznik. Lokalizacja będzie orientacyjna.</small></div>
+     <div class="availability-field-row"><div class="availability-field"><label for="availability-phone">Telefon kontaktowy</label><input id="availability-phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="25" placeholder="np. 608 123 456"></div><div class="availability-field"><label for="availability-email">Adres e-mail</label><input id="availability-email" type="email" autocomplete="email" maxlength="150" placeholder="np. klient@domena.pl"></div></div>
+     <p class="availability-help">Podaj numer telefonu, adres e-mail albo oba. Na podany e-mail może zostać wysłane automatyczne potwierdzenie.</p>
+     <div class="availability-field"><label for="availability-comment">Dodatkowe informacje <small>(opcjonalnie)</small></label><textarea id="availability-comment" maxlength="600" rows="3" placeholder="Np. dom jednorodzinny, planowany termin instalacji..."></textarea></div>
+     <div class="availability-location-summary" id="availability-location-summary" role="status" aria-live="polite"><span class="availability-location-status-dot"></span><span id="availability-location-description">Nie wskazano jeszcze miejsca na mapie.</span></div>
+     <label class="availability-consent"><input id="availability-consent" type="checkbox" required><span>Proszę o kontakt w sprawie zapytania i potwierdzam, że podane dane mogą zostać wykorzystane do jego obsługi.</span></label>
+     <div class="availability-actions"><button type="submit" id="availability-submit" class="availability-submit">Wyślij zapytanie <span aria-hidden="true">↗</span></button><button type="button" id="availability-copy" class="availability-copy">⧉ Kopiuj szczegóły</button></div>
+     <p id="availability-feedback" class="availability-feedback" role="status" aria-live="polite"></p>
+     <p class="availability-legal">Zapytania są obsługiwane przez operatora, nie przez automatyczną mapę zasięgu. Działająca wysyłka wymaga uruchomienia modułu serwerowego SMTP; w lokalnym pliku HTML dostępne jest przygotowanie i skopiowanie danych.</p>
+     <div class="availability-thanks" id="availability-thanks" hidden role="status" aria-live="polite"><span class="availability-thanks-check">✓</span><div><strong>Dziękujemy za przesłanie zapytania!</strong><p>Skontaktujemy się na podany numer telefonu lub adres e-mail po sprawdzeniu możliwości podłączenia. Jeśli podano e-mail, automatyczne potwierdzenie zostanie wysłane przez skonfigurowany serwer.</p><button type="button" id="availability-new">Wyślij kolejne zapytanie</button></div></div>
+    </div>
+    <div class="availability-map-col"><div class="availability-map-heading"><div class="availability-label"><span class="availability-step">04</span><span>Wskaż punkt podłączenia</span></div><span class="availability-map-pill">PUNKT ORIENTACYJNY</span></div>
+     <p class="availability-mini">Wpisz adres i wybierz „Wyszukaj adres na mapie” lub uruchom mapę, a następnie kliknij, aby przesunąć pinezkę. Jej pozycję można poprawić ręcznie.</p>
+     <div class="availability-map-shell"><div id="availability-map" class="availability-map" aria-label="Mapa interaktywna okolic Trzebiatowa służąca do wskazania miejsca podłączenia"></div>
+      <div class="availability-map-loading" id="availability-map-loading"><div class="availability-map-preview-icon" aria-hidden="true">⌖</div><strong>Mapa okolic Trzebiatowa</strong><span>Włącz mapę, aby zobaczyć podkład OpenStreetMap i wybrać lokalizację.</span><button type="button" id="availability-map-load">Uruchom mapę</button><small>Wymaga połączenia z internetem.</small></div></div>
+     <div class="availability-map-tools"><button id="availability-map-center" type="button">⌖ Trzebiatów</button><button id="availability-map-pin" type="button" disabled>＋ Wskaż środek mapy</button><button id="availability-map-clear" type="button" disabled>× Usuń punkt</button></div>
+     <p class="availability-map-attribution">Podkład: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>. Adresy: OpenStreetMap Nominatim. Wyniki mogą być niedokładne; możliwość podłączenia potwierdza MAD-NET.</p>
+    </div>
+   </div>
+  </form>
+ </div>
+</section>
+</main><footer class="foot"><div class="container foot-in"><span>PROTOTYP KONCEPCYJNY / MAD-NET — INTERAKTYWNY CENNIK V18 / 30.10.2026</span><span>Kontakt: <a href="https://www.mad-net.pl/kontakt.php" target="_blank" rel="noopener noreferrer">oficjalna strona MAD-NET ↗</a></span></div></footer>
+<script src="./assets/js/cennik.js"></script>
+<script src="./assets/js/dostepnosc.js"></script>
+
+<script src="./assets/js/hero-rack.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Artefakty i zależności
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+Thumbs.db
+*.log
+
+# Poufne dane i konfiguracja serwera
+.env
+.env.*
+!.env.example
+api/config.php
+api/.env
+*.pem
+*.key

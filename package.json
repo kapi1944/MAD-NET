@@ -1,0 +1,15 @@
+{
+  "name": "mad-net",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Oficjalny projekt strony MAD-NET — interaktywny cennik, szafa RACK 3D i formularz dostępności.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs --root dist --no-live",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "npm run test && npm run build"
+  },
+  "engines": { "node": ">=22.0.0" }
+}
