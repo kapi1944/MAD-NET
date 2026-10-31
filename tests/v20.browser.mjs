@@ -133,6 +133,10 @@ try {
   });
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1250 } });
   sledzBledy(strona);
+  await strona.goto(adres);
+  assert.deepEqual(await strona.locator('.wybor-umowy [data-term]').allTextContents(), ['1 rok', '2 lata', 'Bezterminowo']);
+  assert.equal(await strona.locator('.wybor-umowy [aria-pressed="true"]').getAttribute('data-term'), '24');
+  assert.equal(await strona.locator('#availability-form input[name="umowa"]:checked').inputValue(), '24');
   for (const szerokosc of [390, 768, 1024, 1440]) await sprawdzPodswietlenie(strona, szerokosc);
   await sprawdzPodswietlenie(strona, 1440, true);
   await strona.emulateMedia({ reducedMotion: 'no-preference' });
