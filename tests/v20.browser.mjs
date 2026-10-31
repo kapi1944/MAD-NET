@@ -79,6 +79,8 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
     assert.notEqual(aktywne.cien, poczatek.cien, `Brak podświetlenia ${technologia} po aktualizacji panelu`);
     assert.notEqual(aktywne.tlo, poczatek.tlo);
     assert.deepEqual(aktywne.obrys, poczatek.obrys, 'Podświetlenie nie zmienia geometrii');
+    await strona.waitForTimeout(1650);
+    await strona.screenshot({ path: fileURLToPath(new URL(`hover-2s-${szerokosc}-${technologia}.png`, katalog)) });
     // Próbki w każdej klatce wychwycą przerwy podczas animacji HERO.
     const probki = await urzadzenie.evaluate(element => new Promise(zakoncz => {
       const poczatek = performance.now(), probki = [];
@@ -131,6 +133,10 @@ try {
   });
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1250 } });
   sledzBledy(strona);
+  await strona.goto(adres);
+  assert.deepEqual(await strona.locator('.wybor-umowy [data-term]').allTextContents(), ['1 rok', '2 lata', 'Bezterminowo']);
+  assert.equal(await strona.locator('.wybor-umowy [aria-pressed="true"]').getAttribute('data-term'), '24');
+  assert.equal(await strona.locator('#availability-form input[name="umowa"]:checked').inputValue(), '24');
   for (const szerokosc of [390, 768, 1024, 1440]) await sprawdzPodswietlenie(strona, szerokosc);
   await sprawdzPodswietlenie(strona, 1440, true);
   await strona.emulateMedia({ reducedMotion: 'no-preference' });
@@ -217,6 +223,19 @@ try {
       assert.deepEqual(dane, pakiety);
       assert.equal(await strona.locator('#plans .plan').count(), pakiety.length);
       assert.equal(await strona.locator('#central-device .speed-port').count(), pakiety.length);
+      if ([390, 1440].includes(szerokosc)) {
+        const kolor = { LAN: 'rgb(255, 32, 62)', FIBER: 'rgb(255, 123, 25)', AIR: 'rgb(45, 156, 255)' }[technologia];
+        for (let numer = 0; numer < pakiety.length; numer++) {
+          const karta = strona.locator('#plans .plan').nth(numer);
+          await strona.locator('#central-device .speed-port').nth(numer).hover();
+          await strona.waitForTimeout(300);
+          assert.ok(await karta.evaluate(element => element.classList.contains('is-hovered')));
+          assert.equal(await karta.evaluate(element => getComputedStyle(element).borderTopColor), kolor, `Obramowanie ${technologia} po wskazaniu portu`);
+          await karta.hover();
+          await strona.waitForTimeout(300);
+          assert.equal(await karta.evaluate(element => getComputedStyle(element).borderTopColor), kolor, `Obramowanie ${technologia} po wskazaniu karty`);
+        }
+      }
       if (technologia === 'AIR') assert.equal(await strona.locator('#central-device .jack-rj,#central-device .sc-simplex').count(), 0);
       for (const okres of technologia === 'FIBER' ? ['24', 'none'] : ['24', '12', 'none']) {
         await strona.locator(`[data-term="${okres}"]`).click();
