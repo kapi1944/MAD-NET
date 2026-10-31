@@ -499,8 +499,8 @@ buttonsTech.forEach(b=>b.addEventListener('click',()=>{
 buttonsTerm.forEach(b=>b.addEventListener('click',()=>{if(!b.disabled){term=b.dataset.term;render();}}));
 document.getElementById('animation-toggle').addEventListener('click',ev=>{
  animations=!animations;
- const btn=ev.currentTarget;
- btn.setAttribute('aria-pressed',String(animations));btn.textContent=animations?'WŁ.':'WYŁ.';
+ const przelacznik=ev.currentTarget;
+ przelacznik.setAttribute('aria-checked',String(animations));
  document.body.classList.toggle('mot-off',!animations);
  if(!animations){
   centralRoot.querySelectorAll('.is-connecting').forEach(n=>n.classList.remove('is-connecting'));
