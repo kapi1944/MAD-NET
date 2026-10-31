@@ -212,6 +212,19 @@ try {
       assert.deepEqual(dane, pakiety);
       assert.equal(await strona.locator('#plans .plan').count(), pakiety.length);
       assert.equal(await strona.locator('#central-device .speed-port').count(), pakiety.length);
+      if ([390, 1440].includes(szerokosc)) {
+        const kolor = { LAN: 'rgb(255, 32, 62)', FIBER: 'rgb(255, 123, 25)', AIR: 'rgb(45, 156, 255)' }[technologia];
+        for (let numer = 0; numer < pakiety.length; numer++) {
+          const karta = strona.locator('#plans .plan').nth(numer);
+          await strona.locator('#central-device .speed-port').nth(numer).hover();
+          await strona.waitForTimeout(300);
+          assert.ok(await karta.evaluate(element => element.classList.contains('is-hovered')));
+          assert.equal(await karta.evaluate(element => getComputedStyle(element).borderTopColor), kolor, `Obramowanie ${technologia} po wskazaniu portu`);
+          await karta.hover();
+          await strona.waitForTimeout(300);
+          assert.equal(await karta.evaluate(element => getComputedStyle(element).borderTopColor), kolor, `Obramowanie ${technologia} po wskazaniu karty`);
+        }
+      }
       if (technologia === 'AIR') assert.equal(await strona.locator('#central-device .jack-rj,#central-device .sc-simplex').count(), 0);
       for (const okres of technologia === 'FIBER' ? ['24', 'none'] : ['24', '12', 'none']) {
         await strona.locator(`[data-term="${okres}"]`).click();
