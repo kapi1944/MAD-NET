@@ -28,3 +28,7 @@ Aktualny podgląd: rack-logo-v3.png. Edycja wbudowanym image_gen według logo za
 ## Materiały oznakowania v4
 
 Aktualny asset: rack-tabliczki-v4.png. Wbudowany image_gen, edycja lokalna według referencji materiału użytkownika: logo górne jako płaski nadruk farbą bezpośrednio na obudowie; trzy logo urządzeń na cienkich tabliczkach ze szczotkowanego czarnego aluminium z lekko zaokrąglonymi narożnikami. Bez dodatkowych śrub tabliczek, z zachowaniem 12 mocowań, portów, napisów i przezroczystości.
+
+## Finalny asset — struktura blachy
+
+Aktualny plik: rack-finalny.png. Przygotowany wbudowanym image_gen na podstawie wskazanej starszej wersji i zdjęcia prawdziwej powłoki proszkowej. Prompt: zachowaj drobne, równomierne ziarno oryginalnej blachy, ciemną ekspozycję i kamerę; przenieś wyłącznie poprawione cztery logotypy, nadruk górny, trzy zaokrąglone czarne szczotkowane tabliczki i jednoliniowe oznaczenia 5-PORT/3-PORT/5-CH. Zachowaj 12 śrub, układ 5/3/5 kanałów i alfa. Odrzucono próbę o zbyt silnej nieregularnej fakturze. To finalny asset graficzny przedstawiany użytkownikowi, bez automatycznej akceptacji integracji HERO.
