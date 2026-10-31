@@ -41,11 +41,60 @@ try{
  await strona.locator('#compare-clear').click();await strona.locator('#compare-show-all').focus();await strona.keyboard.press('Enter');assert.equal(await strona.locator('.compare-tech-panel').count(),3);
  await strona.locator('[data-table-technology=LAN]').focus();await strona.keyboard.press('Space');assert.equal(await strona.locator('.compare-tech-panel').count(),2);
  await strona.locator('#compare-show-all').click();await strona.locator('#animation-toggle').click();assert.equal(await strona.locator('.compare-head-port .port-leds i:last-child').first().evaluate(e=>getComputedStyle(e).animationName),'none');
- await strona.locator('#lokalizacja-szerokosc').fill('54,063203');await strona.locator('#lokalizacja-dlugosc').fill('15.266009');await strona.locator('#lokalizacja-zapisz').click();assert.match(await strona.locator('#availability-location-description').innerText(),/54.063203/);
- await strona.locator('#availability-map-clear').click();assert.ok(await strona.locator('#availability-map-clear').isDisabled());
- await strona.route('**/leaflet.js',r=>r.abort());await strona.route('**/leaflet@*/**/*.js',r=>r.abort());await strona.locator('#availability-map-load').click();await strona.waitForFunction(()=>document.querySelector('#availability-map-load').textContent.includes('Ponów'));
- await strona.locator('#lokalizacja-zapisz').click();assert.match(await strona.locator('#availability-location-description').innerText(),/54.063203/);
+ // Wyszukiwanie jest deterministyczne; mapa zachowuje prawdziwą bibliotekę Leaflet.
+ await strona.route('**/nominatim.openstreetmap.org/search?**',r=>r.fulfill({json:[{lat:'54.063203',lon:'15.266009'}]}));
+ await strona.locator('#availability-town').fill('Trzebiatów');
+ await strona.locator('#availability-street').fill('Kołobrzeska 12');
+ await strona.locator('#availability-street').dispatchEvent('change');
+ await strona.waitForFunction(()=>document.querySelector('#availability-location-summary').classList.contains('has-location'));
+ await strona.waitForFunction(()=>!document.querySelector('#availability-map-pin').disabled);
+ assert.match(await strona.locator('#availability-location-description').innerText(),/znaleziony po adresie: 54.063203, 15.266009/);
+ assert.equal(await strona.locator('.lokalizacja-reczna').count(),0);
+ assert.equal(await strona.locator('#availability-location-summary').count(),1);
+ assert.equal(await strona.locator('#availability-location-summary').evaluate(e=>e.previousElementSibling.contains(document.querySelector('#availability-address-search'))),true);
+ assert.equal(await strona.locator('#availability-feedback').innerText(),'');
+ for(const szerokosc of [390,768,1440]){
+  await strona.setViewportSize({width:szerokosc,height:1100});
+  await strona.locator('#availability-address-search').scrollIntoViewIfNeeded();
+  await strona.screenshot({path:katalog+'/po/lokalizacja-'+szerokosc+'.png'});
+  assert.equal(await strona.evaluate(()=>document.documentElement.scrollWidth),szerokosc);
+ }
+ await strona.locator('#availability-map').click({position:{x:110,y:100}});
+ assert.match(await strona.locator('#availability-location-description').innerText(),/zaznaczony ręcznie.*orientacyjnie/);
+ const pinezka=strona.locator('.availability-map-pin-icon');
+ const przed=await strona.locator('#availability-location-description').innerText();
+ const pozycja=await pinezka.boundingBox();
+ await strona.mouse.move(pozycja.x+19,pozycja.y+20);await strona.mouse.down();await strona.mouse.move(pozycja.x+65,pozycja.y+50,{steps:10});await strona.mouse.up();
+ assert.notEqual(await strona.locator('#availability-location-description').innerText(),przed);
+ assert.match(await strona.locator('#availability-location-description').innerText(),/orientacyjnie/);
+ await strona.locator('#availability-map-pin').click();
+ await strona.locator('.availability-tech-toggle[data-tech=LAN]').check();
+ await strona.locator('#availability-phone').fill('608123456');
+ await strona.locator('#availability-consent').check();
+ const zapytania=[];
+ await strona.route('**/api/zapytanie.php',r=>{zapytania.push(r.request().postDataJSON());return r.fulfill({json:{ok:true,confirmationSent:false}})});
+ await strona.locator('#availability-submit').click();
+ await strona.waitForFunction(()=>!document.querySelector('#availability-thanks').hidden);
+ assert.equal(zapytania[0].mapSource,'manual');
+ const status=await strona.locator('#availability-location-description').innerText();
+ assert.ok(status.includes(zapytania[0].position.lat.toFixed(6))&&status.includes(zapytania[0].position.lng.toFixed(6)));
+ await strona.locator('#availability-map-clear').click();
+ assert.ok(await strona.locator('#availability-map-clear').isDisabled());
+ assert.equal(await strona.locator('#availability-location-summary').evaluate(e=>e.classList.contains('has-location')),false);
+ assert.match(await strona.locator('#availability-location-description').innerText(),/Nie wskazano/);
+ await strona.route('**/nominatim.openstreetmap.org/search?**',r=>r.fulfill({json:[]}));
+ await strona.locator('#availability-street').fill('Nieznana 999');
+ await strona.locator('#availability-address-search').click();
+ await strona.waitForFunction(()=>document.querySelector('#availability-feedback').dataset.error==='true');
+ assert.match(await strona.locator('#availability-feedback').innerText(),/Nie znaleziono/);
+ await strona.route('**/leaflet.js',r=>r.abort());await strona.route('**/leaflet@*/**/*.js',r=>r.abort());
+ await strona.reload();
+ await strona.locator('#availability-map-load').click();await strona.waitForFunction(()=>document.querySelector('#availability-map-load').textContent.includes('Ponów'));
+ await strona.locator('#availability-town').fill('Trzebiatów');await strona.locator('#availability-street').fill('Kołobrzeska 12');
+ await strona.locator('.availability-tech-toggle[data-tech=LAN]').check();await strona.locator('#availability-phone').fill('608123456');await strona.locator('#availability-consent').check();
+ await strona.locator('#availability-submit').click();await strona.waitForFunction(()=>!document.querySelector('#availability-thanks').hidden);
+ assert.equal(zapytania[1].position,null);assert.equal(zapytania[1].town,'Trzebiatów');
  
  await strona.emulateMedia({reducedMotion:'reduce'});assert.equal(await strona.locator('.compare-head-port .port-leds i:last-child').first().evaluate(e=>getComputedStyle(e).animationName),'none');
- assert.deepEqual(bledy,[]);console.log('PASS V21 ręczny punkt, awaria mapy, reduced motion, brak wyjątków JS');
+ assert.deepEqual(bledy,[]);console.log('PASS V21 geokodowanie, mapa, przeciąganie, status, dane zapytania, awaria mapy, reduced motion, brak wyjątków JS');
 }finally{await przegladarka?.close();serwer.kill()}

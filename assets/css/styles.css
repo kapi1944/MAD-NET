@@ -978,9 +978,6 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 
 .compare-tech-panel[data-tech="FIBER"]{--table-accent:#ff7b19;--table-edge:#ff7b1988}.compare-tech-panel[data-tech="LAN"]{--table-accent:#ff203e;--table-edge:#ff203e88}.compare-tech-panel[data-tech="AIR"]{--table-accent:#3fa8ff;--table-edge:#3fa8ff88}
 
-.lokalizacja-reczna{display:flex;flex-wrap:wrap;gap:10px;border:1px solid #415066;border-radius:9px;margin:16px 0;padding:12px;font-size:12px}
-.lokalizacja-reczna label{flex:1 1 160px;min-width:0}.lokalizacja-reczna input{display:block;width:100%;background:#0c1119;color:white;border:1px solid #63758a;padding:12px;border-radius:6px;margin-top:6px}
-.lokalizacja-reczna button,.lokalizacja-reczna a{padding:12px;border:1px solid #63758a;border-radius:6px;background:#182331;color:white;min-height:44px}
 
 /* Układ kafelków: opis nad złączem, nazwa pakietu i wyeksponowane pobieranie. */
 #plans .card-terminal-label{order:0;margin:0 0 4px;font-size:12px;white-space:normal}

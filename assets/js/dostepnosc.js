@@ -96,16 +96,6 @@
   }
   if(map)map.panTo(locationPoint,{animate:!matchMedia('(prefers-reduced-motion: reduce)').matches});
  }
- // Ręczny punkt korzysta z istniejącego modelu lokalizacji i kontraktu API.
- document.getElementById('lokalizacja-zapisz').addEventListener('click',()=>{
-  const szerokosc=document.getElementById('lokalizacja-szerokosc').value.trim().replace(',','.');
-  const dlugosc=document.getElementById('lokalizacja-dlugosc').value.trim().replace(',','.');
-  if(!szerokosc||!dlugosc||!Number.isFinite(Number(szerokosc))||!Number.isFinite(Number(dlugosc))||Math.abs(Number(szerokosc))>85.0511||Math.abs(Number(dlugosc))>180){
-   setFeedback('Podaj poprawne współrzędne: szerokość od −85 do 85 i długość od −180 do 180.',true);return;
-  }
-  setPoint({lat:Number(szerokosc),lng:Number(dlugosc)},'manual');
-  setFeedback('Zapisano punkt. Mapa nie jest wymagana do wysłania lokalizacji.');
- });
  function clearPoint(){
   locationPoint=null;pinSource=null;locBox.classList.remove('has-location');
   locText.textContent='Nie wskazano jeszcze miejsca na mapie.';clearButton.disabled=true;
@@ -180,8 +170,8 @@
    lastAddressQuery=query;
    if(!explicit&&pinSource==='manual')return;
    setPoint(result,'geocode');
+   setFeedback('');
    if(await loadMap())map.setView(result,Math.min(17,road?16:13));
-   setFeedback('Znaleziono orientacyjne położenie adresu. Możesz przesunąć pinezkę, aby je doprecyzować.');
   }catch(e){setFeedback('Nie udało się znaleźć adresu online. Możesz wskazać punkt na mapie lub podać sam adres.',true);}
   finally{geocoding=false;geosearchButton.disabled=false;geosearchButton.textContent='⌖ Wyszukaj adres na mapie';}
  }
