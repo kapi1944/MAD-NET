@@ -11,7 +11,7 @@ Użytkownik zaakceptował `docs/prototypy/hero-3-0/rack-finalny.png` i polecił 
 
 ## Kontrolki
 
-Pięć zielonych LED LAN animuje wycinki zaakceptowanej bitmapy. Pięć symboli AIR pulsuje niezależnie dzięki wycinkom tej samej bitmapy i masce barwnej wyłączającej statyczny nadruk symbolu. Ciemny podkład pod maską zapobiega prześwitywaniu tła strony. Nie pulsują całe urządzenia. Trzy małe kontrolki FIBER nad adapterami animują się oddzielnie; fizyczne adaptery pozostają częścią obrazu.
+Pięć zielonych LED LAN animuje wycinki zaakceptowanej bitmapy. Lokalnie skorygowana grafika `assets/img/hero-rack-baza.svg` usuwa niebieskie piksele pięciu symboli AIR, zastępując je próbką struktury z pasa tego samego panelu (y=650–674). Oryginalny PNG pozostaje niezmieniony. SVG osadza oryginał, aby działać jako samodzielny obraz. Nakładka w tym samym układzie współrzędnych rozdziela oryginalne piksele każdego symbolu na trzy pierścieniowe wycinki łuków i stały punkt. Mały, średni i duży łuk rozbłyskują kolejno z przesunięciem o 22% okresu danego kanału. Nie pulsują całe symbole ani urządzenia. Trzy małe kontrolki FIBER nad adapterami animują się oddzielnie; fizyczne adaptery pozostają częścią obrazu.
 
 Zachowane okresy: LAN 5000/2500/1250/714/455 ms, FIBER 1000/333/167 ms, AIR 2400/1818/1224/923/741 ms oraz fazy LED. Hover i wybór technologii nie resetują zegarów innych kanałów. Reduced motion i istniejący przełącznik animacji zatrzymują całą nakładkę.
 
@@ -26,3 +26,9 @@ Zachowane okresy: LAN 5000/2500/1250/714/455 ms, FIBER 1000/333/167 ms, AIR 2400
 Screenshot bazowy: `test-results/hero-3-0/przed-integracja-1440.png`. Po integracji: `test-results/v20/po/hero-{szerokość}.png` i `test-results/hero-3-0/integracja-{szerokość}.png`. Rendering desktopowy, tabletowy i mobilny obejrzano. Test dotyku jest emulacją Chromium, nie odbiorem na fizycznym telefonie; Safari i Firefox nie były testowane.
 
 Historyczne warianty PoC zachowano w dokumentacji. Akceptacja assetu nie oznacza wdrożenia produkcyjnego. Obecny workflow CI uruchamia się po push gałęzi main/feat; nie deklarujemy zdalnego CI dla codex/**.
+
+## Korekta kafelków i sekwencji AIR
+
+Etykiety wyśrodkowano nad portami. Usunięto numerację kart; nagłówki pokazują LAN-10 / FIBER-100 / AIR-40 itd., bez zmiany identyfikatorów ofert. Pobieranie ma cyfry 60 px zamiast 12 px; wysyłanie zachowuje wcześniejszy rozmiar. Parametry są ułożone pionowo. Test przeglądarkowy sprawdza wszystkie 13 kafelków, pozycje etykiet, nazwy, brak numeracji i overflow oraz osobne szczyty jasności trzech łuków każdego z pięciu kanałów.
+
+Materiały odbiorowe: `test-results/hero-3-0/kafelki-LAN.png`, `kafelek-FIBER-mobile.png`, `air-sekwencja-final.png` i `air-sekwencja.webm`.

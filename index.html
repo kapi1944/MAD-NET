@@ -26,8 +26,8 @@
  <div class="hero-rack-center" aria-label="Trzy urządzenia MAD-NET w szafie RACK"><div class="hero-rack-stage hero-rack-hybryda" id="hero-rack-stage" data-current-tech="LAN">
  <div class="rack-box" role="group" aria-label="Szafa RACK MAD-NET — wybierz LAN, FIBER lub AIR">
  <svg class="grafika-hybrydowa" viewBox="100 40 1350 970" aria-hidden="true" focusable="false">
- <defs><image id="grafika-szafy" href="./assets/img/hero-rack.png" width="1536" height="1024"/>
- <filter id="ciemny-symbol" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 1 0 0"/><feComponentTransfer><feFuncA type="linear" slope="8" intercept="-4"/></feComponentTransfer></filter>
+ <defs><image id="grafika-bazowa" href="./assets/img/hero-rack-baza.svg" width="1536" height="1024"/><image id="grafika-szafy" href="./assets/img/hero-rack.png" width="1536" height="1024"/>
+
  <clipPath id="kanal-szafy-0"><rect x="606" y="306" width="18" height="18"/></clipPath>
 <clipPath id="kanal-szafy-1"><rect x="683" y="306" width="18" height="18"/></clipPath>
 <clipPath id="kanal-szafy-2"><rect x="763" y="306" width="18" height="18"/></clipPath>
@@ -42,13 +42,32 @@
 <rect x="763" y="306" width="18" height="18" fill="black"/>
 <rect x="843" y="306" width="18" height="18" fill="black"/>
 <rect x="924" y="306" width="18" height="18" fill="black"/>
-<g clip-path="url(#kanal-szafy-5)" filter="url(#ciemny-symbol)"><use href="#grafika-szafy"/></g>
-<g clip-path="url(#kanal-szafy-6)" filter="url(#ciemny-symbol)"><use href="#grafika-szafy"/></g>
-<g clip-path="url(#kanal-szafy-7)" filter="url(#ciemny-symbol)"><use href="#grafika-szafy"/></g>
-<g clip-path="url(#kanal-szafy-8)" filter="url(#ciemny-symbol)"><use href="#grafika-szafy"/></g>
-<g clip-path="url(#kanal-szafy-9)" filter="url(#ciemny-symbol)"><use href="#grafika-szafy"/></g></mask></defs>
-<g><rect x="606" y="306" width="18" height="18" fill="#06150e"/><rect x="683" y="306" width="18" height="18" fill="#06150e"/><rect x="763" y="306" width="18" height="18" fill="#06150e"/><rect x="843" y="306" width="18" height="18" fill="#06150e"/><rect x="924" y="306" width="18" height="18" fill="#06150e"/><rect x="542" y="680" width="76" height="68" fill="#062b43"/><rect x="629" y="680" width="76" height="68" fill="#062b43"/><rect x="714" y="680" width="76" height="68" fill="#062b43"/><rect x="800" y="680" width="76" height="68" fill="#062b43"/><rect x="886" y="680" width="76" height="68" fill="#062b43"/></g>
- <use href="#grafika-szafy" mask="url(#maska-kontrolek)"/>
+
+
+
+
+</mask><filter id="jasny-symbol" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 1 0 0"/><feComponentTransfer><feFuncA type="linear" slope="8" intercept="-4"/></feComponentTransfer></filter><mask id="maska-fal-air" maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><use href="#grafika-szafy" filter="url(#jasny-symbol)"/></mask><clipPath id="fala-air-0-0"><path clip-rule="evenodd" d="M554 731a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M568 731a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-0-1"><path clip-rule="evenodd" d="M539 731a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M554 731a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-0-2"><path clip-rule="evenodd" d="M519 731a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M539 731a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-0"><circle cx="579" cy="731" r="10"/></clipPath>
+<clipPath id="fala-air-1-0"><path clip-rule="evenodd" d="M640 734a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M654 734a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-1-1"><path clip-rule="evenodd" d="M625 734a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M640 734a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-1-2"><path clip-rule="evenodd" d="M605 734a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M625 734a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-1"><circle cx="665" cy="734" r="10"/></clipPath>
+<clipPath id="fala-air-2-0"><path clip-rule="evenodd" d="M726 736a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M740 736a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-2-1"><path clip-rule="evenodd" d="M711 736a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M726 736a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-2-2"><path clip-rule="evenodd" d="M691 736a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M711 736a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-2"><circle cx="751" cy="736" r="10"/></clipPath>
+<clipPath id="fala-air-3-0"><path clip-rule="evenodd" d="M813 739a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M827 739a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-3-1"><path clip-rule="evenodd" d="M798 739a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M813 739a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-3-2"><path clip-rule="evenodd" d="M778 739a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M798 739a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-3"><circle cx="838" cy="739" r="10"/></clipPath>
+<clipPath id="fala-air-4-0"><path clip-rule="evenodd" d="M900 742a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M914 742a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-4-1"><path clip-rule="evenodd" d="M885 742a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M900 742a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-4-2"><path clip-rule="evenodd" d="M865 742a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M885 742a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-4"><circle cx="925" cy="742" r="10"/></clipPath></defs>
+<g><rect x="606" y="306" width="18" height="18" fill="#06150e"/><rect x="683" y="306" width="18" height="18" fill="#06150e"/><rect x="763" y="306" width="18" height="18" fill="#06150e"/><rect x="843" y="306" width="18" height="18" fill="#06150e"/><rect x="924" y="306" width="18" height="18" fill="#06150e"/></g>
+ <use href="#grafika-bazowa" mask="url(#maska-kontrolek)"/>
  <g data-technologia-kanalu="LAN" data-speed="10" style="--pulse:5000ms;--phase:-4877ms;--air-cycle:5000ms"><title>LAN – 10 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-0)"><use href="#grafika-szafy"/></g></g></g>
 <g data-technologia-kanalu="LAN" data-speed="20" style="--pulse:2500ms;--phase:-2180ms;--air-cycle:2500ms"><title>LAN – 20 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-1)"><use href="#grafika-szafy"/></g></g></g>
 <g data-technologia-kanalu="LAN" data-speed="40" style="--pulse:1250ms;--phase:-733ms;--air-cycle:1250ms"><title>LAN – 40 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-2)"><use href="#grafika-szafy"/></g></g></g>
@@ -57,11 +76,11 @@
 <g data-technologia-kanalu="FIBER" data-speed="50" style="--pulse:1000ms;--phase:-877ms;--air-cycle:1000ms"><title>FIBER – 50 Mbit/s</title><g class="fiber-activity"><circle cx="644" cy="488" r="3" fill="#7bff95"/></g></g>
 <g data-technologia-kanalu="FIBER" data-speed="100" style="--pulse:333ms;--phase:-13ms;--air-cycle:333ms"><title>FIBER – 100 Mbit/s</title><g class="fiber-activity"><circle cx="722" cy="488" r="3" fill="#7bff95"/></g></g>
 <g data-technologia-kanalu="FIBER" data-speed="300" style="--pulse:167ms;--phase:-151ms;--air-cycle:167ms"><title>FIBER – 300 Mbit/s</title><g class="fiber-activity"><circle cx="800" cy="488" r="3" fill="#7bff95"/></g></g>
-<g data-technologia-kanalu="AIR" data-speed="10" style="--pulse:2400ms;--phase:0ms;--air-cycle:2400ms"><title>AIR – 10 Mbit/s</title><g class="wi"><g clip-path="url(#kanal-szafy-5)"><use href="#grafika-szafy"/></g></g></g>
-<g data-technologia-kanalu="AIR" data-speed="20" style="--pulse:1818ms;--phase:0ms;--air-cycle:1818ms"><title>AIR – 20 Mbit/s</title><g class="wi"><g clip-path="url(#kanal-szafy-6)"><use href="#grafika-szafy"/></g></g></g>
-<g data-technologia-kanalu="AIR" data-speed="40" style="--pulse:1224ms;--phase:0ms;--air-cycle:1224ms"><title>AIR – 40 Mbit/s</title><g class="wi"><g clip-path="url(#kanal-szafy-7)"><use href="#grafika-szafy"/></g></g></g>
-<g data-technologia-kanalu="AIR" data-speed="60" style="--pulse:923ms;--phase:0ms;--air-cycle:923ms"><title>AIR – 60 Mbit/s</title><g class="wi"><g clip-path="url(#kanal-szafy-8)"><use href="#grafika-szafy"/></g></g></g>
-<g data-technologia-kanalu="AIR" data-speed="80" style="--pulse:741ms;--phase:0ms;--air-cycle:741ms"><title>AIR – 80 Mbit/s</title><g class="wi"><g clip-path="url(#kanal-szafy-9)"><use href="#grafika-szafy"/></g></g></g></svg>
+<g data-technologia-kanalu="AIR" data-speed="10" style="--pulse:2400ms;--phase:0ms;--air-cycle:2400ms"><title>AIR – 10 Mbit/s</title><g clip-path="url(#kanal-szafy-5)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-0-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-0-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-0-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-0)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="20" style="--pulse:1818ms;--phase:0ms;--air-cycle:1818ms"><title>AIR – 20 Mbit/s</title><g clip-path="url(#kanal-szafy-6)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-1-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-1-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-1-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-1)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="40" style="--pulse:1224ms;--phase:0ms;--air-cycle:1224ms"><title>AIR – 40 Mbit/s</title><g clip-path="url(#kanal-szafy-7)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-2-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-2-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-2-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-2)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="60" style="--pulse:923ms;--phase:0ms;--air-cycle:923ms"><title>AIR – 60 Mbit/s</title><g clip-path="url(#kanal-szafy-8)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-3-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-3-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-3-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-3)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="80" style="--pulse:741ms;--phase:0ms;--air-cycle:741ms"><title>AIR – 80 Mbit/s</title><g clip-path="url(#kanal-szafy-9)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-4-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-4-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-4-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-4)"><use href="#grafika-szafy"/></g></g></g></svg>
  <button type="button" class="rack-device" data-rack-tech="LAN" aria-controls="hero-tech-panel-content" aria-label="LAN: 5 portów RJ-45, pokaż opis technologii" style="--gora:20.93%;--wysokosc:17.73%;--obrys:polygon(0 12%,100% 0,100% 97%,0 100%);--tech:#ff203e"></button>
 <button type="button" class="rack-device" data-rack-tech="FIBER" aria-controls="hero-tech-panel-content" aria-label="FIBER: 3 porty SC/UPC Simplex, pokaż opis technologii" style="--gora:41.13%;--wysokosc:17.32%;--obrys:polygon(0 2%,100% 0,100% 100%,0 94%);--tech:#ff7b19"></button>
 <button type="button" class="rack-device" data-rack-tech="AIR" aria-controls="hero-tech-panel-content" aria-label="AIR: 5 kanałów radiowych, pokaż opis technologii" style="--gora:60.41%;--wysokosc:18.66%;--obrys:polygon(0 0,100% 8%,100% 100%,0 83%);--tech:#3fa8ff"></button>

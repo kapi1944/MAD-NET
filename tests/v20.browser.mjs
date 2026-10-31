@@ -170,6 +170,18 @@ try {
         sciezka.remove(); return { pakiet: pakiet.id, dlugosc, kolizje: [...kolizje] };
       }));
       for (const trasa of trasy) { assert.ok(trasa.dlugosc > 0); assert.deepEqual(trasa.kolizje, [], `Kolizja ${szerokosc}px / ${trasa.pakiet}`); liczbaTras++; }
+      const kafelki = await strona.locator('#plans .plan').evaluateAll(karty => karty.map(karta => {
+        const etykieta = karta.querySelector('.card-terminal-label').getBoundingClientRect();
+        const port = karta.querySelector('.mini-interface').getBoundingClientRect();
+        const liczba = karta.querySelector('.predkosc-pobierania strong');
+        return { nazwa: karta.querySelector('.plan-speed').textContent, oczekiwana: karta.dataset.technology + '-' + karta.dataset.speed,
+          numeracja: !!karta.querySelector('.plan-index'), etykietaNad: etykieta.bottom <= port.top,
+          rozmiar: parseFloat(getComputedStyle(liczba).fontSize), przepelnienie: karta.scrollWidth > karta.clientWidth + 1 };
+      }));
+      kafelki.forEach(karta => {
+        assert.equal(karta.nazwa, karta.oczekiwana); assert.equal(karta.numeracja, false);
+        assert.ok(karta.etykietaNad && !karta.przepelnienie); assert.equal(karta.rozmiar, 60);
+      });
       await strona.locator('#central-device .speed-port').last().click();
       await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));
       assert.equal(await strona.locator('#plans .plan.is-selected').count(), 1);
@@ -229,6 +241,23 @@ try {
     assert.deepEqual(okresy, oczekiwaneOkresy[technologia]);
     assert.ok(okresy.every((okres, indeks) => okres > 0 && (!indeks || okres < okresy[indeks - 1])));
   }
+  // Każdy kanał AIR nadaje kolejno małym, średnim i dużym łukiem.
+  const kolejnoscFal = await strona.locator('[data-technologia-kanalu="AIR"]').evaluateAll(kanaly => kanaly.map(kanal => {
+    const luki = [...kanal.querySelectorAll('.wi')];
+    const animacje = luki.map(luk => luk.getAnimations()[0]);
+    const czasy = animacje.map(animacja => animacja.currentTime);
+    const okres = parseFloat(getComputedStyle(luki[0]).animationDuration) * 1000;
+    const probki = [0, 1, 2].map(krok => {
+      animacje.forEach(animacja => { animacja.currentTime = okres * (1.35 + krok * .22); });
+      return luki.map(luk => Number(getComputedStyle(luk).opacity));
+    });
+    animacje.forEach((animacja, indeks) => { animacja.currentTime = czasy[indeks]; });
+    return { liczba: luki.length, probki };
+  }));
+  kolejnoscFal.forEach(kanal => {
+    assert.equal(kanal.liczba, 3);
+    kanal.probki.forEach((probka, krok) => assert.ok(probka[krok] > .85 && probka.every((jasnosc, indeks) => indeks === krok || jasnosc < .65), 'Łuki AIR muszą rozbłyskiwać kolejno'));
+  });
   // Mierzymy rzeczywiste miganie przez pełny okres najwolniejszego kanału.
   const miganie = await strona.evaluate(async () => {
     const kanaly = [...document.querySelectorAll('.hero-rack-stage [data-speed]')].map(kanal => ({

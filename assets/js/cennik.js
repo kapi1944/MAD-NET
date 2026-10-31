@@ -104,7 +104,7 @@ function makeCentralDevice(plans){
   <div class="device-foot"><span>${descriptor}</span><span>LINK / ACT · DEMO</span></div>
   </div><div class="device-hint">${plans.length} ${technology==='AIR'?'kanałów do wyboru':plans.length===3?'porty do wyboru':'portów do wyboru'} • JEDNO URZĄDZENIE</div></div>`;
 }
-function makePlan(p,index){
+function makePlan(p){
  const hz=blinkHz(p.down)*1.5;
  const interval=Math.round(1000/hz);
  const phone=term==='none';
@@ -116,9 +116,9 @@ function makePlan(p,index){
  return `<article class="plan${selected?' is-selected':''}" data-plan-id="${escapeText(p.id)}" data-technology="${technology}" data-speed="${p.down}" data-port-count="1" data-blink-hz="${hz.toFixed(2)}" data-blink-ms="${interval}" aria-label="Pakiet ${escapeText(p.id)}: pobieranie ${p.down}, wysyłanie ${p.up} Mbit/s" style="--pulse-ms:${interval}ms;--wifi-period:${radioPeriod(p.down)}ms">
  <button class="plan-hit" type="button" data-select-plan="${escapeText(p.id)}" aria-pressed="${selected}" aria-label="Wybierz ${escapeText(p.id)}: ${p.down} Mbit/s, ${phone?'wycena indywidualna':price+' zł miesięcznie'}"></button>
  <div class="card-terminal"><span class="card-terminal-label">${cardSocket}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${socketHtml(technology,true)}${technology==='FIBER'?'<span class="mini-plug"></span>':''}</div></div>
- <div class="plan-body"><div class="plan-name"><span>● MAD-NET / ${escapeText(p.id)}</span><span class="plan-index">0${index+1}</span></div>
- <div class="plan-speed">${p.down}<small>Mbit/s</small></div><div class="plan-unit">PRĘDKOŚĆ POBIERANIA ↓</div>
- <div class="specs"><div class="spec"><span>POBIERANIE</span><b>↓ ${p.down} Mbit/s</b></div><div class="spec"><span>WYSYŁANIE</span><b>↑ ${p.up} Mbit/s</b></div></div></div>
+ <div class="plan-body"><div class="plan-name"><span>● MAD-NET</span></div>
+ <div class="plan-speed">${technology}-${p.down}</div>
+ <div class="specs"><div class="spec"><span>POBIERANIE</span><b class="predkosc-pobierania"><span aria-hidden="true">↓</span> <strong>${p.down}</strong> <small>Mbit/s</small></b></div><div class="spec"><span>WYSYŁANIE</span><b>↑ ${p.up} Mbit/s</b></div></div></div>
  <div class="plan-bottom"><div class="price">${priceHtml}</div><div class="termline">${termText}</div><a class="ask" href="${emailLink(p.id)}">Zapytaj o dostępność <span aria-hidden="true">↗</span></a></div>
  </article>`;
 }
