@@ -523,7 +523,7 @@ const opisyTabel={
  LAN:{name:'Kablowy',medium:'Ethernet RJ-45',symbol:'▣'},
  AIR:{name:'Bezprzewodowy',medium:'Sieć radiowa',symbol:'◉'}
 };
-function komorkaCeny(wartosc){return wartosc==null?'<span class="muted">Brak ceny w cenniku</span>':`<strong>${wartosc} zł</strong>`;}
+function komorkaCeny(wartosc,pogrubiona=false){return wartosc==null?'<span class="muted">Brak ceny w cenniku</span>':pogrubiona?`<strong>${wartosc} zł</strong>`:`${wartosc} zł`;}
 // Miniatury odpowiadają technologii i prędkości pakietu: RJ-45, SC/UPC lub fale radiowe.
 // Są dekoracyjne: tylko span, bez przycisk, tabindex i eventów, nie podłączają kabla.
 function utworzMiniport(technologia,pakiet){
@@ -538,8 +538,8 @@ function utworzTabele(technologia){
  const wiersze=[
   ['Prędkość pobierania',pakiety.map(pakiet=>`${pakiet.down} Mbit/s`)],
   ['Prędkość wysyłania',pakiety.map(pakiet=>`${pakiet.up} Mbit/s`)],
-  ['Abonament — 1 rok',pakiety.map(pakiet=>komorkaCeny(pakiet.monthly12))],
-  ['Abonament — 2 lata',pakiety.map(pakiet=>komorkaCeny(pakiet.monthly24))],
+  ...(technologia==='FIBER'?[]:[['Abonament — 1 rok',pakiety.map(pakiet=>komorkaCeny(pakiet.monthly12))]]),
+  ['Abonament — 2 lata',pakiety.map(pakiet=>komorkaCeny(pakiet.monthly24,true))],
   ['Abonament — bezterminowo',pakiety.map(_=>'<span class="muted">Wycena indywidualna</span>')]
  ];
  const zawartosc=wiersze.map(([etykieta,komorki])=>'<tr><th class="stub" scope="row">'+etykieta+'</th>'+komorki.map(komorka=>`<td>${komorka}</td>`).join('')+'</tr>').join('');
