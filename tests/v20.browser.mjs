@@ -12,7 +12,7 @@ const adres = `http://127.0.0.1:${port}`;
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   cwd: new URL('..', import.meta.url), env: { ...process.env, PORT: port }, stdio: ['ignore', 'pipe', 'pipe'],
 });
-const bledy = [], konsola = [], siec = [], pomiary = [];
+const bledy = [], konsola = [], siec = [], pomiary = [], animacjeKanalow = [];
 let przegladarka, liczbaTras = 0;
 const oferta = {
   LAN: [[10, 2, 49, 54], [20, 2, 59, 64], [40, 5, 64, 69], [60, 5, 69, 74], [80, 10, 74, 79]],
@@ -65,7 +65,7 @@ try {
   });
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1250 } });
   sledzBledy(strona);
-  for (const szerokosc of [360, 390, 430, 760, 1024, 1280, 1440, 1510, 1920]) {
+  for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1280, 1440, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
     await strona.evaluate(() => document.fonts.ready);
@@ -95,6 +95,14 @@ try {
       pomiary.push(pomiar);
       assert.equal(pomiar.przepelnienie, 0);
       assert.ok(pomiar.trescMiesciSie && pomiar.szafaMiesciSie && pomiar.portyDostepne);
+      const mocowania = await strona.locator('.rack-ear > i').evaluateAll(sruby => sruby.every(sruba => {
+        const lewa = sruba.parentElement.classList.contains('rack-ear-left');
+        const szyna = document.querySelector(lewa ? '.rail-left' : '.rail-right').getBoundingClientRect();
+        const granice = sruba.getBoundingClientRect(), srodek = (granice.left + granice.right) / 2;
+        return srodek >= szyna.left && srodek <= szyna.right;
+      }));
+      assert.ok(mocowania, 'Śruby muszą trafiać w szyny');
+      assert.equal(await strona.locator('.rack-ear > i').count(), 6);
       if (szerokosc > 1230) {
         assert.ok(pomiar.wysokoscPanelu <= pomiar.wysokoscSciany + 2);
         assert.ok(pomiar.zakladka >= 24 && pomiar.zakladka <= 44);
@@ -173,6 +181,7 @@ try {
     dioda: getComputedStyle(document.querySelector('.hero-rack-stage .rj-link')).animationName,
   }));
   assert.deepEqual(bezRuchu, { pcb: 'none', dioda: 'none' });
+  assert.equal(await strona.locator('.impulsy-hero').evaluate(element => getComputedStyle(element).display), 'none');
   await strona.locator('[data-rack-tech="FIBER"]').hover();
   assert.equal(await strona.locator('#hero-tech-panel').getAttribute('data-tech'), 'FIBER');
   await strona.locator('#animation-toggle').click();
@@ -197,13 +206,39 @@ try {
     await strona.screenshot({ path: fileURLToPath(new URL(`technologia-${technologia}-1440.png`, katalog)) });
   }
 
+  const oczekiwaneOkresy = { LAN: [5, 2.5, 1.25, .714, .455], FIBER: [1, .333, .167], AIR: [2.4, 1.818, 1.224, .923, .741] };
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
     const okresy = await strona.locator(`[data-rack-tech="${technologia}"] [data-speed]`).evaluateAll(kanaly => kanaly.map(kanal => parseFloat(getComputedStyle(kanal.querySelector('.rj-link,.fiber-activity,.wi')).animationDuration)));
     assert.equal(okresy.length, oferta[technologia].length);
+    assert.deepEqual(okresy, oczekiwaneOkresy[technologia]);
     assert.ok(okresy.every((okres, indeks) => okres > 0 && (!indeks || okres < okresy[indeks - 1])));
   }
+  // Mierzymy rzeczywiste miganie przez pełny okres najwolniejszego kanału.
+  const miganie = await strona.evaluate(async () => {
+    const kanaly = [...document.querySelectorAll('.hero-rack-stage [data-speed]')].map(kanal => ({
+      nazwa: kanal.title, dioda: kanal.querySelector('.rj-link,.fiber-activity,.wi'), probki: [],
+    }));
+    for (let numer = 0; numer < 32; numer++) {
+      kanaly.forEach(kanal => kanal.probki.push(Number(getComputedStyle(kanal.dioda).opacity)));
+      await new Promise(koniec => setTimeout(koniec, 173));
+    }
+    return kanaly.map(kanal => ({ nazwa: kanal.nazwa, minimum: Math.min(...kanal.probki), maksimum: Math.max(...kanal.probki),
+      czas: kanal.dioda.getAnimations()[0].currentTime, stan: kanal.dioda.getAnimations()[0].playState }));
+  });
+  assert.equal(miganie.length, 13);
+  miganie.forEach(kanal => assert.ok(kanal.maksimum - kanal.minimum > .2 && kanal.stan === 'running', `Brak migania: ${kanal.nazwa}`));
+  for (const technologia of ['LAN', 'FIBER', 'AIR']) {
+    await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
+    await sprawdzWybor(strona, technologia, poczatek);
+    const czasy = await strona.locator('.hero-rack-stage [data-speed]').evaluateAll(kanaly => kanaly.map(kanal => kanal.querySelector('.rj-link,.fiber-activity,.wi').getAnimations()[0].currentTime));
+    assert.ok(czasy.every((czas, indeks) => czas > miganie[indeks].czas), 'Zmiana technologii zatrzymała lub zresetowała kontrolkę');
+    await strona.locator('#hero-tech-link').click();
+    assert.equal(await strona.locator('.device-tech-tabs [aria-pressed="true"]').getAttribute('data-technology'), technologia);
+  }
+  animacjeKanalow.push(...miganie);
   await strona.emulateMedia({ reducedMotion: 'reduce' });
   assert.equal(await strona.locator('.pcb-impulsy').evaluate(element => getComputedStyle(element).display), 'none');
+  assert.equal(await strona.locator('.impulsy-hero').evaluate(element => getComputedStyle(element).display), 'none');
   await strona.locator('[data-rack-tech="AIR"]').hover();
   assert.equal(await strona.locator('#hero-tech-panel').getAttribute('data-tech'), 'AIR');
   assert.equal(await strona.locator('.hero-rack-stage .wi').first().evaluate(element => getComputedStyle(element).animationName), 'none');
@@ -234,7 +269,7 @@ try {
   assert.deepEqual(konsola, [], 'Błędy konsoli');
   console.log(`PASS klawiatura, dotyk, scroll, ograniczony ruch, 13 kanałów; ${liczbaTras} tras bez kolizji`);
 } finally {
-  await writeFile(new URL('wyniki.json', katalog), JSON.stringify({ pomiary, liczbaTras, bledy, konsola, siec }, null, 2));
+  await writeFile(new URL('wyniki.json', katalog), JSON.stringify({ pomiary, liczbaTras, animacjeKanalow, bledy, konsola, siec }, null, 2));
   await przegladarka?.close();
   serwer.kill();
 }
