@@ -16,7 +16,7 @@ const watchers = new Set();
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.png': 'image/png',
-  '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json; charset=utf-8',
+  '.jpg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.json': 'application/json; charset=utf-8',
   '.woff2': 'font/woff2', '.ico': 'image/x-icon',
 };
 const liveClient = `<script>(()=>{const stream=new EventSource('/__madnet_reload');stream.onmessage=(e)=>{if(e.data==='reload')location.reload()};})();</script>`;

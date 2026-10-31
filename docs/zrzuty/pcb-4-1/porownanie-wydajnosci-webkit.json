@@ -1,0 +1,50 @@
+[
+  {
+    "szerokosc": 1440,
+    "wariant": "przed",
+    "mediana": 69,
+    "p95": 77
+  },
+  {
+    "szerokosc": 1440,
+    "wariant": "po",
+    "mediana": 64,
+    "p95": 80
+  },
+  {
+    "szerokosc": 1440,
+    "wariant": "bez-maskowania",
+    "mediana": 64,
+    "p95": 78
+  },
+  {
+    "szerokosc": 1440,
+    "wariant": "bez-pcb",
+    "mediana": 15,
+    "p95": 31
+  },
+  {
+    "szerokosc": 2560,
+    "wariant": "przed",
+    "mediana": 87,
+    "p95": 100
+  },
+  {
+    "szerokosc": 2560,
+    "wariant": "po",
+    "mediana": 93,
+    "p95": 95
+  },
+  {
+    "szerokosc": 2560,
+    "wariant": "bez-maskowania",
+    "mediana": 94,
+    "p95": 98
+  },
+  {
+    "szerokosc": 2560,
+    "wariant": "bez-pcb",
+    "mediana": 16,
+    "p95": 17
+  }
+]

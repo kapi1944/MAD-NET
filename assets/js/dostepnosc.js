@@ -170,8 +170,8 @@
    lastAddressQuery=query;
    if(!explicit&&pinSource==='manual')return;
    setPoint(result,'geocode');
+   setFeedback('');
    if(await loadMap())map.setView(result,Math.min(17,road?16:13));
-   setFeedback('Znaleziono orientacyjne położenie adresu. Możesz przesunąć pinezkę, aby je doprecyzować.');
   }catch(e){setFeedback('Nie udało się znaleźć adresu online. Możesz wskazać punkt na mapie lub podać sam adres.',true);}
   finally{geocoding=false;geosearchButton.disabled=false;geosearchButton.textContent='⌖ Wyszukaj adres na mapie';}
  }

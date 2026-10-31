@@ -1,0 +1,21 @@
+/* Wspólny kadr obrazu i nakładki: 1350 × 970, bez zmiany proporcji bitmapy. */
+.hero-rack-stage.hero-rack-hybryda{width:calc(100% + 90px);max-width:770px;flex-shrink:0;margin:0 auto 0 32px;padding:0;transform:translateY(-16px)}
+.hero-rack-stage.hero-rack-hybryda .rack-box{width:100%;max-width:none;aspect-ratio:1350/970;position:relative;isolation:isolate;transform:none;border:0;border-radius:0;margin:0;padding:0;background:none;box-shadow:none}
+.hero-rack-stage.hero-rack-hybryda .rack-box::before,.hero-rack-stage.hero-rack-hybryda .rack-box::after{display:none}
+.grafika-hybrydowa{display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
+.hero-rack-stage.hero-rack-hybryda .rack-device{all:unset;box-sizing:border-box;position:absolute;z-index:3;left:10.37%;top:var(--gora);width:62.6%;height:var(--wysokosc);clip-path:var(--obrys);cursor:pointer;touch-action:pan-y;border-radius:0;outline:0;filter:none;background:transparent;box-shadow:none;transition:box-shadow .32s ease,background-color .32s ease}
+/* Wybór panelu (is-active) nie nadpisuje podświetlenia wskazywanego urządzenia. */
+@media(hover:hover) and (pointer:fine){
+ .hero-rack-stage.hero-rack-hybryda .rack-device:hover{background:#ff203e09;box-shadow:inset 0 0 0 2px #ff203ed1,inset 0 0 16px #ff203e30;transition-duration:.25s}
+}
+.hero-rack-stage.hero-rack-hybryda .rack-device:focus-visible{background:#ff203e09;box-shadow:inset 0 0 0 3px #fff,inset 0 0 16px #ff203e30}
+.hero-rack-stage.hero-rack-hybryda .rack-sidewall{display:block;position:absolute;left:81.85%;top:8.44%;width:16.45%;height:79.9%;border:0;background:none;box-shadow:none;transform:none;clip-path:none;pointer-events:none}
+.hero-rack-stage.hero-rack-hybryda .tylna-krawedz{position:absolute;right:0;top:0;bottom:0;width:1px}
+.hero-rack-hybryda .rj-link,.hero-rack-hybryda .fiber-activity{animation:kanal-szafy var(--pulse) steps(2,end) infinite;animation-delay:var(--phase);filter:none}
+.hero-rack-hybryda .wi{animation:radio-szafy var(--air-cycle) ease-in-out infinite;animation-delay:calc(var(--air-cycle) * var(--kolejnosc) * .22);filter:none}
+@keyframes kanal-szafy{0%,42%,100%{opacity:.19}50%,82%{opacity:1}}
+@keyframes radio-szafy{0%,12%,65%,100%{opacity:.14}30%,44%{opacity:1}}
+@media(max-width:1230px){.hero-rack-stage.hero-rack-hybryda{width:100%;max-width:620px;margin:auto;padding:0;transform:none}}
+@media(max-width:800px){.hero-rack-stage.hero-rack-hybryda{max-width:560px}}
+@media(prefers-reduced-motion:reduce){.hero-rack-hybryda .rj-link,.hero-rack-hybryda .fiber-activity,.hero-rack-hybryda .wi{animation:none!important;opacity:.85!important}.hero-rack-hybryda .rack-device{transition:none!important}}
+.mot-off .hero-rack-hybryda .rj-link,.mot-off .hero-rack-hybryda .fiber-activity,.mot-off .hero-rack-hybryda .wi{animation:none!important;opacity:.85!important}

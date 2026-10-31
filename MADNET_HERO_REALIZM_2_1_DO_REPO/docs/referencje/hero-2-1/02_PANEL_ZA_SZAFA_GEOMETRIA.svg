@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+<defs><linearGradient id="panel"><stop stop-color="#0c1b2d"/><stop offset="1" stop-color="#153354"/></linearGradient><linearGradient id="box"><stop stop-color="#2d333b"/><stop offset="1" stop-color="#070b11"/></linearGradient></defs>
+<rect width="1400" height="800" fill="#090d13"/>
+<text x="58" y="70" fill="white" font-size="34" font-family="DejaVu Sans,sans-serif" font-weight="bold">Panel technologii — ma wychodzić ZZA prawej ścianki RACK</text>
+<text x="58" y="107" fill="#aebecd" font-size="21" font-family="DejaVu Sans,sans-serif">Widok schematyczny z przodu — granice, kolejność warstw i ograniczenie wysokości.</text>
+<rect x="705" y="220" width="530" height="358" rx="16" fill="url(#panel)" stroke="#345a7e" stroke-width="3"/>
+<rect x="732" y="227" width="130" height="345" fill="#0f263e"/>
+<g font-family="DejaVu Sans,sans-serif" fill="#e8f5ff"><text x="966" y="292" font-size="19" fill="#a2c2dd">TECHNOLOGIA / 03</text><text x="966" y="360" font-size="46" font-weight="bold" fill="#55c4ff">AIR</text><text x="966" y="392" font-size="21">/ bezprzewodowy</text><text x="966" y="450" font-size="17">Krótki, czytelny opis</text><rect x="949" y="492" width="261" height="59" rx="8" fill="#133657" stroke="#48a9e5"/><text x="970" y="528" font-size="18">Zobacz pakiety AIR →</text></g>
+<path d="M760 205V600" stroke="#5cddff" stroke-dasharray="10 8" stroke-width="2"/>
+<!-- rack body in front of overlap -->
+<rect x="210" y="176" width="660" height="450" rx="5" fill="url(#box)" stroke="#73808a" stroke-width="5"/>
+<rect x="240" y="216" width="586" height="358" fill="#03070a" stroke="#293641" stroke-width="9"/>
+<g font-family="DejaVu Sans,sans-serif" font-weight="bold">
+<rect x="259" y="255" width="548" height="80" fill="#2a171c" stroke="#73273b" stroke-width="2"/><text x="286" y="306" fill="#ff4265" font-size="25">LAN — RJ-45</text>
+<rect x="259" y="354" width="548" height="80" fill="#2c201a" stroke="#844b22" stroke-width="2"/><text x="286" y="406" fill="#ff9d47" font-size="25">FIBER — SC/UPC</text>
+<rect x="259" y="453" width="548" height="80" fill="#132c41" stroke="#2c6b99" stroke-width="2"/><text x="286" y="505" fill="#63bdff" font-size="25">AIR — 5 kanałów</text>
+</g>
+<rect x="825" y="200" width="114" height="388" fill="#252c33" stroke="#6e7780" stroke-width="4"/>
+<rect x="836" y="218" width="90" height="354" fill="#1b222b" stroke="#434d56" stroke-width="2"/>
+<circle cx="882" cy="399" r="11" fill="#707d87" stroke="#a6afb9" stroke-width="2"/><path d="M882 393v12" stroke="#0b1218" stroke-width="3"/>
+<path d="M1194 201H1312M1194 599H1312" stroke="#47d4ee" stroke-width="2"/>
+<path d="M1282 201V599" stroke="#47d4ee" stroke-width="3"/>
+<path d="M1271 213l11-12 11 12M1271 587l11 12 11-12" stroke="#47d4ee" fill="none" stroke-width="3"/>
+<g fill="#88eaff" font-family="DejaVu Sans,sans-serif" font-size="19" font-weight="bold"><text x="1104" y="174">Panel nie</text><text x="1104" y="197">wyższy niż</text><text x="1104" y="220">boczna ścianka</text></g>
+<path d="M723 655V717H936" stroke="#ff536b" fill="none" stroke-width="3"/><text x="954" y="720" font-family="DejaVu Sans,sans-serif" font-size="19" fill="#ff6a80" font-weight="bold">Zakładka ukryta za szafą</text>
+<text x="58" y="739" font-size="16" font-family="DejaVu Sans,sans-serif" fill="#b4cad8">Z-INDEX: FRONT SZAFY &gt; BOCZNA ŚCIANKA &gt; PANEL &gt; PCB. Bez lewego bordera panelu.</text>
+</svg>
