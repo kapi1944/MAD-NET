@@ -22,9 +22,13 @@ npm test            # testy struktury + sprawdzenie składni JS
 npm run build       # gotowa statyczna strona w dist/
 npm run preview     # podgląd dist/ na http://127.0.0.1:4173
 npm run verify      # testy + build
+npm ci              # zależności do testów przeglądarkowych
+npm run test:browser # Chromium: geometria, 9 szerokości, obsługa i 117 tras
 ```
 
 **Bez instalowania Electrona, frameworków i płatnych API.** To świadoma decyzja na pierwszy etap: najpierw stabilizujemy i dokumentujemy aktualny projekt. Dopiero później ocenimy korzyści Vite/React.
+
+Testy przeglądarkowe na Windows korzystają z zainstalowanego Microsoft Edge. Na Linux/macOS najpierw uruchom `npx playwright-core install chromium` (na CI także `--with-deps`). Własną ścieżkę przeglądarki można wskazać przez `MADNET_PRZEGLADARKA`. Testy uruchamiają tymczasowy podgląd `dist/` na porcie 4181 (`MADNET_PORT_TESTOW` zmienia port), zapisują zrzuty i pomiary w `test-results/v20/po/`, po czym zamykają przeglądarkę i serwer. Szczegóły wdrożenia: [raport V20](docs/RAPORT_V20.md).
 
 ## Struktura
 

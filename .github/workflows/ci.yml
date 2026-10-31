@@ -1,7 +1,7 @@
 name: MAD-NET / jakość
 on:
   push:
-    branches: [main]
+    branches: [main, 'feat/**']
   pull_request:
     branches: [main]
 jobs:
@@ -12,9 +12,22 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
+          cache: npm
+      - name: Zależności testowe
+        run: npm ci
       - name: Testy projektu
         run: npm test
       - name: Budowanie strony
         run: npm run build
       - name: Sprawdzenie artefaktów
         run: test -s dist/index.html && test -s dist/assets/js/hero-rack.js
+      - name: Chromium do testów V20
+        run: npx playwright-core install --with-deps chromium
+      - name: Regresja geometrii i interakcji V20
+        run: npm run test:browser
+      - name: Zrzuty i pomiary V20
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mad-net-v20-przegladarka
+          path: test-results/v20/po
