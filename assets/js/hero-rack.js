@@ -65,7 +65,7 @@
  // Mierzymy tylko szafę i kontener. Zapis geometrii panelu nie zmienia ich rozmiaru.
  const uklad=szafa.closest('.hero-in');
  const obudowa=szafa.querySelector('.rack-box');
- const sciana=szafa.querySelector('.rack-sidewall');
+ const sciana=szafa.querySelector('.tylna-krawedz')||szafa.querySelector('.rack-sidewall');
  let klatkaPomiaru=0;
  function dopasujPanel(){
   klatkaPomiaru=0;

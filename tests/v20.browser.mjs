@@ -65,7 +65,7 @@ try {
   });
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1250 } });
   sledzBledy(strona);
-  for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1280, 1440, 1510, 1920]) {
+  for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1100, 1280, 1440, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
     await strona.evaluate(() => document.fonts.ready);
@@ -79,10 +79,12 @@ try {
       const pomiar = await strona.evaluate(() => {
         const panel = document.querySelector('#hero-tech-panel'), sciana = document.querySelector('.rack-sidewall');
         const granice = panel.getBoundingClientRect(), tyl = sciana.getBoundingClientRect();
+        const krawedz = document.querySelector('.tylna-krawedz').getBoundingClientRect();
         const urzadzenia = [...document.querySelectorAll('.rack-device')];
         return {
           szerokosc: innerWidth, technologia: panel.dataset.tech, wysokoscPanelu: granice.height, wysokoscSciany: tyl.height,
           zakladka: tyl.right - granice.left, gora: granice.top - tyl.top, dol: tyl.bottom - granice.bottom,
+          wysokoscTylnejKrawedzi: krawedz.height, goraTylu: granice.top - krawedz.top, dolTylu: krawedz.bottom - granice.bottom,
           lewyBorder: getComputedStyle(panel).borderLeftWidth, przepelnienie: document.documentElement.scrollWidth - innerWidth,
           trescMiesciSie: panel.scrollHeight <= panel.clientHeight,
           szafaMiesciSie: tyl.right <= innerWidth && document.querySelector('.rack-box').getBoundingClientRect().left >= 0,
@@ -102,12 +104,40 @@ try {
         return srodek >= szyna.left && srodek <= szyna.right;
       }));
       assert.ok(mocowania, 'Śruby muszą trafiać w szyny');
-      assert.equal(await strona.locator('.rack-ear > i').count(), 6);
+      assert.equal(await strona.locator('.rack-ear').count(), 6);
+      assert.equal(await strona.locator('.rack-ear > i').count(), 12);
+      const montaz = await strona.locator('.rack-mounted').evaluateAll(urzadzenia => urzadzenia.every(urzadzenie => {
+        const przycisk = urzadzenie.querySelector('.rack-device');
+        return [...urzadzenie.querySelectorAll('.rack-ear')].every(uchwyt => {
+          const sruby = [...uchwyt.children];
+          if (sruby.length !== 2 || sruby[0].offsetTop + sruby[0].offsetHeight >= sruby[1].offsetTop) return false;
+          if (uchwyt.offsetHeight !== przycisk.offsetHeight) return false;
+          const lewy = uchwyt.classList.contains('rack-ear-left');
+          if (lewy ? uchwyt.offsetLeft + uchwyt.offsetWidth !== przycisk.offsetLeft : uchwyt.offsetLeft !== przycisk.offsetLeft + przycisk.offsetWidth) return false;
+          const szyna = document.querySelector(lewy ? '.rail-left' : '.rail-right');
+          const styl = getComputedStyle(szyna, '::before');
+          const rozstaw = parseFloat(getComputedStyle(szyna).getPropertyValue('--rozstaw-otworow'));
+          const srodekOtworu = szyna.clientTop + parseFloat(styl.top) + (innerWidth <= 480 ? 2 : 3.5);
+          return sruby.every(sruba => {
+            const srodek = urzadzenie.offsetTop + sruba.offsetTop + sruba.offsetHeight / 2;
+            const odchylenie = (srodek - srodekOtworu) / rozstaw;
+            const granice = sruba.getBoundingClientRect();
+            return Math.abs(odchylenie - Math.round(odchylenie)) * rozstaw <= 1.5 && granice.width > 3 && granice.height > 3 && getComputedStyle(sruba).display !== 'none';
+          });
+        });
+      }));
+      assert.ok(montaz, 'Dwie widoczne śruby na uchwyt, zgodne otwory i brak szczelin przy froncie');
       if (szerokosc > 1230) {
         assert.ok(pomiar.wysokoscPanelu <= pomiar.wysokoscSciany + 2);
+        assert.ok(pomiar.wysokoscPanelu <= pomiar.wysokoscTylnejKrawedzi && pomiar.goraTylu >= 0 && pomiar.dolTylu >= 0);
         assert.ok(pomiar.zakladka >= 24 && pomiar.zakladka <= 44);
         assert.ok(pomiar.gora >= 0 && pomiar.dol >= 0);
         assert.equal(pomiar.lewyBorder, '0px');
+        const odslonietaTresc = await strona.evaluate(() => {
+          const krawedz = document.querySelector('.tylna-krawedz').getBoundingClientRect();
+          return [...document.querySelectorAll('.hero-tech-panel-top,#hero-tech-icon,#hero-tech-title,#hero-tech-description,.hero-tech-facts,#hero-tech-link')].every(element => element.getBoundingClientRect().left > krawedz.right + 8);
+        });
+        assert.ok(odslonietaTresc, 'Treść panelu musi znajdować się poza boczną ścianką');
       }
     }
     await strona.locator('[data-rack-tech="LAN"]').hover();
