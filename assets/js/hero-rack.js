@@ -1,56 +1,86 @@
 
-/* V18: hover mouse, tap (without moving) or keyboard focus updates the right technology panel. */
+/* Panel zachowuje ostatni wybór myszy, dotyku lub klawiatury. */
 (()=>{
- const rack=document.getElementById('hero-rack-stage');
+ const szafa=document.getElementById('hero-rack-stage');
  const panel=document.getElementById('hero-tech-panel');
- const content=document.getElementById('hero-tech-panel-content');
- if(!rack||!panel||!content)return;
- const options={
-  LAN:{index:'01',icon:'▣',title:'LAN',subtitle:'kablowy',text:'Stabilne połączenie przewodowe Ethernet przez RJ-45. Pięć pakietów o prędkości od 10 do 80 Mbit/s.',count:'5 wariantów',socket:'RJ-45 / Ethernet'},
-  FIBER:{index:'02',icon:'✦',title:'FIBER',subtitle:'światłowód',text:'Wydajne połączenie światłowodowe ze złączem SC/UPC Simplex. Trzy pakiety: 50, 100 i 300 Mbit/s.',count:'3 warianty',socket:'SC/UPC Simplex'},
-  AIR:{index:'03',icon:'◉',title:'AIR',subtitle:'bezprzewodowy',text:'Internet radiowy bez konieczności doprowadzenia przewodu do budynku. Pięć pakietów od 10 do 80 Mbit/s — w zależności od lokalnych warunków.',count:'5 wariantów',socket:'Radio / RF'}
+ const tresc=document.getElementById('hero-tech-panel-content');
+ if(!szafa||!panel||!tresc)return;
+ const warianty={
+  LAN:{index:'01',icon:'▣',title:'LAN',subtitle:'kablowy',text:'Stabilne łącze Ethernet przez RJ-45. Prędkości od 10 do 80 Mbit/s.',count:'5 wariantów',socket:'RJ-45 / Ethernet'},
+  FIBER:{index:'02',icon:'✦',title:'FIBER',subtitle:'światłowód',text:'Łącze światłowodowe SC/UPC Simplex. Prędkości 50, 100 i 300 Mbit/s.',count:'3 warianty',socket:'SC/UPC Simplex'},
+  AIR:{index:'03',icon:'◉',title:'AIR',subtitle:'bezprzewodowy',text:'Internet radiowy bez przewodu do budynku. Od 10 do 80 Mbit/s, zależnie od lokalnych warunków.',count:'5 wariantów',socket:'Radio / bez gniazda'}
  };
- const reduced=window.matchMedia('(prefers-reduced-motion:reduce)');
- let current='LAN',timer=0,transitionId=0;
- document.querySelectorAll('[data-hero-rack-logo]').forEach(img=>{
-  const brand=document.querySelector('.brand img');
-  if(brand&&brand.src)img.src=brand.src;
+ const ograniczonyRuch=window.matchMedia('(prefers-reduced-motion:reduce)');
+ let aktualna='LAN',zegar=0,numerZmiany=0;
+ document.querySelectorAll('[data-hero-rack-logo]').forEach(obraz=>{
+  const marka=document.querySelector('.brand img');
+  if(marka&&marka.src)obraz.src=marka.src;
  });
- function apply(tech){
-  const o=options[tech];
-  panel.dataset.tech=tech; rack.dataset.currentTech=tech;
-  document.getElementById('hero-tech-index').textContent=o.index;
-  document.getElementById('hero-tech-icon').textContent=o.icon;
-  document.getElementById('hero-tech-title').replaceChildren(document.createTextNode(o.title+' '),(()=>{const el=document.createElement('span');el.textContent='/ '+o.subtitle;return el})());
-  document.getElementById('hero-tech-description').textContent=o.text;
-  document.getElementById('hero-tech-count').textContent=o.count;
-  document.getElementById('hero-tech-socket').textContent=o.socket;
-  document.getElementById('hero-tech-link').firstChild.textContent='Zobacz pakiety '+tech+' ';
-  document.getElementById('rack-current-label').textContent=tech+' · '+o.subtitle;
-  rack.querySelectorAll('.rack-device').forEach(d=>{const active=d.dataset.rackTech===tech;d.classList.toggle('is-active',active);d.setAttribute('aria-pressed',String(active));});
-  content.classList.remove('is-switching');
+ function zastosuj(technologia){
+  const wariant=warianty[technologia];
+  panel.dataset.tech=technologia; szafa.dataset.currentTech=technologia;
+  document.getElementById('hero-tech-index').textContent=wariant.index;
+  document.getElementById('hero-tech-icon').textContent=wariant.icon;
+  document.getElementById('hero-tech-title').replaceChildren(document.createTextNode(wariant.title+' '),(()=>{const element=document.createElement('span');element.textContent='/ '+wariant.subtitle;return element})());
+  document.getElementById('hero-tech-description').textContent=wariant.text;
+  document.getElementById('hero-tech-count').textContent=wariant.count;
+  document.getElementById('hero-tech-socket').textContent=wariant.socket;
+  document.getElementById('hero-tech-link').firstChild.textContent='Zobacz pakiety '+technologia+' ';
+  document.getElementById('rack-current-label').textContent=technologia+' · '+wariant.subtitle;
+  szafa.querySelectorAll('.rack-device').forEach(urzadzenie=>{const aktywny=urzadzenie.dataset.rackTech===technologia;urzadzenie.classList.toggle('is-active',aktywny);urzadzenie.setAttribute('aria-pressed',String(aktywny));});
+  tresc.classList.remove('is-switching');
  }
- function show(tech){
-  if(!Object.prototype.hasOwnProperty.call(options,tech))return;
-  if(tech===current)return;
-  const thisChange=++transitionId;clearTimeout(timer);
-  current=tech;
-  if(reduced.matches){apply(tech);return;}
-  content.classList.add('is-switching');
-  timer=setTimeout(()=>{if(thisChange===transitionId)apply(tech)},175);
+ function pokaz(technologia){
+  if(!Object.prototype.hasOwnProperty.call(warianty,technologia))return;
+  if(technologia===aktualna)return;
+  const taZmiana=++numerZmiany;clearTimeout(zegar);
+  aktualna=technologia;
+  if(ograniczonyRuch.matches||document.body.classList.contains('mot-off')){zastosuj(technologia);return;}
+  tresc.classList.add('is-switching');
+  zegar=setTimeout(()=>{if(taZmiana===numerZmiany)zastosuj(technologia)},175);
  }
- for(const d of rack.querySelectorAll('.rack-device')){
-  d.addEventListener('pointerenter',ev=>{if(ev.pointerType==='mouse'||ev.pointerType==='pen')show(d.dataset.rackTech)});
-  let touchStart=null;
-  d.addEventListener('pointerdown',ev=>{if(ev.pointerType==='touch')touchStart={x:ev.clientX,y:ev.clientY}});
-  d.addEventListener('pointerup',ev=>{if(ev.pointerType!=='touch'||!touchStart)return; const dx=ev.clientX-touchStart.x,dy=ev.clientY-touchStart.y;touchStart=null;if(Math.hypot(dx,dy)<12)show(d.dataset.rackTech)});
-  d.addEventListener('pointercancel',()=>{touchStart=null});
-  d.addEventListener('focus',()=>show(d.dataset.rackTech));
-  d.addEventListener('click',()=>show(d.dataset.rackTech));
+ for(const urzadzenie of szafa.querySelectorAll('.rack-device')){
+  urzadzenie.addEventListener('pointerenter',zdarzenie=>{if(zdarzenie.pointerType==='mouse'||zdarzenie.pointerType==='pen')pokaz(urzadzenie.dataset.rackTech)});
+  let poczatekDotyku=null;
+  urzadzenie.addEventListener('pointerdown',zdarzenie=>{if(zdarzenie.pointerType==='touch')poczatekDotyku={x:zdarzenie.clientX,y:zdarzenie.clientY}});
+  urzadzenie.addEventListener('pointerup',zdarzenie=>{if(zdarzenie.pointerType!=='touch'||!poczatekDotyku)return; const roznicaX=zdarzenie.clientX-poczatekDotyku.x,roznicaY=zdarzenie.clientY-poczatekDotyku.y;poczatekDotyku=null;if(Math.hypot(roznicaX,roznicaY)<12)pokaz(urzadzenie.dataset.rackTech)});
+  urzadzenie.addEventListener('pointercancel',()=>{poczatekDotyku=null});
+  urzadzenie.addEventListener('focus',()=>pokaz(urzadzenie.dataset.rackTech));
+  urzadzenie.addEventListener('click',()=>pokaz(urzadzenie.dataset.rackTech));
  }
  document.getElementById('hero-tech-link').addEventListener('click',()=>{
-  const target=document.querySelector('.device-tech-tabs button[data-technology="'+current+'"]');
-  if(target)target.click();
+  const cel=document.querySelector('.device-tech-tabs button[data-technology="'+aktualna+'"]');
+  if(cel)cel.click();
  });
- apply(current);
+ zastosuj(aktualna);
+
+ // Mierzymy tylko szafę i kontener. Zapis geometrii panelu nie zmienia ich rozmiaru.
+ const uklad=szafa.closest('.hero-in');
+ const obudowa=szafa.querySelector('.rack-box');
+ const sciana=szafa.querySelector('.rack-sidewall');
+ let klatkaPomiaru=0;
+ function dopasujPanel(){
+  klatkaPomiaru=0;
+  if(!window.matchMedia('(min-width:1231px)').matches)return;
+  const granice=uklad.getBoundingClientRect();
+  const tyl=sciana.getBoundingClientRect();
+  const wymiary={
+   '--panel-lewo':tyl.right-granice.left-34,
+   '--panel-gora':tyl.top-granice.top+8,
+   '--panel-wysokosc':tyl.height-16
+  };
+  for(const [nazwa,liczba] of Object.entries(wymiary)){
+   const wartosc=liczba.toFixed(2)+'px';
+   if(panel.style.getPropertyValue(nazwa)!==wartosc)panel.style.setProperty(nazwa,wartosc);
+  }
+ }
+ function zaplanujPomiar(){
+  if(!klatkaPomiaru)klatkaPomiaru=requestAnimationFrame(dopasujPanel);
+ }
+ const obserwator=new ResizeObserver(zaplanujPomiar);
+ obserwator.observe(obudowa);
+ obserwator.observe(uklad);
+ window.addEventListener('resize',zaplanujPomiar,{passive:true});
+ document.fonts.ready.then(zaplanujPomiar);
+ zaplanujPomiar();
 })();
