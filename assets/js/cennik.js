@@ -117,7 +117,7 @@ function makePlan(p){
  <button class="plan-hit" type="button" data-select-plan="${escapeText(p.id)}" aria-pressed="${selected}" aria-label="Wybierz ${escapeText(p.id)}: ${p.down} Mbit/s, ${phone?'wycena indywidualna':price+' zł miesięcznie'}"></button>
  <div class="card-terminal"><span class="card-terminal-label">${etykietaPortu}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${socketHtml(technology,true)}${technology==='FIBER'?'<span class="mini-plug"></span>':''}</div></div>
  <div class="plan-body"><div class="plan-name"><span>● Pakiet MAD-NET</span></div>
- <div class="plan-speed">${technology}-${p.down}</div>
+ <div class="plan-speed"><span class="nazwa-technologii">${technology}</span>-${p.down}</div>
  <div class="specs"><div class="spec"><b class="predkosc-pobierania"><span aria-hidden="true">↓</span> <strong>${p.down}</strong> <small>Mbit/s</small></b><span>POBIERANIE</span></div><div class="spec"><b class="predkosc-wysylania"><span aria-hidden="true">↑</span> <strong>${p.up}</strong> Mbit/s</b><span>WYSYŁANIE</span></div></div></div>
  <div class="plan-bottom"><div class="price">${priceHtml}</div><div class="termline">${termText}</div><a class="ask" href="${emailLink(p.id)}">Zapytaj o dostępność <span aria-hidden="true">↗</span></a></div>
  </article>`;
