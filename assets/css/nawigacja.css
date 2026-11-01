@@ -40,19 +40,11 @@
 }
 @media(max-width:360px){.wspolny-pasek{gap:7px}.wspolne-logo{width:130px}}
 @media(prefers-reduced-motion:reduce){.wspolny-naglowek *,.wspolna-stopka *{transition:none!important;scroll-behavior:auto!important}}
-/* MAD-NET — poprawka mobilna panelu technologii */
-
-@media (max-width: 380px) {
-
-  .hero-tech-panel {
-    height: auto;
-    min-height: 360px;
-    grid-template-rows: auto minmax(min-content, 1fr) auto;
-  }
-
-  .hero-tech-panel-content {
-    min-height: min-content;
-    grid-template-rows: 54px auto auto;
-  }
-
+/* Naturalna wysokość wierszy chroni opis i parametry przed kolizją z CTA.
+   Rezerwa najdłuższego opisu utrzymuje geometrię trzech technologii. */
+@media(max-width:1230px){
+ .hero-tech-panel{height:auto;min-height:236px;overflow:visible}
+ .hero-tech-panel-content{min-height:min-content;grid-template-rows:42px minmax(min-content,1fr) auto}
+ .hero-tech-panel p{min-height:4.95em}
 }
+@media(max-width:800px){.hero-tech-panel{min-height:274px}}

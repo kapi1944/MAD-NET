@@ -189,6 +189,16 @@ try {
     await strona.setViewportSize({width:szerokosc, height:1000});
     await strona.mouse.move(0, 0);
     await przygotuj(strona, `${adres}/oryginal-cennik.html`);
+    // Świadoma korekta geometrii HERO obowiązuje także historyczny wzorzec.
+    // Porównanie nadal jest ścisłe dla wszystkich wymiarów i reszty cennika.
+    await strona.addStyleTag({content:`
+      @media(max-width:1230px){
+        .hero-tech-panel{height:auto;min-height:236px;overflow:visible}
+        .hero-tech-panel-content{min-height:min-content;grid-template-rows:42px minmax(min-content,1fr) auto}
+        .hero-tech-panel p{min-height:4.95em}
+      }
+      @media(max-width:800px){.hero-tech-panel{min-height:274px}}
+    `});
     const geometriaPrzed=await geometriaCennika(strona);
     const przed = await strona.locator('main').screenshot({path:`${katalog}/cennik-przed-${szerokosc}.png`, animations:'disabled', style:'.nav,.wspolny-naglowek,.foot,.wspolna-stopka{visibility:hidden!important}'});
     await przygotuj(strona, `${adres}/cennik.html`);

@@ -52,6 +52,8 @@ try{
       assert.ok(await strona.locator('img').evaluateAll(elementy=>elementy.every(obraz=>obraz.complete&&obraz.naturalWidth>0)));
       assert.ok(await strona.locator('.katalog-pcb').evaluate(element=>getComputedStyle(element).pointerEvents==='none'));
       assert.ok(await strona.locator('.sygnal,.impuls-katalogu').evaluateAll(elementy=>elementy.every(element=>getComputedStyle(element).animationName==='none')));
+      // Kursor pozostaje poza menu podczas niezależnego scenariusza klawiatury.
+      await strona.mouse.move(0,0);
       const pytanie=strona.locator('summary').first();
       await pytanie.focus();
       assert.notEqual(await pytanie.evaluate(element=>getComputedStyle(element).outlineStyle),'none');

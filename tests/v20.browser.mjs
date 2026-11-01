@@ -141,7 +141,7 @@ try {
   for (const szerokosc of [390, 768, 1024, 1440]) await sprawdzPodswietlenie(strona, szerokosc);
   await sprawdzPodswietlenie(strona, 1440, true);
   await strona.emulateMedia({ reducedMotion: 'no-preference' });
-  for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1100, 1231, 1280, 1440, 1500, 1510, 1920]) {
+  for (const szerokosc of [320, 360, 375, 380, 390, 400, 414, 430, 480, 560, 760, 768, 800, 1024, 1100, 1230, 1231, 1280, 1440, 1500, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
     await strona.evaluate(() => document.fonts.ready);

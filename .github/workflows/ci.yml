@@ -34,6 +34,8 @@ jobs:
           name: mad-net-v20-przegladarka
           path: |
             test-results/v20/po
+            test-results/panel
+            test-results/integracja-home-v3/04
             test-results/v21
             test-results/integracja-home-v3/02
             test-results/integracja-home-v3/03
