@@ -123,13 +123,15 @@ try{
   assert.ok(przebieg.probki.filter(probka=>probka.stan==='CLOSING_COVER').every(probka=>probka.wtyk<.01),'Klapka zamyka się dopiero po wycofaniu wtyku');
   const po=await strona.locator(gniazdo(50)).evaluate(element=>({kat:new DOMMatrixReadOnly(getComputedStyle(element.querySelector('.sc-pokrywa')).transform).m22,wtyk:getComputedStyle(element.querySelector('.sc-konektor')).opacity}));
   assert.equal(po.kat,1);assert.equal(po.wtyk,'0');
-  assert.equal(await strona.locator('#link-active').getAttribute('d'),'');
+  await strona.waitForFunction(()=>!document.querySelector('#link-active').getAttribute('d'));
+ assert.equal(await strona.locator('#link-active').getAttribute('d'),'');
   await strona.locator('[data-select-plan="FIBER-100M"]').click();await stan(strona,'CONNECTED');
   await sprawdzGeometrie(strona,'card',100);
   await strona.locator('.device-tech-tabs [data-technology="LAN"]').click();await stan(strona,'IDLE');
   assert.equal(await strona.locator('[data-gniazdo-pakiet][data-stan-polaczenia="IDLE"]').count(),3);
   assert.ok(await strona.locator('.sc-pokrywa').evaluateAll(elementy=>elementy.every(element=>new DOMMatrixReadOnly(getComputedStyle(element).transform).m22===1)));
-  assert.equal(await strona.locator('#link-active').getAttribute('d'),'');
+  await strona.waitForFunction(()=>!document.querySelector('#link-active').getAttribute('d'));
+ assert.equal(await strona.locator('#link-active').getAttribute('d'),'');
   assert.equal(await strona.locator('#central-device .jack-rj').count(),5);
   console.log(`PASS SC/APC ${szerokosc}px: sekwencja, geometria, 2 trasy, ceny bez zmian`);
  }
@@ -157,6 +159,7 @@ try{
  assert.equal(await strona.evaluate(()=>window.gniazdoTestowe===document.querySelector('[data-gniazdo-pakiet="FIBER-300M"]')),true);
  await sprawdzGeometrie(strona,'table',300);
  await strona.locator('[data-table-technology="FIBER"]').click();await stan(strona,'IDLE');
+ await strona.waitForFunction(()=>!document.querySelector('#link-active').getAttribute('d'));
  assert.equal(await strona.locator('#link-active').getAttribute('d'),'');
  await strona.locator('[data-table-technology="FIBER"]').click();
  await strona.locator(gniazdo(100)).focus();await strona.keyboard.press('Enter');await stan(strona,'CONNECTED');
@@ -198,11 +201,14 @@ try{
 
  const dotyk=await przegladarka.newPage({viewport:{width:390,height:844},hasTouch:true,isMobile:true});sledz(dotyk);await dotyk.goto(adres);
  const sesja=await dotyk.context().newCDPSession(dotyk);
+ await dotyk.evaluate(()=>document.fonts.ready);
  await dotyk.locator(gniazdo(50)).scrollIntoViewIfNeeded();
- await dotyk.waitForTimeout(200);
+ await uspokojPrzewijanie(dotyk);
  const prostokat=await dotyk.locator(gniazdo(50)).boundingBox();
  const punkt={x:prostokat.x+prostokat.width/2,y:prostokat.y+prostokat.height/2};
- await sesja.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[punkt]});await dotyk.waitForTimeout(500);
+ assert.equal(await dotyk.evaluate(punkt=>document.elementFromPoint(punkt.x,punkt.y)?.closest('[data-gniazdo-pakiet]')?.dataset.gniazdoPakiet,punkt),'FIBER-50M','Punkt dotyku musi trafiać w odsłonięte gniazdo');
+ await sesja.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[punkt]});
+ await dotyk.waitForFunction(()=>document.querySelectorAll('.plan.is-hovered').length===1,null,{timeout:3000});
  assert.equal(await dotyk.locator('.plan.is-hovered').count(),1);
  assert.equal(await dotyk.locator('#connection-zone').getAttribute('data-fiber-state'),'IDLE');
  assert.equal(await dotyk.locator('.sc-pokrywa').first().evaluate(element=>new DOMMatrixReadOnly(getComputedStyle(element).transform).m22),1);
