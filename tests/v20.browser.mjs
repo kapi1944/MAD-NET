@@ -284,7 +284,7 @@ try {
         assert.equal(karta.nazwa, karta.oczekiwana); assert.equal(karta.numeracja, false);
         assert.equal(karta.kolorTechnologii, { LAN: 'rgb(255, 32, 62)', FIBER: 'rgb(255, 123, 25)', AIR: 'rgb(45, 156, 255)' }[technologia]);
         assert.equal(karta.kolorNumeru, 'rgb(245, 246, 248)');
-        assert.ok(karta.etykietaNad && !karta.przepelnienie && karta.separator && karta.bezKolizji); assert.equal(karta.rozmiar, 35.7);
+        assert.ok(karta.etykietaNad && !karta.przepelnienie && karta.separator && karta.bezKolizji, `Geometria karty ${szerokosc}px: ${JSON.stringify(karta)}`); assert.equal(karta.rozmiar, 35.7);
       });
       await strona.locator('#central-device .speed-port').last().click();
       await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));
