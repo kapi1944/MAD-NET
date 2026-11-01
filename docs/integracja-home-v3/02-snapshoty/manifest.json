@@ -1,0 +1,52 @@
+[
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/home-390.png",
+    "bajty": 1252848,
+    "sha256": "fad0d698284868b2d0c0b7024700117513bf84a15e2bebda070d841229db74df"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/cennik-390.png",
+    "bajty": 1326188,
+    "sha256": "2ccb372ad51d95d32fbc3fd9f8fe301d47dd6618394e042da11b2a3bd89732cf"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/home-768.png",
+    "bajty": 1838752,
+    "sha256": "cba719abb744181ed25d78ccd5654384038eebea9dce5625373b21bb7c0e9a84"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/cennik-768.png",
+    "bajty": 1981384,
+    "sha256": "1c97639487e9792da7d3111c1b35fba32be713d2049fff6b2053094b1f4afc4a"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/home-1024.png",
+    "bajty": 2074704,
+    "sha256": "8af3326b1a85825cdb4ef5b44af18e3fb84a1c8404b02be3b089e550beec9bdc"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/cennik-1024.png",
+    "bajty": 1966227,
+    "sha256": "a26585b8e46145b578889d0c1d1a3add28e4f43108280bdc12d1d97a3f51f5e2"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/home-1440.png",
+    "bajty": 2311765,
+    "sha256": "81523d11dca1639eb5628353f89393f918144ffa43ce5d1ca9832354139a1270"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/cennik-1440.png",
+    "bajty": 2545409,
+    "sha256": "8fb9de92f83b9cd7786f2caecab466e48550ce223d8dc13bc26c5d1c143845e5"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/home-1920.png",
+    "bajty": 2646634,
+    "sha256": "ac6faa41b2079aa3a344b71c12a4314fe9b69c78d4b0ac3bc487c65a7fe88965"
+  },
+  {
+    "plik": "docs/integracja-home-v3/02-snapshoty/cennik-1920.png",
+    "bajty": 3323665,
+    "sha256": "ffd29f1a384da95f3da6e5baab359da1bf8b621b0b779d0d9d8aa82576d382c3"
+  }
+]

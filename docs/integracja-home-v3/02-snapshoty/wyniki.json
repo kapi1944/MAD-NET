@@ -1,0 +1,466 @@
+{
+  "wyniki": [
+    {
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 5793,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 4542,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 3726,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 3007,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 3027,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 8099,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 6452,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 5251,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 5033,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 5142,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    }
+  ],
+  "smoke": [
+    {
+      "sciezka": "/",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/index.html",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/cennik.html",
+      "selektory": [
+        "#hero-rack-stage",
+        "#cennik",
+        "#oplaty",
+        "#availability-form"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/cennik.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/hero-hybryda.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/cennik.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/hero-rack-baza.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/hero-rack.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/dostepnosc.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/hero/plyta-pcb.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/mad-net-logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/index.html",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/cennik.html",
+      "selektory": [
+        "#hero-rack-stage",
+        "#cennik",
+        "#oplaty",
+        "#availability-form"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/cennik.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/hero-hybryda.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/dostepnosc.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/cennik.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/hero-rack-baza.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/hero/plyta-pcb.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/hero-rack.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "bledy": [],
+  "konsola": [],
+  "kafelkiOnline": 72
+}

@@ -1,10 +1,10 @@
 /* Regresja wydzielenia HOME V3: dwie strony, obrazy i rzeczywiste interakcje. */
 import assert from 'node:assert/strict';
 import {readFile, mkdir, writeFile, access} from 'node:fs/promises';
-import {spawn} from 'node:child_process';
+import {spawn, execFileSync} from 'node:child_process';
 import {chromium} from 'playwright-core';
 
-const katalog = 'test-results/integracja-home-v3/01';
+const katalog = 'test-results/integracja-home-v3/02';
 await mkdir(katalog, {recursive:true});
 const port = process.env.MADNET_PORT_HOME || '4184';
 const adres = `http://127.0.0.1:${port}`;
@@ -12,7 +12,7 @@ const oryginal = await readFile('docs/archiwum/MAD-NET_HOME_V3_JEDEN_PLIK_ORIGIN
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   env:{...process.env, PORT:port}, stdio:['ignore','pipe','pipe'],
 });
-const wyniki = [], bledy = [], konsola = [], kafelki = new Map();
+const wyniki = [], smoke = [], bledy = [], konsola = [], kafelki = new Map();
 let przegladarka;
 
 async function przygotuj(strona, url) {
@@ -73,6 +73,8 @@ try {
     await trasa.fulfill(await kafelki.get(url));
   });
   await kontekst.route(`${adres}/oryginal-home-v3.html`, trasa => trasa.fulfill({body:oryginal, contentType:'text/html; charset=utf-8'}));
+  const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'});
+  await kontekst.route(`${adres}/oryginal-cennik.html`, trasa => trasa.fulfill({body:cennikPrzed, contentType:'text/html; charset=utf-8'}));
   // Symulacja montowania niezmienionego dist w podkatalogu GitHub Pages.
   await kontekst.route(`${adres}/MAD-NET/**`, async trasa => {
     await trasa.fulfill({response:await trasa.fetch({url:trasa.request().url().replace('/MAD-NET/', '/')})});
@@ -80,11 +82,11 @@ try {
   const strona = await kontekst.newPage();
   strona.on('pageerror', blad => bledy.push(blad.message));
   strona.on('console', wpis => {if (wpis.type() === 'error') konsola.push(wpis.text());});
-  for (const szerokosc of [390, 768, 1440, 1920]) {
+  for (const szerokosc of [390, 768, 1024, 1440, 1920]) {
     await strona.setViewportSize({width:szerokosc, height:1000});
     await przygotuj(strona, `${adres}/oryginal-home-v3.html`);
     const przed = await strona.screenshot({path:`${katalog}/przed-${szerokosc}.png`, fullPage:true});
-    await przygotuj(strona, `${adres}/home.html`);
+    await przygotuj(strona, `${adres}/index.html`);
     const po = await strona.screenshot({path:`${katalog}/po-${szerokosc}.png`, fullPage:true});
     const porownanie = await porownajPiksele(strona, przed, po);
     wyniki.push({szerokosc, porownanie});
@@ -137,16 +139,46 @@ try {
     await strona.emulateMedia({reducedMotion:'reduce'});
     console.log(`PASS HOME ${szerokosc}px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion`);
   }
-  await przygotuj(strona, `${adres}/MAD-NET/home.html`);
-  assert.equal(await strona.locator('html').getAttribute('lang'), 'pl');
-  assert.ok(await strona.locator('.podpis-lokalny img').evaluate(obraz => obraz.currentSrc.includes('/MAD-NET/assets/img/home/')));
-  await strona.goto(`${adres}/index.html`);
-  assert.equal(await strona.locator('[data-rack-tech]').count(), 3);
-  assert.equal(await strona.locator('#availability-form').count(), 1);
+  for (const szerokosc of [390, 768, 1024, 1440, 1920]) {
+    await strona.setViewportSize({width:szerokosc, height:1000});
+    await strona.mouse.move(0, 0);
+    await przygotuj(strona, `${adres}/oryginal-cennik.html`);
+    const przed = await strona.screenshot({path:`${katalog}/cennik-przed-${szerokosc}.png`, fullPage:true, animations:'disabled'});
+    await przygotuj(strona, `${adres}/cennik.html`);
+    const po = await strona.screenshot({path:`${katalog}/cennik-po-${szerokosc}.png`, fullPage:true, animations:'disabled'});
+    const porownanie = await porownajPiksele(strona, przed, po);
+    wyniki.push({strona:'cennik', szerokosc, porownanie});
+    assert.equal(porownanie.rozneWymiary, undefined);
+    assert.equal(porownanie.roznePiksele, 0, `Migracja cennika ${szerokosc}px`);
+    console.log(`PASS migracja cennika ${szerokosc}px: 0 różnych pikseli`);
+  }
+  for (const sciezka of ['/', '/index.html', '/cennik.html', '/MAD-NET/', '/MAD-NET/index.html', '/MAD-NET/cennik.html']) {
+    const zasoby = [];
+    const sledz = odpowiedz => {
+      if (odpowiedz.url().startsWith(adres)) zasoby.push({url:odpowiedz.url(), status:odpowiedz.status()});
+    };
+    strona.on('response', sledz);
+    const odpowiedz = await strona.goto(`${adres}${sciezka}`, {waitUntil:'networkidle'});
+    assert.equal(odpowiedz.status(), 200, sciezka);
+    const czyCennik = sciezka.endsWith('cennik.html');
+    const selektory = czyCennik ? ['#hero-rack-stage', '#cennik', '#oplaty', '#availability-form'] : ['#tytul-glowny', '#nawigacja', '#mapa-ramka', '.karta-uslugi'];
+    for (const selektor of selektory) assert.ok(await strona.locator(selektor).count(), `${sciezka}: brak selektora ${selektor}`);
+    const skrypty = await strona.locator('script[src]').evaluateAll(elementy => elementy.map(element => element.getAttribute('src')));
+    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js'] : ['./assets/js/home.js']);
+    assert.equal(await strona.locator(czyCennik ? 'link[href="./assets/css/home.css"]' : 'link[href="./assets/css/styles.css"]').count(), 0);
+    assert.ok(zasoby.some(zasob => zasob.url.endsWith('.css')), `${sciezka}: nie pobrano CSS`);
+    assert.ok(zasoby.some(zasob => zasob.url.endsWith('.js')), `${sciezka}: nie pobrano JS`);
+    assert.ok(zasoby.some(zasob => /\.(png|jpg|svg)$/.test(zasob.url)), `${sciezka}: nie pobrano obrazów`);
+    assert.ok(zasoby.every(zasob => zasob.status === 200), `${sciezka}: błąd HTTP zasobu ${JSON.stringify(zasoby)}`);
+    smoke.push({sciezka, selektory, zasoby});
+    strona.off('response', sledz);
+    console.log(`PASS smoke ${sciezka}: selektory i ${zasoby.length} odpowiedzi HTTP 200, rozdzielone CSS/JS`);
+  }
   await assert.rejects(access('dist/docs/archiwum/MAD-NET_HOME_V3_JEDEN_PLIK_ORIGINAL.html'));
+  await assert.rejects(access('dist/home.html'));
   assert.deepEqual(bledy, []); assert.deepEqual(konsola, []);
   console.log('PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli');
 } finally {
-  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, bledy, konsola, kafelkiOnline:kafelki.size}, null, 2));
+  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, smoke, bledy, konsola, kafelkiOnline:kafelki.size}, null, 2));
   await przegladarka?.close(); serwer.kill();
 }

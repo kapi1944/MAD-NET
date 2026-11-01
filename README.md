@@ -17,7 +17,7 @@ npm run dev
 
 Otwórz **http://127.0.0.1:4173**. Serwer odświeża stronę po zmianach HTML/CSS/JS. Zatrzymanie: `Ctrl+C`.
 
-Oddzielny podgląd HOME V3: **http://127.0.0.1:4173/home.html**. `index.html` pozostaje cennikiem. Test podglądu i porównanie z oryginałem: `npm run test:home`; raport: [etap 01](docs/integracja-home-v3/01-raport-rozdzielenia.md).
+Strona główna HOME V3: **http://127.0.0.1:4173/** (`index.html`). Cennik: **http://127.0.0.1:4173/cennik.html**. Dawny `home.html` usunięto; HOME ma jedno źródło. Test obu stron i porównanie z oryginałami: `npm run test:home`; raport migracji: [etap 02](docs/integracja-home-v3/02-raport-migracji.md).
 
 ```powershell
 npm test            # testy struktury + sprawdzenie składni JS
@@ -36,7 +36,8 @@ Testy przeglądarkowe na Windows korzystają z zainstalowanego Microsoft Edge. N
 
 ```text
 MAD-NET/
-├── index.html                   # struktura strony V18
+├── index.html                   # HOME V3
+├── cennik.html                  # dotychczasowy cennik z HERO RACK
 ├── assets/
 │   ├── css/styles.css           # cały oryginalny CSS, bez zmian semantycznych
 │   ├── js/cennik.js             # urządzenia, pakiety, SVG przewodów, tabela

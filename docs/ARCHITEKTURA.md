@@ -6,14 +6,15 @@ Rozdzielenie pliku HTML **bez przebudowy funkcji**:
 
 | Moduł | Lokalizacja | Odpowiedzialność |
 |---|---|---|
-| Struktura i sekcje | `index.html` | Nawigacja, HERO, cennik, opłaty, formularz |
+| Strona główna HOME V3 | `index.html`, `assets/css/home.css`, `assets/js/home.js`, `assets/img/home/` | Osobna strona, menu, modale, PCB i mapa regionu |
+| Struktura i sekcje cennika | `cennik.html` | Nawigacja, HERO RACK, cennik, opłaty, formularz |
 | Stylowanie | `assets/css/styles.css` | Wszystkie style V18, animacje, media queries |
 | Logika cennika | `assets/js/cennik.js` | Dane pakietów, centralne urządzenie, połączenia, tabele |
 | Formularz i mapa | `assets/js/dostepnosc.js` | Obsługa formularza, mapy, geokodowanie, POST do API |
 | RACK HERO | `assets/js/hero-rack.js` | Hover/touch/focus i płynne zmiany opisu techn. |
 | Logo | `assets/img/mad-net-logo.png` | Bezpośrednio z grafiki zakodowanej w V18 |
 
-**Uwaga techniczna:** skrypty mają obecnie zakresy globalne i zależą od kolejności ładowania. Dlatego w `index.html` są to zwykłe skrypty w kolejności: `cennik.js` → `dostepnosc.js` → `hero-rack.js`. **Nie zamieniać automatycznie na `type=module`** bez wyodrębnienia API współdzielonych danych.
+**Uwaga techniczna:** skrypty cennika mają obecnie zakresy globalne i zależą od kolejności ładowania. Dlatego w `cennik.html` są to zwykłe skrypty w kolejności: `cennik.js` → `dostepnosc.js` → `hero-rack.js`. **Nie zamieniać automatycznie na `type=module`** bez wyodrębnienia API współdzielonych danych. HOME ładuje wyłącznie własne CSS/JS. Build waliduje obie strony przed zastąpieniem `dist/`, a następnie kopiuje jawną listę `index.html`, `cennik.html` i `assets/`; archiwa nie trafiają do wyniku. Szczegóły i mapa URL: [etap 02](integracja-home-v3/02-raport-migracji.md).
 
 ## Środowiska
 

@@ -1,0 +1,185 @@
+## npm run verify — PASS, exit 0
+
+> mad-net@0.1.0 verify
+> npm run test && npm run build
+
+
+> mad-net@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylko allowlistę (453.2438ms)
+✔ HOME: archiwum i obrazy zachowują oryginalne bajty i MIME V3 (20.746ms)
+✔ HOME: osobne zasoby, język polski, brak zależności od stylów cennika (74.1848ms)
+✔ cennik: przeniesiona strona i chronione moduły pozostają zgodne z baseline etapu 00 (10.0457ms)
+✔ strona główna HOME ma własne zasoby i sekcje (2.4247ms)
+✔ struktura startowa i poprawne odnośniki do rozdzielonych zasobów (1.5627ms)
+✔ skrypty wykonują się w pierwotnej kolejności (0.8733ms)
+✔ oryginalny szablon V18 jest zachowany do porównań i rollbacku (1.5424ms)
+✔ 13 wariantów: 5 LAN, 3 FIBER i 5 AIR (0.2785ms)
+✔ zachowano sekcje i formularz, bez fikcyjnego backendu SMTP (0.8557ms)
+✔ poprawna składnia JavaScript we wszystkich trzech skryptach (204.6688ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 556.1075
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/cennik.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+
+
+## Test HOME / migracji — PASS, exit 0
+PASS HOME 390px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 768px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 1024px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 1440px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 1920px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS migracja cennika 390px: 0 różnych pikseli
+PASS migracja cennika 768px: 0 różnych pikseli
+PASS migracja cennika 1024px: 0 różnych pikseli
+PASS migracja cennika 1440px: 0 różnych pikseli
+PASS migracja cennika 1920px: 0 różnych pikseli
+PASS smoke /: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /index.html: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /cennik.html: selektory i 11 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/index.html: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/cennik.html: selektory i 11 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli
+
+
+## npm run test:browser — PASS, exit 0
+
+> mad-net@0.1.0 test:browser
+> npm run build && node tests/v20.browser.mjs && node tests/v21.browser.mjs && node tests/home.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/cennik.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 390px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 768px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1024px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=true
+PASS 360px: HERO, ceny, okresy, tabela i 13 tras
+PASS 390px: HERO, ceny, okresy, tabela i 13 tras
+PASS 430px: HERO, ceny, okresy, tabela i 13 tras
+PASS 760px: HERO, ceny, okresy, tabela i 13 tras
+PASS 768px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1024px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1100px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1231px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1280px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1440px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1500px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1510px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1920px: HERO, ceny, okresy, tabela i 13 tras
+PASS klawiatura, dotyk, scroll, ograniczony ruch, 13 kanałów; 169 tras bez kolizji
+PASS V21 360px / 8 kombinacji / 13 miniportów
+PASS V21 390px / 8 kombinacji / 13 miniportów
+PASS V21 430px / 8 kombinacji / 13 miniportów
+PASS V21 768px / 8 kombinacji / 13 miniportów
+PASS V21 1024px / 8 kombinacji / 13 miniportów
+PASS V21 1280px / 8 kombinacji / 13 miniportów
+PASS V21 1440px / 8 kombinacji / 13 miniportów
+PASS V21 1920px / 8 kombinacji / 13 miniportów
+PASS V21 geokodowanie, mapa, przeciąganie, status, dane zapytania, awaria mapy, reduced motion, brak wyjątków JS
+PASS HOME 390px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 768px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 1024px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 1440px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS HOME 1920px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion
+PASS migracja cennika 390px: 0 różnych pikseli
+PASS migracja cennika 768px: 0 różnych pikseli
+PASS migracja cennika 1024px: 0 różnych pikseli
+PASS migracja cennika 1440px: 0 różnych pikseli
+PASS migracja cennika 1920px: 0 różnych pikseli
+PASS smoke /: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /index.html: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /cennik.html: selektory i 11 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/index.html: selektory i 13 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/cennik.html: selektory i 11 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli
+
+
+## MADNET_PORT_PCB=4193 npm run test:pcb — PASS, exit 0 po synchronizacji SMIL
+
+> mad-net@0.1.0 test:pcb
+> npm run build && node tests/pcb.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/cennik.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS PCB 360px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 390px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 430px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 768px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1024px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1280px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1440px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1920px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 2560px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+
+
+## Pierwsza próba PCB na zajętym 4183 — FAIL
+
+> mad-net@0.1.0 test:pcb
+> npm run build && node tests/pcb.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/cennik.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+file:///C:/GitHub/Projects/MAD-NET/tests/pcb.browser.mjs:24
+    const zegar = setTimeout(() => odrzuc(new Error('Brak serwera PCB')), 8000);
+                                          ^
+
+Error: Brak serwera PCB
+    at Timeout._onTimeout (file:///C:/GitHub/Projects/MAD-NET/tests/pcb.browser.mjs:24:43)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+
+Node.js v24.16.0
+
+
+## Pierwsza próba ruchu na 4193 przed synchronizacją — FAIL
+
+> mad-net@0.1.0 test:pcb
+> npm run build && node tests/pcb.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/cennik.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Rzeczywisty ruch LED 360: {"naTrasie":true,"przesuniecie":0}
+    at file:///C:/GitHub/Projects/MAD-NET/tests/pcb.browser.mjs:136:12 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.16.0

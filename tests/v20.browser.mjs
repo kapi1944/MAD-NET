@@ -9,7 +9,7 @@ import { chromium } from 'playwright-core';
 const katalog = new URL('../test-results/v20/po/', import.meta.url);
 await mkdir(katalog, { recursive: true });
 const port = process.env.MADNET_PORT_TESTOW || '4181';
-const adres = `http://127.0.0.1:${port}`;
+const adres = `http://127.0.0.1:${port}/cennik.html`;
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   cwd: new URL('..', import.meta.url), env: { ...process.env, PORT: port }, stdio: ['ignore', 'pipe', 'pipe'],
 });

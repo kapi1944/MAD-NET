@@ -13,10 +13,10 @@ try{
  for(const szerokosc of [360,390,430,768,1024,1280,1440,1920]){
  await strona.setViewportSize({width:szerokosc,height:1100});
  if([390,1440].includes(szerokosc)){
- for(const plik of ['index.html','assets/css/styles.css','assets/js/cennik.js','assets/js/dostepnosc.js']){const zawartosc=execFileSync('git',['show','f759900:'+plik],{encoding:'utf8'});await strona.route('**/'+(plik==='index.html'?'':plik),r=>r.fulfill({body:zawartosc,contentType:plik.endsWith('.css')?'text/css':plik.endsWith('.js')?'text/javascript':'text/html'}));}
- await strona.goto(`http://127.0.0.1:${port}/`);await strona.locator('.compare-block').scrollIntoViewIfNeeded();await strona.screenshot({path:`${katalog}/przed/tabele-${szerokosc}.png`});await strona.unrouteAll();
+ for(const plik of ['index.html','assets/css/styles.css','assets/js/cennik.js','assets/js/dostepnosc.js']){const zawartosc=execFileSync('git',['show','f759900:'+plik],{encoding:'utf8'});await strona.route('**/'+(plik==='index.html'?'cennik.html':plik),r=>r.fulfill({body:zawartosc,contentType:plik.endsWith('.css')?'text/css':plik.endsWith('.js')?'text/javascript':'text/html'}));}
+ await strona.goto(`http://127.0.0.1:${port}/cennik.html`);await strona.locator('.compare-block').scrollIntoViewIfNeeded();await strona.screenshot({path:`${katalog}/przed/tabele-${szerokosc}.png`});await strona.unrouteAll();
  }
- await strona.goto(`http://127.0.0.1:${port}/`);
+ await strona.goto(`http://127.0.0.1:${port}/cennik.html`);
  const poczatek=await strona.locator('.device-tech-tabs [aria-pressed=true]').getAttribute('data-technology');
  for(let maska=0;maska<8;maska++){
  if(await strona.locator('#compare-clear').isEnabled())await strona.locator('#compare-clear').click();

@@ -22,7 +22,7 @@ jobs:
       - name: Budowanie strony
         run: npm run build
       - name: Sprawdzenie artefaktów
-        run: test -s dist/index.html && test -s dist/assets/js/hero-rack.js
+        run: test -s dist/index.html && test -s dist/cennik.html && test -s dist/assets/js/home.js && test -s dist/assets/js/hero-rack.js
       - name: Chromium do testów V20
         run: npx playwright-core install --with-deps chromium
       - name: Regresja geometrii i interakcji V20
@@ -35,3 +35,4 @@ jobs:
           path: |
             test-results/v20/po
             test-results/v21
+            test-results/integracja-home-v3/02

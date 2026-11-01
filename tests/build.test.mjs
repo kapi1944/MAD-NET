@@ -1,0 +1,35 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdir, mkdtemp, copyFile, cp, writeFile, readFile, readdir} from 'node:fs/promises';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import {join} from 'node:path';
+
+test('build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylko allowlistę', async () => {
+  const korzen = fileURLToPath(new URL('../', import.meta.url));
+  await mkdir(join(korzen, 'test-results'), {recursive:true});
+  const katalog = await mkdtemp(join(korzen, 'test-results/build-'));
+  await mkdir(join(katalog, 'scripts')); await mkdir(join(katalog, 'dist'));
+  await copyFile(join(korzen, 'scripts/build.mjs'), join(katalog, 'scripts/build.mjs'));
+  await copyFile(join(korzen, 'index.html'), join(katalog, 'index.html'));
+  await cp(join(korzen, 'assets'), join(katalog, 'assets'), {recursive:true});
+  await writeFile(join(katalog, 'dist/zachowaj.txt'), 'poprzedni build');
+  const uruchom = () => spawnSync(process.execPath, ['scripts/build.mjs'], {cwd:katalog, encoding:'utf8'});
+  assert.notEqual(uruchom().status, 0, 'Brak cennik.html musi zatrzymać build');
+  const cennik = await readFile(join(korzen, 'cennik.html'), 'utf8');
+  await writeFile(join(katalog, 'cennik.html'), cennik.replace('id="availability-form"', 'id="brak-formularza"'));
+  assert.notEqual(uruchom().status, 0, 'Niepełny cennik musi zatrzymać build');
+  await writeFile(join(katalog, 'cennik.html'), cennik);
+  const home = await readFile(join(korzen, 'index.html'), 'utf8');
+  await writeFile(join(katalog, 'index.html'), home.replace('id="mapa-ramka"', 'id="brak-mapy"'));
+  assert.notEqual(uruchom().status, 0, 'Niepełny HOME musi zatrzymać build');
+  await writeFile(join(katalog, 'index.html'), home.replace('./assets/img/home/logo.png', './assets/img/home/brak.png'));
+  assert.notEqual(uruchom().status, 0, 'Brak zasobu musi zatrzymać build');
+  assert.equal(await readFile(join(katalog, 'dist/zachowaj.txt'), 'utf8'), 'poprzedni build');
+  await writeFile(join(katalog, 'index.html'), home);
+  await mkdir(join(katalog, 'docs/archiwum'), {recursive:true});
+  await writeFile(join(katalog, 'docs/archiwum/oryginal.html'), 'nie do publikacji');
+  await writeFile(join(katalog, 'MAD-NET_HOME_V3_JEDEN_PLIK.html'), 'źródło');
+  const wynik = uruchom(); assert.equal(wynik.status, 0, wynik.stderr);
+  assert.deepEqual((await readdir(join(katalog, 'dist'))).sort(), ['assets', 'cennik.html', 'index.html']);
+});
