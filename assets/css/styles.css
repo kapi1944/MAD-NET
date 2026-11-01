@@ -1009,16 +1009,3 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 #plans .predkosc-wysylania strong{font-size:21px;line-height:1}
 #plans .predkosc-pobierania>span{font-size:16px;font-weight:900;-webkit-text-stroke:.35px currentColor;color:#e7edf4}
 #plans .predkosc-wysylania>span{display:inline;font-size:1.6em;color:inherit;margin:0}
-/* FIX: panel AIR na wąskich ekranach */
-@media (max-width: 380px) {
-  .hero-tech-panel {
-    height: auto;
-    min-height: 274px;
-    grid-template-rows: auto minmax(min-content, 1fr) auto;
-  }
-
-  .hero-tech-panel-content {
-    min-height: min-content;
-    grid-template-rows: 54px auto auto;
-  }
-}
