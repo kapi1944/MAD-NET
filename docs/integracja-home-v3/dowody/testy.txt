@@ -1,0 +1,111 @@
+
+## npm ci
+
+added 1 package, and audited 2 packages in 1s
+
+found 0 vulnerabilities
+
+
+## npm run verify
+
+> mad-net@0.1.0 verify
+> npm run test && npm run build
+
+
+> mad-net@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ struktura startowa i poprawne odnośniki do rozdzielonych zasobów (1.7293ms)
+✔ skrypty wykonują się w pierwotnej kolejności (0.7973ms)
+✔ oryginalny szablon V18 jest zachowany do porównań i rollbacku (2.3947ms)
+✔ 13 wariantów: 5 LAN, 3 FIBER i 5 AIR (0.2441ms)
+✔ zachowano sekcje i formularz, bez fikcyjnego backendu SMTP (0.9581ms)
+✔ poprawna składnia JavaScript we wszystkich trzech skryptach (170.6426ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 262.0855
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+
+
+## npm run test:browser
+
+> mad-net@0.1.0 test:browser
+> npm run build && node tests/v20.browser.mjs && node tests/v21.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 390px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 768px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1024px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=true
+PASS 360px: HERO, ceny, okresy, tabela i 13 tras
+PASS 390px: HERO, ceny, okresy, tabela i 13 tras
+PASS 430px: HERO, ceny, okresy, tabela i 13 tras
+PASS 760px: HERO, ceny, okresy, tabela i 13 tras
+PASS 768px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1024px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1100px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1231px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1280px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1440px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1500px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1510px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1920px: HERO, ceny, okresy, tabela i 13 tras
+PASS klawiatura, dotyk, scroll, ograniczony ruch, 13 kanałów; 169 tras bez kolizji
+PASS V21 360px / 8 kombinacji / 13 miniportów
+PASS V21 390px / 8 kombinacji / 13 miniportów
+PASS V21 430px / 8 kombinacji / 13 miniportów
+PASS V21 768px / 8 kombinacji / 13 miniportów
+PASS V21 1024px / 8 kombinacji / 13 miniportów
+PASS V21 1280px / 8 kombinacji / 13 miniportów
+PASS V21 1440px / 8 kombinacji / 13 miniportów
+PASS V21 1920px / 8 kombinacji / 13 miniportów
+PASS V21 geokodowanie, mapa, przeciąganie, status, dane zapytania, awaria mapy, reduced motion, brak wyjątków JS
+
+
+## npm run test:pcb
+
+> mad-net@0.1.0 test:pcb
+> npm run build && node tests/pcb.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: dist/index.html + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS PCB 360px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 390px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 430px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 768px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1024px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1280px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1440px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1920px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 2560px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+
+
+## baseline HTTP — końcowa udana sesja
+cennik 390px: overflow=0, JS=0, console=0, network=0
+home-v3 390px: overflow=0, JS=0, console=0, network=0
+cennik 768px: overflow=0, JS=0, console=0, network=0
+home-v3 768px: overflow=0, JS=0, console=0, network=0
+cennik 1024px: overflow=0, JS=0, console=0, network=0
+home-v3 1024px: overflow=0, JS=0, console=0, network=0
+cennik 1440px: overflow=0, JS=0, console=0, network=0
+home-v3 1440px: overflow=0, JS=0, console=0, network=0

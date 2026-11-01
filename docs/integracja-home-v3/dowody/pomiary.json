@@ -1,0 +1,1173 @@
+[
+  {
+    "nazwa": "cennik",
+    "szerokosc": 390,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 3,
+      "szafa": [
+        {
+          "selektor": ".hero-rack-stage",
+          "x": 18,
+          "y": 330.625,
+          "szerokosc": 354,
+          "wysokosc": 254.34375,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "podpis": [],
+      "fotografia": [],
+      "pcb": [],
+      "mapa": [],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — Internet | Monitoring | IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        },
+        {
+          "alt": "Logo Mad-Net",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        }
+      ],
+      "linki": []
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  },
+  {
+    "nazwa": "home-v3",
+    "szerokosc": 390,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 0,
+      "szafa": [],
+      "podpis": [
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 0,
+          "wysokosc": 0,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "fotografia": [
+        {
+          "selektor": ".hero-fotografia",
+          "x": 0,
+          "y": 73,
+          "szerokosc": 390,
+          "wysokosc": 716.375,
+          "zIndex": "-2",
+          "display": "block",
+          "opacity": "0.52",
+          "backgroundSize": "100% 100%, auto 100%",
+          "backgroundPosition": "50% 50%, 48% 50%",
+          "isolation": "auto"
+        }
+      ],
+      "pcb": [
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 73,
+          "szerokosc": 390,
+          "wysokosc": 717.375,
+          "zIndex": "auto",
+          "display": "flex",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 790.375,
+          "szerokosc": 390,
+          "wysokosc": 1377.65625,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2168.03125,
+          "szerokosc": 390,
+          "wysokosc": 1022.34375,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 3190.375,
+          "szerokosc": 390,
+          "wysokosc": 624.78125,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 3815.15625,
+          "szerokosc": 390,
+          "wysokosc": 502.046875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 4317.203125,
+          "szerokosc": 390,
+          "wysokosc": 777.9375,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 5095.140625,
+          "szerokosc": 390,
+          "wysokosc": 470.328125,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        }
+      ],
+      "mapa": [
+        {
+          "selektor": "#mapa-ramka",
+          "x": 17,
+          "y": 2604.375,
+          "szerokosc": 356,
+          "wysokosc": 389,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — internet, monitoring i IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        },
+        {
+          "alt": "Twój lokalny partner technologiczny",
+          "kompletny": true,
+          "naturalnaSzerokosc": 1120
+        },
+        {
+          "alt": "Laptop z ikoną Wi-Fi — oferta internetu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalna kamera monitoringu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalne okablowanie sieciowe i szafa IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Laptop z projektem strony internetowej",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Instalacja antenowa na tle zachodzącego słońca",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "MAD-NET",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        }
+      ],
+      "linki": [
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik"
+      ]
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  },
+  {
+    "nazwa": "cennik",
+    "szerokosc": 768,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 3,
+      "szafa": [
+        {
+          "selektor": ".hero-rack-stage",
+          "x": 104,
+          "y": 331.21875,
+          "szerokosc": 560,
+          "wysokosc": 402.359375,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "podpis": [],
+      "fotografia": [],
+      "pcb": [],
+      "mapa": [],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — Internet | Monitoring | IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        },
+        {
+          "alt": "Logo Mad-Net",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        }
+      ],
+      "linki": []
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  },
+  {
+    "nazwa": "home-v3",
+    "szerokosc": 768,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 0,
+      "szafa": [],
+      "podpis": [
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 0,
+          "wysokosc": 0,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "fotografia": [
+        {
+          "selektor": ".hero-fotografia",
+          "x": 0,
+          "y": 73,
+          "szerokosc": 768,
+          "wysokosc": 684.015625,
+          "zIndex": "-2",
+          "display": "block",
+          "opacity": "0.68",
+          "backgroundSize": "100% 100%, auto 100%",
+          "backgroundPosition": "50% 50%, 72% 50%",
+          "isolation": "auto"
+        }
+      ],
+      "pcb": [
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 73,
+          "szerokosc": 768,
+          "wysokosc": 685.015625,
+          "zIndex": "auto",
+          "display": "flex",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 758.015625,
+          "szerokosc": 768,
+          "wysokosc": 1231.703125,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 1989.71875,
+          "szerokosc": 768,
+          "wysokosc": 887.5,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2877.21875,
+          "szerokosc": 768,
+          "wysokosc": 457.015625,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 3334.234375,
+          "szerokosc": 768,
+          "wysokosc": 304.015625,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 3638.25,
+          "szerokosc": 768,
+          "wysokosc": 438.21875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 4076.46875,
+          "szerokosc": 768,
+          "wysokosc": 285.296875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        }
+      ],
+      "mapa": [
+        {
+          "selektor": "#mapa-ramka",
+          "x": 19,
+          "y": 2385.21875,
+          "szerokosc": 575,
+          "wysokosc": 430,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — internet, monitoring i IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        },
+        {
+          "alt": "Twój lokalny partner technologiczny",
+          "kompletny": true,
+          "naturalnaSzerokosc": 1120
+        },
+        {
+          "alt": "Laptop z ikoną Wi-Fi — oferta internetu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalna kamera monitoringu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalne okablowanie sieciowe i szafa IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Laptop z projektem strony internetowej",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Instalacja antenowa na tle zachodzącego słońca",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "MAD-NET",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        }
+      ],
+      "linki": [
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik"
+      ]
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  },
+  {
+    "nazwa": "cennik",
+    "szerokosc": 1024,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 3,
+      "szafa": [
+        {
+          "selektor": ".hero-rack-stage",
+          "x": 480.90625,
+          "y": 155,
+          "szerokosc": 511.09375,
+          "wysokosc": 367.21875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "podpis": [],
+      "fotografia": [],
+      "pcb": [],
+      "mapa": [],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — Internet | Monitoring | IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        },
+        {
+          "alt": "Logo Mad-Net",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        }
+      ],
+      "linki": []
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  },
+  {
+    "nazwa": "home-v3",
+    "szerokosc": 1024,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 0,
+      "szafa": [],
+      "podpis": [
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 0,
+          "wysokosc": 0,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "fotografia": [
+        {
+          "selektor": ".hero-fotografia",
+          "x": 307.1875,
+          "y": 77,
+          "szerokosc": 716.8125,
+          "wysokosc": 591.765625,
+          "zIndex": "-2",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "100% 100%, 100% 100%",
+          "backgroundPosition": "0% 100%, 0% 50%",
+          "isolation": "auto"
+        }
+      ],
+      "pcb": [
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 77,
+          "szerokosc": 1024,
+          "wysokosc": 592.765625,
+          "zIndex": "auto",
+          "display": "flex",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 669.765625,
+          "szerokosc": 1024,
+          "wysokosc": 914.84375,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 1584.609375,
+          "szerokosc": 1024,
+          "wysokosc": 563,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2147.609375,
+          "szerokosc": 1024,
+          "wysokosc": 457.015625,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2604.625,
+          "szerokosc": 1024,
+          "wysokosc": 247.359375,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2851.984375,
+          "szerokosc": 1024,
+          "wysokosc": 438.21875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 3290.203125,
+          "szerokosc": 1024,
+          "wysokosc": 293.296875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        }
+      ],
+      "mapa": [
+        {
+          "selektor": "#mapa-ramka",
+          "x": 355.5,
+          "y": 1641.609375,
+          "szerokosc": 487.5,
+          "wysokosc": 445,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — internet, monitoring i IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        },
+        {
+          "alt": "Twój lokalny partner technologiczny",
+          "kompletny": true,
+          "naturalnaSzerokosc": 1120
+        },
+        {
+          "alt": "Laptop z ikoną Wi-Fi — oferta internetu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalna kamera monitoringu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalne okablowanie sieciowe i szafa IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Laptop z projektem strony internetowej",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Instalacja antenowa na tle zachodzącego słońca",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "MAD-NET",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        }
+      ],
+      "linki": [
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik"
+      ]
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  },
+  {
+    "nazwa": "cennik",
+    "szerokosc": 1440,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 3,
+      "szafa": [
+        {
+          "selektor": ".hero-rack-stage",
+          "x": 441.625,
+          "y": 158.59375,
+          "szerokosc": 655.25,
+          "wysokosc": 470.796875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "podpis": [],
+      "fotografia": [],
+      "pcb": [],
+      "mapa": [],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — Internet | Monitoring | IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        },
+        {
+          "alt": "Logo Mad-Net",
+          "kompletny": true,
+          "naturalnaSzerokosc": 679
+        }
+      ],
+      "linki": []
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  },
+  {
+    "nazwa": "home-v3",
+    "szerokosc": 1440,
+    "pomiar": {
+      "przepelnienie": 0,
+      "pakiety": 0,
+      "szafa": [],
+      "podpis": [
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 924.97607421875,
+          "y": 384.15631103515625,
+          "szerokosc": 361.0478515625,
+          "wysokosc": 193.6873779296875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "fotografia": [
+        {
+          "selektor": ".hero-fotografia",
+          "x": 532.796875,
+          "y": 85,
+          "szerokosc": 907.203125,
+          "wysokosc": 589.234375,
+          "zIndex": "-2",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "100% 100%, 100% 100%",
+          "backgroundPosition": "0% 100%, 0% 50%",
+          "isolation": "auto"
+        }
+      ],
+      "pcb": [
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 85,
+          "szerokosc": 1440,
+          "wysokosc": 590.234375,
+          "zIndex": "auto",
+          "display": "flex",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 675.234375,
+          "szerokosc": 1440,
+          "wysokosc": 547.875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 1223.109375,
+          "szerokosc": 1440,
+          "wysokosc": 563,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto, auto",
+          "backgroundPosition": "0% 0%, 0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 1786.109375,
+          "szerokosc": 1440,
+          "wysokosc": 322.1875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2108.296875,
+          "szerokosc": 1440,
+          "wysokosc": 243.1875,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2351.484375,
+          "szerokosc": 1440,
+          "wysokosc": 305.53125,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        },
+        {
+          "selektor": ".obwod",
+          "x": 0,
+          "y": 2657.015625,
+          "szerokosc": 1440,
+          "wysokosc": 208.453125,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "isolate"
+        }
+      ],
+      "mapa": [
+        {
+          "selektor": "#mapa-ramka",
+          "x": 464.671875,
+          "y": 1280.109375,
+          "szerokosc": 752.328125,
+          "wysokosc": 445,
+          "zIndex": "auto",
+          "display": "block",
+          "opacity": "1",
+          "backgroundSize": "auto",
+          "backgroundPosition": "0% 0%",
+          "isolation": "auto"
+        }
+      ],
+      "obrazy": [
+        {
+          "alt": "MAD-NET — internet, monitoring i IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        },
+        {
+          "alt": "Twój lokalny partner technologiczny",
+          "kompletny": true,
+          "naturalnaSzerokosc": 1120
+        },
+        {
+          "alt": "Laptop z ikoną Wi-Fi — oferta internetu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalna kamera monitoringu",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Profesjonalne okablowanie sieciowe i szafa IT",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Laptop z projektem strony internetowej",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "Instalacja antenowa na tle zachodzącego słońca",
+          "kompletny": true,
+          "naturalnaSzerokosc": 516
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "",
+          "kompletny": true,
+          "naturalnaSzerokosc": 256
+        },
+        {
+          "alt": "MAD-NET",
+          "kompletny": true,
+          "naturalnaSzerokosc": 660
+        }
+      ],
+      "linki": [
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#cennik",
+        "https://kapi1944.github.io/MAD-NET/#kontakt",
+        "https://kapi1944.github.io/MAD-NET/#cennik"
+      ]
+    },
+    "bledy": [],
+    "konsola": [],
+    "siec": []
+  }
+]
