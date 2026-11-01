@@ -3,8 +3,7 @@
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{min-width:320px;margin:0;background:var(--bg);color:var(--text);overflow-x:hidden}body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 50% -10%,rgba(95,16,31,.12),transparent 55%),linear-gradient(90deg,transparent 98%,rgba(255,255,255,.012) 99%) 0 0/44px 44px}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a,button{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid white;outline-offset:4px}svg{display:block}.ikony-def{width:0;height:0;position:absolute;overflow:hidden}.ikona{width:22px;height:22px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.ikona-mala{width:16px;height:16px}.kontener{width:min(var(--kontener),100% - 76px);margin-inline:auto}.przejdz-do-tresci{position:fixed;z-index:999;top:-100px;left:15px;background:#fff;color:#111;padding:12px}.przejdz-do-tresci:focus{top:10px}.mikro-etykieta{font-size:10px;font-weight:800;color:#c4cbd4;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px}.mikro-etykieta::before{content:"";width:5px;height:14px;background:var(--red);box-shadow:3px 0 0 rgba(255,32,62,.24)}.mikro-pin::before{display:none}.mikro-pin .ikona{color:var(--red);width:16px;height:16px;stroke-width:2.6}.sekcja{padding:75px 0;position:relative;isolation:isolate}.sekcja h2,.sekcja-kontakt h2{font-size:clamp(30px,3.05vw,44px);font-weight:850;letter-spacing:-.043em;line-height:1.13;margin:12px 0 0}.sekcja h2 span,.sekcja-kontakt h2 span{color:var(--red)}.naglowek-sekcji{margin-bottom:27px}.naglowek-z-opisem{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(220px,.65fr) auto;align-items:end;gap:35px}.naglowek-z-opisem>p{margin:0 0 5px;padding-left:25px;border-left:1px solid #4a303b;color:#b2bdc9;font-size:14px;line-height:1.6}.link-tekstowy{color:#ff4056;font-size:12px;font-weight:800;display:inline-flex;gap:11px;align-items:center;white-space:nowrap;transition:color .18s}.link-tekstowy:hover{color:#fff}.link-tekstowy .ikona{width:17px;height:17px}.przycisk{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:52px;padding:13px 20px;font-size:12.5px;font-weight:780;letter-spacing:.005em;line-height:1.25;text-align:center;border-radius:7px;border:1px solid transparent;transition:background .18s,border-color .18s,transform .18s,box-shadow .18s}.przycisk:hover{transform:translateY(-2px)}.przycisk-czerwony{background:linear-gradient(150deg,#ff1b3d,#e7002d);border-color:#fa2d49;color:white;box-shadow:0 8px 24px #c90b3030}.przycisk-czerwony:hover{background:#ff405b;box-shadow:0 9px 32px #da10364a}.przycisk-obrys{border-color:#4a5663;background:rgba(9,15,22,.72);color:#f6f7f9}.przycisk-obrys:hover{border-color:#f24c65;background:rgba(55,13,24,.78)}.obwod{position:relative}.obwod::after{content:"";position:absolute;pointer-events:none;z-index:3;left:0;right:0;bottom:0;height:18px;background:linear-gradient(90deg,transparent 0%,#6f1022 4%,#e6193d 9%,#711223 29%,transparent 41%,#691121 60%,#ff203e 71%,#6b1122 86%,transparent 96%) center center/100% 2px no-repeat;opacity:.65}.obwod::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:linear-gradient(90deg,transparent 1.5%,#e81739 1.57%,transparent 1.65%,transparent 98.35%,#a1132d 98.43%,transparent 98.5%);opacity:.20}
 /* Sticky navigation mirrors the pricing page design. */
 .naglowek{height:82px;position:sticky;top:0;z-index:100;background:rgba(6,10,15,.955);border-bottom:1px solid #28303c;backdrop-filter:blur(18px)}.pasek-nawigacji{height:100%;display:flex;align-items:center;gap:clamp(13px,1.6vw,26px)}.logo{width:200px;min-width:165px;display:block;margin-right:auto}.logo img{width:100%;height:65px;object-fit:contain;object-position:left center}.nawigacja{display:flex;align-items:center;gap:clamp(12px,1.55vw,25px)}.nawigacja a{font-weight:690;font-size:12px;color:#cad2dc;white-space:nowrap;position:relative;padding:13px 0}.nawigacja a:hover,.nawigacja a.aktywny{color:white}.nawigacja a.aktywny::after{content:"";position:absolute;bottom:6px;left:0;right:0;height:2px;background:var(--red)}.naglowek-kontakt{border-left:1px solid #26313d;padding-left:18px;display:flex;align-items:center;gap:10px;white-space:nowrap}.naglowek-kontakt .ikona{color:var(--red);width:21px;height:21px}.naglowek-kontakt div{display:flex;flex-direction:column;gap:4px}.naglowek-kontakt a{font-weight:800;font-size:12px}.naglowek-kontakt span{font-size:9px;color:#96a3b0}.przycisk-gora{min-height:45px;padding:8px 10px;font-size:10.5px}.przycisk-gora .ikona{width:18px;height:18px}.przycisk-gora .ikona-mala{width:13px;height:13px}.otworz-menu{display:none;align-items:center;justify-content:center;width:44px;height:44px;background:#141a21;border:1px solid #3e4854;border-radius:7px;color:white}.pasek-sygnalu{height:3px;background:linear-gradient(90deg,transparent,#d90c31 23%,transparent 29%,#6c1b2c 72%,transparent);opacity:.7}
-/* Hero and subtle accent traces */
-.sekcja-hero{height:auto;min-height:612px;overflow:hidden;display:flex;flex-direction:column;border-bottom:1px solid #391824;isolation:isolate;background:radial-gradient(ellipse at 58% 30%,#13232b,#080e15 66%)}.hero-fotografia{position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,#070d15 0%,rgba(7,13,21,.97) 22%,rgba(7,13,21,.75) 41%,rgba(7,13,21,.07) 68%,rgba(7,13,21,.28) 100%),linear-gradient(0deg,#080d14 0%,rgba(8,13,20,.37) 26%,transparent 64%),url("../img/home/latarnia-tlo.jpg");background-size:cover,cover,cover;background-position:center,center,center 33%}.sekcja-hero::before{z-index:-1;opacity:.8;background:radial-gradient(circle at 70% 50%,transparent 5%,#070c1450 65%,#070c14c9 100%)}.sciezki{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}.sciezki path{fill:none;stroke-linejoin:round;stroke-linecap:round}.sciezki .pcb-sciezka{stroke:#e01537;stroke-width:1.55;opacity:.62}.sciezki .pcb-puls{stroke:#ff415d;stroke-width:2.2;stroke-dasharray:28 1500;animation:plynacy-sygnal 17s linear infinite;filter:drop-shadow(0 0 3px #ff253e);opacity:.95}.sciezki circle{fill:#ff163d;filter:drop-shadow(0 0 6px #ff163d)}@keyframes plynacy-sygnal{to{stroke-dashoffset:-1500}}.hero-zawartosc{flex:1;position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:36px;padding-top:65px;padding-bottom:55px}.hero-glowne{width:min(620px,58%);padding-bottom:8px}.hero-glowne h1{font-size:clamp(58px,5.5vw,86px);font-weight:900;letter-spacing:-.06em;line-height:.99;margin:18px 0 19px;text-shadow:0 6px 16px #03070aaa}.hero-glowne h1 span{color:var(--red)}.hero-glowne p{max-width:550px;font-size:15.5px;line-height:1.64;color:#d5dae0;text-shadow:0 1px 6px #0009;margin:0 0 26px}.hero-przyciski{display:flex;flex-wrap:wrap;gap:12px}.hero-boczny{width:205px;min-height:274px;display:flex;align-items:flex-start;flex-direction:column;justify-content:flex-start;gap:11px;position:relative;background:linear-gradient(90deg,rgba(5,11,16,.8),transparent);padding:12px 0 0 31px;align-self:center;margin-top:25px}.hero-boczny-kreska{position:absolute;top:11px;bottom:90px;left:15px;border-left:1px solid #d21335}.hero-boczny-kreska::before{content:"";position:absolute;top:0;left:-3px;height:5px;width:5px;background:#ff203e;border-radius:50%;box-shadow:0 0 8px var(--red)}.hero-boczny p{margin:0;font-size:10px;letter-spacing:.09em;font-weight:800;color:#e1e6ed}.podpis-lokalny{position:absolute;top:212px;left:-85px;width:250px;transform:rotate(-7deg);font-family:"Segoe Print","Bradley Hand",cursive;font-size:21px;line-height:1.05;color:#f7ebdd;text-align:center;text-shadow:0 2px 9px #000;white-space:nowrap;opacity:.9}.podpis-lokalny i{display:block;height:3px;width:100px;margin:11px auto 0;background:var(--red);border-radius:50%;transform:rotate(-6deg)}.zalety-glowne{position:relative;z-index:4;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;border-top:1px solid #38414b88;padding-top:23px;padding-bottom:29px}.zaleta{min-width:0;display:flex;gap:13px;align-items:flex-start;border-right:1px solid #ffffff20;padding-right:14px}.zaleta:last-child{border:0}.zaleta>.ikona{color:var(--red);width:39px;height:39px;stroke-width:1.35}.zaleta div{display:flex;flex-direction:column;gap:5px}.zaleta strong{font-size:12px;font-weight:800}.zaleta span{font-size:10.5px;line-height:1.4;color:#aebac5}
+
 /* Services */
 .sekcja-uslugi{padding-top:62px;padding-bottom:65px;background:radial-gradient(ellipse at 56% 110%,rgba(100,12,25,.06),transparent 60%),#0b1016}.siatka-uslug{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}.karta-uslugi{display:flex;flex-direction:column;border:1px solid #3c4651;border-radius:9px;overflow:hidden;background:linear-gradient(180deg,#161e27,#0a1119);transition:transform .2s,border-color .2s,box-shadow .2s;min-width:0}.karta-uslugi:hover,.karta-uslugi:focus-within{transform:translateY(-5px);border-color:#a33147;box-shadow:0 18px 35px #0007}.zdjecie-uslugi{display:block;width:100%;height:175px;border:0;padding:0;position:relative;background:#17222c;color:var(--red);overflow:hidden}.zdjecie-uslugi::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(0deg,#0c121aff,transparent)}.zdjecie-uslugi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s,filter .25s;filter:saturate(.93) contrast(1.05)}.karta-uslugi:hover img{transform:scale(1.065)}.ikona-na-zdjeciu{position:absolute;bottom:2px;left:17px;z-index:1;display:grid;place-items:center;width:49px;height:49px;background:#0a1119dc;border:1px solid #ff314765;border-radius:13px;color:#f41f41}.ikona-na-zdjeciu .ikona{width:28px;height:28px;stroke-width:1.7}.tresc-uslugi{display:flex;flex-direction:column;flex:1;padding:13px 16px 15px}.tresc-uslugi h3{font-size:15.5px;margin:0 0 9px;line-height:1.18;letter-spacing:-.02em}.tresc-uslugi p{color:#b4bdc8;font-size:12px;line-height:1.54;margin:0 0 17px;flex:1}.link-karty{background:rgba(5,10,15,.5);color:#ff3954;display:flex;align-items:center;justify-content:space-between;gap:6px;border:0;border-top:1px solid #26313d;padding:12px 7px 2px;font-weight:800;font-size:11.5px;text-align:left;width:100%}.link-karty:hover{color:#fff}.link-karty .ikona{width:18px;height:18px}
 /* Map */
@@ -22,10 +21,10 @@
 /* Motion accessibility */
 body.bez-animacji .pcb-puls{animation:none!important;opacity:0!important}body.bez-animacji *,body.bez-animacji *::before,body.bez-animacji *::after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
-@media(max-width:1360px){.naglowek-kontakt{display:none}.nawigacja{gap:15px}.naglowek-z-opisem{gap:22px}.kontener{width:min(var(--kontener),100% - 62px)}.hero-boczny{width:170px}.podpis-lokalny{left:-120px}}
-@media(max-width:1120px){.naglowek{height:74px}.logo{width:184px;min-width:154px}.nawigacja{gap:13px}.nawigacja a{font-size:11px}.przycisk-gora{padding:8px 9px;min-height:42px}.przycisk-gora span{display:none}.przycisk-gora>.ikona-mala{display:none}.przycisk-gora>.ikona{width:21px;height:21px}.hero-glowne h1{font-size:clamp(56px,6.5vw,76px)}.hero-boczny{display:none}.hero-glowne{width:min(650px,80%)}.siatka-uslug{grid-template-columns:repeat(3,minmax(0,1fr))}.zdjecie-uslugi{height:195px}.naglowek-z-opisem{grid-template-columns:1fr auto}.naglowek-z-opisem>p{grid-column:1;grid-row:2;max-width:510px}.naglowek-z-opisem>.link-tekstowy{grid-column:2;grid-row:1}.zalety-glowne{grid-template-columns:repeat(3,1fr)}.zaleta:nth-child(3){border:0}.obszar-uklad{gap:16px}.siatka-powodow{grid-template-columns:repeat(2,1fr)}.relacje-uklad{grid-template-columns:1fr;gap:25px}.relacje-lewa h2 br{display:none}.relacje-lewa p{max-width:700px}.kontakt-kafelki{width:100%}}
-@media(max-width:780px){html{scroll-padding-top:80px}.kontener{width:calc(100% - 38px)}.naglowek{height:70px}.pasek-nawigacji{gap:10px}.logo{width:174px;margin-right:auto}.logo img{height:58px}.nawigacja{display:none;position:absolute;z-index:102;top:69px;left:0;right:0;background:#0b1119f8;backdrop-filter:blur(20px);border:1px solid #303946;border-top:0;box-shadow:0 25px 50px #000c;padding:12px 19px 20px;flex-direction:column;align-items:stretch;gap:0}.nawigacja.otwarte{display:flex}.nawigacja a{padding:13px 10px;font-size:13px;border-bottom:1px solid #303946}.nawigacja a.aktywny::after{left:10px;right:auto;width:35px;bottom:6px}.otworz-menu{display:flex}.przycisk-gora{order:0}.sekcja-hero{min-height:unset}.hero-zawartosc{padding-top:68px;padding-bottom:77px;min-height:490px}.hero-fotografia{background-position:center,center,55% center;background-image:linear-gradient(90deg,#07101be8,rgba(7,16,27,.73) 56%,rgba(7,16,27,.5)),linear-gradient(0deg,#080d14 0%,transparent 70%),url("../img/home/latarnia-tlo.jpg")}.hero-glowne{width:100%}.hero-glowne h1{font-size:clamp(55px,9vw,73px)}.hero-glowne p{max-width:520px;font-size:14px}.zalety-glowne{grid-template-columns:repeat(2,minmax(0,1fr));padding-top:20px;padding-bottom:21px;gap:20px}.zaleta:nth-child(3){border-right:1px solid #ffffff20}.zaleta:nth-child(2n){border:0}.zaleta:last-child{grid-column:span 2;max-width:400px}.sekcja{padding:50px 0}.sekcja h2{font-size:clamp(28px,5vw,38px)}.naglowek-z-opisem{grid-template-columns:1fr}.naglowek-z-opisem>p{grid-column:1;grid-row:2}.naglowek-z-opisem>.link-tekstowy{grid-column:1;grid-row:3}.siatka-uslug{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.zdjecie-uslugi{height:190px}.tresc-uslugi{padding:12px}.tresc-uslugi h3{font-size:14px}.tresc-uslugi p{font-size:11px}.obszar-uklad{grid-template-columns:1fr}.obszar-tekst>p{max-width:610px}.obszar-atuty{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.mapa-otoczenie{min-height:420px}.mapa-ramka{inset:0 85px 0 -4px}.lista-miejscowosci{width:154px}.kroki{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}.kroki li:nth-child(2)::after{display:none}.kontakt-uklad{align-items:start;gap:22px}.kontakt-kafelki>a{flex:1;min-width:175px}.stopka-glowna{padding-top:19px;padding-bottom:15px;flex-wrap:wrap;gap:14px}.stopka nav{order:3;width:100%;gap:12px 18px}.stopka-dol{flex-wrap:wrap}}
-@media(max-width:520px){.kontener{width:calc(100% - 34px)}.logo{width:150px;min-width:130px}.przycisk-gora{width:42px;height:42px}.otworz-menu{width:42px;height:42px}.sekcja-hero{min-height:0}.hero-zawartosc{padding-top:63px;padding-bottom:58px;min-height:456px}.hero-glowne h1{font-size:clamp(48px,12vw,61px);margin:18px 0}.hero-glowne p{font-size:13px;max-width:360px}.hero-przyciski{align-items:stretch;flex-direction:column;max-width:340px}.hero-przyciski .przycisk{width:100%;min-height:49px;padding:12px 12px;font-size:11.5px;justify-content:flex-start}.hero-przyciski .przycisk .ikona-mala{margin-left:auto}.zalety-glowne{gap:14px 8px}.zaleta{gap:7px;padding-right:5px}.zaleta>.ikona{width:27px;height:27px}.zaleta strong{font-size:10.7px}.zaleta span{font-size:9.8px}.zaleta:last-child{grid-column:span 2}.sekcja{padding:43px 0}.sekcja h2{font-size:30px}.naglowek-sekcji{margin-bottom:24px}.naglowek-z-opisem>p{padding-left:12px;font-size:12px}.siatka-uslug{gap:11px}.zdjecie-uslugi{height:130px}.ikona-na-zdjeciu{width:39px;height:39px;left:10px}.ikona-na-zdjeciu .ikona{width:24px;height:24px}.tresc-uslugi{padding:11px 10px 13px}.tresc-uslugi h3{font-size:12.7px;min-height:30px}.tresc-uslugi p{font-size:10.5px;line-height:1.48}.link-karty{font-size:10px;padding-left:0;padding-right:0}.karta-uslugi:last-child{grid-column:span 2;max-width:calc(50% - 6px)}.obszar-atuty{grid-template-columns:1fr}.obszar-tekst>.przycisk{width:100%;padding:12px 10px;font-size:11px}.mapa-otoczenie{min-height:375px}.mapa-ramka{height:375px;inset:0 0 0 -3px;mask-image:none;-webkit-mask-image:none}.lista-miejscowosci{position:relative;top:auto;right:auto;transform:none;width:100%;margin-top:9px;padding:9px 11px}.lista-miejscowosci>strong{margin:0 0 7px}.miejscowosci-przyciski{display:flex;flex-direction:row;gap:4px;flex-wrap:wrap}.miejscowosci-przyciski button{font-size:9px;padding:5px 6px 5px 17px;border:1px solid #25343e}.miejscowosci-przyciski button::before{top:8px;left:5px;width:5px;height:5px}.miejscowosci-przyciski>span{margin:5px 4px;font-size:9px}.napis-mapy{font-size:9px}.punkt-mapy.aktywny .napis-mapy{font-size:10px}.etykieta-mapy{bottom:8px;left:8px;padding:8px 10px;max-width:175px}.etykieta-mapy strong{font-size:14px}.etykieta-mapy span{font-size:9px}.mapa-legenda{font-size:6px;right:5px;bottom:2px}.mapa-otoczenie{min-height:467px}.siatka-powodow{grid-template-columns:1fr;gap:10px}.powod{min-height:0;padding:16px}.kroki{grid-template-columns:1fr;gap:20px}.kroki li::after{display:none!important}.relacje-karty{grid-template-columns:1fr;gap:10px}.relacja{min-height:0;padding:14px}.relacja p{margin-bottom:2px}.sekcja-kontakt{padding:38px 0}.kontakt-kafelki{flex-direction:column}.kontakt-kafelki>a{min-height:60px;min-width:0}.stopka nav{gap:9px 16px}.stopka nav a{font-size:10px}.stopka-dol{font-size:9px;line-height:1.4}.okno-modalne{padding:26px 20px}.modal-zakres{grid-template-columns:1fr}.modal-przyciski{flex-direction:column}.modal-przyciski .przycisk{width:100%}}
+@media(max-width:1360px){.naglowek-kontakt{display:none}.nawigacja{gap:15px}.naglowek-z-opisem{gap:22px}.kontener{width:min(var(--kontener),100% - 62px)}}
+@media(max-width:1120px){.naglowek{height:74px}.logo{width:184px;min-width:154px}.nawigacja{gap:13px}.nawigacja a{font-size:11px}.przycisk-gora{padding:8px 9px;min-height:42px}.przycisk-gora span{display:none}.przycisk-gora>.ikona-mala{display:none}.przycisk-gora>.ikona{width:21px;height:21px}.siatka-uslug{grid-template-columns:repeat(3,minmax(0,1fr))}.zdjecie-uslugi{height:195px}.naglowek-z-opisem{grid-template-columns:1fr auto}.naglowek-z-opisem>p{grid-column:1;grid-row:2;max-width:510px}.naglowek-z-opisem>.link-tekstowy{grid-column:2;grid-row:1}.obszar-uklad{gap:16px}.siatka-powodow{grid-template-columns:repeat(2,1fr)}.relacje-uklad{grid-template-columns:1fr;gap:25px}.relacje-lewa h2 br{display:none}.relacje-lewa p{max-width:700px}.kontakt-kafelki{width:100%}}
+@media(max-width:780px){html{scroll-padding-top:80px}.kontener{width:calc(100% - 38px)}.naglowek{height:70px}.pasek-nawigacji{gap:10px}.logo{width:174px;margin-right:auto}.logo img{height:58px}.nawigacja{display:none;position:absolute;z-index:102;top:69px;left:0;right:0;background:#0b1119f8;backdrop-filter:blur(20px);border:1px solid #303946;border-top:0;box-shadow:0 25px 50px #000c;padding:12px 19px 20px;flex-direction:column;align-items:stretch;gap:0}.nawigacja.otwarte{display:flex}.nawigacja a{padding:13px 10px;font-size:13px;border-bottom:1px solid #303946}.nawigacja a.aktywny::after{left:10px;right:auto;width:35px;bottom:6px}.otworz-menu{display:flex}.przycisk-gora{order:0}.sekcja{padding:50px 0}.sekcja h2{font-size:clamp(28px,5vw,38px)}.naglowek-z-opisem{grid-template-columns:1fr}.naglowek-z-opisem>p{grid-column:1;grid-row:2}.naglowek-z-opisem>.link-tekstowy{grid-column:1;grid-row:3}.siatka-uslug{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.zdjecie-uslugi{height:190px}.tresc-uslugi{padding:12px}.tresc-uslugi h3{font-size:14px}.tresc-uslugi p{font-size:11px}.obszar-uklad{grid-template-columns:1fr}.obszar-tekst>p{max-width:610px}.obszar-atuty{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.mapa-otoczenie{min-height:420px}.mapa-ramka{inset:0 85px 0 -4px}.lista-miejscowosci{width:154px}.kroki{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}.kroki li:nth-child(2)::after{display:none}.kontakt-uklad{align-items:start;gap:22px}.kontakt-kafelki>a{flex:1;min-width:175px}.stopka-glowna{padding-top:19px;padding-bottom:15px;flex-wrap:wrap;gap:14px}.stopka nav{order:3;width:100%;gap:12px 18px}.stopka-dol{flex-wrap:wrap}}
+@media(max-width:520px){.kontener{width:calc(100% - 34px)}.logo{width:150px;min-width:130px}.przycisk-gora{width:42px;height:42px}.otworz-menu{width:42px;height:42px}.sekcja{padding:43px 0}.sekcja h2{font-size:30px}.naglowek-sekcji{margin-bottom:24px}.naglowek-z-opisem>p{padding-left:12px;font-size:12px}.siatka-uslug{gap:11px}.zdjecie-uslugi{height:130px}.ikona-na-zdjeciu{width:39px;height:39px;left:10px}.ikona-na-zdjeciu .ikona{width:24px;height:24px}.tresc-uslugi{padding:11px 10px 13px}.tresc-uslugi h3{font-size:12.7px;min-height:30px}.tresc-uslugi p{font-size:10.5px;line-height:1.48}.link-karty{font-size:10px;padding-left:0;padding-right:0}.karta-uslugi:last-child{grid-column:span 2;max-width:calc(50% - 6px)}.obszar-atuty{grid-template-columns:1fr}.obszar-tekst>.przycisk{width:100%;padding:12px 10px;font-size:11px}.mapa-otoczenie{min-height:375px}.mapa-ramka{height:375px;inset:0 0 0 -3px;mask-image:none;-webkit-mask-image:none}.lista-miejscowosci{position:relative;top:auto;right:auto;transform:none;width:100%;margin-top:9px;padding:9px 11px}.lista-miejscowosci>strong{margin:0 0 7px}.miejscowosci-przyciski{display:flex;flex-direction:row;gap:4px;flex-wrap:wrap}.miejscowosci-przyciski button{font-size:9px;padding:5px 6px 5px 17px;border:1px solid #25343e}.miejscowosci-przyciski button::before{top:8px;left:5px;width:5px;height:5px}.miejscowosci-przyciski>span{margin:5px 4px;font-size:9px}.napis-mapy{font-size:9px}.punkt-mapy.aktywny .napis-mapy{font-size:10px}.etykieta-mapy{bottom:8px;left:8px;padding:8px 10px;max-width:175px}.etykieta-mapy strong{font-size:14px}.etykieta-mapy span{font-size:9px}.mapa-legenda{font-size:6px;right:5px;bottom:2px}.mapa-otoczenie{min-height:467px}.siatka-powodow{grid-template-columns:1fr;gap:10px}.powod{min-height:0;padding:16px}.kroki{grid-template-columns:1fr;gap:20px}.kroki li::after{display:none!important}.relacje-karty{grid-template-columns:1fr;gap:10px}.relacja{min-height:0;padding:14px}.relacja p{margin-bottom:2px}.sekcja-kontakt{padding:38px 0}.kontakt-kafelki{flex-direction:column}.kontakt-kafelki>a{min-height:60px;min-width:0}.stopka nav{gap:9px 16px}.stopka nav a{font-size:10px}.stopka-dol{font-size:9px;line-height:1.4}.okno-modalne{padding:26px 20px}.modal-zakres{grid-template-columns:1fr}.modal-przyciski{flex-direction:column}.modal-przyciski .przycisk{width:100%}}
 
 /* ================================================================
    MAD-NET / REWORK 2.0 — większa wierność zaakceptowanej wizualizacji
@@ -35,20 +34,7 @@ body {background:#090e14;}
 .sekcja {padding-top:53px;padding-bottom:55px}
 .obwod::before {background-image:url("../img/home/pcb.svg");background-position:top center;background-repeat:no-repeat;background-size:100% 155px;opacity:.43;z-index:3}
 .obwod::after {height:25px;background:linear-gradient(90deg,transparent 0%,#921831 7%,#f81c3e 15%,#7f1427 35%,transparent 49%,#61101e 60%,#ff203e 79%,transparent 97%) center/100% 1px no-repeat;opacity:.8}
-.sekcja-hero {min-height:560px;background:#071019;border-bottom-color:#5f1326}
-.hero-fotografia {z-index:-2;inset:0 0 0 35%;background-image:linear-gradient(90deg,#091017 0%,rgba(7,13,21,.36) 23%,rgba(7,13,21,.015) 52%,rgba(7,13,21,.20) 100%),linear-gradient(0deg,#081019 0%,transparent 35%),url("../img/home/latarnia-hero.jpg");background-position:center,center,center center;background-size:cover}
-.sekcja-hero::before {background:linear-gradient(90deg,#070e16 0%,#070e16ed 18%,#070e1677 39%,transparent 60%),linear-gradient(0deg,#070e16e6 0%,transparent 27%),radial-gradient(circle at 65% 35%,transparent 20%,#0710175e 90%);opacity:1;z-index:-1}
-.hero-zawartosc {padding-top:40px;padding-bottom:35px;min-height:408px}
-.hero-glowne {width:min(530px,52%)}
-.hero-glowne h1 {font-size:clamp(58px,5.15vw,78px);text-shadow:0 5px 22px #050b12cc;line-height:1.00}
-.hero-glowne p {font-size:14.6px;max-width:525px}
-.hero-boczny {align-self:center;margin-top:-4px;width:148px;gap:10px;background:linear-gradient(90deg,#06101b8a,transparent);padding-left:28px;min-height:240px}
-.hero-boczny p {font-size:10px}
-.hero-boczny-kreska {left:13px;bottom:64px}
-.podpis-lokalny {font-size:22px;top:195px;left:-182px;width:275px;transform:rotate(-8deg)}
-.zalety-glowne {padding-top:18px;padding-bottom:19px;gap:8px;border-top:1px solid #3d424a85}
-.zaleta>.ikona {width:43px;height:43px}
-.zaleta strong {font-size:12.5px}.zaleta span {font-size:10.4px}
+
 .sekcja-uslugi {padding-top:51px;padding-bottom:55px;background:radial-gradient(ellipse at 48% 10%,#12232b77,transparent 68%),#0a1016}
 .naglowek-sekcji {margin-bottom:21px}
 .sekcja h2 {font-size:clamp(31px,2.9vw,43px)}
@@ -107,25 +93,17 @@ body {background:#090e14;}
 .sekcja-kontakt {padding-top:42px;padding-bottom:43px}
 .sekcja-relacje .relacja,.powod {border-color:#344655}
 @media (max-width:1360px) {
- .hero-boczny{width:140px}.podpis-lokalny{left:-195px}
+
  .obszar-uklad{grid-template-columns:minmax(305px,.7fr) minmax(0,1.3fr)}
 }
 @media (max-width:1120px) {
- .sekcja-hero {min-height:555px}
- .hero-boczny{display:none}
- .hero-glowne{width:min(525px,63%)}
- .hero-fotografia{left:28%}
+
  .mapa-ramka.mapa-rzeczywista {right:150px;left:-20px}
  .lista-miejscowosci{width:147px}
  .mapa-rzeczywista .etykieta-mapy{left:15px}
 }
 @media (max-width:780px) {
- .sekcja-hero{min-height:unset}
- .hero-zawartosc{min-height:460px;padding-top:54px;padding-bottom:45px}
- .hero-fotografia{left:18%;background-position:center,center,58% center}
- .sekcja-hero::before{background:linear-gradient(90deg,#071019ed 0%,#071019d8 40%,#07101940 100%),linear-gradient(0deg,#071019cb,transparent 60%)}
- .hero-glowne{width:100%;max-width:530px}
- .hero-glowne h1{font-size:clamp(55px,8.3vw,72px)}
+
  .sekcja-obszar{min-height:0;padding:52px 0}
  .obszar-uklad{grid-template-columns:1fr;gap:18px}
  .obszar-tekst{padding-right:0}
@@ -134,10 +112,7 @@ body {background:#090e14;}
  .lista-miejscowosci{right:0;top:0;transform:none;width:151px}
 }
 @media (max-width:520px) {
- .hero-fotografia{left:2%;opacity:.88;background-position:center,center,49% center}
- .sekcja-hero::before{background:linear-gradient(90deg,#071019ee,#071019a6),linear-gradient(0deg,#071019d9,transparent 77%)}
- .hero-zawartosc{min-height:440px;padding-top:43px;padding-bottom:30px}
- .hero-glowne h1{font-size:clamp(51px,11.6vw,62px)}
+
  .sekcja-obszar{padding:45px 0}
  .mapa-otoczenie{min-height:541px;height:541px;display:flex;flex-direction:column;gap:8px}
  .mapa-ramka.mapa-rzeczywista {inset:0 0 auto 0;width:100%;height:389px;position:relative}
@@ -155,21 +130,9 @@ body {background:#090e14;}
  .miejscowosci-przyciski>span{font-size:9px;margin:6px 0 0}
  .obwod::before{background-size:auto 170px;opacity:.38}
 }
-/* Korekta kadru: latarnia ma być widoczna pomiędzy nagłówkiem i zachodem słońca, a nie ucięta. */
-@media(min-width:781px){
- .hero-fotografia{bottom:96px;background-position:center,center,center 42%}
- .hero-glowne{width:min(632px,57%)}
- .hero-przyciski{flex-wrap:nowrap}
- .hero-przyciski .przycisk{white-space:nowrap}
-}
-@media(max-width:780px){.hero-fotografia{bottom:unset}}
+
 .mapa-rzeczywista .mapa-legenda[data-tryb="satelita"]::after{content:none}
-/* Wyeksponowanie obiektu latarni w HERO bez przyciemniania przez gradient. */
-@media(min-width:781px){
- .sekcja-hero::before{background:linear-gradient(90deg,#070e16 0%,#070e16f5 19%,#070e16a8 31%,transparent 45%),linear-gradient(0deg,#070e16dc 0%,transparent 24%);}
- .hero-fotografia{background-image:linear-gradient(90deg,rgba(7,13,21,.58) 0%,rgba(7,13,21,.06) 17%,transparent 45%,rgba(7,13,21,.12) 100%),linear-gradient(0deg,#081019b8 0%,transparent 26%),url("../img/home/latarnia-hero.jpg")}
- .podpis-lokalny{left:-228px}
-}
+
 @media(max-width:520px){
  .mapa-pinezki .napis-mapy{font-size:9px!important;max-width:78px;overflow:hidden;text-overflow:ellipsis}
 }
@@ -202,55 +165,24 @@ body {background:#090e14;}
 .pcb-ornament .pcb-iskra:nth-of-type(even){animation-duration:11s;animation-delay:-4s}
 .pcb-ornament circle {fill:#ff2347;filter:drop-shadow(0 0 4px #fa173e)}
 @keyframes pcb-przeplyw {from {stroke-dashoffset:0}to {stroke-dashoffset:-722}}
-.sekcja-hero .sciezki {z-index:0;opacity:.83;
- -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 25%,transparent 76%,#000 97%,#000 100%);
- mask-image:linear-gradient(90deg,#000 0%,#000 8%,transparent 25%,transparent 76%,#000 97%,#000 100%);
-}
-.sekcja-hero .hero-fotografia {
- position:absolute;z-index:-2;
- inset:0 0 0 37%;
- /* widoczne obie dominanty: cała latarnia i zachód słońca; brak center-crop */
- background-image:linear-gradient(0deg,#081019 0%,transparent 23%),url("../img/home/latarnia-hero.jpg");
- background-position:left bottom,left center;
- background-size:100% 100%,auto 100%;
- background-repeat:no-repeat;
-}
-.sekcja-hero::before {z-index:-1;
- background:linear-gradient(90deg,#070e16 0%,#070e16fc 18%,#070e16d8 29%,#070e1661 40%,transparent 52%),
-  linear-gradient(0deg,#071018b8 0%,transparent 30%);
- opacity:1;
-}
-.hero-zawartosc,.zalety-glowne {position:relative;z-index:2}
-.podpis-lokalny {top:185px;left:-321px;width:345px;height:auto;display:block;
- transform:rotate(-7deg);font-size:0;white-space:normal;
- background:none;box-shadow:none;filter:drop-shadow(0 3px 10px #03090db3);opacity:1;pointer-events:none;
-}
-.podpis-lokalny img {display:block;width:100%;height:auto;object-fit:contain}
-.podpis-lokalny i {display:none}
-@media(max-width:1360px){.podpis-lokalny{left:-309px;width:325px}}
-@media(max-width:1120px){.sekcja-hero .hero-fotografia{left:30%;}}
+
 @media(max-width:780px){
- .sekcja-hero .hero-fotografia{left:0;right:0;bottom:0;opacity:.68;
-  background-size:100% 100%,auto 100%;background-position:center,72% center;}
- .sekcja-hero::before{background:linear-gradient(90deg,#071019f0 0%,#071019df 52%,#07101998 100%),linear-gradient(0deg,#071019e0,transparent 73%)}
+
  .pcb-ornament{-webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 14%,transparent 86%,#000 100%);mask-image:linear-gradient(90deg,#000 0%,transparent 14%,transparent 86%,#000 100%);opacity:.42}
 }
 @media(max-width:520px){
- .sekcja-hero .hero-fotografia{opacity:.52;background-position:center,48% center}
+
  .pcb-ornament{left:-70px;width:calc(100% + 140px);opacity:.38}
 }
-@media(prefers-reduced-motion:reduce){.pcb-ornament .pcb-iskra,.sciezki .pcb-puls{animation:none!important;opacity:.55}}
+@media(prefers-reduced-motion:reduce){.pcb-ornament .pcb-iskra{animation:none!important;opacity:.55}}
 /* v3.1 — żadna dekoracja nie może poszerzać dokumentu ani zasłaniać tekstu. */
 .obwod{overflow-x:clip}
 .obwod .pcb-ornament{-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 1%,transparent 7%,transparent 93%,#000 99%,#000 100%);mask-image:linear-gradient(90deg,#000 0%,#000 1%,transparent 7%,transparent 93%,#000 99%,#000 100%)}
-@media(min-width:781px){
-  .sekcja-hero .hero-fotografia{background-size:100% 100%,100% auto;background-position:left bottom,left center;}
-}
+
 @media(max-width:780px){
   .obwod .pcb-ornament{-webkit-mask-image:linear-gradient(90deg,#000 0%,transparent 5%,transparent 95%,#000 100%);mask-image:linear-gradient(90deg,#000 0%,transparent 5%,transparent 95%,#000 100%)}
 }
-/* Pełny kadr zamiast crop/letterbox: miękkie gradienty maskują granice obszaru zdjęcia. */
-@media(min-width:781px){.sekcja-hero .hero-fotografia{background-size:100% 100%,100% 100%;background-position:left bottom,left center;}}
+
 /* Delikatnie mocniejsze linie i punkty LED przy brzegach (bez ingerencji w tekst). */
 .pcb-ornament{opacity:.87}
 .pcb-ornament .pcb-obrys{stroke:#e51a3c;stroke-width:1.9;opacity:.86}

@@ -1,0 +1,9 @@
+PASS PCB 360px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 390px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 430px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 768px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1024px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1280px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1440px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 1920px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie
+PASS PCB 2560px: geometria, proporcje, ruch LED, przełącznik, reduced motion, kliknięcie

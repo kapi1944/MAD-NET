@@ -49,3 +49,12 @@ test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z basel
   const main = tresc => tresc.match(/<main>[\s\S]*?<\/main>/)[0].replaceAll('\r\n', '\n');
   assert.equal(main(czytaj('cennik.html').toString()), main(przed));
 });
+
+
+test('HERO V4: pozostałe sekcje, nagłówek i stopka HOME zachowują treść bazową', () => {
+  const baza = execFileSync('git', ['show', '1987ad3:index.html'], {encoding:'utf8'});
+  const bezHero = tresc => tresc.replaceAll('\r\n', '\n')
+    .replace(/<section class="sekcja-hero[\s\S]*?<\/section>/, '')
+    .replace(/  <link rel="stylesheet" href=".\/assets\/css\/hero.css">\n/, '');
+  assert.equal(bezHero(html), bezHero(baza));
+});
