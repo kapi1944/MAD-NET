@@ -1,3 +1,4 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Regresja wydzielenia HOME V3: dwie strony, obrazy i rzeczywiste interakcje. */
 import assert from 'node:assert/strict';
 import {readFile, mkdir, writeFile, access} from 'node:fs/promises';
@@ -6,7 +7,7 @@ import {chromium} from 'playwright-core';
 
 const katalog = 'test-results/integracja-home-v3/03/home';
 await mkdir(katalog, {recursive:true});
-const port = process.env.MADNET_PORT_HOME || '4184';
+const port=await wybierzPort('MADNET_PORT_HOME');
 const adres = `http://127.0.0.1:${port}`;
 const oryginal = await readFile('docs/archiwum/MAD-NET_HOME_V3_JEDEN_PLIK_ORIGINAL.html', 'utf8');
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
@@ -84,15 +85,8 @@ async function geometriaCennika(strona) {
 }
 
 try {
-  await new Promise((gotowe, odrzuc) => {
-    const zegar = setTimeout(() => odrzuc(new Error('Brak podglądu HOME')), 8000);
-    serwer.stdout.on('data', dane => {if (String(dane).includes('MAD-NET PREVIEW')) {clearTimeout(zegar); gotowe();}});
-    serwer.once('error', odrzuc);
-  });
-  przegladarka = await chromium.launch({headless:true, args:['--disable-gpu'],
-    ...(process.env.MADNET_PRZEGLADARKA ? {executablePath:process.env.MADNET_PRZEGLADARKA}
-      : process.platform === 'win32' ? {channel:'msedge'} : {}),
-  });
+  await poczekajNaSerwer(serwer);
+  przegladarka = await uruchomPrzegladarke(chromium,{args:['--disable-gpu']});
   const kontekst = await przegladarka.newContext({deviceScaleFactor:1, reducedMotion:'reduce'});
   // Obie strony otrzymują te same bajty prawdziwych kafelków pobranych online.
   await kontekst.route(/https:\/\/(server\.arcgisonline\.com|a\.basemaps\.cartocdn\.com)\//, async trasa => {

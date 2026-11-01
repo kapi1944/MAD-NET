@@ -15,7 +15,8 @@
     "test:nawigacja": "npm run build && node tests/nawigacja.browser.mjs",
     "test:home": "npm run build && node tests/home.browser.mjs",
     "test:pcb": "npm run build && node tests/pcb.browser.mjs",
-    "test:oferta": "npm run build && node tests/oferta.browser.mjs"
+    "test:oferta": "npm run build && node tests/oferta.browser.mjs",
+    "test:led": "npm run build && node tests/led.browser.mjs"
   },
   "engines": {
     "node": ">=22.0.0"

@@ -26,14 +26,15 @@ npm test            # testy struktury + sprawdzenie składni JS
 npm run build       # gotowa statyczna strona w dist/
 npm run preview     # podgląd dist/ na http://127.0.0.1:4173
 npm run verify      # testy + build
-npm run test:fiber  # SC/APC: mechanika, geometria, dotyk i 8 szerokości
+npm run test:fiber  # SC/APC: mechanika, geometria, dotyk i 9 szerokości
+npm run test:led    # LINK/ACT: urządzenie, karty, RACK i tabele
 npm ci              # zależności do testów przeglądarkowych
 npm run test:browser # Chromium: geometria, 9 szerokości, obsługa i 117 tras
 ```
 
 **Bez instalowania Electrona, frameworków i płatnych API.** To świadoma decyzja na pierwszy etap: najpierw stabilizujemy i dokumentujemy aktualny projekt. Dopiero później ocenimy korzyści Vite/React.
 
-Testy przeglądarkowe na Windows korzystają z zainstalowanego Microsoft Edge. Na Linux/macOS najpierw uruchom `npx playwright-core install chromium` (na CI także `--with-deps`). Własną ścieżkę przeglądarki można wskazać przez `MADNET_PRZEGLADARKA`. Testy uruchamiają tymczasowy podgląd `dist/` na porcie 4181 (`MADNET_PORT_TESTOW` zmienia port), zapisują zrzuty i pomiary w `test-results/v20/po/`, po czym zamykają przeglądarkę i serwer. Szczegóły wdrożenia: [raport V20](docs/RAPORT_V20.md).
+Testy przeglądarkowe korzystają ze wspólnego tests/srodowisko.mjs: na Windows wybierają Microsoft Edge, a gdy go brak — Chromium Playwright. Na Linux/macOS najpierw uruchom `npx playwright-core install chromium` (na CI także `--with-deps`). Własną ścieżkę przeglądarki można wskazać przez `MADNET_PRZEGLADARKA`. Testy uruchamiają tymczasowy podgląd `dist/` na wolnym porcie wybranym przez system (jawny `MADNET_PORT_TESTOW` dla V20 oraz `MADNET_PORT_LED` dla LED jest sprawdzany przed startem), zapisują zrzuty i pomiary w `test-results/v20/po/`, po czym zamykają przeglądarkę i serwer. Szczegóły wdrożenia: [raport V20](docs/RAPORT_V20.md).
 
 ## Struktura
 

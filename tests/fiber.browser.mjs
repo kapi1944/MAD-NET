@@ -1,3 +1,4 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Regresja sprzętu SC/APC: rzeczywisty ruch, punkty styku i gesty Chromium. */
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
@@ -6,7 +7,7 @@ import {chromium} from 'playwright-core';
 
 const katalog='test-results/fiber/po';
 await mkdir(katalog,{recursive:true});
-const port=process.env.MADNET_PORT_TESTOW_FIBER||'4186';
+const port=await wybierzPort('MADNET_PORT_TESTOW_FIBER');
 const adres=`http://127.0.0.1:${port}/cennik.html`;
 const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port},stdio:['ignore','pipe','pipe']});
 const bledy=[],pomiary=[],przebiegi=[];
@@ -95,14 +96,10 @@ async function sprawdzGeometrie(strona,zrodlo,id){
  pomiary.push(pomiar);
 }
 try{
- await new Promise((zakoncz,odrzuc)=>{
-  const zegar=setTimeout(()=>odrzuc(new Error('Serwer FIBER nie wystartował')),8000);
-  serwer.stdout.on('data',dane=>{if(String(dane).includes('MAD-NET PREVIEW')){clearTimeout(zegar);zakoncz();}});
-  serwer.once('error',odrzuc);serwer.once('exit',kod=>{clearTimeout(zegar);if(kod)odrzuc(new Error('Serwer FIBER: '+kod));});
- });
- przegladarka=await chromium.launch({headless:true,...(process.env.MADNET_PRZEGLADARKA?{executablePath:process.env.MADNET_PRZEGLADARKA}:process.platform==='win32'?{channel:'msedge'}:{})});
+ await poczekajNaSerwer(serwer);
+ przegladarka=await uruchomPrzegladarke(chromium);
  const strona=await przegladarka.newPage({viewport:{width:1440,height:1100}});sledz(strona);
- for(const szerokosc of [360,390,430,768,1024,1280,1440,1920]){
+ for(const szerokosc of [320,360,390,430,768,1024,1280,1440,1920]){
   await strona.setViewportSize({width:szerokosc,height:1100});await strona.goto(adres);
   assert.equal(await strona.locator('.sc-simplex').count(),9);
   assert.equal(await strona.locator('.adapter-szafy-fiber').count(),3);

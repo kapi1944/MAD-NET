@@ -41,9 +41,10 @@ test('HOME: osobne zasoby, język polski, brak zależności od stylów cennika',
 test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline', () => {
   const manifest = JSON.parse(czytaj('docs/integracja-home-v3/dowody/manifest-cennika.json'));
   const skrotyEtapu05 = {
+  "assets/css/styles.css": "5f405c68b63c73f4cede9526016ef182887d62026436cf69134dcb8e730d0a4d",
   "assets/js/cennik.js": "d638c99979cb11126176ff995ef5ec5432d264c26b9cf918a80d44980a8775a0",
   "assets/js/hero-rack.js": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
-  "assets/js/dostepnosc.js": "b951a0c97f2d4477a3e473bd23b4a0f3c3586d8f06b4a028505314193c7c86c3"
+  "assets/js/dostepnosc.js": "e473368ac64f83fc99b819ad8239ecbd83dee608174a2373c3cd075d151798cf"
 };
   for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/'))) {
     // Git może zmieniać końce linii tekstu między Windows a Linux.

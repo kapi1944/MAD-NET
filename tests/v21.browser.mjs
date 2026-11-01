@@ -1,14 +1,15 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 import {chromium} from 'playwright-core';
 import assert from 'node:assert/strict';
 import {spawn,execFileSync} from 'node:child_process';
 import {mkdir} from 'node:fs/promises';
 const katalog='test-results/v21';await mkdir(katalog+'/po',{recursive:true});await mkdir(katalog+'/przed',{recursive:true});
-const port=process.env.MADNET_PORT_TESTOW_V21 || '4182';
+const port=await wybierzPort('MADNET_PORT_TESTOW_V21');
 const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port}});
 let przegladarka;
 try{
- await new Promise((ok,blad)=>{serwer.stdout.once('data',ok);serwer.once('error',blad)});
- przegladarka=await chromium.launch({headless:true,...(process.platform==='win32'?{channel:'msedge'}:{})});
+ await poczekajNaSerwer(serwer);
+ przegladarka=await uruchomPrzegladarke(chromium);
  const strona=await przegladarka.newPage();const bledy=[];strona.on('pageerror',e=>bledy.push(e.message));
  for(const szerokosc of [360,390,430,768,1024,1280,1440,1920]){
  await strona.setViewportSize({width:szerokosc,height:1100});

@@ -27,12 +27,16 @@ jobs:
         run: npx playwright-core install --with-deps chromium
       - name: Regresja geometrii i interakcji V20
         run: npm run test:browser
+      - name: Regresja PCB
+        run: npm run test:pcb
       - name: Zrzuty i pomiary V20
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: mad-net-v20-przegladarka
           path: |
+            test-results/fiber
+            test-results/pcb-4-1
             test-results/v20/po
             test-results/panel
             test-results/integracja-home-v3/04

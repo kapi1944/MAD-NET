@@ -11,7 +11,7 @@
  const geosearchButton=$('availability-address-search'),submitButton=$('availability-submit');
  const interestRoot=$('availability-interests'),summary=$('availability-choice-summary');
  const MAP_CENTER=[54.063203,15.266009];
- const INTEREST_TECHS={FIBER:{name:'Światłowód',symbol:'✦',hint:'Złącze SC/UPC simplex'},LAN:{name:'Kablowy',symbol:'▣',hint:'Ethernet RJ-45'},AIR:{name:'Bezprzewodowy',symbol:'◉',hint:'Sieć radiowa'}};
+ const INTEREST_TECHS={FIBER:{name:'Światłowód',symbol:'✦',hint:'Złącze SC/APC simplex'},LAN:{name:'Kablowy',symbol:'▣',hint:'Ethernet RJ-45'},AIR:{name:'Bezprzewodowy',symbol:'◉',hint:'Sieć radiowa'}};
  const interestState={FIBER:{on:false,packages:new Set()},LAN:{on:false,packages:new Set()},AIR:{on:false,packages:new Set()}};
  let locationPoint=null, map=null, marker=null, mapLoading=false, pinSource=null, lastAddressQuery='';
  let geocoding=false,autoGeoTimer=null, previousGeoTime=0;
