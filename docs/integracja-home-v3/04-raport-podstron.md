@@ -34,7 +34,7 @@ Poprzednia poprawka obejmowała tylko <=380px, nie usuwała przyczyny w pełnym 
 W istniejącym nawigacja.css do 1230px panel ma teraz naturalną wysokość i zachowane
 minimalne wysokości 274/236px. Wiersz treści respektuje min-content, a opis rezerwuje
 trzy wiersze (4.95em = 3 × line-height 1.65). Nie ukrywamy kolizji overflow:hidden.
-Desktop od 1231px zachowuje dotychczasowe reguły. RACK, jego JS i chronione pliki nie zmieniły się.
+Desktop od 1231px rezerwuje cztery wiersze opisu i dwa parametru interfejsu; pozycja i szerokość panelu oraz RACK pozostają zgodne z dotychczasowym układem. Jego JS i chronione pliki nie zmieniły się.
 
 Test diagnostyka-panelu.mjs mierzy 17 szerokości × 3 technologie, zapisuje rzeczywiste
 prostokąty i wiersze grid; sprawdza brak kolizji, overflow, wyjście CTA poza panel
@@ -88,3 +88,19 @@ Pełne `npm run test:browser`: PASS (kod 0): 51 pomiarów panelu, V20 22 szeroko
 286 tras, V21 64 kombinacje tabel, HOME, nawigacja, pięć usług. Wszystkie sześć
 wymaganych poleceń wykonano; brak SKIP. Logi końcowe zapisano w 04-dowody.
 CI po push należy odczytać dla nowego SHA; wcześniejsze czerwone runy nie są wynikiem tej poprawki.
+
+## Dodatkowa regresja Linux/Chromium
+
+Pierwszy push 74cc799: lokalne testy PASS, CI FAIL. Nowy test wykrył na Linuxie
+przy 1231px skok AIR z 338.578125 do 376.34375px. Przyczyną jest czterowierszowy
+opis i dwuwierszowy interfejs po zawinięciu innym fontem systemowym.
+Desktop rezerwuje teraz odpowiednio 6.4em (4 × 1.6) oraz 2.8em (2 × 1.4).
+Panel świadomie zyskał miejsce na najdłuższy wariant. Nie zwiększono tolerancji,
+nie zmieniono treści ani fontów i nie ukryto elementów. Stały wzorzec testu
+historycznego obejmuje tę samą jawną korektę. Ponowiono cały zestaw lokalny.
+
+Po dodatkowej poprawce desktopu: ponownie PASS wszystkich sześciu poleceń lokalnych;
+końcowe logi w `04-dowody/test-*.txt`. Pomiary błędu Linux przy 1231px:
+`04-dowody/linux-1231-przed.json`. Pełny test przeglądarkowy i PCB zakończone kodem 0.
+Stan CI na moment zapisu: do ponownego uruchomienia po drugim commicie naprawczym.
+Aktualny wynik kontrolujemy w istniejącym PR: https://github.com/kapi1944/MAD-NET/pull/2/checks.

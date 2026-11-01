@@ -1432,31 +1432,31 @@
     "technologia": "LAN",
     ".hero-tech-panel": {
       "top": 232.828125,
-      "bottom": 576.40625,
-      "height": 343.578125,
-      "rows": "14px 203.578px 44px"
+      "bottom": 614.21875,
+      "height": 381.390625,
+      "rows": "14px 241.391px 44px"
     },
     ".hero-tech-panel-content": {
       "top": 287.828125,
-      "bottom": 491.40625,
-      "height": 203.578125,
-      "rows": "54px 67.1875px 46.3906px"
+      "bottom": 529.21875,
+      "height": 241.390625,
+      "rows": "54px 89.5938px 61.7969px"
     },
     "#hero-tech-description": {
       "top": 359.828125,
-      "bottom": 427.015625,
-      "height": 67.1875,
+      "bottom": 449.421875,
+      "height": 89.59375,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 445.015625,
-      "bottom": 491.40625,
-      "height": 46.390625,
-      "rows": "31.3906px"
+      "top": 467.421875,
+      "bottom": 529.21875,
+      "height": 61.796875,
+      "rows": "46.7969px"
     },
     ".hero-tech-link": {
-      "top": 509.40625,
-      "bottom": 553.40625,
+      "top": 547.21875,
+      "bottom": 591.21875,
       "height": 44,
       "rows": "none"
     }
@@ -1466,31 +1466,31 @@
     "technologia": "FIBER",
     ".hero-tech-panel": {
       "top": 232.828125,
-      "bottom": 576.40625,
-      "height": 343.578125,
-      "rows": "14px 203.578px 44px"
+      "bottom": 614.21875,
+      "height": 381.390625,
+      "rows": "14px 241.391px 44px"
     },
     ".hero-tech-panel-content": {
       "top": 287.828125,
-      "bottom": 491.40625,
-      "height": 203.578125,
-      "rows": "54px 67.1875px 46.3906px"
+      "bottom": 529.21875,
+      "height": 241.390625,
+      "rows": "54px 89.5938px 61.7969px"
     },
     "#hero-tech-description": {
       "top": 359.828125,
-      "bottom": 427.015625,
-      "height": 67.1875,
+      "bottom": 449.421875,
+      "height": 89.59375,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 445.015625,
-      "bottom": 491.40625,
-      "height": 46.390625,
-      "rows": "31.3906px"
+      "top": 467.421875,
+      "bottom": 529.21875,
+      "height": 61.796875,
+      "rows": "46.7969px"
     },
     ".hero-tech-link": {
-      "top": 509.40625,
-      "bottom": 553.40625,
+      "top": 547.21875,
+      "bottom": 591.21875,
       "height": 44,
       "rows": "none"
     }
@@ -1500,31 +1500,31 @@
     "technologia": "AIR",
     ".hero-tech-panel": {
       "top": 232.828125,
-      "bottom": 576.40625,
-      "height": 343.578125,
-      "rows": "14px 203.578px 44px"
+      "bottom": 614.21875,
+      "height": 381.390625,
+      "rows": "14px 241.391px 44px"
     },
     ".hero-tech-panel-content": {
       "top": 287.828125,
-      "bottom": 491.40625,
-      "height": 203.578125,
-      "rows": "54px 67.1875px 46.3906px"
+      "bottom": 529.21875,
+      "height": 241.390625,
+      "rows": "54px 89.5938px 61.7969px"
     },
     "#hero-tech-description": {
       "top": 359.828125,
-      "bottom": 427.015625,
-      "height": 67.1875,
+      "bottom": 449.421875,
+      "height": 89.59375,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 445.015625,
-      "bottom": 491.40625,
-      "height": 46.390625,
-      "rows": "31.3906px"
+      "top": 467.421875,
+      "bottom": 529.21875,
+      "height": 61.796875,
+      "rows": "46.7969px"
     },
     ".hero-tech-link": {
-      "top": 509.40625,
-      "bottom": 553.40625,
+      "top": 547.21875,
+      "bottom": 591.21875,
       "height": 44,
       "rows": "none"
     }
@@ -1534,31 +1534,31 @@
     "technologia": "LAN",
     ".hero-tech-panel": {
       "top": 206.328125,
-      "bottom": 566.484375,
-      "height": 360.15625,
-      "rows": "14px 220.156px 44px"
+      "bottom": 587.71875,
+      "height": 381.390625,
+      "rows": "14px 241.391px 44px"
     },
     ".hero-tech-panel-content": {
       "top": 261.328125,
-      "bottom": 481.484375,
-      "height": 220.15625,
-      "rows": "54px 67.1875px 46.3906px"
+      "bottom": 502.71875,
+      "height": 241.390625,
+      "rows": "54px 89.5938px 61.7969px"
     },
     "#hero-tech-description": {
-      "top": 341.609375,
-      "bottom": 408.796875,
-      "height": 67.1875,
+      "top": 333.328125,
+      "bottom": 422.921875,
+      "height": 89.59375,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 435.078125,
-      "bottom": 481.46875,
-      "height": 46.390625,
-      "rows": "31.3906px"
+      "top": 440.921875,
+      "bottom": 502.71875,
+      "height": 61.796875,
+      "rows": "46.7969px"
     },
     ".hero-tech-link": {
-      "top": 499.484375,
-      "bottom": 543.484375,
+      "top": 520.71875,
+      "bottom": 564.71875,
       "height": 44,
       "rows": "none"
     }
@@ -1568,31 +1568,31 @@
     "technologia": "FIBER",
     ".hero-tech-panel": {
       "top": 206.328125,
-      "bottom": 566.484375,
-      "height": 360.15625,
-      "rows": "14px 220.156px 44px"
+      "bottom": 587.71875,
+      "height": 381.390625,
+      "rows": "14px 241.391px 44px"
     },
     ".hero-tech-panel-content": {
       "top": 261.328125,
-      "bottom": 481.484375,
-      "height": 220.15625,
-      "rows": "54px 67.1875px 46.3906px"
+      "bottom": 502.71875,
+      "height": 241.390625,
+      "rows": "54px 89.5938px 61.7969px"
     },
     "#hero-tech-description": {
-      "top": 341.609375,
-      "bottom": 408.796875,
-      "height": 67.1875,
+      "top": 333.328125,
+      "bottom": 422.921875,
+      "height": 89.59375,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 435.078125,
-      "bottom": 481.46875,
-      "height": 46.390625,
-      "rows": "31.3906px"
+      "top": 440.921875,
+      "bottom": 502.71875,
+      "height": 61.796875,
+      "rows": "46.7969px"
     },
     ".hero-tech-link": {
-      "top": 499.484375,
-      "bottom": 543.484375,
+      "top": 520.71875,
+      "bottom": 564.71875,
       "height": 44,
       "rows": "none"
     }
@@ -1602,31 +1602,31 @@
     "technologia": "AIR",
     ".hero-tech-panel": {
       "top": 206.328125,
-      "bottom": 566.484375,
-      "height": 360.15625,
-      "rows": "14px 220.156px 44px"
+      "bottom": 587.71875,
+      "height": 381.390625,
+      "rows": "14px 241.391px 44px"
     },
     ".hero-tech-panel-content": {
       "top": 261.328125,
-      "bottom": 481.484375,
-      "height": 220.15625,
-      "rows": "54px 67.1875px 46.3906px"
+      "bottom": 502.71875,
+      "height": 241.390625,
+      "rows": "54px 89.5938px 61.7969px"
     },
     "#hero-tech-description": {
-      "top": 341.609375,
-      "bottom": 408.796875,
-      "height": 67.1875,
+      "top": 333.328125,
+      "bottom": 422.921875,
+      "height": 89.59375,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 435.078125,
-      "bottom": 481.46875,
-      "height": 46.390625,
-      "rows": "31.3906px"
+      "top": 440.921875,
+      "bottom": 502.71875,
+      "height": 61.796875,
+      "rows": "46.7969px"
     },
     ".hero-tech-link": {
-      "top": 499.484375,
-      "bottom": 543.484375,
+      "top": 520.71875,
+      "bottom": 564.71875,
       "height": 44,
       "rows": "none"
     }
@@ -1636,31 +1636,31 @@
     "technologia": "LAN",
     ".hero-tech-panel": {
       "top": 226.875,
-      "bottom": 643.640625,
-      "height": 416.765625,
-      "rows": "15px 247.766px 48px"
+      "bottom": 674.453125,
+      "height": 447.578125,
+      "rows": "15px 278.578px 48px"
     },
     ".hero-tech-panel-content": {
       "top": 294.875,
-      "bottom": 542.640625,
-      "height": 247.765625,
-      "rows": "64px 76.7969px 60.5938px"
+      "bottom": 573.453125,
+      "height": 278.578125,
+      "rows": "64px 102.391px 80.1875px"
     },
     "#hero-tech-description": {
-      "top": 382.0625,
-      "bottom": 458.859375,
-      "height": 76.796875,
+      "top": 374.875,
+      "bottom": 477.265625,
+      "height": 102.390625,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 482.046875,
-      "bottom": 542.640625,
-      "height": 60.59375,
-      "rows": "41.5938px"
+      "top": 493.265625,
+      "bottom": 573.453125,
+      "height": 80.1875,
+      "rows": "61.1875px"
     },
     ".hero-tech-link": {
-      "top": 570.640625,
-      "bottom": 618.640625,
+      "top": 601.453125,
+      "bottom": 649.453125,
       "height": 48,
       "rows": "none"
     }
@@ -1670,31 +1670,31 @@
     "technologia": "FIBER",
     ".hero-tech-panel": {
       "top": 226.875,
-      "bottom": 643.640625,
-      "height": 416.765625,
-      "rows": "15px 247.766px 48px"
+      "bottom": 674.453125,
+      "height": 447.578125,
+      "rows": "15px 278.578px 48px"
     },
     ".hero-tech-panel-content": {
       "top": 294.875,
-      "bottom": 542.640625,
-      "height": 247.765625,
-      "rows": "64px 76.7969px 60.5938px"
+      "bottom": 573.453125,
+      "height": 278.578125,
+      "rows": "64px 102.391px 80.1875px"
     },
     "#hero-tech-description": {
-      "top": 382.0625,
-      "bottom": 458.859375,
-      "height": 76.796875,
+      "top": 374.875,
+      "bottom": 477.265625,
+      "height": 102.390625,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 482.046875,
-      "bottom": 542.640625,
-      "height": 60.59375,
-      "rows": "41.5938px"
+      "top": 493.265625,
+      "bottom": 573.453125,
+      "height": 80.1875,
+      "rows": "61.1875px"
     },
     ".hero-tech-link": {
-      "top": 570.640625,
-      "bottom": 618.640625,
+      "top": 601.453125,
+      "bottom": 649.453125,
       "height": 48,
       "rows": "none"
     }
@@ -1704,31 +1704,31 @@
     "technologia": "AIR",
     ".hero-tech-panel": {
       "top": 226.875,
-      "bottom": 643.640625,
-      "height": 416.765625,
-      "rows": "15px 247.766px 48px"
+      "bottom": 674.453125,
+      "height": 447.578125,
+      "rows": "15px 278.578px 48px"
     },
     ".hero-tech-panel-content": {
       "top": 294.875,
-      "bottom": 542.640625,
-      "height": 247.765625,
-      "rows": "64px 76.7969px 60.5938px"
+      "bottom": 573.453125,
+      "height": 278.578125,
+      "rows": "64px 102.391px 80.1875px"
     },
     "#hero-tech-description": {
-      "top": 382.0625,
-      "bottom": 458.859375,
-      "height": 76.796875,
+      "top": 374.875,
+      "bottom": 477.265625,
+      "height": 102.390625,
       "rows": "none"
     },
     ".hero-tech-facts": {
-      "top": 482.046875,
-      "bottom": 542.640625,
-      "height": 60.59375,
-      "rows": "41.5938px"
+      "top": 493.265625,
+      "bottom": 573.453125,
+      "height": 80.1875,
+      "rows": "61.1875px"
     },
     ".hero-tech-link": {
-      "top": 570.640625,
-      "bottom": 618.640625,
+      "top": 601.453125,
+      "bottom": 649.453125,
       "height": 48,
       "rows": "none"
     }
