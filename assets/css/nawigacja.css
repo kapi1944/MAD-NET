@@ -40,3 +40,19 @@
 }
 @media(max-width:360px){.wspolny-pasek{gap:7px}.wspolne-logo{width:130px}}
 @media(prefers-reduced-motion:reduce){.wspolny-naglowek *,.wspolna-stopka *{transition:none!important;scroll-behavior:auto!important}}
+/* MAD-NET — poprawka mobilna panelu technologii */
+
+@media (max-width: 380px) {
+
+  .hero-tech-panel {
+    height: auto;
+    min-height: 274px;
+    grid-template-rows: auto minmax(min-content, 1fr) auto;
+  }
+
+  .hero-tech-panel-content {
+    min-height: min-content;
+    grid-template-rows: 54px auto auto;
+  }
+
+}
