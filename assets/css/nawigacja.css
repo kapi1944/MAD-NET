@@ -1,0 +1,41 @@
+/* Wspólne elementy strony; reguły nie obejmują specjalistycznego UI cennika. */
+:root{--madnet-czerwien:#ff203e;--madnet-tlo:#090e14;--madnet-linia:#2d3946}
+.wspolny-naglowek,.wspolna-stopka{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:#f5f6f8}
+.wspolny-naglowek{position:sticky;top:0;z-index:100;background:#080d13f5;border-bottom:1px solid #512132;isolation:isolate}
+.wspolny-naglowek *,.wspolna-stopka *{box-sizing:border-box}
+.wspolny-pasek{width:min(1380px,calc(100% - 76px));min-height:85px;margin:auto;display:flex;align-items:center;gap:24px}
+.wspolne-logo{display:block;width:204px;flex-shrink:0}
+.wspolne-logo img{display:block;width:100%;height:60px;object-fit:contain}
+.menu-glowne{display:flex;align-items:center;gap:24px;margin-left:auto}
+.menu-glowne a,.wspolna-stopka a{color:#b8c2ce;text-decoration:none}
+.menu-glowne>a,.menu-uslugi>a{font-size:12px;font-weight:750;white-space:nowrap;position:relative;padding:12px 0;line-height:1.4}
+.menu-glowne a:hover,.menu-glowne a[aria-current],.wspolna-stopka a:hover{color:#fff}
+.menu-glowne>a[aria-current]:after,.menu-uslugi>a[aria-current]:after{content:"";position:absolute;left:0;right:0;bottom:3px;height:2px;background:var(--madnet-czerwien)}
+.menu-uslugi{position:relative;display:flex;align-items:center;gap:3px}
+.rozwijanie-uslug,.otwieranie-menu{font:inherit;color:#fff;border:1px solid #3c4856;background:#131c26;border-radius:5px;cursor:pointer;min-width:32px;min-height:32px;display:grid;place-items:center}
+.rozwijanie-uslug[aria-expanded=true]{border-color:var(--madnet-czerwien);background:#391622}
+.lista-uslug{position:absolute;top:100%;left:-16px;width:300px;padding:10px;background:#101923;border:1px solid #4c3542;box-shadow:0 18px 40px #0009;z-index:2}
+.lista-uslug[hidden]{display:none!important}
+.lista-uslug a{display:block;padding:12px 10px;font-size:12px;font-weight:650;line-height:1.4;border-left:2px solid transparent}
+.lista-uslug a:hover,.lista-uslug a:focus-visible{border-left-color:var(--madnet-czerwien);background:#2e1520}
+.wspolne-cta{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding:10px 17px;background:var(--madnet-czerwien);border:1px solid #ff4059;border-radius:6px;color:#fff;text-decoration:none;font-size:11px;font-weight:800;white-space:nowrap}
+.wspolne-cta:hover{background:#db1232}
+.otwieranie-menu{display:none;width:42px;height:42px;font-size:21px}
+.wspolny-naglowek :is(a,button):focus-visible,.wspolna-stopka a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.wspolny-naglowek .przelacznik-animacji{flex-shrink:0}
+.wspolna-stopka{background:#080d13;border-top:1px solid #2a3340}
+.stopka-wiersz{width:min(1380px,calc(100% - 76px));margin:auto;min-height:112px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.stopka-wiersz nav{display:flex;gap:22px;flex-wrap:wrap;font-size:11px;font-weight:650}
+.stopka-uwaga{width:min(1380px,calc(100% - 76px));margin:auto;padding:16px 0 24px;border-top:1px solid #27323e;font-size:10px;line-height:1.5;color:#8493a4}
+@media(max-width:1100px){.wspolny-pasek{gap:14px}.menu-glowne{gap:17px}.wspolne-logo{width:175px}.wspolne-cta{padding:10px}}
+@media(max-width:900px){
+ .wspolny-pasek{min-height:69px;width:calc(100% - 34px);gap:10px}.wspolne-logo{width:156px;margin-right:auto}.wspolne-logo img{height:52px}
+ .otwieranie-menu{display:grid}.wspolne-cta{width:42px;padding:0;font-size:20px}.wspolne-cta span{display:none}
+ .menu-glowne{display:none;position:absolute;top:100%;left:0;right:0;margin:0;padding:18px 24px;background:#0b131d;border-bottom:1px solid #643344;max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain;align-items:stretch;flex-direction:column;gap:5px}
+ .menu-glowne[data-otwarte=true]{display:flex}.menu-glowne>a,.menu-uslugi>a{padding:12px 0;font-size:14px}.menu-uslugi{flex-wrap:wrap;justify-content:space-between}
+ .lista-uslug{position:static;width:100%;padding:4px 8px;box-shadow:none;margin-bottom:8px}.lista-uslug a{padding:12px 8px}
+ .stopka-wiersz{width:calc(100% - 34px);padding:24px 0;flex-wrap:wrap;gap:18px}.stopka-uwaga{width:calc(100% - 34px)}.stopka-wiersz nav{gap:16px}
+ .wspolny-naglowek .przelacznik-animacji{font-size:8px;padding:5px}
+}
+@media(max-width:360px){.wspolny-pasek{gap:7px}.wspolne-logo{width:130px}}
+@media(prefers-reduced-motion:reduce){.wspolny-naglowek *,.wspolna-stopka *{transition:none!important;scroll-behavior:auto!important}}

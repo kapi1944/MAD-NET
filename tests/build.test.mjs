@@ -12,6 +12,8 @@ test('build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylk
   await mkdir(join(katalog, 'scripts')); await mkdir(join(katalog, 'dist'));
   await copyFile(join(korzen, 'scripts/build.mjs'), join(katalog, 'scripts/build.mjs'));
   await copyFile(join(korzen, 'index.html'), join(katalog, 'index.html'));
+  const dodatkoweStrony = ['uslugi.html', 'kontakt.html', 'internet.html', 'monitoring-alarmy.html', 'sieci-it.html', 'strony-www-hosting.html', 'instalacje-tv-sat.html'];
+  for (const plik of dodatkoweStrony) await copyFile(join(korzen, plik), join(katalog, plik));
   await cp(join(korzen, 'assets'), join(katalog, 'assets'), {recursive:true});
   await writeFile(join(katalog, 'dist/zachowaj.txt'), 'poprzedni build');
   const uruchom = () => spawnSync(process.execPath, ['scripts/build.mjs'], {cwd:katalog, encoding:'utf8'});
@@ -23,7 +25,7 @@ test('build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylk
   const home = await readFile(join(korzen, 'index.html'), 'utf8');
   await writeFile(join(katalog, 'index.html'), home.replace('id="mapa-ramka"', 'id="brak-mapy"'));
   assert.notEqual(uruchom().status, 0, 'Niepełny HOME musi zatrzymać build');
-  await writeFile(join(katalog, 'index.html'), home.replace('./assets/img/home/logo.png', './assets/img/home/brak.png'));
+  await writeFile(join(katalog, 'index.html'), home.replace('./assets/img/mad-net-logo.png', './assets/img/brak.png'));
   assert.notEqual(uruchom().status, 0, 'Brak zasobu musi zatrzymać build');
   assert.equal(await readFile(join(katalog, 'dist/zachowaj.txt'), 'utf8'), 'poprzedni build');
   await writeFile(join(katalog, 'index.html'), home);
@@ -31,5 +33,5 @@ test('build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylk
   await writeFile(join(katalog, 'docs/archiwum/oryginal.html'), 'nie do publikacji');
   await writeFile(join(katalog, 'MAD-NET_HOME_V3_JEDEN_PLIK.html'), 'źródło');
   const wynik = uruchom(); assert.equal(wynik.status, 0, wynik.stderr);
-  assert.deepEqual((await readdir(join(katalog, 'dist'))).sort(), ['assets', 'cennik.html', 'index.html']);
+  assert.deepEqual((await readdir(join(katalog, 'dist'))).sort(), ['assets', 'cennik.html', 'index.html', ...dodatkoweStrony].sort());
 });

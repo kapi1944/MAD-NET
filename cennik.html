@@ -10,9 +10,18 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 <link rel="stylesheet" href="./assets/css/styles.css">
 <link rel="stylesheet" href="./assets/css/hero-hybryda.css">
+<link rel="stylesheet" href="./assets/css/nawigacja.css">
 </head>
 <body>
-<header class="nav" id="start"><div class="container nav-in"><a class="brand" href="#start" aria-label="MAD-NET — początek"><img alt="MAD-NET — Internet | Monitoring | IT" src="./assets/img/mad-net-logo.png"></a><nav class="links" aria-label="Menu strony"><a href="#start">Start</a><a class="active" href="#cennik">Cennik internetu</a><a href="#oplaty">Inne opłaty</a><a href="#kontakt">Kontakt</a></nav><button type="button" id="animation-toggle" class="przelacznik-animacji" role="switch" aria-checked="true" aria-label="Animacje urządzeń, połączeń i tła PCB"><span>Animacje</span><span class="suwak-animacji" aria-hidden="true"></span></button><a class="nav-cta" href="#kontakt">Zapytaj o dostępność <span aria-hidden="true">↗</span></a></div></header>
+<header class="wspolny-naglowek" id="start">
+ <div class="wspolny-pasek"><a class="wspolne-logo" href="./index.html" aria-label="MAD-NET — strona główna"><img src="./assets/img/mad-net-logo.png" width="213" height="60" alt="MAD-NET — Internet | Monitoring | IT"></a>
+ <nav class="menu-glowne" id="nawigacja" aria-label="Nawigacja główna" data-otwarte="false">
+ <a href="./index.html">Start</a><a href="./cennik.html" aria-current="page">Internet</a>
+ <div class="menu-uslugi"><a href="./uslugi.html">Usługi</a><button type="button" class="rozwijanie-uslug" aria-label="Rozwiń usługi" aria-expanded="false" aria-controls="lista-uslug">⌄</button>
+ <div class="lista-uslug" id="lista-uslug" hidden><a href="./internet.html">Internet</a><a href="./monitoring-alarmy.html">Monitoring i alarmy</a><a href="./sieci-it.html">Sieci LAN i usługi IT</a><a href="./strony-www-hosting.html">Strony WWW i hosting</a><a href="./instalacje-tv-sat.html">Instalacje antenowe TV/SAT</a></div></div>
+ <a href="./index.html#o-nas">O firmie</a><a href="./kontakt.html">Kontakt</a></nav>
+ <button type="button" id="animation-toggle" class="przelacznik-animacji" role="switch" aria-checked="true" aria-label="Animacje urządzeń, połączeń i tła PCB"><span>Animacje</span><span class="suwak-animacji" aria-hidden="true"></span></button><a class="wspolne-cta" href="./cennik.html#kontakt" aria-label="Sprawdź dostępność internetu"><span>Sprawdź dostępność</span> ↗</a>
+ <button type="button" class="otwieranie-menu" id="otworz-menu" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nawigacja">☰</button></div></header>
 <div class="signal" aria-hidden="true"></div>
 <main>
 <section class="hero hero--rack-3col" aria-labelledby="hero-heading">
@@ -302,10 +311,11 @@
   </form>
  </div>
 </section>
-</main><footer class="foot"><div class="container foot-in"><span>PROTOTYP KONCEPCYJNY / MAD-NET — INTERAKTYWNY CENNIK V18 / 30.10.2026</span><span>Kontakt: <a href="https://www.mad-net.pl/kontakt.php" target="_blank" rel="noopener noreferrer">oficjalna strona MAD-NET ↗</a></span></div></footer>
+</main><footer class="wspolna-stopka"><div class="stopka-wiersz"><a class="wspolne-logo" href="./index.html" aria-label="MAD-NET — strona główna"><img src="./assets/img/mad-net-logo.png" width="204" height="60" alt="MAD-NET"></a><nav aria-label="Menu w stopce"><a href="./index.html">Start</a><a href="./cennik.html">Internet</a><a href="./uslugi.html">Usługi</a><a href="./index.html#o-nas">O firmie</a><a href="./kontakt.html">Kontakt</a></nav></div><p class="stopka-uwaga">© <span id="rok">2026</span> MAD-NET. Projekt rozwojowy strony. Dostępność usług potwierdzamy indywidualnie.</p></footer>
 <script src="./assets/js/cennik.js"></script>
 <script src="./assets/js/dostepnosc.js"></script>
 
 <script src="./assets/js/hero-rack.js"></script>
+<script src="./assets/js/nawigacja.js"></script>
 </body>
 </html>

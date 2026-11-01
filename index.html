@@ -10,7 +10,9 @@
   <meta property="og:type" content="website">
   <title>MAD-NET — Łączymy. Chronimy. Wspieramy. | Internet i IT</title>
   <link rel="icon" type="image/png" href="./assets/img/home/logo.png">
+  <script src="./assets/js/stare-adresy.js"></script>
   <link rel="stylesheet" href="./assets/css/home.css">
+  <link rel="stylesheet" href="./assets/css/nawigacja.css">
 
 
 </head>
@@ -42,25 +44,15 @@
   </svg>
 
   <a class="przejdz-do-tresci" href="#tresc">Przejdź do treści</a>
-  <header class="naglowek" id="naglowek">
-    <div class="kontener pasek-nawigacji">
-      <a class="logo" href="#poczatek" aria-label="MAD-NET — strona główna">
-        <img src="./assets/img/home/logo.png" alt="MAD-NET — internet, monitoring i IT" width="213" height="62">
-      </a>
-      <nav class="nawigacja" id="nawigacja" aria-label="Nawigacja główna">
-        <a class="aktywny" href="#poczatek">Start</a>
-        <a href="https://kapi1944.github.io/MAD-NET/#cennik" data-do-cennika>Internet</a>
-        <a href="#monitoring">Monitoring</a>
-        <a href="#dla-firm">Dla firm</a>
-        <a href="#uslugi">Pozostałe usługi</a>
-        <a href="#o-nas">O firmie</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-      <div class="naglowek-kontakt"><svg class="ikona"><use href="#ik-telefon"/></svg><div><a href="tel:+48913874500">+48 91 387 45 00</a><span>Pon.–Pt. 8:00–16:00</span></div></div>
-      <a class="przycisk przycisk-czerwony przycisk-gora" href="https://kapi1944.github.io/MAD-NET/#kontakt" data-do-formularza><svg class="ikona"><use href="#ik-pin"/></svg><span>Sprawdź<br>dostępność</span><svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></a>
-      <button type="button" class="otworz-menu" id="otworz-menu" aria-label="Otwórz menu" aria-controls="nawigacja" aria-expanded="false"><svg class="ikona"><use href="#ik-hamburger"/></svg></button>
-    </div>
-  </header>
+  <header class="wspolny-naglowek" id="naglowek">
+ <div class="wspolny-pasek"><a class="wspolne-logo" href="./index.html" aria-label="MAD-NET — strona główna"><img src="./assets/img/mad-net-logo.png" width="213" height="60" alt="MAD-NET — Internet | Monitoring | IT"></a>
+ <nav class="menu-glowne" id="nawigacja" aria-label="Nawigacja główna" data-otwarte="false">
+ <a href="./index.html" aria-current="page">Start</a><a href="./cennik.html">Internet</a>
+ <div class="menu-uslugi"><a href="./uslugi.html">Usługi</a><button type="button" class="rozwijanie-uslug" aria-label="Rozwiń usługi" aria-expanded="false" aria-controls="lista-uslug">⌄</button>
+ <div class="lista-uslug" id="lista-uslug" hidden><a href="./internet.html">Internet</a><a href="./monitoring-alarmy.html">Monitoring i alarmy</a><a href="./sieci-it.html">Sieci LAN i usługi IT</a><a href="./strony-www-hosting.html">Strony WWW i hosting</a><a href="./instalacje-tv-sat.html">Instalacje antenowe TV/SAT</a></div></div>
+ <a href="./index.html#o-nas">O firmie</a><a href="./kontakt.html">Kontakt</a></nav>
+ <a class="wspolne-cta" href="./cennik.html#kontakt" aria-label="Sprawdź dostępność internetu"><span>Sprawdź dostępność</span> ↗</a>
+ <button type="button" class="otwieranie-menu" id="otworz-menu" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nawigacja">☰</button></div></header>
   <div class="pasek-sygnalu" aria-hidden="true"></div>
 
   <main id="tresc">
@@ -73,8 +65,8 @@
           <h1 id="tytul-glowny">Łączymy.<br>Chronimy.<br><span>Wspieramy.</span></h1>
           <p>Lokalny dostawca internetu, monitoringu, alarmów i usług IT. Szybka pomoc, profesjonalne rozwiązania i bezpośredni kontakt na terenie gminy Trzebiatów, Rewal i okolic.</p>
           <div class="hero-przyciski">
-            <a class="przycisk przycisk-czerwony" href="https://kapi1944.github.io/MAD-NET/#kontakt" data-do-formularza><svg class="ikona"><use href="#ik-pin"/></svg>Sprawdź dostępność internetu <svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></a>
-            <button class="przycisk przycisk-obrys" type="button" data-otworz-kontakt><svg class="ikona"><use href="#ik-pytanie"/></svg>Zgłoś awarię / Zapytaj <svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></button>
+            <a class="przycisk przycisk-czerwony" href="./cennik.html#kontakt" data-do-formularza><svg class="ikona"><use href="#ik-pin"/></svg>Sprawdź dostępność internetu <svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></a>
+            <a class="przycisk przycisk-obrys" href="./kontakt.html"><svg class="ikona"><use href="#ik-pytanie"/></svg>Zgłoś awarię / Zapytaj <svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></a>
           </div>
         </div>
         <aside class="hero-boczny" aria-label="Zakres usług MAD-NET">
@@ -97,28 +89,28 @@
         <div class="naglowek-sekcji naglowek-z-opisem">
           <div><div class="mikro-etykieta">NASZE USŁUGI</div><h2 id="tytul-uslugi">Technologia dla <span>Twoich potrzeb</span></h2></div>
           <p>Internet, bezpieczeństwo i pełne wsparcie IT — wszystko w jednym miejscu.</p>
-          <a href="#zobacz-wiecej" class="link-tekstowy">Zobacz wszystkie usługi <svg class="ikona"><use href="#ik-strzalka"/></svg></a>
+          <a href="./uslugi.html" class="link-tekstowy">Zobacz wszystkie usługi <svg class="ikona"><use href="#ik-strzalka"/></svg></a>
         </div>
         <div class="siatka-uslug">
           <article class="karta-uslugi" id="internet">
-            <a class="zdjecie-uslugi" href="https://kapi1944.github.io/MAD-NET/#cennik" data-do-cennika aria-label="Zobacz ofertę internetu"><img src="./assets/img/home/usluga-internet.jpg" loading="lazy" alt="Laptop z ikoną Wi-Fi — oferta internetu"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-wifi"/></svg></span></a>
-            <div class="tresc-uslugi"><h3>Internet</h3><p>Światłowodowy, kablowy i bezprzewodowy. Stabilne łącze do domu i firmy.</p><a class="link-karty" href="https://kapi1944.github.io/MAD-NET/#cennik" data-do-cennika>Sprawdź ofertę <svg class="ikona"><use href="#ik-strzalka"/></svg></a></div>
+            <a class="zdjecie-uslugi" href="./internet.html" aria-label="Zobacz ofertę internetu"><img src="./assets/img/home/usluga-internet.jpg" loading="lazy" alt="Laptop z ikoną Wi-Fi — oferta internetu"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-wifi"/></svg></span></a>
+            <div class="tresc-uslugi"><h3>Internet</h3><p>Światłowodowy, kablowy i bezprzewodowy. Stabilne łącze do domu i firmy.</p><a class="link-karty" href="./internet.html">Sprawdź ofertę <svg class="ikona"><use href="#ik-strzalka"/></svg></a></div>
           </article>
           <article class="karta-uslugi" id="monitoring">
-            <button class="zdjecie-uslugi" type="button" data-usluga="monitoring" aria-label="Szczegóły monitoringu i alarmów"><img src="./assets/img/home/usluga-monitoring.jpg" loading="lazy" alt="Profesjonalna kamera monitoringu"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-tarcza"/></svg></span></button>
-            <div class="tresc-uslugi"><h3>Monitoring i alarmy</h3><p>Kamery, systemy alarmowe, kontrola dostępu. Bezpieczny dom i firma.</p><button type="button" class="link-karty" data-usluga="monitoring">Poznaj rozwiązania <svg class="ikona"><use href="#ik-strzalka"/></svg></button></div>
+            <a class="zdjecie-uslugi" aria-label="Szczegóły monitoringu i alarmów" href="./monitoring-alarmy.html"><img src="./assets/img/home/usluga-monitoring.jpg" loading="lazy" alt="Profesjonalna kamera monitoringu"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-tarcza"/></svg></span></a>
+            <div class="tresc-uslugi"><h3>Monitoring i alarmy</h3><p>Kamery, systemy alarmowe, kontrola dostępu. Bezpieczny dom i firma.</p><a class="link-karty" href="./monitoring-alarmy.html">Poznaj rozwiązania <svg class="ikona"><use href="#ik-strzalka"/></svg></a></div>
           </article>
           <article class="karta-uslugi" id="dla-firm">
-            <button class="zdjecie-uslugi" type="button" data-usluga="it" aria-label="Szczegóły usług IT i sieci"><img src="./assets/img/home/usluga-it.jpg" loading="lazy" alt="Profesjonalne okablowanie sieciowe i szafa IT"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-serwer"/></svg></span></button>
-            <div class="tresc-uslugi"><h3>Usługi IT i sieci</h3><p>Serwis komputerów, sieci LAN/Wi‑Fi, administracja serwerami.</p><button type="button" class="link-karty" data-usluga="it">Zobacz możliwości <svg class="ikona"><use href="#ik-strzalka"/></svg></button></div>
+            <a class="zdjecie-uslugi" aria-label="Szczegóły usług IT i sieci" href="./sieci-it.html"><img src="./assets/img/home/usluga-it.jpg" loading="lazy" alt="Profesjonalne okablowanie sieciowe i szafa IT"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-serwer"/></svg></span></a>
+            <div class="tresc-uslugi"><h3>Usługi IT i sieci</h3><p>Serwis komputerów, sieci LAN/Wi‑Fi, administracja serwerami.</p><a class="link-karty" href="./sieci-it.html">Zobacz możliwości <svg class="ikona"><use href="#ik-strzalka"/></svg></a></div>
           </article>
           <article class="karta-uslugi" id="strony-www">
-            <button class="zdjecie-uslugi" type="button" data-usluga="www" aria-label="Szczegóły stron WWW i hostingu"><img src="./assets/img/home/usluga-www.jpg" loading="lazy" alt="Laptop z projektem strony internetowej"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-kod"/></svg></span></button>
-            <div class="tresc-uslugi"><h3>Strony WWW i hosting</h3><p>Nowoczesne strony internetowe, hosting i wsparcie techniczne.</p><button type="button" class="link-karty" data-usluga="www">Zobacz szczegóły <svg class="ikona"><use href="#ik-strzalka"/></svg></button></div>
+            <a class="zdjecie-uslugi" aria-label="Szczegóły stron WWW i hostingu" href="./strony-www-hosting.html"><img src="./assets/img/home/usluga-www.jpg" loading="lazy" alt="Laptop z projektem strony internetowej"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-kod"/></svg></span></a>
+            <div class="tresc-uslugi"><h3>Strony WWW i hosting</h3><p>Nowoczesne strony internetowe, hosting i wsparcie techniczne.</p><a class="link-karty" href="./strony-www-hosting.html">Zobacz szczegóły <svg class="ikona"><use href="#ik-strzalka"/></svg></a></div>
           </article>
           <article class="karta-uslugi" id="zobacz-wiecej">
-            <button class="zdjecie-uslugi" type="button" data-usluga="anteny" aria-label="Szczegóły instalacji antenowych"><img src="./assets/img/home/usluga-anteny.jpg" loading="lazy" alt="Instalacja antenowa na tle zachodzącego słońca"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-antena"/></svg></span></button>
-            <div class="tresc-uslugi"><h3>Instalacje antenowe i TV/SAT</h3><p>Instalacje telewizyjne, satelitarne i sieciowe.</p><button type="button" class="link-karty" data-usluga="anteny">Sprawdź szczegóły <svg class="ikona"><use href="#ik-strzalka"/></svg></button></div>
+            <a class="zdjecie-uslugi" aria-label="Szczegóły instalacji antenowych" href="./instalacje-tv-sat.html"><img src="./assets/img/home/usluga-anteny.jpg" loading="lazy" alt="Instalacja antenowa na tle zachodzącego słońca"/><span class="ikona-na-zdjeciu"><svg class="ikona"><use href="#ik-antena"/></svg></span></a>
+            <div class="tresc-uslugi"><h3>Instalacje antenowe i TV/SAT</h3><p>Instalacje telewizyjne, satelitarne i sieciowe.</p><a class="link-karty" href="./instalacje-tv-sat.html">Sprawdź szczegóły <svg class="ikona"><use href="#ik-strzalka"/></svg></a></div>
           </article>
         </div>
       </div>
@@ -129,7 +121,7 @@
         <div class="obszar-tekst"><div class="mikro-etykieta">OBSŁUGIWANY REGION</div><h2 id="tytul-obszar">Lokalnie. <span>Zawsze blisko.</span></h2>
           <p>Świadczymy usługi na terenie gminy Trzebiatów, Rewal i w okolicznych miejscowościach. Dzięki lokalności możemy sprawnie reagować i zapewniać bezpośrednie wsparcie.</p>
           <div class="obszar-atuty"><div><svg class="ikona"><use href="#ik-tarcza"/></svg><p><strong>Sprawna realizacja</strong><span>Bez zbędnych, ogólnopolskich ścieżek</span></p></div><div><svg class="ikona"><use href="#ik-pin"/></svg><p><strong>Znamy lokalną infrastrukturę</strong><span>i specyfikę techniczną okolicy</span></p></div><div><svg class="ikona"><use href="#ik-osoby"/></svg><p><strong>Bez zbędnych procedur</strong><span>Rozmawiasz bezpośrednio z fachowcem</span></p></div></div>
-          <a class="przycisk przycisk-czerwony" href="https://kapi1944.github.io/MAD-NET/#kontakt" data-do-formularza><svg class="ikona"><use href="#ik-pin"/></svg>Sprawdź dostępność w swojej miejscowości<svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></a>
+          <a class="przycisk przycisk-czerwony" href="./cennik.html#kontakt" data-do-formularza><svg class="ikona"><use href="#ik-pin"/></svg>Sprawdź dostępność w swojej miejscowości<svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></a>
         </div>
         <div class="mapa-otoczenie" aria-label="Schematyczna mapa obszaru działania MAD-NET. Nie przedstawia faktycznego zasięgu internetu.">
           <div class="mapa-ramka mapa-rzeczywista" id="mapa-ramka" role="region" aria-label="Geograficzna mapa miejscowości regionu Trzebiatowa, z rzeczywistymi współrzędnymi GPS">
@@ -190,19 +182,8 @@
     </section>
   </main>
 
-  <footer class="stopka"><div class="kontener stopka-glowna"><a href="#poczatek" class="stopka-logo" aria-label="MAD-NET — powrót na górę"><img src="./assets/img/home/logo.png" width="184" height="50" alt="MAD-NET"/></a><nav aria-label="Menu w stopce"><a href="#poczatek">Start</a><a href="https://kapi1944.github.io/MAD-NET/#cennik" data-do-cennika>Internet</a><a href="#monitoring">Monitoring</a><a href="#dla-firm">Dla firm</a><a href="#uslugi">Pozostałe usługi</a><a href="#o-nas">O firmie</a><a href="#kontakt">Kontakt</a></nav><a class="stopka-do-gory" href="#poczatek" aria-label="Wróć na górę">↑</a></div><div class="kontener stopka-dol"><span>© <span id="rok">2026</span> MAD-NET. Projekt demonstracyjny strony głównej.</span><span>Projekt na podstawie dostarczonej wizualizacji • Cennik: aktualny GitHub Pages</span></div></footer>
-
-  <div class="modal-tlo" id="modal-tlo" hidden>
-    <section class="okno-modalne" role="dialog" aria-modal="true" aria-labelledby="modal-tytul" aria-describedby="modal-opis" tabindex="-1">
-      <button type="button" class="modal-zamknij" id="modal-zamknij" aria-label="Zamknij okno"><svg class="ikona"><use href="#ik-zamknij"/></svg></button>
-      <div class="mikro-etykieta" id="modal-etykieta">MAD-NET / POZNAJ ROZWIĄZANIA</div>
-      <div class="modal-ikona" id="modal-ikona"><svg class="ikona"><use href="#ik-kamera"/></svg></div>
-      <h2 id="modal-tytul">Monitoring i alarmy</h2><p id="modal-opis"></p>
-      <div class="modal-zakres" id="modal-zakres"></div>
-      <div class="modal-przyciski"><a class="przycisk przycisk-czerwony" id="modal-mail" href="mailto:biuro@mad-net.pl">Zapytaj o wycenę <svg class="ikona ikona-mala"><use href="#ik-strzalka"/></svg></a><a class="przycisk przycisk-obrys" href="tel:+48913874500"><svg class="ikona"><use href="#ik-telefon"/></svg> Zadzwoń</a></div>
-      <small class="modal-nota">Przygotujemy rozwiązanie po poznaniu potrzeb i lokalizacji. Okno nie wysyła żadnych danych.</small>
-    </section>
-  </div>
+  <footer class="wspolna-stopka"><div class="stopka-wiersz"><a class="wspolne-logo" href="./index.html" aria-label="MAD-NET — strona główna"><img src="./assets/img/mad-net-logo.png" width="204" height="60" alt="MAD-NET"></a><nav aria-label="Menu w stopce"><a href="./index.html">Start</a><a href="./cennik.html">Internet</a><a href="./uslugi.html">Usługi</a><a href="./index.html#o-nas">O firmie</a><a href="./kontakt.html">Kontakt</a></nav></div><p class="stopka-uwaga">© <span id="rok">2026</span> MAD-NET. Projekt rozwojowy strony. Dostępność usług potwierdzamy indywidualnie.</p></footer>
 <script src="./assets/js/home.js"></script>
+<script src="./assets/js/nawigacja.js"></script>
 </body>
 </html>

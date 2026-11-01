@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {spawnSync} from 'node:child_process';
+import {spawnSync, execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
 const czytaj = plik => readFileSync(new URL(`../${plik}`, import.meta.url));
@@ -38,11 +38,14 @@ test('HOME: osobne zasoby, język polski, brak zależności od stylów cennika',
   assert.equal(spawnSync(process.execPath, ['--check', fileURLToPath(new URL('../assets/js/home.js', import.meta.url))]).status, 0);
 });
 
-test('cennik: przeniesiona strona i chronione moduły pozostają zgodne z baseline etapu 00', () => {
+test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline', () => {
   const manifest = JSON.parse(czytaj('docs/integracja-home-v3/dowody/manifest-cennika.json'));
-  for (const wpis of manifest.filter(wpis => wpis.plik === 'index.html' || wpis.plik.startsWith('assets/'))) {
+  for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/'))) {
     // Git może zmieniać końce linii tekstu między Windows a Linux.
     const bajty = czytaj(wpis.plik === 'index.html' ? 'cennik.html' : wpis.plik);
     assert.ok([wpis.sha256Git, wpis.sha256Lokalny].includes(skrot(bajty)), wpis.plik);
   }
+  const przed = execFileSync('git', ['show', '603ecb6b34509db80b46d659b0eeb1368eb2f275:cennik.html'], {encoding:'utf8'});
+  const main = tresc => tresc.match(/<main>[\s\S]*?<\/main>/)[0].replaceAll('\r\n', '\n');
+  assert.equal(main(czytaj('cennik.html').toString()), main(przed));
 });
