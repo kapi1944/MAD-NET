@@ -86,8 +86,9 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
       const poczatek = performance.now(), probki = [];
       function zmierz() {
         const styl = getComputedStyle(element);
-        probki.push({ czas: performance.now() - poczatek, cien: styl.boxShadow, tlo: styl.backgroundColor });
-        if (performance.now() - poczatek >= 5000) zakoncz(probki);
+        const czas = performance.now() - poczatek;
+        probki.push({ czas, cien: styl.boxShadow, tlo: styl.backgroundColor });
+        if (czas >= 5000) zakoncz(probki);
         else requestAnimationFrame(zmierz);
       }
       zmierz();

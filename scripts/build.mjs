@@ -9,11 +9,11 @@ const strony = {
   'cennik.html': ['id="cennik"', 'id="oplaty"', 'id="kontakt"', 'id="hero-rack-stage"', 'id="availability-form"', './assets/css/styles.css', './assets/css/hero-hybryda.css'],
   'uslugi.html': ['baner-uslugi', 'Usługi MAD-NET', './assets/css/uslugi.css'],
   'kontakt.html': ['strona-tymczasowa', 'Strona tymczasowa'],
-  'internet.html': ['strona-tymczasowa', 'Strona tymczasowa'],
-  'monitoring-alarmy.html': ['strona-tymczasowa', 'Strona tymczasowa'],
-  'sieci-it.html': ['strona-tymczasowa', 'Strona tymczasowa'],
-  'strony-www-hosting.html': ['strona-tymczasowa', 'Strona tymczasowa'],
-  'instalacje-tv-sat.html': ['strona-tymczasowa', 'Strona tymczasowa'],
+  'internet.html': ['oferta-hero', 'powiazane-uslugi', './assets/css/oferta.css'],
+  'monitoring-alarmy.html': ['oferta-hero', 'powiazane-uslugi', './assets/css/oferta.css'],
+  'sieci-it.html': ['oferta-hero', 'powiazane-uslugi', './assets/css/oferta.css'],
+  'strony-www-hosting.html': ['oferta-hero', 'powiazane-uslugi', './assets/css/oferta.css'],
+  'instalacje-tv-sat.html': ['oferta-hero', 'powiazane-uslugi', './assets/css/oferta.css'],
 };
 for (const [plik, znaczniki] of Object.entries(strony)) {
   const tresc = await readFile(join(root, plik), 'utf8');

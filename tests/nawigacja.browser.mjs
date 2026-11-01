@@ -47,7 +47,7 @@ try{
     assert.equal(await strona.locator('.wspolny-naglowek').count(),1);
     assert.equal(await strona.locator('.wspolna-stopka').count(),1);
     assert.equal(await strona.locator('.wspolne-logo img').first().getAttribute('src'),'./assets/img/mad-net-logo.png');
-    if(!['index.html','cennik.html','uslugi.html'].includes(plik))assert.match(await strona.locator('.tymczasowa-informacja').innerText(),/Strona tymczasowa/i);
+    if(plik==='kontakt.html')assert.match(await strona.locator('.tymczasowa-informacja').innerText(),/Strona tymczasowa/i);
   }
   console.log(`PASS linki: ${linki.length} lokalnych odnośników, ${pobrane.size} celów HTTP 200 i istniejące fragmenty`);
   for(const szerokosc of [390,768,1440,1920])for(const plik of ['index.html','cennik.html','uslugi.html']){
@@ -137,7 +137,7 @@ try{
   await telefon.screenshot({path:`${katalog}/menu-dotyk-390.png`});
   await telefon.locator('.lista-uslug a[href="./instalacje-tv-sat.html"]').tap();
   await telefon.waitForURL(`${adres}/instalacje-tv-sat.html`);
-  assert.match(await telefon.locator('.tymczasowa-informacja').innerText(),/Strona tymczasowa/i);
+  assert.equal(await telefon.locator('.oferta-hero h1').count(),1);
   for(const plik of ['index.html','cennik.html']){
     await telefon.goto(`${adres}/${plik}`);
     await telefon.locator('#otworz-menu').tap();await telefon.locator('.rozwijanie-uslug').tap();

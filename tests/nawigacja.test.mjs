@@ -10,13 +10,14 @@ test('nawigacja: dziewięć stron ma wspólne elementy i istniejące względne c
     const html = czytaj(plik);
     for(const znacznik of ['wspolny-naglowek','wspolna-stopka','./assets/img/mad-net-logo.png','./assets/css/nawigacja.css','./assets/js/nawigacja.js','aria-controls="lista-uslug"']) assert.ok(html.includes(znacznik),`${plik}: ${znacznik}`);
     assert.doesNotMatch(html,/href="#"|https:\/\/kapi1944\.github\.io/);
-    for(const [,cel] of html.matchAll(/<a\b[^>]*href="(\.\/[^"#]+)(?:#[^"]*)?"/g)) assert.ok(existsSync(new URL(`../${cel}`,import.meta.url)),`${plik}: martwy cel ${cel}`);
+    for(const [,cel] of html.matchAll(/<a\b[^>]*href="(\.\/[^"#]+)(?:#[^"]*)?"/g)) assert.ok(existsSync(new URL(`../${cel.split('?')[0]}`,import.meta.url)),`${plik}: martwy cel ${cel}`);
     for(const [,cel,fragment] of html.matchAll(/<a\b[^>]*href="(?:\.\/([^"#]+))?#([^"$]+)"/g)){
-      assert.ok(czytaj(cel||plik).includes(`id="${fragment}"`),`${plik}: brak fragmentu ${fragment}`);
+      assert.ok(czytaj((cel||plik).split('?')[0]).includes(`id="${fragment}"`),`${plik}: brak fragmentu ${fragment}`);
     }
   }
   assert.equal((czytaj('uslugi.html').match(/class="baner-uslugi"/g)||[]).length,5);
-  for(const plik of strony.slice(3)) assert.match(czytaj(plik),/Strona tymczasowa/);
+  assert.match(czytaj('kontakt.html'),/Strona tymczasowa/);
+  for(const plik of strony.slice(4)) assert.match(czytaj(plik),/oferta-hero/);
 });
 test('nawigacja: nowe skrypty mają poprawną składnię',()=>{
   for(const plik of ['nawigacja.js','stare-adresy.js']) assert.equal(spawnSync(process.execPath,['--check',fileURLToPath(new URL(`../assets/js/${plik}`,import.meta.url))]).status,0);
