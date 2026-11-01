@@ -1,0 +1,47 @@
+[
+  {
+    "plik": "baseline/cennik/calosc-1024.png",
+    "bajty": 1966227,
+    "sha256": "a26585b8e46145b578889d0c1d1a3add28e4f43108280bdc12d1d97a3f51f5e2"
+  },
+  {
+    "plik": "baseline/cennik/calosc-1440.png",
+    "bajty": 2545409,
+    "sha256": "8fb9de92f83b9cd7786f2caecab466e48550ce223d8dc13bc26c5d1c143845e5"
+  },
+  {
+    "plik": "baseline/cennik/calosc-390.png",
+    "bajty": 1326188,
+    "sha256": "2ccb372ad51d95d32fbc3fd9f8fe301d47dd6618394e042da11b2a3bd89732cf"
+  },
+  {
+    "plik": "baseline/cennik/calosc-768.png",
+    "bajty": 1981384,
+    "sha256": "1c97639487e9792da7d3111c1b35fba32be713d2049fff6b2053094b1f4afc4a"
+  },
+  {
+    "plik": "baseline/home-v3/calosc-1024.png",
+    "bajty": 2074704,
+    "sha256": "8af3326b1a85825cdb4ef5b44af18e3fb84a1c8404b02be3b089e550beec9bdc"
+  },
+  {
+    "plik": "baseline/home-v3/calosc-1440.png",
+    "bajty": 2311765,
+    "sha256": "81523d11dca1639eb5628353f89393f918144ffa43ce5d1ca9832354139a1270"
+  },
+  {
+    "plik": "baseline/home-v3/calosc-390.png",
+    "bajty": 1252848,
+    "sha256": "fad0d698284868b2d0c0b7024700117513bf84a15e2bebda070d841229db74df"
+  },
+  {
+    "plik": "baseline/home-v3/calosc-768.png",
+    "bajty": 1838752,
+    "sha256": "cba719abb744181ed25d78ccd5654384038eebea9dce5625373b21bb7c0e9a84"
+  },
+  {
+    "plik": "zrodla/HOME-V3-oryginal.zip",
+    "bajty": 1411546,
+    "sha256": "9d49476ff8853ffaf5a7f3ab6355a2a786966ad3e04b2b697d6d06464dd6d9d8"
+  }
+]

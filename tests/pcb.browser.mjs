@@ -11,7 +11,7 @@ assert.ok(silnik, 'Nieznany silnik przeglądarki');
 const katalog = `test-results/pcb-4-1/${przed ? 'przed' : nazwaSilnika === 'chromium' ? 'po' : `po-${nazwaSilnika}`}`;
 await mkdir(katalog, { recursive: true });
 const port = process.env.MADNET_PORT_PCB || '4183';
-const adres = `http://127.0.0.1:${port}`;
+const adres = `http://127.0.0.1:${port}/cennik.html`;
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   env: { ...process.env, PORT: port }, stdio: ['ignore', 'pipe', 'pipe'],
 });
@@ -33,8 +33,8 @@ try {
   });
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1100 } });
   if (przed) for (const plik of ['index.html', 'assets/css/styles.css']) {
-    const tresc = execFileSync('git', ['show', `HEAD:${plik}`], { encoding: 'utf8' });
-    await strona.route(plik === 'index.html' ? '**/' : `**/${plik}`, trasa => trasa.fulfill({ body: tresc, contentType: plik.endsWith('.css') ? 'text/css' : 'text/html' }));
+    const tresc = execFileSync('git', ['show', `a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:${plik}`], { encoding: 'utf8' });
+    await strona.route(plik === 'index.html' ? '**/cennik.html' : `**/${plik}`, trasa => trasa.fulfill({ body: tresc, contentType: plik.endsWith('.css') ? 'text/css' : 'text/html' }));
   }
   strona.on('pageerror', blad => bledy.push(blad.message));
   strona.on('console', wpis => { if (wpis.type() === 'error') bledy.push(wpis.text()); });
@@ -128,6 +128,8 @@ try {
       plytka.pauseAnimations();
       const punkty = [1, 3, 5, 7].map(czas => { plytka.setCurrentTime(czas); return polozenie(); });
       plytka.unpauseAnimations();
+      // Po ręcznym przestawieniu SMIL zsynchronizuj pomiar z ponownym renderowaniem.
+      await new Promise(zakoncz => requestAnimationFrame(() => requestAnimationFrame(zakoncz)));
       const poczatek = polozenie();
       await new Promise(zakoncz => setTimeout(zakoncz, 180));
       const koniec = polozenie();

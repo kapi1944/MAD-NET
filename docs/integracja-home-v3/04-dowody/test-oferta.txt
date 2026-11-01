@@ -1,0 +1,16 @@
+
+> mad-net@0.1.0 test:oferta
+> npm run build && node tests/oferta.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS internet: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS monitoring-alarmy: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS sieci-it: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS strony-www-hosting: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS instalacje-tv-sat: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS pięć stron: 30 układów, dotyk/klawiatura, CTA, brak błędów JS/konsoli/HTTP

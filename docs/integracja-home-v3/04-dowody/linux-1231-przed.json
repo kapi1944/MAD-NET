@@ -1,0 +1,104 @@
+[
+  {
+    "szerokosc": 1231,
+    "technologia": "LAN",
+    ".hero-tech-panel": {
+      "top": 251.46875,
+      "bottom": 590.046875,
+      "height": 338.578125,
+      "rows": "11px 201.578px 44px"
+    },
+    ".hero-tech-panel-content": {
+      "top": 303.46875,
+      "bottom": 505.046875,
+      "height": 201.578125,
+      "rows": "54px 67.1875px 44.3906px"
+    },
+    "#hero-tech-description": {
+      "top": 375.46875,
+      "bottom": 442.65625,
+      "height": 67.1875,
+      "rows": "none"
+    },
+    ".hero-tech-facts": {
+      "top": 460.65625,
+      "bottom": 505.046875,
+      "height": 44.390625,
+      "rows": "29.3906px"
+    },
+    ".hero-tech-link": {
+      "top": 523.046875,
+      "bottom": 567.046875,
+      "height": 44,
+      "rows": "none"
+    }
+  },
+  {
+    "szerokosc": 1231,
+    "technologia": "FIBER",
+    ".hero-tech-panel": {
+      "top": 251.46875,
+      "bottom": 590.046875,
+      "height": 338.578125,
+      "rows": "11px 201.578px 44px"
+    },
+    ".hero-tech-panel-content": {
+      "top": 303.46875,
+      "bottom": 505.046875,
+      "height": 201.578125,
+      "rows": "54px 67.1875px 44.3906px"
+    },
+    "#hero-tech-description": {
+      "top": 375.46875,
+      "bottom": 442.65625,
+      "height": 67.1875,
+      "rows": "none"
+    },
+    ".hero-tech-facts": {
+      "top": 460.65625,
+      "bottom": 505.046875,
+      "height": 44.390625,
+      "rows": "29.3906px"
+    },
+    ".hero-tech-link": {
+      "top": 523.046875,
+      "bottom": 567.046875,
+      "height": 44,
+      "rows": "none"
+    }
+  },
+  {
+    "szerokosc": 1231,
+    "technologia": "AIR",
+    ".hero-tech-panel": {
+      "top": 251.46875,
+      "bottom": 627.8125,
+      "height": 376.34375,
+      "rows": "11px 239.344px 44px"
+    },
+    ".hero-tech-panel-content": {
+      "top": 303.46875,
+      "bottom": 542.8125,
+      "height": 239.34375,
+      "rows": "54px 89.5625px 59.7812px"
+    },
+    "#hero-tech-description": {
+      "top": 375.46875,
+      "bottom": 465.03125,
+      "height": 89.5625,
+      "rows": "none"
+    },
+    ".hero-tech-facts": {
+      "top": 483.03125,
+      "bottom": 542.8125,
+      "height": 59.78125,
+      "rows": "44.7812px"
+    },
+    ".hero-tech-link": {
+      "top": 560.8125,
+      "bottom": 604.8125,
+      "height": 44,
+      "rows": "none"
+    }
+  }
+]

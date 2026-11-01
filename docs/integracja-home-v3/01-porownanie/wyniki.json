@@ -1,0 +1,43 @@
+{
+  "wyniki": [
+    {
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 5793,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 4542,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 3007,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    },
+    {
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 3027,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      }
+    }
+  ],
+  "bledy": [],
+  "konsola": [],
+  "kafelkiOnline": 72
+}

@@ -1,0 +1,28 @@
+/* Katalog i jawne strony tymczasowe; brak zależności od CSS cennika. */
+body.strona-uslug{margin:0;min-width:320px;background:#0b1016;color:#f4f6f8;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color-scheme:dark}
+.strona-uslug *{box-sizing:border-box}.strona-uslug a{color:inherit}.strona-uslug :is(a,button):focus-visible{outline:2px solid #fff;outline-offset:5px}
+.ramka-uslug{width:min(1380px,calc(100% - 76px));margin:auto;position:relative;z-index:1}
+.katalog-hero{padding:50px 0 64px;border-bottom:1px solid #3e2733;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 85% 80%,#69203922,transparent 60%),#0b1119}
+.okruszki{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:#9baaba;margin-bottom:45px}.okruszki a{text-underline-offset:5px}.okruszki span{color:#ff405a}
+.etykieta-uslug{font-size:10px;font-weight:800;letter-spacing:.18em;color:#aab7c5;display:flex;align-items:center;gap:10px}.etykieta-uslug:before{content:"";width:5px;height:15px;background:#ff203e}
+.katalog-hero h1{font-size:clamp(40px,5.4vw,76px);line-height:1.06;letter-spacing:-.045em;margin:22px 0;max-width:940px;font-weight:850}.katalog-hero h1 em{color:#ff203e;font-style:normal}
+.opis-katalogu{display:flex;justify-content:space-between;align-items:end;gap:32px}.opis-katalogu p{max-width:610px;color:#b7c2cf;font-size:15px;line-height:1.75;margin:0}.droga-do-cennika{font-size:12px;font-weight:750;text-decoration:none;border-bottom:1px solid #963047;padding:12px 0;white-space:nowrap}.droga-do-cennika:hover{color:#ff405a}
+.katalog-lista{position:relative;isolation:isolate;overflow:hidden;padding:15px 0 70px}
+.baner-uslugi{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:65px;align-items:center;padding:55px 0;border-bottom:1px solid #303b47;text-decoration:none;position:relative}
+.baner-zdjecie{height:300px;position:relative;overflow:hidden;background:#111d28;isolation:isolate}.baner-zdjecie:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#08111a77,transparent 60%);pointer-events:none}
+.baner-zdjecie img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s,filter .45s;filter:saturate(.8)}
+.baner-uslugi:nth-child(even) .baner-zdjecie{order:2}.baner-uslugi:nth-child(even) .baner-opis{order:1}
+.baner-opis{padding-right:15px}.numer-uslugi{display:flex;align-items:center;gap:15px;color:#8191a3;font-size:11px;font-weight:750;letter-spacing:.15em}.numer-uslugi svg{width:26px;height:26px;fill:none;stroke:#ff203e;stroke-width:1.6}
+.baner-uslugi h2{font-size:clamp(27px,3vw,43px);font-weight:800;line-height:1.12;letter-spacing:-.035em;margin:20px 0 16px}.baner-uslugi p{font-size:14px;line-height:1.7;color:#acbac8;max-width:480px;margin:0 0 24px}
+.cta-banera{display:flex;justify-content:space-between;align-items:center;gap:20px;max-width:350px;padding:13px 0;border-top:1px solid #53313e;color:#ff405a;font-size:12px;font-weight:800}.cta-banera b{font-size:24px;font-weight:400;transition:transform .2s}
+.baner-uslugi:hover h2{color:#fff}.baner-uslugi:hover .cta-banera b{transform:translateX(6px)}.baner-uslugi:hover img{transform:scale(1.035);filter:saturate(1)}
+.katalog-pcb{position:absolute;inset:20px -80px auto;width:calc(100% + 160px);height:280px;z-index:0;pointer-events:none;opacity:.26;fill:none;stroke:#d32a49;stroke-width:1.5}
+.katalog-pcb .impuls-katalogu{stroke:#ff3759;stroke-width:2.5;stroke-dasharray:18 1200;animation:impuls-katalogu 12s linear infinite}
+@keyframes impuls-katalogu{to{stroke-dashoffset:-1218}}
+.powrot-katalogu{display:flex;gap:22px;align-items:center;flex-wrap:wrap;padding-top:35px;font-size:12px}.powrot-katalogu a{text-underline-offset:6px}
+.tymczasowa-informacja{max-width:780px;border-left:3px solid #ff203e;padding:18px 25px;background:#141e28;margin:35px 0;color:#c2ccd6;font-size:14px;line-height:1.7}.tymczasowa-informacja strong{display:block;color:#ff6279;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.tymczasowe-kroki{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin:26px 0 15px}.tymczasowe-kroki>a:not(.wspolne-cta){font-size:13px;text-underline-offset:6px}
+.strona-tymczasowa .katalog-hero{min-height:calc(100dvh - 280px)}
+@media(max-width:900px){.ramka-uslug{width:calc(100% - 40px)}.katalog-hero{padding:32px 0 42px}.okruszki{margin-bottom:30px}.opis-katalogu{align-items:start;flex-direction:column;gap:18px}.baner-uslugi{gap:30px;padding:35px 0}.baner-zdjecie{height:250px}.baner-uslugi h2{font-size:29px}}
+@media(max-width:600px){.ramka-uslug{width:calc(100% - 34px)}.baner-uslugi{grid-template-columns:1fr;gap:24px}.baner-zdjecie{height:230px}.baner-uslugi:nth-child(even) .baner-zdjecie{order:0}.baner-uslugi:nth-child(even) .baner-opis{order:0}.baner-opis{padding:0}.katalog-hero h1{font-size:43px}.opis-katalogu p{font-size:13px}.baner-uslugi p{font-size:13px}.cta-banera{max-width:none}.tymczasowa-informacja{padding:16px 18px}.katalog-lista{padding-bottom:40px}}
+@media(prefers-reduced-motion:reduce){.strona-uslug *{scroll-behavior:auto!important;transition:none!important}.katalog-pcb .impuls-katalogu{animation:none!important}.baner-uslugi:hover img{transform:none}}

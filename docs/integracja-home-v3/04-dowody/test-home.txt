@@ -1,0 +1,27 @@
+
+> mad-net@0.1.0 test:home
+> npm run build && node tests/home.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS HOME 390px: geometria i typografia HERO bez zmian; różne piksele HERO=0, karty=0; mapa/PCB/linki
+PASS HOME 768px: geometria i typografia HERO bez zmian; różne piksele HERO=0, karty=0; mapa/PCB/linki
+PASS HOME 1024px: geometria i typografia HERO bez zmian; różne piksele HERO=31735, karty=27387; mapa/PCB/linki
+PASS HOME 1440px: geometria i typografia HERO bez zmian; różne piksele HERO=21071, karty=15991; mapa/PCB/linki
+PASS HOME 1920px: geometria i typografia HERO bez zmian; różne piksele HERO=56762, karty=18402; mapa/PCB/linki
+PASS cennik 390px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 768px: geometria i typografia bez zmian, różne piksele=1875
+PASS cennik 1024px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1440px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1920px: geometria i typografia bez zmian, różne piksele=0
+PASS smoke /: selektory i 16 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /index.html: selektory i 16 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /cennik.html: selektory i 14 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/: selektory i 16 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/index.html: selektory i 16 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/cennik.html: selektory i 14 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli

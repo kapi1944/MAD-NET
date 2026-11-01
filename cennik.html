@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0c11">
+<meta name="description" content="Interaktywny cennik internetu MAD-NET. Porównaj pakiety światłowodowe, kablowe i bezprzewodowe w Trzebiatowie i okolicach.">
+<title>Cennik internetu — MAD-NET | Internet w Trzebiatowie</title>
+<link rel="icon" type="image/png" href="./assets/img/mad-net-logo.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="stylesheet" href="./assets/css/hero-hybryda.css">
+<link rel="stylesheet" href="./assets/css/nawigacja.css">
+</head>
+<body>
+<header class="wspolny-naglowek nav" id="start">
+ <div class="wspolny-pasek"><a class="wspolne-logo brand" href="./index.html" aria-label="MAD-NET — strona główna"><img src="./assets/img/mad-net-logo.png" width="213" height="60" alt="MAD-NET — Internet | Monitoring | IT"></a>
+ <nav class="menu-glowne" id="nawigacja" aria-label="Nawigacja główna" data-otwarte="false">
+ <a href="./index.html">Start</a><a href="./cennik.html" aria-current="page">Internet</a>
+ <div class="menu-uslugi"><a href="./uslugi.html">Usługi</a><button type="button" class="rozwijanie-uslug" aria-label="Rozwiń usługi" aria-expanded="false" aria-controls="lista-uslug">⌄</button>
+ <div class="lista-uslug" id="lista-uslug" hidden><a href="./internet.html">Internet</a><a href="./monitoring-alarmy.html">Monitoring i alarmy</a><a href="./sieci-it.html">Sieci LAN i usługi IT</a><a href="./strony-www-hosting.html">Strony WWW i hosting</a><a href="./instalacje-tv-sat.html">Instalacje antenowe TV/SAT</a></div></div>
+ <a href="./index.html#o-nas">O firmie</a><a href="./kontakt.html">Kontakt</a></nav>
+ <button type="button" id="animation-toggle" class="przelacznik-animacji" role="switch" aria-checked="true" aria-label="Animacje urządzeń, połączeń i tła PCB"><span>Animacje</span><span class="suwak-animacji" aria-hidden="true"></span></button><a class="wspolne-cta" href="./cennik.html#kontakt" aria-label="Sprawdź dostępność internetu"><span>Sprawdź dostępność</span> ↗</a>
+ <button type="button" class="otwieranie-menu" id="otworz-menu" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nawigacja">☰</button></div></header>
+<div class="signal" aria-hidden="true"></div>
+<main>
+<section class="hero hero--rack-3col" aria-labelledby="hero-heading">
+ <div class="container hero-in">
+ <div class="hero-copy"><div class="eyebrow">MAD-NET / TRZEBIATÓW I OKOLICE / OFERTA INTERNETU</div>
+  <h1 id="hero-heading">Wybierz łącze.<br><em>Zobacz różnicę.</em></h1>
+  <p class="lead">Internet światłowodowy, kablowy i bezprzewodowy. <strong>Trzy technologie, jedna lokalna sieć.</strong> Wskaż urządzenie w szafie, poznaj różnicę i porównaj pakiety.</p>
+  <div class="hero-actions"><a class="btn-primary" href="#cennik">Przeglądaj pakiety <span aria-hidden="true">↘</span></a><a class="btn-ghost" href="#kontakt">Zapytaj o podłączenie →</a></div>
+  <div class="hero-foot"><span>3 technologie transmisji</span><span>13 pakietów w cenniku</span><span>Lokalny operator</span></div>
+ </div>
+ <div class="hero-rack-center" aria-label="Trzy urządzenia MAD-NET w szafie RACK"><div class="hero-rack-stage hero-rack-hybryda" id="hero-rack-stage" data-current-tech="LAN">
+ <div class="rack-box" role="group" aria-label="Szafa RACK MAD-NET — wybierz LAN, FIBER lub AIR">
+ <svg class="grafika-hybrydowa" viewBox="100 40 1350 970" aria-hidden="true" focusable="false">
+ <defs><image id="grafika-bazowa" href="./assets/img/hero-rack-baza.svg" width="1536" height="1024"/><image id="grafika-szafy" href="./assets/img/hero-rack.png" width="1536" height="1024"/>
+
+ <clipPath id="kanal-szafy-0"><rect x="606" y="306" width="18" height="18"/></clipPath>
+<clipPath id="kanal-szafy-1"><rect x="683" y="306" width="18" height="18"/></clipPath>
+<clipPath id="kanal-szafy-2"><rect x="763" y="306" width="18" height="18"/></clipPath>
+<clipPath id="kanal-szafy-3"><rect x="843" y="306" width="18" height="18"/></clipPath>
+<clipPath id="kanal-szafy-4"><rect x="924" y="306" width="18" height="18"/></clipPath>
+<clipPath id="kanal-szafy-5"><rect x="542" y="680" width="76" height="68"/></clipPath>
+<clipPath id="kanal-szafy-6"><rect x="629" y="680" width="76" height="68"/></clipPath>
+<clipPath id="kanal-szafy-7"><rect x="714" y="680" width="76" height="68"/></clipPath>
+<clipPath id="kanal-szafy-8"><rect x="800" y="680" width="76" height="68"/></clipPath>
+<clipPath id="kanal-szafy-9"><rect x="886" y="680" width="76" height="68"/></clipPath><mask id="maska-kontrolek" maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><rect width="1536" height="1024" fill="white"/><rect x="606" y="306" width="18" height="18" fill="black"/>
+<rect x="683" y="306" width="18" height="18" fill="black"/>
+<rect x="763" y="306" width="18" height="18" fill="black"/>
+<rect x="843" y="306" width="18" height="18" fill="black"/>
+<rect x="924" y="306" width="18" height="18" fill="black"/>
+
+
+
+
+</mask><filter id="jasny-symbol" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 1 0 0"/><feComponentTransfer><feFuncA type="linear" slope="8" intercept="-4"/></feComponentTransfer></filter><mask id="maska-fal-air" maskUnits="userSpaceOnUse" x="0" y="0" width="1536" height="1024"><use href="#grafika-szafy" filter="url(#jasny-symbol)"/></mask><clipPath id="fala-air-0-0"><path clip-rule="evenodd" d="M554 731a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M568 731a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-0-1"><path clip-rule="evenodd" d="M539 731a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M554 731a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-0-2"><path clip-rule="evenodd" d="M519 731a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M539 731a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-0"><circle cx="579" cy="731" r="10"/></clipPath>
+<clipPath id="fala-air-1-0"><path clip-rule="evenodd" d="M640 734a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M654 734a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-1-1"><path clip-rule="evenodd" d="M625 734a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M640 734a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-1-2"><path clip-rule="evenodd" d="M605 734a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M625 734a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-1"><circle cx="665" cy="734" r="10"/></clipPath>
+<clipPath id="fala-air-2-0"><path clip-rule="evenodd" d="M726 736a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M740 736a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-2-1"><path clip-rule="evenodd" d="M711 736a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M726 736a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-2-2"><path clip-rule="evenodd" d="M691 736a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M711 736a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-2"><circle cx="751" cy="736" r="10"/></clipPath>
+<clipPath id="fala-air-3-0"><path clip-rule="evenodd" d="M813 739a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M827 739a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-3-1"><path clip-rule="evenodd" d="M798 739a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M813 739a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-3-2"><path clip-rule="evenodd" d="M778 739a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M798 739a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-3"><circle cx="838" cy="739" r="10"/></clipPath>
+<clipPath id="fala-air-4-0"><path clip-rule="evenodd" d="M900 742a25 25 0 1 0 50 0a25 25 0 1 0 -50 0M914 742a11 11 0 1 0 22 0a11 11 0 1 0 -22 0"/></clipPath>
+<clipPath id="fala-air-4-1"><path clip-rule="evenodd" d="M885 742a40 40 0 1 0 80 0a40 40 0 1 0 -80 0M900 742a25 25 0 1 0 50 0a25 25 0 1 0 -50 0"/></clipPath>
+<clipPath id="fala-air-4-2"><path clip-rule="evenodd" d="M865 742a60 60 0 1 0 120 0a60 60 0 1 0 -120 0M885 742a40 40 0 1 0 80 0a40 40 0 1 0 -80 0"/></clipPath>
+<clipPath id="punkt-air-4"><circle cx="925" cy="742" r="10"/></clipPath></defs>
+<g><rect x="606" y="306" width="18" height="18" fill="#06150e"/><rect x="683" y="306" width="18" height="18" fill="#06150e"/><rect x="763" y="306" width="18" height="18" fill="#06150e"/><rect x="843" y="306" width="18" height="18" fill="#06150e"/><rect x="924" y="306" width="18" height="18" fill="#06150e"/></g>
+ <use href="#grafika-bazowa" mask="url(#maska-kontrolek)"/>
+ <g data-technologia-kanalu="LAN" data-speed="10" style="--pulse:5000ms;--phase:-4877ms;--air-cycle:5000ms"><title>LAN – 10 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-0)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="LAN" data-speed="20" style="--pulse:2500ms;--phase:-2180ms;--air-cycle:2500ms"><title>LAN – 20 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-1)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="LAN" data-speed="40" style="--pulse:1250ms;--phase:-733ms;--air-cycle:1250ms"><title>LAN – 40 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-2)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="LAN" data-speed="60" style="--pulse:714ms;--phase:0ms;--air-cycle:714ms"><title>LAN – 60 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-3)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="LAN" data-speed="80" style="--pulse:455ms;--phase:-454ms;--air-cycle:455ms"><title>LAN – 80 Mbit/s</title><g class="rj-link"><g clip-path="url(#kanal-szafy-4)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="FIBER" data-speed="50" style="--pulse:1000ms;--phase:-877ms;--air-cycle:1000ms"><title>FIBER – 50 Mbit/s</title><g class="fiber-activity"><circle cx="644" cy="488" r="3" fill="#7bff95"/></g></g>
+<g data-technologia-kanalu="FIBER" data-speed="100" style="--pulse:333ms;--phase:-13ms;--air-cycle:333ms"><title>FIBER – 100 Mbit/s</title><g class="fiber-activity"><circle cx="722" cy="488" r="3" fill="#7bff95"/></g></g>
+<g data-technologia-kanalu="FIBER" data-speed="300" style="--pulse:167ms;--phase:-151ms;--air-cycle:167ms"><title>FIBER – 300 Mbit/s</title><g class="fiber-activity"><circle cx="800" cy="488" r="3" fill="#7bff95"/></g></g>
+<g data-technologia-kanalu="AIR" data-speed="10" style="--pulse:2400ms;--phase:0ms;--air-cycle:2400ms"><title>AIR – 10 Mbit/s</title><g clip-path="url(#kanal-szafy-5)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-0-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-0-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-0-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-0)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="20" style="--pulse:1818ms;--phase:0ms;--air-cycle:1818ms"><title>AIR – 20 Mbit/s</title><g clip-path="url(#kanal-szafy-6)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-1-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-1-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-1-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-1)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="40" style="--pulse:1224ms;--phase:0ms;--air-cycle:1224ms"><title>AIR – 40 Mbit/s</title><g clip-path="url(#kanal-szafy-7)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-2-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-2-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-2-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-2)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="60" style="--pulse:923ms;--phase:0ms;--air-cycle:923ms"><title>AIR – 60 Mbit/s</title><g clip-path="url(#kanal-szafy-8)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-3-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-3-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-3-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-3)"><use href="#grafika-szafy"/></g></g></g>
+<g data-technologia-kanalu="AIR" data-speed="80" style="--pulse:741ms;--phase:0ms;--air-cycle:741ms"><title>AIR – 80 Mbit/s</title><g clip-path="url(#kanal-szafy-9)" mask="url(#maska-fal-air)"><g class="wi" data-luk="1" style="--kolejnosc:0" clip-path="url(#fala-air-4-0)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="2" style="--kolejnosc:1" clip-path="url(#fala-air-4-1)"><use href="#grafika-szafy"/></g><g class="wi" data-luk="3" style="--kolejnosc:2" clip-path="url(#fala-air-4-2)"><use href="#grafika-szafy"/></g><g clip-path="url(#punkt-air-4)"><use href="#grafika-szafy"/></g></g></g></svg>
+ <button type="button" class="rack-device" data-rack-tech="LAN" aria-controls="hero-tech-panel-content" aria-label="LAN: 5 portów RJ-45, pokaż opis technologii" style="--gora:20.93%;--wysokosc:17.73%;--obrys:polygon(0 12%,100% 0,100% 97%,0 100%);--tech:#ff203e"></button>
+<button type="button" class="rack-device" data-rack-tech="FIBER" aria-controls="hero-tech-panel-content" aria-label="FIBER: 3 porty SC/UPC Simplex, pokaż opis technologii" style="--gora:41.13%;--wysokosc:17.32%;--obrys:polygon(0 2%,100% 0,100% 100%,0 94%);--tech:#ff7b19"></button>
+<button type="button" class="rack-device" data-rack-tech="AIR" aria-controls="hero-tech-panel-content" aria-label="AIR: 5 kanałów radiowych, pokaż opis technologii" style="--gora:60.41%;--wysokosc:18.66%;--obrys:polygon(0 0,100% 8%,100% 100%,0 83%);--tech:#3fa8ff"></button>
+ <div class="rack-sidewall" aria-hidden="true"><i class="tylna-krawedz"></i></div>
+ </div><span class="sr-only" id="rack-current-label">LAN · kablowy</span>
+ </div></div>
+ <aside class="hero-tech-panel" id="hero-tech-panel" data-tech="LAN" aria-label="Opis wskazanej technologii">
+   <div class="hero-tech-panel-top"><span class="hero-tech-overline">TECHNOLOGIA / <strong id="hero-tech-index">01</strong></span><span class="hero-tech-status"><i></i> TRANSMISJA</span></div>
+   <div class="hero-tech-panel-content" id="hero-tech-panel-content" aria-live="polite" aria-atomic="true">
+      <div class="hero-tech-icon" id="hero-tech-icon" aria-hidden="true">▣</div>
+      <h2 id="hero-tech-title">LAN <span>/ kablowy</span></h2>
+      <p id="hero-tech-description">Stabilne łącze Ethernet przez RJ-45. Prędkości od 10 do 80 Mbit/s.</p>
+      <div class="hero-tech-facts"><div><small>DOSTĘPNE PAKIETY</small><strong id="hero-tech-count">5 wariantów</strong></div><div><small>TECHNOLOGIA</small><strong id="hero-tech-socket">RJ-45 / Ethernet</strong></div></div>
+   </div>
+   <a class="hero-tech-link" id="hero-tech-link" href="#cennik">Zobacz pakiety LAN <span aria-hidden="true">↗</span></a>
+ </aside>
+ </div></section>
+<section class="pricing" id="cennik" aria-labelledby="pricing-heading">
+<svg class="pcb-tlo pcb-tlo-gora" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+ <defs><radialGradient id="pcb-gora-swiatlo"><stop stop-color="#FF4057" stop-opacity=".65"/><stop offset=".4" stop-color="#F01436" stop-opacity=".3"/><stop offset="1" stop-color="#F01436" stop-opacity="0"/></radialGradient></defs>
+ <g class="pcb-trasy">
+  <path class="pcb-trasa-widoczna" d="M940 226 L980 186 L1070 186"/>
+  <path class="pcb-trasa-widoczna" d="M560 520 L500 460 L380 460"/>
+  <path id="pcb-gora-trasa-1" class="pcb-trasa-cicha" d="M-1600 36 L0 36 L150 36 L260 146 L450 146 L530 226 L940 226"/>
+  <path id="pcb-gora-trasa-2" class="pcb-trasa-widoczna" d="M-1600 48 L0 48 L150 48 L260 158 L450 158 L530 238 L940 238"/>
+  <path id="pcb-gora-trasa-3" class="pcb-trasa-aktywna" d="M-1600 60 L0 60 L150 60 L260 170 L450 170 L530 250 L940 250"/>
+  <path id="pcb-gora-trasa-4" class="pcb-trasa-cicha" d="M-1600 72 L0 72 L150 72 L260 182 L450 182 L530 262 L940 262"/>
+  <path id="pcb-gora-trasa-5" class="pcb-trasa-widoczna" d="M-1600 84 L0 84 L150 84 L260 194 L450 194 L530 274 L940 274"/>
+  <path id="pcb-gora-trasa-6" class="pcb-trasa-cicha" d="M-1600 96 L0 96 L150 96 L260 206 L450 206 L530 286 L940 286"/>
+  <path id="pcb-gora-trasa-7" class="pcb-trasa-cicha" d="M3040 340 L1440 340 L1270 340 L1170 440 L900 440 L820 520 L560 520"/>
+  <path id="pcb-gora-trasa-8" class="pcb-trasa-widoczna" d="M3040 352 L1440 352 L1270 352 L1170 452 L900 452 L820 532 L560 532"/>
+  <path id="pcb-gora-trasa-9" class="pcb-trasa-widoczna" d="M3040 364 L1440 364 L1270 364 L1170 464 L900 464 L820 544 L560 544"/>
+  <path id="pcb-gora-trasa-10" class="pcb-trasa-cicha" d="M3040 376 L1440 376 L1270 376 L1170 476 L900 476 L820 556 L560 556"/>
+  <path id="pcb-gora-trasa-11" class="pcb-trasa-widoczna" d="M3040 388 L1440 388 L1270 388 L1170 488 L900 488 L820 568 L560 568"/>
+  <path id="pcb-gora-trasa-12" class="pcb-trasa-cicha" d="M3040 400 L1440 400 L1270 400 L1170 500 L900 500 L820 580 L560 580"/>
+  <path id="pcb-gora-lokalna" class="pcb-trasa-aktywna" d="M1000 160 L1180 160 L1230 210 L1440 210 L3040 210"/>
+  <path class="pcb-trasa-cicha" d="M1000 172 L1180 172 L1230 222 L1440 222 L3040 222"/>
+  <path class="pcb-trasa-widoczna" d="M1020 35 L1190 35 L1250 95 L1440 95 L3040 95"/>
+  <path class="pcb-trasa-cicha" d="M1020 47 L1190 47 L1250 107 L1440 107 L3040 107"/>
+ </g>
+ <g class="pcb-kontakty">
+  <rect x="1065" y="183" width="10" height="6" rx="1"/>
+  <rect x="375" y="457" width="10" height="6" rx="1"/>
+  <circle cx="940" cy="226" r="3.2"/>
+  <circle cx="940" cy="238" r="3.2"/>
+  <circle cx="940" cy="250" r="3.2"/>
+  <circle cx="940" cy="262" r="3.2"/>
+  <circle cx="940" cy="274" r="3.2"/>
+  <circle cx="940" cy="286" r="3.2"/>
+  <circle cx="560" cy="520" r="3.2"/>
+  <circle cx="560" cy="532" r="3.2"/>
+  <circle cx="560" cy="544" r="3.2"/>
+  <circle cx="560" cy="556" r="3.2"/>
+  <circle cx="560" cy="568" r="3.2"/>
+  <circle cx="560" cy="580" r="3.2"/>
+  <circle cx="1000" cy="160" r="3.2"/>
+  <circle cx="1000" cy="172" r="3.2"/>
+  <circle cx="1020" cy="35" r="3.2"/>
+  <circle cx="1020" cy="47" r="3.2"/>
+ </g>
+ <g class="pcb-impulsy">
+  <g class="pcb-led"><circle class="pcb-led-poswiata" r="7" fill="url(#pcb-gora-swiatlo)"/><circle class="pcb-led-otoczka" r="3"/><circle class="pcb-led-rdzen" r="1.3"/><animateMotion dur="11s" begin="-3.4s" repeatCount="indefinite" calcMode="paced"><mpath href="#pcb-gora-trasa-3"/></animateMotion></g>
+  <g class="pcb-led pcb-led-dodatkowa"><circle class="pcb-led-poswiata" r="7" fill="url(#pcb-gora-swiatlo)"/><circle class="pcb-led-otoczka" r="3"/><circle class="pcb-led-rdzen" r="1.3"/><animateMotion dur="13s" begin="-8.3s" repeatCount="indefinite" calcMode="paced"><mpath href="#pcb-gora-lokalna"/></animateMotion></g>
+ </g>
+</svg>
+<svg class="pcb-tlo pcb-tlo-srodek" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+ <defs><radialGradient id="pcb-srodek-swiatlo"><stop stop-color="#FF4057" stop-opacity=".65"/><stop offset=".4" stop-color="#F01436" stop-opacity=".3"/><stop offset="1" stop-color="#F01436" stop-opacity="0"/></radialGradient></defs>
+ <g class="pcb-trasy">
+  <path class="pcb-trasa-widoczna" d="M520 200 L460 140 L390 140"/>
+  <path class="pcb-trasa-widoczna" d="M980 520 L1040 460 L1120 460"/>
+  <path id="pcb-srodek-trasa-1" class="pcb-trasa-cicha" d="M3040 20 L1440 20 L1250 20 L1140 130 L960 130 L890 200 L520 200"/>
+  <path id="pcb-srodek-trasa-2" class="pcb-trasa-widoczna" d="M3040 32 L1440 32 L1250 32 L1140 142 L960 142 L890 212 L520 212"/>
+  <path id="pcb-srodek-trasa-3" class="pcb-trasa-aktywna" d="M3040 44 L1440 44 L1250 44 L1140 154 L960 154 L890 224 L520 224"/>
+  <path id="pcb-srodek-trasa-4" class="pcb-trasa-cicha" d="M3040 56 L1440 56 L1250 56 L1140 166 L960 166 L890 236 L520 236"/>
+  <path id="pcb-srodek-trasa-5" class="pcb-trasa-widoczna" d="M3040 68 L1440 68 L1250 68 L1140 178 L960 178 L890 248 L520 248"/>
+  <path id="pcb-srodek-trasa-6" class="pcb-trasa-cicha" d="M3040 80 L1440 80 L1250 80 L1140 190 L960 190 L890 260 L520 260"/>
+  <path id="pcb-srodek-trasa-7" class="pcb-trasa-cicha" d="M-1600 350 L0 350 L230 350 L330 450 L580 450 L650 520 L980 520"/>
+  <path id="pcb-srodek-trasa-8" class="pcb-trasa-widoczna" d="M-1600 362 L0 362 L230 362 L330 462 L580 462 L650 532 L980 532"/>
+  <path id="pcb-srodek-trasa-9" class="pcb-trasa-aktywna" d="M-1600 374 L0 374 L230 374 L330 474 L580 474 L650 544 L980 544"/>
+  <path id="pcb-srodek-trasa-10" class="pcb-trasa-cicha" d="M-1600 386 L0 386 L230 386 L330 486 L580 486 L650 556 L980 556"/>
+  <path id="pcb-srodek-trasa-11" class="pcb-trasa-widoczna" d="M-1600 398 L0 398 L230 398 L330 498 L580 498 L650 568 L980 568"/>
+  <path id="pcb-srodek-trasa-12" class="pcb-trasa-cicha" d="M-1600 410 L0 410 L230 410 L330 510 L580 510 L650 580 L980 580"/>
+  <path class="pcb-trasa-widoczna" d="M350 300 L570 300 L610 340 L780 340"/>
+  <path class="pcb-trasa-cicha" d="M350 312 L570 312 L610 352 L780 352"/>
+  <path class="pcb-trasa-widoczna" d="M-1600 70 L0 70 L180 70 L240 130 L360 130"/>
+  <path class="pcb-trasa-cicha" d="M-1600 82 L0 82 L180 82 L240 142 L360 142"/>
+ </g>
+ <g class="pcb-kontakty">
+  <rect x="385" y="137" width="10" height="6" rx="1"/>
+  <rect x="1115" y="457" width="10" height="6" rx="1"/>
+  <circle cx="520" cy="200" r="3.2"/>
+  <circle cx="520" cy="212" r="3.2"/>
+  <circle cx="520" cy="224" r="3.2"/>
+  <circle cx="520" cy="236" r="3.2"/>
+  <circle cx="520" cy="248" r="3.2"/>
+  <circle cx="520" cy="260" r="3.2"/>
+  <circle cx="980" cy="520" r="3.2"/>
+  <circle cx="980" cy="532" r="3.2"/>
+  <circle cx="980" cy="544" r="3.2"/>
+  <circle cx="980" cy="556" r="3.2"/>
+  <circle cx="980" cy="568" r="3.2"/>
+  <circle cx="980" cy="580" r="3.2"/>
+  <circle cx="350" cy="300" r="3.2"/>
+  <circle cx="780" cy="340" r="3.2"/>
+  <circle cx="350" cy="312" r="3.2"/>
+  <circle cx="780" cy="352" r="3.2"/>
+  <circle cx="360" cy="130" r="3.2"/>
+  <circle cx="360" cy="142" r="3.2"/>
+ </g>
+ <g class="pcb-impulsy">
+  <g class="pcb-led"><circle class="pcb-led-poswiata" r="7" fill="url(#pcb-srodek-swiatlo)"/><circle class="pcb-led-otoczka" r="3"/><circle class="pcb-led-rdzen" r="1.3"/><animateMotion dur="14s" begin="-5.7s" repeatCount="indefinite" calcMode="paced"><mpath href="#pcb-srodek-trasa-3"/></animateMotion></g>
+  <g class="pcb-led pcb-led-dodatkowa"><circle class="pcb-led-poswiata" r="7" fill="url(#pcb-srodek-swiatlo)"/><circle class="pcb-led-otoczka" r="3"/><circle class="pcb-led-rdzen" r="1.3"/><animateMotion dur="17s" begin="-11.2s" repeatCount="indefinite" calcMode="paced"><mpath href="#pcb-srodek-trasa-9"/></animateMotion></g>
+ </g>
+</svg>
+<svg class="pcb-tlo pcb-tlo-dol" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+ <defs><radialGradient id="pcb-dol-swiatlo"><stop stop-color="#FF4057" stop-opacity=".65"/><stop offset=".4" stop-color="#F01436" stop-opacity=".3"/><stop offset="1" stop-color="#F01436" stop-opacity="0"/></radialGradient></defs>
+ <g class="pcb-trasy">
+  <path class="pcb-trasa-widoczna" d="M1090 240 L1150 180 L1240 180"/>
+  <path class="pcb-trasa-widoczna" d="M360 530 L300 470 L190 470"/>
+  <path id="pcb-dol-trasa-1" class="pcb-trasa-cicha" d="M-1600 70 L0 70 L300 70 L390 160 L650 160 L730 240 L1090 240"/>
+  <path id="pcb-dol-trasa-2" class="pcb-trasa-widoczna" d="M-1600 82 L0 82 L300 82 L390 172 L650 172 L730 252 L1090 252"/>
+  <path id="pcb-dol-trasa-3" class="pcb-trasa-aktywna" d="M-1600 94 L0 94 L300 94 L390 184 L650 184 L730 264 L1090 264"/>
+  <path id="pcb-dol-trasa-4" class="pcb-trasa-cicha" d="M-1600 106 L0 106 L300 106 L390 196 L650 196 L730 276 L1090 276"/>
+  <path id="pcb-dol-trasa-5" class="pcb-trasa-widoczna" d="M-1600 118 L0 118 L300 118 L390 208 L650 208 L730 288 L1090 288"/>
+  <path id="pcb-dol-trasa-6" class="pcb-trasa-cicha" d="M-1600 130 L0 130 L300 130 L390 220 L650 220 L730 300 L1090 300"/>
+  <path id="pcb-dol-trasa-7" class="pcb-trasa-cicha" d="M3040 360 L1440 360 L1130 360 L1040 450 L840 450 L760 530 L360 530"/>
+  <path id="pcb-dol-trasa-8" class="pcb-trasa-widoczna" d="M3040 372 L1440 372 L1130 372 L1040 462 L840 462 L760 542 L360 542"/>
+  <path id="pcb-dol-trasa-9" class="pcb-trasa-cicha" d="M3040 384 L1440 384 L1130 384 L1040 474 L840 474 L760 554 L360 554"/>
+  <path id="pcb-dol-trasa-10" class="pcb-trasa-cicha" d="M3040 396 L1440 396 L1130 396 L1040 486 L840 486 L760 566 L360 566"/>
+  <path id="pcb-dol-trasa-11" class="pcb-trasa-widoczna" d="M3040 408 L1440 408 L1130 408 L1040 498 L840 498 L760 578 L360 578"/>
+  <path id="pcb-dol-trasa-12" class="pcb-trasa-cicha" d="M3040 420 L1440 420 L1130 420 L1040 510 L840 510 L760 590 L360 590"/>
+  <path class="pcb-trasa-widoczna" d="M220 300 L400 300 L440 340 L600 340"/>
+  <path class="pcb-trasa-cicha" d="M220 312 L400 312 L440 352 L600 352"/>
+  <path class="pcb-trasa-widoczna" d="M1010 40 L1170 40 L1220 90 L1440 90 L3040 90"/>
+  <path class="pcb-trasa-cicha" d="M1010 52 L1170 52 L1220 102 L1440 102 L3040 102"/>
+ </g>
+ <g class="pcb-kontakty">
+  <rect x="1235" y="177" width="10" height="6" rx="1"/>
+  <rect x="185" y="467" width="10" height="6" rx="1"/>
+  <circle cx="1090" cy="240" r="3.2"/>
+  <circle cx="1090" cy="252" r="3.2"/>
+  <circle cx="1090" cy="264" r="3.2"/>
+  <circle cx="1090" cy="276" r="3.2"/>
+  <circle cx="1090" cy="288" r="3.2"/>
+  <circle cx="1090" cy="300" r="3.2"/>
+  <circle cx="360" cy="530" r="3.2"/>
+  <circle cx="360" cy="542" r="3.2"/>
+  <circle cx="360" cy="554" r="3.2"/>
+  <circle cx="360" cy="566" r="3.2"/>
+  <circle cx="360" cy="578" r="3.2"/>
+  <circle cx="360" cy="590" r="3.2"/>
+  <circle cx="220" cy="300" r="3.2"/>
+  <circle cx="600" cy="340" r="3.2"/>
+  <circle cx="220" cy="312" r="3.2"/>
+  <circle cx="600" cy="352" r="3.2"/>
+  <circle cx="1010" cy="40" r="3.2"/>
+  <circle cx="1010" cy="52" r="3.2"/>
+ </g>
+ <g class="pcb-impulsy">
+  <g class="pcb-led"><circle class="pcb-led-poswiata" r="7" fill="url(#pcb-dol-swiatlo)"/><circle class="pcb-led-otoczka" r="3"/><circle class="pcb-led-rdzen" r="1.3"/><animateMotion dur="19s" begin="-4.5s" repeatCount="indefinite" calcMode="paced"><mpath href="#pcb-dol-trasa-3"/></animateMotion></g>
+ </g>
+</svg>
+<div class="container"><div class="title-row"><div><div class="eyebrow">01 / CENNIK INTERNETU</div><h2 id="pricing-heading">Twój pakiet. <span>Twoje tempo.</span></h2><p class="intro">Wybierz technologię i okres umowy. Porównaj prędkości oraz miesięczny abonament. Wskaż port urządzenia, aby zobaczyć odpowiadający mu pakiet.</p></div></div>
+<div class="pack-top"><h3 id="selected-title">Światłowód / FIBER</h3><span id="selected-count">3 dostępne pakiety</span></div>
+<div class="connection-note" id="connection-state" role="status" aria-live="polite">Najedź na port lub kartę, aby zobaczyć powiązanie. Kliknij, aby połączyć.</div>
+<div class="connection-zone" id="connection-zone">
+ <div class="central-area" id="central-area"><div class="device-techbar" aria-label="Wybór oferty">
+ <div class="wybor-cennika"><span class="device-techbar-title">TECHNOLOGIA INTERNETU</span><div class="segmented device-tech-tabs" role="group" aria-label="Wybierz technologię urządzenia"><button type="button" data-technology="FIBER" aria-pressed="true" title="Światłowód · SC/UPC Simplex">✦ FIBER</button><button type="button" data-technology="LAN" aria-pressed="false" title="Ethernet · RJ-45">▣ LAN</button><button type="button" data-technology="AIR" aria-pressed="false" title="Transmisja radiowa · bez fizycznego gniazda">◉ AIR</button></div></div>
+ <div class="wybor-cennika"><span class="device-techbar-title">UMOWA</span><div class="segmented wybor-umowy" role="group" aria-label="Wybierz okres umowy"><button type="button" data-term="12" aria-pressed="false">1 rok</button><button type="button" data-term="24" aria-pressed="true">2 lata</button><button type="button" data-term="none" aria-pressed="false">Bezterminowo</button></div></div>
+</div><div class="naglowek-urzadzenia"><div class="central-badge"><span class="central-badge-dot"></span> JEDNO URZĄDZENIE · WIELE PRĘDKOŚCI <small id="central-count">3 WARIANTY</small></div></div><div id="central-device"></div><div class="device-guide" id="device-guide">Wskaż kursorem lub przytrzymaj palcem, aby zobaczyć połączenie ↓</div></div>
+ <svg id="link-layer" class="link-layer" aria-hidden="true" preserveAspectRatio="none"><path id="link-casing" class="link-casing"></path><path id="link-active" class="link-active"></path><path id="link-hover" class="link-hover"/></svg>
+ <div class="cards cards-3" id="plans" aria-label="Pakiety cenowe"></div>
+</div><div class="wide-connect" aria-hidden="true"></div><div class="under" id="disclaimer"><strong>Warto wiedzieć:</strong> Urządzenie jest wizualizacją wariantów cenowych, a nie specyfikacją rzeczywistego switcha operatora. Dostępność danej technologii i pakietu zależy od lokalizacji. Cena dotyczy abonamentu dla wybranego czasu trwania umowy; inne opłaty są podane poniżej.</div><section class="compare-block" aria-labelledby="compare-heading"><div class="compare-head"><div><div class="eyebrow">01A / TABELA PARAMETRÓW I CEN</div><h3 class="compare-title" id="compare-heading">Pakiety w tabeli. <span>Porównuj po swojemu.</span></h3><p class="compare-sub">Zaznacz dowolną liczbę technologii — jedną, dwie lub wszystkie trzy. Wybrane cenniki pojawią się poniżej, jeden pod drugim, z oddzielnymi kolorami i pełnymi parametrami. Migające miniporty w nagłówkach ilustrują prędkość pakietów — bez podłączania przewodów.</p></div><div class="compare-chip" id="compare-chip" aria-live="polite" aria-atomic="true">1 z 3 technologii</div></div><div class="compare-filter-grid" role="group" aria-label="Wybierz technologie do wyświetlenia w tabelach cennika"><button type="button" class="compare-filter" data-table-technology="FIBER" aria-pressed="true" aria-controls="comparison-panel"><span class="compare-filter-check" aria-hidden="true">✓</span><span class="compare-filter-symbol" aria-hidden="true">✦</span><span class="compare-filter-copy"><strong>FIBER · Światłowód</strong><small>3 pakiety · SC/UPC simplex</small></span></button><button type="button" class="compare-filter" data-table-technology="LAN" aria-pressed="false" aria-controls="comparison-panel"><span class="compare-filter-check" aria-hidden="true">✓</span><span class="compare-filter-symbol" aria-hidden="true">▣</span><span class="compare-filter-copy"><strong>LAN · Kablowy</strong><small>5 pakietów · Ethernet RJ-45</small></span></button><button type="button" class="compare-filter" data-table-technology="AIR" aria-pressed="false" aria-controls="comparison-panel"><span class="compare-filter-check" aria-hidden="true">✓</span><span class="compare-filter-symbol" aria-hidden="true">◉</span><span class="compare-filter-copy"><strong>AIR · Bezprzewodowy</strong><small>5 pakietów · Sieć radiowa</small></span></button></div><div class="compare-filter-actions"><span>Wybierz kilka kafelków, aby zestawić cenniki.</span><div><button type="button" class="compare-action" id="compare-show-all">Pokaż wszystkie</button><button type="button" class="compare-action" id="compare-clear">Wyczyść wybór</button></div></div><div id="comparison-panel" class="compare-panel-list" aria-label="Wybrane tabele cennika"></div><div class="compare-note"><span><b>Wskazówka:</b> każda tabela zawiera ceny opublikowane dla 24 miesięcy, 12 miesięcy i umowy bezterminowej. Nieopublikowane ceny są opisane, a nie zgadywane.</span><span>Źródło: <a href="https://www.mad-net.pl/cennik.php">cennik MAD-NET</a>, 29.10.2026. Kolory: <b>FIBER</b> pomarańczowy, <b>LAN</b> czerwony, <b>AIR</b> niebieski.</span></div></section></div></section>
+<section class="other" id="oplaty"><div class="container"><div class="eyebrow">02 / WARUNKI I OPŁATY</div><h2 class="other-title">Pozostałe opłaty. <span style="color:var(--red)">Bez zgadywania.</span></h2><p class="intro">Wszystkie poniższe pozycje są przepisane z opublikowanego cennika MAD-NET. Ceny poniżej nie są doliczane automatycznie do abonamentu.</p><details><summary>Otwórz zestawienie opłat jednorazowych i dodatkowych</summary><div style="overflow-x:auto"><table class="fees"><thead><tr><th>Rodzaj opłaty</th><th>Kwota</th><th>Częstotliwość</th></tr></thead><tbody id="fees-body"></tbody></table></div></details><p class="fee-note">Źródło: <a href="https://www.mad-net.pl/cennik.php" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;color:#d8e0e8">aktualnie opublikowany cennik MAD-NET</a>. W razie zmian warunków handlowych należy zaktualizować dane w prototypie przed publikacją.</p></div></section>
+<section class="contact contact--with-map" id="kontakt" aria-labelledby="availability-heading">
+ <div class="container">
+  <div class="availability-intro">
+   <div><div class="eyebrow">03 / INTERNET W TWOIM MIEJSCU</div><h2 id="availability-heading">Sprawdź dostępność <span>pod swoim adresem.</span></h2>
+    <p>Wybierz interesujące Cię technologie i pakiety, określ czas umowy oraz wskaż lokalizację. <strong>Mad-Net potwierdzi możliwość podłączenia</strong> — sam znacznik na mapie nie oznacza dostępności usługi.</p></div>
+   <div class="availability-direct"><a class="btn-primary" href="tel:+48608144747">☎ 608 144 747</a><a class="btn-ghost" href="mailto:biuro@mad-net.pl">✉ biuro@mad-net.pl</a></div>
+  </div>
+  <form id="availability-form" novalidate>
+   <div class="availability-interest">
+    <div class="availability-interest-top"><div class="availability-label"><span class="availability-step">01</span><span>Technologia i pakiet internetowy</span></div><span class="availability-tag">MOŻESZ WYBRAĆ KILKA OPCJI</span></div>
+    <p class="availability-mini">Zaznacz jedną lub więcej technologii, następnie wybierz pakiety. Opcja „Dowolny pakiet” oznacza prośbę o przedstawienie dostępnych możliwości.</p>
+    <div id="availability-interests" class="availability-interest-grid" aria-label="Zainteresowanie ofertami MAD-NET"></div>
+    <div class="availability-contract"><div class="availability-label"><span class="availability-step">02</span><span>Preferowany czas umowy</span></div><fieldset class="availability-contract-options"><legend class="sr-only">Czas trwania umowy — wybierz jedną opcję</legend>
+       <label><input type="radio" name="umowa" value="24" checked><span class="availability-contract-card"><span class="availability-contract-icon" aria-hidden="true">✓</span><span class="availability-contract-copy"><b>24 miesiące</b><small>Umowa dwuletnia</small></span></span></label>
+       <label><input type="radio" name="umowa" value="12"><span class="availability-contract-card"><span class="availability-contract-icon" aria-hidden="true">✓</span><span class="availability-contract-copy"><b>12 miesięcy</b><small>Umowa roczna</small></span></span></label>
+       <label><input type="radio" name="umowa" value="none"><span class="availability-contract-card"><span class="availability-contract-icon" aria-hidden="true">✓</span><span class="availability-contract-copy"><b>Bezterminowo</b><small>Cena ustalana indywidualnie</small></span></span></label>
+      </fieldset></div>
+    <div id="availability-choice-summary" class="availability-choice-summary" role="status" aria-live="polite">Nie wybrano jeszcze technologii.</div>
+   </div>
+   <div class="availability-panel" id="lokalizacja-formularz">
+    <div class="availability-fields"><div class="availability-label"><span class="availability-step">03</span><span>Adres i dane kontaktowe</span></div>
+     <p class="availability-mini">Podaj miejscowość i ulicę lub wskaż punkt na mapie. Potrzebujemy też przynajmniej jednej formy kontaktu.</p>
+     <div class="availability-field"><label for="availability-name">Imię i nazwisko <small>(opcjonalnie)</small></label><input id="availability-name" name="imie" type="text" autocomplete="name" maxlength="100" placeholder="Jak mamy się do Ciebie zwracać?"></div>
+     <div class="availability-field"><label for="availability-town">Miejscowość</label><input id="availability-town" name="miejscowosc" type="text" autocomplete="address-level2" maxlength="90" placeholder="np. Trzebiatów"></div>
+     <div class="availability-field"><label for="availability-street">Ulica i numer budynku</label><input id="availability-street" name="ulica" type="text" autocomplete="street-address" maxlength="130" placeholder="np. Kołobrzeska 12"></div>
+     <div class="availability-field"><button type="button" id="availability-address-search" class="availability-geo-search">⌖ Wyszukaj adres na mapie</button><small class="availability-help">Po zakończeniu wpisywania adresu spróbujemy także automatycznie ustawić znacznik. Lokalizacja będzie orientacyjna.</small></div>
+     <div class="availability-location-summary" id="availability-location-summary" role="status" aria-live="polite"><span class="availability-location-status-dot"></span><span id="availability-location-description">Nie wskazano jeszcze miejsca na mapie.</span></div>
+     <div class="availability-field-row"><div class="availability-field"><label for="availability-phone">Telefon kontaktowy</label><input id="availability-phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="25" placeholder="np. 608 123 456"></div><div class="availability-field"><label for="availability-email">Adres e-mail</label><input id="availability-email" type="email" autocomplete="email" maxlength="150" placeholder="np. klient@domena.pl"></div></div>
+     <p class="availability-help">Podaj numer telefonu, adres e-mail albo oba. Na podany e-mail może zostać wysłane automatyczne potwierdzenie.</p>
+     <div class="availability-field"><label for="availability-comment">Dodatkowe informacje <small>(opcjonalnie)</small></label><textarea id="availability-comment" maxlength="600" rows="3" placeholder="Np. dom jednorodzinny, planowany termin instalacji..."></textarea></div>
+     <label class="availability-consent"><input id="availability-consent" type="checkbox" required><span>Proszę o kontakt w sprawie zapytania i potwierdzam, że podane dane mogą zostać wykorzystane do jego obsługi.</span></label>
+     <div class="availability-actions"><button type="submit" id="availability-submit" class="availability-submit">Wyślij zapytanie <span aria-hidden="true">↗</span></button><button type="button" id="availability-copy" class="availability-copy">⧉ Kopiuj szczegóły</button></div>
+     <p id="availability-feedback" class="availability-feedback" role="status" aria-live="polite"></p>
+     <p class="availability-legal">Zapytania są obsługiwane przez operatora, nie przez automatyczną mapę zasięgu. Działająca wysyłka wymaga uruchomienia modułu serwerowego SMTP; w lokalnym pliku HTML dostępne jest przygotowanie i skopiowanie danych.</p>
+     <div class="availability-thanks" id="availability-thanks" hidden role="status" aria-live="polite"><span class="availability-thanks-check">✓</span><div><strong>Dziękujemy za przesłanie zapytania!</strong><p>Skontaktujemy się na podany numer telefonu lub adres e-mail po sprawdzeniu możliwości podłączenia. Jeśli podano e-mail, automatyczne potwierdzenie zostanie wysłane przez skonfigurowany serwer.</p><button type="button" id="availability-new">Wyślij kolejne zapytanie</button></div></div>
+    </div>
+    <div class="availability-map-col"><div class="availability-map-heading"><div class="availability-label"><span class="availability-step">04</span><span>Wskaż punkt podłączenia</span></div><span class="availability-map-pill">PUNKT ORIENTACYJNY</span></div>
+     <p class="availability-mini">Wpisz adres i wybierz „Wyszukaj adres na mapie” lub uruchom mapę, a następnie kliknij, aby przesunąć pinezkę. Jej pozycję można poprawić ręcznie.</p>
+     <div class="availability-map-shell"><div id="availability-map" class="availability-map" aria-label="Mapa interaktywna okolic Trzebiatowa służąca do wskazania miejsca podłączenia"></div>
+      <div class="availability-map-loading" id="availability-map-loading"><div class="availability-map-preview-icon" aria-hidden="true">⌖</div><strong>Mapa okolic Trzebiatowa</strong><span>Włącz mapę, aby zobaczyć podkład OpenStreetMap i wybrać lokalizację.</span><button type="button" id="availability-map-load">Uruchom mapę</button><small>Wymaga połączenia z internetem.</small></div></div>
+     <div class="availability-map-tools"><button id="availability-map-center" type="button">⌖ Trzebiatów</button><button id="availability-map-pin" type="button" disabled>＋ Wskaż środek mapy</button><button id="availability-map-clear" type="button" disabled>× Usuń punkt</button></div>
+     <p class="availability-map-attribution">Podkład: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>. Adresy: OpenStreetMap Nominatim. Wyniki mogą być niedokładne; możliwość podłączenia potwierdza MAD-NET.</p>
+    </div>
+   </div>
+  </form>
+ </div>
+</section>
+</main><footer class="wspolna-stopka"><div class="stopka-wiersz"><a class="wspolne-logo" href="./index.html" aria-label="MAD-NET — strona główna"><img src="./assets/img/mad-net-logo.png" width="204" height="60" alt="MAD-NET"></a><nav aria-label="Menu w stopce"><a href="./index.html">Start</a><a href="./cennik.html">Internet</a><a href="./uslugi.html">Usługi</a><a href="./index.html#o-nas">O firmie</a><a href="./kontakt.html">Kontakt</a></nav></div><p class="stopka-uwaga">© <span id="rok">2026</span> MAD-NET. Projekt rozwojowy strony. Dostępność usług potwierdzamy indywidualnie.</p></footer>
+<script src="./assets/js/cennik.js"></script>
+<script src="./assets/js/dostepnosc.js"></script>
+
+<script src="./assets/js/hero-rack.js"></script>
+<script src="./assets/js/nawigacja.js"></script>
+<script src="./assets/js/wybor-technologii.js"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@ import { chromium } from 'playwright-core';
 const katalog = new URL('../test-results/v20/po/', import.meta.url);
 await mkdir(katalog, { recursive: true });
 const port = process.env.MADNET_PORT_TESTOW || '4181';
-const adres = `http://127.0.0.1:${port}`;
+const adres = `http://127.0.0.1:${port}/cennik.html`;
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   cwd: new URL('..', import.meta.url), env: { ...process.env, PORT: port }, stdio: ['ignore', 'pipe', 'pipe'],
 });
@@ -86,8 +86,9 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
       const poczatek = performance.now(), probki = [];
       function zmierz() {
         const styl = getComputedStyle(element);
-        probki.push({ czas: performance.now() - poczatek, cien: styl.boxShadow, tlo: styl.backgroundColor });
-        if (performance.now() - poczatek >= 5000) zakoncz(probki);
+        const czas = performance.now() - poczatek;
+        probki.push({ czas, cien: styl.boxShadow, tlo: styl.backgroundColor });
+        if (czas >= 5000) zakoncz(probki);
         else requestAnimationFrame(zmierz);
       }
       zmierz();
@@ -140,7 +141,7 @@ try {
   for (const szerokosc of [390, 768, 1024, 1440]) await sprawdzPodswietlenie(strona, szerokosc);
   await sprawdzPodswietlenie(strona, 1440, true);
   await strona.emulateMedia({ reducedMotion: 'no-preference' });
-  for (const szerokosc of [360, 390, 430, 760, 768, 1024, 1100, 1231, 1280, 1440, 1500, 1510, 1920]) {
+  for (const szerokosc of [320, 360, 375, 380, 390, 400, 414, 430, 480, 560, 760, 768, 800, 1024, 1100, 1230, 1231, 1280, 1440, 1500, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
     await strona.evaluate(() => document.fonts.ready);
@@ -283,7 +284,7 @@ try {
         assert.equal(karta.nazwa, karta.oczekiwana); assert.equal(karta.numeracja, false);
         assert.equal(karta.kolorTechnologii, { LAN: 'rgb(255, 32, 62)', FIBER: 'rgb(255, 123, 25)', AIR: 'rgb(45, 156, 255)' }[technologia]);
         assert.equal(karta.kolorNumeru, 'rgb(245, 246, 248)');
-        assert.ok(karta.etykietaNad && !karta.przepelnienie && karta.separator && karta.bezKolizji); assert.equal(karta.rozmiar, 35.7);
+        assert.ok(karta.etykietaNad && !karta.przepelnienie && karta.separator && karta.bezKolizji, `Geometria karty ${szerokosc}px: ${JSON.stringify(karta)}`); assert.equal(karta.rozmiar, 35.7);
       });
       await strona.locator('#central-device .speed-port').last().click();
       await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));

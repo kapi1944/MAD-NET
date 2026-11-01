@@ -1,0 +1,1614 @@
+{
+  "wyniki": [
+    {
+      "plik": "index.html",
+      "szerokosc": 390,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 390,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 390,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 768,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 768,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 768,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 1440,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 1440,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 1440,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 1920,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 1920,
+      "klawiatura": true,
+      "warstwy": true
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 1920,
+      "klawiatura": true,
+      "warstwy": true
+    }
+  ],
+  "linki": [
+    {
+      "zrodlo": "index.html",
+      "tekst": "Przejdź do treści",
+      "href": "#tresc",
+      "cel": "/index.html#tresc",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Sprawdź dostępność internetu",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Zgłoś awarię / Zapytaj",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Zobacz wszystkie usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Sprawdź ofertę",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Poznaj rozwiązania",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Zobacz możliwości",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Zobacz szczegóły",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Sprawdź szczegóły",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Sprawdź dostępność w swojej miejscowości",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "index.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Przeglądaj pakiety\n↘",
+      "href": "#cennik",
+      "cel": "/cennik.html#cennik",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Zapytaj o podłączenie →",
+      "href": "#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Zobacz pakiety LAN\n↗",
+      "href": "#cennik",
+      "cel": "/cennik.html#cennik",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "cennik.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Szukasz internetu? Zobacz cennik ↗",
+      "href": "./cennik.html#cennik",
+      "cel": "/cennik.html#cennik",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "01 / MAD-NET\nInternet\n\nŚwiatłowodowy, kablowy i bezprzewodowy. Porównaj technologie i pakiety dla domu lub firmy.\n\nPoznaj ofertę internetu\n↗",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "02 / MAD-NET\nMonitoring i alarmy\n\nKamery, systemy alarmowe i kontrola dostępu. Rozwiązania dla domu, firmy i obiektu.\n\nPrzejdź do usługi\n↗",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "03 / MAD-NET\nSieci LAN i usługi IT\n\nSieci LAN i Wi-Fi, serwis komputerów oraz administracja serwerami. Opowiedz nam, czego potrzebujesz.\n\nPrzejdź do usługi\n↗",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "04 / MAD-NET\nStrony WWW i hosting\n\nStrony internetowe, hosting i opieka techniczna. Od obecności w internecie po późniejsze wsparcie.\n\nPrzejdź do usługi\n↗",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "05 / MAD-NET\nInstalacje antenowe TV/SAT\n\nInstalacje telewizyjne, satelitarne i sieciowe. Dobór rozwiązania do Twoich potrzeb i miejsca instalacji.\n\nPrzejdź do usługi\n↗",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "← Wróć na stronę główną",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Porozmawiajmy o Twoich potrzebach ↗",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "uslugi.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Sprawdź dostępność internetu ↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Katalog usług",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "kontakt.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Porównaj pakiety internetu ↗",
+      "href": "./cennik.html#cennik",
+      "cel": "/cennik.html#cennik",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "← Katalog usług",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "internet.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Przejdź do kontaktu ↗",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "← Katalog usług",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "monitoring-alarmy.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Przejdź do kontaktu ↗",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "← Katalog usług",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "sieci-it.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Przejdź do kontaktu ↗",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "← Katalog usług",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "strony-www-hosting.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Internet",
+      "href": "./internet.html",
+      "cel": "/internet.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Monitoring i alarmy",
+      "href": "./monitoring-alarmy.html",
+      "cel": "/monitoring-alarmy.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Sieci LAN i usługi IT",
+      "href": "./sieci-it.html",
+      "cel": "/sieci-it.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Strony WWW i hosting",
+      "href": "./strony-www-hosting.html",
+      "cel": "/strony-www-hosting.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Instalacje antenowe TV/SAT",
+      "href": "./instalacje-tv-sat.html",
+      "cel": "/instalacje-tv-sat.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Sprawdź dostępność\n↗",
+      "href": "./cennik.html#kontakt",
+      "cel": "/cennik.html#kontakt",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Przejdź do kontaktu ↗",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "← Katalog usług",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Start",
+      "href": "./index.html",
+      "cel": "/index.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Internet",
+      "href": "./cennik.html",
+      "cel": "/cennik.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Usługi",
+      "href": "./uslugi.html",
+      "cel": "/uslugi.html",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "O firmie",
+      "href": "./index.html#o-nas",
+      "cel": "/index.html#o-nas",
+      "status": 200
+    },
+    {
+      "zrodlo": "instalacje-tv-sat.html",
+      "tekst": "Kontakt",
+      "href": "./kontakt.html",
+      "cel": "/kontakt.html",
+      "status": 200
+    }
+  ],
+  "przekierowania": [
+    {
+      "zrodlo": "/#cennik",
+      "cel": "/cennik.html#cennik"
+    },
+    {
+      "zrodlo": "/#oplaty",
+      "cel": "/cennik.html#oplaty"
+    },
+    {
+      "zrodlo": "/#kontakt",
+      "cel": "/cennik.html#kontakt"
+    },
+    {
+      "zrodlo": "/index.html#cennik",
+      "cel": "/cennik.html#cennik"
+    },
+    {
+      "zrodlo": "/index.html#oplaty",
+      "cel": "/cennik.html#oplaty"
+    },
+    {
+      "zrodlo": "/index.html#kontakt",
+      "cel": "/cennik.html#kontakt"
+    },
+    {
+      "zrodlo": "/MAD-NET/#cennik",
+      "cel": "/MAD-NET/cennik.html#cennik"
+    },
+    {
+      "zrodlo": "/MAD-NET/#oplaty",
+      "cel": "/MAD-NET/cennik.html#oplaty"
+    },
+    {
+      "zrodlo": "/MAD-NET/#kontakt",
+      "cel": "/MAD-NET/cennik.html#kontakt"
+    },
+    {
+      "zrodlo": "/MAD-NET/index.html#cennik",
+      "cel": "/MAD-NET/cennik.html#cennik"
+    },
+    {
+      "zrodlo": "/MAD-NET/index.html#oplaty",
+      "cel": "/MAD-NET/cennik.html#oplaty"
+    },
+    {
+      "zrodlo": "/MAD-NET/index.html#kontakt",
+      "cel": "/MAD-NET/cennik.html#kontakt"
+    }
+  ],
+  "bledy": [],
+  "konsola": []
+}

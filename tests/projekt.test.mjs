@@ -7,8 +7,18 @@ import { spawnSync } from 'node:child_process';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const text = path => readFileSync(join(root, path), 'utf8');
-const html = text('index.html');
+const html = text('cennik.html');
 const js = text('assets/js/cennik.js');
+
+test('strona główna HOME ma własne zasoby i sekcje', () => {
+  const stronaGlowna = text('index.html');
+  for (const znacznik of ['<html lang="pl">', 'id="tytul-glowny"', 'id="nawigacja"', 'id="mapa-ramka"', './assets/css/home.css', './assets/js/home.js']) {
+    assert.ok(stronaGlowna.includes(znacznik), `HOME: brak ${znacznik}`);
+  }
+  assert.ok(!stronaGlowna.includes('./assets/css/styles.css'));
+  assert.ok(!stronaGlowna.includes('./assets/js/cennik.js'));
+  assert.ok(!existsSync(join(root, 'home.html')), 'HOME ma jedno źródło w index.html');
+});
 
 test('struktura startowa i poprawne odnośniki do rozdzielonych zasobów', () => {
   for (const file of [

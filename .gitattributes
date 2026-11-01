@@ -6,3 +6,5 @@
 *.zip binary
 *.woff binary
 *.woff2 binary
+docs/archiwum/MAD-NET_HOME_V3_JEDEN_PLIK_ORIGINAL.html -text
+assets/img/home/pcb.svg -text

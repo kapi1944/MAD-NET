@@ -1,0 +1,128 @@
+[
+  {
+    "plik": ".github/workflows/ci.yml",
+    "gitBlob": "d54bb859e7b657bff83e9edfc2a894180c835020",
+    "sha256Git": "0673e9f6a013b093b094b3e74af7854f939e8d08ac24caceec4960a2383f5501",
+    "sha256Lokalny": "084220c0934ffea60adeef9506f9aa9891858bf425775d67de1ca4b9d4fe52ac"
+  },
+  {
+    "plik": "assets/css/hero-hybryda.css",
+    "gitBlob": "7dfb9c6ad7a3e1580e8d6db46fdc28c343416a79",
+    "sha256Git": "fd8d05d6a0e34138b81039f331b1123936cd9c0dd471894864c7ed5706689742",
+    "sha256Lokalny": "f89f0b660fbf68274639129fdea02b38c0c5f3c2ef577de8349ae278cc8e031b"
+  },
+  {
+    "plik": "assets/css/styles.css",
+    "gitBlob": "473ab25aa8ef691eca20c5d2b9afbd6a8a021b6e",
+    "sha256Git": "750e68965866bdbcdf4917a385f1909153dc8b0f3a99808594d5140146bfe683",
+    "sha256Lokalny": "d89a611aa2ac74184b36a1d5d6b72fa4c51b5803f8a431afbdd60a5ee8c92ddc"
+  },
+  {
+    "plik": "assets/img/hero-rack-baza.svg",
+    "gitBlob": "36fd607508dc9d7c865ed70593e32b292ed18e7c",
+    "sha256Git": "ce21c9859295ba2dd9c8b2359c8263d2907eb134103f86f1de1ed344d069c91c",
+    "sha256Lokalny": "ce21c9859295ba2dd9c8b2359c8263d2907eb134103f86f1de1ed344d069c91c"
+  },
+  {
+    "plik": "assets/img/hero-rack.png",
+    "gitBlob": "8f6465b48d773e7cdb97a80fe84623961972696c",
+    "sha256Git": "15ddd4ba9fe261f63076a93e317e73b081e031ffd57b6bffd8ef9c32af1a1b91",
+    "sha256Lokalny": "15ddd4ba9fe261f63076a93e317e73b081e031ffd57b6bffd8ef9c32af1a1b91"
+  },
+  {
+    "plik": "assets/img/hero/plyta-pcb.webp",
+    "gitBlob": "610a7fd6022685c83b010f760efce377ff430046",
+    "sha256Git": "dc0496bcef5649a6405e0a2368a317b29188447177922a78bd70eaa2a4ccc171",
+    "sha256Lokalny": "dc0496bcef5649a6405e0a2368a317b29188447177922a78bd70eaa2a4ccc171"
+  },
+  {
+    "plik": "assets/img/mad-net-logo.png",
+    "gitBlob": "056175f3085368dfcc61a7fca334a4f6a5e342c4",
+    "sha256Git": "c4e1212686db659038f85ce9788f40912e09b522da320475c1ba794776f5c575",
+    "sha256Lokalny": "c4e1212686db659038f85ce9788f40912e09b522da320475c1ba794776f5c575"
+  },
+  {
+    "plik": "assets/js/cennik.js",
+    "gitBlob": "04318a4cab80d8b5f6a466259b6d4bd66b45f33e",
+    "sha256Git": "0beeabe6b5788752b2045b69ea819aa43a537da6722c015c07f36f50cfc80fe4",
+    "sha256Lokalny": "413c2bb90a6918f285876323d7e46d143c40a23447b30ac79fee3fc76887c0a9"
+  },
+  {
+    "plik": "assets/js/dostepnosc.js",
+    "gitBlob": "6e9f343733eec0da71fd724a57e7f2c33b36619d",
+    "sha256Git": "8be15a31b594b5103556a0a2a6ca4497f643d4d876321c081572862226d1dee6",
+    "sha256Lokalny": "d7af734e1380459eb1bc744838287239a7550e26c8d3dc2dbe15634c346cb9be"
+  },
+  {
+    "plik": "assets/js/hero-rack.js",
+    "gitBlob": "2cb01f858f2cb431018c9bf357cbc37d3bb9c6c5",
+    "sha256Git": "f6dec6ea9038be963e3393d01f41c1362ecd148c01ddaed489fefcfdeaebf909",
+    "sha256Lokalny": "bc39b7b73fa1fc9b69645d96670eefb028c4f1f67da18831bb854f138d68e79c"
+  },
+  {
+    "plik": "index.html",
+    "gitBlob": "c64a5578745b5c6c4d4a417758136b3e7f2f3583",
+    "sha256Git": "37acff1b56c20f91c93896cf187291f5312ee8d501dfeb64d6920c4d670d69a7",
+    "sha256Lokalny": "94ead1c0f4c9c0b877e82ba116495635d39db6864c1393b7212a1a43a55c2a7d"
+  },
+  {
+    "plik": "package-lock.json",
+    "gitBlob": "55594b1398b9c076a690b99907acb5559aaa6b09",
+    "sha256Git": "9f3f921953854f3ee42bbe491fbfdc758ce0beee9eff4f8340519e0410d323d5",
+    "sha256Lokalny": "9f3f921953854f3ee42bbe491fbfdc758ce0beee9eff4f8340519e0410d323d5"
+  },
+  {
+    "plik": "package.json",
+    "gitBlob": "4146c6e69d89342674163c48c9a9fc13ca64af65",
+    "sha256Git": "b5ea786f9999cb6cbba2f71006e0b64d6ce8bc291b57958dbbc0a9d84d1ddc4a",
+    "sha256Lokalny": "d632ae63fa9d42224c7a47fb326938a2ed484e3d8c7dec58698608f41ec8280f"
+  },
+  {
+    "plik": "scripts/build.mjs",
+    "gitBlob": "07fe4246a0cd55ac6c4242ea36308702ad801377",
+    "sha256Git": "52d5f1ee4ae0a03064f169a4e19c7a38894bdba7b7b4d2a44de18f02d9a6233b",
+    "sha256Lokalny": "52d5f1ee4ae0a03064f169a4e19c7a38894bdba7b7b4d2a44de18f02d9a6233b"
+  },
+  {
+    "plik": "scripts/init-git.ps1",
+    "gitBlob": "8142ccbdc1a50c81a021c5e7c49ba8e7678d126e",
+    "sha256Git": "8be760113a580b0efa79733ea312900f19581f2128ab1939d9dd83d5b9e0ccf5",
+    "sha256Lokalny": "8be760113a580b0efa79733ea312900f19581f2128ab1939d9dd83d5b9e0ccf5"
+  },
+  {
+    "plik": "scripts/publish-github.ps1",
+    "gitBlob": "2e23ef0023310e530a4a768687171118449207f9",
+    "sha256Git": "f8c47141c588b97c1bebd4b69f1ac94859e83781006913f00b9a07aca91afe3c",
+    "sha256Lokalny": "f8c47141c588b97c1bebd4b69f1ac94859e83781006913f00b9a07aca91afe3c"
+  },
+  {
+    "plik": "scripts/serve.mjs",
+    "gitBlob": "a123a04349b0b7761ef758839b92ff401ba1f6de",
+    "sha256Git": "24ec91776ca4e0d166387ac60a5dee3ff3b987223828f4dc91845f30de0600c8",
+    "sha256Lokalny": "24ec91776ca4e0d166387ac60a5dee3ff3b987223828f4dc91845f30de0600c8"
+  },
+  {
+    "plik": "tests/pcb.browser.mjs",
+    "gitBlob": "0fc233fd9bcf3efc909f1bd7f658276a5be6615c",
+    "sha256Git": "b573cc69aa4149e281a7d391be29286ec42e21ff0d8ef38d4b2f34f41998632a",
+    "sha256Lokalny": "b573cc69aa4149e281a7d391be29286ec42e21ff0d8ef38d4b2f34f41998632a"
+  },
+  {
+    "plik": "tests/projekt.test.mjs",
+    "gitBlob": "deb69bef22b082ea2ddaf1e02e45933c15c55d01",
+    "sha256Git": "1ec0cce2bc372e464a3127a9f7170d4c126ba9103daf141e6b69e0e584e53b05",
+    "sha256Lokalny": "1ec0cce2bc372e464a3127a9f7170d4c126ba9103daf141e6b69e0e584e53b05"
+  },
+  {
+    "plik": "tests/v20.browser.mjs",
+    "gitBlob": "921b5d58336e16c03bd46097b823346cf6b2be97",
+    "sha256Git": "d30e154fd788b25f75f2361600018e88fff7ea9a365e8e3cebf29747ea0caeda",
+    "sha256Lokalny": "7062c80d12d3a6d75d789e1cb04de7135f1407c8703998ee183e31579ee3576a"
+  },
+  {
+    "plik": "tests/v21.browser.mjs",
+    "gitBlob": "2028502f40ef8e2932dc689ff57a2e21ce76f466",
+    "sha256Git": "337e2e581a70c72d77334e640ce294a5ef979ba3100234419e99f293a6f46c69",
+    "sha256Lokalny": "e59b70c103eab4415dab896df1984543827ae16b67fd358ddc8d0e0fdd13145d"
+  }
+]

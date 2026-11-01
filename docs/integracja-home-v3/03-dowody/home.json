@@ -1,0 +1,3780 @@
+{
+  "wyniki": [
+    {
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 718,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": "h1",
+          "x": 17,
+          "y": 77,
+          "szerokosc": 356,
+          "wysokosc": 153,
+          "font": "900 51px / 51px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 17,
+          "y": 248,
+          "szerokosc": 356,
+          "wysokosc": 95.6875,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 17,
+          "y": 369.6875,
+          "szerokosc": 340,
+          "wysokosc": 110,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 390,
+          "wysokosc": 716.375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "ukryty": true
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 17,
+          "y": 77,
+          "szerokosc": 356,
+          "wysokosc": 153,
+          "font": "900 51px / 51px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 17,
+          "y": 248,
+          "szerokosc": 356,
+          "wysokosc": 95.6875,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 17,
+          "y": 369.6875,
+          "szerokosc": 340,
+          "wysokosc": 110,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 390,
+          "wysokosc": 716.375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "ukryty": true
+        }
+      ]
+    },
+    {
+      "strona": "karty HOME",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 356,
+        "wysokosc": 1048,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "kartyGeometriaPrzed": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 11,
+          "y": 197,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 11,
+          "y": 236,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 11,
+          "y": 299.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 184.5,
+          "y": 1,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 194.5,
+          "y": 197,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 194.5,
+          "y": 236,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 194.5,
+          "y": 299.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 358.59375,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 11,
+          "y": 554.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 11,
+          "y": 593.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 11,
+          "y": 657.1875,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 184.5,
+          "y": 358.59375,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 194.5,
+          "y": 554.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 194.5,
+          "y": 593.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 194.5,
+          "y": 657.1875,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 716.1875,
+          "szerokosc": 170,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 11,
+          "y": 912.1875,
+          "szerokosc": 150,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 11,
+          "y": 951.1875,
+          "szerokosc": 150,
+          "wysokosc": 31.0625,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 11,
+          "y": 999.25,
+          "szerokosc": 150,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ],
+      "kartyGeometriaPo": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 11,
+          "y": 197,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 11,
+          "y": 236,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 11,
+          "y": 299.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 184.5,
+          "y": 1,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 194.5,
+          "y": 197,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 194.5,
+          "y": 236,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 194.5,
+          "y": 299.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 358.59375,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 11,
+          "y": 554.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 11,
+          "y": 593.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 11,
+          "y": 657.1875,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 184.5,
+          "y": 358.59375,
+          "szerokosc": 170.5,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 194.5,
+          "y": 554.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 194.5,
+          "y": 593.59375,
+          "szerokosc": 150.5,
+          "wysokosc": 46.59375,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 194.5,
+          "y": 657.1875,
+          "szerokosc": 150.5,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 716.1875,
+          "szerokosc": 170,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 11,
+          "y": 912.1875,
+          "szerokosc": 150,
+          "wysokosc": 30,
+          "font": "700 12.7px / 14.986px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 11,
+          "y": 951.1875,
+          "szerokosc": 150,
+          "wysokosc": 31.0625,
+          "font": "10.5px / 15.54px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 11,
+          "y": 999.25,
+          "szerokosc": 150,
+          "wysokosc": 33,
+          "font": "800 10px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ]
+    },
+    {
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 686,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": "h1",
+          "x": 19,
+          "y": 88,
+          "szerokosc": 530,
+          "wysokosc": 191.25,
+          "font": "900 63.744px / 63.744px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 19,
+          "y": 298.25,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 19,
+          "y": 396.015625,
+          "szerokosc": 530,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 768,
+          "wysokosc": 684.015625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "ukryty": true
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 19,
+          "y": 88,
+          "szerokosc": 530,
+          "wysokosc": 191.25,
+          "font": "900 63.744px / 63.744px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 19,
+          "y": 298.25,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 19,
+          "y": 396.015625,
+          "szerokosc": 530,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 768,
+          "wysokosc": 684.015625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "ukryty": true
+        }
+      ]
+    },
+    {
+      "strona": "karty HOME",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 730,
+        "wysokosc": 952,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "kartyGeometriaPrzed": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 13,
+          "y": 198,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 13,
+          "y": 223.515625,
+          "szerokosc": 333,
+          "wysokosc": 33.875,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 13,
+          "y": 274.390625,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 372,
+          "y": 1,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 384,
+          "y": 198,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 384,
+          "y": 223.515625,
+          "szerokosc": 333,
+          "wysokosc": 33.875,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 384,
+          "y": 274.390625,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 333.390625,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 13,
+          "y": 530.390625,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 13,
+          "y": 555.90625,
+          "szerokosc": 333,
+          "wysokosc": 16.9375,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 13,
+          "y": 589.84375,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 372,
+          "y": 333.390625,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 384,
+          "y": 530.390625,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 384,
+          "y": 555.90625,
+          "szerokosc": 333,
+          "wysokosc": 16.9375,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 384,
+          "y": 589.84375,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 648.84375,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 13,
+          "y": 845.84375,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 13,
+          "y": 871.359375,
+          "szerokosc": 333,
+          "wysokosc": 16.9375,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 13,
+          "y": 905.296875,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ],
+      "kartyGeometriaPo": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 13,
+          "y": 198,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 13,
+          "y": 223.515625,
+          "szerokosc": 333,
+          "wysokosc": 33.875,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 13,
+          "y": 274.390625,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 372,
+          "y": 1,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 384,
+          "y": 198,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 384,
+          "y": 223.515625,
+          "szerokosc": 333,
+          "wysokosc": 33.875,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 384,
+          "y": 274.390625,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 333.390625,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 13,
+          "y": 530.390625,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 13,
+          "y": 555.90625,
+          "szerokosc": 333,
+          "wysokosc": 16.9375,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 13,
+          "y": 589.84375,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 372,
+          "y": 333.390625,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 384,
+          "y": 530.390625,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 384,
+          "y": 555.90625,
+          "szerokosc": 333,
+          "wysokosc": 16.9375,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 384,
+          "y": 589.84375,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 648.84375,
+          "szerokosc": 357,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 13,
+          "y": 845.84375,
+          "szerokosc": 333,
+          "wysokosc": 16.515625,
+          "font": "700 14px / 16.52px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 13,
+          "y": 871.359375,
+          "szerokosc": 333,
+          "wysokosc": 16.9375,
+          "font": "11px / 16.94px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 13,
+          "y": 905.296875,
+          "szerokosc": 333,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ]
+    },
+    {
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 593,
+        "roznePiksele": 31735,
+        "maksymalnaRoznica": 6
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": "h1",
+          "x": 31,
+          "y": 74,
+          "szerokosc": 548.328125,
+          "wysokosc": 174,
+          "font": "900 58px / 58px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 31,
+          "y": 267,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 31,
+          "y": 364.765625,
+          "szerokosc": 548.328125,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 307.1875,
+          "y": 0,
+          "szerokosc": 716.8125,
+          "wysokosc": 591.765625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "ukryty": true
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 31,
+          "y": 74,
+          "szerokosc": 548.328125,
+          "wysokosc": 174,
+          "font": "900 58px / 58px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 31,
+          "y": 267,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 31,
+          "y": 364.765625,
+          "szerokosc": 548.328125,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 307.1875,
+          "y": 0,
+          "szerokosc": 716.8125,
+          "wysokosc": 591.765625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "ukryty": true
+        }
+      ]
+    },
+    {
+      "strona": "karty HOME",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 962,
+        "wysokosc": 676,
+        "roznePiksele": 27387,
+        "maksymalnaRoznica": 48
+      },
+      "kartyGeometriaPrzed": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 199,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 226.28125,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 280.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 327.328125,
+          "y": 1,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 343.328125,
+          "y": 199,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 343.328125,
+          "y": 226.28125,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 343.328125,
+          "y": 280.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 653.65625,
+          "y": 1,
+          "szerokosc": 307.34375,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 669.65625,
+          "y": 199,
+          "szerokosc": 275.34375,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 669.65625,
+          "y": 226.28125,
+          "szerokosc": 275.34375,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 669.65625,
+          "y": 280.21875,
+          "szerokosc": 275.34375,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 347.21875,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 545.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 572.5,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 626.4375,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 327.328125,
+          "y": 347.21875,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 343.328125,
+          "y": 545.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 343.328125,
+          "y": 572.5,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 343.328125,
+          "y": 626.4375,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ],
+      "kartyGeometriaPo": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 199,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 226.28125,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 280.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 327.328125,
+          "y": 1,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 343.328125,
+          "y": 199,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 343.328125,
+          "y": 226.28125,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 343.328125,
+          "y": 280.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 653.65625,
+          "y": 1,
+          "szerokosc": 307.34375,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 669.65625,
+          "y": 199,
+          "szerokosc": 275.34375,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 669.65625,
+          "y": 226.28125,
+          "szerokosc": 275.34375,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 669.65625,
+          "y": 280.21875,
+          "szerokosc": 275.34375,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 347.21875,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 545.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 572.5,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 626.4375,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 327.328125,
+          "y": 347.21875,
+          "szerokosc": 307.328125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 343.328125,
+          "y": 545.21875,
+          "szerokosc": 275.328125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 343.328125,
+          "y": 572.5,
+          "szerokosc": 275.328125,
+          "wysokosc": 36.9375,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 343.328125,
+          "y": 626.4375,
+          "szerokosc": 275.328125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ]
+    },
+    {
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 591,
+        "roznePiksele": 21071,
+        "maksymalnaRoznica": 1
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": "h1",
+          "x": 38,
+          "y": 74,
+          "szerokosc": 632,
+          "wysokosc": 222.46875,
+          "font": "900 74.16px / 74.16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 38,
+          "y": 315.46875,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 38,
+          "y": 413.234375,
+          "szerokosc": 632,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 532.796875,
+          "y": 0,
+          "szerokosc": 907.203125,
+          "wysokosc": 589.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 924.97607421875,
+          "y": 299.15631103515625,
+          "szerokosc": 361.0478515625,
+          "wysokosc": 193.6873779296875,
+          "font": "0px / 0px \"Segoe Print\", \"Bradley Hand\", cursive",
+          "color": "rgb(247, 235, 221)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 38,
+          "y": 74,
+          "szerokosc": 632,
+          "wysokosc": 222.46875,
+          "font": "900 74.16px / 74.16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 38,
+          "y": 315.46875,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 38,
+          "y": 413.234375,
+          "szerokosc": 632,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 532.796875,
+          "y": 0,
+          "szerokosc": 907.203125,
+          "wysokosc": 589.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 924.97607421875,
+          "y": 299.15631103515625,
+          "szerokosc": 361.0478515625,
+          "wysokosc": 193.6873779296875,
+          "font": "0px / 0px \"Segoe Print\", \"Bradley Hand\", cursive",
+          "color": "rgb(247, 235, 221)"
+        }
+      ]
+    },
+    {
+      "strona": "karty HOME",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1364,
+        "wysokosc": 349,
+        "roznePiksele": 15991,
+        "maksymalnaRoznica": 1
+      },
+      "kartyGeometriaPrzed": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 257.1875,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 199,
+          "szerokosc": 225.1875,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 226.28125,
+          "szerokosc": 225.1875,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 298.6875,
+          "szerokosc": 225.1875,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 277.1875,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 293.1875,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 293.1875,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 293.1875,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 553.390625,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 569.390625,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 569.390625,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 569.390625,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 829.59375,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 845.59375,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 845.59375,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 845.59375,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1105.796875,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 1121.796875,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 1121.796875,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 1121.796875,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ],
+      "kartyGeometriaPo": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 257.1875,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 199,
+          "szerokosc": 225.1875,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 226.28125,
+          "szerokosc": 225.1875,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 298.6875,
+          "szerokosc": 225.1875,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 277.1875,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 293.1875,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 293.1875,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 293.1875,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 553.390625,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 569.390625,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 569.390625,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 569.390625,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 829.59375,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 845.59375,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 845.59375,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 845.59375,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1105.796875,
+          "y": 1,
+          "szerokosc": 257.203125,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 1121.796875,
+          "y": 199,
+          "szerokosc": 225.203125,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 1121.796875,
+          "y": 226.28125,
+          "szerokosc": 225.203125,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 1121.796875,
+          "y": 298.6875,
+          "szerokosc": 225.203125,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ]
+    },
+    {
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 602,
+        "roznePiksele": 56762,
+        "maksymalnaRoznica": 2
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": "h1",
+          "x": 270,
+          "y": 74,
+          "szerokosc": 632,
+          "wysokosc": 234,
+          "font": "900 78px / 78px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 270,
+          "y": 327,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 270,
+          "y": 424.765625,
+          "szerokosc": 632,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 710.390625,
+          "y": 0,
+          "szerokosc": 1209.609375,
+          "wysokosc": 600.765625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 1172.97607421875,
+          "y": 304.92193603515625,
+          "szerokosc": 361.0478515625,
+          "wysokosc": 193.6873779296875,
+          "font": "0px / 0px \"Segoe Print\", \"Bradley Hand\", cursive",
+          "color": "rgb(247, 235, 221)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 270,
+          "y": 74,
+          "szerokosc": 632,
+          "wysokosc": 234,
+          "font": "900 78px / 78px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 270,
+          "y": 327,
+          "szerokosc": 525,
+          "wysokosc": 71.765625,
+          "font": "14.6px / 23.944px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(213, 218, 224)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 270,
+          "y": 424.765625,
+          "szerokosc": 632,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 710.390625,
+          "y": 0,
+          "szerokosc": 1209.609375,
+          "wysokosc": 600.765625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".podpis-lokalny",
+          "x": 1172.97607421875,
+          "y": 304.92193603515625,
+          "szerokosc": 361.0478515625,
+          "wysokosc": 193.6873779296875,
+          "font": "0px / 0px \"Segoe Print\", \"Bradley Hand\", cursive",
+          "color": "rgb(247, 235, 221)"
+        }
+      ]
+    },
+    {
+      "strona": "karty HOME",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1380,
+        "wysokosc": 349,
+        "roznePiksele": 18402,
+        "maksymalnaRoznica": 3
+      },
+      "kartyGeometriaPrzed": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 260.390625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 199,
+          "szerokosc": 228.390625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 226.28125,
+          "szerokosc": 228.390625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 298.6875,
+          "szerokosc": 228.390625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 280.390625,
+          "y": 1,
+          "szerokosc": 260.40625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 296.390625,
+          "y": 199,
+          "szerokosc": 228.40625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 296.390625,
+          "y": 226.28125,
+          "szerokosc": 228.40625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 296.390625,
+          "y": 298.6875,
+          "szerokosc": 228.40625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 559.796875,
+          "y": 1,
+          "szerokosc": 260.390625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 575.796875,
+          "y": 199,
+          "szerokosc": 228.390625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 575.796875,
+          "y": 226.28125,
+          "szerokosc": 228.390625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 575.796875,
+          "y": 298.6875,
+          "szerokosc": 228.390625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 839.1875,
+          "y": 1,
+          "szerokosc": 260.40625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 855.1875,
+          "y": 199,
+          "szerokosc": 228.40625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 855.1875,
+          "y": 226.28125,
+          "szerokosc": 228.40625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 855.1875,
+          "y": 298.6875,
+          "szerokosc": 228.40625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1118.59375,
+          "y": 1,
+          "szerokosc": 260.390625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 1134.59375,
+          "y": 199,
+          "szerokosc": 228.390625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 1134.59375,
+          "y": 226.28125,
+          "szerokosc": 228.390625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 1134.59375,
+          "y": 298.6875,
+          "szerokosc": 228.390625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ],
+      "kartyGeometriaPo": [
+        {
+          "numer": 0,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1,
+          "y": 1,
+          "szerokosc": 260.390625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi h3",
+          "x": 17,
+          "y": 199,
+          "szerokosc": 228.390625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".tresc-uslugi p",
+          "x": 17,
+          "y": 226.28125,
+          "szerokosc": 228.390625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 0,
+          "selektor": ".link-karty",
+          "x": 17,
+          "y": 298.6875,
+          "szerokosc": 228.390625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".zdjecie-uslugi",
+          "x": 280.390625,
+          "y": 1,
+          "szerokosc": 260.40625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi h3",
+          "x": 296.390625,
+          "y": 199,
+          "szerokosc": 228.40625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".tresc-uslugi p",
+          "x": 296.390625,
+          "y": 226.28125,
+          "szerokosc": 228.40625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 1,
+          "selektor": ".link-karty",
+          "x": 296.390625,
+          "y": 298.6875,
+          "szerokosc": 228.40625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".zdjecie-uslugi",
+          "x": 559.796875,
+          "y": 1,
+          "szerokosc": 260.390625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi h3",
+          "x": 575.796875,
+          "y": 199,
+          "szerokosc": 228.390625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".tresc-uslugi p",
+          "x": 575.796875,
+          "y": 226.28125,
+          "szerokosc": 228.390625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 2,
+          "selektor": ".link-karty",
+          "x": 575.796875,
+          "y": 298.6875,
+          "szerokosc": 228.390625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".zdjecie-uslugi",
+          "x": 839.1875,
+          "y": 1,
+          "szerokosc": 260.40625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi h3",
+          "x": 855.1875,
+          "y": 199,
+          "szerokosc": 228.40625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".tresc-uslugi p",
+          "x": 855.1875,
+          "y": 226.28125,
+          "szerokosc": 228.40625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 3,
+          "selektor": ".link-karty",
+          "x": 855.1875,
+          "y": 298.6875,
+          "szerokosc": 228.40625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".zdjecie-uslugi",
+          "x": 1118.59375,
+          "y": 1,
+          "szerokosc": 260.390625,
+          "wysokosc": 185,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 32, 62)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi h3",
+          "x": 1134.59375,
+          "y": 199,
+          "szerokosc": 228.390625,
+          "wysokosc": 18.28125,
+          "font": "700 15.5px / 18.29px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".tresc-uslugi p",
+          "x": 1134.59375,
+          "y": 226.28125,
+          "szerokosc": 228.390625,
+          "wysokosc": 55.40625,
+          "font": "12px / 18.48px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(180, 189, 200)"
+        },
+        {
+          "numer": 4,
+          "selektor": ".link-karty",
+          "x": 1134.59375,
+          "y": 298.6875,
+          "szerokosc": 228.390625,
+          "wysokosc": 33,
+          "font": "800 11.5px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(255, 57, 84)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 7911,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 390,
+          "wysokosc": 946.96875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 18,
+          "y": 252.625,
+          "szerokosc": 354,
+          "wysokosc": 254.34375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 18,
+          "y": 518.96875,
+          "szerokosc": 354,
+          "wysokosc": 274,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 18,
+          "y": 1233.328125,
+          "szerokosc": 354,
+          "wysokosc": 1660.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 36,
+          "y": 1441.328125,
+          "szerokosc": 96,
+          "wysokosc": 27.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 18,
+          "y": 1703.46875,
+          "szerokosc": 354,
+          "wysokosc": 1190,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 33,
+          "y": 3719.25,
+          "szerokosc": 324,
+          "wysokosc": 369.25,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 18,
+          "y": 5152.65625,
+          "szerokosc": 354,
+          "wysokosc": 2704.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 390,
+          "wysokosc": 946.96875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 18,
+          "y": 252.625,
+          "szerokosc": 354,
+          "wysokosc": 254.34375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 18,
+          "y": 518.96875,
+          "szerokosc": 354,
+          "wysokosc": 274,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 18,
+          "y": 1233.328125,
+          "szerokosc": 354,
+          "wysokosc": 1660.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 36,
+          "y": 1441.328125,
+          "szerokosc": 96,
+          "wysokosc": 27.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 18,
+          "y": 1703.46875,
+          "szerokosc": 354,
+          "wysokosc": 1190,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 33,
+          "y": 3719.25,
+          "szerokosc": 324,
+          "wysokosc": 369.25,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 18,
+          "y": 5152.65625,
+          "szerokosc": 354,
+          "wysokosc": 2704.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 6311,
+        "roznePiksele": 1873,
+        "maksymalnaRoznica": 58
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 768,
+          "wysokosc": 1073.578125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 104,
+          "y": 253.21875,
+          "szerokosc": 560,
+          "wysokosc": 402.359375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 667.578125,
+          "szerokosc": 704,
+          "wysokosc": 274,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1351.546875,
+          "szerokosc": 704,
+          "wysokosc": 850,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 122,
+          "y": 1531.546875,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1825.546875,
+          "szerokosc": 704,
+          "wysokosc": 376,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 2882.53125,
+          "szerokosc": 658,
+          "wysokosc": 391.75,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 4138.0625,
+          "szerokosc": 704,
+          "wysokosc": 2100.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 768,
+          "wysokosc": 1073.578125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 104,
+          "y": 253.21875,
+          "szerokosc": 560,
+          "wysokosc": 402.359375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 667.578125,
+          "szerokosc": 704,
+          "wysokosc": 274,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1351.546875,
+          "szerokosc": 704,
+          "wysokosc": 850,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 122,
+          "y": 1531.546875,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1825.546875,
+          "szerokosc": 704,
+          "wysokosc": 376,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 2882.53125,
+          "szerokosc": 658,
+          "wysokosc": 391.75,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 4138.0625,
+          "szerokosc": 704,
+          "wysokosc": 2100.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 5097,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1024,
+          "wysokosc": 730.21875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 480.90625,
+          "y": 64,
+          "szerokosc": 511.09375,
+          "wysokosc": 367.21875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 451.21875,
+          "szerokosc": 960,
+          "wysokosc": 236,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1012.359375,
+          "szerokosc": 960,
+          "wysokosc": 794,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 250,
+          "y": 1136.359375,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1430.359375,
+          "szerokosc": 960,
+          "wysokosc": 376,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 2314.015625,
+          "szerokosc": 914,
+          "wysokosc": 405.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 3479.375,
+          "szerokosc": 960,
+          "wysokosc": 1545.171875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1024,
+          "wysokosc": 730.21875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 480.90625,
+          "y": 64,
+          "szerokosc": 511.09375,
+          "wysokosc": 367.21875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 451.21875,
+          "szerokosc": 960,
+          "wysokosc": 236,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1012.359375,
+          "szerokosc": 960,
+          "wysokosc": 794,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 250,
+          "y": 1136.359375,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1430.359375,
+          "szerokosc": 960,
+          "wysokosc": 376,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 2314.015625,
+          "szerokosc": 914,
+          "wysokosc": 405.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 3479.375,
+          "szerokosc": 960,
+          "wysokosc": 1545.171875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 4880,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1440,
+          "wysokosc": 651,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 441.625,
+          "y": 67.59375,
+          "szerokosc": 655.25,
+          "wysokosc": 470.796875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1051.71875,
+          "y": 115.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 360.15625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 67,
+          "y": 947.921875,
+          "szerokosc": 1306,
+          "wysokosc": 800.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 458,
+          "y": 1071.921875,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 67,
+          "y": 1365.921875,
+          "szerokosc": 1306,
+          "wysokosc": 382.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 90,
+          "y": 2209.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 67,
+          "y": 3354.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1440,
+          "wysokosc": 651,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 441.625,
+          "y": 67.59375,
+          "szerokosc": 655.25,
+          "wysokosc": 470.796875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1051.71875,
+          "y": 115.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 360.15625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 67,
+          "y": 947.921875,
+          "szerokosc": 1306,
+          "wysokosc": 800.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 458,
+          "y": 1071.921875,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 67,
+          "y": 1365.921875,
+          "szerokosc": 1306,
+          "wysokosc": 382.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 90,
+          "y": 2209.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 67,
+          "y": 3354.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 4989,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1920,
+          "wysokosc": 751,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 638.125,
+          "y": 82.171875,
+          "szerokosc": 753.84375,
+          "wysokosc": 541.640625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1345.125,
+          "y": 135.875,
+          "szerokosc": 418.875,
+          "wysokosc": 416.765625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 307,
+          "y": 1051.15625,
+          "szerokosc": 1306,
+          "wysokosc": 806,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 698,
+          "y": 1175.15625,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 307,
+          "y": 1469.15625,
+          "szerokosc": 1306,
+          "wysokosc": 388,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 330,
+          "y": 2318.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 307,
+          "y": 3463.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1920,
+          "wysokosc": 751,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 638.125,
+          "y": 82.171875,
+          "szerokosc": 753.84375,
+          "wysokosc": 541.640625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1345.125,
+          "y": 135.875,
+          "szerokosc": 418.875,
+          "wysokosc": 416.765625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 307,
+          "y": 1051.15625,
+          "szerokosc": 1306,
+          "wysokosc": 806,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 698,
+          "y": 1175.15625,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 307,
+          "y": 1469.15625,
+          "szerokosc": 1306,
+          "wysokosc": 388,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 330,
+          "y": 2318.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 307,
+          "y": 3463.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    }
+  ],
+  "smoke": [
+    {
+      "sciezka": "/",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/index.html",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/cennik.html",
+      "selektory": [
+        "#hero-rack-stage",
+        "#cennik",
+        "#oplaty",
+        "#availability-form"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/cennik.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/hero-hybryda.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/hero-rack-baza.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/cennik.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/hero-rack.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/js/dostepnosc.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/hero/plyta-pcb.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/assets/img/mad-net-logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/index.html",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/podpis-lokalny.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/latarnia-hero.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/cennik.html",
+      "selektory": [
+        "#hero-rack-stage",
+        "#cennik",
+        "#oplaty",
+        "#availability-form"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/cennik.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/hero-hybryda.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/cennik.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/hero-rack.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/dostepnosc.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/hero-rack-baza.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/hero/plyta-pcb.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4184/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "bledy": [],
+  "konsola": [],
+  "kafelkiOnline": 72
+}
