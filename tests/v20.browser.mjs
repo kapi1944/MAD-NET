@@ -29,6 +29,13 @@ function sledzBledy(strona) {
   strona.on('requestfailed', zadanie => siec.push({ adres: zadanie.url(), blad: zadanie.failure()?.errorText }));
 }
 
+// Wzorzec powstaje po pomiarze panelu przez requestAnimationFrame/ResizeObserver.
+async function przygotujPomiarGeometrii(strona){
+  await strona.evaluate(()=>document.fonts.ready);
+  await strona.waitForFunction(()=>innerWidth<=1230||document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+  await strona.evaluate(()=>new Promise(zakoncz=>requestAnimationFrame(()=>requestAnimationFrame(zakoncz))));
+}
+
 async function geometria(strona) {
   return strona.evaluate(() => {
     const pobierz = selektor => {
@@ -136,8 +143,7 @@ try {
   for (const szerokosc of [320, 360, 375, 380, 390, 400, 414, 430, 480, 560, 760, 768, 800, 1024, 1100, 1230, 1231, 1280, 1440, 1500, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
-    await strona.evaluate(() => document.fonts.ready);
-    await strona.waitForFunction(() => innerWidth <= 1230 || document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+    await przygotujPomiarGeometrii(strona);
     const poczatek = await geometria(strona);
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {
       await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
@@ -294,6 +300,7 @@ try {
 
   // Rzeczywisty Tab/Enter/Space i szybkie wskazania nie gubią ostatniego wyboru.
   await strona.setViewportSize({ width: 1440, height: 1100 }); await strona.goto(adres);
+  await przygotujPomiarGeometrii(strona);
   const poczatek = await geometria(strona);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     await strona.locator('[data-rack-tech="LAN"]').focus();
@@ -377,6 +384,8 @@ try {
   assert.equal(miganie.length, 13);
   miganie.forEach(kanal => assert.ok(kanal.maksimum - kanal.minimum > .2 && kanal.stan === 'running', `Brak migania: ${kanal.nazwa}`));
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
+    // Po klawiaturze kursor może już leżeć nad tym urządzeniem: badamy nowe wejście.
+    await strona.mouse.move(0,0);
     await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
     await sprawdzWybor(strona, technologia, poczatek);
     const czasy = await strona.locator('.hero-rack-stage [data-speed]').evaluateAll(kanaly => kanaly.map(kanal => kanal.querySelector('.rj-link,.fiber-activity,.wi').getAnimations()[0].currentTime));
@@ -395,6 +404,7 @@ try {
 
   const dotyk = await przegladarka.newPage({ viewport: { width: 390, height: 1100 }, hasTouch: true, isMobile: true });
   sledzBledy(dotyk); await dotyk.goto(adres);
+  await przygotujPomiarGeometrii(dotyk);
   const poczatekDotyku = await geometria(dotyk);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {
