@@ -11,6 +11,7 @@ if (!html.includes('./assets/js/hero-rack.js') || !html.includes('id="availabili
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 await copyFile(join(root, 'index.html'), join(dist, 'index.html'));
+await copyFile(join(root, 'home.html'), join(dist, 'home.html'));
 await cp(join(root, 'assets'), join(dist, 'assets'), { recursive: true });
-console.log('Gotowe: dist/index.html + dist/assets/');
+console.log('Gotowe: dist/index.html + dist/home.html + dist/assets/');
 console.log('Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.');

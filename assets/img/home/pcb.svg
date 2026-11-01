@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="180" viewBox="0 0 1440 180" fill="none">
+<defs>
+ <linearGradient id="red" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#ff243e" stop-opacity=".72"/><stop offset=".32" stop-color="#de1236" stop-opacity=".45"/><stop offset=".6" stop-color="#a10b24" stop-opacity=".34"/><stop offset="1" stop-color="#ff304e" stop-opacity=".85"/></linearGradient>
+ <filter id="soft"><feGaussianBlur stdDeviation="2.3"/></filter>
+</defs>
+<!-- drobne ścieżki jak na obwodach drukowanych, nie syntetyczne łuki -->
+<g stroke="url(#red)" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+<path d="M0 25h28l18 19v43l17 18h110l20 20h90"/><path d="M0 40h20l17 18v44l18 18h110l20 21h55"/>
+<path d="M0 59h13l14 15v38l19 19h94l21 21h52"/><path d="M0 89h15l10 10v48l18 18h73"/>
+<path d="M1440 17h-43l-26 25h-82l-18 18v26l-26 25h-115"/><path d="M1440 29h-35l-25 25h-82l-16 16v28l-23 25h-97"/>
+<path d="M1440 47h-20l-26 26h-90l-13 14v23l-23 26h-107"/>
+<path d="M1440 147h-89l-24 25h-169l-19-15h-126"/><path d="M0 161h113l18 17h178"/>
+</g>
+<g filter="url(#soft)" stroke="#f5113e" stroke-opacity=".52" stroke-width="3.5"><path d="M0 25h28l18 19v43l17 18h110l20 20h90"/><path d="M1440 17h-43l-26 25h-82l-18 18v26l-26 25h-115"/></g>
+<g fill="#ff1c3d"><circle cx="173" cy="105" r="3"/><circle cx="283" cy="125" r="3"/><circle cx="1289" cy="42" r="3"/><circle cx="1130" cy="111" r="3"/><circle cx="1351" cy="147" r="2.5"/><circle cx="116" cy="165" r="2.5"/></g>
+</svg>

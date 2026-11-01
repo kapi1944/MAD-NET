@@ -17,6 +17,8 @@ npm run dev
 
 Otwórz **http://127.0.0.1:4173**. Serwer odświeża stronę po zmianach HTML/CSS/JS. Zatrzymanie: `Ctrl+C`.
 
+Oddzielny podgląd HOME V3: **http://127.0.0.1:4173/home.html**. `index.html` pozostaje cennikiem. Test podglądu i porównanie z oryginałem: `npm run test:home`; raport: [etap 01](docs/integracja-home-v3/01-raport-rozdzielenia.md).
+
 ```powershell
 npm test            # testy struktury + sprawdzenie składni JS
 npm run build       # gotowa statyczna strona w dist/

@@ -1,0 +1,92 @@
+[
+  {
+    "plik": "assets/img/home/logo.png",
+    "mime": "image/png",
+    "bajty": 137798,
+    "sha256": "c2b70cc3a29016f058abbd589efd83d3af8711357cc5c6d2d9689ad1f6e096c4",
+    "szerokosc": 660,
+    "wysokosc": 176,
+    "mimeHTTP": "image/png"
+  },
+  {
+    "plik": "assets/img/home/latarnia-tlo.jpg",
+    "mime": "image/jpeg",
+    "bajty": 86920,
+    "sha256": "c365a962637171d66ce3f8b292199a1ae1bb4dd6c643ba9b6d6ab1b114ea5e7f",
+    "szerokosc": 1680,
+    "wysokosc": 680,
+    "mimeHTTP": "image/jpeg"
+  },
+  {
+    "plik": "assets/img/home/pcb.svg",
+    "mime": "image/svg+xml",
+    "bajty": 1545,
+    "sha256": "0908f1101aaa1c97c64d0357e1aab343cf39c5c330c170d07805cf7145e077fa",
+    "szerokosc": 1440,
+    "wysokosc": 180,
+    "mimeHTTP": "image/svg+xml"
+  },
+  {
+    "plik": "assets/img/home/latarnia-hero.jpg",
+    "mime": "image/jpeg",
+    "bajty": 102349,
+    "sha256": "50acdb685c79ba3bfce25e35d56922ab95fdbf4eb5af89a09a291caa67b97852",
+    "szerokosc": 1145,
+    "wysokosc": 546,
+    "mimeHTTP": "image/jpeg"
+  },
+  {
+    "plik": "assets/img/home/podpis-lokalny.png",
+    "mime": "image/png",
+    "bajty": 227723,
+    "sha256": "387254f8281e4d716ed5396914f2b1953d9aca5f79818fe5a5a3af43d1a585e7",
+    "szerokosc": 1120,
+    "wysokosc": 496,
+    "mimeHTTP": "image/png"
+  },
+  {
+    "plik": "assets/img/home/usluga-internet.jpg",
+    "mime": "image/jpeg",
+    "bajty": 37294,
+    "sha256": "61968ae3c93ff7bc21ee39ea278fe48004ce4e8f3d92123c57a9b7dc4ae9660c",
+    "szerokosc": 516,
+    "wysokosc": 420,
+    "mimeHTTP": "image/jpeg"
+  },
+  {
+    "plik": "assets/img/home/usluga-monitoring.jpg",
+    "mime": "image/jpeg",
+    "bajty": 27408,
+    "sha256": "5effb57ed007e35bd8cf994a7b829012e24d9ce784e887f1c3668b283135252d",
+    "szerokosc": 516,
+    "wysokosc": 420,
+    "mimeHTTP": "image/jpeg"
+  },
+  {
+    "plik": "assets/img/home/usluga-it.jpg",
+    "mime": "image/jpeg",
+    "bajty": 38360,
+    "sha256": "8aa2e3c498e69198bef87715916d94bebcc0d62094bebe53add2bf2b69d7ad15",
+    "szerokosc": 516,
+    "wysokosc": 420,
+    "mimeHTTP": "image/jpeg"
+  },
+  {
+    "plik": "assets/img/home/usluga-www.jpg",
+    "mime": "image/jpeg",
+    "bajty": 36147,
+    "sha256": "05a9b843673aa86dff77cc2040a80343218ed8d3b18c23ffbc75ff7660ba24ed",
+    "szerokosc": 516,
+    "wysokosc": 420,
+    "mimeHTTP": "image/jpeg"
+  },
+  {
+    "plik": "assets/img/home/usluga-anteny.jpg",
+    "mime": "image/jpeg",
+    "bajty": 33255,
+    "sha256": "878cc33a9b7f65e97a41cde4ddd6ab6cc7a08069a35059977dd2e1c3a3b463f2",
+    "szerokosc": 516,
+    "wysokosc": 420,
+    "mimeHTTP": "image/jpeg"
+  }
+]
