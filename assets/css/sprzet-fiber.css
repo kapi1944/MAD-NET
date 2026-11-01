@@ -1,0 +1,65 @@
+/* SC/APC: zielone tworzywo sprzętu, pomarańczowa identyfikacja oferty. */
+.modele-sprzetu-fiber{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.sc-simplex{display:block;position:relative;flex:0 0 auto;width:44px;height:37px;border:0;border-radius:0;background:none;box-shadow:none;transform:none;isolation:isolate}
+.sc-simplex::before{display:none}
+.sc-adapter,.sc-zaslepka{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.sc-zaslepka{z-index:3;opacity:1;transform:translateY(0);transition:transform .22s ease,opacity .22s ease}
+.sc-simplex:not([data-stan-polaczenia="IDLE"]):not([data-stan-polaczenia="SELECTED"]):not([data-stan-polaczenia="CLOSING_COVER"]) .sc-zaslepka{transform:translateY(12px);opacity:0}
+.sc-wtyk-tor{position:absolute;z-index:2;top:14px;bottom:-65px;left:-10px;right:-10px;overflow:hidden;pointer-events:none}
+.sc-konektor{position:absolute;display:block;left:50%;top:0;width:24px;height:56px;opacity:0;transform:translate(-50%,26px);transition:transform .28s cubic-bezier(.3,.1,.2,1),opacity .18s ease}
+.sc-konektor svg{display:block;width:100%;height:100%}
+.sc-kabel-punkt{position:absolute;width:0;height:0;left:50%;bottom:0}
+.sc-simplex:is([data-stan-polaczenia="CONNECTOR_APPROACH"],[data-stan-polaczenia="DISCONNECTING"]) .sc-konektor{opacity:1;transform:translate(-50%,14px)}
+.sc-simplex[data-stan-polaczenia="INSERTING"] .sc-konektor{opacity:1;transform:translate(-50%,-9px)}
+.sc-simplex[data-stan-polaczenia="CONNECTED"] .sc-konektor{opacity:1;transform:translate(-50%,-8px)}
+.sc-simplex[data-stan-polaczenia="CONNECTED"] .sc-konektor{transition-timing-function:cubic-bezier(.2,.8,.3,1)}
+.mini-interface--FIBER .sc-simplex{transform:none;width:40px;height:34px}
+.mini-interface--FIBER{height:78px;align-items:flex-start;padding-top:4px;background:linear-gradient(155deg,#303536,#13191a);box-shadow:inset 0 1px #b4beb13d,0 3px 6px #0006}
+.plan[data-technology="FIBER"] .card-terminal{min-height:118px}
+.speed-port--FIBER{min-height:132px;justify-content:flex-start;gap:6px;padding-bottom:38px;touch-action:pan-y}
+.speed-port--FIBER .speed-label{order:-1}
+.speed-port--FIBER .port-leds{gap:5px}
+.speed-port--FIBER .port-leds i{width:6px;height:4px;box-shadow:none}
+.device-shell[data-technology="FIBER"]{background:linear-gradient(165deg,#383c3c,#212526 45%,#101516);border-color:#69716c;border-bottom-color:#0b1010;border-left:3px solid #ff7b19}
+.device-shell[data-technology="FIBER"] .device-foot{color:#d9ded7}
+.device-shell[data-technology="FIBER"] .port-leds{opacity:.35}
+.device-shell[data-technology="FIBER"] .speed-port:has([data-stan-polaczenia="CONNECTED"]) .port-leds{opacity:1}
+.tech-FIBER .link-active{filter:none;stroke:#e7c66a;stroke-width:3.5px}
+.tech-FIBER .link-casing{stroke:#4d4430;stroke-width:5px;filter:none}
+.tech-FIBER .link-hover{filter:none}
+.tech-FIBER .connection-zone{z-index:3}
+.tech-FIBER .plan:is(:hover,.is-hovered,:focus-within){transform:none}
+.speed-port--FIBER:is(:hover,.is-hovered,:focus-visible){transform:none}
+
+/* Niewielki punkt abonencki; zawias i klapka mają tę samą górną oś. */
+.compare-head-port--FIBER{appearance:none;position:relative;display:flex;align-items:center;justify-content:flex-start;width:62px;min-width:62px;height:100px;padding:0 3px;border:1px solid transparent;border-radius:5px;background:none;box-shadow:none;cursor:pointer;pointer-events:auto;touch-action:pan-y;color:inherit}
+.compare-head-port--FIBER:focus-visible{outline:2px solid white;outline-offset:3px}
+.compare-head-port--FIBER[aria-pressed="true"]{border-color:#ffb36d;background:#ff7b190c}
+.gniazdo-sc{position:relative;display:block;width:54px;height:76px;perspective:220px;flex:0 0 auto}
+.gniazdo-sc-ramka{position:absolute;inset:0 0 12px;border:1px solid #c6c9bf;border-bottom:3px solid #a5afa6;border-radius:5px;background:linear-gradient(130deg,#f5f3e9,#d6dcd1);box-shadow:inset 1px 1px 0 #fff,1px 3px 4px #0007}
+.gniazdo-sc-wklad{position:absolute;inset:9px 5px 4px;border:1px solid #bcc5b8;border-radius:2px;background:linear-gradient(#d8ddd3,#eef0e6);box-shadow:inset 0 2px 3px #87917d55}
+.compare-head-port--FIBER .sc-simplex{width:38px;height:32px;position:absolute;left:50%;top:9px;transform:translateX(-50%);border:0}
+.sc-zawias{position:absolute;left:7px;right:7px;top:9px;height:5px;border:1px solid #9ba99a;border-radius:2px;background:linear-gradient(#eff4eb,#9ba99c);z-index:4}
+.sc-pokrywa{position:absolute;left:7px;right:7px;top:12px;height:40px;z-index:5;transform-origin:50% 0;transform:rotateX(0deg);transform-style:preserve-3d;border:1px solid #f7fff4b3;border-bottom:2px solid #b5c9b3;border-radius:1px 1px 3px 3px;background:linear-gradient(145deg,#ebf5e4c9,#c4d4b9aa 45%,#ffffff6b);box-shadow:0 2px 2px #23312450,inset 0 1px #fff;transition:transform .32s cubic-bezier(.4,0,.2,1),box-shadow .32s}
+.sc-pokrywa span{position:absolute;inset:3px;border:1px solid #f8fff252;border-radius:1px}
+.sc-pokrywa::after{content:'';position:absolute;left:35%;right:35%;bottom:2px;height:2px;background:#edf4e3}
+.compare-head-port--FIBER:is([data-stan-polaczenia="OPENING_COVER"],[data-stan-polaczenia="COVER_OPEN"],[data-stan-polaczenia="CONNECTOR_APPROACH"],[data-stan-polaczenia="INSERTING"],[data-stan-polaczenia="CONNECTED"],[data-stan-polaczenia="DISCONNECTING"]) .sc-pokrywa{transform:rotateX(108deg);box-shadow:0 -1px 3px #23312433,inset 0 1px #fff}
+.gniazdo-sc-opis{position:absolute;bottom:0;left:0;right:0;text-align:center;font:600 6px/1.2 ui-monospace,monospace;color:#c3d0bc;letter-spacing:.04em}
+.compare-tech-panel[data-tech="FIBER"] .plan-head{padding-top:28px}
+.compare-tech-panel[data-tech="FIBER"] .compare-package-inner{gap:7px;min-height:132px}
+.compare-tech-panel[data-tech="FIBER"] .compare-package-name{font-size:16px}
+.compare-head-port--FIBER .sc-konektor{width:22px;height:51.333px}
+.compare-head-port--FIBER .gniazdo-sc-opis{display:none}
+.sc-wskaznik{position:absolute;right:7px;bottom:5px;width:5px;height:3px;background:#69472a;border:1px solid #91562c;border-radius:1px}
+.compare-head-port--FIBER[data-stan-polaczenia="CONNECTED"] .sc-wskaznik{background:#ffbd72;animation:rj45-activity var(--pulse-ms) linear infinite}
+.mot-off .sc-wskaznik{animation:none!important}
+@container(min-width:1100px){
+ .compare-tech-panel[data-tech="FIBER"] .compare-package-inner{flex-direction:row;gap:20px;min-height:105px}
+}
+@media(max-width:760px){
+ .compare-head-port--FIBER{width:58px;min-width:58px;height:100px;padding:0 1px}
+ .compare-tech-panel[data-tech="FIBER"] .plan-head{padding-top:28px}
+}
+.mot-off .sc-konektor,.mot-off .sc-zaslepka,.mot-off .sc-pokrywa{transition:none!important}
+.sc-bez-ruchu,.sc-bez-ruchu *{transition:none!important}
+@media(prefers-reduced-motion:reduce){.sc-konektor,.sc-zaslepka,.sc-pokrywa{transition:none!important}.sc-wskaznik{animation:none!important}}
