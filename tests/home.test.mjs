@@ -40,12 +40,22 @@ test('HOME: osobne zasoby, język polski, brak zależności od stylów cennika',
 
 test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline', () => {
   const manifest = JSON.parse(czytaj('docs/integracja-home-v3/dowody/manifest-cennika.json'));
+  const skrotyEtapu05 = {
+  "assets/js/cennik.js": "d638c99979cb11126176ff995ef5ec5432d264c26b9cf918a80d44980a8775a0",
+  "assets/js/hero-rack.js": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
+  "assets/js/dostepnosc.js": "b951a0c97f2d4477a3e473bd23b4a0f3c3586d8f06b4a028505314193c7c86c3"
+};
   for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/'))) {
     // Git może zmieniać końce linii tekstu między Windows a Linux.
     const bajty = czytaj(wpis.plik === 'index.html' ? 'cennik.html' : wpis.plik);
-    assert.ok([wpis.sha256Git, wpis.sha256Lokalny].includes(skrot(bajty)), wpis.plik);
+    if (skrotyEtapu05[wpis.plik]) assert.equal(skrot(bajty.toString().replaceAll('\r\n', '\n')), skrotyEtapu05[wpis.plik], wpis.plik);
+    else assert.ok([wpis.sha256Git, wpis.sha256Lokalny].includes(skrot(/\.(css|js|svg)$/.test(wpis.plik) ? bajty.toString().replaceAll('\r\n', '\n') : bajty)), wpis.plik);
   }
   const przed = execFileSync('git', ['show', '603ecb6b34509db80b46d659b0eeb1368eb2f275:cennik.html'], {encoding:'utf8'});
+  const opisEtapu05 = "<p class=\"compare-sub\">Zaznacz dowolną liczbę technologii — jedną, dwie lub wszystkie trzy. Wybrane cenniki pojawią się poniżej, jeden pod drugim, z oddzielnymi kolorami i pełnymi parametrami. Kliknij gniazdo FIBER w nagłówku, aby podłączyć wybrany pakiet. Ponowne kliknięcie odłącza przewód. Miniporty LAN i AIR ilustrują prędkość pakietów.</p>";
+  const opisBazowy = przed.match(/<p class="compare-sub">[\s\S]*?<\/p>/)[0];
+  const daneBazowe = execFileSync('git', ['show', '1987ad3aa8a65fd1aa86f077af1addf3225bb228:assets/js/cennik.js'], {encoding:'utf8'}).replaceAll('\r\n', '\n');
+  assert.equal(czytaj('assets/js/cennik.js').toString().replaceAll('\r\n', '\n').split('const TITLES=')[0], daneBazowe.split('const TITLES=')[0], '13 pakietów, ceny i opłaty bez zmian');
   const main = tresc => tresc.match(/<main>[\s\S]*?<\/main>/)[0].replaceAll('\r\n', '\n');
-  assert.equal(main(czytaj('cennik.html').toString()), main(przed));
+  assert.equal(main(czytaj('cennik.html').toString().replace(opisEtapu05, opisBazowy).replaceAll('SC/APC', 'SC/UPC')), main(przed));
 });

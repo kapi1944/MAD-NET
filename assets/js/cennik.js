@@ -66,8 +66,17 @@ const activePath=document.getElementById('link-active');
 const cableUnderlay=document.getElementById('link-casing');
 const waveIcon=`<svg viewBox="0 0 64 48" aria-hidden="true"><path class="wifi-arc wifi-arc--middle" d="M18 26 Q32 12 46 26"/><path class="wifi-arc wifi-arc--large" d="M9 18 Q32 -2 55 18"/><path class="wifi-arc wifi-arc--small" d="M25 34 Q32 27 39 34"/><circle cx="32" cy="42" r="3"/></svg>`;
 // W AIR nie pokazujemy wielkiego znaku nad urządzeniem. Każdy kanał/kafelek ma własne animowane łuki Wi-Fi.
+const stanyLink=new Map();
+function diodyPortu(){return '<span class="port-leds" aria-hidden="true"><i></i><i></i></span>';}
+function odswiezDiody(){
+ document.querySelectorAll('[data-port-plan-id],.plan,[data-led-pakiet],[data-gniazdo-pakiet]').forEach(element=>{
+ const id=element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet||element.dataset.gniazdoPakiet;
+ element.dataset.link=stanyLink.get(id)?'connected':'disconnected';
+ });
+}
 let selectedPlanId=null;
 let hoveredPlanId=null;
+let zrodloPodgladuFiber='card';
 let linkPending=false;
 let pathTimer=null;
 let framePending=false;
@@ -76,10 +85,10 @@ const animationEnabled=()=>animations&&!window.matchMedia('(prefers-reduced-moti
 // Tempo wizualizacji Wi-Fi jest symboliczne: 10 Mbit/s ≈ 2.4 s, 80 Mbit/s ≈ 0.74 s.
 // Łuki (mały -> średni -> duży) przyspieszają wraz z pakietem, zamiast diod ACT.
 const radioPeriod=(speed)=>Math.round(Math.max(700,2400/(1+Math.max(0,speed-10)*.032)));
-const portName=()=>technology==='FIBER'?'SC/UPC SIMPLEX':technology==='LAN'?'RJ-45':'KANAŁ RADIOWY';
+const portName=()=>technology==='FIBER'?'SC/APC SIMPLEX':technology==='LAN'?'RJ-45':'KANAŁ RADIOWY';
 function socketHtml(kind,withCaps=true){
- if(kind==='LAN')return '<span class="jack-rj" aria-hidden="true"><span class="rj-mouth"><span class="rj-plug"><span class="rj-plug-grip"></span></span></span></span>';
- if(kind==='FIBER')return `<span class="sc-simplex" aria-hidden="true"><span class="sc-bays"><i class="sc-bay"></i></span>${withCaps?'<span class="sc-dustcaps"><i class="sc-dustcap"></i></span>':''}</span>`;
+ if(kind==='LAN')return `<span class="jack-rj" aria-hidden="true">${diodyPortu()}<span class="rj-mouth"><span class="rj-plug"><span class="rj-plug-grip"></span></span></span></span>`;
+ if(kind==='FIBER')return adapterFiber(withCaps);
  return `<span class="air-virtual" aria-hidden="true">${waveIcon}</span>`;
 }
 function makeCentralPort(p,i){
@@ -87,16 +96,15 @@ function makeCentralPort(p,i){
  const interval=Math.round(1000/hz);
  const caption=technology==='AIR'?'Wirtualny kanał':'Port '+(i+1);
  const accessibleName=`${caption} ${i+1}, ${p.down} Mbit/s, wybierz pakiet ${p.id}`;
- const indicators=technology==='AIR'?'<span class="signal-tag" aria-hidden="true">RF / TX</span>':'<span class="port-leds" aria-hidden="true"><i></i><i></i></span>';
+ const indicators=technology==='LAN'?'':technology==='AIR'?'<span class="signal-tag" aria-hidden="true">RF / TX</span>':'<span class="port-leds" aria-hidden="true"><i></i><i></i></span>';
  return `<button class="speed-port speed-port--${technology}" type="button" data-port-plan-id="${escapeText(p.id)}" data-speed="${p.down}" style="--pulse-ms:${interval}ms;--wifi-period:${radioPeriod(p.down)}ms" title="${escapeText(accessibleName)}" aria-label="${escapeText(accessibleName)}" aria-pressed="false">
    ${indicators}
    ${socketHtml(technology)}
    <span class="speed-label">${p.down}<small>Mb/s</small></span>
-   ${technology==='FIBER'?'<span class="port-plug" aria-hidden="true"></span>':''}
   </button>`;
 }
 function makeCentralDevice(plans){
- const descriptor=technology==='LAN'?'PORTY ETHERNET / RJ-45':technology==='FIBER'?'ADAPTERY SC/UPC SIMPLEX': '5 WIRTUALNYCH KANAŁÓW · BEZ GNIAZD';
+ const descriptor=technology==='LAN'?'PORTY ETHERNET / RJ-45':technology==='FIBER'?'ADAPTERY SC/APC SIMPLEX': '5 WIRTUALNYCH KANAŁÓW · BEZ GNIAZD';
 
  return `<div class="central-unit" style="--wifi-period:${radioPeriod(plans[0].down)}ms"><div class="device-shell" data-technology="${technology}">
   <div class="device-top"><img src="${logoSrc}" class="device-logo" alt="Logo Mad-Net"><div class="device-title">MAD-NET · SWITCH <strong>${technology} / ${String(plans.length).padStart(2,'0')} ${technology==='AIR'?'CH':'PORT'}</strong></div></div>
@@ -112,10 +120,10 @@ function makePlan(p){
  const priceHtml=phone?'<strong class="individual-label">Wycena indywidualna</strong>':`<strong>${price}</strong><span>zł / mies.</span>`;
  const termText=phone?'Abonament — bezterminowo':`Abonament • ${term==='12'?'1 rok':'2 lata'}`;
  const selected=p.id===selectedPlanId;
- const etykietaPortu=technology==='AIR'?'<strong>WĘZEŁ RADIOWY</strong> <small>/ BEZ KABLA</small>':`<small>1 ×</small> <strong>${technology==='FIBER'?'SC/UPC SIMPLEX':'RJ-45'}</strong>`;
+ const etykietaPortu=technology==='AIR'?'<strong>WĘZEŁ RADIOWY</strong> <small>/ BEZ KABLA</small>':`<small>1 ×</small> <strong>${technology==='FIBER'?'SC/APC SIMPLEX':'RJ-45'}</strong>`;
  return `<article class="plan${selected?' is-selected':''}" data-plan-id="${escapeText(p.id)}" data-technology="${technology}" data-speed="${p.down}" data-port-count="1" data-blink-hz="${hz.toFixed(2)}" data-blink-ms="${interval}" aria-label="Pakiet ${escapeText(p.id)}: pobieranie ${p.down}, wysyłanie ${p.up} Mbit/s" style="--pulse-ms:${interval}ms;--wifi-period:${radioPeriod(p.down)}ms">
  <button class="plan-hit" type="button" data-select-plan="${escapeText(p.id)}" aria-pressed="${selected}" aria-label="Wybierz ${escapeText(p.id)}: ${p.down} Mbit/s, ${phone?'wycena indywidualna':price+' zł miesięcznie'}"></button>
- <div class="card-terminal"><span class="card-terminal-label">${etykietaPortu}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${socketHtml(technology,true)}${technology==='FIBER'?'<span class="mini-plug"></span>':''}</div></div>
+ <div class="card-terminal"><span class="card-terminal-label">${etykietaPortu}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${technology==='FIBER'?diodyPortu():''}${socketHtml(technology,true)}</div></div>
  <div class="plan-body"><div class="plan-name"><span>● Pakiet MAD-NET</span></div>
  <div class="plan-speed"><span class="nazwa-technologii">${technology}</span>-${p.down}</div>
  <div class="specs"><div class="spec"><b class="predkosc-pobierania"><span aria-hidden="true">↓</span> <strong>${p.down}</strong> <small>Mbit/s</small></b><span>POBIERANIE</span></div><div class="spec"><b class="predkosc-wysylania"><span aria-hidden="true">↑</span> <strong>${p.up}</strong> Mbit/s</b><span>WYSYŁANIE</span></div></div></div>
@@ -127,6 +135,12 @@ function makePlan(p){
 // Wnętrze nie-docelowego kafelka jest obszarem zabronionym; kolejne rzędy omijamy ZEWNĘTRZNIE.
 function locate(id){
  if(!id)return null;
+ if(technology==='FIBER'&&polaczenieFiber?.id===id&&polaczenieFiber.zrodlo==='table')return trasaDoGniazdaFiber(polaczenieFiber);
+ if(technology==='FIBER'&&hoveredPlanId===id&&zrodloPodgladuFiber==='table'){
+  const cel=listaTabel.querySelector(`[data-gniazdo-pakiet="${id}"]`);
+  const urzadzenie=centralRoot.querySelector(`[data-port-plan-id="${id}"] .sc-simplex`);
+  if(cel&&urzadzenie)return trasaDoGniazdaFiber({cel,urzadzenie,podglad:true});
+ }
  const port=[...centralRoot.querySelectorAll('.speed-port')].find(el=>el.dataset.portPlanId===id);
  const card=[...plansRoot.querySelectorAll('.plan')].find(el=>el.dataset.planId===id);
  if(!port||!card)return null;
@@ -140,8 +154,11 @@ function locate(id){
  const cardRect=card.getBoundingClientRect(),interfaceRect=cardInterface.getBoundingClientRect();
  const pos=(x,y)=>({x:x-z.left,y:y-z.top});
  // Końce połączenia znajdują się POD dolną krawędzią portu (brak wejścia od góry).
- const origin=pos(src.left+src.width/2,src.bottom-2);
- const endpoint=pos(dst.left+dst.width/2,dst.bottom-1);
+ const sprzetPodlaczony=technology==='FIBER'&&id===selectedPlanId&&polaczenieFiber;
+ const punktUrzadzenia=sprzetPodlaczony?deviceSocket.querySelector('.sc-kabel-punkt').getBoundingClientRect():null;
+ const punktKarty=sprzetPodlaczony?cardSocket.querySelector('.sc-kabel-punkt').getBoundingClientRect():null;
+ const origin=punktUrzadzenia?pos(punktUrzadzenia.x,punktUrzadzenia.y):pos(src.left+src.width/2,src.bottom-2);
+ const endpoint=punktKarty?pos(punktKarty.x,punktKarty.y):pos(dst.left+dst.width/2,dst.bottom-1);
  // Wskazane na rysunku dwa punkty: połowy odstępów między obrysem portu a obrysem kafelka.
  const entryLeft=(cardRect.left+interfaceRect.left)/2-z.left;
  const entryRight=(interfaceRect.right+cardRect.right)/2-z.left;
@@ -198,6 +215,11 @@ function locate(id){
   const score=points.slice(1).reduce((sum,p,i)=>sum+Math.abs(p.x-points[i].x)+Math.abs(p.y-points[i].y),0);
   if(!best||score<best.score)best={points,score};
  }
+ if(best&&technology==='FIBER'){
+  const obudowa=centralRoot.querySelector('.device-shell').getBoundingClientRect();
+  const bok=(origin.x<(obudowa.left+obudowa.right)/2-z.left?obudowa.left-12:obudowa.right+12)-z.left;
+  best.points.splice(1,1,{x:origin.x,y:origin.y+6},{x:bok,y:origin.y+6},{x:bok,y:topLane});
+ }
  return best?roundedCablePath(best.points,6):'';
 }
 function roundedCablePath(raw,radius){
@@ -236,10 +258,10 @@ function drawStaticPath(node,id){
 }
 function updateLinks(){
  if(!zone.isConnected)return;
- const w=Math.max(zone.clientWidth,1),h=Math.max(zone.clientHeight,1);
+ const w=Math.max(zone.clientWidth,1),h=Math.max(zone.clientHeight,technology==='FIBER'&&polaczenieFiber?.zrodlo==='table'?listaTabel.getBoundingClientRect().bottom-zone.getBoundingClientRect().top:1);
  layer.setAttribute('viewBox',`0 0 ${w} ${h}`);
  layer.style.width=w+'px';layer.style.height=h+'px';
- if(selectedPlanId&&!linkPending){
+ if(selectedPlanId&&!linkPending&&!(technology==='FIBER'&&polaczenieFiber?.stan==='CLOSING_COVER')){
    // Nie przerywaj aktywnego rysowania przewodu podczas odświeżania geometrii.
    const wasAnimating=activePath.classList.contains('is-drawing');
    drawStaticPath(activePath,selectedPlanId);
@@ -285,6 +307,7 @@ function animateLink(delay){
  activePath.addEventListener('transitionend',once);
 }
 function syncStates(){
+ odswiezDiody();
  centralRoot.querySelectorAll('.speed-port').forEach(btn=>{
   const id=btn.dataset.portPlanId;
   btn.classList.toggle('is-selected',id===selectedPlanId);
@@ -297,6 +320,9 @@ function syncStates(){
   card.classList.toggle('is-hovered',id===hoveredPlanId);
   card.querySelector('.plan-hit').setAttribute('aria-pressed',String(id===selectedPlanId));
  });
+ document.querySelectorAll('[data-gniazdo-pakiet]').forEach(przycisk=>{
+  przycisk.setAttribute('aria-pressed',String(przycisk.dataset.gniazdoPakiet===selectedPlanId));
+ });
  // Aktywny strumień kropek AIR ma tempo wybranego pakietu; każda ikona portu i karty zachowuje własny okres.
  const signalPlan=PLAN_DATA[technology].find(p=>p.id===(selectedPlanId||hoveredPlanId)) || PLAN_DATA[technology][0];
  if(technology==='AIR' && signalPlan){
@@ -308,9 +334,10 @@ function syncStates(){
  document.getElementById('device-guide').innerHTML=hoveredPlanId?`<b>${escapeText(hoveredPlanId)}</b> — wskazany port i odpowiadająca mu karta`:selectedPlanId?`<b>${escapeText(selectedPlanId)}</b> — aktywne połączenie`:'Wskaż port kursorem lub przytrzymaj palcem, aby zobaczyć powiązanie ↓';
  scheduleLinks();
 }
-function setHover(id){
- if(id===hoveredPlanId)return;
+function setHover(id,zrodlo='card'){
+ if(id===hoveredPlanId&&zrodloPodgladuFiber===zrodlo)return;
  hoveredPlanId=id;
+ zrodloPodgladuFiber=zrodlo;
  syncStates();
 }
 // V10 — dwa niezależne gesty: krótkie tapnięcie = wybór; przytrzymanie = TYMCZASOWY podgląd.
@@ -321,6 +348,8 @@ let touchSession=null;
 let suppressNativeClickUntil=0;
 let lastTouchInteraction=-Infinity;
 function touchTarget(event){
+ const gniazdo=event.target.closest('[data-gniazdo-pakiet]');
+ if(gniazdo)return gniazdo.dataset.gniazdoPakiet;
  const port=event.target.closest('.speed-port[data-port-plan-id]');
  if(port)return port.dataset.portPlanId;
  const plan=event.target.closest('.plan[data-plan-id]');
@@ -344,14 +373,14 @@ function wireInteractiveHover(){
   el.addEventListener('focusout',e=>{if(!el.contains(e.relatedTarget))setHover(null);});
  });
 }
-zone.addEventListener('pointerdown',e=>{
+document.getElementById('cennik').addEventListener('pointerdown',e=>{
  if(e.pointerType!=='touch')return;
  lastTouchInteraction=performance.now();
  cancelTouch();
  const id=touchTarget(e);if(!id)return;
- const data={id,pointerId:e.pointerId,x:e.clientX,y:e.clientY,start:performance.now(),held:false,moved:false,timer:null};
+ const data={id,zrodlo:e.target.closest('[data-gniazdo-pakiet]')?'table':'card',pointerId:e.pointerId,x:e.clientX,y:e.clientY,start:performance.now(),held:false,moved:false,timer:null};
  data.timer=setTimeout(()=>{
-  if(touchSession===data&&!data.moved){data.held=true;setHover(id);}
+  if(touchSession===data&&!data.moved){data.held=true;setHover(id,data.zrodlo);}
  },HOLD_MS);
  touchSession=data;
 },{passive:true});
@@ -375,12 +404,12 @@ window.addEventListener('pointercancel',e=>{
 window.addEventListener('scroll',()=>{
  if(touchSession){touchSession.moved=true;clearTimeout(touchSession.timer);setHover(null);}
 },{passive:true});
-zone.addEventListener('click',e=>{
+document.getElementById('cennik').addEventListener('click',e=>{
  if(e.detail!==0&&performance.now()<suppressNativeClickUntil){
   e.preventDefault();e.stopImmediatePropagation();
  }
 },true);
-zone.addEventListener('contextmenu',e=>{
+document.getElementById('cennik').addEventListener('contextmenu',e=>{
  if(touchSession?.held||performance.now()-lastTouchInteraction<750){e.preventDefault();}
 });
 const waitFor=(ms)=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -411,6 +440,9 @@ async function scrollToSelectedCard(card,sequence){
 }
 async function selectPlan(id,animate=true,source='card'){
  if(!PLAN_DATA[technology].some(p=>p.id===id))return;
+ if(technology==='FIBER'){wybierzPolaczenieFiber(id,source,animate);return;}
+ if(technology==='LAN'&&selectedPlanId===id){++activationSequence;stanyLink.clear();selectedPlanId=null;centralRoot.querySelectorAll('.is-connecting').forEach(element=>element.classList.remove('is-connecting'));plansRoot.querySelectorAll('.is-connecting').forEach(element=>element.classList.remove('is-connecting'));syncStates();return;}
+ stanyLink.clear();odswiezDiody();
  clearTimeout(pathTimer);
  const seq=++activationSequence;
  const fromPort=source==='port'&&animate&&animationEnabled()&&technology!=='AIR';
@@ -447,7 +479,12 @@ async function selectPlan(id,animate=true,source='card'){
   animateLink(technology==='FIBER'&&animate&&animationEnabled()?680:technology==='LAN'?110:0);
  }
  if(seq!==activationSequence)return;
- const description=technology==='FIBER'?'SC/UPC Simplex':technology==='AIR'?'kanał radiowy '+radioPeriod(PLAN_DATA.AIR.find(p=>p.id===id).down)+' ms/cykl':'RJ-45';
+ if(technology==='LAN'){
+  await Promise.allSettled([...device.getAnimations({subtree:true}),...card.getAnimations({subtree:true})].filter(animacja=>animacja.effect?.getTiming().iterations!==Infinity).map(animacja=>animacja.finished));
+  if(seq!==activationSequence)return;
+  stanyLink.set(id,true);odswiezDiody();
+ }
+ const description=technology==='AIR'?'kanał radiowy '+radioPeriod(PLAN_DATA.AIR.find(p=>p.id===id).down)+' ms/cykl':'RJ-45';
  document.getElementById('connection-state').textContent=`${id}: ${description}. Port i kafelek są połączone.`;
 }
 centralRoot.addEventListener('click',event=>{
@@ -459,6 +496,9 @@ plansRoot.addEventListener('click',event=>{
  if(btn)selectPlan(btn.dataset.selectPlan,true,'card');
 });
 function render(){
+ stanyLink.clear();
+ const zachowanePolaczenieFiber=technology==='FIBER'&&selectedPlanId?{id:selectedPlanId,zrodlo:polaczenieFiber?.zrodlo||'card'}:null;
+ wyczyscPolaczenieFiber();
  linkPending=false;
  cancelTouch();
  hoveredPlanId=null;
@@ -487,6 +527,8 @@ function render(){
  document.body.classList.toggle('mot-off',!animations);
  wireInteractiveHover();
  renderComparisonTable();
+ if(technology==='LAN'&&selectedPlanId)stanyLink.set(selectedPlanId,true);
+ if(zachowanePolaczenieFiber)wybierzPolaczenieFiber(zachowanePolaczenieFiber.id,zachowanePolaczenieFiber.zrodlo,false);
  syncStates();
  scheduleLinks();
 }
@@ -503,6 +545,7 @@ document.getElementById('animation-toggle').addEventListener('click',ev=>{
  przelacznik.setAttribute('aria-checked',String(animations));
  document.body.classList.toggle('mot-off',!animations);
  if(!animations){
+  activePath.getAnimations().forEach(animacja=>animacja.cancel());
   centralRoot.querySelectorAll('.is-connecting').forEach(n=>n.classList.remove('is-connecting'));
   plansRoot.querySelectorAll('.is-connecting').forEach(n=>n.classList.remove('is-connecting'));
   activePath.classList.remove('is-drawing');activePath.style.transition='none';activePath.style.strokeDasharray='';activePath.style.strokeDashoffset='';
@@ -511,7 +554,8 @@ document.getElementById('animation-toggle').addEventListener('click',ev=>{
 });
 window.addEventListener('resize',scheduleLinks,{passive:true});
 window.addEventListener('scroll',scheduleLinks,{passive:true});
-if(typeof ResizeObserver!=='undefined')new ResizeObserver(scheduleLinks).observe(zone);
+const obserwatorPolaczen=new ResizeObserver(scheduleLinks);
+obserwatorPolaczen.observe(zone);
 
 const kolejnoscTabel=['FIBER','LAN','AIR'];
 const widoczneTechnologieTabel=new Set(['FIBER']);
@@ -519,17 +563,17 @@ const listaTabel=document.getElementById('comparison-panel');
 const przelacznikiTabel=[...document.querySelectorAll('[data-table-technology]')];
 const licznikTabel=document.getElementById('compare-chip');
 const opisyTabel={
- FIBER:{name:'Światłowód',medium:'Złącze SC/UPC simplex',symbol:'✦'},
+ FIBER:{name:'Światłowód',medium:'Złącze SC/APC simplex',symbol:'✦'},
  LAN:{name:'Kablowy',medium:'Ethernet RJ-45',symbol:'▣'},
  AIR:{name:'Bezprzewodowy',medium:'Sieć radiowa',symbol:'◉'}
 };
 function komorkaCeny(wartosc,pogrubiona=false){return wartosc==null?'<span class="muted">Brak ceny w cenniku</span>':pogrubiona?`<strong>${wartosc} zł</strong>`:`${wartosc} zł`;}
-// Miniatury odpowiadają technologii i prędkości pakietu: RJ-45, SC/UPC lub fale radiowe.
-// Są dekoracyjne: tylko span, bez przycisk, tabindex i eventów, nie podłączają kabla.
+// Gniazdo FIBER wybiera ten sam pakiet co karta; LAN i AIR pozostają dekoracyjne.
 function utworzMiniport(technologia,pakiet){
  const okres=Math.round(1000/(blinkHz(pakiet.down)*1.5));
- const kontrolki=technologia==='AIR'?'':'<span class="port-leds"><i></i><i></i></span>';
- return `<span class="compare-head-port compare-head-port--${technologia}" aria-hidden="true" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms;--wifi-period:${radioPeriod(pakiet.down)}ms">${kontrolki}${socketHtml(technologia,true)}</span>`;
+ if(technologia==='FIBER')return `<button type="button" class="compare-head-port compare-head-port--FIBER" data-gniazdo-pakiet="${pakiet.id}" data-stan-polaczenia="IDLE" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms" aria-pressed="false" aria-label="Podłącz lub odłącz ${pakiet.id}, gniazdo SC/APC Simplex">${gniazdoScienneFiber()}${diodyPortu()}<span class="sc-wskaznik" aria-hidden="true"></span></button>`;
+ const kontrolki='';
+ return `<span class="compare-head-port compare-head-port--${technologia}" data-led-pakiet="${pakiet.id}" aria-hidden="true" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms;--wifi-period:${radioPeriod(pakiet.down)}ms">${kontrolki}${socketHtml(technologia,true)}</span>`;
 }
 function utworzTabele(technologia){
  const pakiety=PLAN_DATA[technologia],opis=opisyTabel[technologia];
@@ -546,12 +590,18 @@ function utworzTabele(technologia){
  return `<section class="compare-tech-panel" id="comparison-${technologia}" data-tech="${technologia}" aria-labelledby="compare-tech-title-${technologia}"><header class="compare-tech-header"><div><span class="compare-tech-kicker">${opis.symbol} ${technologia} / ${opis.medium}</span><h4 id="compare-tech-title-${technologia}">${opis.name} <small>· ${pakiety.length} ${pakiety.length===3?'pakiety':'pakietów'}</small></h4></div><span class="compare-tech-count">${pakiety.length} wariantów</span></header><div class="compare-scroll" role="region" tabindex="0" aria-label="Przewijalna tabela cen ${opis.name}"><table class="compare-table"><caption class="sr-only">MAD-NET: cennik technologii ${opis.name}; ceny za miesiąc w złotych</caption><thead>${naglowek}</thead><tbody>${zawartosc}</tbody></table></div></section>`;
 }
 function renderComparisonTable(){
+ // Nie odmontowujemy aktywnego gniazda przy zmianie widoczności pozostałych tabel.
+ const poprzednieGniazdo=listaTabel.querySelector('#comparison-FIBER');
+ const zachowajGniazdo=widoczneTechnologieTabel.has('FIBER')&&poprzednieGniazdo;
+ if(!zachowajGniazdo&&polaczenieFiber?.zrodlo==='table')wyczyscPolaczenieFiber();
  przelacznikiTabel.forEach(przycisk=>przycisk.setAttribute('aria-pressed',String(widoczneTechnologieTabel.has(przycisk.dataset.tableTechnology))));
  const wybrane=kolejnoscTabel.filter(technologia=>widoczneTechnologieTabel.has(technologia));
  licznikTabel.textContent=wybrane.length+' z 3 '+(wybrane.length===1?'technologii':'technologii');
  listaTabel.innerHTML=wybrane.length?
   wybrane.map(utworzTabele).join(''):
   '<div class="compare-empty" role="status"><span aria-hidden="true">▤</span><strong>Nie wybrano żadnego cennika</strong><p>Zaznacz powyżej jedną lub kilka technologii albo wybierz „Pokaż wszystkie”.</p></div>';
+ if(zachowajGniazdo)listaTabel.querySelector('#comparison-FIBER').replaceWith(poprzednieGniazdo);
+ syncStates();
  document.getElementById('compare-show-all').disabled=wybrane.length===kolejnoscTabel.length;
  document.getElementById('compare-clear').disabled=wybrane.length===0;
 }
@@ -569,6 +619,188 @@ document.getElementById('compare-show-all').addEventListener('click',()=>{
 document.getElementById('compare-clear').addEventListener('click',()=>{
  widoczneTechnologieTabel.clear();renderComparisonTable();
 });
+
+// Jeden kontroler sprzętu, jeden docelowy pakiet, najwyżej jeden przewód.
+let polaczenieFiber=null;
+let oczekiwanePolaczenieFiber=null;
+let kontrolerFiber=new AbortController();
+let trwaSekwencjaFiber=false;
+let klatkaFiber=0;
+function ustawStanFiber(polaczenie,stan){
+ if(stan==='CONNECTED')stanyLink.set(polaczenie.id,true);
+ if(['COVER_OPEN','IDLE'].includes(stan))stanyLink.delete(polaczenie.id);
+ odswiezDiody();
+ polaczenie.stan=stan;
+ zone.dataset.fiberState=stan;
+ for(const element of polaczenie.elementy)element.dataset.stanPolaczenia=stan;
+ const opisy={SELECTED:'wybrano pakiet',OPENING_COVER:'otwieranie osłony',COVER_OPEN:'wejście odsłonięte',CONNECTOR_APPROACH:'wyrównanie wtyku SC/APC',INSERTING:'wsuwanie wtyku',CONNECTED:'SC/APC Simplex — połączono',DISCONNECTING:'wysuwanie wtyku',CLOSING_COVER:'zamykanie osłony',IDLE:'odłączono'};
+ document.getElementById('connection-state').textContent=polaczenie.id+': '+opisy[stan]+'.';
+ scheduleLinks();
+}
+async function przejdzStanFiber(polaczenie,stan,sygnal){
+ sygnal.throwIfAborted();
+ // Odczyt poprzedniej pozycji umożliwia transition także po kilku zmianach w jednej klatce.
+ polaczenie.elementy.forEach(element=>element.getBoundingClientRect());
+ ustawStanFiber(polaczenie,stan);
+ const animacje=[...new Set(polaczenie.elementy.flatMap(element=>element.getAnimations({subtree:true})))].filter(animacja=>animacja.effect?.getTiming().iterations!==Infinity);
+ await poczekajNaRuchFiber(animacje,sygnal);
+}
+async function poczekajNaRuchFiber(animacje,sygnal){
+ let zakonczAnulowanie;
+ const anulowanie=new Promise(zakoncz=>{zakonczAnulowanie=zakoncz;sygnal.addEventListener('abort',zakoncz,{once:true});});
+ try{await Promise.race([Promise.allSettled(animacje.map(animacja=>animacja.finished)),anulowanie]);}
+ finally{sygnal.removeEventListener('abort',zakonczAnulowanie);}
+ sygnal.throwIfAborted();
+}
+async function rozwinPrzewodFiber(polaczenie,sygnal){
+ sygnal.throwIfAborted();
+ updateLinks();
+ if(!polaczenie.animuj||!animationEnabled()||!activePath.getAttribute('d'))return;
+ const dlugosc=activePath.getTotalLength();
+ activePath.classList.add('is-drawing');
+ activePath.style.strokeDasharray=String(dlugosc);
+ const animacja=activePath.animate([{strokeDashoffset:dlugosc},{strokeDashoffset:0}],{duration:480,easing:'cubic-bezier(.2,.8,.3,1)'});
+ try{await poczekajNaRuchFiber([animacja],sygnal);}
+ finally{
+  animacja.cancel();
+  if(sygnal===kontrolerFiber.signal){activePath.classList.remove('is-drawing');activePath.style.strokeDasharray='';activePath.style.strokeDashoffset='0';}
+ }
+}
+function odswiezGeometrieFiber(){
+ if(!trwaSekwencjaFiber){klatkaFiber=0;return;}
+ updateLinks();
+ klatkaFiber=requestAnimationFrame(odswiezGeometrieFiber);
+}
+function wyczyscPolaczenieFiber(){
+ stanyLink.clear();odswiezDiody();
+ kontrolerFiber.abort();
+ kontrolerFiber=new AbortController();
+ cancelAnimationFrame(klatkaFiber);klatkaFiber=0;
+ trwaSekwencjaFiber=false;
+ if(polaczenieFiber){
+  // Odmontowanie: najpierw schowaj wycofany wtyk, następnie zamknij klapkę bez ruchu.
+  const elementy=polaczenieFiber.elementy;
+  elementy.forEach(element=>{element.classList.add('sc-bez-ruchu');element.dataset.stanPolaczenia='COVER_OPEN';});
+  elementy.forEach(element=>element.getBoundingClientRect());
+  elementy.forEach(element=>element.dataset.stanPolaczenia='IDLE');
+  elementy.forEach(element=>element.getBoundingClientRect());
+  elementy.forEach(element=>element.classList.remove('sc-bez-ruchu'));
+  selectedPlanId=null;
+ }
+ activePath.getAnimations().forEach(animacja=>animacja.cancel());
+ activePath.classList.remove('is-drawing');activePath.style.strokeDasharray='';activePath.style.strokeDashoffset='0';
+ polaczenieFiber=null;oczekiwanePolaczenieFiber=null;
+ zone.dataset.fiberState='IDLE';
+ linkPending=false;
+ scheduleLinks();
+}
+function wybierzPolaczenieFiber(id,zrodlo,animuj=true){
+ const poprzedni=oczekiwanePolaczenieFiber;
+ oczekiwanePolaczenieFiber=poprzedni?.id===id&&poprzedni.zrodlo===zrodlo?null:{id,zrodlo,animuj};
+ if(trwaSekwencjaFiber)return;
+ const sygnal=kontrolerFiber.signal;
+ trwaSekwencjaFiber=true;
+ klatkaFiber=requestAnimationFrame(odswiezGeometrieFiber);
+ (async()=>{
+  while(!sygnal.aborted){
+   if(polaczenieFiber){
+    if(polaczenieFiber.zadanie===oczekiwanePolaczenieFiber)break;
+    if(['CONNECTOR_APPROACH','INSERTING','CONNECTED'].includes(polaczenieFiber.stan)){
+     await przejdzStanFiber(polaczenieFiber,'DISCONNECTING',sygnal);
+     await przejdzStanFiber(polaczenieFiber,'COVER_OPEN',sygnal);
+    }
+    linkPending=true;
+    await przejdzStanFiber(polaczenieFiber,'CLOSING_COVER',sygnal);
+    ustawStanFiber(polaczenieFiber,'IDLE');
+    polaczenieFiber=null;selectedPlanId=null;syncStates();
+   }
+   const zadanie=oczekiwanePolaczenieFiber;
+   if(!zadanie)break;
+   const urzadzenie=centralRoot.querySelector(`[data-port-plan-id="${zadanie.id}"] .sc-simplex`);
+   const cel=zadanie.zrodlo==='table'?listaTabel.querySelector(`[data-gniazdo-pakiet="${zadanie.id}"]`):plansRoot.querySelector(`[data-plan-id="${zadanie.id}"] .sc-simplex`);
+   if(!urzadzenie||!cel){oczekiwanePolaczenieFiber=null;break;}
+   const elementy=[urzadzenie,cel];
+   if(zadanie.zrodlo==='table')elementy.push(cel.querySelector('.sc-simplex'));
+   polaczenieFiber={...zadanie,zadanie,elementy,cel,urzadzenie,stan:'SELECTED'};
+   if(!zadanie.animuj)elementy.forEach(element=>element.classList.add('sc-bez-ruchu'));
+   selectedPlanId=zadanie.id;hoveredPlanId=null;linkPending=true;
+   syncStates();
+   ustawStanFiber(polaczenieFiber,'SELECTED');
+   await przejdzStanFiber(polaczenieFiber,'OPENING_COVER',sygnal);
+   if(zadanie!==oczekiwanePolaczenieFiber)continue;
+   await przejdzStanFiber(polaczenieFiber,'COVER_OPEN',sygnal);
+   if(zadanie.zrodlo==='port'){
+    await scrollToSelectedCard(plansRoot.querySelector(`[data-plan-id="${zadanie.id}"]`),activationSequence);
+    sygnal.throwIfAborted();
+   }
+   if(zadanie!==oczekiwanePolaczenieFiber)continue;
+   linkPending=false;
+   await Promise.all([przejdzStanFiber(polaczenieFiber,'CONNECTOR_APPROACH',sygnal),rozwinPrzewodFiber(polaczenieFiber,sygnal)]);
+   if(zadanie!==oczekiwanePolaczenieFiber)continue;
+   await przejdzStanFiber(polaczenieFiber,'INSERTING',sygnal);
+   if(zadanie!==oczekiwanePolaczenieFiber)continue;
+   await przejdzStanFiber(polaczenieFiber,'CONNECTED',sygnal);
+   elementy.forEach(element=>element.classList.remove('sc-bez-ruchu'));
+  }
+ })().catch(blad=>{if(!sygnal.aborted)console.error('Połączenie SC/APC:',blad);}).finally(()=>{
+  if(sygnal!==kontrolerFiber.signal)return;
+  trwaSekwencjaFiber=false;
+  cancelAnimationFrame(klatkaFiber);klatkaFiber=0;
+  if(!polaczenieFiber)zone.dataset.fiberState='IDLE';
+  syncStates();
+ });
+}
+function trasaDoGniazdaFiber(polaczenie){
+ const gniazdo=polaczenie.cel;
+ if(!gniazdo.isConnected)return '';
+ const obszar=zone.getBoundingClientRect();
+ const przewijanie=gniazdo.closest('.compare-scroll').getBoundingClientRect();
+ const wymiary=gniazdo.getBoundingClientRect();
+ // Schowane poza poziomym viewportem gniazdo nie może zostawiać kabla nad inną kolumną.
+ if(wymiary.left<przewijanie.left||wymiary.right>przewijanie.right)return '';
+ const prostokatZrodla=polaczenie.urzadzenie.getBoundingClientRect(),prostokatCelu=gniazdo.querySelector('.sc-simplex').getBoundingClientRect();
+ const zrodlo=polaczenie.podglad?{x:prostokatZrodla.left+prostokatZrodla.width/2,y:prostokatZrodla.bottom}:polaczenie.urzadzenie.querySelector('.sc-kabel-punkt').getBoundingClientRect();
+ const cel=polaczenie.podglad?{x:prostokatCelu.left+prostokatCelu.width/2,y:prostokatCelu.bottom}:gniazdo.querySelector('.sc-kabel-punkt').getBoundingClientRect();
+ const tabela=gniazdo.closest('table').getBoundingClientRect();
+ const karty=[...plansRoot.querySelectorAll('.plan')].map(karta=>karta.getBoundingClientRect());
+ const lewyKorytarz=Math.min(...karty.map(karta=>karta.left),document.querySelector('.compare-block').getBoundingClientRect().left)-10-obszar.left;
+ const poczatek={x:zrodlo.x-obszar.left,y:zrodlo.y-obszar.top};
+ const koniec={x:cel.x-obszar.left,y:cel.y-obszar.top};
+ const gornyKorytarz=(document.getElementById('central-area').getBoundingClientRect().bottom+Math.min(...karty.map(karta=>karta.top)))/2-obszar.top;
+ const korytarzTabeli=tabela.top+13-obszar.top;
+ const bokGniazda=wymiary.left-7-obszar.left;
+ const bokUrzadzenia=centralRoot.querySelector('.device-shell').getBoundingClientRect().left-12-obszar.left;
+ return roundedCablePath([poczatek,{x:poczatek.x,y:poczatek.y+6},{x:bokUrzadzenia,y:poczatek.y+6},{x:bokUrzadzenia,y:gornyKorytarz},{x:lewyKorytarz,y:gornyKorytarz},{x:lewyKorytarz,y:korytarzTabeli},{x:bokGniazda,y:korytarzTabeli},{x:bokGniazda,y:koniec.y+7},{x:koniec.x,y:koniec.y+7},koniec],5);
+}
+listaTabel.addEventListener('click',zdarzenie=>{
+ const przycisk=zdarzenie.target.closest('[data-gniazdo-pakiet]');
+ if(!przycisk)return;
+ if(technology!=='FIBER'){technology='FIBER';selectedPlanId=null;render();}
+ selectPlan(przycisk.dataset.gniazdoPakiet,true,'table');
+});
+listaTabel.addEventListener('pointerover',zdarzenie=>{
+ if(!['mouse','pen'].includes(zdarzenie.pointerType))return;
+ const przycisk=zdarzenie.target.closest('[data-gniazdo-pakiet]');
+ if(przycisk&&technology==='FIBER')setHover(przycisk.dataset.gniazdoPakiet,'table');
+});
+listaTabel.addEventListener('pointerout',zdarzenie=>{
+ const przycisk=zdarzenie.target.closest('[data-gniazdo-pakiet]');
+ if(przycisk&&!przycisk.contains(zdarzenie.relatedTarget))setHover(null);
+});
+listaTabel.addEventListener('focusin',zdarzenie=>{
+ const przycisk=zdarzenie.target.closest('[data-gniazdo-pakiet]');
+ if(przycisk&&technology==='FIBER'&&performance.now()-lastTouchInteraction>900)setHover(przycisk.dataset.gniazdoPakiet,'table');
+});
+listaTabel.addEventListener('focusout',()=>setHover(null));
+// Capture obejmuje także wewnętrzny poziomy scroll tabeli.
+listaTabel.addEventListener('scroll',scheduleLinks,{capture:true,passive:true});
+window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',()=>{
+ if(!animationEnabled())activePath.getAnimations().forEach(animacja=>animacja.cancel());
+});
+window.addEventListener('pagehide',zdarzenie=>{
+ if(zdarzenie.persisted)return;
+ wyczyscPolaczenieFiber();cancelTouch();clearTimeout(pathTimer);obserwatorPolaczen.disconnect();
+},{once:true});
 const feesBody=document.getElementById('fees-body');
 feesBody.innerHTML=FEES.map(row=>'<tr>'+row.map(t=>`<td>${escapeText(t)}</td>`).join('')+'</tr>').join('');
 render();

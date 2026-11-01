@@ -189,7 +189,8 @@ try {
         const przeliczenie = rysunek.getScreenCTM();
         return [...rysunek.querySelectorAll('[data-speed]')].every(kanal => {
           const wycinek = kanal.querySelector('[clip-path]');
-          const rys = wycinek ? document.querySelector(wycinek.getAttribute('clip-path').slice(4, -1)).querySelector('rect').getBBox() : kanal.querySelector('circle').getBBox();
+          const dioda = kanal.querySelector('.dioda-link-szafy');
+          const rys = dioda ? dioda.getBBox() : wycinek ? document.querySelector(wycinek.getAttribute('clip-path').slice(4, -1)).querySelector('rect').getBBox() : kanal.querySelector('circle').getBBox();
           const punkt = new DOMPoint(rys.x + rys.width / 2, rys.y + rys.height / 2).matrixTransform(przeliczenie);
           const przycisk = document.querySelector('[data-rack-tech="' + kanal.dataset.technologiaKanalu + '"]');
           return przycisk.contains(document.elementFromPoint(punkt.x, punkt.y));
@@ -324,7 +325,9 @@ try {
     await strona.locator(`.device-tech-tabs [data-technology="${technologia}"]`).click();
     const identyfikator = `${technologia}-${oferta[technologia][0][0]}M`;
     await strona.locator(`[data-port-plan-id="${identyfikator}"]`).click();
-    await strona.waitForFunction(identyfikator => document.querySelector('#connection-state').textContent.includes(`${identyfikator}:`) && document.querySelector('#connection-state').textContent.includes('są połączone'), identyfikator);
+    await strona.waitForFunction(identyfikator => identyfikator.startsWith('FIBER-')
+      ? document.querySelector('#connection-zone').dataset.fiberState === 'CONNECTED' && document.querySelector('#plans .plan.is-selected')?.dataset.planId === identyfikator
+      : document.querySelector('#connection-state').textContent.includes(`${identyfikator}:`) && document.querySelector('#connection-state').textContent.includes('są połączone'), identyfikator);
     await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));
     assert.equal(await strona.locator(`#plans [data-plan-id="${identyfikator}"]`).getAttribute('data-port-count'), '1');
     assert.equal(await strona.locator('#link-active').evaluate(element => element.getTotalLength() > 0), true);

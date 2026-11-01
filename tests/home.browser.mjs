@@ -105,7 +105,13 @@ try {
     await trasa.fulfill(await kafelki.get(url));
   });
   await kontekst.route(`${adres}/oryginal-home-v3.html`, trasa => trasa.fulfill({body:oryginal, contentType:'text/html; charset=utf-8'}));
-  const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'});
+  // Wzorzec migracji używa aktualnych skryptów: uwzględnia zatwierdzony sprzęt Etapu 05.
+  const aktualnyCennik = await readFile('cennik.html','utf8');
+  const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'})
+    .replace('<script src="./assets/js/cennik.js">','<script src="./assets/js/sprzet-fiber.js"></script><script src="./assets/js/cennik.js">')
+    .replace('</head>','<link rel="stylesheet" href="./assets/css/sprzet-fiber.css"></head>')
+    .replaceAll('SC/UPC','SC/APC')
+    .replace(/<p class="compare-sub">[\s\S]*?<\/p>/,aktualnyCennik.match(/<p class="compare-sub">[\s\S]*?<\/p>/)[0]);
   await kontekst.route(`${adres}/oryginal-cennik.html`, trasa => trasa.fulfill({body:cennikPrzed, contentType:'text/html; charset=utf-8'}));
   // Symulacja montowania niezmienionego dist w podkatalogu GitHub Pages.
   await kontekst.route(`${adres}/MAD-NET/**`, async trasa => {
@@ -229,7 +235,7 @@ try {
     const selektory = czyCennik ? ['#hero-rack-stage', '#cennik', '#oplaty', '#availability-form'] : ['#tytul-glowny', '#nawigacja', '#mapa-ramka', '.karta-uslugi'];
     for (const selektor of selektory) assert.ok(await strona.locator(selektor).count(), `${sciezka}: brak selektora ${selektor}`);
     const skrypty = await strona.locator('script[src]').evaluateAll(elementy => elementy.map(element => element.getAttribute('src')));
-    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js', './assets/js/nawigacja.js', './assets/js/wybor-technologii.js'] : ['./assets/js/stare-adresy.js', './assets/js/home.js', './assets/js/nawigacja.js']);
+    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/sprzet-fiber.js', './assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js', './assets/js/nawigacja.js', './assets/js/wybor-technologii.js'] : ['./assets/js/stare-adresy.js', './assets/js/home.js', './assets/js/nawigacja.js']);
     assert.equal(await strona.locator(czyCennik ? 'link[href="./assets/css/home.css"]' : 'link[href="./assets/css/styles.css"]').count(), 0);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.css')), `${sciezka}: nie pobrano CSS`);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.js')), `${sciezka}: nie pobrano JS`);

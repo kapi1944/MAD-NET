@@ -7,7 +7,7 @@
  if(!szafa||!panel||!tresc)return;
  const warianty={
   LAN:{index:'01',icon:'▣',title:'LAN',subtitle:'kablowy',text:'Stabilne łącze Ethernet przez RJ-45. Prędkości od 10 do 80 Mbit/s.',count:'5 wariantów',socket:'RJ-45 / Ethernet'},
-  FIBER:{index:'02',icon:'✦',title:'FIBER',subtitle:'światłowód',text:'Łącze światłowodowe SC/UPC Simplex. Prędkości 50, 100 i 300 Mbit/s.',count:'3 warianty',socket:'SC/UPC Simplex'},
+  FIBER:{index:'02',icon:'✦',title:'FIBER',subtitle:'światłowód',text:'Łącze światłowodowe SC/APC Simplex. Prędkości 50, 100 i 300 Mbit/s.',count:'3 warianty',socket:'SC/APC Simplex'},
   AIR:{index:'03',icon:'◉',title:'AIR',subtitle:'bezprzewodowy',text:'Internet radiowy bez przewodu do budynku. Od 10 do 80 Mbit/s, zależnie od lokalnych warunków.',count:'5 wariantów',socket:'Radio / bez gniazda'}
  };
  const ograniczonyRuch=window.matchMedia('(prefers-reduced-motion:reduce)');
