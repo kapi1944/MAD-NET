@@ -65,3 +65,21 @@ if(warstwaSzafyFiber){
   <text x="272" y="578" fill="#f4f1e8" font-family="Arial,sans-serif" font-size="18" font-weight="600">SC/APC SIMPLEX</text>`;
  warstwaSzafyFiber.append(panelFiber);
 }
+
+// LINK/ACT w istniejących narożnikach RJ-45 oraz na panelu FIBER, poza adapterami.
+for(const kanal of document.querySelectorAll('[data-technologia-kanalu="LAN"],[data-technologia-kanalu="FIBER"]')){
+ const technologia=kanal.dataset.technologiaKanalu;
+ kanal.dataset.ledPakiet=technologia+'-'+kanal.dataset.speed+'M';
+ const numer=[...kanal.parentNode.querySelectorAll('[data-technologia-kanalu="'+technologia+'"]')].indexOf(kanal);
+ const prawy=technologia==='LAN'?[615,692,772,852,933][numer]:[644,722,800][numer];
+ const lewy=technologia==='LAN'?prawy-45:prawy-14;
+ const gora=technologia==='LAN'?307:483;
+ const tlo=document.createElementNS('http://www.w3.org/2000/svg','g');
+ tlo.innerHTML='<rect x="'+(lewy-2)+'" y="'+(gora-2)+'" width="18" height="18" fill="#18201b"/><rect x="'+(prawy-2)+'" y="'+(gora-2)+'" width="18" height="18" fill="#18201b"/>';
+ kanal.prepend(tlo);
+ const aktywnosc=kanal.querySelector('.rj-link,.fiber-activity');
+ aktywnosc.innerHTML='<rect x="'+prawy+'" y="'+gora+'" width="10" height="7" rx="1" fill="#e6a346"/>';
+ const link=document.createElementNS('http://www.w3.org/2000/svg','rect');
+ for(const [nazwa,wartosc] of Object.entries({x:lewy,y:gora,width:10,height:7,rx:1,class:'dioda-link-szafy'}))link.setAttribute(nazwa,wartosc);
+ kanal.append(link);
+}

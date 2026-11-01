@@ -66,6 +66,14 @@ const activePath=document.getElementById('link-active');
 const cableUnderlay=document.getElementById('link-casing');
 const waveIcon=`<svg viewBox="0 0 64 48" aria-hidden="true"><path class="wifi-arc wifi-arc--middle" d="M18 26 Q32 12 46 26"/><path class="wifi-arc wifi-arc--large" d="M9 18 Q32 -2 55 18"/><path class="wifi-arc wifi-arc--small" d="M25 34 Q32 27 39 34"/><circle cx="32" cy="42" r="3"/></svg>`;
 // W AIR nie pokazujemy wielkiego znaku nad urządzeniem. Każdy kanał/kafelek ma własne animowane łuki Wi-Fi.
+const stanyLink=new Map();
+function diodyPortu(){return '<span class="port-leds" aria-hidden="true"><i></i><i></i></span>';}
+function odswiezDiody(){
+ document.querySelectorAll('[data-port-plan-id],.plan,[data-led-pakiet],[data-gniazdo-pakiet]').forEach(element=>{
+ const id=element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet||element.dataset.gniazdoPakiet;
+ element.dataset.link=stanyLink.get(id)?'connected':'disconnected';
+ });
+}
 let selectedPlanId=null;
 let hoveredPlanId=null;
 let zrodloPodgladuFiber='card';
@@ -79,7 +87,7 @@ const animationEnabled=()=>animations&&!window.matchMedia('(prefers-reduced-moti
 const radioPeriod=(speed)=>Math.round(Math.max(700,2400/(1+Math.max(0,speed-10)*.032)));
 const portName=()=>technology==='FIBER'?'SC/APC SIMPLEX':technology==='LAN'?'RJ-45':'KANAŁ RADIOWY';
 function socketHtml(kind,withCaps=true){
- if(kind==='LAN')return '<span class="jack-rj" aria-hidden="true"><span class="rj-mouth"><span class="rj-plug"><span class="rj-plug-grip"></span></span></span></span>';
+ if(kind==='LAN')return `<span class="jack-rj" aria-hidden="true">${diodyPortu()}<span class="rj-mouth"><span class="rj-plug"><span class="rj-plug-grip"></span></span></span></span>`;
  if(kind==='FIBER')return adapterFiber(withCaps);
  return `<span class="air-virtual" aria-hidden="true">${waveIcon}</span>`;
 }
@@ -88,7 +96,7 @@ function makeCentralPort(p,i){
  const interval=Math.round(1000/hz);
  const caption=technology==='AIR'?'Wirtualny kanał':'Port '+(i+1);
  const accessibleName=`${caption} ${i+1}, ${p.down} Mbit/s, wybierz pakiet ${p.id}`;
- const indicators=technology==='AIR'?'<span class="signal-tag" aria-hidden="true">RF / TX</span>':'<span class="port-leds" aria-hidden="true"><i></i><i></i></span>';
+ const indicators=technology==='LAN'?'':technology==='AIR'?'<span class="signal-tag" aria-hidden="true">RF / TX</span>':'<span class="port-leds" aria-hidden="true"><i></i><i></i></span>';
  return `<button class="speed-port speed-port--${technology}" type="button" data-port-plan-id="${escapeText(p.id)}" data-speed="${p.down}" style="--pulse-ms:${interval}ms;--wifi-period:${radioPeriod(p.down)}ms" title="${escapeText(accessibleName)}" aria-label="${escapeText(accessibleName)}" aria-pressed="false">
    ${indicators}
    ${socketHtml(technology)}
@@ -115,7 +123,7 @@ function makePlan(p){
  const etykietaPortu=technology==='AIR'?'<strong>WĘZEŁ RADIOWY</strong> <small>/ BEZ KABLA</small>':`<small>1 ×</small> <strong>${technology==='FIBER'?'SC/APC SIMPLEX':'RJ-45'}</strong>`;
  return `<article class="plan${selected?' is-selected':''}" data-plan-id="${escapeText(p.id)}" data-technology="${technology}" data-speed="${p.down}" data-port-count="1" data-blink-hz="${hz.toFixed(2)}" data-blink-ms="${interval}" aria-label="Pakiet ${escapeText(p.id)}: pobieranie ${p.down}, wysyłanie ${p.up} Mbit/s" style="--pulse-ms:${interval}ms;--wifi-period:${radioPeriod(p.down)}ms">
  <button class="plan-hit" type="button" data-select-plan="${escapeText(p.id)}" aria-pressed="${selected}" aria-label="Wybierz ${escapeText(p.id)}: ${p.down} Mbit/s, ${phone?'wycena indywidualna':price+' zł miesięcznie'}"></button>
- <div class="card-terminal"><span class="card-terminal-label">${etykietaPortu}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${socketHtml(technology,true)}</div></div>
+ <div class="card-terminal"><span class="card-terminal-label">${etykietaPortu}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${technology==='FIBER'?diodyPortu():''}${socketHtml(technology,true)}</div></div>
  <div class="plan-body"><div class="plan-name"><span>● Pakiet MAD-NET</span></div>
  <div class="plan-speed"><span class="nazwa-technologii">${technology}</span>-${p.down}</div>
  <div class="specs"><div class="spec"><b class="predkosc-pobierania"><span aria-hidden="true">↓</span> <strong>${p.down}</strong> <small>Mbit/s</small></b><span>POBIERANIE</span></div><div class="spec"><b class="predkosc-wysylania"><span aria-hidden="true">↑</span> <strong>${p.up}</strong> Mbit/s</b><span>WYSYŁANIE</span></div></div></div>
@@ -299,6 +307,7 @@ function animateLink(delay){
  activePath.addEventListener('transitionend',once);
 }
 function syncStates(){
+ odswiezDiody();
  centralRoot.querySelectorAll('.speed-port').forEach(btn=>{
   const id=btn.dataset.portPlanId;
   btn.classList.toggle('is-selected',id===selectedPlanId);
@@ -432,6 +441,8 @@ async function scrollToSelectedCard(card,sequence){
 async function selectPlan(id,animate=true,source='card'){
  if(!PLAN_DATA[technology].some(p=>p.id===id))return;
  if(technology==='FIBER'){wybierzPolaczenieFiber(id,source,animate);return;}
+ if(technology==='LAN'&&selectedPlanId===id){++activationSequence;stanyLink.clear();selectedPlanId=null;centralRoot.querySelectorAll('.is-connecting').forEach(element=>element.classList.remove('is-connecting'));plansRoot.querySelectorAll('.is-connecting').forEach(element=>element.classList.remove('is-connecting'));syncStates();return;}
+ stanyLink.clear();odswiezDiody();
  clearTimeout(pathTimer);
  const seq=++activationSequence;
  const fromPort=source==='port'&&animate&&animationEnabled()&&technology!=='AIR';
@@ -468,6 +479,11 @@ async function selectPlan(id,animate=true,source='card'){
   animateLink(technology==='FIBER'&&animate&&animationEnabled()?680:technology==='LAN'?110:0);
  }
  if(seq!==activationSequence)return;
+ if(technology==='LAN'){
+  await Promise.allSettled([...device.getAnimations({subtree:true}),...card.getAnimations({subtree:true})].filter(animacja=>animacja.effect?.getTiming().iterations!==Infinity).map(animacja=>animacja.finished));
+  if(seq!==activationSequence)return;
+  stanyLink.set(id,true);odswiezDiody();
+ }
  const description=technology==='AIR'?'kanał radiowy '+radioPeriod(PLAN_DATA.AIR.find(p=>p.id===id).down)+' ms/cykl':'RJ-45';
  document.getElementById('connection-state').textContent=`${id}: ${description}. Port i kafelek są połączone.`;
 }
@@ -480,6 +496,7 @@ plansRoot.addEventListener('click',event=>{
  if(btn)selectPlan(btn.dataset.selectPlan,true,'card');
 });
 function render(){
+ stanyLink.clear();
  const zachowanePolaczenieFiber=technology==='FIBER'&&selectedPlanId?{id:selectedPlanId,zrodlo:polaczenieFiber?.zrodlo||'card'}:null;
  wyczyscPolaczenieFiber();
  linkPending=false;
@@ -510,6 +527,7 @@ function render(){
  document.body.classList.toggle('mot-off',!animations);
  wireInteractiveHover();
  renderComparisonTable();
+ if(technology==='LAN'&&selectedPlanId)stanyLink.set(selectedPlanId,true);
  if(zachowanePolaczenieFiber)wybierzPolaczenieFiber(zachowanePolaczenieFiber.id,zachowanePolaczenieFiber.zrodlo,false);
  syncStates();
  scheduleLinks();
@@ -553,9 +571,9 @@ function komorkaCeny(wartosc,pogrubiona=false){return wartosc==null?'<span class
 // Gniazdo FIBER wybiera ten sam pakiet co karta; LAN i AIR pozostają dekoracyjne.
 function utworzMiniport(technologia,pakiet){
  const okres=Math.round(1000/(blinkHz(pakiet.down)*1.5));
- if(technologia==='FIBER')return `<button type="button" class="compare-head-port compare-head-port--FIBER" data-gniazdo-pakiet="${pakiet.id}" data-stan-polaczenia="IDLE" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms" aria-pressed="false" aria-label="Podłącz lub odłącz ${pakiet.id}, gniazdo SC/APC Simplex">${gniazdoScienneFiber()}<span class="sc-wskaznik" aria-hidden="true"></span></button>`;
- const kontrolki=technologia==='AIR'?'':'<span class="port-leds"><i></i><i></i></span>';
- return `<span class="compare-head-port compare-head-port--${technologia}" aria-hidden="true" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms;--wifi-period:${radioPeriod(pakiet.down)}ms">${kontrolki}${socketHtml(technologia,true)}</span>`;
+ if(technologia==='FIBER')return `<button type="button" class="compare-head-port compare-head-port--FIBER" data-gniazdo-pakiet="${pakiet.id}" data-stan-polaczenia="IDLE" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms" aria-pressed="false" aria-label="Podłącz lub odłącz ${pakiet.id}, gniazdo SC/APC Simplex">${gniazdoScienneFiber()}${diodyPortu()}<span class="sc-wskaznik" aria-hidden="true"></span></button>`;
+ const kontrolki='';
+ return `<span class="compare-head-port compare-head-port--${technologia}" data-led-pakiet="${pakiet.id}" aria-hidden="true" data-port-speed="${pakiet.down}" data-blink-ms="${okres}" style="--pulse-ms:${okres}ms;--wifi-period:${radioPeriod(pakiet.down)}ms">${kontrolki}${socketHtml(technologia,true)}</span>`;
 }
 function utworzTabele(technologia){
  const pakiety=PLAN_DATA[technologia],opis=opisyTabel[technologia];
@@ -609,6 +627,9 @@ let kontrolerFiber=new AbortController();
 let trwaSekwencjaFiber=false;
 let klatkaFiber=0;
 function ustawStanFiber(polaczenie,stan){
+ if(stan==='CONNECTED')stanyLink.set(polaczenie.id,true);
+ if(['COVER_OPEN','IDLE'].includes(stan))stanyLink.delete(polaczenie.id);
+ odswiezDiody();
  polaczenie.stan=stan;
  zone.dataset.fiberState=stan;
  for(const element of polaczenie.elementy)element.dataset.stanPolaczenia=stan;
@@ -651,6 +672,7 @@ function odswiezGeometrieFiber(){
  klatkaFiber=requestAnimationFrame(odswiezGeometrieFiber);
 }
 function wyczyscPolaczenieFiber(){
+ stanyLink.clear();odswiezDiody();
  kontrolerFiber.abort();
  kontrolerFiber=new AbortController();
  cancelAnimationFrame(klatkaFiber);klatkaFiber=0;
