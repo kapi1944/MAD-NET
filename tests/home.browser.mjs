@@ -199,6 +199,8 @@ try {
       }
       @media(max-width:800px){.hero-tech-panel{min-height:274px}}
       @media(min-width:1231px){.hero-tech-panel p{min-height:6.4em}.hero-tech-facts strong{min-height:2.8em}}
+      #plans .specs{display:flex;flex-wrap:wrap}
+      #plans .specs>.spec{flex:1 0 auto;min-width:min-content}
     `});
     const geometriaPrzed=await geometriaCennika(strona);
     const przed = await strona.locator('main').screenshot({path:`${katalog}/cennik-przed-${szerokosc}.png`, animations:'disabled', style:'.nav,.wspolny-naglowek,.foot,.wspolna-stopka{visibility:hidden!important}'});

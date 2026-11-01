@@ -53,3 +53,6 @@
  .hero-tech-panel p{min-height:6.4em}
  .hero-tech-facts strong{min-height:2.8em}
 }
+/* Parametry zawijają się według szerokości tekstu, także przy fontach Linux. */
+#plans .specs{display:flex;flex-wrap:wrap}
+#plans .specs>.spec{flex:1 0 auto;min-width:min-content}

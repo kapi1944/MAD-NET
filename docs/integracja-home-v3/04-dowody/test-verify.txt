@@ -6,19 +6,19 @@
 > mad-net@0.1.0 test
 > node --test tests/*.test.mjs
 
-✔ build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylko allowlistę (453.6818ms)
-✔ HOME: archiwum i obrazy zachowują oryginalne bajty i MIME V3 (10.5458ms)
-✔ HOME: osobne zasoby, język polski, brak zależności od stylów cennika (74.7528ms)
-✔ cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline (70.5843ms)
-✔ nawigacja: dziewięć stron ma wspólne elementy i istniejące względne cele (52.4871ms)
-✔ nawigacja: nowe skrypty mają poprawną składnię (129.4654ms)
-✔ strona główna HOME ma własne zasoby i sekcje (1.4789ms)
-✔ struktura startowa i poprawne odnośniki do rozdzielonych zasobów (1.1815ms)
-✔ skrypty wykonują się w pierwotnej kolejności (0.9754ms)
-✔ oryginalny szablon V18 jest zachowany do porównań i rollbacku (1.7909ms)
-✔ 13 wariantów: 5 LAN, 3 FIBER i 5 AIR (0.3572ms)
-✔ zachowano sekcje i formularz, bez fikcyjnego backendu SMTP (1.3197ms)
-✔ poprawna składnia JavaScript we wszystkich trzech skryptach (196.6292ms)
+✔ build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylko allowlistę (439.407ms)
+✔ HOME: archiwum i obrazy zachowują oryginalne bajty i MIME V3 (13.9271ms)
+✔ HOME: osobne zasoby, język polski, brak zależności od stylów cennika (71.1767ms)
+✔ cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline (64.6166ms)
+✔ nawigacja: dziewięć stron ma wspólne elementy i istniejące względne cele (51.1683ms)
+✔ nawigacja: nowe skrypty mają poprawną składnię (125.3379ms)
+✔ strona główna HOME ma własne zasoby i sekcje (1.4691ms)
+✔ struktura startowa i poprawne odnośniki do rozdzielonych zasobów (1.1282ms)
+✔ skrypty wykonują się w pierwotnej kolejności (0.9021ms)
+✔ oryginalny szablon V18 jest zachowany do porównań i rollbacku (1.8312ms)
+✔ 13 wariantów: 5 LAN, 3 FIBER i 5 AIR (0.2654ms)
+✔ zachowano sekcje i formularz, bez fikcyjnego backendu SMTP (1.1543ms)
+✔ poprawna składnia JavaScript we wszystkich trzech skryptach (188.913ms)
 ℹ tests 13
 ℹ suites 0
 ℹ pass 13
@@ -26,7 +26,7 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 535.4643
+ℹ duration_ms 517.2115
 
 > mad-net@0.1.0 build
 > node scripts/build.mjs

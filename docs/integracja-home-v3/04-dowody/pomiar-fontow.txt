@@ -1,0 +1,330 @@
+system-ui LAN [
+  {
+    nazwa: 'LAN-10M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-20M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-40M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-60M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-80M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+system-ui FIBER [
+  {
+    nazwa: 'FIBER-50M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'FIBER-100M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'FIBER-300M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+system-ui AIR [
+  {
+    nazwa: 'AIR-10M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-20M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-40M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-60M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-80M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+Verdana LAN [
+  {
+    nazwa: 'LAN-10M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-20M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-40M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-60M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-80M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+Verdana FIBER [
+  {
+    nazwa: 'FIBER-50M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'FIBER-100M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'FIBER-300M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+Verdana AIR [
+  {
+    nazwa: 'AIR-10M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-20M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-40M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-60M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-80M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+Arial LAN [
+  {
+    nazwa: 'LAN-10M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-20M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-40M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-60M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'LAN-80M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+Arial FIBER [
+  {
+    nazwa: 'FIBER-50M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'FIBER-100M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'FIBER-300M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]
+Arial AIR [
+  {
+    nazwa: 'AIR-10M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-20M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-40M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-60M',
+    overflow: 0,
+    kolizja: false,
+    body: 162,
+    teksty: [],
+    poza: []
+  },
+  {
+    nazwa: 'AIR-80M',
+    overflow: 0,
+    kolizja: false,
+    body: 222,
+    teksty: [],
+    poza: []
+  }
+]

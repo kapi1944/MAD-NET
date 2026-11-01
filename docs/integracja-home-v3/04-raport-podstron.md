@@ -43,8 +43,7 @@ V20 rozszerzono do 22 szerokości, bez zmiany tolerancji i usuwania asercji.
 Dotychczasowy pomiar podświetlenia używa jednej próbki czasu na klatkę,
 kończy dopiero przy >=5000ms i sprawdza ciągłość wszystkich próbek. Próg nie został zmniejszony.
 
-Historyczny wzorzec cennika w home.browser otrzymuje jawny, stały snapshot wyłącznie
-zatwierdzonej korekty CSS. Nie odczytuje oczekiwań z aktualnego arkusza: przyszłe zmiany
+Historyczny wzorzec cennika w home.browser otrzymuje jawny, stały snapshot zatwierdzonych korekt CSS panelu i parametrów kart. Nie odczytuje oczekiwań z aktualnego arkusza: przyszłe zmiany
 nadal mogą złamać ścisłe porównanie wszystkich współrzędnych, wymiarów i typografii.
 Oferta: odsunięto kursor przed niezależnym scenariuszem klawiatury, aby hover nie
 przełączał menu podczas przewijania po fokusie. Zachowano rzeczywiste naciśnięcia i asercje.
@@ -73,10 +72,10 @@ Frontendowy formularz nie stanowi dowodu działania SMTP/backendu.
 
 ## Zmienione pliki
 
-- assets/css/nawigacja.css — lokalna korekta panelu.
+- assets/css/nawigacja.css — lokalna korekta panelu oraz zawijania parametrów kart.
 - tests/diagnostyka-panelu.mjs — 51 pomiarów i screenshoty.
 - tests/v20.browser.mjs — pełniejsza siatka szerokości.
-- tests/home.browser.mjs — jawny snapshot korekty historycznego HERO.
+- tests/home.browser.mjs — jawny snapshot korekt historycznego HERO i parametrów kart.
 - tests/oferta.browser.mjs — izolacja kursora podczas próby klawiatury.
 - package.json — diagnostyka panelu w test:browser.
 - .github/workflows/ci.yml — dodatkowe dowody panelu i usług w artefakcie.
@@ -104,3 +103,21 @@ końcowe logi w `04-dowody/test-*.txt`. Pomiary błędu Linux przy 1231px:
 `04-dowody/linux-1231-przed.json`. Pełny test przeglądarkowy i PCB zakończone kodem 0.
 Stan CI na moment zapisu: do ponownego uruchomienia po drugim commicie naprawczym.
 Aktualny wynik kontrolujemy w istniejącym PR: https://github.com/kapi1944/MAD-NET/pull/2/checks.
+
+## Dalsza regresja kart przy 400px
+
+CI e91c7b5: panel PASS 51/51, później V20 FAIL karty. Diagnostyczny commit 4a76544
+zachował asercję i dopisał jej kontekst: LAN-80, przepelnienie=true, pozostałe
+warunki true. Pomiar lokalny szerszego fontu Verdana wykazał tekst jednostki
+Mbit/s wychodzący poza kartę LAN-80/AIR-80 i kolizję parametrów FIBER-300.
+Siatka 1.45fr/1fr z breakpointem kontenera 180px nie uwzględniała metryk tekstu.
+W już podłączonym nawigacja.css parametry używają teraz flex-wrap i naturalnej
+szerokości min-content: pozostają obok siebie, gdy mieszczą się w karcie,
+a w przeciwnym przypadku przechodzą do kolejnego wiersza. Nie zmniejszono fontu,
+nie ukryto tekstu i nie zmodyfikowano chronionego styles.css ani danych pakietów.
+Stały snapshot korekt w teście HOME obejmuje także te dwie reguły.
+
+Po poprawce zawijania parametrów: ponownie PASS wszystkich sześciu wymaganych
+poleceń na końcowym kodzie, pełny browser + PCB kod 0. Logi test-*.txt zastąpiono
+wynikami tej wersji. Lokalny pomiar system-ui/Verdana/Arial: zero przepełnień
+i kolizji parametrów (pomiar-fontow.txt). Kolejny push uruchamia pełne CI.
