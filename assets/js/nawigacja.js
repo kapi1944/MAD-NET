@@ -29,11 +29,11 @@
   grupa.addEventListener('focusin', zdarzenie => {
     if (!ostatniDotyk && !grupa.contains(zdarzenie.relatedTarget)) ustawListe(true);
   });
-  grupa.addEventListener('focusout', () => queueMicrotask(() => { if (!grupa.contains(document.activeElement)) ustawListe(false); }));
+  grupa.addEventListener('focusout', () => setTimeout(() => { if (!grupa.contains(document.activeElement)) ustawListe(false); }, 0));
   document.addEventListener('pointerdown', zdarzenie => { if (!naglowek.contains(zdarzenie.target)) ustawMenu(false); });
   document.addEventListener('keydown', zdarzenie => {
     if (zdarzenie.key !== 'Escape') return;
-    if (!lista.hidden) { ustawListe(false); przyciskUslug.focus(); }
+    if (!lista.hidden) { przyciskUslug.focus(); ustawListe(false); }
     else if (przyciskMenu.getAttribute('aria-expanded') === 'true') { ustawMenu(false); przyciskMenu.focus(); }
   });
   menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => ustawMenu(false)));

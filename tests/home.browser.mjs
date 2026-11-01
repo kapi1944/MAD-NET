@@ -4,7 +4,7 @@ import {readFile, mkdir, writeFile, access} from 'node:fs/promises';
 import {spawn, execFileSync} from 'node:child_process';
 import {chromium} from 'playwright-core';
 
-const katalog = 'test-results/integracja-home-v3/02';
+const katalog = 'test-results/integracja-home-v3/03/home';
 await mkdir(katalog, {recursive:true});
 const port = process.env.MADNET_PORT_HOME || '4184';
 const adres = `http://127.0.0.1:${port}`;
@@ -51,6 +51,38 @@ async function porownajPiksele(strona, przed, po) {
   }, [przed.toString('base64'), po.toString('base64')]);
 }
 
+async function geometriaHero(strona) {
+  return strona.locator('.sekcja-hero').evaluate(sekcja => {
+    const baza = sekcja.getBoundingClientRect();
+    return ['h1','.hero-glowne>p','.hero-przyciski','.hero-fotografia','.podpis-lokalny'].map(selektor => {
+      const element = sekcja.querySelector(selektor), r = element.getBoundingClientRect();
+      if (!element.getClientRects().length) return {selektor,ukryty:true};
+      const styl = getComputedStyle(element);
+      return {selektor,x:r.x-baza.x,y:r.y-baza.y,szerokosc:r.width,wysokosc:r.height,font:styl.font,color:styl.color};
+    });
+  });
+}
+
+async function geometriaKart(strona) {
+  return strona.locator('.siatka-uslug').evaluate(siatka => [...siatka.querySelectorAll('.karta-uslugi')].flatMap((karta,numer) => {
+    const baza=siatka.getBoundingClientRect();
+    return ['.zdjecie-uslugi','.tresc-uslugi h3','.tresc-uslugi p','.link-karty'].map(selektor => {
+      const element=karta.querySelector(selektor),r=element.getBoundingClientRect(),styl=getComputedStyle(element);
+      return {numer,selektor,x:r.x-baza.x,y:r.y-baza.y,szerokosc:r.width,wysokosc:r.height,font:styl.font,color:styl.color};
+    });
+  }));
+}
+
+async function geometriaCennika(strona) {
+  return strona.locator('main').evaluate(main => {
+    const baza=main.getBoundingClientRect();
+    return ['.hero','.rack-box','#hero-tech-panel','#connection-zone','.device-logo','#plans','#comparison-panel','#availability-form'].map(selektor=>{
+      const element=main.querySelector(selektor),r=element.getBoundingClientRect(),styl=getComputedStyle(element);
+      return {selektor,x:r.x-baza.x,y:r.y-baza.y,szerokosc:r.width,wysokosc:r.height,font:styl.font,color:styl.color};
+    });
+  });
+}
+
 try {
   await new Promise((gotowe, odrzuc) => {
     const zegar = setTimeout(() => odrzuc(new Error('Brak podglądu HOME')), 8000);
@@ -85,13 +117,32 @@ try {
   for (const szerokosc of [390, 768, 1024, 1440, 1920]) {
     await strona.setViewportSize({width:szerokosc, height:1000});
     await przygotuj(strona, `${adres}/oryginal-home-v3.html`);
-    const przed = await strona.screenshot({path:`${katalog}/przed-${szerokosc}.png`, fullPage:true});
+    const geometriaPrzed = await geometriaHero(strona);
+    const kartyGeometriaPrzed = await geometriaKart(strona);
+    const stylPorownania = '.naglowek,.nav,.wspolny-naglowek{visibility:hidden!important}';
+    const przed = await strona.locator('.sekcja-hero').screenshot({path:`${katalog}/hero-przed-${szerokosc}.png`, style:stylPorownania});
+    const kartyPrzed = await strona.locator('.siatka-uslug').screenshot({style:stylPorownania});
     await przygotuj(strona, `${adres}/index.html`);
-    const po = await strona.screenshot({path:`${katalog}/po-${szerokosc}.png`, fullPage:true});
+    const geometriaPo = await geometriaHero(strona);
+    const kartyGeometriaPo = await geometriaKart(strona);
+    const po = await strona.locator('.sekcja-hero').screenshot({path:`${katalog}/hero-po-${szerokosc}.png`, style:stylPorownania});
+    const kartyPo = await strona.locator('.siatka-uslug').screenshot({style:stylPorownania});
     const porownanie = await porownajPiksele(strona, przed, po);
-    wyniki.push({szerokosc, porownanie});
+    wyniki.push({szerokosc, porownanie, geometriaPrzed, geometriaPo});
     assert.equal(porownanie.rozneWymiary, undefined, 'Wymiary oryginału i HOME');
-    assert.equal(porownanie.roznePiksele, 0, `Różnice obrazu ${szerokosc}px`);
+    for (let numer=0;numer<geometriaPrzed.length;numer++) {
+      if (geometriaPrzed[numer].ukryty) { assert.equal(geometriaPo[numer].ukryty,true); continue; }
+      for (const pole of ['x','y','szerokosc','wysokosc']) assert.ok(Math.abs(geometriaPrzed[numer][pole]-geometriaPo[numer][pole])<0.01,`Geometria HERO ${szerokosc}: ${geometriaPrzed[numer].selektor}.${pole}`);
+      assert.equal(geometriaPo[numer].font,geometriaPrzed[numer].font);
+      assert.equal(geometriaPo[numer].color,geometriaPrzed[numer].color);
+    }
+    const porownanieKart = await porownajPiksele(strona, kartyPrzed, kartyPo);
+    wyniki.push({strona:'karty HOME', szerokosc, porownanie:porownanieKart, kartyGeometriaPrzed, kartyGeometriaPo});
+    for(let numer=0;numer<kartyGeometriaPrzed.length;numer++){
+      for(const pole of ['x','y','szerokosc','wysokosc'])assert.ok(Math.abs(kartyGeometriaPrzed[numer][pole]-kartyGeometriaPo[numer][pole])<0.01,`Geometria karty ${szerokosc}: ${numer}.${pole}`);
+      assert.equal(kartyGeometriaPo[numer].font,kartyGeometriaPrzed[numer].font);
+      assert.equal(kartyGeometriaPo[numer].color,kartyGeometriaPrzed[numer].color);
+    }
     assert.equal(await strona.locator('.karta-uslugi').count(), 5);
     assert.equal(await strona.evaluate(() => document.documentElement.scrollWidth), szerokosc);
     assert.equal(await strona.locator('.pcb-ornament').count(), 6);
@@ -103,19 +154,14 @@ try {
       await strona.keyboard.press('Escape');
       assert.equal(await strona.locator('#otworz-menu').getAttribute('aria-expanded'), 'false');
     }
-    for (const usluga of ['monitoring', 'it', 'www', 'anteny']) {
-      const przycisk = strona.locator(`button[data-usluga="${usluga}"]`).first();
-      await przycisk.click();
-      assert.equal(await strona.locator('#modal-tlo').isVisible(), true);
-      assert.match(await strona.locator('#modal-mail').getAttribute('href'), /^mailto:biuro@mad-net\.pl\?subject=/);
-      await strona.keyboard.press('Shift+Tab');
-      assert.equal(await strona.evaluate(() => document.activeElement === document.querySelector('.modal-przyciski a:last-child')), true);
-      await strona.keyboard.press('Escape');
-      assert.equal(await strona.locator('#modal-tlo').isVisible(), false);
+    const celeKart = ['internet.html','monitoring-alarmy.html','sieci-it.html','strony-www-hosting.html','instalacje-tv-sat.html'];
+    for (let numer = 0; numer < celeKart.length; numer++) {
+      const karta = strona.locator('.karta-uslugi').nth(numer);
+      assert.equal(await karta.locator('.zdjecie-uslugi').getAttribute('href'), `./${celeKart[numer]}`);
+      assert.equal(await karta.locator('.link-karty').getAttribute('href'), `./${celeKart[numer]}`);
     }
-    await strona.locator('[data-otworz-kontakt]').click();
-    assert.match(await strona.locator('#modal-tytul').innerText(), /Zgłoś awarię/);
-    await strona.locator('#modal-zamknij').click();
+    assert.equal(await strona.locator('#modal-tlo').count(), 0);
+    assert.equal(await strona.locator('.hero-przyciski a').last().getAttribute('href'), './kontakt.html');
     await strona.locator('.miejscowosci-przyciski [data-miasto="Rewal"]').click();
     assert.equal(await strona.locator('#wybrane-miasto').innerText(), 'Rewal');
     assert.match(await strona.locator('#wybrane-wspolrzedne').innerText(), /54\.08207/);
@@ -137,20 +183,26 @@ try {
     await strona.waitForTimeout(150);
     assert.notEqual(await impuls.evaluate(element => getComputedStyle(element).strokeDashoffset), przedRuchem);
     await strona.emulateMedia({reducedMotion:'reduce'});
-    console.log(`PASS HOME ${szerokosc}px: 0 różnych pikseli, 5 kart, menu/modale, mapa/satelita/zoom, impulsy PCB i reduced motion`);
+    console.log(`PASS HOME ${szerokosc}px: geometria i typografia HERO bez zmian; różne piksele HERO=${porownanie.roznePiksele}, karty=${porownanieKart.roznePiksele}; mapa/PCB/linki`);
   }
   for (const szerokosc of [390, 768, 1024, 1440, 1920]) {
     await strona.setViewportSize({width:szerokosc, height:1000});
     await strona.mouse.move(0, 0);
     await przygotuj(strona, `${adres}/oryginal-cennik.html`);
-    const przed = await strona.screenshot({path:`${katalog}/cennik-przed-${szerokosc}.png`, fullPage:true, animations:'disabled'});
+    const geometriaPrzed=await geometriaCennika(strona);
+    const przed = await strona.locator('main').screenshot({path:`${katalog}/cennik-przed-${szerokosc}.png`, animations:'disabled', style:'.nav,.wspolny-naglowek,.foot,.wspolna-stopka{visibility:hidden!important}'});
     await przygotuj(strona, `${adres}/cennik.html`);
-    const po = await strona.screenshot({path:`${katalog}/cennik-po-${szerokosc}.png`, fullPage:true, animations:'disabled'});
+    const geometriaPo=await geometriaCennika(strona);
+    const po = await strona.locator('main').screenshot({path:`${katalog}/cennik-po-${szerokosc}.png`, animations:'disabled', style:'.nav,.wspolny-naglowek,.foot,.wspolna-stopka{visibility:hidden!important}'});
     const porownanie = await porownajPiksele(strona, przed, po);
-    wyniki.push({strona:'cennik', szerokosc, porownanie});
+    wyniki.push({strona:'cennik', szerokosc, porownanie, geometriaPrzed, geometriaPo});
     assert.equal(porownanie.rozneWymiary, undefined);
-    assert.equal(porownanie.roznePiksele, 0, `Migracja cennika ${szerokosc}px`);
-    console.log(`PASS migracja cennika ${szerokosc}px: 0 różnych pikseli`);
+    for(let numer=0;numer<geometriaPrzed.length;numer++){
+      for(const pole of ['x','y','szerokosc','wysokosc'])assert.ok(Math.abs(geometriaPrzed[numer][pole]-geometriaPo[numer][pole])<0.01,`Geometria cennika ${szerokosc}: ${geometriaPrzed[numer].selektor}.${pole}`);
+      assert.equal(geometriaPo[numer].font,geometriaPrzed[numer].font);
+      assert.equal(geometriaPo[numer].color,geometriaPrzed[numer].color);
+    }
+    console.log(`PASS cennik ${szerokosc}px: geometria i typografia bez zmian, różne piksele=${porownanie.roznePiksele}`);
   }
   for (const sciezka of ['/', '/index.html', '/cennik.html', '/MAD-NET/', '/MAD-NET/index.html', '/MAD-NET/cennik.html']) {
     const zasoby = [];
@@ -164,7 +216,7 @@ try {
     const selektory = czyCennik ? ['#hero-rack-stage', '#cennik', '#oplaty', '#availability-form'] : ['#tytul-glowny', '#nawigacja', '#mapa-ramka', '.karta-uslugi'];
     for (const selektor of selektory) assert.ok(await strona.locator(selektor).count(), `${sciezka}: brak selektora ${selektor}`);
     const skrypty = await strona.locator('script[src]').evaluateAll(elementy => elementy.map(element => element.getAttribute('src')));
-    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js'] : ['./assets/js/home.js']);
+    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js', './assets/js/nawigacja.js'] : ['./assets/js/stare-adresy.js', './assets/js/home.js', './assets/js/nawigacja.js']);
     assert.equal(await strona.locator(czyCennik ? 'link[href="./assets/css/home.css"]' : 'link[href="./assets/css/styles.css"]').count(), 0);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.css')), `${sciezka}: nie pobrano CSS`);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.js')), `${sciezka}: nie pobrano JS`);

@@ -1,0 +1,72 @@
+[
+  {
+    "plik": "cennik-1440.png",
+    "bajty": 2557902,
+    "sha256": "b98cd73207a02cd6026523008f9147a44ed1469b3d53aa844db7c08a657ddc1f"
+  },
+  {
+    "plik": "cennik-1920.png",
+    "bajty": 3336869,
+    "sha256": "db94b5a4d6394c9fdfd95fc2115ecd8e81b6fdf4ed15c89f06cbc0f5fabde0d3"
+  },
+  {
+    "plik": "cennik-390.png",
+    "bajty": 1334592,
+    "sha256": "576f65bd003bc7435d094a3b695ca541ab5d993752b3d063f4db19ab220b51e5"
+  },
+  {
+    "plik": "cennik-768.png",
+    "bajty": 1986355,
+    "sha256": "5fcd80c707ad085febdfd879c9b8815db0aed59dfa489831e1baa3f46fd79254"
+  },
+  {
+    "plik": "index-1440.png",
+    "bajty": 2297816,
+    "sha256": "3904bf454970bc51da93a53afc879dcd2f3cf524d134734bb54121ce7361fab9"
+  },
+  {
+    "plik": "index-1920.png",
+    "bajty": 2633048,
+    "sha256": "93fd6ec1becdcd67a538499119569954fc3f22210ec34c4391f1609f52efb50e"
+  },
+  {
+    "plik": "index-390.png",
+    "bajty": 1240642,
+    "sha256": "0bccf9f2ae5b0a8658df35b36ab5112eec3c3c268693945165f08ea507af257b"
+  },
+  {
+    "plik": "index-768.png",
+    "bajty": 1819596,
+    "sha256": "d9931accccc6def99dd700635e5edf924218414d08c0ce88320b5c44390cce17"
+  },
+  {
+    "plik": "menu-desktop-1440.png",
+    "bajty": 393455,
+    "sha256": "ecdb5905dc9b90825ab775c47f426503a7ebadd533fc755218ff24069c748ddf"
+  },
+  {
+    "plik": "menu-dotyk-390.png",
+    "bajty": 19089,
+    "sha256": "7e18870a5f3d30e77abd984358a2f85cce90405506aab2db79b4673ccaad55d2"
+  },
+  {
+    "plik": "uslugi-1440.png",
+    "bajty": 1368876,
+    "sha256": "e2c9862549c97773e611a76c19bddfb08d75777813c4e1c37f059511385d4e46"
+  },
+  {
+    "plik": "uslugi-1920.png",
+    "bajty": 1418046,
+    "sha256": "f158f076316387a1c93809df189f6ef18cb66f7e9bcd8b444ee34f151a008055"
+  },
+  {
+    "plik": "uslugi-390.png",
+    "bajty": 708565,
+    "sha256": "fa78a76f6cafd1dca34eec201391f7ae42380b933a46304b1a3b10918e80a192"
+  },
+  {
+    "plik": "uslugi-768.png",
+    "bajty": 801768,
+    "sha256": "ce664cdb8bbd8b49641f7607b4e958b5dad250f8986a1ded997cb6f3ea0cbeb1"
+  }
+]

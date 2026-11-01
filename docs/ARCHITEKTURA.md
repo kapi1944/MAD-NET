@@ -6,7 +6,10 @@ Rozdzielenie pliku HTML **bez przebudowy funkcji**:
 
 | Moduł | Lokalizacja | Odpowiedzialność |
 |---|---|---|
-| Strona główna HOME V3 | `index.html`, `assets/css/home.css`, `assets/js/home.js`, `assets/img/home/` | Osobna strona, menu, modale, PCB i mapa regionu |
+| Strona główna HOME V3 | `index.html`, `assets/css/home.css`, `assets/js/home.js`, `assets/img/home/` | HERO, karty z linkami, PCB i mapa regionu |
+| Wspólna nawigacja | `assets/css/nawigacja.css`, `assets/js/nawigacja.js` | Nagłówek, menu dotykowe/klawiaturowe, dropdown i stopka na dziewięciu stronach |
+| Katalog i strony tymczasowe | `uslugi.html`, pięć podstron usług, `kontakt.html`, `assets/css/uslugi.css` | Pięć bannerów; jawne strony tymczasowe do dalszych etapów |
+| Zgodność dawnych hashy | `assets/js/stare-adresy.js` wyłącznie w index | Tylko #cennik/#oplaty/#kontakt → cennik.html z tym samym fragmentem |
 | Struktura i sekcje cennika | `cennik.html` | Nawigacja, HERO RACK, cennik, opłaty, formularz |
 | Stylowanie | `assets/css/styles.css` | Wszystkie style V18, animacje, media queries |
 | Logika cennika | `assets/js/cennik.js` | Dane pakietów, centralne urządzenie, połączenia, tabele |
@@ -15,6 +18,8 @@ Rozdzielenie pliku HTML **bez przebudowy funkcji**:
 | Logo | `assets/img/mad-net-logo.png` | Bezpośrednio z grafiki zakodowanej w V18 |
 
 **Uwaga techniczna:** skrypty cennika mają obecnie zakresy globalne i zależą od kolejności ładowania. Dlatego w `cennik.html` są to zwykłe skrypty w kolejności: `cennik.js` → `dostepnosc.js` → `hero-rack.js`. **Nie zamieniać automatycznie na `type=module`** bez wyodrębnienia API współdzielonych danych. HOME ładuje wyłącznie własne CSS/JS. Build waliduje obie strony przed zastąpieniem `dist/`, a następnie kopiuje jawną listę `index.html`, `cennik.html` i `assets/`; archiwa nie trafiają do wyniku. Szczegóły i mapa URL: [etap 02](integracja-home-v3/02-raport-migracji.md).
+
+Od etapu 03 allowlista builda obejmuje dziewięć HTML. Wspólne CSS jest ograniczone do nagłówka/stopki i tokenów `--madnet-*`, bez resetu cennika. Jego nagłówek zachowuje klasy `nav` i `brand`, wymagane przez istniejące skrypty do wysokości przewijania i źródła logo. Na końcu obu stron ładowane jest `nawigacja.js`. Nagłówki i stopki są statycznym HTML, bez wymagania pobierania fragmentów z API. Kontrakt linków i kontrola regresji: [etap 03](integracja-home-v3/03-raport-nawigacji.md).
 
 ## Środowiska
 

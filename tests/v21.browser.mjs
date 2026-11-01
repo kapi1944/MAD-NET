@@ -63,8 +63,12 @@ try{
  assert.match(await strona.locator('#availability-location-description').innerText(),/zaznaczony ręcznie.*orientacyjnie/);
  const pinezka=strona.locator('.availability-map-pin-icon');
  const przed=await strona.locator('#availability-location-description').innerText();
+ // Kliknięcie mapy uruchamia panTo; przed gestem poczekaj na stabilny cel.
+ await pinezka.hover();
  const pozycja=await pinezka.boundingBox();
- await strona.mouse.move(pozycja.x+19,pozycja.y+20);await strona.mouse.down();await strona.mouse.move(pozycja.x+65,pozycja.y+50,{steps:10});await strona.mouse.up();
+ await strona.mouse.move(pozycja.x+19,pozycja.y+20);await strona.mouse.down();await strona.mouse.move(pozycja.x+65,pozycja.y+50,{steps:10});
+ await strona.evaluate(()=>new Promise(koniec=>requestAnimationFrame(koniec)));await strona.mouse.up();
+ await strona.waitForFunction(przed=>document.querySelector('#availability-location-description').innerText!==przed,przed);
  assert.notEqual(await strona.locator('#availability-location-description').innerText(),przed);
  assert.match(await strona.locator('#availability-location-description').innerText(),/orientacyjnie/);
  await strona.locator('#availability-map-pin').click();

@@ -5,7 +5,7 @@
 .wspolny-naglowek *,.wspolna-stopka *{box-sizing:border-box}
 .wspolny-pasek{width:min(1380px,calc(100% - 76px));min-height:85px;margin:auto;display:flex;align-items:center;gap:24px}
 .wspolne-logo{display:block;width:204px;flex-shrink:0}
-.wspolne-logo img{display:block;width:100%;height:60px;object-fit:contain}
+.wspolne-logo img{display:block;width:100%;height:60px;object-fit:contain;mix-blend-mode:normal}
 .menu-glowne{display:flex;align-items:center;gap:24px;margin-left:auto}
 .menu-glowne a,.wspolna-stopka a{color:#b8c2ce;text-decoration:none}
 .menu-glowne>a,.menu-uslugi>a{font-size:12px;font-weight:750;white-space:nowrap;position:relative;padding:12px 0;line-height:1.4}
@@ -33,6 +33,7 @@
  .otwieranie-menu{display:grid}.wspolne-cta{width:42px;padding:0;font-size:20px}.wspolne-cta span{display:none}
  .menu-glowne{display:none;position:absolute;top:100%;left:0;right:0;margin:0;padding:18px 24px;background:#0b131d;border-bottom:1px solid #643344;max-height:calc(100dvh - 70px);overflow-y:auto;overscroll-behavior:contain;align-items:stretch;flex-direction:column;gap:5px}
  .menu-glowne[data-otwarte=true]{display:flex}.menu-glowne>a,.menu-uslugi>a{padding:12px 0;font-size:14px}.menu-uslugi{flex-wrap:wrap;justify-content:space-between}
+ .wspolny-naglowek.nav .menu-glowne{max-height:calc(100dvh - 73px)}
  .lista-uslug{position:static;width:100%;padding:4px 8px;box-shadow:none;margin-bottom:8px}.lista-uslug a{padding:12px 8px}
  .stopka-wiersz{width:calc(100% - 34px);padding:24px 0;flex-wrap:wrap;gap:18px}.stopka-uwaga{width:calc(100% - 34px)}.stopka-wiersz nav{gap:16px}
  .wspolny-naglowek .przelacznik-animacji{font-size:8px;padding:5px}
