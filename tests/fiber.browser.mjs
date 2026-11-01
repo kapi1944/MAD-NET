@@ -207,8 +207,18 @@ try{
  const prostokat=await dotyk.locator(gniazdo(50)).boundingBox();
  const punkt={x:prostokat.x+prostokat.width/2,y:prostokat.y+prostokat.height/2};
  assert.equal(await dotyk.evaluate(punkt=>document.elementFromPoint(punkt.x,punkt.y)?.closest('[data-gniazdo-pakiet]')?.dataset.gniazdoPakiet,punkt),'FIBER-50M','Punkt dotyku musi trafiać w odsłonięte gniazdo');
+ await dotyk.evaluate(()=>{
+  window.sladDotykuFiber=[];
+  for(const nazwa of ['pointerdown','pointermove','pointerup','pointercancel','scroll','contextmenu','focusin','focusout'])document.addEventListener(nazwa,zdarzenie=>window.sladDotykuFiber.push({nazwa,czas:performance.now(),typ:zdarzenie.pointerType,cel:zdarzenie.target?.closest?.('[data-gniazdo-pakiet]')?.dataset.gniazdoPakiet,y:scrollY}),{capture:true,passive:true});
+ });
  await sesja.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[punkt]});
- await dotyk.waitForFunction(()=>document.querySelectorAll('.plan.is-hovered').length===1,null,{timeout:3000});
+ try{await dotyk.waitForFunction(()=>document.querySelectorAll('.plan.is-hovered').length===1,null,{timeout:3000});}
+ catch(blad){
+  const slad=await dotyk.evaluate(()=>({zdarzenia:window.sladDotykuFiber,sesja:touchSession,wybrany:selectedPlanId,podglad:hoveredPlanId,widocznosc:document.visibilityState,fokus:document.hasFocus(),scroll:scrollY}));
+  console.error('Diagnostyka long press FIBER:',JSON.stringify(slad));
+  await writeFile(katalog+'/dotyk-blad.json',JSON.stringify(slad,null,2));
+  await dotyk.screenshot({path:katalog+'/dotyk-blad.png'});throw blad;
+ }
  assert.equal(await dotyk.locator('.plan.is-hovered').count(),1);
  assert.equal(await dotyk.locator('#connection-zone').getAttribute('data-fiber-state'),'IDLE');
  assert.equal(await dotyk.locator('.sc-pokrywa').first().evaluate(element=>new DOMMatrixReadOnly(getComputedStyle(element).transform).m22),1);
