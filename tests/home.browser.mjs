@@ -17,6 +17,7 @@ const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '
 });
 const wyniki = [], smoke = [], bledy = [], konsola = [], kafelki = new Map(), pomiaryZrzutow=[];
 let przegladarka;
+let argumentyPrzegladarki=[];
 
 async function przygotuj(strona, url) {
   await strona.goto(url, {waitUntil:'networkidle'});
@@ -170,7 +171,10 @@ async function geometriaCennika(strona) {
 
 try {
   await poczekajNaSerwer(serwer);
-  przegladarka = await uruchomPrzegladarke(chromium,{args:['--disable-gpu']});
+  przegladarka = await uruchomPrzegladarke(chromium,{args:['--disable-gpu','--disable-skia-runtime-opts','--enable-automation']});
+  const sesjaPrzegladarki=await przegladarka.newBrowserCDPSession();
+  argumentyPrzegladarki=(await sesjaPrzegladarki.send('Browser.getBrowserCommandLine')).arguments.filter(argument=>['--disable-gpu','--disable-skia-runtime-opts','--enable-automation'].includes(argument));
+  await sesjaPrzegladarki.detach();
   const kontekst = await przegladarka.newContext({deviceScaleFactor:1, reducedMotion:'reduce'});
   // Obie strony otrzymują te same bajty prawdziwych kafelków pobranych online.
   await kontekst.route(/https:\/\/(server\.arcgisonline\.com|a\.basemaps\.cartocdn\.com)\//, async trasa => {
@@ -258,6 +262,13 @@ try {
       const roznica=await porownajPiksele(strona,sekcjePrzed[1],kontrola);
       assert.ok(roznica.roznePiksele>0,'Kontrola ujemna musi wykrywać zmianę tekstu poza mapą');
       wyniki.push({strona:'kontrola ujemna koloru nagłówka',szerokosc,porownanie:roznica});
+    }
+    if(szerokosc===1366){
+      const [kontrola]=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,
+        stylSekcji+'.zdjecie-uslugi img{filter:grayscale(1)!important}',['.sekcja-uslugi'],'kontrola-obrazu');
+      const roznica=await porownajPiksele(strona,sekcjePrzed[0],kontrola);
+      assert.ok(roznica.roznePiksele>0,'Bazowa ścieżka Skia nadal musi wykrywać zmianę filtrów obrazów');
+      wyniki.push({strona:'kontrola ujemna filtra obrazów',szerokosc,porownanie:roznica});
     }
     const porownanieKart = await porownajPiksele(strona, kartyPrzed, kartyPo);
     wyniki.push({strona:'karty HOME', szerokosc, porownanie:porownanieKart, kartyGeometriaPrzed, kartyGeometriaPo});
@@ -375,6 +386,6 @@ try {
   assert.deepEqual(bledy, []); assert.deepEqual(konsola, []);
   console.log('PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli');
 } finally {
-  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, smoke, bledy, konsola, pomiaryZrzutow, kafelkiOnline:kafelki.size}, null, 2));
+  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, smoke, bledy, konsola, pomiaryZrzutow, argumentyPrzegladarki, kafelkiOnline:kafelki.size}, null, 2));
   await przegladarka?.close(); serwer.kill();
 }
