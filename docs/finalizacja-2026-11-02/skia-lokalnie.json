@@ -1,0 +1,895 @@
+{
+  "czas": "2026-11-02T20:07:59.492Z",
+  "baza": "6b7cf20834906ded5e809c511764c4763f9f304b",
+  "sha256Testu": "84c63466e6abfc74276a4d8041ddf5b51b3c1f9476b0f00c7849bda2af382f49",
+  "argumentyPrzegladarki": [
+    "--disable-gpu",
+    "--disable-skia-runtime-opts",
+    "--enable-automation"
+  ],
+  "zrodloFlagi": "https://chromium.googlesource.com/chromium/src.git/+/2bba7c77278fe60be0d665e2deeb2b7fa0a85a22/content/public/common/content_switches.cc",
+  "wyniki": [
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 1424,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 1104,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 696,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 519,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 851,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 471,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 1378,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 1081,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 626,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 503,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 779,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 471,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 375,
+      "porownanie": {
+        "szerokosc": 375,
+        "wysokosc": 1378,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 375,
+      "porownanie": {
+        "szerokosc": 375,
+        "wysokosc": 1046,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 375,
+      "porownanie": {
+        "szerokosc": 375,
+        "wysokosc": 626,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 375,
+      "porownanie": {
+        "szerokosc": 375,
+        "wysokosc": 503,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 375,
+      "porownanie": {
+        "szerokosc": 375,
+        "wysokosc": 779,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 375,
+      "porownanie": {
+        "szerokosc": 375,
+        "wysokosc": 471,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 375,
+      "porownanie": {
+        "szerokosc": 375,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 1378,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 1023,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 625,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 503,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 779,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 472,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 1363,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 1023,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 626,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 468,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 779,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 451,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 1232,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 889,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 458,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 305,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 439,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 286,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 915,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 564,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 458,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 249,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 439,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 294,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 546,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 564,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 321,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 241,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 302,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 207,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "kontrola ujemna filtra obrazów",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 546,
+        "roznePiksele": 204726,
+        "maksymalnaRoznica": 147,
+        "obszar": {
+          "lewo": 39,
+          "prawo": 1326,
+          "gora": 144,
+          "dol": 328
+        }
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 548,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 564,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 324,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 244,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 306,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 210,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "kontrola ujemna koloru nagłówka",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 564,
+        "roznePiksele": 3299,
+        "maksymalnaRoznica": 248,
+        "obszar": {
+          "lewo": 40,
+          "prawo": 208,
+          "gora": 100,
+          "dol": 130
+        }
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 550,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 564,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 324,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 246,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 309,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 211,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-uslugi",
+      "szerokosc": 2560,
+      "porownanie": {
+        "szerokosc": 2560,
+        "wysokosc": 550,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-obszar",
+      "szerokosc": 2560,
+      "porownanie": {
+        "szerokosc": 2560,
+        "wysokosc": 564,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 2560,
+      "porownanie": {
+        "szerokosc": 2560,
+        "wysokosc": 324,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 2560,
+      "porownanie": {
+        "szerokosc": 2560,
+        "wysokosc": 246,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 2560,
+      "porownanie": {
+        "szerokosc": 2560,
+        "wysokosc": 309,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 2560,
+      "porownanie": {
+        "szerokosc": 2560,
+        "wysokosc": 211,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 2560,
+      "porownanie": {
+        "szerokosc": 2560,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    }
+  ],
+  "bledy": [],
+  "konsola": [],
+  "shaKodu": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b"
+}

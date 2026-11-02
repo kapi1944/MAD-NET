@@ -1,0 +1,126 @@
+{
+  "shaKodu": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+  "uwaga": "Logi zawierają bazowy HEAD 6b7cf20 + patch zapisany bez zmian jako 99a96ca. Pierwszy browser przerwał odczyt CDP; po enable-automation pełne ponowienie kod 0. Wszystkie pozostałe komendy kod 0.",
+  "proby": [
+    {
+      "koniec": "2026-11-02T20:57:08.6006691+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T20:57:06.0080029+01:00",
+      "log": "test-results/finalizacja/lokalne-3-npm-ci.log",
+      "polecenie": "npm ci",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-npm-ci.txt"
+    },
+    {
+      "koniec": "2026-11-02T20:57:11.4407276+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T20:57:08.6534743+01:00",
+      "log": "test-results/finalizacja/lokalne-3-verify.log",
+      "polecenie": "npm run verify",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-verify.txt"
+    },
+    {
+      "koniec": "2026-11-02T20:57:14.1319610+01:00",
+      "exit": 1,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T20:57:11.4779271+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-browser.log",
+      "polecenie": "npm run test:browser",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-browser.txt"
+    },
+    {
+      "koniec": "2026-11-02T20:57:30.4897352+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T20:57:14.1763348+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-pcb.log",
+      "polecenie": "npm run test:pcb",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-pcb.txt"
+    },
+    {
+      "koniec": "2026-11-02T20:58:19.9404122+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T20:57:30.5247308+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-integracja.log",
+      "polecenie": "npm run test:integracja",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-integracja.txt"
+    },
+    {
+      "koniec": "2026-11-02T21:02:10.0548162+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T20:58:19.9734236+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-home.log",
+      "polecenie": "npm run test:home",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-home.txt"
+    },
+    {
+      "koniec": "2026-11-02T21:03:06.4256060+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T21:02:10.1079132+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-fiber.log",
+      "polecenie": "npm run test:fiber",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-fiber.txt"
+    },
+    {
+      "koniec": "2026-11-02T21:03:32.4017017+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T21:03:06.4620263+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-led.log",
+      "polecenie": "npm run test:led",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-led.txt"
+    },
+    {
+      "koniec": "2026-11-02T21:04:12.7876016+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T21:03:32.4363079+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-oferta.log",
+      "polecenie": "npm run test:oferta",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-oferta.txt"
+    },
+    {
+      "koniec": "2026-11-02T21:04:54.1623342+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T21:04:12.8264639+01:00",
+      "log": "test-results/finalizacja/lokalne-3-test-nawigacja.log",
+      "polecenie": "npm run test:nawigacja",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-test-nawigacja.txt"
+    },
+    {
+      "koniec": "2026-11-02T21:04:54.9339225+01:00",
+      "exit": 0,
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "start": "2026-11-02T21:04:54.1962498+01:00",
+      "log": "test-results/finalizacja/lokalne-3-git-diff---check.log",
+      "polecenie": "git diff --check",
+      "srodowisko": "Windows / Node 24.16.0 / Edge; bazowa ścieżka Skia; kontrola ujemna filtra obrazu",
+      "logZarchiwizowany": "logi/lokalne-3-git-diff---check.txt"
+    },
+    {
+      "start": "2026-11-02T21:04:56.6923753+01:00",
+      "log": "test-results/finalizacja/lokalne-3-browser-powtorzenie.log",
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "srodowisko": "Windows / Edge / bazowa ścieżka Skia; naprawiony odczyt CDP",
+      "koniec": "2026-11-02T21:16:20.3741298+01:00",
+      "polecenie": "npm run test:browser",
+      "exit": 0,
+      "logZarchiwizowany": "logi/lokalne-3-browser-powtorzenie.txt"
+    }
+  ]
+}

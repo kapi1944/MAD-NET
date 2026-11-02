@@ -1,0 +1,4 @@
+warning: in the working copy of 'docs/FINAL_MERGE_2026-11-02.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/finalizacja-2026-11-02/STAN.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/finalizacja-2026-11-02/WYNIKI.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'tests/home.browser.mjs', LF will be replaced by CRLF the next time Git touches it

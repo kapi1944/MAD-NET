@@ -1,6 +1,6 @@
 # MAD-NET — final recovery i kontrolowany merge
 
-Data bazowa i wykonania: 2026-11-02, Europe/Warsaw. Wynik sesji: diagnostyka i lokalna regresja wykonane; C/E-GO/F/G pozostają BLOCKED. Obowiązują [STAN.md](finalizacja-2026-11-02/STAN.md) i [WYNIKI.json](finalizacja-2026-11-02/WYNIKI.json). Brak oznaczenia PASS oznacza brak zamkniętej bramki.
+Data bazowa i wykonania: 2026-11-02, Europe/Warsaw. Kod końcowej poprawki HOME: **`99a96ca1b3284b12b00d9a7b6addcb265b22db5b`**. Pełna regresja lokalna ma końcowy PASS; C/E-GO/F/G pozostają BLOCKED. Historyczne niepowodzenie 6b7cf20 zachowano; bieżące CI końcowej głowy należy odczytać w PR #6/checks. Obowiązują [STAN.md](finalizacja-2026-11-02/STAN.md) i [WYNIKI.json](finalizacja-2026-11-02/WYNIKI.json). Brak oznaczenia PASS oznacza brak zamkniętej bramki.
 
 ## Audyt A i źródła B
 
@@ -35,7 +35,7 @@ Trzy próby Windows/Edge przed zmianą zakończyły się kodem 0. Trzy kolejne n
 
 ## D — lokalna regresja
 
-Pierwsze wykonanie wszystkich wymaganych poleceń: `test-results/finalizacja/lokalne-diagnoza.json`, logi `lokalne-*.log`. verify, PCB, integracja 54 układów, FIBER, LED, oferta, nawigacja i diff-check: kod 0. test:browser i osobny HOME: kod 1, oba wskazują 7 pikseli różnicy maksymalnie 1 RGB w narożniku CTA `.sekcja-obszar` przy 768 px, przy identycznej geometrii. Obrazy błędu zachowano. Bramka D nie jest zamknięta na podstawie pozostałych PASS.
+Historyczne pierwsze wykonanie wszystkich wymaganych poleceń: `test-results/finalizacja/lokalne-diagnoza.json`, logi `lokalne-*.log`. verify, PCB, integracja 54 układów, FIBER, LED, oferta, nawigacja i diff-check: kod 0. test:browser i osobny HOME: kod 1, oba wskazują 7 pikseli różnicy maksymalnie 1 RGB w narożniku CTA `.sekcja-obszar` przy 768 px, przy identycznej geometrii. Obrazy błędu zachowano. Bramka D nie jest zamknięta na podstawie pozostałych PASS.
 
 Osobna kontrola 36 porównań pojedynczej sekcji (V3/V3, V4/V4, V3/V4; 768 i 2560 px; osobne i wspólna strona) dała zero różnic. Kontrola kolejności pełnego zestawu sekcji i izolacji kontekstu jest zapisana w `test-results/finalizacja/home-kontrola*.json`. Sama izolacja kontekstu nie pomogła. Minimalna zmiana przygotowania wykonuje każdą parę V3/V4 od świeżych dokumentów, bez poprzedzających zrzutów innych sekcji. Pełny eksperymentalny HOME przeszedł 11 szerokości i 77 porównań (zero pikseli); istniejąca próba ujemna nadal wykrywa zmianę koloru nagłówka. [Pomiary i kontrole](finalizacja-2026-11-02/home-diagnoza.json). Ponowiono całą wymaganą sekwencję npm na właściwym pliku testu: wszystkie 11 poleceń (w tym npm ci i diff-check) zakończone kodem 0. [Pełna tabela: czas, exit code, środowisko i log](finalizacja-2026-11-02/lokalne-wyniki.json). Próby ujemne rzeczywistego odcięcia CSS, JS i HTML (`route.abort(connectionclosed)` przez lokalny preload, bez zmian aplikacji i asercji) dały oczekiwany kod 1: CSS wykryty przez geometrię CTA; JS przez działanie menu; HTML przez goto. [URL, typ, fazy i logi prób ujemnych](finalizacja-2026-11-02/ujemne.json). Nie zmieniono tolerancji, masek ani stylów produktu.
 
@@ -83,7 +83,7 @@ Przy krytycznej regresji: zatrzymać dalsze czynności, zweryfikować rodziców 
 
 | HERO | FIBER | LINK/ACT | Cennik | Podstrony | Formularz | Testy | CI | Merge | Pages |
 |---|---|---|---|---|---|---|---|---|---|
-| V4 zachowany | SC/APC Simplex zachowany | zachowany | 13 pakietów, ceny bez zmian | 9 stron zachowane | frontend zachowany | lokalnie PASS, C BLOCKED | checkpoint PASS; GO BLOCKED | BLOCKED F | BLOCKED G |
+| V4 zachowany | SC/APC Simplex zachowany | zachowany | 13 pakietów, ceny bez zmian | 9 stron zachowane | frontend zachowany | lokalnie PASS, C BLOCKED | bieżące PR/checks; GO BLOCKED C | BLOCKED F | BLOCKED G |
 
 Dotyk oznacza emulację, bez testu fizycznego telefonu. Backend SMTP pozostaje niewdrożony. Nie potwierdzono biznesowej gotowości treści ani oficjalnego wydania. Niezrobione działania pozostają przypisane w STAN/WYNIKI i powyższych blokadach.
 
@@ -108,3 +108,29 @@ Reprezentatywne aktualne zrzuty: [HOME 390](finalizacja-2026-11-02/zrzuty/home-3
 2. Codex: **E**, po każdym push aktualny lokalny/remote/PR HEAD i oba runy z wszystkimi krokami, bez uznawania poprzedniego zielonego SHA za dowód nowego.
 3. Właściciel: **F**, decyzja o publicznej publikacji konkretnej zweryfikowanej wersji #6; Pages publikuje main:/ automatycznie. Codex po wszystkich bramkach: merge commit, bezpieczny ff, zamknięcie zawartych #4/#5.
 4. Codex: **G**, rzeczywisty deploy merge SHA, sześć szerokości, dziewięć stron, SHA-256 pobranych assetów i regresja produkcji. Do merge/deploy nie doszło; nie ma nowego merge SHA ani produkcyjnych dowodów #6.
+
+## D — historia niepowodzenia 6b7cf20 i dalsza poprawka Skia
+
+[PR run 41512414978](https://github.com/kapi1944/MAD-NET/actions/runs/41512414978): 10 pikseli różnicy, maksymalnie 2 RGB, x=275–305/y=143–145 na zaokrąglonych krawędziach kart usług przy 1366 px. Geometria sekcji identyczna. [Log](finalizacja-2026-11-02/logi/ci-41512414978-failed.txt). Przygotowanie parami nie wyeliminowało wszystkich przypadków rastrowania. Próba aktualizacji CSS na tej samej stronie/węzłach także lokalnie dała różnice; została wycofana przed commitem. W commicie `99a96ca1b3284b12b00d9a7b6addcb265b22db5b` zastosowano jawną bazową ścieżkę CPU Skia przez `--disable-skia-runtime-opts` tylko w HOME, bez nowych masek i bez zmiany progu zero. [Dokumentacja w źródle Chromium](https://chromium.googlesource.com/chromium/src.git/+/2bba7c77278fe60be0d665e2deeb2b7fa0a85a22/content/public/common/content_switches.cc). Flaga wybiera bazową ścieżkę rastrowania do testów; nie zmienia CSS ani aplikacji. Odczyt CDP zapisuje trzy rzeczywiste flagi (w tym enable-automation potrzebne do odczytu argumentów). Pozytywne próby: pięć celowanych szerokości, osobny pełny HOME 11 szerokości i pełny test:browser. Kontrole ujemne nadal wykrywają 204726 pikseli po zmianie filtra obrazu oraz 3299 po zmianie koloru tekstu. [Pomiary](finalizacja-2026-11-02/skia-lokalnie.json). Zaliczenie tej poprawki wymaga także aktualnych obu CI.
+
+
+## Ostateczna regresja lokalna Skia
+
+[Wszystkie próby i czasy](finalizacja-2026-11-02/lokalne-skia.json), kod `99a96ca1b3284b12b00d9a7b6addcb265b22db5b`. Po poprawieniu samego odczytu CDP wszystkie wymagane polecenia mają końcowy kod 0. Pierwszy exit 1 pozostaje w zestawieniu i logu.
+
+| Polecenie / próba | Exit | Czas [s] | Dowód |
+|---|---:|---:|---|
+| npm ci | 0 | 2.6 | [log](finalizacja-2026-11-02/logi/lokalne-3-npm-ci.txt) |
+| npm run verify | 0 | 2.8 | [log](finalizacja-2026-11-02/logi/lokalne-3-verify.txt) |
+| npm run test:browser | 1 | 2.7 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-browser.txt) |
+| npm run test:pcb | 0 | 16.3 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-pcb.txt) |
+| npm run test:integracja | 0 | 49.4 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-integracja.txt) |
+| npm run test:home | 0 | 230.1 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-home.txt) |
+| npm run test:fiber | 0 | 56.3 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-fiber.txt) |
+| npm run test:led | 0 | 25.9 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-led.txt) |
+| npm run test:oferta | 0 | 40.4 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-oferta.txt) |
+| npm run test:nawigacja | 0 | 41.3 | [log](finalizacja-2026-11-02/logi/lokalne-3-test-nawigacja.txt) |
+| git diff --check | 0 | 0.7 | [log](finalizacja-2026-11-02/logi/lokalne-3-git-diff---check.txt) |
+| npm run test:browser — ponowienie po CDP | 0 | 683.7 | [log](finalizacja-2026-11-02/logi/lokalne-3-browser-powtorzenie.txt) |
+
+Końcowe dodatkowe verify: kod 0, [log](finalizacja-2026-11-02/logi/verify-skia-koncowe.txt). Składnia wszystkich 28 JS/MJS: kod 0, [wynik](finalizacja-2026-11-02/skladnia-skia.json). Oryginalny ERR_CONNECTION_CLOSED nadal nie został odtworzony i **C nie jest PASS**. Nie zmieniono testów oferty ani reguł błędów sieci przy poprawce Skia.

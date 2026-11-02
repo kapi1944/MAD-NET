@@ -1,0 +1,41 @@
+static-checks	Regresja geometrii i interakcji V20	﻿2026-11-02T19:45:01.4595436Z ##[group]Run npm run test:browser
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.4595862Z ^[[36;1mnpm run test:browser^[[0m
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.4618409Z shell: /usr/bin/bash -e {0}
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.4618726Z ##[endgroup]
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.5683522Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.5684661Z > mad-net@0.1.0 test:browser
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.5686805Z > npm run build && node tests/home.browser.mjs && node tests/fiber.browser.mjs && node tests/led.browser.mjs && node tests/diagnostyka-panelu.mjs && node tests/v20.browser.mjs && node tests/v21.browser.mjs && node tests/nawigacja.browser.mjs && node tests/oferta.browser.mjs
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.5688467Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.6740573Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.6741208Z > mad-net@0.1.0 build
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.6741579Z > node scripts/build.mjs
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.6741779Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.7388861Z Gotowe: 9 stron z allowlisty + dist/assets/
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:01.7390829Z Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:20.3107271Z PASS HOME 320px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:38.2483222Z PASS HOME 360px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:45:56.2507425Z PASS HOME 375px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:46:13.9940497Z PASS HOME 390px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:46:31.8964396Z PASS HOME 430px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:46:50.0295437Z PASS HOME 768px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:07.7776406Z PASS HOME 1024px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.6892243Z Różnica sekcji: {"selektor":".sekcja-uslugi","szerokosc":1366,"roznica":{"szerokosc":1366,"wysokosc":546,"roznePiksele":10,"maksymalnaRoznica":2,"obszar":{"lewo":275,"prawo":305,"gora":143,"dol":145}},"pomiary":[{"adres":"http://127.0.0.1:38207/porownanie-home-v3.html","selektor":".sekcja-uslugi","cel":89,"przewiniecie":89,"x":0,"y":0,"szerokosc":1366,"wysokosc":545.4375,"zachowanieScroll":"auto","hover":["HTML#.","BODY#poczatek.","MAIN#tresc.","SECTION#uslugi.sekcja sekcja-uslugi obwod"],"aktywnyElement":"poczatek"},{"adres":"http://127.0.0.1:38207/porownanie-home-v4.html","selektor":".sekcja-uslugi","cel":89,"przewiniecie":89,"x":0,"y":0,"szerokosc":1366,"wysokosc":545.4375,"zachowanieScroll":"auto","hover":["HTML#.","BODY#poczatek.","MAIN#tresc.","SECTION#uslugi.sekcja sekcja-uslugi obwod"],"aktywnyElement":"poczatek"}]}
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7393266Z node:internal/modules/run_main:107
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7393718Z     triggerUncaughtException(
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7394014Z     ^
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7394140Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7394510Z AssertionError [ERR_ASSERTION]: .sekcja-uslugi: regresja poza HERO 1366
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7394829Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7394928Z 10 !== 0
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7395045Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7395341Z     at file:///home/runner/work/MAD-NET/MAD-NET/tests/home.browser.mjs:253:14 {
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7395767Z   generatedMessage: false,
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7396033Z   code: 'ERR_ASSERTION',
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7396272Z   actual: 10,
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7396484Z   expected: 0,
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7396976Z   operator: 'strictEqual',
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7397325Z   diff: 'simple'
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7397639Z }
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7397803Z 
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7397939Z Node.js v24.22.1
+static-checks	Regresja geometrii i interakcji V20	2026-11-02T19:47:12.7779672Z ##[error]Process completed with exit code 1.
