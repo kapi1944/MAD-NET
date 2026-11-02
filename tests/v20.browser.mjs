@@ -15,6 +15,8 @@ const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '
 });
 const bledy = [], konsola = [], siec = [], pomiary = [], animacjeKanalow = [];
 let przegladarka, liczbaTras = 0;
+const pomiaryGotowosci=[],pomiaryWyborow=[];
+let czcionkiPlatformy=[];
 const oferta = {
   LAN: [[10, 2, 49, 54], [20, 2, 59, 64], [40, 5, 64, 69], [60, 5, 69, 74], [80, 10, 74, 79]],
   FIBER: [[50, 20, 45, null], [100, 40, 55, null], [300, 80, 65, null]],
@@ -25,6 +27,24 @@ function sledzBledy(strona) {
   strona.on('pageerror', blad => bledy.push(blad.message));
   strona.on('console', wpis => { if (wpis.type() === 'error') konsola.push({ tresc: wpis.text(), adres: wpis.location().url }); });
   strona.on('requestfailed', zadanie => siec.push({ adres: zadanie.url(), blad: zadanie.failure()?.errorText }));
+}
+
+// Wzorzec geometrii powstaje po fontach i pomiarze panelu przez ResizeObserver/rAF.
+async function przygotujPomiarGeometrii(strona,etap){
+  const odczytaj=()=>{
+    const panel=document.querySelector('#hero-tech-panel'),prostokat=panel.getBoundingClientRect(),styl=getComputedStyle(panel);
+    return {szerokosc:innerWidth,wysokoscWidoku:innerHeight,przewiniecie:scrollY,fonty:document.fonts.status,czcionka:styl.fontFamily,
+      panel:{x:prostokat.x+scrollX,y:prostokat.y+scrollY,szerokosc:prostokat.width,wysokosc:prostokat.height},
+      zmienne:{gora:panel.style.getPropertyValue('--panel-gora'),lewo:panel.style.getPropertyValue('--panel-lewo'),wysokosc:panel.style.getPropertyValue('--panel-wysokosc')},
+      fokus:document.activeElement?.getAttribute('data-rack-tech'),animacje:panel.getAnimations({subtree:true}).map(animacja=>({stan:animacja.playState,czas:animacja.currentTime}))};
+  };
+  const przed=await strona.evaluate(odczytaj);
+  await strona.evaluate(()=>document.fonts.ready);
+  await strona.waitForFunction(()=>innerWidth<=1230||document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+  await strona.evaluate(()=>new Promise(zakoncz=>requestAnimationFrame(()=>requestAnimationFrame(zakoncz))));
+  const po=await strona.evaluate(odczytaj);
+  pomiaryGotowosci.push({etap,przed,po});
+  if(etap==='klawiatura')console.log('POMIAR gotowości RACK:',JSON.stringify({przed,po}));
 }
 
 async function geometria(strona) {
@@ -44,6 +64,7 @@ async function sprawdzWybor(strona, technologia, poczatek) {
   assert.equal(await strona.locator('#hero-tech-count').innerText(), technologia === 'FIBER' ? '3 warianty' : '5 wariantów');
   assert.equal(await strona.locator(`[data-rack-tech="${technologia}"]`).getAttribute('aria-pressed'), 'true');
   const po = await geometria(strona);
+  pomiaryWyborow.push({technologia,przed:poczatek,po});
   for (const [nazwa, prostokat] of Object.entries(poczatek)) {
     for (const [wymiar, liczba] of Object.entries(prostokat)) {
       assert.ok(Math.abs(po[nazwa][wymiar] - liczba) < 1, `Skok ${nazwa}.${wymiar} po wyborze ${technologia}: ${liczba} → ${po[nazwa][wymiar]}`);
@@ -144,8 +165,7 @@ try {
   for (const szerokosc of [320, 360, 375, 380, 390, 400, 414, 430, 480, 560, 760, 768, 800, 1024, 1100, 1230, 1231, 1280, 1440, 1500, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
-    await strona.evaluate(() => document.fonts.ready);
-    await strona.waitForFunction(() => innerWidth <= 1230 || document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+    await przygotujPomiarGeometrii(strona,'szerokosci');
     const poczatek = await geometria(strona);
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {
       await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
@@ -296,6 +316,13 @@ try {
 
   // Rzeczywisty Tab/Enter/Space i szybkie wskazania nie gubią ostatniego wyboru.
   await strona.setViewportSize({ width: 1440, height: 1100 }); await strona.goto(adres);
+  await przygotujPomiarGeometrii(strona,'klawiatura');
+  const sesjaCzcionek=await strona.context().newCDPSession(strona);
+  await sesjaCzcionek.send('DOM.enable');await sesjaCzcionek.send('CSS.enable');
+  const {root:korzen}=await sesjaCzcionek.send('DOM.getDocument');
+  const {nodeId:wezel}=await sesjaCzcionek.send('DOM.querySelector',{nodeId:korzen.nodeId,selector:'#hero-tech-description'});
+  czcionkiPlatformy=(await sesjaCzcionek.send('CSS.getPlatformFontsForNode',{nodeId:wezel})).fonts;
+  await sesjaCzcionek.detach();console.log('CZCIONKI RACK:',JSON.stringify(czcionkiPlatformy));
   const poczatek = await geometria(strona);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     await strona.locator('[data-rack-tech="LAN"]').focus();
@@ -377,6 +404,8 @@ try {
   assert.equal(miganie.length, 13);
   miganie.forEach(kanal => assert.ok(kanal.maksimum - kanal.minimum > .2 && kanal.stan === 'running', `Brak migania: ${kanal.nazwa}`));
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
+    // Badamy nowe wejście kursora również po wyborach klawiaturą.
+    await strona.mouse.move(0,0);
     await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
     await sprawdzWybor(strona, technologia, poczatek);
     const czasy = await strona.locator('.hero-rack-stage [data-speed]').evaluateAll(kanaly => kanaly.map(kanal => kanal.querySelector('.rj-link,.fiber-activity,.wi').getAnimations()[0].currentTime));
@@ -395,6 +424,7 @@ try {
 
   const dotyk = await przegladarka.newPage({ viewport: { width: 390, height: 1100 }, hasTouch: true, isMobile: true });
   sledzBledy(dotyk); await dotyk.goto(adres);
+  await przygotujPomiarGeometrii(dotyk,'dotyk');
   const poczatekDotyku = await geometria(dotyk);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {
@@ -421,7 +451,7 @@ try {
   assert.deepEqual(konsola, [], 'Błędy konsoli');
   console.log(`PASS klawiatura, dotyk, scroll, ograniczony ruch, 13 kanałów; ${liczbaTras} tras bez kolizji`);
 } finally {
-  await writeFile(new URL('wyniki.json', katalog), JSON.stringify({ pomiary, liczbaTras, animacjeKanalow, bledy, konsola, siec }, null, 2));
+  await writeFile(new URL('wyniki.json', katalog), JSON.stringify({ pomiary, liczbaTras, animacjeKanalow, pomiaryGotowosci, pomiaryWyborow, czcionkiPlatformy, bledy, konsola, siec }, null, 2));
   await przegladarka?.close();
   serwer.kill();
 }
