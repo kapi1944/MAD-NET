@@ -1,29 +1,28 @@
 /* SC/APC: zielone tworzywo sprzętu, pomarańczowa identyfikacja oferty. */
 .modele-sprzetu-fiber{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
-.sc-simplex{display:block;position:relative;flex:0 0 auto;width:44px;height:37px;border:0;border-radius:0;background:none;box-shadow:none;transform:none;isolation:isolate}
+.sc-simplex{display:block;position:relative;flex:0 0 auto;--szerokosc-wtyku:54.545%;width:50px;height:42px;border:0;border-radius:0;background:none;box-shadow:none;transform:none;isolation:isolate}
 .sc-simplex::before{display:none}
 .sc-adapter,.sc-zaslepka{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .sc-zaslepka{z-index:3;opacity:1;transform:translateY(0);transition:transform .22s ease,opacity .22s ease}
-.sc-simplex:not([data-stan-polaczenia="IDLE"]):not([data-stan-polaczenia="SELECTED"]):not([data-stan-polaczenia="CLOSING_COVER"]) .sc-zaslepka{transform:translateY(12px);opacity:0}
-.sc-wtyk-tor{position:absolute;z-index:2;top:14px;bottom:-65px;left:-10px;right:-10px;overflow:hidden;pointer-events:none}
-.sc-konektor{position:absolute;display:block;left:50%;top:0;width:24px;height:56px;opacity:0;transform:translate(-50%,26px);transition:transform .28s cubic-bezier(.3,.1,.2,1),opacity .18s ease}
+.sc-simplex:not([data-stan-polaczenia="IDLE"]):not([data-stan-polaczenia="SELECTED"]):not([data-stan-polaczenia="CLOSING_COVER"]) .sc-zaslepka{transform:translateY(32.43%);opacity:0}
+.sc-wtyk-tor{position:absolute;z-index:2;top:37.84%;bottom:-175.68%;left:0;right:0;overflow:hidden;pointer-events:none}
+.sc-konektor{position:absolute;display:block;left:50%;top:0;width:var(--szerokosc-wtyku);height:auto;aspect-ratio:3/7;opacity:0;transform:translate(-50%,46.43%);transition:transform .28s cubic-bezier(.3,.1,.2,1),opacity .18s ease}
 .sc-konektor svg{display:block;width:100%;height:100%}
 .sc-kabel-punkt{position:absolute;width:0;height:0;left:50%;bottom:0}
-.sc-simplex:is([data-stan-polaczenia="CONNECTOR_APPROACH"],[data-stan-polaczenia="DISCONNECTING"]) .sc-konektor{opacity:1;transform:translate(-50%,14px)}
-.sc-simplex[data-stan-polaczenia="INSERTING"] .sc-konektor{opacity:1;transform:translate(-50%,-9px)}
-.sc-simplex[data-stan-polaczenia="CONNECTED"] .sc-konektor{opacity:1;transform:translate(-50%,-8px)}
+.sc-simplex:is([data-stan-polaczenia="CONNECTOR_APPROACH"],[data-stan-polaczenia="DISCONNECTING"]) .sc-konektor{opacity:1;transform:translate(-50%,25%)}
+.sc-simplex[data-stan-polaczenia="INSERTING"] .sc-konektor{opacity:1;transform:translate(-50%,-16.07%)}
+.sc-simplex[data-stan-polaczenia="CONNECTED"] .sc-konektor{opacity:1;transform:translate(-50%,-14.286%)}
 .sc-simplex[data-stan-polaczenia="CONNECTED"] .sc-konektor{transition-timing-function:cubic-bezier(.2,.8,.3,1)}
-.mini-interface--FIBER .sc-simplex{transform:none;width:40px;height:34px}
+.mini-interface--FIBER .sc-simplex{--szerokosc-wtyku:60%;transform:none;width:45px;height:38px}
 .mini-interface--FIBER{height:78px;align-items:flex-start;padding-top:4px;background:linear-gradient(155deg,#303536,#13191a);box-shadow:inset 0 1px #b4beb13d,0 3px 6px #0006}
 .plan[data-technology="FIBER"] .card-terminal{min-height:118px}
 .speed-port--FIBER{min-height:132px;justify-content:flex-start;gap:6px;padding-bottom:38px;touch-action:pan-y}
 .speed-port--FIBER .speed-label{order:-1}
 .speed-port--FIBER .port-leds{gap:5px}
-.speed-port--FIBER .port-leds i{width:6px;height:4px;box-shadow:none}
+.speed-port--FIBER .port-leds i{width:8px;height:5.5px}
 .device-shell[data-technology="FIBER"]{background:linear-gradient(165deg,#383c3c,#212526 45%,#101516);border-color:#69716c;border-bottom-color:#0b1010;border-left:3px solid #ff7b19}
 .device-shell[data-technology="FIBER"] .device-foot{color:#d9ded7}
-.device-shell[data-technology="FIBER"] .port-leds{opacity:.35}
-.device-shell[data-technology="FIBER"] .speed-port:has([data-stan-polaczenia="CONNECTED"]) .port-leds{opacity:1}
+
 .tech-FIBER .link-active{filter:none;stroke:#e7c66a;stroke-width:3.5px}
 .tech-FIBER .link-casing{stroke:#4d4430;stroke-width:5px;filter:none}
 .tech-FIBER .link-hover{filter:none}
@@ -38,9 +37,9 @@
 .gniazdo-sc{position:relative;display:block;width:54px;height:76px;perspective:220px;flex:0 0 auto}
 .gniazdo-sc-ramka{position:absolute;inset:0 0 12px;border:1px solid #c6c9bf;border-bottom:3px solid #a5afa6;border-radius:5px;background:linear-gradient(130deg,#f5f3e9,#d6dcd1);box-shadow:inset 1px 1px 0 #fff,1px 3px 4px #0007}
 .gniazdo-sc-wklad{position:absolute;inset:9px 5px 4px;border:1px solid #bcc5b8;border-radius:2px;background:linear-gradient(#d8ddd3,#eef0e6);box-shadow:inset 0 2px 3px #87917d55}
-.compare-head-port--FIBER .sc-simplex{width:38px;height:32px;position:absolute;left:50%;top:9px;transform:translateX(-50%);border:0}
-.sc-zawias{position:absolute;left:7px;right:7px;top:9px;height:5px;border:1px solid #9ba99a;border-radius:2px;background:linear-gradient(#eff4eb,#9ba99c);z-index:4}
-.sc-pokrywa{position:absolute;left:7px;right:7px;top:12px;height:40px;z-index:5;transform-origin:50% 0;transform:rotateX(0deg);transform-style:preserve-3d;border:1px solid #f7fff4b3;border-bottom:2px solid #b5c9b3;border-radius:1px 1px 3px 3px;background:linear-gradient(145deg,#ebf5e4c9,#c4d4b9aa 45%,#ffffff6b);box-shadow:0 2px 2px #23312450,inset 0 1px #fff;transition:transform .32s cubic-bezier(.4,0,.2,1),box-shadow .32s}
+.compare-head-port--FIBER .sc-simplex{--szerokosc-wtyku:57.895%;width:43px;height:36px;position:absolute;left:50%;top:9px;transform:translateX(-50%);border:0}
+.sc-zawias{position:absolute;left:5px;right:5px;top:9px;height:5px;border:1px solid #9ba99a;border-radius:2px;background:linear-gradient(#eff4eb,#9ba99c);z-index:4}
+.sc-pokrywa{position:absolute;left:5px;right:5px;top:12px;height:44px;z-index:5;transform-origin:50% 0;transform:rotateX(0deg);transform-style:preserve-3d;border:1px solid #f7fff4b3;border-bottom:2px solid #b5c9b3;border-radius:1px 1px 3px 3px;background:linear-gradient(145deg,#ebf5e4c9,#c4d4b9aa 45%,#ffffff6b);box-shadow:0 2px 2px #23312450,inset 0 1px #fff;transition:transform .32s cubic-bezier(.4,0,.2,1),box-shadow .32s}
 .sc-pokrywa span{position:absolute;inset:3px;border:1px solid #f8fff252;border-radius:1px}
 .sc-pokrywa::after{content:'';position:absolute;left:35%;right:35%;bottom:2px;height:2px;background:#edf4e3}
 .compare-head-port--FIBER:is([data-stan-polaczenia="OPENING_COVER"],[data-stan-polaczenia="COVER_OPEN"],[data-stan-polaczenia="CONNECTOR_APPROACH"],[data-stan-polaczenia="INSERTING"],[data-stan-polaczenia="CONNECTED"],[data-stan-polaczenia="DISCONNECTING"]) .sc-pokrywa{transform:rotateX(108deg);box-shadow:0 -1px 3px #23312433,inset 0 1px #fff}
@@ -48,7 +47,7 @@
 .compare-tech-panel[data-tech="FIBER"] .plan-head{padding-top:28px}
 .compare-tech-panel[data-tech="FIBER"] .compare-package-inner{gap:7px;min-height:132px}
 .compare-tech-panel[data-tech="FIBER"] .compare-package-name{font-size:16px}
-.compare-head-port--FIBER .sc-konektor{width:22px;height:51.333px}
+
 .compare-head-port--FIBER .gniazdo-sc-opis{display:none}
 .sc-wskaznik{position:absolute;right:7px;bottom:5px;width:5px;height:3px;background:#69472a;border:1px solid #91562c;border-radius:1px}
 .compare-head-port--FIBER[data-stan-polaczenia="CONNECTED"] .sc-wskaznik{background:#ffbd72;animation:rj45-activity var(--pulse-ms) linear infinite}
@@ -57,7 +56,7 @@
  .compare-tech-panel[data-tech="FIBER"] .compare-package-inner{flex-direction:row;gap:20px;min-height:105px}
 }
 /* Instrukcja podglądu nie może zmieniać wysokości strony i anulować przytrzymania. */
-@media(max-width:560px){.tech-FIBER .device-guide{min-height:2.6em}}
+@media(max-width:560px){.tech-FIBER .device-guide{min-height:2.6em}.speed-port--FIBER .sc-simplex{width:45px;height:38px}}
 @media(max-width:760px){
  .compare-head-port--FIBER{width:58px;min-width:58px;height:100px;padding:0 1px}
  .compare-tech-panel[data-tech="FIBER"] .plan-head{padding-top:28px}
@@ -67,19 +66,19 @@
 @media(prefers-reduced-motion:reduce){.sc-konektor,.sc-zaslepka,.sc-pokrywa{transition:none!important}.sc-wskaznik{animation:none!important}}
 
 /* LINK = stan wtyku; ACT = niezależna demonstracja nominalnej prędkości. */
-.port-leds i:first-child{background:#18211b;border-color:#37463a;box-shadow:inset 0 1px 2px #0008;animation:none!important;transition:background .18s,box-shadow .18s}
-[data-link="connected"]>.port-leds i:first-child,[data-link="connected"] .port-leds i:first-child{background:#70c97b;box-shadow:0 0 3px #70c97b66}
-.port-leds i:last-child{background:#dda044;border-color:#805e31;box-shadow:inset 0 1px #ffe0a566;animation:rj45-activity var(--pulse-ms,900ms) linear infinite}
-.port-leds{opacity:1!important;filter:brightness(.5);transition:filter .18s}
+.port-leds i:first-child{background:#294a34;border-color:#66816b;box-shadow:inset 0 1px 1px #9fbd993d,0 0 2px #2c583833;animation:none!important;transition:background .18s,box-shadow .18s}
+[data-link="connected"]>.port-leds i:first-child,[data-link="connected"] .port-leds i:first-child{background:#70c97b;box-shadow:inset 0 0 2px #e1ffe6,0 0 4px #70c97b80,0 1px 7px #70c97b33}
+.port-leds i:last-child{background:#dda044;border-color:#805e31;box-shadow:inset 0 1px #ffe0a599,0 0 3px #dda04455,0 1px 6px #dda04422;animation:rj45-activity var(--pulse-ms,900ms) linear infinite}
+.port-leds{opacity:1!important;filter:brightness(1);transition:filter .18s}
 [data-link="connected"]>.port-leds,[data-link="connected"] .port-leds{filter:brightness(1)}
-.jack-rj>.port-leds{position:absolute!important;inset:1px 1px auto!important;display:flex!important;justify-content:space-between!important;gap:0!important;height:5px!important;z-index:8}
-.jack-rj>.port-leds i{width:6px!important;height:4px!important}
+.jack-rj>.port-leds{position:absolute!important;inset:1px 1px auto!important;display:flex!important;justify-content:space-between!important;gap:0!important;height:6px!important;z-index:8}
+.jack-rj>.port-leds i{width:8px!important;height:5.5px!important}
 .mini-interface--FIBER>.port-leds{position:absolute;left:5px;right:5px;top:3px;display:flex;justify-content:space-between}
 .compare-head-port--FIBER>.port-leds{position:absolute;left:5px;right:5px;bottom:4px;display:flex;justify-content:space-between}
 .compare-head-port--FIBER .sc-wskaznik{display:none}
-.dioda-link-szafy{fill:#18211b;transition:fill .18s}
-[data-link="connected"] .dioda-link-szafy{fill:#70c97b}
-[data-led-pakiet] .rj-link,[data-led-pakiet] .fiber-activity{filter:brightness(.5)!important}
-[data-led-pakiet][data-link="connected"] .rj-link,[data-led-pakiet][data-link="connected"] .fiber-activity{filter:brightness(1)!important}
+.dioda-link-szafy{fill:#294a34;stroke:#66816b;stroke-width:1;filter:drop-shadow(0 1px 2px #2c583866);transition:fill .18s}
+[data-link="connected"] .dioda-link-szafy{fill:#70c97b;stroke:#b4edbd;filter:drop-shadow(0 0 4px #70c97b80)}
+[data-led-pakiet] .rj-link,[data-led-pakiet] .fiber-activity{filter:brightness(1) drop-shadow(0 0 2px #dda04455)!important}
+[data-led-pakiet][data-link="connected"] .rj-link,[data-led-pakiet][data-link="connected"] .fiber-activity{filter:brightness(1) drop-shadow(0 0 3px #dda04466)!important}
 .mot-off .port-leds i:last-child{animation:none!important}
 @media(prefers-reduced-motion:reduce){.port-leds i:last-child{animation:none!important}.port-leds,.dioda-link-szafy{transition:none!important}}

@@ -52,15 +52,19 @@ function gniazdoScienneFiber(){
  return `<span class="gniazdo-sc" aria-hidden="true"><span class="gniazdo-sc-ramka"><span class="gniazdo-sc-wklad">${adapterFiber(false)}</span><span class="sc-zawias"></span><span class="sc-pokrywa"><span></span></span></span><span class="gniazdo-sc-opis">SC/APC</span></span>`;
 }
 
-// HERO zachowuje bitmapę i jej perspektywę; zmieniamy wyłącznie panel adapterów FIBER.
+// Lokalne wycinki RJ-45 zachowują metal, zagłębienie i osiem styków bitmapy RACK.
 const warstwaSzafyFiber=document.querySelector('.grafika-hybrydowa');
 if(warstwaSzafyFiber){
+ const portySzafyLan=document.createElementNS('http://www.w3.org/2000/svg','g');
+ portySzafyLan.setAttribute('class','porty-szafy-lan');
+ portySzafyLan.innerHTML=[559,638,718,798,878].map((polozenie,numer)=>`<svg x="${554+numer*82}" y="300" width="79" height="81" viewBox="${polozenie} 304 70 72"><use href="#grafika-szafy"/><path d="M${polozenie} 304h19v17h-19zM${polozenie+51} 304h19v17h-19z" fill="#18201b"/></svg>`).join('');
+ warstwaSzafyFiber.insertBefore(portySzafyLan,warstwaSzafyFiber.querySelector('[data-technologia-kanalu]'));
  const panelFiber=document.createElementNS('http://www.w3.org/2000/svg','g');
  panelFiber.setAttribute('class','panel-sprzetu-fiber');
  panelFiber.innerHTML=`<path d="M603 492l250-3v78l-250 1z" fill="url(#sc-panel)" stroke="#4f5554"/>
   <path d="M610 498h236M610 563h236" stroke="#747e77" stroke-opacity=".25"/>
   ${[610,846].map(polozenie=>`<circle cx="${polozenie}" cy="530" r="3" fill="#121816" stroke="#67746b"/><path d="M${polozenie-1.5} 530h3" stroke="#9ca79b"/>`).join('')}
-  ${[620,698,776].map(polozenie=>`<g class="adapter-szafy-fiber" transform="translate(${polozenie} 501) scale(1.3)"><use href="#sc-apc-adapter" width="48" height="40"/><use href="#sc-apc-zaslepka" width="48" height="40"/></g>`).join('')}
+  ${[616,694,772].map(polozenie=>`<g class="adapter-szafy-fiber" transform="translate(${polozenie} 498)"><use href="#sc-apc-adapter" width="70" height="58.333"/><use href="#sc-apc-zaslepka" width="70" height="58.333"/></g>`).join('')}
   <path d="M270 558h202v26H270z" fill="url(#sc-tlo-opisu)"/>
   <text x="272" y="578" fill="#f4f1e8" font-family="Arial,sans-serif" font-size="18" font-weight="600">SC/APC SIMPLEX</text>`;
  warstwaSzafyFiber.append(panelFiber);
@@ -71,15 +75,15 @@ for(const kanal of document.querySelectorAll('[data-technologia-kanalu="LAN"],[d
  const technologia=kanal.dataset.technologiaKanalu;
  kanal.dataset.ledPakiet=technologia+'-'+kanal.dataset.speed+'M';
  const numer=[...kanal.parentNode.querySelectorAll('[data-technologia-kanalu="'+technologia+'"]')].indexOf(kanal);
- const prawy=technologia==='LAN'?[615,692,772,852,933][numer]:[644,722,800][numer];
- const lewy=technologia==='LAN'?prawy-45:prawy-14;
- const gora=technologia==='LAN'?307:483;
+ const prawy=technologia==='LAN'?618+numer*82:[644,722,800][numer];
+ const lewy=technologia==='LAN'?prawy-60:prawy-20;
+ const gora=technologia==='LAN'?304:482;
  const tlo=document.createElementNS('http://www.w3.org/2000/svg','g');
  tlo.innerHTML='<rect x="'+(lewy-2)+'" y="'+(gora-2)+'" width="18" height="18" fill="#18201b"/><rect x="'+(prawy-2)+'" y="'+(gora-2)+'" width="18" height="18" fill="#18201b"/>';
  kanal.prepend(tlo);
  const aktywnosc=kanal.querySelector('.rj-link,.fiber-activity');
- aktywnosc.innerHTML='<rect x="'+prawy+'" y="'+gora+'" width="10" height="7" rx="1" fill="#e6a346"/>';
+ aktywnosc.innerHTML='<rect x="'+prawy+'" y="'+gora+'" width="13.5" height="9.5" rx="1.5" fill="#e6a346" stroke="#ffe0a5" stroke-opacity=".4"/>';
  const link=document.createElementNS('http://www.w3.org/2000/svg','rect');
- for(const [nazwa,wartosc] of Object.entries({x:lewy,y:gora,width:10,height:7,rx:1,class:'dioda-link-szafy'}))link.setAttribute(nazwa,wartosc);
+ for(const [nazwa,wartosc] of Object.entries({x:lewy,y:gora,width:13.5,height:9.5,rx:1.5,class:'dioda-link-szafy'}))link.setAttribute(nazwa,wartosc);
  kanal.append(link);
 }

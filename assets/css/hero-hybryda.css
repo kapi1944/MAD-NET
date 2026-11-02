@@ -17,7 +17,7 @@
 .hero-rack-stage.hero-rack-hybryda .tylna-krawedz{position:absolute;right:0;top:0;bottom:0;width:1px}
 .hero-rack-hybryda .rj-link,.hero-rack-hybryda .fiber-activity{animation:kanal-szafy var(--pulse) steps(2,end) infinite;animation-delay:var(--phase);filter:none}
 .hero-rack-hybryda .wi{animation:radio-szafy var(--air-cycle) ease-in-out infinite;animation-delay:calc(var(--air-cycle) * var(--kolejnosc) * .22);filter:none}
-@keyframes kanal-szafy{0%,42%,100%{opacity:.19}50%,82%{opacity:1}}
+@keyframes kanal-szafy{0%,42%,100%{opacity:.85}50%,82%{opacity:1}}
 @keyframes radio-szafy{0%,12%,65%,100%{opacity:.14}30%,44%{opacity:1}}
 @media(max-width:1230px){.hero-rack-stage.hero-rack-hybryda{width:100%;max-width:620px;margin:auto;padding:0;transform:none}}
 @media(max-width:800px){.hero-rack-stage.hero-rack-hybryda{max-width:560px}}

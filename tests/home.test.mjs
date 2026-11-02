@@ -40,8 +40,10 @@ test('HOME: osobne zasoby, język polski, brak zależności od stylów cennika',
 
 test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline', () => {
   const manifest = JSON.parse(czytaj('docs/integracja-home-v3/dowody/manifest-cennika.json'));
+  // Kontrakt modernizacji portów i fazy przygaszonej ACT.
   const skrotyEtapu05 = {
-  "assets/css/styles.css": "5f405c68b63c73f4cede9526016ef182887d62026436cf69134dcb8e730d0a4d",
+  "assets/css/hero-hybryda.css": "bfd2165094d6bb39ce53236f554731b0e1b4354ee6f1a40cf0324b089a7dcc1b",
+  "assets/css/styles.css": "4f2abe561c719053450d2068f98ebb0c483c5ad6789f5056523e2029cd1c9830",
   "assets/js/cennik.js": "d638c99979cb11126176ff995ef5ec5432d264c26b9cf918a80d44980a8775a0",
   "assets/js/hero-rack.js": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
   "assets/js/dostepnosc.js": "e473368ac64f83fc99b819ad8239ecbd83dee608174a2373c3cd075d151798cf"

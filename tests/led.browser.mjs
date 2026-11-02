@@ -34,7 +34,16 @@ try{
    assert.ok(okresy.every((okres,numer)=>okres>0&&(!numer||okres<okresy[numer-1])),'ACT przyspiesza wraz z nominalną prędkością');
    const id=technologia==='LAN'?'LAN-40M':'FIBER-100M';
    const selektor=`[data-port-plan-id="${id}"]`;
-   assert.equal(await strona.locator(selektor+' .port-leds i:first-child').evaluate(element=>getComputedStyle(element).backgroundColor),'rgb(24, 33, 27)');
+   assert.equal(await strona.locator(selektor+' .port-leds i:first-child').evaluate(element=>getComputedStyle(element).backgroundColor),'rgb(41, 74, 52)');
+   const przygaszenie=await strona.locator(selektor+' .port-leds i:last-child').evaluate(element=>({
+    klatki:element.getAnimations()[0].effect.getKeyframes().map(klatka=>Number(klatka.opacity)),
+    filtr:getComputedStyle(element.parentElement).filter,
+    szerokosc:parseFloat(getComputedStyle(element).width),wysokosc:parseFloat(getComputedStyle(element).height)
+   }));
+   assert.equal(Math.min(...przygaszenie.klatki),.85,'ACT zachowuje 85% w fazie przygaszonej');
+   assert.equal(przygaszenie.filtr,'brightness(1)','Obudowa nie przyciemnia ponownie ACT');
+   assert.ok(przygaszenie.szerokosc>=8&&przygaszenie.wysokosc>=5.5,'Większe diody LINK/ACT');
+   assert.equal(await strona.locator(`.grafika-hybrydowa [data-led-pakiet="${id}"] .rj-link,.grafika-hybrydowa [data-led-pakiet="${id}"] .fiber-activity`).evaluate(element=>Math.min(...element.getAnimations()[0].effect.getKeyframes().map(klatka=>Number(klatka.opacity)))),.85,'RACK zachowuje ten sam czytelny stan ACT');
    const przed=await strona.evaluate(id=>{
     const nalezy=element=>(element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet||element.dataset.gniazdoPakiet)===id;
     const reprezentacje=[...document.querySelectorAll('[data-link]')].filter(nalezy);

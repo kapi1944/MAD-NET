@@ -392,17 +392,21 @@ try {
   // Mierzymy rzeczywiste miganie przez pełny okres najwolniejszego kanału.
   const miganie = await strona.evaluate(async () => {
     const kanaly = [...document.querySelectorAll('.hero-rack-stage [data-speed]')].map(kanal => ({
-      nazwa: kanal.querySelector('title').textContent, dioda: kanal.querySelector('.rj-link,.fiber-activity,.wi'), probki: [],
+      nazwa: kanal.querySelector('title').textContent, technologia: kanal.dataset.technologiaKanalu, dioda: kanal.querySelector('.rj-link,.fiber-activity,.wi'), probki: [],
     }));
     for (let numer = 0; numer < 32; numer++) {
       kanaly.forEach(kanal => kanal.probki.push(Number(getComputedStyle(kanal.dioda).opacity)));
       await new Promise(koniec => setTimeout(koniec, 173));
     }
-    return kanaly.map(kanal => ({ nazwa: kanal.nazwa, minimum: Math.min(...kanal.probki), maksimum: Math.max(...kanal.probki),
+    return kanaly.map(kanal => ({ nazwa: kanal.nazwa, technologia: kanal.technologia, minimum: Math.min(...kanal.probki), maksimum: Math.max(...kanal.probki),
       czas: kanal.dioda.getAnimations()[0].currentTime, stan: kanal.dioda.getAnimations()[0].playState }));
   });
   assert.equal(miganie.length, 13);
-  miganie.forEach(kanal => assert.ok(kanal.maksimum - kanal.minimum > .2 && kanal.stan === 'running', `Brak migania: ${kanal.nazwa}`));
+  miganie.forEach(kanal => {
+    if(kanal.technologia==='AIR')assert.ok(kanal.maksimum-kanal.minimum>.2,`Brak emisji: ${kanal.nazwa}`);
+    else {assert.equal(kanal.minimum,.85,`Przygaszone ACT: ${kanal.nazwa}`);assert.equal(kanal.maksimum,1,`Impuls ACT: ${kanal.nazwa}`);}
+    assert.equal(kanal.stan,'running',`Zatrzymana animacja: ${kanal.nazwa}`);
+  });
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
     // Badamy nowe wejście kursora również po wyborach klawiaturą.
     await strona.mouse.move(0,0);
