@@ -14,19 +14,21 @@ const oryginalnyCss = execFileSync('git', ['show', bazaHero + ':assets/css/home.
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   env:{...process.env, PORT:port}, stdio:['ignore','pipe','pipe'],
 });
-const wyniki = [], smoke = [], bledy = [], konsola = [], kafelki = new Map();
+const wyniki = [], smoke = [], bledy = [], konsola = [], kafelki = new Map(), pomiaryZrzutow=[];
 let przegladarka;
 
 async function przygotuj(strona, url) {
   await strona.goto(url, {waitUntil:'networkidle'});
+  await strona.mouse.move(0,0);
   await strona.evaluate(async () => {
     await document.fonts.ready;
     for (let y = 0; y < document.body.scrollHeight; y += 800) {
-      scrollTo(0, y); await new Promise(koniec => setTimeout(koniec, 30));
+      scrollTo({top:y,left:0,behavior:'instant'}); await new Promise(koniec => setTimeout(koniec, 30));
     }
-    scrollTo(0, 0);
+    scrollTo({top:0,left:0,behavior:'instant'});
   });
   await strona.waitForFunction(() => [...document.images].every(obraz => obraz.complete && obraz.naturalWidth > 0));
+  await strona.evaluate(()=>Promise.all([...document.images].map(obraz=>obraz.decode())));
 }
 
 async function porownajPiksele(strona, przed, po) {
@@ -39,7 +41,7 @@ async function porownajPiksele(strona, przed, po) {
     };
     const a = await odczytaj(pierwszy), b = await odczytaj(drugi);
     if (a.szerokosc !== b.szerokosc || a.wysokosc !== b.wysokosc) return {rozneWymiary:true};
-    let roznePiksele = 0, maksymalnaRoznica = 0;
+    let roznePiksele = 0, maksymalnaRoznica = 0, lewo=a.szerokosc, prawo=0, gora=a.wysokosc, dol=0;
     for (let i = 0; i < a.dane.length; i += 4) {
       let inny = false;
       for (let j = 0; j < 4; j++) {
@@ -47,16 +49,31 @@ async function porownajPiksele(strona, przed, po) {
         if (roznica) inny = true;
         maksymalnaRoznica = Math.max(maksymalnaRoznica, roznica);
       }
-      if (inny) roznePiksele++;
+      if (inny) {
+        roznePiksele++;const x=(i/4)%a.szerokosc,y=Math.floor(i/4/a.szerokosc);
+        lewo=Math.min(lewo,x);prawo=Math.max(prawo,x);gora=Math.min(gora,y);dol=Math.max(dol,y);
+      }
     }
-    return {szerokosc:a.szerokosc, wysokosc:a.wysokosc, roznePiksele, maksymalnaRoznica};
+    return {szerokosc:a.szerokosc, wysokosc:a.wysokosc, roznePiksele, maksymalnaRoznica,obszar:roznePiksele?{lewo,prawo,gora,dol}:null};
   }, [przed.toString('base64'), po.toString('base64')]);
 }
 
 async function zrzutSekcji(strona, selektor) {
-  // Stały scroll usuwa zależność rasteryzacji elementów z backdrop-filter od poprzedniego kadru.
-  await strona.locator(selektor).evaluate(element=>scrollTo(0,Math.floor(element.getBoundingClientRect().top+scrollY)));
-  await strona.evaluate(()=>new Promise(koniec=>requestAnimationFrame(koniec)));
+  // Ten sam stan wejścia i położenie viewportu w obu porównywanych dokumentach.
+  await strona.mouse.move(0,0);
+  const cel=await strona.locator(selektor).evaluate(element=>{
+    const cel=Math.min(Math.floor(element.getBoundingClientRect().top+scrollY),Math.max(0,document.documentElement.scrollHeight-innerHeight));
+    scrollTo({top:cel,left:0,behavior:'instant'});return cel;
+  });
+  await strona.evaluate(()=>new Promise(koniec=>requestAnimationFrame(()=>requestAnimationFrame(koniec))));
+  const pomiar=await strona.locator(selektor).evaluate(element=>{
+    const r=element.getBoundingClientRect();
+    return {przewiniecie:scrollY,x:r.x,y:r.y,szerokosc:r.width,wysokosc:r.height,zachowanieScroll:getComputedStyle(document.documentElement).scrollBehavior,
+      hover:[...document.querySelectorAll(':hover')].map(wezel=>wezel.tagName+'#'+wezel.id+'.'+wezel.className),
+      aktywnyElement:document.activeElement?.id||document.activeElement?.tagName};
+  });
+  assert.ok(Math.abs(pomiar.przewiniecie-cel)<1,'Ustalony viewport zrzutu '+selektor);
+  pomiaryZrzutow.push({adres:strona.url(),selektor,cel,...pomiar});
   return strona.locator(selektor).screenshot({animations:'disabled',
     // Mapa online ma niezależną kontrolę geometrii, CSS, treści i interakcji.
     ...(selektor==='.sekcja-obszar'?{mask:[strona.locator('.mapa-otoczenie'),strona.locator('.mapa-ramka')]}:{}),
@@ -215,6 +232,12 @@ try {
       const obrazPo = await zrzutSekcji(strona, selektor);
       const roznica = await porownajPiksele(strona, sekcjePrzed[numer], obrazPo);
       wyniki.push({strona:selektor,szerokosc,porownanie:roznica});
+      if(roznica.roznePiksele||roznica.rozneWymiary){
+        const nazwa=selektor.replace(/[^a-z0-9-]/gi,'');
+        await writeFile(katalog+'/blad-'+nazwa+'-'+szerokosc+'-przed.png',sekcjePrzed[numer]);
+        await writeFile(katalog+'/blad-'+nazwa+'-'+szerokosc+'-po.png',obrazPo);
+        console.error('Różnica sekcji:',JSON.stringify({selektor,szerokosc,roznica,pomiary:pomiaryZrzutow.filter(wpis=>wpis.selektor===selektor).slice(-2)}));
+      }
       assert.equal(roznica.rozneWymiary, undefined, selektor + ': wymiary');
       assert.equal(roznica.roznePiksele,0,selektor+': regresja poza HERO '+szerokosc);
     }
@@ -335,6 +358,6 @@ try {
   assert.deepEqual(bledy, []); assert.deepEqual(konsola, []);
   console.log('PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli');
 } finally {
-  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, smoke, bledy, konsola, kafelkiOnline:kafelki.size}, null, 2));
+  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, smoke, bledy, konsola, pomiaryZrzutow, kafelkiOnline:kafelki.size}, null, 2));
   await przegladarka?.close(); serwer.kill();
 }
