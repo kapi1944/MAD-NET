@@ -29,7 +29,7 @@ npm run verify      # testy + build
 npm run test:fiber  # SC/APC: mechanika, geometria, dotyk i 9 szerokości
 npm run test:led    # LINK/ACT: urządzenie, karty, RACK i tabele
 npm ci              # zależności do testów przeglądarkowych
-npm run test:browser # Chromium: geometria, 9 szerokości, obsługa i 117 tras
+npm run test:browser # pełna regresja; V20: 22 szerokości i 286 tras
 ```
 
 **Bez instalowania Electrona, frameworków i płatnych API.** To świadoma decyzja na pierwszy etap: najpierw stabilizujemy i dokumentujemy aktualny projekt. Dopiero później ocenimy korzyści Vite/React.
