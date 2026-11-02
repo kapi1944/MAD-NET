@@ -81,6 +81,22 @@ async function zrzutSekcji(strona, selektor) {
   });
 }
 
+async function zrzutyPozaHero(kontekst,html,szerokosc,styl,selektory,wariant){
+  const strona=await kontekst.newPage();
+  strona.on('pageerror',blad=>bledy.push(blad.message));
+  strona.on('console',wpis=>{if(wpis.type()==='error')konsola.push(wpis.text());});
+  try{
+    await strona.setViewportSize({width:szerokosc,height:1000});
+    const url=`${adres}/porownanie-home-${wariant}.html`;
+    // Dotychczasowa normalizacja działa od pierwszego renderowania, bez historii wysokości HERO.
+    await strona.route(url,trasa=>trasa.fulfill({body:html.replace('</head>',`<style>${styl}</style></head>`),contentType:'text/html; charset=utf-8'}));
+    await przygotuj(strona,url);
+    const obrazy=[];
+    for(const selektor of selektory)obrazy.push(await zrzutSekcji(strona,selektor));
+    return obrazy;
+  }finally{await strona.close();}
+}
+
 async function geometriaHero(strona) {
   return strona.locator('.sekcja-hero').evaluate(sekcja => {
     const baza = sekcja.getBoundingClientRect();
@@ -205,13 +221,6 @@ try {
     const selektorySekcji = ['.sekcja-uslugi','.sekcja-obszar','.sekcja-powody','.sekcja-proces','.sekcja-relacje','.sekcja-kontakt','.wspolna-stopka'];
     // Usunięcie HERO wyłącznie na czas porównania normalizuje pionowe przesunięcie sekcji.
     const stylSekcji = stylPorownania + '.sekcja-hero{display:none!important}';
-    const sekcjePrzed = [];
-    const normalizacjaPrzed = await strona.addStyleTag({content:stylSekcji});
-    await strona.evaluate(()=>new Promise(koniec=>requestAnimationFrame(()=>requestAnimationFrame(koniec))));
-    for (const selektor of selektorySekcji) {
-      sekcjePrzed.push(await zrzutSekcji(strona, selektor));
-    }
-    await normalizacjaPrzed.evaluate(element=>element.remove());
     await strona.locator('.sekcja-hero').screenshot({path:`${katalog}/hero-przed-${szerokosc}.png`, style:stylPorownania});
     const kartyPrzed = await strona.locator('.siatka-uslug').screenshot({style:stylPorownania});
     await przygotuj(strona, `${adres}/index.html`);
@@ -226,10 +235,10 @@ try {
     const kartyPo = await strona.locator('.siatka-uslug').screenshot({style:stylPorownania});
     wyniki.push({strona:'HERO V4', szerokosc, geometriaPo});
     await sprawdzHero(strona, szerokosc);
-    const normalizacjaPo = await strona.addStyleTag({content:stylSekcji});
-    await strona.evaluate(()=>new Promise(koniec=>requestAnimationFrame(()=>requestAnimationFrame(koniec))));
+    const sekcjePrzed=await zrzutyPozaHero(kontekst,oryginal,szerokosc,stylSekcji,selektorySekcji,'v3');
+    const sekcjePo=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,stylSekcji,selektorySekcji,'v4');
     for (const [numer,selektor] of selektorySekcji.entries()) {
-      const obrazPo = await zrzutSekcji(strona, selektor);
+      const obrazPo = sekcjePo[numer];
       const roznica = await porownajPiksele(strona, sekcjePrzed[numer], obrazPo);
       wyniki.push({strona:selektor,szerokosc,porownanie:roznica});
       if(roznica.roznePiksele||roznica.rozneWymiary){
@@ -241,7 +250,13 @@ try {
       assert.equal(roznica.rozneWymiary, undefined, selektor + ': wymiary');
       assert.equal(roznica.roznePiksele,0,selektor+': regresja poza HERO '+szerokosc);
     }
-    await normalizacjaPo.evaluate(element=>element.remove());
+    if(szerokosc===1440){
+      const [kontrola]=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,
+        stylSekcji+'.sekcja-obszar h2{color:#00ff00!important}',['.sekcja-obszar'],'kontrola');
+      const roznica=await porownajPiksele(strona,sekcjePrzed[1],kontrola);
+      assert.ok(roznica.roznePiksele>0,'Kontrola ujemna musi wykrywać zmianę tekstu poza mapą');
+      wyniki.push({strona:'kontrola ujemna koloru nagłówka',szerokosc,porownanie:roznica});
+    }
     const porownanieKart = await porownajPiksele(strona, kartyPrzed, kartyPo);
     wyniki.push({strona:'karty HOME', szerokosc, porownanie:porownanieKart, kartyGeometriaPrzed, kartyGeometriaPo});
     for(let numer=0;numer<kartyGeometriaPrzed.length;numer++){

@@ -1,5 +1,5 @@
 {
-  "adres": "http://127.0.0.1:57426/",
+  "adres": "http://127.0.0.1:65104/",
   "wyniki": [
     {
       "plik": "index.html",
@@ -339,6 +339,11 @@
       "sha256": "61968ae3c93ff7bc21ee39ea278fe48004ce4e8f3d92123c57a9b7dc4ae9660c",
       "cache": "no-store"
     },
+    "assets/img/home/usluga-monitoring.jpg": {
+      "status": 200,
+      "sha256": "5effb57ed007e35bd8cf994a7b829012e24d9ce784e887f1c3668b283135252d",
+      "cache": "no-store"
+    },
     "assets/img/home/usluga-www.jpg": {
       "status": 200,
       "sha256": "05a9b843673aa86dff77cc2040a80343218ed8d3b18c23ffbc75ff7660ba24ed",
@@ -347,11 +352,6 @@
     "assets/img/home/usluga-it.jpg": {
       "status": 200,
       "sha256": "8aa2e3c498e69198bef87715916d94bebcc0d62094bebe53add2bf2b69d7ad15",
-      "cache": "no-store"
-    },
-    "assets/img/home/usluga-monitoring.jpg": {
-      "status": 200,
-      "sha256": "5effb57ed007e35bd8cf994a7b829012e24d9ce784e887f1c3668b283135252d",
       "cache": "no-store"
     },
     "assets/img/home/usluga-anteny.jpg": {
@@ -394,6 +394,11 @@
       "sha256": "a44f3ec09c2fa16bd4558adc66b5f574017f1411212e5855b7ad6b635ede2bc3",
       "cache": "no-store"
     },
+    "assets/js/dostepnosc.js": {
+      "status": 200,
+      "sha256": "e473368ac64f83fc99b819ad8239ecbd83dee608174a2373c3cd075d151798cf",
+      "cache": "no-store"
+    },
     "assets/js/hero-rack.js": {
       "status": 200,
       "sha256": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
@@ -402,11 +407,6 @@
     "assets/js/wybor-technologii.js": {
       "status": 200,
       "sha256": "e74fa0ac2df15bd4461f5e37ab4d60c111e68f1dc2929166cf66bf45c5687f49",
-      "cache": "no-store"
-    },
-    "assets/js/dostepnosc.js": {
-      "status": 200,
-      "sha256": "e473368ac64f83fc99b819ad8239ecbd83dee608174a2373c3cd075d151798cf",
       "cache": "no-store"
     },
     "assets/js/cennik.js": {
@@ -426,7 +426,7 @@
     },
     "assets/css/uslugi.css": {
       "status": 200,
-      "sha256": "b2d18c0587b106a79a21cc9a410cee922323ed14aaa25ad795a2345d1ee0d2d9",
+      "sha256": "60c3c8dff3bec2b4f91eae25ad3c9ea192590bcd86fcd68cfee669d9de532ebb",
       "cache": "no-store"
     },
     "kontakt.html": {
