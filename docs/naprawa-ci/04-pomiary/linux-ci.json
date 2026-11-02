@@ -1,0 +1,233 @@
+{
+  "sha": "61561afba644bf3c41b76a6307ed402c2d20280b",
+  "przebiegi": [
+    {
+      "id": 41406752257,
+      "zdarzenie": "push",
+      "status": "completed",
+      "wynik": "success",
+      "zadania": [
+        {
+          "wynik": "success",
+          "kroki": [
+            {
+              "nazwa": "Set up job",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Run actions/checkout@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Run actions/setup-node@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Zależności testowe",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Testy projektu",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Budowanie strony",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Sprawdzenie artefaktów",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Chromium do testów V20",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Regresja geometrii i interakcji V20",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Regresja PCB",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Regresja dziewięciu stron",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Zrzuty i pomiary V20",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Complete job",
+              "status": "completed",
+              "wynik": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41406756932,
+      "zdarzenie": "pull_request",
+      "status": "completed",
+      "wynik": "success",
+      "zadania": [
+        {
+          "wynik": "success",
+          "kroki": [
+            {
+              "nazwa": "Set up job",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Run actions/checkout@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Run actions/setup-node@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Zależności testowe",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Testy projektu",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Budowanie strony",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Sprawdzenie artefaktów",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Chromium do testów V20",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Regresja geometrii i interakcji V20",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Regresja PCB",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Regresja dziewięciu stron",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Zrzuty i pomiary V20",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Post Run actions/setup-node@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "wynik": "success"
+            },
+            {
+              "nazwa": "Complete job",
+              "status": "completed",
+              "wynik": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pomiary": {
+    "gotowosc": {
+      "przed": {
+        "szerokosc": 1440,
+        "wysokoscWidoku": 1100,
+        "przewiniecie": 0,
+        "fonty": "loaded",
+        "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "panel": {
+          "x": 1051.71875,
+          "y": 206.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 376.390625
+        },
+        "zmienne": {
+          "gora": "115.33px",
+          "lewo": "1051.72px",
+          "wysokosc": "360.16px"
+        },
+        "fokus": null,
+        "animacje": []
+      },
+      "po": {
+        "szerokosc": 1440,
+        "wysokoscWidoku": 1100,
+        "przewiniecie": 0,
+        "fonty": "loaded",
+        "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "panel": {
+          "x": 1051.71875,
+          "y": 206.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 376.390625
+        },
+        "zmienne": {
+          "gora": "115.33px",
+          "lewo": "1051.72px",
+          "wysokosc": "360.16px"
+        },
+        "fokus": null,
+        "animacje": []
+      }
+    },
+    "fonty": [
+      {
+        "familyName": "DejaVu Sans",
+        "postScriptName": "DejaVuSans",
+        "isCustomFont": false,
+        "glyphCount": 65
+      }
+    ]
+  }
+}

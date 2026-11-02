@@ -65,7 +65,7 @@ Przejrzano wszystkie dziewięć stron w sześciu wymaganych szerokościach, w ty
 | npm run test:fiber | PASS — 9 szerokości, mechanika, trasy, tap/long press/scroll, anulowanie |
 | npm run test:led | PASS — 6 układów LAN/FIBER, cztery reprezentacje i ciągłość ACT |
 | npm run test:integracja | PASS — 54 układy, 38 zasobów, CTA i zakresy tekstu |
-| node --check | PASS — wszystkie pliki JS/MJS aplikacji, testów i skryptów |
+| node --check | PASS — wszystkie 28 plików JS/MJS aplikacji, testów i skryptów |
 | git diff --check | PASS |
 
 Wszystkie polecenia zakończyły się kodem 0, również osobne skrypty wymagane w poleceniu. V20: 286 tras bez kolizji i 112 porównań wyboru technologii, maksymalna zmiana geometrii 0 px. Font Windows: Segoe UI. Nie usunięto istotnych asercji, nie obniżono tolerancji i nie dodano masek wizualnych.
@@ -84,10 +84,25 @@ Zapisane oba PNG wykazały 159 pikseli różniących się maksymalnie o 1 poziom
 
 Dotychczas porównywano sekcje po schowaniu wcześniej wyrenderowanych, różnych HERO. Zmieniono wyłącznie przygotowanie pikselowych próbek: bezpośrednio po zakończeniu interakcji wykonuje się obie próbki jedna po drugiej; osobne, świeże strony otrzymują tę samą istniejącą normalizację nagłówka i HERO w head przed pierwszym renderowaniem. Próbka V3 pochodzi z tego samego git show 1987ad3, a próbka V4 z rzeczywistego dist/index.html. Pozostałe style i skrypty są oryginalne. Eliminuje to zależność od wcześniejszych wysokości HERO i przebiegu interakcji. Pełne strony nadal niezależnie przechodzą dotychczasowe testy geometrii, treści, mapy i HERO.
 
-Nie poszerzono maski mapy, nie zmieniono cienia, gradientów, kolorów, CSS aplikacji, wzorców ani progu zero pikseli. Dodatkowa kontrola ujemna przy 1440 px celowo zmienia kolor nagłówka poza mapą i wymaga wykrycia różnicy. Nowe strony testowe rejestrują także błędy JS/konsoli. Lokalny test HOME po zmianie przygotowania przeszedł wszystkie 11 szerokości; pełna regresja jest ponawiana przed zamknięciem etapu.
+Nie poszerzono maski mapy, nie zmieniono cienia, gradientów, kolorów, CSS aplikacji, wzorców ani progu zero pikseli. Dodatkowa kontrola ujemna przy 1440 px celowo zmienia kolor nagłówka poza mapą i wymaga wykrycia różnicy. Nowe strony testowe rejestrują także błędy JS/konsoli. Lokalny test HOME po zmianie przygotowania przeszedł wszystkie 11 szerokości; przed zamknięciem etapu ponowiono pełną regresję.
 
 ### Wyniki doprecyzowania poprawki
 
 Samo utworzenie świeżych stron, z testem interakcji HERO pomiędzy próbkami, ujawniło lokalnie jeszcze 7 pikseli różnicy maksymalnie 1 poziomu kanału na narożniku CTA przy 768 px. Ostatecznie obie próbki wykonuje się bezpośrednio jedna po drugiej po zakończeniu interakcji. Nie stosuje się przesuwania elementów, wyrównywania ich do pikseli, kasowania cieni ani zmian geometrii. Kontrolowane powtórzenia tego samego dokumentu oraz V3/V4 przy 768/2560 px dawały zero różnic. Pełny test HOME: 77 pozytywnych porównań, wszystkie zero pikseli; kontrola ujemna wykryła 3299 pikseli po celowej zmianie koloru ([wynik](04-pomiary/home-kanoniczny.json)).
 
 Drugi [przebieg 41404643136](https://github.com/kapi1944/MAD-NET/actions/runs/41404643136) dla 4a68a78 przeszedł pełne test:browser i PCB, lecz dodatkowy test dziewięciu stron wykrył tytuł kontaktu 320 px na Linuxie. Pierwsza poprawka 38 px wystarczała na Windows, ale nie dla DejaVu Sans. Kontrolowany pomiar tego dostępnego także lokalnie fontu: 43 px kończyło tekst na x=373.5625, 38 px na x=332.109375, 34 px na x=298.9375, przy prawej krawędzi kontenera x=303 ([metryki](04-pomiary/kontakt-dejavu.json)). Stąd powyższa płynna reguła od 34 px, bez zmiany tekstu i bez nowego fontu/dependencji aplikacji. Ponowiona lokalna kontrola wszystkich 54 układów zakończyła się kodem 0. Oba nieudane przebiegi zachowano w historii; żadnego nie uznano za PASS.
+
+## Potwierdzony wynik końcowy kodu integracji
+
+Kod integracji i poprawek CI: **61561afba644bf3c41b76a6307ed402c2d20280b**. Oba aktualne przebiegi zakończyły się SUCCESS:
+
+- [push 41406752257](https://github.com/kapi1944/MAD-NET/actions/runs/41406752257);
+- [PR 41406756932](https://github.com/kapi1944/MAD-NET/actions/runs/41406756932).
+
+W obu przebiegach wykonano wszystkie kroki testowe, włącznie z pełnym test:browser, PCB, dziewięcioma stronami i zapisem artefaktów; nie ma pominiętego kroku testowego. [Metadane przebiegów i pomiary Linux](04-pomiary/linux-ci.json) potwierdzają także font DejaVu Sans oraz stałe y=206.328125 panelu po inicjalizacji. Nie uznano historycznego czerwonego SHA za poprawny.
+
+Po ostatniej poprawce ponownie zakończyły się kodem 0: verify, test:home, test:browser, test:pcb i test:integracja. Pełna regresja lokalna obejmowała wszystkie składowe HOME/FIBER/LED/diagnostyka/V20/V21/nawigacja/oferta. Końcowa dodatkowa kontrola kontaktu sprawdziła 8 układów z rzeczywistymi fontami Segoe UI Black oraz DejaVu Sans, zweryfikowanymi przez CDP: tekst tytułu i CTA mieści się w swoich kontenerach ([pomiary końcowe](04-pomiary/kontakt-po.json)).
+
+Ostatni zapis raportu zmienia wyłącznie dokumentację i pomiary. Kontrole jego końcowego HEAD należy potwierdzić w [PR #6 / checks](https://github.com/kapi1944/MAD-NET/pull/6/checks); ich wynik jest także podawany w opisie PR i końcowej odpowiedzi. Kod aplikacji i testów pozostaje zgodny z powyższym zielonym SHA.
+
+Ponowny audyt po weryfikacji: main = origin/main = **1987ad3aa8a65fd1aa86f077af1addf3225bb228**. Pages ma status built dla tego samego commita. PR #3/#4/#5 pozostają OPEN, PR #6 jest Draft. Oryginalne worktree i ich SHA zachowano. Nie wykonano merge do main, publikacji integracji, usuwania gałęzi ani utraty niezacommitowanych zmian użytkownika. W gałęzi nie ma arkuszy XLS/XLSX ani formularzy biznesowych z PR #3. Brak blokad technicznych dla RECOVERY 04; pozostają opisane ograniczenia emulowanego dotyku i niewdrożonego backendu poczty.
