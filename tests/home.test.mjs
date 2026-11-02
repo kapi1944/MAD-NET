@@ -38,14 +38,14 @@ test('HOME: osobne zasoby, język polski, brak zależności od stylów cennika',
   assert.equal(spawnSync(process.execPath, ['--check', fileURLToPath(new URL('../assets/js/home.js', import.meta.url))]).status, 0);
 });
 
-test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline', () => {
+test('cennik: migracja HOME zachowuje chronione moduły; modernizacja FIBER nie zmienia formularza i opłat', () => {
   const manifest = JSON.parse(czytaj('docs/integracja-home-v3/dowody/manifest-cennika.json'));
-  for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/'))) {
+  for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/') && !['assets/js/cennik.js','assets/js/hero-rack.js','assets/js/dostepnosc.js'].includes(wpis.plik))) {
     // Git może zmieniać końce linii tekstu między Windows a Linux.
     const bajty = czytaj(wpis.plik === 'index.html' ? 'cennik.html' : wpis.plik);
     assert.ok([wpis.sha256Git, wpis.sha256Lokalny].includes(skrot(bajty)), wpis.plik);
   }
   const przed = execFileSync('git', ['show', '603ecb6b34509db80b46d659b0eeb1368eb2f275:cennik.html'], {encoding:'utf8'});
-  const main = tresc => tresc.match(/<main>[\s\S]*?<\/main>/)[0].replaceAll('\r\n', '\n');
-  assert.equal(main(czytaj('cennik.html').toString()), main(przed));
+  const chronionaCzesc = tresc => tresc.match(/<section class="other" id="oplaty">[\s\S]*?<\/main>/)[0].replaceAll('\r\n', '\n');
+  assert.equal(chronionaCzesc(czytaj('cennik.html').toString()), chronionaCzesc(przed));
 });

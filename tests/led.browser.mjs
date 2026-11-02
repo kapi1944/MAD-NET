@@ -1,0 +1,15 @@
+import {chromium} from 'playwright-core';import {spawn} from 'node:child_process';import assert from 'node:assert/strict';import {mkdir} from 'node:fs/promises';
+const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:'4192'}});await new Promise(ok=>serwer.stdout.once('data',ok));const przegladarka=await chromium.launch({channel:'msedge',headless:true});
+try{for(const szerokosc of [390,1440]){const strona=await przegladarka.newPage({viewport:{width:szerokosc,height:1100},hasTouch:szerokosc===390});const bledy=[];strona.on('pageerror',element=>bledy.push(element.message));await strona.goto('http://127.0.0.1:4192/cennik.html');
+for(const technologia of ['LAN','FIBER']){await strona.locator(`.device-tech-tabs [data-technology=${technologia}]`).click();assert.equal(await strona.locator('[data-link=connected]').count(),0);
+const id=technologia==='LAN'?'LAN-40M':'FIBER-100M';const selektor=`[data-port-plan-id="${id}"]`;
+assert.equal(await strona.locator(selektor+' .port-leds i:first-child').evaluate(element=>getComputedStyle(element).backgroundColor),'rgb(24, 33, 27)');
+const przed=await strona.locator(selektor+' .port-leds i:last-child').evaluate(element=>({okres:getComputedStyle(element).animationDuration,czas:element.getAnimations()[0]?.currentTime,kolor:getComputedStyle(element).backgroundColor}));
+await strona.locator(`[data-select-plan="${id}"]`).click();await strona.waitForFunction(id=>document.querySelector(`[data-port-plan-id="${id}"]`).dataset.link==='connected',id);
+assert.ok(await strona.locator('[data-link=connected]').evaluateAll((elementy,id)=>elementy.every(element=>(element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet||element.dataset.gniazdoPakiet)===id),id));
+await strona.waitForFunction(selektor=>getComputedStyle(document.querySelector(selektor+' .port-leds i:first-child')).backgroundColor==='rgb(112, 201, 123)',selektor);
+assert.ok(await strona.locator(selektor+' .port-leds').evaluate(element=>Number(getComputedStyle(element).filter.match(/[0-9.]+/)[0])>.95));
+const po=await strona.locator(selektor+' .port-leds i:last-child').evaluate(element=>({okres:getComputedStyle(element).animationDuration,czas:element.getAnimations()[0]?.currentTime,kolor:getComputedStyle(element).backgroundColor}));assert.equal(po.okres,przed.okres);assert.equal(po.kolor,przed.kolor);assert.ok(po.czas>przed.czas);
+await strona.locator(`[data-select-plan="${id}"]`).click();await strona.waitForFunction(()=>!document.querySelector('[data-link=connected]'));
+console.log('PASS LINK/ACT',szerokosc,technologia,przed.okres);}
+await mkdir('test-results/fiber/led',{recursive:true});await strona.locator('#central-area').screenshot({path:`test-results/fiber/led/status-${szerokosc}.png`});assert.deepEqual(bledy,[]);await strona.close();}}finally{await przegladarka.close();serwer.kill()}

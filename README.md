@@ -26,6 +26,7 @@ npm test            # testy struktury + sprawdzenie składni JS
 npm run build       # gotowa statyczna strona w dist/
 npm run preview     # podgląd dist/ na http://127.0.0.1:4173
 npm run verify      # testy + build
+npm run test:fiber  # SC/APC: mechanika, geometria, dotyk i 8 szerokości
 npm ci              # zależności do testów przeglądarkowych
 npm run test:browser # Chromium: geometria, 9 szerokości, obsługa i 117 tras
 ```
@@ -81,7 +82,7 @@ Publikacja repozytorium na GitHubie **nie oznacza publikacji witryny**. Do produ
 ## Ustalenia produktowe
 
 - **HERO:** lewa kolumna z „Wybierz łącze. Zobacz różnicę.”, środkowa niska szafa RACK 3D, prawa kolumna z płynnie zmieniającym się opisem technologii.
-- **RACK:** trzy moduły MAD-NET: **LAN 5× RJ-45** (czerwony), **FIBER 3× SC/UPC Simplex** (pomarańczowy `#FF7B19`), **AIR 5× radio** (niebieski, bez portów fizycznych).
+- **RACK:** trzy moduły MAD-NET: **LAN 5× RJ-45** (czerwony), **FIBER 3× SC/APC Simplex** (pomarańczowy `#FF7B19`), **AIR 5× radio** (niebieski, bez portów fizycznych).
 - Każdy kanał ma niezależną, proporcjonalną do prędkości animację. Zmiana panelu prawego przez hover, dotknięcie lub klawiaturę.
 - **Cennik:** 13 pakietów i tabela porównawcza z zakładkami technologii i kolorami.
 - **Łączenie:** realistyczne wtyki, zaślepki, sekwencja podłączenia, przewody po trasach ortogonalnych. **Routing przewodów wciąż jest obszarem do testów i poprawy**, a nie ukończonym rozwiązaniem.

@@ -29,7 +29,8 @@ try{
  assert.equal(await strona.evaluate(()=>document.documentElement.scrollWidth),szerokosc);
  }
  assert.equal(await strona.locator('.compare-head-port').count(),13);
- assert.equal(await strona.locator('.compare-head-port button,.compare-head-port [tabindex]').count(),0);
+ assert.equal(await strona.locator('button.compare-head-port--FIBER').count(),3);
+ assert.equal(await strona.locator('.compare-head-port--LAN button,.compare-head-port--AIR button,.compare-head-port [tabindex]').count(),0);
  for(const technologia of ['FIBER','LAN','AIR']){
  const okresy=await strona.locator(`#comparison-${technologia} .compare-head-port`).evaluateAll(e=>e.map(t=>parseFloat(getComputedStyle(t).getPropertyValue('--pulse-ms'))));assert.ok(okresy.every((v,i)=>v>0&&(!i||v<okresy[i-1])));
  }
@@ -99,6 +100,6 @@ try{
  await strona.locator('#availability-submit').click();await strona.waitForFunction(()=>!document.querySelector('#availability-thanks').hidden);
  assert.equal(zapytania[1].position,null);assert.equal(zapytania[1].town,'Trzebiatów');
  
- await strona.emulateMedia({reducedMotion:'reduce'});assert.equal(await strona.locator('.compare-head-port .port-leds i:last-child').first().evaluate(e=>getComputedStyle(e).animationName),'none');
+ await strona.emulateMedia({reducedMotion:'reduce'});assert.equal(await strona.locator('#comparison-FIBER .sc-wskaznik').first().evaluate(e=>getComputedStyle(e).animationName),'none');
  assert.deepEqual(bledy,[]);console.log('PASS V21 geokodowanie, mapa, przeciąganie, status, dane zapytania, awaria mapy, reduced motion, brak wyjątków JS');
 }finally{await przegladarka?.close();serwer.kill()}
