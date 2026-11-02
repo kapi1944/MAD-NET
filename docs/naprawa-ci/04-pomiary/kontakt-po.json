@@ -1,0 +1,142 @@
+[
+  {
+    "szerokosc": 320,
+    "przycisk": {
+      "lewo": 17,
+      "prawo": 206.46875,
+      "szerokosc": 189.46875
+    },
+    "tekst": {
+      "lewo": 35,
+      "prawo": 188.46875
+    },
+    "tytulFont": "38px",
+    "tytulFragmenty": [
+      {
+        "lewo": 17,
+        "prawo": 295.96875
+      },
+      {
+        "lewo": 295.96875,
+        "prawo": 295.96875
+      },
+      {
+        "lewo": 17,
+        "prawo": 172.328125
+      },
+      {
+        "lewo": 17,
+        "prawo": 219.859375
+      },
+      {
+        "lewo": 17,
+        "prawo": 172.328125
+      },
+      {
+        "lewo": 17,
+        "prawo": 219.859375
+      }
+    ]
+  },
+  {
+    "szerokosc": 390,
+    "przycisk": {
+      "lewo": 17,
+      "prawo": 206.46875,
+      "szerokosc": 189.46875
+    },
+    "tekst": {
+      "lewo": 35,
+      "prawo": 188.46875
+    },
+    "tytulFont": "43px",
+    "tytulFragmenty": [
+      {
+        "lewo": 17,
+        "prawo": 332.6875
+      },
+      {
+        "lewo": 332.6875,
+        "prawo": 332.6875
+      },
+      {
+        "lewo": 17,
+        "prawo": 192.765625
+      },
+      {
+        "lewo": 17,
+        "prawo": 246.546875
+      },
+      {
+        "lewo": 17,
+        "prawo": 192.765625
+      },
+      {
+        "lewo": 17,
+        "prawo": 246.546875
+      }
+    ]
+  },
+  {
+    "szerokosc": 768,
+    "przycisk": {
+      "lewo": 20,
+      "prawo": 209.46875,
+      "szerokosc": 189.46875
+    },
+    "tekst": {
+      "lewo": 38,
+      "prawo": 191.46875
+    },
+    "tytulFont": "41.472px",
+    "tytulFragmenty": [
+      {
+        "lewo": 20,
+        "prawo": 324.453125
+      },
+      {
+        "lewo": 324.453125,
+        "prawo": 324.453125
+      },
+      {
+        "lewo": 20,
+        "prawo": 420.53125
+      },
+      {
+        "lewo": 20,
+        "prawo": 420.53125
+      }
+    ]
+  },
+  {
+    "szerokosc": 1440,
+    "przycisk": {
+      "lewo": 38,
+      "prawo": 227.46875,
+      "szerokosc": 189.46875
+    },
+    "tekst": {
+      "lewo": 56,
+      "prawo": 209.46875
+    },
+    "tytulFont": "76px",
+    "tytulFragmenty": [
+      {
+        "lewo": 38,
+        "prawo": 595.9375
+      },
+      {
+        "lewo": 595.9375,
+        "prawo": 595.9375
+      },
+      {
+        "lewo": 38,
+        "prawo": 772.03125
+      },
+      {
+        "lewo": 38,
+        "prawo": 772.03125
+      }
+    ]
+  }
+]

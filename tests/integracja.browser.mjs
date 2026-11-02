@@ -52,7 +52,9 @@ try{
   assert.equal(await strona.locator('.wspolna-stopka').count(),1,plik);
   assert.equal(await strona.evaluate(()=>document.documentElement.scrollWidth),szerokosc,`${plik} ${szerokosc}: overflow`);
   const wystajace=await strona.locator('main h1,main h2,main h3,main p').evaluateAll(elementy=>elementy.filter(element=>{
-   const r=element.getBoundingClientRect();return r.width>0&&(r.left<-.5||r.right>innerWidth+.5);
+   const r=element.getBoundingClientRect();if(r.width<=1)return false;
+   const zakres=document.createRange();zakres.selectNodeContents(element);
+   return [r,...zakres.getClientRects()].some(fragment=>fragment.left<-.5||fragment.right>innerWidth+.5);
   }).map(element=>element.textContent.trim().slice(0,100)));
   assert.deepEqual(wystajace,[],`${plik} ${szerokosc}: przycięta treść`);
   assert.ok(await strona.locator('main .wspolne-cta').evaluateAll(elementy=>elementy.every(element=>{

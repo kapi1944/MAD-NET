@@ -28,6 +28,7 @@ npm run preview     # podgląd dist/ na http://127.0.0.1:4173
 npm run verify      # testy + build
 npm run test:fiber  # SC/APC: mechanika, geometria, dotyk i 9 szerokości
 npm run test:led    # LINK/ACT: urządzenie, karty, RACK i tabele
+npm run test:integracja # dziewięć stron, 54 układy i zgodność zasobów
 npm ci              # zależności do testów przeglądarkowych
 npm run test:browser # pełna regresja; V20: 22 szerokości i 286 tras
 ```

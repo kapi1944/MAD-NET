@@ -1,0 +1,468 @@
+{
+  "adres": "http://127.0.0.1:57426/",
+  "wyniki": [
+    {
+      "plik": "index.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "index.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "cennik.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "uslugi.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "kontakt.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "kontakt.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "kontakt.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "kontakt.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "kontakt.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "kontakt.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "internet.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "internet.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "internet.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "internet.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "internet.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "internet.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "monitoring-alarmy.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "monitoring-alarmy.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "monitoring-alarmy.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "monitoring-alarmy.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "monitoring-alarmy.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "monitoring-alarmy.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "sieci-it.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "sieci-it.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "sieci-it.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "sieci-it.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "sieci-it.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "sieci-it.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "strony-www-hosting.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "strony-www-hosting.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "strony-www-hosting.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "strony-www-hosting.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "strony-www-hosting.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "strony-www-hosting.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    },
+    {
+      "plik": "instalacje-tv-sat.html",
+      "szerokosc": 320,
+      "status": "PASS"
+    },
+    {
+      "plik": "instalacje-tv-sat.html",
+      "szerokosc": 390,
+      "status": "PASS"
+    },
+    {
+      "plik": "instalacje-tv-sat.html",
+      "szerokosc": 768,
+      "status": "PASS"
+    },
+    {
+      "plik": "instalacje-tv-sat.html",
+      "szerokosc": 1024,
+      "status": "PASS"
+    },
+    {
+      "plik": "instalacje-tv-sat.html",
+      "szerokosc": 1440,
+      "status": "PASS"
+    },
+    {
+      "plik": "instalacje-tv-sat.html",
+      "szerokosc": 1920,
+      "status": "PASS"
+    }
+  ],
+  "bledy": [],
+  "zasoby": {
+    "index.html": {
+      "status": 200,
+      "sha256": "e0a82500c4142a613de05119ae8d58b1795ae7ece051a17e0986812c8470000c",
+      "cache": "no-store"
+    },
+    "assets/css/nawigacja.css": {
+      "status": 200,
+      "sha256": "6ac6db77370580e6063e7bd7759a0523562bd882aa3bdd0d58492234b3e55544",
+      "cache": "no-store"
+    },
+    "assets/css/home.css": {
+      "status": 200,
+      "sha256": "ee39a6fe1102ecee2757298b5b70683e7562316b43d15702acb2606e048fed4a",
+      "cache": "no-store"
+    },
+    "assets/css/hero.css": {
+      "status": 200,
+      "sha256": "33db5eb0e8c53a7e453147d125b35d09e5f9e28f50be4d5d6b8c34a02a1071d5",
+      "cache": "no-store"
+    },
+    "assets/img/mad-net-logo.png": {
+      "status": 200,
+      "sha256": "c4e1212686db659038f85ce9788f40912e09b522da320475c1ba794776f5c575",
+      "cache": "no-store"
+    },
+    "assets/img/home/latarnia-hero.jpg": {
+      "status": 200,
+      "sha256": "50acdb685c79ba3bfce25e35d56922ab95fdbf4eb5af89a09a291caa67b97852",
+      "cache": "no-store"
+    },
+    "assets/js/stare-adresy.js": {
+      "status": 200,
+      "sha256": "c4088039686b8369371b27cf7ec38efbfe9315a678b87fe18fe692ad014ec401",
+      "cache": "no-store"
+    },
+    "assets/js/home.js": {
+      "status": 200,
+      "sha256": "2f91655e873fa65faafb3b27351b4e6fc268835c4c726e126b01c26b5915e733",
+      "cache": "no-store"
+    },
+    "assets/js/nawigacja.js": {
+      "status": 200,
+      "sha256": "131d5308aaa4f427291b956a8e48b4d746a4dbfc5d832ada69d3ea0bc43134af",
+      "cache": "no-store"
+    },
+    "assets/img/home/pcb.svg": {
+      "status": 200,
+      "sha256": "0908f1101aaa1c97c64d0357e1aab343cf39c5c330c170d07805cf7145e077fa",
+      "cache": "no-store"
+    },
+    "assets/img/home/latarnia-tlo.jpg": {
+      "status": 200,
+      "sha256": "c365a962637171d66ce3f8b292199a1ae1bb4dd6c643ba9b6d6ab1b114ea5e7f",
+      "cache": "no-store"
+    },
+    "assets/img/home/logo.png": {
+      "status": 200,
+      "sha256": "c2b70cc3a29016f058abbd589efd83d3af8711357cc5c6d2d9689ad1f6e096c4",
+      "cache": "no-store"
+    },
+    "assets/img/home/usluga-internet.jpg": {
+      "status": 200,
+      "sha256": "61968ae3c93ff7bc21ee39ea278fe48004ce4e8f3d92123c57a9b7dc4ae9660c",
+      "cache": "no-store"
+    },
+    "assets/img/home/usluga-www.jpg": {
+      "status": 200,
+      "sha256": "05a9b843673aa86dff77cc2040a80343218ed8d3b18c23ffbc75ff7660ba24ed",
+      "cache": "no-store"
+    },
+    "assets/img/home/usluga-it.jpg": {
+      "status": 200,
+      "sha256": "8aa2e3c498e69198bef87715916d94bebcc0d62094bebe53add2bf2b69d7ad15",
+      "cache": "no-store"
+    },
+    "assets/img/home/usluga-monitoring.jpg": {
+      "status": 200,
+      "sha256": "5effb57ed007e35bd8cf994a7b829012e24d9ce784e887f1c3668b283135252d",
+      "cache": "no-store"
+    },
+    "assets/img/home/usluga-anteny.jpg": {
+      "status": 200,
+      "sha256": "878cc33a9b7f65e97a41cde4ddd6ab6cc7a08069a35059977dd2e1c3a3b463f2",
+      "cache": "no-store"
+    },
+    "cennik.html": {
+      "status": 200,
+      "sha256": "6a32ef09b3099ac371ffef31b8ed9917e949abeb7db2cb98f6358b76440e7aa7",
+      "cache": "no-store"
+    },
+    "assets/css/styles.css": {
+      "status": 200,
+      "sha256": "5f405c68b63c73f4cede9526016ef182887d62026436cf69134dcb8e730d0a4d",
+      "cache": "no-store"
+    },
+    "assets/css/hero-hybryda.css": {
+      "status": 200,
+      "sha256": "fd8d05d6a0e34138b81039f331b1123936cd9c0dd471894864c7ed5706689742",
+      "cache": "no-store"
+    },
+    "assets/css/sprzet-fiber.css": {
+      "status": 200,
+      "sha256": "ac1daf4dff7444615bd2bcec1a61729b852f7a4e3e77e2016168beee9b769375",
+      "cache": "no-store"
+    },
+    "assets/img/hero-rack-baza.svg": {
+      "status": 200,
+      "sha256": "ce21c9859295ba2dd9c8b2359c8263d2907eb134103f86f1de1ed344d069c91c",
+      "cache": "no-store"
+    },
+    "assets/img/hero-rack.png": {
+      "status": 200,
+      "sha256": "15ddd4ba9fe261f63076a93e317e73b081e031ffd57b6bffd8ef9c32af1a1b91",
+      "cache": "no-store"
+    },
+    "assets/js/sprzet-fiber.js": {
+      "status": 200,
+      "sha256": "a44f3ec09c2fa16bd4558adc66b5f574017f1411212e5855b7ad6b635ede2bc3",
+      "cache": "no-store"
+    },
+    "assets/js/hero-rack.js": {
+      "status": 200,
+      "sha256": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
+      "cache": "no-store"
+    },
+    "assets/js/wybor-technologii.js": {
+      "status": 200,
+      "sha256": "e74fa0ac2df15bd4461f5e37ab4d60c111e68f1dc2929166cf66bf45c5687f49",
+      "cache": "no-store"
+    },
+    "assets/js/dostepnosc.js": {
+      "status": 200,
+      "sha256": "e473368ac64f83fc99b819ad8239ecbd83dee608174a2373c3cd075d151798cf",
+      "cache": "no-store"
+    },
+    "assets/js/cennik.js": {
+      "status": 200,
+      "sha256": "d638c99979cb11126176ff995ef5ec5432d264c26b9cf918a80d44980a8775a0",
+      "cache": "no-store"
+    },
+    "assets/img/hero/plyta-pcb.webp": {
+      "status": 200,
+      "sha256": "dc0496bcef5649a6405e0a2368a317b29188447177922a78bd70eaa2a4ccc171",
+      "cache": "no-store"
+    },
+    "uslugi.html": {
+      "status": 200,
+      "sha256": "dc9e41462ae144f8a3b1182758070baf292f1316a9969cc947b2a3656cdac153",
+      "cache": "no-store"
+    },
+    "assets/css/uslugi.css": {
+      "status": 200,
+      "sha256": "b2d18c0587b106a79a21cc9a410cee922323ed14aaa25ad795a2345d1ee0d2d9",
+      "cache": "no-store"
+    },
+    "kontakt.html": {
+      "status": 200,
+      "sha256": "c6b16ff7722f62f6ae2f248eca596bbb45a3f6bdb4fd6384de8943266ab1d400",
+      "cache": "no-store"
+    },
+    "internet.html": {
+      "status": 200,
+      "sha256": "a0c63da264d2ad68b32a8537dc59903fde46708e2316e6dedef5fe2e583252ec",
+      "cache": "no-store"
+    },
+    "assets/css/oferta.css": {
+      "status": 200,
+      "sha256": "5ac752204a3325d0604aa8910a8c9900c3cf18876ebdb492b2b77d67c87afd7b",
+      "cache": "no-store"
+    },
+    "monitoring-alarmy.html": {
+      "status": 200,
+      "sha256": "0544f3fc61fc5da421738eb35e62b0f7333200ff614b65ef3e6a7736719910ee",
+      "cache": "no-store"
+    },
+    "sieci-it.html": {
+      "status": 200,
+      "sha256": "2d05ea637691c1a92a6025e3c9cd8d1cb89f4987f1336e78993f162c024a4f55",
+      "cache": "no-store"
+    },
+    "strony-www-hosting.html": {
+      "status": 200,
+      "sha256": "8a795a432e203a8cf41bc65049aaa3fe2da4757daeec9e12f0ac51eb99a9a18b",
+      "cache": "no-store"
+    },
+    "instalacje-tv-sat.html": {
+      "status": 200,
+      "sha256": "238e164c78e6cf3d2e073312be97e2cd9c1ec1b083fc04e55dbcde475605be92",
+      "cache": "no-store"
+    }
+  }
+}
