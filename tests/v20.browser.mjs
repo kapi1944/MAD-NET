@@ -1,3 +1,5 @@
+import {zmierzKanalyRack} from './geometria-rack.mjs';
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Regresja V20 w prawdziwym Chromium: geometria, obsługa i istniejące oferty. */
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -8,7 +10,7 @@ import { chromium } from 'playwright-core';
 
 const katalog = new URL('../test-results/v20/po/', import.meta.url);
 await mkdir(katalog, { recursive: true });
-const port = process.env.MADNET_PORT_TESTOW || '4181';
+const port=await wybierzPort('MADNET_PORT_TESTOW');
 const adres = `http://127.0.0.1:${port}/cennik.html`;
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   cwd: new URL('..', import.meta.url), env: { ...process.env, PORT: port }, stdio: ['ignore', 'pipe', 'pipe'],
@@ -25,6 +27,13 @@ function sledzBledy(strona) {
   strona.on('pageerror', blad => bledy.push(blad.message));
   strona.on('console', wpis => { if (wpis.type() === 'error') konsola.push({ tresc: wpis.text(), adres: wpis.location().url }); });
   strona.on('requestfailed', zadanie => siec.push({ adres: zadanie.url(), blad: zadanie.failure()?.errorText }));
+}
+
+// Wzorzec powstaje po pomiarze panelu przez requestAnimationFrame/ResizeObserver.
+async function przygotujPomiarGeometrii(strona){
+  await strona.evaluate(()=>document.fonts.ready);
+  await strona.waitForFunction(()=>innerWidth<=1230||document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+  await strona.evaluate(()=>new Promise(zakoncz=>requestAnimationFrame(()=>requestAnimationFrame(zakoncz))));
 }
 
 async function geometria(strona) {
@@ -120,18 +129,8 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
 }
 
 try {
-  await new Promise((zakoncz, odrzuc) => {
-    const zegar = setTimeout(() => odrzuc(new Error('Serwer testowy nie wystartował')), 8000);
-    serwer.stdout.on('data', dane => { if (String(dane).includes('MAD-NET PREVIEW')) { clearTimeout(zegar); zakoncz(); } });
-    serwer.once('error', odrzuc);
-    serwer.once('exit', kod => { clearTimeout(zegar); if (kod) odrzuc(new Error(`Serwer zakończył się kodem ${kod}`)); });
-    serwer.stderr.on('data', dane => process.stderr.write(dane));
-  });
-  przegladarka = await chromium.launch({
-    headless: true,
-    ...(process.env.MADNET_PRZEGLADARKA ? { executablePath: process.env.MADNET_PRZEGLADARKA }
-      : process.platform === 'win32' ? { channel: 'msedge' } : {}),
-  });
+  await poczekajNaSerwer(serwer);
+  przegladarka = await uruchomPrzegladarke(chromium);
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1250 } });
   sledzBledy(strona);
   await strona.goto(adres);
@@ -144,8 +143,7 @@ try {
   for (const szerokosc of [320, 360, 375, 380, 390, 400, 414, 430, 480, 560, 760, 768, 800, 1024, 1100, 1230, 1231, 1280, 1440, 1500, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
-    await strona.evaluate(() => document.fonts.ready);
-    await strona.waitForFunction(() => innerWidth <= 1230 || document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+    await przygotujPomiarGeometrii(strona);
     const poczatek = await geometria(strona);
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {
       await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
@@ -184,18 +182,24 @@ try {
       assert.equal(await strona.locator('.hero-rack-hybryda .rack-device').count(), 3);
       assert.equal(await strona.locator('.grafika-hybrydowa [data-speed]').count(), 13);
       assert.equal(await strona.locator('#grafika-szafy').getAttribute('href'), './assets/img/hero-rack.png');
-      const zgodnosc = await strona.evaluate(() => {
-        const rysunek = document.querySelector('.grafika-hybrydowa');
-        const przeliczenie = rysunek.getScreenCTM();
-        return [...rysunek.querySelectorAll('[data-speed]')].every(kanal => {
-          const wycinek = kanal.querySelector('[clip-path]');
-          const rys = wycinek ? document.querySelector(wycinek.getAttribute('clip-path').slice(4, -1)).querySelector('rect').getBBox() : kanal.querySelector('circle').getBBox();
-          const punkt = new DOMPoint(rys.x + rys.width / 2, rys.y + rys.height / 2).matrixTransform(przeliczenie);
-          const przycisk = document.querySelector('[data-rack-tech="' + kanal.dataset.technologiaKanalu + '"]');
-          return przycisk.contains(document.elementFromPoint(punkt.x, punkt.y));
-        });
-      });
-      assert.ok(zgodnosc, 'Kontrolki muszą skalować się razem z obrazem i odpowiadającym im obszarem wyboru');
+      const kanaly = await strona.evaluate(zmierzKanalyRack);
+      assert.equal(kanaly.length,13);
+      for(const [technologia,liczba] of Object.entries({LAN:5,FIBER:3,AIR:5}))assert.equal(kanaly.filter(kanal=>kanal.technologia===technologia).length,liczba);
+      assert.ok(kanaly.every(kanal=>kanal.zgodny),JSON.stringify(kanaly));
+      if(szerokosc===1440&&technologia==='LAN'){
+        // Próby negatywne dowodzą, że kontrola wykrywa uszkodzone modele i mapowanie.
+        for(const rodzaj of ['adapter','obszar','technologia']){
+          await strona.evaluate(rodzaj=>{
+            const element=document.querySelector(rodzaj==='adapter'?'.adapter-szafy-fiber':rodzaj==='obszar'?'[data-rack-tech="LAN"]':'[data-technologia-kanalu="LAN"]');
+            window.elementProbyRack=element;window.atrybutyProbyRack=[...element.attributes].map(atrybut=>[atrybut.name,atrybut.value]);
+            if(rodzaj==='adapter')element.setAttribute('transform','translate(3000 3000)');
+            if(rodzaj==='obszar')element.style.transform='translateX(3000px)';
+            if(rodzaj==='technologia')element.dataset.technologiaKanalu='FIBER';
+          },rodzaj);
+          try{assert.ok((await strona.evaluate(zmierzKanalyRack)).some(kanal=>!kanal.zgodny),'Kontrola musi wykrywać: '+rodzaj);}
+          finally{await strona.evaluate(()=>{const element=window.elementProbyRack;[...element.attributes].forEach(atrybut=>element.removeAttribute(atrybut.name));window.atrybutyProbyRack.forEach(([nazwa,wartosc])=>element.setAttribute(nazwa,wartosc));});}
+        }
+      }
       if (szerokosc > 1230) {
         assert.ok(pomiar.wysokoscPanelu >= pomiar.wysokoscTylnejKrawedzi - 16 - 1 && pomiar.goraTylu >= 0);
         assert.ok(pomiar.zakladka >= 24 && pomiar.zakladka <= 44);
@@ -296,6 +300,7 @@ try {
 
   // Rzeczywisty Tab/Enter/Space i szybkie wskazania nie gubią ostatniego wyboru.
   await strona.setViewportSize({ width: 1440, height: 1100 }); await strona.goto(adres);
+  await przygotujPomiarGeometrii(strona);
   const poczatek = await geometria(strona);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     await strona.locator('[data-rack-tech="LAN"]').focus();
@@ -324,7 +329,9 @@ try {
     await strona.locator(`.device-tech-tabs [data-technology="${technologia}"]`).click();
     const identyfikator = `${technologia}-${oferta[technologia][0][0]}M`;
     await strona.locator(`[data-port-plan-id="${identyfikator}"]`).click();
-    await strona.waitForFunction(identyfikator => document.querySelector('#connection-state').textContent.includes(`${identyfikator}:`) && document.querySelector('#connection-state').textContent.includes('są połączone'), identyfikator);
+    await strona.waitForFunction(identyfikator => identyfikator.startsWith('FIBER-')
+      ? document.querySelector('#connection-zone').dataset.fiberState === 'CONNECTED' && document.querySelector('#plans .plan.is-selected')?.dataset.planId === identyfikator
+      : document.querySelector('#connection-state').textContent.includes(`${identyfikator}:`) && document.querySelector('#connection-state').textContent.includes('są połączone'), identyfikator);
     await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));
     assert.equal(await strona.locator(`#plans [data-plan-id="${identyfikator}"]`).getAttribute('data-port-count'), '1');
     assert.equal(await strona.locator('#link-active').evaluate(element => element.getTotalLength() > 0), true);
@@ -377,6 +384,8 @@ try {
   assert.equal(miganie.length, 13);
   miganie.forEach(kanal => assert.ok(kanal.maksimum - kanal.minimum > .2 && kanal.stan === 'running', `Brak migania: ${kanal.nazwa}`));
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
+    // Po klawiaturze kursor może już leżeć nad tym urządzeniem: badamy nowe wejście.
+    await strona.mouse.move(0,0);
     await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
     await sprawdzWybor(strona, technologia, poczatek);
     const czasy = await strona.locator('.hero-rack-stage [data-speed]').evaluateAll(kanaly => kanaly.map(kanal => kanal.querySelector('.rj-link,.fiber-activity,.wi').getAnimations()[0].currentTime));
@@ -395,6 +404,7 @@ try {
 
   const dotyk = await przegladarka.newPage({ viewport: { width: 390, height: 1100 }, hasTouch: true, isMobile: true });
   sledzBledy(dotyk); await dotyk.goto(adres);
+  await przygotujPomiarGeometrii(dotyk);
   const poczatekDotyku = await geometria(dotyk);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {

@@ -1,3 +1,4 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Regresja wydzielenia HOME V3: dwie strony, obrazy i rzeczywiste interakcje. */
 import assert from 'node:assert/strict';
 import {readFile, mkdir, writeFile, access} from 'node:fs/promises';
@@ -6,7 +7,7 @@ import {chromium} from 'playwright-core';
 
 const katalog = 'test-results/integracja-home-v3/03/home';
 await mkdir(katalog, {recursive:true});
-const port = process.env.MADNET_PORT_HOME || '4184';
+const port=await wybierzPort('MADNET_PORT_HOME');
 const adres = `http://127.0.0.1:${port}`;
 const oryginal = await readFile('docs/archiwum/MAD-NET_HOME_V3_JEDEN_PLIK_ORIGINAL.html', 'utf8');
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
@@ -84,15 +85,8 @@ async function geometriaCennika(strona) {
 }
 
 try {
-  await new Promise((gotowe, odrzuc) => {
-    const zegar = setTimeout(() => odrzuc(new Error('Brak podglądu HOME')), 8000);
-    serwer.stdout.on('data', dane => {if (String(dane).includes('MAD-NET PREVIEW')) {clearTimeout(zegar); gotowe();}});
-    serwer.once('error', odrzuc);
-  });
-  przegladarka = await chromium.launch({headless:true, args:['--disable-gpu'],
-    ...(process.env.MADNET_PRZEGLADARKA ? {executablePath:process.env.MADNET_PRZEGLADARKA}
-      : process.platform === 'win32' ? {channel:'msedge'} : {}),
-  });
+  await poczekajNaSerwer(serwer);
+  przegladarka = await uruchomPrzegladarke(chromium,{args:['--disable-gpu']});
   const kontekst = await przegladarka.newContext({deviceScaleFactor:1, reducedMotion:'reduce'});
   // Obie strony otrzymują te same bajty prawdziwych kafelków pobranych online.
   await kontekst.route(/https:\/\/(server\.arcgisonline\.com|a\.basemaps\.cartocdn\.com)\//, async trasa => {
@@ -105,7 +99,13 @@ try {
     await trasa.fulfill(await kafelki.get(url));
   });
   await kontekst.route(`${adres}/oryginal-home-v3.html`, trasa => trasa.fulfill({body:oryginal, contentType:'text/html; charset=utf-8'}));
-  const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'});
+  // Wzorzec migracji używa aktualnych skryptów: uwzględnia zatwierdzony sprzęt Etapu 05.
+  const aktualnyCennik = await readFile('cennik.html','utf8');
+  const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'})
+    .replace('<script src="./assets/js/cennik.js">','<script src="./assets/js/sprzet-fiber.js"></script><script src="./assets/js/cennik.js">')
+    .replace('</head>','<link rel="stylesheet" href="./assets/css/sprzet-fiber.css"></head>')
+    .replaceAll('SC/UPC','SC/APC')
+    .replace(/<p class="compare-sub">[\s\S]*?<\/p>/,aktualnyCennik.match(/<p class="compare-sub">[\s\S]*?<\/p>/)[0]);
   await kontekst.route(`${adres}/oryginal-cennik.html`, trasa => trasa.fulfill({body:cennikPrzed, contentType:'text/html; charset=utf-8'}));
   // Symulacja montowania niezmienionego dist w podkatalogu GitHub Pages.
   await kontekst.route(`${adres}/MAD-NET/**`, async trasa => {
@@ -229,7 +229,7 @@ try {
     const selektory = czyCennik ? ['#hero-rack-stage', '#cennik', '#oplaty', '#availability-form'] : ['#tytul-glowny', '#nawigacja', '#mapa-ramka', '.karta-uslugi'];
     for (const selektor of selektory) assert.ok(await strona.locator(selektor).count(), `${sciezka}: brak selektora ${selektor}`);
     const skrypty = await strona.locator('script[src]').evaluateAll(elementy => elementy.map(element => element.getAttribute('src')));
-    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js', './assets/js/nawigacja.js', './assets/js/wybor-technologii.js'] : ['./assets/js/stare-adresy.js', './assets/js/home.js', './assets/js/nawigacja.js']);
+    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/sprzet-fiber.js', './assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js', './assets/js/nawigacja.js', './assets/js/wybor-technologii.js'] : ['./assets/js/stare-adresy.js', './assets/js/home.js', './assets/js/nawigacja.js']);
     assert.equal(await strona.locator(czyCennik ? 'link[href="./assets/css/home.css"]' : 'link[href="./assets/css/styles.css"]').count(), 0);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.css')), `${sciezka}: nie pobrano CSS`);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.js')), `${sciezka}: nie pobrano JS`);
