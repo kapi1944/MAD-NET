@@ -1,0 +1,181 @@
+{
+  "czas": "2026-11-02T19:20:38.975Z",
+  "skladnia": [
+    {
+      "plik": "assets/js/cennik.js",
+      "exit": 0
+    },
+    {
+      "plik": "assets/js/dostepnosc.js",
+      "exit": 0
+    },
+    {
+      "plik": "assets/js/hero-rack.js",
+      "exit": 0
+    },
+    {
+      "plik": "assets/js/home.js",
+      "exit": 0
+    },
+    {
+      "plik": "assets/js/nawigacja.js",
+      "exit": 0
+    },
+    {
+      "plik": "assets/js/sprzet-fiber.js",
+      "exit": 0
+    },
+    {
+      "plik": "assets/js/stare-adresy.js",
+      "exit": 0
+    },
+    {
+      "plik": "assets/js/wybor-technologii.js",
+      "exit": 0
+    },
+    {
+      "plik": "scripts/build.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "scripts/serve.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/build.test.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/diagnostyka-panelu.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/fiber.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/fiber.test.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/geometria-rack.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/home.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/home.test.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/integracja.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/led.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/nawigacja.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/nawigacja.test.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/oferta.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/pcb.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/projekt.test.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/srodowisko.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/srodowisko.test.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/v20.browser.mjs",
+      "exit": 0
+    },
+    {
+      "plik": "tests/v21.browser.mjs",
+      "exit": 0
+    }
+  ],
+  "artefakty": [
+    {
+      "plik": "dist/index.html",
+      "bajty": 22063,
+      "sha256": "bd50d2d5e5c6ba51aa19ed9347ee7ae2fedbac4916148eb2471edba27112a347"
+    },
+    {
+      "plik": "dist/cennik.html",
+      "bajty": 43326,
+      "sha256": "76b10151d186197268a2084a96cbced0400cef399826cccbb8750630557363c1"
+    },
+    {
+      "plik": "dist/assets/js/home.js",
+      "bajty": 11087,
+      "sha256": "245967e728944b757a64bce16e4673ff8549f273d397fdb346be9c26447f2de9"
+    },
+    {
+      "plik": "dist/assets/js/hero-rack.js",
+      "bajty": 5594,
+      "sha256": "7862b1128bd038760ee504a36ff3c6611c854e788992c24ad4956762cfffe93a"
+    }
+  ],
+  "bezpieczenstwo": {
+    "zakres": "pliki diff origin/main...HEAD; treść + nazwy; bez wypisywania wartości",
+    "trafienia": [],
+    "nazwyPodejrzane": [],
+    "binaria": [
+      "docs/hero-v4/po/1366.png",
+      "docs/hero-v4/po/1440.png",
+      "docs/hero-v4/po/1920.png",
+      "docs/hero-v4/po/360.png",
+      "docs/hero-v4/po/390.png",
+      "docs/hero-v4/po/768.png",
+      "docs/hero-v4/porownania/1366.png",
+      "docs/hero-v4/porownania/1920.png",
+      "docs/hero-v4/porownania/390.png",
+      "docs/hero-v4/porownania/768.png",
+      "docs/hero-v4/przed/1366.png",
+      "docs/hero-v4/przed/1440.png",
+      "docs/hero-v4/przed/1920.png",
+      "docs/hero-v4/przed/360.png",
+      "docs/hero-v4/przed/390.png",
+      "docs/hero-v4/przed/768.png",
+      "docs/naprawa-ci/02-zrzuty/fiber-led-320.png",
+      "docs/naprawa-ci/02-zrzuty/lan-led-1440.png",
+      "docs/naprawa-ci/02-zrzuty/tabela-desktop.png",
+      "docs/naprawa-ci/02-zrzuty/tabela-mobile-390.png",
+      "docs/naprawa-ci/03-zrzuty/home-1366.png",
+      "docs/naprawa-ci/03-zrzuty/home-1920.png",
+      "docs/naprawa-ci/03-zrzuty/home-390.png",
+      "docs/naprawa-ci/03-zrzuty/home-768.png",
+      "docs/naprawa-ci/04-pomiary/ci-roznica-tla.png",
+      "docs/naprawa-ci/04-zrzuty/dziewiec-stron-1024.png",
+      "docs/naprawa-ci/04-zrzuty/dziewiec-stron-1440.png",
+      "docs/naprawa-ci/04-zrzuty/dziewiec-stron-1920.png",
+      "docs/naprawa-ci/04-zrzuty/dziewiec-stron-320.png",
+      "docs/naprawa-ci/04-zrzuty/dziewiec-stron-390.png",
+      "docs/naprawa-ci/04-zrzuty/dziewiec-stron-768.png",
+      "docs/naprawa-ci/04-zrzuty/fiber-led-390.png",
+      "docs/naprawa-ci/04-zrzuty/lan-led-1440.png",
+      "docs/naprawa-ci/04-zrzuty/tabela-desktop.png",
+      "docs/naprawa-ci/04-zrzuty/tabela-mobile-390.png"
+    ]
+  }
+}

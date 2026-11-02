@@ -1,0 +1,64 @@
+
+> mad-net@0.1.0 test:integracja
+> npm run build && node tests/integracja.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS dziewięć stron: index.html 320
+PASS dziewięć stron: index.html 390
+PASS dziewięć stron: index.html 768
+PASS dziewięć stron: index.html 1024
+PASS dziewięć stron: index.html 1440
+PASS dziewięć stron: index.html 1920
+PASS dziewięć stron: cennik.html 320
+PASS dziewięć stron: cennik.html 390
+PASS dziewięć stron: cennik.html 768
+PASS dziewięć stron: cennik.html 1024
+PASS dziewięć stron: cennik.html 1440
+PASS dziewięć stron: cennik.html 1920
+PASS dziewięć stron: uslugi.html 320
+PASS dziewięć stron: uslugi.html 390
+PASS dziewięć stron: uslugi.html 768
+PASS dziewięć stron: uslugi.html 1024
+PASS dziewięć stron: uslugi.html 1440
+PASS dziewięć stron: uslugi.html 1920
+PASS dziewięć stron: kontakt.html 320
+PASS dziewięć stron: kontakt.html 390
+PASS dziewięć stron: kontakt.html 768
+PASS dziewięć stron: kontakt.html 1024
+PASS dziewięć stron: kontakt.html 1440
+PASS dziewięć stron: kontakt.html 1920
+PASS dziewięć stron: internet.html 320
+PASS dziewięć stron: internet.html 390
+PASS dziewięć stron: internet.html 768
+PASS dziewięć stron: internet.html 1024
+PASS dziewięć stron: internet.html 1440
+PASS dziewięć stron: internet.html 1920
+PASS dziewięć stron: monitoring-alarmy.html 320
+PASS dziewięć stron: monitoring-alarmy.html 390
+PASS dziewięć stron: monitoring-alarmy.html 768
+PASS dziewięć stron: monitoring-alarmy.html 1024
+PASS dziewięć stron: monitoring-alarmy.html 1440
+PASS dziewięć stron: monitoring-alarmy.html 1920
+PASS dziewięć stron: sieci-it.html 320
+PASS dziewięć stron: sieci-it.html 390
+PASS dziewięć stron: sieci-it.html 768
+PASS dziewięć stron: sieci-it.html 1024
+PASS dziewięć stron: sieci-it.html 1440
+PASS dziewięć stron: sieci-it.html 1920
+PASS dziewięć stron: strony-www-hosting.html 320
+PASS dziewięć stron: strony-www-hosting.html 390
+PASS dziewięć stron: strony-www-hosting.html 768
+PASS dziewięć stron: strony-www-hosting.html 1024
+PASS dziewięć stron: strony-www-hosting.html 1440
+PASS dziewięć stron: strony-www-hosting.html 1920
+PASS dziewięć stron: instalacje-tv-sat.html 320
+PASS dziewięć stron: instalacje-tv-sat.html 390
+PASS dziewięć stron: instalacje-tv-sat.html 768
+PASS dziewięć stron: instalacje-tv-sat.html 1024
+PASS dziewięć stron: instalacje-tv-sat.html 1440
+PASS dziewięć stron: instalacje-tv-sat.html 1920

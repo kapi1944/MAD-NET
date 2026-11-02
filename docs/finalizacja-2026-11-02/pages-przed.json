@@ -1,0 +1,160 @@
+{
+  "czas": "2026-11-02T19:22:21.253Z",
+  "shaMain": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+  "zakres": "Odczyt wcześniejszej produkcji przed merge; nie jest regresją wdrożonej integracji #6.",
+  "wyniki": [
+    {
+      "plik": "index.html",
+      "status": 200,
+      "bajty": 22052,
+      "sha256": "77ac378139d9cc44fe4170ba3695bab511280ecef393751e80851480b1fd5ff8",
+      "sha256Main": "77ac378139d9cc44fe4170ba3695bab511280ecef393751e80851480b1fd5ff8",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "cennik.html",
+      "status": 200,
+      "bajty": 42828,
+      "sha256": "615b5237442428034f3a3b6f7de9923d004feffe7bd053de32adb5402a512e5a",
+      "sha256Main": "615b5237442428034f3a3b6f7de9923d004feffe7bd053de32adb5402a512e5a",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "internet.html",
+      "status": 200,
+      "bajty": 8441,
+      "sha256": "d43e1c6fa671b9735dd6467dda7a710dbb7fb8726f3a5993812f9f6f1aa62ce1",
+      "sha256Main": "d43e1c6fa671b9735dd6467dda7a710dbb7fb8726f3a5993812f9f6f1aa62ce1",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "monitoring-alarmy.html",
+      "status": 200,
+      "bajty": 7368,
+      "sha256": "0544f3fc61fc5da421738eb35e62b0f7333200ff614b65ef3e6a7736719910ee",
+      "sha256Main": "0544f3fc61fc5da421738eb35e62b0f7333200ff614b65ef3e6a7736719910ee",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "sieci-it.html",
+      "status": 200,
+      "bajty": 8258,
+      "sha256": "2d05ea637691c1a92a6025e3c9cd8d1cb89f4987f1336e78993f162c024a4f55",
+      "sha256Main": "2d05ea637691c1a92a6025e3c9cd8d1cb89f4987f1336e78993f162c024a4f55",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "strony-www-hosting.html",
+      "status": 200,
+      "bajty": 7891,
+      "sha256": "8a795a432e203a8cf41bc65049aaa3fe2da4757daeec9e12f0ac51eb99a9a18b",
+      "sha256Main": "8a795a432e203a8cf41bc65049aaa3fe2da4757daeec9e12f0ac51eb99a9a18b",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "instalacje-tv-sat.html",
+      "status": 200,
+      "bajty": 7554,
+      "sha256": "238e164c78e6cf3d2e073312be97e2cd9c1ec1b083fc04e55dbcde475605be92",
+      "sha256Main": "238e164c78e6cf3d2e073312be97e2cd9c1ec1b083fc04e55dbcde475605be92",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "uslugi.html",
+      "status": 200,
+      "bajty": 7434,
+      "sha256": "dc9e41462ae144f8a3b1182758070baf292f1316a9969cc947b2a3656cdac153",
+      "sha256Main": "dc9e41462ae144f8a3b1182758070baf292f1316a9969cc947b2a3656cdac153",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "kontakt.html",
+      "status": 200,
+      "bajty": 3712,
+      "sha256": "c6b16ff7722f62f6ae2f248eca596bbb45a3f6bdb4fd6384de8943266ab1d400",
+      "sha256Main": "c6b16ff7722f62f6ae2f248eca596bbb45a3f6bdb4fd6384de8943266ab1d400",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/css/home.css",
+      "status": 200,
+      "bajty": 45035,
+      "sha256": "fe115e4c1e7f62a57a1d64732341f1225824cf82e2811598c3e0b7fa41787cb1",
+      "sha256Main": "fe115e4c1e7f62a57a1d64732341f1225824cf82e2811598c3e0b7fa41787cb1",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/css/styles.css",
+      "status": 200,
+      "bajty": 127123,
+      "sha256": "750e68965866bdbcdf4917a385f1909153dc8b0f3a99808594d5140146bfe683",
+      "sha256Main": "750e68965866bdbcdf4917a385f1909153dc8b0f3a99808594d5140146bfe683",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/css/nawigacja.css",
+      "status": 200,
+      "bajty": 5393,
+      "sha256": "6ac6db77370580e6063e7bd7759a0523562bd882aa3bdd0d58492234b3e55544",
+      "sha256Main": "6ac6db77370580e6063e7bd7759a0523562bd882aa3bdd0d58492234b3e55544",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/js/home.js",
+      "status": 200,
+      "bajty": 10894,
+      "sha256": "2f91655e873fa65faafb3b27351b4e6fc268835c4c726e126b01c26b5915e733",
+      "sha256Main": "2f91655e873fa65faafb3b27351b4e6fc268835c4c726e126b01c26b5915e733",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/js/cennik.js",
+      "status": 200,
+      "bajty": 34631,
+      "sha256": "0beeabe6b5788752b2045b69ea819aa43a537da6722c015c07f36f50cfc80fe4",
+      "sha256Main": "0beeabe6b5788752b2045b69ea819aa43a537da6722c015c07f36f50cfc80fe4",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/js/hero-rack.js",
+      "status": 200,
+      "bajty": 5500,
+      "sha256": "f6dec6ea9038be963e3393d01f41c1362ecd148c01ddaed489fefcfdeaebf909",
+      "sha256Main": "f6dec6ea9038be963e3393d01f41c1362ecd148c01ddaed489fefcfdeaebf909",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/js/dostepnosc.js",
+      "status": 200,
+      "bajty": 16850,
+      "sha256": "8be15a31b594b5103556a0a2a6ca4497f643d4d876321c081572862226d1dee6",
+      "sha256Main": "8be15a31b594b5103556a0a2a6ca4497f643d4d876321c081572862226d1dee6",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    },
+    {
+      "plik": "assets/js/nawigacja.js",
+      "status": 200,
+      "bajty": 2572,
+      "sha256": "131d5308aaa4f427291b956a8e48b4d746a4dbfc5d832ada69d3ea0bc43134af",
+      "sha256Main": "131d5308aaa4f427291b956a8e48b4d746a4dbfc5d832ada69d3ea0bc43134af",
+      "zgodnyPoNormalizacjiLF": true,
+      "cache": "max-age=600"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "headRefOid": "7d8b447a3cd7c79aceb5604bb254918b92623dec",
+    "isDraft": false,
+    "mergeable": "MERGEABLE",
+    "number": 3,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-02T18:46:49Z",
+        "conclusion": "FAILURE",
+        "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41501970285/job/125471464872",
+        "name": "static-checks",
+        "startedAt": "2026-11-02T18:35:11Z",
+        "status": "COMPLETED",
+        "workflowName": "MAD-NET / jakość"
+      }
+    ]
+  },
+  {
+    "headRefOid": "21aa43e859c38c7d3522846abea15af19079ec69",
+    "isDraft": false,
+    "mergeable": "MERGEABLE",
+    "number": 4,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-02T06:54:48Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41401950355/job/125135468575",
+        "name": "static-checks",
+        "startedAt": "2026-11-02T06:45:41Z",
+        "status": "COMPLETED",
+        "workflowName": "MAD-NET / jakość"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-02T06:55:09Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41401943958/job/125135449029",
+        "name": "static-checks",
+        "startedAt": "2026-11-02T06:45:47Z",
+        "status": "COMPLETED",
+        "workflowName": "MAD-NET / jakość"
+      }
+    ]
+  },
+  {
+    "headRefOid": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73",
+    "isDraft": false,
+    "mergeable": "MERGEABLE",
+    "number": 5,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-02T00:25:47Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41366150059/job/125026618882",
+        "name": "static-checks",
+        "startedAt": "2026-11-02T00:15:21Z",
+        "status": "COMPLETED",
+        "workflowName": "MAD-NET / jakość"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-02T00:25:48Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41366144180/job/125026602211",
+        "name": "static-checks",
+        "startedAt": "2026-11-02T00:15:18Z",
+        "status": "COMPLETED",
+        "workflowName": "MAD-NET / jakość"
+      }
+    ]
+  },
+  {
+    "headRefOid": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "isDraft": true,
+    "mergeable": "MERGEABLE",
+    "number": 6,
+    "state": "OPEN",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-02T19:37:02Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41509211089/job/125496362140",
+        "name": "static-checks",
+        "startedAt": "2026-11-02T19:21:43Z",
+        "status": "COMPLETED",
+        "workflowName": "MAD-NET / jakość"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-11-02T19:38:11Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41509200335/job/125496325860",
+        "name": "static-checks",
+        "startedAt": "2026-11-02T19:21:39Z",
+        "status": "COMPLETED",
+        "workflowName": "MAD-NET / jakość"
+      }
+    ]
+  }
+]

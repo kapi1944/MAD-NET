@@ -1,0 +1,25 @@
+
+> mad-net@0.1.0 test:nawigacja
+> npm run build && node tests/nawigacja.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS linki: 238 lokalnych odnośników, 9 celów HTTP 200 i istniejące fragmenty
+PASS menu index.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS stare URL: 12 przekierowań pod / i /MAD-NET/, hashchange; inne hashe bez przekierowania
+PASS dotyk: tap, scroll bez otwierania, niskie menu HOME/cennika/katalogu, działający link usługi

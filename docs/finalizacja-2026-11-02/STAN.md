@@ -1,0 +1,14 @@
+# Finalizacja MAD-NET — 2026-11-02
+
+Checkpoint kodu: b86891e083a0538776158ea2373df5de57af8ed9. Bieżąca głowa dokumentacji i jej runy są w [PR #6 / checks](https://github.com/kapi1944/MAD-NET/pull/6/checks). Zielony CI nie zamyka C bez dowodu przyczyny.
+
+| ID | STATUS | CHECKPOINT SHA | WYNIK | DOWÓD | NASTĘPNY KROK |
+|---|---|---|---|---|---|
+| A | PASS | 1828bb8697769ef019de7a932f1dc3dd2b4e791b | Aktualny audyt Git/PR/CI/Pages; wszystkie worktree zachowane. | audyt.json | B |
+| B | PASS | 1828bb8697769ef019de7a932f1dc3dd2b4e791b | Pełna macierz lokalnych/remote; #4/#5 w historii i plikach #6; 4x3 poza #6. | MACIERZ_GALEZI.md, audyt.json | C |
+| C | BLOCKED | b86891e083a0538776158ea2373df5de57af8ed9 | Nie odtworzono historycznego ERR_CONNECTION_CLOSED: Windows 3 przed + 3 po, Linux 6 prób diagnostycznych + 2 pełne PASS. Stary log nie zawiera URL/resourceType/fazy; brak dowodu przyczyny. | oferta-windows.json; oferta-linux-pr.json; oferta-linux-push.json; historyczny run 41408400330 | Codex: przy kolejnym FAIL pobrać oferta-network.json/oddzielną próbę z artefaktu; ustalić rzeczywisty URL/resourceType/fazę i dopiero wtedy minimalny fix + pełna regresja. Nie maskować; bez dowodu C nie jest PASS. |
+| D | PASS | b86891e083a0538776158ea2373df5de57af8ed9 | 11/11 poleceń lokalnych kod 0; 28 JS/MJS kod 0; ujemne CSS/JS/HTML poprawnie kod 1; brak zmiany produktu. | lokalne-wyniki.json, kontrola-statyczna.json, ujemne.json, home-diagnoza.json | Codex: kontrola Linux i dalsze działania zależnie od C/E |
+| E | BLOCKED | b86891e083a0538776158ea2373df5de57af8ed9 | CI checkpointu b86891e: push 41509200335 i PR 41509211089 SUCCESS; wszystkie kroki SUCCESS, artefakty obecne. Końcowe GO blokuje niezamknięte C. | ci-checkpoint.json; bieżące checks PR #6; oferta-linux-*.json | Codex: po ostatnim push potwierdzić aktualny HEAD i oba runy; GO dopiero po C. Bez merge na podstawie samego zielonego powtórzenia. |
+| F | BLOCKED | b86891e083a0538776158ea2373df5de57af8ed9 | BLOCKED C/GO oraz brak jawnej zgody właściciela na publiczne Pages z main:/. Merge automatycznie publikuje. | audyt.json pages | Właściciel: jawna decyzja o publicznym wdrożeniu konkretnej wersji PR #6. Codex: po C/E-GO i zgodzie merge commit; ff main; ponowna kontrola i zamknięcie #4/#5, #3 pozostaje. |
+| G | BLOCKED | b86891e083a0538776158ea2373df5de57af8ed9 | Nie wykonano merge ani nowego deploy. | audyt.json pages | Codex: po F zweryfikować build, assety SHA-256 i regresję produkcyjną |
+| H | PASS | b86891e083a0538776158ea2373df5de57af8ed9 | Raport i dowody A–G zapisane, każde niewykonane zadanie ma blokadę, właściciela i punkt wznowienia. Nie ogłoszono finalnego merge ani publikacji. | ../FINAL_MERGE_2026-11-02.md; STAN.md; WYNIKI.json | Codex: utrzymać raport przy wznowieniu C/F/G; po commit/push odczytać oba CI dokładnej końcowej głowy. |

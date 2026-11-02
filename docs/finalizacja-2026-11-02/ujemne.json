@@ -1,0 +1,191 @@
+[
+  {
+    "oczekiwany": "niezerowy",
+    "wariant": "css",
+    "exit": 1,
+    "start": "2026-11-02T20:20:31.3825350+01:00",
+    "log": "test-results/finalizacja/ujemne-css.log",
+    "koniec": "2026-11-02T20:20:33.3492684+01:00",
+    "zdarzenia": [
+      {
+        "czas": "2026-11-02T19:20:32.363Z",
+        "typ": "requestfailed",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "uklad-klawiatura",
+        "id": 4,
+        "url": "http://127.0.0.1:58425/assets/css/oferta.css",
+        "metoda": "GET",
+        "resourceType": "stylesheet",
+        "kontekst": "desktop",
+        "urlStrony": "http://127.0.0.1:58425/internet.html",
+        "poprzedniUrl": "about:blank",
+        "viewport": {
+          "width": 320,
+          "height": 1000
+        },
+        "zamknieta": false,
+        "fazaStartu": {
+          "plik": "internet",
+          "szerokosc": 320,
+          "href": null,
+          "scenariusz": "uklad-klawiatura"
+        },
+        "blad": "net::ERR_CONNECTION_CLOSED"
+      },
+      {
+        "czas": "2026-11-02T19:20:32.364Z",
+        "typ": "console-error",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "uklad-klawiatura",
+        "kontekst": "desktop",
+        "urlStrony": "http://127.0.0.1:58425/internet.html",
+        "poprzedniUrl": "about:blank",
+        "viewport": {
+          "width": 320,
+          "height": 1000
+        },
+        "zamknieta": false,
+        "tekst": "Failed to load resource: net::ERR_CONNECTION_CLOSED",
+        "location": {
+          "url": "http://127.0.0.1:58425/assets/css/oferta.css",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "czas": "2026-11-02T19:20:33.256Z",
+        "typ": "serwer-exit",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "sprzatanie",
+        "kod": null,
+        "sygnal": "SIGTERM"
+      }
+    ]
+  },
+  {
+    "oczekiwany": "niezerowy",
+    "wariant": "js",
+    "exit": 1,
+    "start": "2026-11-02T20:20:33.3820394+01:00",
+    "log": "test-results/finalizacja/ujemne-js.log",
+    "koniec": "2026-11-02T20:20:35.3508328+01:00",
+    "zdarzenia": [
+      {
+        "czas": "2026-11-02T19:20:34.291Z",
+        "typ": "requestfailed",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "uklad-klawiatura",
+        "id": 6,
+        "url": "http://127.0.0.1:55268/assets/js/nawigacja.js",
+        "metoda": "GET",
+        "resourceType": "script",
+        "kontekst": "desktop",
+        "urlStrony": "http://127.0.0.1:55268/internet.html",
+        "poprzedniUrl": "about:blank",
+        "viewport": {
+          "width": 320,
+          "height": 1000
+        },
+        "zamknieta": false,
+        "fazaStartu": {
+          "plik": "internet",
+          "szerokosc": 320,
+          "href": null,
+          "scenariusz": "uklad-klawiatura"
+        },
+        "blad": "net::ERR_CONNECTION_CLOSED"
+      },
+      {
+        "czas": "2026-11-02T19:20:34.291Z",
+        "typ": "console-error",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "uklad-klawiatura",
+        "kontekst": "desktop",
+        "urlStrony": "http://127.0.0.1:55268/internet.html",
+        "poprzedniUrl": "about:blank",
+        "viewport": {
+          "width": 320,
+          "height": 1000
+        },
+        "zamknieta": false,
+        "tekst": "Failed to load resource: net::ERR_CONNECTION_CLOSED",
+        "location": {
+          "url": "http://127.0.0.1:55268/assets/js/nawigacja.js",
+          "line": 0,
+          "column": 0,
+          "lineNumber": 0,
+          "columnNumber": 0
+        }
+      },
+      {
+        "czas": "2026-11-02T19:20:35.290Z",
+        "typ": "serwer-exit",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "sprzatanie",
+        "kod": null,
+        "sygnal": "SIGTERM"
+      }
+    ]
+  },
+  {
+    "oczekiwany": "niezerowy",
+    "wariant": "html",
+    "exit": 1,
+    "start": "2026-11-02T20:20:35.3553689+01:00",
+    "log": "test-results/finalizacja/ujemne-html.log",
+    "koniec": "2026-11-02T20:20:36.5264050+01:00",
+    "zdarzenia": [
+      {
+        "czas": "2026-11-02T19:20:36.172Z",
+        "typ": "requestfailed",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "uklad-klawiatura",
+        "id": 1,
+        "url": "http://127.0.0.1:55687/internet.html",
+        "metoda": "GET",
+        "resourceType": "document",
+        "kontekst": "desktop",
+        "urlStrony": "about:blank",
+        "poprzedniUrl": null,
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "zamknieta": false,
+        "fazaStartu": {
+          "plik": "internet",
+          "szerokosc": 320,
+          "href": null,
+          "scenariusz": "uklad-klawiatura"
+        },
+        "blad": "net::ERR_CONNECTION_CLOSED"
+      },
+      {
+        "czas": "2026-11-02T19:20:36.467Z",
+        "typ": "serwer-exit",
+        "plik": "internet",
+        "szerokosc": 320,
+        "href": null,
+        "scenariusz": "sprzatanie",
+        "kod": null,
+        "sygnal": "SIGTERM"
+      }
+    ]
+  }
+]

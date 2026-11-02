@@ -1,0 +1,26 @@
+[
+  {
+    "koniec": "2026-11-02T20:23:20.4436321+01:00",
+    "exit": 0,
+    "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "proba": 1,
+    "start": "2026-11-02T20:22:42.5886436+01:00",
+    "log": "test-results/finalizacja/oferta-po-1.log"
+  },
+  {
+    "koniec": "2026-11-02T20:23:58.4172051+01:00",
+    "exit": 0,
+    "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "proba": 2,
+    "start": "2026-11-02T20:23:20.4692706+01:00",
+    "log": "test-results/finalizacja/oferta-po-2.log"
+  },
+  {
+    "koniec": "2026-11-02T20:24:35.4554317+01:00",
+    "exit": 0,
+    "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "proba": 3,
+    "start": "2026-11-02T20:23:58.4203129+01:00",
+    "log": "test-results/finalizacja/oferta-po-3.log"
+  }
+]

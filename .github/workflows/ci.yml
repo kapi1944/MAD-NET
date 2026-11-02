@@ -37,7 +37,7 @@ jobs:
             node tests/oferta.browser.mjs > "test-results/finalizacja/oferta-linux-${proba}.log" 2>&1 || kod=$?
             cp test-results/finalizacja/oferta-network.json "test-results/finalizacja/oferta-linux-${proba}.json"
             cat "test-results/finalizacja/oferta-linux-${proba}.log"
-            echo "Próba ${proba}: exit=${kod} HEAD=${GITHUB_SHA}"
+            echo "Próba ${proba}: exit=${kod} HEAD=$(git rev-parse HEAD)"
             if [ "$kod" -ne 0 ]; then wynik=1; fi
           done
           exit "$wynik"

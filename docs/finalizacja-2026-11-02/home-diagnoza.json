@@ -1,0 +1,566 @@
+{
+  "czas": "2026-11-02T18:30:29.084Z",
+  "stareProby": "test:browser i osobny test:home: oba 7 pikseli maks.1 przy 768; narożnik CTA; geometria identyczna",
+  "izolowanyDokument": [
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "baza-baza",
+      "proba": 1,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "baza-baza",
+      "proba": 2,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "baza-baza",
+      "proba": 3,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "v4-v4",
+      "proba": 1,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "v4-v4",
+      "proba": 2,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "v4-v4",
+      "proba": 3,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "baza-v4",
+      "proba": 1,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "baza-v4",
+      "proba": 2,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 2560,
+      "wariant": "baza-v4",
+      "proba": 3,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "baza-baza",
+      "proba": 1,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "baza-baza",
+      "proba": 2,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "baza-baza",
+      "proba": 3,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "v4-v4",
+      "proba": 1,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "v4-v4",
+      "proba": 2,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "v4-v4",
+      "proba": 3,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "baza-v4",
+      "proba": 1,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "baza-v4",
+      "proba": 2,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 2560,
+      "wariant": "baza-v4",
+      "proba": 3,
+      "wysokosc": 564,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    }
+  ],
+  "kolejnosc": [
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "osobne-strony",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-baza",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "v4-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 1,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 2,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    },
+    {
+      "tryb": "wspolna-strona",
+      "szerokosc": 768,
+      "wariant": "baza-v4",
+      "proba": 3,
+      "wysokosc": 889,
+      "roznePiksele": 0,
+      "maksymalnaRoznica": 0,
+      "obszar": null
+    }
+  ],
+  "izolacjaKontekstu": "FAIL: 7 pikseli przy 768; nie wdrożono",
+  "pary": "PASS: pełny HOME 11 szerokości, 77 porównań; 0 pikseli; bazowy dokument ze stałego Git SHA, rzeczywisty V4 z dist; te same maski, progi i style",
+  "ujemna": {
+    "strona": "kontrola ujemna koloru nagłówka",
+    "szerokosc": 1440,
+    "porownanie": {
+      "szerokosc": 1440,
+      "wysokosc": 564,
+      "roznePiksele": 3299,
+      "maksymalnaRoznica": 248,
+      "obszar": {
+        "lewo": 40,
+        "prawo": 208,
+        "gora": 100,
+        "dol": 130
+      }
+    }
+  }
+}
