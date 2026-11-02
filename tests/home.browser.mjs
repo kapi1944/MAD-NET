@@ -235,10 +235,12 @@ try {
     const kartyPo = await strona.locator('.siatka-uslug').screenshot({style:stylPorownania});
     wyniki.push({strona:'HERO V4', szerokosc, geometriaPo});
     await sprawdzHero(strona, szerokosc);
-    const sekcjePrzed=await zrzutyPozaHero(kontekst,oryginal,szerokosc,stylSekcji,selektorySekcji,'v3');
-    const sekcjePo=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,stylSekcji,selektorySekcji,'v4');
+    const sekcjePrzed=[];
     for (const [numer,selektor] of selektorySekcji.entries()) {
-      const obrazPo = sekcjePo[numer];
+      // Każda para zaczyna od świeżych dokumentów, bez wcześniejszych zrzutów innych sekcji.
+      const [obrazPrzed]=await zrzutyPozaHero(kontekst,oryginal,szerokosc,stylSekcji,[selektor],'v3');
+      const [obrazPo]=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,stylSekcji,[selektor],'v4');
+      sekcjePrzed.push(obrazPrzed);
       const roznica = await porownajPiksele(strona, sekcjePrzed[numer], obrazPo);
       wyniki.push({strona:selektor,szerokosc,porownanie:roznica});
       if(roznica.roznePiksele||roznica.rozneWymiary){
