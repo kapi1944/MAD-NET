@@ -56,6 +56,8 @@
 @container(min-width:1100px){
  .compare-tech-panel[data-tech="FIBER"] .compare-package-inner{flex-direction:row;gap:20px;min-height:105px}
 }
+/* Instrukcja podglądu nie może zmieniać wysokości strony i anulować przytrzymania. */
+@media(max-width:560px){.tech-FIBER .device-guide{min-height:2.6em}}
 @media(max-width:760px){
  .compare-head-port--FIBER{width:58px;min-width:58px;height:100px;padding:0 1px}
  .compare-tech-panel[data-tech="FIBER"] .plan-head{padding-top:28px}

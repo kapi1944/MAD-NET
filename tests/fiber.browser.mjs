@@ -101,6 +101,15 @@ try{
  const strona=await przegladarka.newPage({viewport:{width:1440,height:1100}});sledz(strona);
  for(const szerokosc of [320,360,390,430,768,1024,1280,1440,1920]){
   await strona.setViewportSize({width:szerokosc,height:1100});await strona.goto(adres);
+  if(szerokosc<=430){
+   const instrukcja=await strona.evaluate(()=>{
+    const element=document.querySelector('#device-guide'),czcionka=element.style.fontFamily;
+    element.style.fontFamily='monospace';setHover(null);const przed=element.getBoundingClientRect().height;
+    setHover('FIBER-50M','table');const po=element.getBoundingClientRect().height;
+    setHover(null);element.style.fontFamily=czcionka;return {przed,po};
+   });
+   assert.equal(instrukcja.po,instrukcja.przed,'Podgląd nie zmienia wysokości instrukcji także przy czcionce zastępczej');
+  }
   assert.equal(await strona.locator('.sc-simplex').count(),9);
   assert.equal(await strona.locator('.adapter-szafy-fiber').count(),3);
   assert.equal(await strona.locator('.sc-pokrywa').first().evaluate(element=>new DOMMatrixReadOnly(getComputedStyle(element).transform).m22),1);
@@ -211,6 +220,7 @@ try{
   window.sladDotykuFiber=[];
   for(const nazwa of ['pointerdown','pointermove','pointerup','pointercancel','scroll','contextmenu','focusin','focusout'])document.addEventListener(nazwa,zdarzenie=>window.sladDotykuFiber.push({nazwa,czas:performance.now(),typ:zdarzenie.pointerType,cel:zdarzenie.target?.closest?.('[data-gniazdo-pakiet]')?.dataset.gniazdoPakiet,y:scrollY}),{capture:true,passive:true});
  });
+ const przewinieciePrzedPrzytrzymaniem=await dotyk.evaluate(()=>scrollY);
  await sesja.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[punkt]});
  try{await dotyk.waitForFunction(()=>document.querySelectorAll('.plan.is-hovered').length===1,null,{timeout:3000});}
  catch(blad){
@@ -220,6 +230,7 @@ try{
   await dotyk.screenshot({path:katalog+'/dotyk-blad.png'});throw blad;
  }
  assert.equal(await dotyk.locator('.plan.is-hovered').count(),1);
+ assert.equal(await dotyk.evaluate(()=>scrollY),przewinieciePrzedPrzytrzymaniem,'Podgląd nie uruchamia kotwiczenia przewijania');
  assert.equal(await dotyk.locator('#connection-zone').getAttribute('data-fiber-state'),'IDLE');
  assert.equal(await dotyk.locator('.sc-pokrywa').first().evaluate(element=>new DOMMatrixReadOnly(getComputedStyle(element).transform).m22),1);
  await sesja.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await dotyk.waitForTimeout(600);
