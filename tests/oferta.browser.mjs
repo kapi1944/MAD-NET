@@ -1,3 +1,4 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Etap 04: rzeczywiste CTA, sześć szerokości, dotyk, klawiatura i ruch. */
 import assert from 'node:assert/strict';
 import {mkdir, writeFile} from 'node:fs/promises';
@@ -6,7 +7,7 @@ import {chromium} from 'playwright-core';
 
 const katalog='test-results/integracja-home-v3/04';
 await mkdir(katalog,{recursive:true});
-const port=process.env.MADNET_PORT_OFERTY||'4187';
+const port=await wybierzPort('MADNET_PORT_OFERTY');
 const adres=`http://127.0.0.1:${port}`;
 const strony=['internet','monitoring-alarmy','sieci-it','strony-www-hosting','instalacje-tv-sat'];
 const wyniki=[],bledy=[],konsola=[],zasoby=[],cele=[];
@@ -18,13 +19,8 @@ const obserwuj=strona=>{
   strona.on('response',odpowiedz=>{if(odpowiedz.url().startsWith(adres)&&odpowiedz.status()>=400)zasoby.push({url:odpowiedz.url(),status:odpowiedz.status()})});
 };
 try{
-  await new Promise((gotowe,odrzuc)=>{
-    const zegar=setTimeout(()=>odrzuc(new Error('Brak podglądu oferty')),8000);
-    serwer.stdout.on('data',dane=>{if(String(dane).includes('MAD-NET PREVIEW')){clearTimeout(zegar);gotowe()}});
-    serwer.stderr.on('data',dane=>{clearTimeout(zegar);odrzuc(new Error(String(dane)))});
-    serwer.once('error',odrzuc);
-  });
-  przegladarka=await chromium.launch({headless:true,...(process.env.MADNET_PRZEGLADARKA?{executablePath:process.env.MADNET_PRZEGLADARKA}:process.platform==='win32'?{channel:'msedge'}:{})});
+  await poczekajNaSerwer(serwer);
+  przegladarka=await uruchomPrzegladarke(chromium);
   const kontekst=await przegladarka.newContext({deviceScaleFactor:1,reducedMotion:'reduce'});
   await kontekst.route(`${adres}/MAD-NET/**`,async trasa=>trasa.fulfill({response:await trasa.fetch({url:trasa.request().url().replace('/MAD-NET/','/')})}));
   const strona=await kontekst.newPage();obserwuj(strona);

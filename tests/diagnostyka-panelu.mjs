@@ -1,19 +1,18 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {chromium} from 'playwright-core';
 import {spawn} from 'node:child_process';
 const pomiary=[];await mkdir('test-results/panel',{recursive:true});
-const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:'4197'}});
-await new Promise((zakoncz,odrzuc)=>{
- const zegar=setTimeout(()=>odrzuc(new Error('Serwer panelu nie wystartował')),8000);
- serwer.stdout.on('data',dane=>{if(String(dane).includes('MAD-NET PREVIEW')){clearTimeout(zegar);zakoncz();}});
- serwer.once('error',odrzuc);serwer.once('exit',kod=>{clearTimeout(zegar);odrzuc(new Error('Serwer panelu: '+kod));});
-});
-const przegladarka=await chromium.launch(process.env.MADNET_PRZEGLADARKA?{executablePath:process.env.MADNET_PRZEGLADARKA}:process.platform==='win32'?{channel:'msedge'}:{});
+const port=await wybierzPort('MADNET_PORT_PANELU');
+const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port}});
+let przegladarka;
 try {
+await poczekajNaSerwer(serwer);
+przegladarka=await uruchomPrzegladarke(chromium);
 const strona=await przegladarka.newPage();
 for(const szerokosc of [320,360,375,380,390,400,414,430,480,560,768,800,1024,1230,1231,1440,1920]){
-await strona.setViewportSize({width:szerokosc,height:1250});await strona.goto('http://127.0.0.1:4197/cennik.html');await strona.evaluate(()=>document.fonts.ready);
+await strona.setViewportSize({width:szerokosc,height:1250});await strona.goto(`http://127.0.0.1:${port}/cennik.html`);await strona.evaluate(()=>document.fonts.ready);
 for(const technologia of ['LAN','FIBER','AIR']){
 await strona.locator(`[data-rack-tech="${technologia}"]`).hover();await strona.locator(`[data-rack-tech="${technologia}"]`).click();await strona.waitForFunction(t=>document.querySelector('#hero-tech-panel').dataset.tech===t,technologia);
 const pomiar=await strona.evaluate(()=>Object.fromEntries(['.hero-tech-panel','.hero-tech-panel-content','#hero-tech-description','.hero-tech-facts','.hero-tech-link'].map(s=>{const e=document.querySelector(s),r=e.getBoundingClientRect();return[s,{top:r.top,bottom:r.bottom,height:r.height,rows:getComputedStyle(e).gridTemplateRows}]})));
@@ -29,4 +28,4 @@ await strona.waitForTimeout(400);
 await strona.screenshot({path:`test-results/panel/${szerokosc}-${technologia}.png`});
 console.log(`PASS panel ${szerokosc} ${technologia}`);
 }}
-}finally{await writeFile('test-results/panel/pomiary.json',JSON.stringify(pomiary,null,2));await przegladarka.close();serwer.kill();}
+}finally{await writeFile('test-results/panel/pomiary.json',JSON.stringify(pomiary,null,2));await przegladarka?.close();serwer.kill();}

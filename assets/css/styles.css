@@ -154,8 +154,8 @@ body.tech-AIR{--active-tech:#2d9cff;--active-rgb:45,156,255;--shell-a:#438dca;--
 .jack-rj{display:block;position:relative;width:44px;height:40px;border:3px solid #c1c9c9;border-bottom-color:#68757e;border-radius:3px;background:linear-gradient(140deg,#b7c4c8,#65727e 13%,#090e15 20%,#04070a 90%,#6d7b81);box-shadow:inset 0 4px 8px #000b,0 1px 3px #000b}
 .jack-rj:before{content:'';position:absolute;inset:4px 4px 3px;background:linear-gradient(#030507,#07111a);border:1px solid #283b49;clip-path:polygon(0 0,100% 0,100% 76%,80% 76%,80% 100%,20% 100%,20% 76%,0 76%)}
 .jack-rj:after{content:'';position:absolute;left:9px;right:9px;top:4px;height:6px;background:repeating-linear-gradient(90deg,#d6b475 0 2px,transparent 2px 4px)}
-/* SC/UPC simplex jest jednym modułem logicznym, fizycznie zawiera dwie tulejki. */
-/* SC/UPC Simplex: JEDEN kwadratowy adapter, JEDNO gniazdo i JEDNA zaślepka. */
+/* SC/APC simplex jest jednym modułem logicznym, fizycznie zawiera jedną tulejkę. */
+/* SC/APC Simplex: JEDEN kwadratowy adapter, JEDNO gniazdo i JEDNA zaślepka. */
 .sc-simplex{position:relative;width:45px;height:41px;display:block;border:2px solid #51bdff;border-radius:4px;background:linear-gradient(145deg,#92d9ff 0%,#258dd6 12%,#066db8 52%,#07365f 100%);box-shadow:inset 0 1px #c4f0ffa8,inset 0 -2px 5px #042d57,0 1px 5px #000b}
 .sc-simplex:before{content:"";position:absolute;inset:2px;border:1px solid #b9e5ff71;border-radius:2px;pointer-events:none}
 .sc-bays{position:absolute;inset:5px 7px 5px;display:grid;grid-template-columns:1fr}
@@ -164,7 +164,7 @@ body.tech-AIR{--active-tech:#2d9cff;--active-rgb:45,156,255;--shell-a:#438dca;--
 .sc-dustcaps{position:absolute;inset:5px 7px 5px;display:grid;grid-template-columns:1fr;pointer-events:none}
 .sc-dustcap{position:relative;background:linear-gradient(115deg,#4bb7fd,#0c77c5 54%,#003a76);border:1px solid #b8e9ff;border-radius:2px;box-shadow:0 2px 5px #0009,inset 0 1px #c8efffa6}
 .sc-dustcap:after{content:"";display:block;position:absolute;left:34%;right:34%;top:26%;bottom:26%;border:2px solid #0d4c90;border-radius:1px;background:linear-gradient(#1a87d0,#0a519b)}
-/* FIBER: zdejmij jedną niebieską zaślepkę, dopiero potem wsuwaj pojedynczy SC/UPC. */
+/* FIBER: zdejmij jedną zieloną zaślepkę, dopiero potem wsuwaj pojedynczy SC/APC. */
 .speed-port.is-selected .sc-dustcap{opacity:0;transform:translate(14px,31px) rotate(18deg) scale(.7)}
 .speed-port.is-connecting .sc-dustcap{animation:remove-cap-simplex .58s ease-in both}
 @keyframes remove-cap-simplex{0%{opacity:1;transform:none}24%{opacity:1;transform:translateY(-7px)}100%{opacity:0;transform:translate(15px,31px) rotate(19deg) scale(.7)}}
@@ -219,7 +219,7 @@ body.tech-AIR{--active-tech:#2d9cff;--active-rgb:45,156,255;--shell-a:#438dca;--
 .mini-interface.is-live,.plan.is-selected .mini-interface{border-color:var(--active-tech);box-shadow:inset 0 0 0 1px rgba(var(--active-rgb),.65),0 0 12px rgba(var(--active-rgb),.3)}
 .mini-plug{position:absolute;z-index:4;top:-17px;left:50%;transform:translate(-50%,-23px) scale(.6);opacity:0;border:2px solid #b0d9f2;border-top:4px solid #e0f7ff;border-radius:4px;width:22px;height:24px;background:linear-gradient(90deg,#18558c,#76bff4,#24669a);box-shadow:0 1px 7px #0009;pointer-events:none}
 .mini-plug:after{content:'';display:block;position:absolute;left:5px;top:-9px;width:7px;height:8px;background:#8bd0fa;border:1px solid #266fa7;border-radius:2px}
-/* Pojedyncza końcówka patchcordu SC/UPC przy karcie cenowej. */
+/* Pojedyncza końcówka patchcordu SC/APC przy karcie cenowej. */
 .mini-interface--FIBER .mini-plug{width:24px;height:26px;top:-10px;border:2px solid #4cb9f3;border-top:4px solid #a0e4ff;background:linear-gradient(90deg,#07579d,#4cb8ee 42%,#116db4 70%,#024d8e);box-shadow:inset 0 1px #ceefff,0 2px 6px #0009}
 .mini-interface--FIBER .mini-plug:after{display:none}
 .plan.is-selected .mini-plug{opacity:1;transform:translate(-50%,0) scale(.9)}
@@ -231,7 +231,7 @@ body.tech-AIR{--active-tech:#2d9cff;--active-rgb:45,156,255;--shell-a:#438dca;--
 @keyframes radio-halo{0%,100%{box-shadow:0 0 5px #2d9cff4d}50%{box-shadow:0 0 19px #2d9cffaa}}
 /* Selected port connection animation: optical caps -> simplex plug, RJ -> plug. */
 .speed-port .port-plug{position:absolute;z-index:4;top:24px;left:50%;width:20px;height:25px;border-radius:2px;border:2px solid #9ed6ff;background:linear-gradient(90deg,#175b9a,#85caf6,#236ca4);box-shadow:0 2px 7px #0008;opacity:0;pointer-events:none;transform:translate(-50%,33px)}
-/* Jedno złącze SC/UPC: poprawne gabaryty względem pojedynczego gniazda. */
+/* Jedno złącze SC/APC: poprawne gabaryty względem pojedynczego gniazda. */
 .speed-port--FIBER .port-plug{width:25px;height:27px;top:27px;border:2px solid #5dc5ff;border-top:4px solid #d6f4ff;border-radius:3px 3px 2px 2px;background:linear-gradient(90deg,#07538d,#67c8f4 36%,#1578c5 65%,#00437d);box-shadow:inset 0 1px 0 #ffffff6b,0 1px 4px #0009}
 .speed-port--FIBER .port-plug:before{content:"";position:absolute;top:-10px;left:5px;width:10px;height:10px;background:linear-gradient(#f3f5f2,#cfd8da);border-radius:2px 2px 0 0;border:1px solid #8fbbc6}
 .speed-port--FIBER .port-plug:after{content:"";position:absolute;bottom:2px;left:5px;right:5px;height:8px;background:#1a81c9;border:1px solid #76d2ff;border-radius:2px}
@@ -290,7 +290,7 @@ body.tech-AIR .link-hover{stroke:#6dd2ff;stroke-dasharray:1 13;stroke-width:3.5;
 .mot-off .air-virtual svg path,.mot-off .wifi-large path,.mot-off .link-active.is-radio,.mot-off .link-hover{animation:none!important;opacity:.73}
 @media(prefers-reduced-motion:reduce){.air-virtual svg path,.wifi-large path,body.tech-AIR .link-active.is-radio,body.tech-AIR .link-hover,.speed-port.is-connecting .rj-plug,.plan.is-connecting .rj-plug{animation:none!important;will-change:auto}.speed-port.is-selected .rj-plug,.plan.is-selected .rj-plug{transform:translate(-50%,0)}}
 
-/* MAD-NET V10 — kolejne poprawki widoczności jednego adaptera SC/UPC na małych ekranach. */
+/* MAD-NET V10 — kolejne poprawki widoczności jednego adaptera SC/APC na małych ekranach. */
 .speed-port--FIBER .sc-simplex{flex-shrink:0}
 .speed-port--FIBER .port-plug{z-index:5;pointer-events:none}
 .mini-interface--FIBER .sc-simplex{transform:scale(.78);transform-origin:center}
@@ -377,7 +377,7 @@ body.tech-AIR .link-casing{display:none}
 .speed-port--LAN.is-selected .rj-mouth,.plan.is-selected[data-technology="LAN"] .rj-mouth{
  background:linear-gradient(#1d6584,#164b73);border-color:#4c94ab;
 }
-/* FIBER — na obu końcach jedna zaślepka SC/UPC Simplex. */
+/* FIBER — na obu końcach jedna zaślepka SC/APC Simplex. */
 .plan[data-technology="FIBER"] .sc-dustcap{opacity:1;transform:none;transition:opacity .2s}
 .plan.is-selected[data-technology="FIBER"] .sc-dustcap{opacity:0;transform:translate(11px,-23px) rotate(-13deg) scale(.75)}
 .plan.is-connecting[data-technology="FIBER"] .sc-dustcap{animation:cap-card-out .57s ease-in both}

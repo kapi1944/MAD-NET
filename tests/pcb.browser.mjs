@@ -1,3 +1,4 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Kontrola rzeczywistej geometrii, ruchu i dostępności dekoracyjnego PCB. */
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
@@ -10,7 +11,7 @@ const silnik = { chromium, firefox, webkit }[nazwaSilnika];
 assert.ok(silnik, 'Nieznany silnik przeglądarki');
 const katalog = `test-results/pcb-4-1/${przed ? 'przed' : nazwaSilnika === 'chromium' ? 'po' : `po-${nazwaSilnika}`}`;
 await mkdir(katalog, { recursive: true });
-const port = process.env.MADNET_PORT_PCB || '4183';
+const port=await wybierzPort('MADNET_PORT_PCB');
 const adres = `http://127.0.0.1:${port}/cennik.html`;
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   env: { ...process.env, PORT: port }, stdio: ['ignore', 'pipe', 'pipe'],
@@ -20,17 +21,8 @@ let wydajnosc;
 let przegladarka;
 
 try {
-  await new Promise((zakoncz, odrzuc) => {
-    const zegar = setTimeout(() => odrzuc(new Error('Brak serwera PCB')), 8000);
-    serwer.stdout.on('data', dane => {
-      if (String(dane).includes('MAD-NET PREVIEW')) { clearTimeout(zegar); zakoncz(); }
-    });
-    serwer.once('error', odrzuc);
-  });
-  przegladarka = await silnik.launch({ headless: true,
-    ...(process.env.MADNET_PRZEGLADARKA ? { executablePath: process.env.MADNET_PRZEGLADARKA }
-      : process.platform === 'win32' && nazwaSilnika === 'chromium' ? { channel: 'msedge' } : {}),
-  });
+  await poczekajNaSerwer(serwer);
+  przegladarka = await uruchomPrzegladarke(silnik);
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1100 } });
   if (przed) for (const plik of ['index.html', 'assets/css/styles.css']) {
     const tresc = execFileSync('git', ['show', `a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:${plik}`], { encoding: 'utf8' });
