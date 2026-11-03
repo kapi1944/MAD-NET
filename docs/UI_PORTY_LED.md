@@ -1,6 +1,7 @@
 # Porty i LINK/ACT — modernizacja czytelności
 
-2026-11-02. Baza: `feat/integracja-hero-v4-fiber`, commit `18fd7b6`.
+Implementacja i kadry: 2026-11-02. Odbiór końcowy: 2026-11-03.
+Baza: `feat/integracja-hero-v4-fiber`, commit `18fd7b6`.
 Gałąź robocza: `codex/porty-led-czytelnosc`.
 
 ## Rozmiary
@@ -68,7 +69,45 @@ wskazuje katalog `dist` niezależnego buildu bazowego.
 
 ## Weryfikacja
 
-Trwa końcowa regresja przeglądarkowa i PCB. Wyniki zostaną uzupełnione przed commitem.
+Przy wznowieniu prac implementacja była już zapisana w commicie
+`76221b1fb469616faa1385c25233a74f53e01318`. Zachowano ten commit;
+końcowe uzupełnienie obejmuje wyniki i galerię. Nie rozpoczęto implementacji ponownie.
+
+| Kontrola | Wynik |
+| --- | --- |
+| `npm run verify`, poprzedni końcowy build | PASS, 18/18 testów i build dziewięciu stron |
+| `tests/porty.browser.mjs`, po usunięciu mobilnego skalowania | PASS, 16 pomiarów na ośmiu wymaganych szerokościach; 0 skalowanych portów, kolizji i przepełnień |
+| `npm run test:fiber`, ponownie na końcowym CSS | PASS, dziewięć szerokości 320–1920 px, sekwencje podłączania/odłączania, punkty styku, szybkie przełączanie, klawiatura, dotyk i reduced-motion |
+| `npm run test:led`, ponownie na końcowym CSS | PASS, sześć scenariuszy LAN/FIBER przy 320/390/1440 px; cztery reprezentacje, ciągłość ACT, synchronizacja LINK, anulowanie i reduced-motion |
+| `node tests/v20.browser.mjs`, ponownie po usunięciu skalowania | PASS, 286 tras na 22 szerokościach 320–1920 px, zero kolizji; ceny, klawiatura, dotyk, scroll, reduced-motion i 13 kanałów RACK |
+| `npm run test:pcb` | PASS, dziewięć szerokości 360–2560 px; geometria, ruch diod, przełącznik animacji, reduced-motion i kliknięcie |
+| Galeria PRZED/PO | PASS, 64 poprawnie załadowane obrazy; brak przepełnienia przy 390 i 1440 px |
+
+W 27 końcowych pomiarach FIBER największy błąd końca przewodu wyniósł
+0,0654 px, początku 0,0524 px, a osi konektora mniej niż 0,00001 px.
+Nie odnotowano kolizji ani przepełnień. We wszystkich sześciu scenariuszach
+LED animacje ACT zachowały tożsamość i okres po podłączeniu.
+Końcowe wyniki FIBER, LED, V20 i PCB nie zawierają błędów JavaScript;
+V20 nie odnotował również błędów konsoli ani sieci.
+
+Odbiór kadrów PRZED/PO: porty i niepodłączony LINK są wyraźniej widoczne,
+aktywny LINK odróżnia się jasną zielenią, a przygaszone ACT pozostaje czytelne.
+Na telefonie SC/APC ma rzeczywisty rozmiar 45 × 38 px, bez dawnego pomniejszenia
+transformacją. Powiększone elementy mieszczą się w dotychczasowych obudowach;
+etykiety prędkości, ceny, kompozycja kart, tabel i szafy pozostały zachowane.
+
+W poprzednim pełnym przebiegu `test:browser` zaliczono HOME, FIBER, LED,
+diagnostykę panelu, 286 tras V20, 64 kombinacje tabel V21, nawigację i podstrony
+oferty. Dołączony test portów wykrył błąd swojego pomiaru SVG: obrys zawartości
+wycinka obejmował całą bitmapę zamiast przyciętego okna portu. Poprawiono pomiar
+na podstawie rzeczywistego okna SVG i macierzy DOM; końcowy test portów przeszedł.
+
+Po usunięciu historycznego mobilnego `scale()` powtórzono tylko kontrole
+zależne od zmienionej geometrii i brakujący test PCB. Nie powtarzano zaliczonych
+kontroli HOME, V21, nawigacji i oferty. Poprzedni `verify` oraz końcowy pomiar
+portów dotyczą niezmienionego kodu. Zmodyfikowane pliki sprzętu w ponownym
+buildzie są bajtowo zgodne ze źródłami.
+Szczegółowe logi uzupełnienia: `test-results/porty-led/dokonczenie/`.
 
 ## Ograniczenia
 
