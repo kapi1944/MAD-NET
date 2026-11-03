@@ -40,13 +40,13 @@ test('HOME: osobne zasoby, język polski, brak zależności od stylów cennika',
 
 test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline', () => {
   const manifest = JSON.parse(czytaj('docs/integracja-home-v3/dowody/manifest-cennika.json'));
-  // Kontrakt modernizacji portów i fazy przygaszonej ACT.
+  // Kontrakt portów, pionowych przewodów i lokalnej biblioteki mapy po konsolidacji.
   const skrotyEtapu05 = {
   "assets/css/hero-hybryda.css": "bfd2165094d6bb39ce53236f554731b0e1b4354ee6f1a40cf0324b089a7dcc1b",
   "assets/css/styles.css": "4f2abe561c719053450d2068f98ebb0c483c5ad6789f5056523e2029cd1c9830",
-  "assets/js/cennik.js": "d638c99979cb11126176ff995ef5ec5432d264c26b9cf918a80d44980a8775a0",
+  "assets/js/cennik.js": "c626c1a6c48f4fcb5ac9a2e8ad48e165512b2a34f4aea65e2078115dfb30e210",
   "assets/js/hero-rack.js": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
-  "assets/js/dostepnosc.js": "e473368ac64f83fc99b819ad8239ecbd83dee608174a2373c3cd075d151798cf"
+  "assets/js/dostepnosc.js": "f9d2d5de60530fe46aeafdcab1b1150c17384c1c3e9022bc601255d5620b5986"
 };
   for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/'))) {
     // Git może zmieniać końce linii tekstu między Windows a Linux.

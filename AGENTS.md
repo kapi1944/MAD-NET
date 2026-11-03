@@ -2,6 +2,8 @@
 
 Ten plik obowiązuje przy pracach Codexa w repo.
 
+Wszystkie kolejne zadania rozwojowe MAD-NET wykonywane są bezpośrednio na istniejącej gałęzi main. Agent nie tworzy nowych gałęzi ani pull requestów bez wyraźnej zgody właściciela. Przed zmianami sprawdza stan repozytorium i zachowuje niezapisane prace. Każdy etap kończy testami, commitem i synchronizacją origin/main, jeżeli testy zakończyły się powodzeniem.
+
 - To **oficjalny projekt strony firmy MAD-NET**, ale jeszcze NIE wersja do publikacji.
 - `docs/archiwum/V18_oryginal.html` jest zatwierdzonym punktem odniesienia — zachowuj kierunek HERO RACK 3D i jego interakcje.
 - Zaczynaj od `README.md`, `docs/PLAN_ROZWOJU.md`, `docs/DECYZJE.md` i `docs/ARCHITEKTURA.md`.

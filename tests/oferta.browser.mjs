@@ -56,6 +56,9 @@ try{
     catch(blad){zapis('route-fetch-failed',{...dane,blad:blad.message});throw blad;}
   });
   const strona=await kontekst.newPage();obserwuj(strona,'desktop');
+  await przejdz(strona,`${adres}/cennik.html`,{waitUntil:'networkidle'});
+  assert.equal(await strona.locator('link[href="./assets/vendor/leaflet/leaflet.css"]').count(),1,'Biblioteka mapy pochodzi z lokalnego wdrożenia');
+  assert.equal(await strona.locator('link[href*="unpkg.com"],link[href*="jsdelivr.net"]').count(),0,'Ładowanie cennika nie wymaga CDN');
   const tytuly=new Set(),opisy=new Set();
   for(const plik of strony){
     for(const szerokosc of [320,390,768,1024,1440,1920]){

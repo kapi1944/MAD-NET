@@ -179,7 +179,7 @@ function locate(id){
  // Wewnątrz KARTY: po wejściu jednym z dopuszczonych punktów schodzimy,
  // skręcamy pod złączem i wpinamy od dołu, nie przecinając opisu, ceny ani CTA.
  const labelTop=terminalLabel?terminalLabel.getBoundingClientRect().top-z.top:Infinity;
- const insideY=Math.max(endpoint.y+5,Math.min(endpoint.y+11,labelTop-4));
+ const insideY=technology==='FIBER'?endpoint.y+odsunieciePrzewoduFiber(cardSocket):Math.max(endpoint.y+5,Math.min(endpoint.y+11,labelTop-4));
  const firstRowTop=rows[0].top;
  const centralBottom=document.getElementById('central-area').getBoundingClientRect().bottom-z.top;
  // Górny korytarz znajduje się POMIĘDZY urządzeniem a pierwszym rzędem.
@@ -218,9 +218,14 @@ function locate(id){
  if(best&&technology==='FIBER'){
   const obudowa=centralRoot.querySelector('.device-shell').getBoundingClientRect();
   const bok=(origin.x<(obudowa.left+obudowa.right)/2-z.left?obudowa.left-12:obudowa.right+12)-z.left;
-  best.points.splice(1,1,{x:origin.x,y:origin.y+6},{x:bok,y:origin.y+6},{x:bok,y:topLane});
+  const wyjscie=origin.y+odsunieciePrzewoduFiber(deviceSocket);
+  best.points.splice(1,1,{x:origin.x,y:wyjscie},{x:bok,y:wyjscie},{x:bok,y:topLane});
  }
  return best?roundedCablePath(best.points,6):'';
+}
+// Promień gięcia wynika z szerokości fizycznego wtyku także podczas jego ruchu.
+function odsunieciePrzewoduFiber(gniazdo){
+ return gniazdo.querySelector('.sc-konektor').getBoundingClientRect().width;
 }
 function roundedCablePath(raw,radius){
  const pts=[];
@@ -770,7 +775,9 @@ function trasaDoGniazdaFiber(polaczenie){
  const korytarzTabeli=tabela.top+13-obszar.top;
  const bokGniazda=wymiary.left-7-obszar.left;
  const bokUrzadzenia=centralRoot.querySelector('.device-shell').getBoundingClientRect().left-12-obszar.left;
- return roundedCablePath([poczatek,{x:poczatek.x,y:poczatek.y+6},{x:bokUrzadzenia,y:poczatek.y+6},{x:bokUrzadzenia,y:gornyKorytarz},{x:lewyKorytarz,y:gornyKorytarz},{x:lewyKorytarz,y:korytarzTabeli},{x:bokGniazda,y:korytarzTabeli},{x:bokGniazda,y:koniec.y+7},{x:koniec.x,y:koniec.y+7},koniec],5);
+ const wyjscie=poczatek.y+odsunieciePrzewoduFiber(polaczenie.urzadzenie);
+ const wejscie=koniec.y+odsunieciePrzewoduFiber(gniazdo);
+ return roundedCablePath([poczatek,{x:poczatek.x,y:wyjscie},{x:bokUrzadzenia,y:wyjscie},{x:bokUrzadzenia,y:gornyKorytarz},{x:lewyKorytarz,y:gornyKorytarz},{x:lewyKorytarz,y:korytarzTabeli},{x:bokGniazda,y:korytarzTabeli},{x:bokGniazda,y:wejscie},{x:koniec.x,y:wejscie},koniec],5);
 }
 listaTabel.addEventListener('click',zdarzenie=>{
  const przycisk=zdarzenie.target.closest('[data-gniazdo-pakiet]');

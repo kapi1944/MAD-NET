@@ -191,6 +191,7 @@ try {
   // Wzorzec migracji używa aktualnych skryptów: uwzględnia zatwierdzony sprzęt Etapu 05.
   const aktualnyCennik = await readFile('cennik.html','utf8');
   const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'})
+    .replace(/<link[^>]+href="https:\/\/unpkg.com\/leaflet@1.9.4\/dist\/leaflet.css"[^>]*>/,'<link rel="stylesheet" href="./assets/vendor/leaflet/leaflet.css">')
     .replace('<script src="./assets/js/cennik.js">','<script src="./assets/js/sprzet-fiber.js"></script><script src="./assets/js/cennik.js">')
     .replace('</head>','<link rel="stylesheet" href="./assets/css/sprzet-fiber.css"></head>')
     .replaceAll('SC/UPC','SC/APC')

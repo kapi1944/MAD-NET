@@ -33,7 +33,7 @@ function sledz(strona){
 }
 async function rozpocznijPomiar(strona){
  await strona.evaluate(()=>{
-  window.probkiFiber=[];window.stanyFiber=[];window.mierzFiber=true;
+  window.probkiFiber=[];window.stanyFiber=[];window.przewodyFiber=[];window.mierzFiber=true;
   window.obserwatorTestowyFiber=new MutationObserver(wpisy=>{
    wpisy.forEach(wpis=>window.stanyFiber.push(wpis.oldValue));
    window.stanyFiber.push(document.querySelector('#connection-zone').dataset.fiberState);
@@ -41,6 +41,28 @@ async function rozpocznijPomiar(strona){
   window.obserwatorTestowyFiber.observe(document.querySelector('#connection-zone'),{attributes:true,attributeFilter:['data-fiber-state'],attributeOldValue:true});
   function zmierz(){
    if(!window.mierzFiber)return;
+   const przewod=document.querySelector('#link-active');
+   if(przewod.getAttribute('d')&&polaczenieFiber){
+    const macierz=przewod.getScreenCTM(),dlugosc=przewod.getTotalLength();
+    const poczatek=przewod.getPointAtLength(0),dalej=przewod.getPointAtLength(10);
+    const koniec=przewod.getPointAtLength(dlugosc),przed=przewod.getPointAtLength(dlugosc-10);
+    const zrodlo=polaczenieFiber.urzadzenie.querySelector('.sc-kabel-punkt').getBoundingClientRect();
+    const cel=polaczenieFiber.cel.querySelector('.sc-kabel-punkt').getBoundingClientRect();
+    const ekranPoczatku=poczatek.matrixTransform(macierz),ekranKonca=koniec.matrixTransform(macierz);
+    const przeszkody=[...document.querySelectorAll('#plans .plan-body,#plans .plan-bottom,#device-guide,.device-hint,.device-foot,.compare-package-name'),
+     ...[...document.querySelectorAll('#plans .plan')].filter(karta=>polaczenieFiber.zrodlo==='table'||karta.dataset.planId!==polaczenieFiber.id)].map(element=>element.getBoundingClientRect());
+    let kolizje=0;
+    for(let odleglosc=0;odleglosc<=dlugosc;odleglosc+=3){
+     const punkt=przewod.getPointAtLength(odleglosc).matrixTransform(macierz);
+     if(przeszkody.some(prostokat=>punkt.x>prostokat.left+1&&punkt.x<prostokat.right-1&&punkt.y>prostokat.top+1&&punkt.y<prostokat.bottom-1))kolizje++;
+    }
+    window.przewodyFiber.push({stan:polaczenieFiber.stan,
+     kolizje,
+     pionowyPoczatek:Math.abs(dalej.x-poczatek.x)<.1&&dalej.y-poczatek.y>9.9,
+     pionowyKoniec:Math.abs(przed.x-koniec.x)<.1&&przed.y-koniec.y>9.9,
+     bladPoczatku:Math.hypot(ekranPoczatku.x-zrodlo.x,ekranPoczatku.y-zrodlo.y),
+     bladKonca:Math.hypot(ekranKonca.x-cel.x,ekranKonca.y-cel.y)});
+   }
    const cel=polaczenieFiber?.zrodlo==='table'?polaczenieFiber.cel:null;
    if(cel){
     const pokrywa=cel.querySelector('.sc-pokrywa'),wtyk=cel.querySelector('.sc-konektor');
@@ -48,7 +70,8 @@ async function rozpocznijPomiar(strona){
     const os=getComputedStyle(pokrywa).transformOrigin.split(' ').map(parseFloat);
     window.probkiFiber.push({stan:polaczenieFiber.stan,kat:Math.acos(Math.max(-1,Math.min(1,macierz.m22)))*180/Math.PI,wtyk:Number(getComputedStyle(wtyk).opacity),os,lewo:wtyk.getBoundingClientRect().left});
    }
-   requestAnimationFrame(zmierz);
+   // Pomiar po klatce kontrolera obejmuje bieżącą pozycję animowanego wtyku.
+   requestAnimationFrame(()=>setTimeout(zmierz,0));
   }
   zmierz();
  });
@@ -56,8 +79,13 @@ async function rozpocznijPomiar(strona){
 async function zakonczPomiar(strona){
  return strona.evaluate(()=>{
   window.mierzFiber=false;window.obserwatorTestowyFiber.disconnect();
-  return {stany:window.stanyFiber.filter((stan,numer,lista)=>stan&&stan!==lista[numer-1]),probki:window.probkiFiber};
+  return {stany:window.stanyFiber.filter((stan,numer,lista)=>stan&&stan!==lista[numer-1]),probki:window.probkiFiber,przewody:window.przewodyFiber};
  });
+}
+function sprawdzPrzebiegPrzewodu(przebieg){
+ assert.ok(przebieg.przewody.length>10,'Pomiar przewodu podczas animacji');
+ assert.ok(przebieg.przewody.every(probka=>probka.pionowyPoczatek&&probka.pionowyKoniec&&probka.bladPoczatku<1&&probka.bladKonca<1),'Kierunek i kotwice podczas animacji: '+JSON.stringify(przebieg.przewody.filter(probka=>!probka.pionowyPoczatek||!probka.pionowyKoniec||probka.bladPoczatku>=1||probka.bladKonca>=1)));
+ assert.ok(przebieg.przewody.every(probka=>probka.kolizje===0),'Kolizje podczas animacji: '+JSON.stringify(przebieg.przewody.filter(probka=>probka.kolizje)));
 }
 async function sprawdzGeometrie(strona,zrodlo,id){
  await strona.waitForFunction(()=>document.querySelector('#link-active').getAttribute('d')&&Number(getComputedStyle(document.querySelector('#link-active')).opacity)>.8,null,{timeout:5000});
@@ -69,9 +97,10 @@ async function sprawdzGeometrie(strona,zrodlo,id){
   const cel=document.querySelector(zrodlo==='table'?`[data-gniazdo-pakiet="${id}"]`:`[data-plan-id="${id}"]`);
   const punkt=cel.querySelector('.sc-kabel-punkt').getBoundingClientRect();
   const koniec=przewod.getPointAtLength(dlugosc),poczatek=przewod.getPointAtLength(0);
+  const dalej=przewod.getPointAtLength(10),przedKoncem=przewod.getPointAtLength(dlugosc-10);
   const punktZrodla=document.querySelector(`[data-port-plan-id="${id}"] .sc-kabel-punkt`).getBoundingClientRect();
   const karty=[...document.querySelectorAll('#plans .plan')].filter(karta=>zrodlo==='table'||karta.dataset.planId!==id).map(karta=>karta.getBoundingClientRect());
-  const teksty=[...document.querySelectorAll('#plans .plan-body,#plans .plan-bottom,#device-guide,.device-hint,.device-foot')].map(element=>element.getBoundingClientRect());
+  const teksty=[...document.querySelectorAll('#plans .plan-body,#plans .plan-bottom,#device-guide,.device-hint,.device-foot,.compare-package-name')].map(element=>element.getBoundingClientRect());
   let kolizje=0;
   for(let odleglosc=0;odleglosc<=dlugosc;odleglosc+=2){
    const punkt=przewod.getPointAtLength(odleglosc),x=punkt.x+strefa.left,y=punkt.y+strefa.top;
@@ -80,6 +109,8 @@ async function sprawdzGeometrie(strona,zrodlo,id){
   const adapter=cel.querySelector('.sc-simplex').getBoundingClientRect(),wtyk=cel.querySelector('.sc-konektor').getBoundingClientRect(),tor=cel.querySelector('.sc-wtyk-tor').getBoundingClientRect();
   // Przód ferruli zajmuje pierwsze 13/112 wysokości modelu; po wsunięciu jest schowany za wargą adaptera.
   return {szerokosc:innerWidth,zrodlo,id,dlugosc,kolizje,
+   pionowyPoczatek:Math.abs(dalej.x-poczatek.x)<.1&&dalej.y-poczatek.y>9.9,
+   pionowyKoniec:Math.abs(przedKoncem.x-koniec.x)<.1&&przedKoncem.y-koniec.y>9.9,
    bladKonca:Math.hypot(koniec.x+strefa.left-punkt.x,koniec.y+strefa.top-punkt.y),
    bladPoczatku:Math.hypot(poczatek.x+strefa.left-punktZrodla.x,poczatek.y+strefa.top-punktZrodla.y),
    bladOsi:Math.abs(wtyk.left+wtyk.width/2-adapter.left-adapter.width/2),
@@ -89,6 +120,7 @@ async function sprawdzGeometrie(strona,zrodlo,id){
    przepelnienie:document.documentElement.scrollWidth-innerWidth};
  },{zrodlo,id:`FIBER-${id}M`});
  assert.ok(pomiar.dlugosc>50,JSON.stringify(pomiar));
+ assert.ok(pomiar.pionowyPoczatek&&pomiar.pionowyKoniec,'Przewód musi wychodzić dołem z obu wtyków: '+JSON.stringify(pomiar));
  assert.ok(pomiar.bladKonca<1&&pomiar.bladPoczatku<1&&pomiar.bladOsi<1,JSON.stringify(pomiar));
  assert.ok(pomiar.ferrulaSchowana&&pomiar.wtykNaZewnatrz,JSON.stringify(pomiar));
  assert.equal(pomiar.kolizje,0,JSON.stringify(pomiar));
@@ -100,7 +132,7 @@ try{
  if(serwer)await poczekajNaSerwer(serwer);
  przegladarka=await uruchomPrzegladarke(chromium);
  const strona=await przegladarka.newPage({viewport:{width:1440,height:1100}});sledz(strona);
- for(const szerokosc of [320,360,390,430,768,1024,1280,1440,1920]){
+ for(const szerokosc of [320,360,390,430,768,1024,1280,1366,1440,1920]){
   await strona.setViewportSize({width:szerokosc,height:1100});await strona.goto(adres);
   if(szerokosc<=430){
    const instrukcja=await strona.evaluate(()=>{
@@ -126,6 +158,7 @@ try{
   assert.match(await strona.locator('#availability-choice-summary').textContent(),/FIBER-50/);
   await strona.locator(gniazdo(50)).click();await stan(strona,'IDLE');
   const przebieg=await zakonczPomiar(strona);przebiegi.push({szerokosc,...przebieg});
+  sprawdzPrzebiegPrzewodu(przebieg);
   for(const etap of ['OPENING_COVER','COVER_OPEN','CONNECTOR_APPROACH','INSERTING','CONNECTED','DISCONNECTING','CLOSING_COVER'])assert.ok(przebieg.stany.includes(etap),przebieg.stany.join(','));
   const wsuwanie=przebieg.probki.filter(probka=>['CONNECTOR_APPROACH','INSERTING','CONNECTED','DISCONNECTING'].includes(probka.stan));
   assert.ok(wsuwanie.length>5);
@@ -135,14 +168,24 @@ try{
   assert.equal(po.kat,1);assert.equal(po.wtyk,'0');
   await strona.waitForFunction(()=>!document.querySelector('#link-active').getAttribute('d'));
  assert.equal(await strona.locator('#link-active').getAttribute('d'),'');
+  await rozpocznijPomiar(strona);
   await strona.locator('[data-select-plan="FIBER-100M"]').click();await stan(strona,'CONNECTED');
   await sprawdzGeometrie(strona,'card',100);
+  const przebiegKarty=await zakonczPomiar(strona);przebiegi.push({szerokosc,zrodlo:'card',...przebiegKarty});sprawdzPrzebiegPrzewodu(przebiegKarty);
   await strona.locator('.device-tech-tabs [data-technology="LAN"]').click();await stan(strona,'IDLE');
   assert.equal(await strona.locator('[data-gniazdo-pakiet][data-stan-polaczenia="IDLE"]').count(),3);
   assert.ok(await strona.locator('.sc-pokrywa').evaluateAll(elementy=>elementy.every(element=>new DOMMatrixReadOnly(getComputedStyle(element).transform).m22===1)));
   await strona.waitForFunction(()=>!document.querySelector('#link-active').getAttribute('d'));
  assert.equal(await strona.locator('#link-active').getAttribute('d'),'');
   assert.equal(await strona.locator('#central-device .jack-rj').count(),5);
+  await strona.locator('.device-tech-tabs [data-technology="FIBER"]').click();
+  await strona.emulateMedia({reducedMotion:'reduce'});
+  for(const id of [50,100,300]){
+   await strona.locator(`[data-select-plan="FIBER-${id}M"]`).click();await stan(strona,'CONNECTED');
+   await sprawdzGeometrie(strona,'card',id);
+   await strona.locator(`[data-select-plan="FIBER-${id}M"]`).click();await stan(strona,'IDLE');
+  }
+  await strona.emulateMedia({reducedMotion:'no-preference'});
   console.log(`PASS SC/APC ${szerokosc}px: sekwencja, geometria, 2 trasy, ceny bez zmian`);
  }
  // Najnowsze żądanie wygrywa również podczas otwierania osłon.

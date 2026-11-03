@@ -118,8 +118,7 @@
   if(mapLoading)return false;
   mapLoading=true;loadButton.disabled=true;loadButton.textContent='Ładowanie mapy…';
   try{
-   if(!window.L){try{await loadScript('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js');}
-    catch{await loadScript('https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js');}}
+   if(!window.L)await loadScript('./assets/vendor/leaflet/leaflet.js');
    if(!window.L)throw new Error('leaflet');
    map=L.map('availability-map',{scrollWheelZoom:false,zoomControl:true}).setView(MAP_CENTER,12);
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{

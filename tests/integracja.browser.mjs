@@ -8,7 +8,7 @@ import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs
 const publiczny=process.env.MADNET_ADRES;
 const katalog=`test-results/integracja/${publiczny?'produkcja':'lokalnie'}`;
 const strony=['index.html','cennik.html','uslugi.html','kontakt.html','internet.html','monitoring-alarmy.html','sieci-it.html','strony-www-hosting.html','instalacje-tv-sat.html'];
-const szerokosci=publiczny?[390,768,1440,1920]:[320,390,768,1024,1440,1920];
+const szerokosci=publiczny?[320,390,768,1366,1440,1920]:[320,390,768,1024,1366,1440,1920];
 const port=publiczny?null:await wybierzPort('MADNET_PORT_INTEGRACJI');
 const adres=publiczny||`http://127.0.0.1:${port}/`;
 const serwer=publiczny?null:spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port},stdio:['ignore','pipe','pipe']});

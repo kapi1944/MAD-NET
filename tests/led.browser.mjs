@@ -41,9 +41,11 @@ try{
     szerokosc:parseFloat(getComputedStyle(element).width),wysokosc:parseFloat(getComputedStyle(element).height)
    }));
    assert.equal(Math.min(...przygaszenie.klatki),.85,'ACT zachowuje 85% w fazie przygaszonej');
-   assert.equal(przygaszenie.filtr,'brightness(1)','Obudowa nie przyciemnia ponownie ACT');
+   assert.equal(przygaszenie.filtr,'brightness(0.7)','Niepodłączony ACT zachowuje 70% jasności');
    assert.ok(przygaszenie.szerokosc>=8&&przygaszenie.wysokosc>=5.5,'Większe diody LINK/ACT');
    assert.equal(await strona.locator(`.grafika-hybrydowa [data-led-pakiet="${id}"] .rj-link,.grafika-hybrydowa [data-led-pakiet="${id}"] .fiber-activity`).evaluate(element=>Math.min(...element.getAnimations()[0].effect.getKeyframes().map(klatka=>Number(klatka.opacity)))),.85,'RACK zachowuje ten sam czytelny stan ACT');
+   const jasnosci=await strona.locator(`[data-port-plan-id="${id}"] .port-leds,.plan[data-plan-id="${id}"] .port-leds,.compare-head-port[data-led-pakiet="${id}"] .port-leds,.compare-head-port[data-gniazdo-pakiet="${id}"] .port-leds,.grafika-hybrydowa [data-led-pakiet="${id}"] :is(.rj-link,.fiber-activity)`).evaluateAll(elementy=>elementy.map(element=>Number(getComputedStyle(element).filter.match(/brightness\(([0-9.]+)\)/)[1])));
+   assert.ok(jasnosci.length>=4&&jasnosci.every(jasnosc=>jasnosc===.7),'70% we wszystkich reprezentacjach ACT');
    const przed=await strona.evaluate(id=>{
     const nalezy=element=>(element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet||element.dataset.gniazdoPakiet)===id;
     const reprezentacje=[...document.querySelectorAll('[data-link]')].filter(nalezy);
