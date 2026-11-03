@@ -1,0 +1,36 @@
+
+> mad-net@0.1.0 verify
+> npm run test && npm run build
+
+
+> mad-net@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylko allowlistę (647.6777ms)
+✔ HOME: archiwum i obrazy zachowują oryginalne bajty i MIME V3 (23.5386ms)
+✔ HOME: osobne zasoby, język polski, brak zależności od stylów cennika (99.2489ms)
+✔ cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline (95.8624ms)
+✔ HERO V4: pozostałe sekcje, nagłówek i stopka HOME zachowują treść bazową (85.7036ms)
+✔ nawigacja: dziewięć stron ma wspólne elementy i istniejące względne cele (103.6849ms)
+✔ nawigacja: nowe skrypty mają poprawną składnię (165.9069ms)
+✔ strona główna HOME ma własne zasoby i sekcje (5.5132ms)
+✔ struktura startowa i poprawne odnośniki do rozdzielonych zasobów (1.4278ms)
+✔ skrypty wykonują się w pierwotnej kolejności (1.04ms)
+✔ oryginalny szablon V18 jest zachowany do porównań i rollbacku (4.5754ms)
+✔ 13 wariantów: 5 LAN, 3 FIBER i 5 AIR (0.4926ms)
+✔ zachowano sekcje i formularz, bez fikcyjnego backendu SMTP (1.0095ms)
+✔ poprawna składnia JavaScript we wszystkich trzech skryptach (256.8315ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 775.5802
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.

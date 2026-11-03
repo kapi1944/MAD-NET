@@ -1,0 +1,96 @@
+{
+  "czas": "2026-11-02T20:18:32.527Z",
+  "main": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+  "etapy": [
+    {
+      "id": "A",
+      "status": "PASS",
+      "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "Aktualny audyt Git/PR/CI/Pages; wszystkie worktree zachowane.",
+      "dowod": "audyt.json",
+      "nastepnyKrok": "B"
+    },
+    {
+      "id": "B",
+      "status": "PASS",
+      "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "Pełna macierz lokalnych/remote; #4/#5 w historii i plikach #6; 4x3 poza #6.",
+      "dowod": "MACIERZ_GALEZI.md, audyt.json",
+      "nastepnyKrok": "C"
+    },
+    {
+      "id": "C",
+      "status": "BLOCKED",
+      "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "Nie odtworzono historycznego ERR_CONNECTION_CLOSED: Windows 3 przed + 3 po, Linux 6 prób diagnostycznych + 2 pełne PASS. Stary log nie zawiera URL/resourceType/fazy; brak dowodu przyczyny.",
+      "dowod": "oferta-windows.json; oferta-linux-pr.json; oferta-linux-push.json; historyczny run 41408400330",
+      "nastepnyKrok": "Codex: przy kolejnym FAIL pobrać oferta-network.json/oddzielną próbę z artefaktu; ustalić rzeczywisty URL/resourceType/fazę i dopiero wtedy minimalny fix + pełna regresja. Nie maskować; bez dowodu C nie jest PASS."
+    },
+    {
+      "id": "D",
+      "status": "PASS",
+      "sha": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "Cała sekwencja ma końcowy kod 0; pełne HOME i browser z bazowym Skia PASS; 77 porównań zero; ujemne: obraz 204726, tekst 3299; 28 plików składnia PASS.",
+      "dowod": "lokalne-skia.json, skia-lokalnie.json, skladnia-skia.json; logi lokalne-3-*",
+      "nastepnyKrok": "Codex: sprawdzić oba Linux CI dokładnej głowy po push; nie uznawać pojedynczego PASS za dowód stabilizacji"
+    },
+    {
+      "id": "E",
+      "status": "BLOCKED",
+      "sha": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "GO blokuje C. Historia: b868 oba SUCCESS; 6b7 push SUCCESS / PR FAILURE. Aktualna głowa po Skia wymaga obu completed/success; bieżące checks są w PR #6.",
+      "dowod": "ci-checkpoint.json; ci-6b7.json; https://github.com/kapi1944/MAD-NET/pull/6/checks",
+      "nastepnyKrok": "Codex: odczytać dokładny HEAD, push/PR, wszystkie kroki i artefakty; przy FAIL wrócić do C/D, nawet po historycznych PASS."
+    },
+    {
+      "id": "F",
+      "status": "BLOCKED",
+      "sha": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "BLOCKED C/GO oraz brak jawnej zgody właściciela na publiczne Pages z main:/. Merge automatycznie publikuje.",
+      "dowod": "audyt.json pages",
+      "nastepnyKrok": "Właściciel: jawna decyzja o publicznym wdrożeniu konkretnej wersji PR #6. Codex: po C/E-GO i zgodzie merge commit; ff main; ponowna kontrola i zamknięcie #4/#5, #3 pozostaje."
+    },
+    {
+      "id": "G",
+      "status": "BLOCKED",
+      "sha": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "Nie wykonano merge ani nowego deploy.",
+      "dowod": "audyt.json pages",
+      "nastepnyKrok": "Codex: po F zweryfikować build, assety SHA-256 i regresję produkcyjną"
+    },
+    {
+      "id": "H",
+      "status": "PASS",
+      "sha": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+      "czas": "2026-11-02T20:18:32.527Z",
+      "wynik": "Raport zawiera wszystkie próby, przyczyny blokad i właścicieli; nowe niepowodzenie 6b7 oraz Skia dopisane. Brak deklaracji merge/deploy.",
+      "dowod": "../FINAL_MERGE_2026-11-02.md; STAN.md; WYNIKI.json",
+      "nastepnyKrok": "Codex: po końcowym push zweryfikować aktualne CI; wznowienie merytoryczne C, następnie E/F/G."
+    }
+  ],
+  "checkpointKodu": "b86891e083a0538776158ea2373df5de57af8ed9",
+  "ostateczneChecks": "https://github.com/kapi1944/MAD-NET/pull/6/checks",
+  "go": false,
+  "zgodaPublikacji": {
+    "wymagana": true,
+    "otrzymana": false,
+    "powod": "Pages legacy main:/ public; pkt 7 instrukcji + AGENTS"
+  },
+  "merge": {
+    "wykonano": false,
+    "mainPrzed": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+    "mainPo": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+    "zamknietoPR": [],
+    "pr3": "pozostaje OPEN"
+  },
+  "ostatniaGlowaTestowKodu": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+  "checkpointKoduSkia": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+  "checkpointKoduPrzedSkia": "b86891e083a0538776158ea2373df5de57af8ed9"
+}

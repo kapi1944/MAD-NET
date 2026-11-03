@@ -1,0 +1,36 @@
+{
+  "szerokosc": 320,
+  "font": "43px",
+  "fragmenty": [
+    {
+      "lewo": 17,
+      "prawo": 332.6875,
+      "szerokosc": 315.6875
+    },
+    {
+      "lewo": 332.6875,
+      "prawo": 332.6875,
+      "szerokosc": 0
+    },
+    {
+      "lewo": 17,
+      "prawo": 192.765625,
+      "szerokosc": 175.765625
+    },
+    {
+      "lewo": 17,
+      "prawo": 246.546875,
+      "szerokosc": 229.546875
+    },
+    {
+      "lewo": 17,
+      "prawo": 192.765625,
+      "szerokosc": 175.765625
+    },
+    {
+      "lewo": 17,
+      "prawo": 246.546875,
+      "szerokosc": 229.546875
+    }
+  ]
+}

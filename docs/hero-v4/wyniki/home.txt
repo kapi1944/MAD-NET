@@ -1,0 +1,34 @@
+
+> mad-net@0.1.0 test:home
+> npm run build && node tests/home.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS HOME 320px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 360px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 375px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 390px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 430px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 768px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1024px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1366px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1440px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1920px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 2560px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS cennik 390px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 768px: geometria i typografia bez zmian, różne piksele=1875
+PASS cennik 1024px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1440px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1920px: geometria i typografia bez zmian, różne piksele=0
+PASS smoke /: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /cennik.html: selektory i 14 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/cennik.html: selektory i 14 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS CTA HERO: klawiatura → dostępność internetu; kliknięcie → kontakt
+PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli

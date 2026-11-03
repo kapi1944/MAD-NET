@@ -1,38 +1,67 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Etap 04: rzeczywiste CTA, sześć szerokości, dotyk, klawiatura i ruch. */
 import assert from 'node:assert/strict';
 import {mkdir, writeFile} from 'node:fs/promises';
-import {spawn} from 'node:child_process';
+import {spawn,execFileSync} from 'node:child_process';
 import {chromium} from 'playwright-core';
 
 const katalog='test-results/integracja-home-v3/04';
 await mkdir(katalog,{recursive:true});
-const port=process.env.MADNET_PORT_OFERTY||'4187';
+const port=await wybierzPort('MADNET_PORT_OFERTY');
 const adres=`http://127.0.0.1:${port}`;
 const strony=['internet','monitoring-alarmy','sieci-it','strony-www-hosting','instalacje-tv-sat'];
 const wyniki=[],bledy=[],konsola=[],zasoby=[],cele=[];
-const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port},stdio:['ignore','pipe','pipe']});
-let przegladarka;
-const obserwuj=strona=>{
-  strona.on('pageerror',blad=>bledy.push(blad.message));
-  strona.on('console',wpis=>{if(wpis.type()==='error')konsola.push(wpis.text())});
-  strona.on('response',odpowiedz=>{if(odpowiedz.url().startsWith(adres)&&odpowiedz.status()>=400)zasoby.push({url:odpowiedz.url(),status:odpowiedz.status()})});
+const zdarzeniaSieci=[],aktywne=new Map(),stanStron=new Map();
+const faza={plik:null,szerokosc:null,href:null,scenariusz:'start'};
+const zapis=(typ,dane={})=>zdarzeniaSieci.push({czas:new Date().toISOString(),typ,...faza,...dane});
+const identyfikatory=new WeakMap();let numerZadania=0;
+const daneZadania=zadanie=>{
+  if(!identyfikatory.has(zadanie))identyfikatory.set(zadanie,++numerZadania);
+  return {id:identyfikatory.get(zadanie),url:zadanie.url(),metoda:zadanie.method(),resourceType:zadanie.resourceType()};
 };
-try{
-  await new Promise((gotowe,odrzuc)=>{
-    const zegar=setTimeout(()=>odrzuc(new Error('Brak podglądu oferty')),8000);
-    serwer.stdout.on('data',dane=>{if(String(dane).includes('MAD-NET PREVIEW')){clearTimeout(zegar);gotowe()}});
-    serwer.stderr.on('data',dane=>{clearTimeout(zegar);odrzuc(new Error(String(dane)))});
-    serwer.once('error',odrzuc);
+const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port},stdio:['ignore','pipe','pipe']});
+let serwerZakonczony=false;
+serwer.stdout.on('data',dane=>zapis('serwer-stdout',{tekst:String(dane)}));
+serwer.stderr.on('data',dane=>zapis('serwer-stderr',{tekst:String(dane)}));
+serwer.on('exit',(kod,sygnal)=>{serwerZakonczony=true;zapis('serwer-exit',{kod,sygnal});});
+serwer.on('error',blad=>{serwerZakonczony=true;zapis('serwer-error',{blad:blad.message});});
+let przegladarka,wersjaPrzegladarki;
+const obserwuj=(strona,kontekst)=>{
+  const stan={kontekst,urlStrony:strona.url(),poprzedniUrl:null,viewport:strona.viewportSize(),zamknieta:false};stanStron.set(strona,stan);
+  strona.on('framenavigated',ramka=>{if(ramka===strona.mainFrame()){stan.poprzedniUrl=stan.urlStrony;stan.urlStrony=ramka.url();stan.viewport=strona.viewportSize();zapis('nawigacja',{...stan});}});
+  strona.on('close',()=>{stan.zamknieta=true;zapis('strona-close',{...stan});});
+  strona.on('request',zadanie=>{
+    const dane={...daneZadania(zadanie),...stan,fazaStartu:{...faza}};aktywne.set(zadanie,dane);
+    if(process.env.MADNET_DEBUG_NETWORK==='1')zapis('request',dane);
   });
-  przegladarka=await chromium.launch({headless:true,...(process.env.MADNET_PRZEGLADARKA?{executablePath:process.env.MADNET_PRZEGLADARKA}:process.platform==='win32'?{channel:'msedge'}:{})});
+  strona.on('requestfinished',zadanie=>{
+    if(process.env.MADNET_DEBUG_NETWORK==='1')zapis('requestfinished',{...aktywne.get(zadanie),...daneZadania(zadanie)});
+    aktywne.delete(zadanie);
+  });
+  strona.on('requestfailed',zadanie=>{zapis('requestfailed',{...aktywne.get(zadanie),...daneZadania(zadanie),blad:zadanie.failure()?.errorText});aktywne.delete(zadanie);});
+  strona.on('pageerror',blad=>{bledy.push(blad.message);zapis('pageerror',{...stan,blad:blad.message});});
+  strona.on('console',wpis=>{if(wpis.type()==='error'){konsola.push(wpis.text());zapis('console-error',{...stan,tekst:wpis.text(),location:wpis.location()});}});
+  strona.on('response',odpowiedz=>{if(odpowiedz.status()>=400){zapis('http-error',{...daneZadania(odpowiedz.request()),status:odpowiedz.status(),kontekst});if(odpowiedz.url().startsWith(adres))zasoby.push({url:odpowiedz.url(),status:odpowiedz.status()});}});
+};
+const przejdz=async(strona,url,opcje)=>{zapis('goto',{url,poprzedniUrl:strona.url(),viewport:strona.viewportSize(),aktywne:[...aktywne.values()]});return strona.goto(url,opcje);};
+try{
+  await poczekajNaSerwer(serwer);
+  przegladarka=await uruchomPrzegladarke(chromium);
+  wersjaPrzegladarki=przegladarka.version();
   const kontekst=await przegladarka.newContext({deviceScaleFactor:1,reducedMotion:'reduce'});
-  await kontekst.route(`${adres}/MAD-NET/**`,async trasa=>trasa.fulfill({response:await trasa.fetch({url:trasa.request().url().replace('/MAD-NET/','/')})}));
-  const strona=await kontekst.newPage();obserwuj(strona);
+  kontekst.on('close',()=>zapis('kontekst-close',{kontekst:'desktop'}));
+  await kontekst.route(`${adres}/MAD-NET/**`,async trasa=>{
+    const dane={...daneZadania(trasa.request()),cel:trasa.request().url().replace('/MAD-NET/','/'),kontekst:'desktop'};
+    try{const odpowiedz=await trasa.fetch({url:dane.cel});zapis('route-fetch',{...dane,status:odpowiedz.status()});await trasa.fulfill({response:odpowiedz});}
+    catch(blad){zapis('route-fetch-failed',{...dane,blad:blad.message});throw blad;}
+  });
+  const strona=await kontekst.newPage();obserwuj(strona,'desktop');
   const tytuly=new Set(),opisy=new Set();
   for(const plik of strony){
     for(const szerokosc of [320,390,768,1024,1440,1920]){
+      Object.assign(faza,{plik,szerokosc,href:null,scenariusz:'uklad-klawiatura'});
       await strona.setViewportSize({width:szerokosc,height:1000});
-      assert.equal((await strona.goto(`${adres}/${plik}.html`,{waitUntil:'networkidle'})).status(),200);
+      assert.equal((await przejdz(strona,`${adres}/${plik}.html`,{waitUntil:'networkidle'})).status(),200);
       await strona.evaluate(()=>document.fonts.ready);
       assert.equal(await strona.locator('h1').count(),1);
       assert.equal(await strona.locator('html').getAttribute('lang'),'pl');
@@ -90,7 +119,9 @@ try{
     // Klikamy każdą treściową drogę wyjścia, nie tylko sprawdzamy href.
     const linki=await strona.locator('main a').evaluateAll(elementy=>[...new Set(elementy.map(element=>element.getAttribute('href')))]);
     for(const href of linki){
-      await strona.goto(`${adres}/${plik}.html`);
+      Object.assign(faza,{href,scenariusz:'CTA'});
+      await przejdz(strona,`${adres}/${plik}.html`);
+      zapis('klik-CTA',{url:strona.url(),href});
       await strona.locator(`main a[href="${href}"]`).first().click();
       const cel=new URL(href,`${adres}/${plik}.html`);
       await strona.waitForURL(cel.href);
@@ -102,33 +133,41 @@ try{
       }
       cele.push({plik,href,status:'PASS'});
     }
-    await strona.goto(`${adres}/MAD-NET/${plik}.html`,{waitUntil:'networkidle'});
+    faza.scenariusz='prefiks-MAD-NET';
+    await przejdz(strona,`${adres}/MAD-NET/${plik}.html`,{waitUntil:'networkidle'});
     assert.equal(await strona.locator('.oferta-hero').count(),1);
     assert.ok(await strona.locator('img').evaluateAll(elementy=>elementy.every(obraz=>obraz.complete&&obraz.naturalWidth>0)));
     console.log(`PASS ${plik}: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/`);
   }
   assert.equal(tytuly.size,5);assert.equal(opisy.size,5);
   for(const wartosc of ['BRAK','lan','<script>']){
-    await strona.goto(`${adres}/cennik.html?technologia=${encodeURIComponent(wartosc)}`);
+    Object.assign(faza,{plik:'cennik',href:wartosc,scenariusz:'nieznana-technologia'});
+    await przejdz(strona,`${adres}/cennik.html?technologia=${encodeURIComponent(wartosc)}`);
     assert.equal(await strona.locator('.device-tech-tabs button[data-technology="FIBER"]').getAttribute('aria-pressed'),'true','Nieznana technologia zachowuje wybór domyślny');
   }
   const dotyk=await przegladarka.newContext({viewport:{width:390,height:650},hasTouch:true,isMobile:true,reducedMotion:'reduce'});
-  const telefon=await dotyk.newPage();obserwuj(telefon);
+  dotyk.on('close',()=>zapis('kontekst-close',{kontekst:'mobile'}));
+  const telefon=await dotyk.newPage();obserwuj(telefon,'mobile');
   for(const plik of strony){
-    await telefon.goto(`${adres}/${plik}.html`);
+    Object.assign(faza,{plik,szerokosc:390,href:null,scenariusz:'dotyk'});
+    await przejdz(telefon,`${adres}/${plik}.html`);
     await telefon.locator('#otworz-menu').tap();await telefon.locator('.rozwijanie-uslug').tap();
     assert.equal(await telefon.locator('.rozwijanie-uslug').getAttribute('aria-expanded'),'true');
     const r=await telefon.locator('#nawigacja').boundingBox();assert.ok(r.y+r.height<=651);
     await telefon.locator('#otworz-menu').tap();
     await telefon.locator('summary').first().tap();
     assert.equal(await telefon.locator('details').first().evaluate(element=>element.open),true);
-    await telefon.locator('.oferta-hero .wspolne-cta').tap();
+    zapis('tap-CTA',{url:telefon.url()});await telefon.locator('.oferta-hero .wspolne-cta').tap();
     await telefon.waitForURL(new URL(plik==='internet'?'./cennik.html#cennik':'./kontakt.html',`${adres}/${plik}.html`).href);
   }
-  await dotyk.close();
+  zapis('zamykanie-mobile',{aktywne:[...aktywne.values()],strony:[...stanStron.values()]});await dotyk.close();
   assert.deepEqual(bledy,[]);assert.deepEqual(konsola,[]);assert.deepEqual(zasoby,[]);
   console.log('PASS pięć stron: 30 układów, dotyk/klawiatura, CTA, brak błędów JS/konsoli/HTTP');
 }finally{
   await writeFile(`${katalog}/wyniki.json`,JSON.stringify({wyniki,cele,bledy,konsola,zasoby},null,2));
-  await przegladarka?.close();serwer.kill();
+  faza.scenariusz='sprzatanie';zapis('zamykanie',{aktywne:[...aktywne.values()],strony:[...stanStron.values()],serwerExit:serwer.exitCode});
+  await przegladarka?.close();
+  const wyjscie=new Promise(zakoncz=>serwerZakonczony?zakoncz():serwer.once('exit',zakoncz));serwer.kill();await wyjscie;
+  await mkdir('test-results/finalizacja',{recursive:true});
+  await writeFile('test-results/finalizacja/oferta-network.json',JSON.stringify({sha:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),shaZdarzenia:process.env.GITHUB_SHA||null,platforma:process.platform,wersjaPrzegladarki,zdarzeniaSieci},null,2));
 }

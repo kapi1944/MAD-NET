@@ -1,0 +1,74 @@
+[
+  {
+    "opoznienieKlatkiMs": 0,
+    "przed": {
+      "y": 206.328125,
+      "x": 1051.71875,
+      "wysokosc": 381.390625,
+      "szerokosc": 356.28125,
+      "fonty": "loaded",
+      "gora": "115.33px",
+      "wysokoscCss": "360.16px",
+      "przewiniecie": 0,
+      "fokus": null
+    },
+    "gotowy": {
+      "y": 206.328125,
+      "x": 1051.71875,
+      "wysokosc": 381.390625,
+      "szerokosc": 356.28125,
+      "fonty": "loaded",
+      "gora": "115.33px",
+      "wysokoscCss": "360.16px",
+      "przewiniecie": 0,
+      "fokus": null
+    },
+    "poInterakcji": {
+      "y": 206.328125,
+      "x": 1051.71875,
+      "wysokosc": 381.390625,
+      "szerokosc": 356.28125,
+      "fonty": "loaded",
+      "gora": "115.33px",
+      "wysokoscCss": "360.16px",
+      "przewiniecie": 0,
+      "fokus": "FIBER"
+    }
+  },
+  {
+    "opoznienieKlatkiMs": 500,
+    "przed": {
+      "y": 171,
+      "x": 1051.1875,
+      "wysokosc": 381.390625,
+      "szerokosc": 356.8125,
+      "fonty": "loaded",
+      "gora": "",
+      "wysokoscCss": "",
+      "przewiniecie": 0,
+      "fokus": null
+    },
+    "gotowy": {
+      "y": 206.328125,
+      "x": 1051.71875,
+      "wysokosc": 381.390625,
+      "szerokosc": 356.28125,
+      "fonty": "loaded",
+      "gora": "115.33px",
+      "wysokoscCss": "360.16px",
+      "przewiniecie": 0,
+      "fokus": null
+    },
+    "poInterakcji": {
+      "y": 206.328125,
+      "x": 1051.71875,
+      "wysokosc": 381.390625,
+      "szerokosc": 356.28125,
+      "fonty": "loaded",
+      "gora": "115.33px",
+      "wysokoscCss": "360.16px",
+      "przewiniecie": 0,
+      "fokus": "FIBER"
+    }
+  }
+]

@@ -5,8 +5,8 @@
 - [ ] Desktop 1440 px: lewy tekst, centralna szafa RACK, prawy panel — bez nachodzenia.
 - [ ] Tablet 1024 px: treść i panele mieszczą się bez poziomego przewijania.
 - [ ] Telefon 390 i 360 px: RACK w całości widoczny, bez pływającego poziomego scrolla.
-- [ ] LAN: 5 kanałów RJ-45 i zielone diody o tempie zależnym od pakietu.
-- [ ] FIBER: 3 kanały SC/UPC Simplex, zaślepki i tempo diod zależne od pakietu.
+- [ ] LAN: 5 kanałów RJ-45; LINK zgaszony bez połączenia i zielony po wpięciu; bursztynowy ACT pulsuje zgodnie z prędkością.
+- [ ] FIBER: 3 zielone SC/APC Simplex (APC 8°), zaślepki i klapki; LINK poza pasywnym adapterem, ACT bursztynowy przed i po podłączeniu, bez restartu.
 - [ ] AIR: 5 kanałów radiowych, bez fizycznych gniazd, pulsujące łuki.
 - [ ] Najechanie na każde urządzenie przełącza prawy panel; ostatni wybór pozostaje widoczny.
 - [ ] Dotknięcie w telefonie przełącza panel, nie psuje pionowego przewijania.

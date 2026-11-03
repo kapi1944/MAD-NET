@@ -1,3 +1,5 @@
+import {zmierzKanalyRack} from './geometria-rack.mjs';
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 /* Regresja V20 w prawdziwym Chromium: geometria, obsługa i istniejące oferty. */
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -8,13 +10,15 @@ import { chromium } from 'playwright-core';
 
 const katalog = new URL('../test-results/v20/po/', import.meta.url);
 await mkdir(katalog, { recursive: true });
-const port = process.env.MADNET_PORT_TESTOW || '4181';
+const port=await wybierzPort('MADNET_PORT_TESTOW');
 const adres = `http://127.0.0.1:${port}/cennik.html`;
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   cwd: new URL('..', import.meta.url), env: { ...process.env, PORT: port }, stdio: ['ignore', 'pipe', 'pipe'],
 });
 const bledy = [], konsola = [], siec = [], pomiary = [], animacjeKanalow = [];
 let przegladarka, liczbaTras = 0;
+const pomiaryGotowosci=[],pomiaryWyborow=[];
+let czcionkiPlatformy=[];
 const oferta = {
   LAN: [[10, 2, 49, 54], [20, 2, 59, 64], [40, 5, 64, 69], [60, 5, 69, 74], [80, 10, 74, 79]],
   FIBER: [[50, 20, 45, null], [100, 40, 55, null], [300, 80, 65, null]],
@@ -25,6 +29,24 @@ function sledzBledy(strona) {
   strona.on('pageerror', blad => bledy.push(blad.message));
   strona.on('console', wpis => { if (wpis.type() === 'error') konsola.push({ tresc: wpis.text(), adres: wpis.location().url }); });
   strona.on('requestfailed', zadanie => siec.push({ adres: zadanie.url(), blad: zadanie.failure()?.errorText }));
+}
+
+// Wzorzec geometrii powstaje po fontach i pomiarze panelu przez ResizeObserver/rAF.
+async function przygotujPomiarGeometrii(strona,etap){
+  const odczytaj=()=>{
+    const panel=document.querySelector('#hero-tech-panel'),prostokat=panel.getBoundingClientRect(),styl=getComputedStyle(panel);
+    return {szerokosc:innerWidth,wysokoscWidoku:innerHeight,przewiniecie:scrollY,fonty:document.fonts.status,czcionka:styl.fontFamily,
+      panel:{x:prostokat.x+scrollX,y:prostokat.y+scrollY,szerokosc:prostokat.width,wysokosc:prostokat.height},
+      zmienne:{gora:panel.style.getPropertyValue('--panel-gora'),lewo:panel.style.getPropertyValue('--panel-lewo'),wysokosc:panel.style.getPropertyValue('--panel-wysokosc')},
+      fokus:document.activeElement?.getAttribute('data-rack-tech'),animacje:panel.getAnimations({subtree:true}).map(animacja=>({stan:animacja.playState,czas:animacja.currentTime}))};
+  };
+  const przed=await strona.evaluate(odczytaj);
+  await strona.evaluate(()=>document.fonts.ready);
+  await strona.waitForFunction(()=>innerWidth<=1230||document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+  await strona.evaluate(()=>new Promise(zakoncz=>requestAnimationFrame(()=>requestAnimationFrame(zakoncz))));
+  const po=await strona.evaluate(odczytaj);
+  pomiaryGotowosci.push({etap,przed,po});
+  if(etap==='klawiatura')console.log('POMIAR gotowości RACK:',JSON.stringify({przed,po}));
 }
 
 async function geometria(strona) {
@@ -44,6 +66,7 @@ async function sprawdzWybor(strona, technologia, poczatek) {
   assert.equal(await strona.locator('#hero-tech-count').innerText(), technologia === 'FIBER' ? '3 warianty' : '5 wariantów');
   assert.equal(await strona.locator(`[data-rack-tech="${technologia}"]`).getAttribute('aria-pressed'), 'true');
   const po = await geometria(strona);
+  pomiaryWyborow.push({technologia,przed:poczatek,po});
   for (const [nazwa, prostokat] of Object.entries(poczatek)) {
     for (const [wymiar, liczba] of Object.entries(prostokat)) {
       assert.ok(Math.abs(po[nazwa][wymiar] - liczba) < 1, `Skok ${nazwa}.${wymiar} po wyborze ${technologia}: ${liczba} → ${po[nazwa][wymiar]}`);
@@ -120,18 +143,8 @@ async function sprawdzPodswietlenie(strona, szerokosc, ograniczonyRuch = false) 
 }
 
 try {
-  await new Promise((zakoncz, odrzuc) => {
-    const zegar = setTimeout(() => odrzuc(new Error('Serwer testowy nie wystartował')), 8000);
-    serwer.stdout.on('data', dane => { if (String(dane).includes('MAD-NET PREVIEW')) { clearTimeout(zegar); zakoncz(); } });
-    serwer.once('error', odrzuc);
-    serwer.once('exit', kod => { clearTimeout(zegar); if (kod) odrzuc(new Error(`Serwer zakończył się kodem ${kod}`)); });
-    serwer.stderr.on('data', dane => process.stderr.write(dane));
-  });
-  przegladarka = await chromium.launch({
-    headless: true,
-    ...(process.env.MADNET_PRZEGLADARKA ? { executablePath: process.env.MADNET_PRZEGLADARKA }
-      : process.platform === 'win32' ? { channel: 'msedge' } : {}),
-  });
+  await poczekajNaSerwer(serwer);
+  przegladarka = await uruchomPrzegladarke(chromium);
   const strona = await przegladarka.newPage({ viewport: { width: 1440, height: 1250 } });
   sledzBledy(strona);
   await strona.goto(adres);
@@ -144,8 +157,7 @@ try {
   for (const szerokosc of [320, 360, 375, 380, 390, 400, 414, 430, 480, 560, 760, 768, 800, 1024, 1100, 1230, 1231, 1280, 1440, 1500, 1510, 1920]) {
     await strona.setViewportSize({ width: szerokosc, height: 1250 });
     await strona.goto(adres);
-    await strona.evaluate(() => document.fonts.ready);
-    await strona.waitForFunction(() => innerWidth <= 1230 || document.querySelector('#hero-tech-panel').style.getPropertyValue('--panel-wysokosc'));
+    await przygotujPomiarGeometrii(strona,'szerokosci');
     const poczatek = await geometria(strona);
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {
       await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
@@ -184,18 +196,24 @@ try {
       assert.equal(await strona.locator('.hero-rack-hybryda .rack-device').count(), 3);
       assert.equal(await strona.locator('.grafika-hybrydowa [data-speed]').count(), 13);
       assert.equal(await strona.locator('#grafika-szafy').getAttribute('href'), './assets/img/hero-rack.png');
-      const zgodnosc = await strona.evaluate(() => {
-        const rysunek = document.querySelector('.grafika-hybrydowa');
-        const przeliczenie = rysunek.getScreenCTM();
-        return [...rysunek.querySelectorAll('[data-speed]')].every(kanal => {
-          const wycinek = kanal.querySelector('[clip-path]');
-          const rys = wycinek ? document.querySelector(wycinek.getAttribute('clip-path').slice(4, -1)).querySelector('rect').getBBox() : kanal.querySelector('circle').getBBox();
-          const punkt = new DOMPoint(rys.x + rys.width / 2, rys.y + rys.height / 2).matrixTransform(przeliczenie);
-          const przycisk = document.querySelector('[data-rack-tech="' + kanal.dataset.technologiaKanalu + '"]');
-          return przycisk.contains(document.elementFromPoint(punkt.x, punkt.y));
-        });
-      });
-      assert.ok(zgodnosc, 'Kontrolki muszą skalować się razem z obrazem i odpowiadającym im obszarem wyboru');
+      const kanaly = await strona.evaluate(zmierzKanalyRack);
+      assert.equal(kanaly.length,13);
+      for(const [technologia,liczba] of Object.entries({LAN:5,FIBER:3,AIR:5}))assert.equal(kanaly.filter(kanal=>kanal.technologia===technologia).length,liczba);
+      assert.ok(kanaly.every(kanal=>kanal.zgodny),JSON.stringify(kanaly));
+      if(szerokosc===1440&&technologia==='LAN'){
+        // Próby negatywne dowodzą, że kontrola wykrywa uszkodzone modele i mapowanie.
+        for(const rodzaj of ['adapter','obszar','technologia']){
+          await strona.evaluate(rodzaj=>{
+            const element=document.querySelector(rodzaj==='adapter'?'.adapter-szafy-fiber':rodzaj==='obszar'?'[data-rack-tech="LAN"]':'[data-technologia-kanalu="LAN"]');
+            window.elementProbyRack=element;window.atrybutyProbyRack=[...element.attributes].map(atrybut=>[atrybut.name,atrybut.value]);
+            if(rodzaj==='adapter')element.setAttribute('transform','translate(3000 3000)');
+            if(rodzaj==='obszar')element.style.transform='translateX(3000px)';
+            if(rodzaj==='technologia')element.dataset.technologiaKanalu='FIBER';
+          },rodzaj);
+          try{assert.ok((await strona.evaluate(zmierzKanalyRack)).some(kanal=>!kanal.zgodny),'Kontrola musi wykrywać: '+rodzaj);}
+          finally{await strona.evaluate(()=>{const element=window.elementProbyRack;[...element.attributes].forEach(atrybut=>element.removeAttribute(atrybut.name));window.atrybutyProbyRack.forEach(([nazwa,wartosc])=>element.setAttribute(nazwa,wartosc));});}
+        }
+      }
       if (szerokosc > 1230) {
         assert.ok(pomiar.wysokoscPanelu >= pomiar.wysokoscTylnejKrawedzi - 16 - 1 && pomiar.goraTylu >= 0);
         assert.ok(pomiar.zakladka >= 24 && pomiar.zakladka <= 44);
@@ -296,6 +314,13 @@ try {
 
   // Rzeczywisty Tab/Enter/Space i szybkie wskazania nie gubią ostatniego wyboru.
   await strona.setViewportSize({ width: 1440, height: 1100 }); await strona.goto(adres);
+  await przygotujPomiarGeometrii(strona,'klawiatura');
+  const sesjaCzcionek=await strona.context().newCDPSession(strona);
+  await sesjaCzcionek.send('DOM.enable');await sesjaCzcionek.send('CSS.enable');
+  const {root:korzen}=await sesjaCzcionek.send('DOM.getDocument');
+  const {nodeId:wezel}=await sesjaCzcionek.send('DOM.querySelector',{nodeId:korzen.nodeId,selector:'#hero-tech-description'});
+  czcionkiPlatformy=(await sesjaCzcionek.send('CSS.getPlatformFontsForNode',{nodeId:wezel})).fonts;
+  await sesjaCzcionek.detach();console.log('CZCIONKI RACK:',JSON.stringify(czcionkiPlatformy));
   const poczatek = await geometria(strona);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     await strona.locator('[data-rack-tech="LAN"]').focus();
@@ -324,7 +349,9 @@ try {
     await strona.locator(`.device-tech-tabs [data-technology="${technologia}"]`).click();
     const identyfikator = `${technologia}-${oferta[technologia][0][0]}M`;
     await strona.locator(`[data-port-plan-id="${identyfikator}"]`).click();
-    await strona.waitForFunction(identyfikator => document.querySelector('#connection-state').textContent.includes(`${identyfikator}:`) && document.querySelector('#connection-state').textContent.includes('są połączone'), identyfikator);
+    await strona.waitForFunction(identyfikator => identyfikator.startsWith('FIBER-')
+      ? document.querySelector('#connection-zone').dataset.fiberState === 'CONNECTED' && document.querySelector('#plans .plan.is-selected')?.dataset.planId === identyfikator
+      : document.querySelector('#connection-state').textContent.includes(`${identyfikator}:`) && document.querySelector('#connection-state').textContent.includes('są połączone'), identyfikator);
     await strona.waitForFunction(() => document.querySelector('#link-active').getAttribute('d'));
     assert.equal(await strona.locator(`#plans [data-plan-id="${identyfikator}"]`).getAttribute('data-port-count'), '1');
     assert.equal(await strona.locator('#link-active').evaluate(element => element.getTotalLength() > 0), true);
@@ -365,18 +392,24 @@ try {
   // Mierzymy rzeczywiste miganie przez pełny okres najwolniejszego kanału.
   const miganie = await strona.evaluate(async () => {
     const kanaly = [...document.querySelectorAll('.hero-rack-stage [data-speed]')].map(kanal => ({
-      nazwa: kanal.querySelector('title').textContent, dioda: kanal.querySelector('.rj-link,.fiber-activity,.wi'), probki: [],
+      nazwa: kanal.querySelector('title').textContent, technologia: kanal.dataset.technologiaKanalu, dioda: kanal.querySelector('.rj-link,.fiber-activity,.wi'), probki: [],
     }));
     for (let numer = 0; numer < 32; numer++) {
       kanaly.forEach(kanal => kanal.probki.push(Number(getComputedStyle(kanal.dioda).opacity)));
       await new Promise(koniec => setTimeout(koniec, 173));
     }
-    return kanaly.map(kanal => ({ nazwa: kanal.nazwa, minimum: Math.min(...kanal.probki), maksimum: Math.max(...kanal.probki),
+    return kanaly.map(kanal => ({ nazwa: kanal.nazwa, technologia: kanal.technologia, minimum: Math.min(...kanal.probki), maksimum: Math.max(...kanal.probki),
       czas: kanal.dioda.getAnimations()[0].currentTime, stan: kanal.dioda.getAnimations()[0].playState }));
   });
   assert.equal(miganie.length, 13);
-  miganie.forEach(kanal => assert.ok(kanal.maksimum - kanal.minimum > .2 && kanal.stan === 'running', `Brak migania: ${kanal.nazwa}`));
+  miganie.forEach(kanal => {
+    if(kanal.technologia==='AIR')assert.ok(kanal.maksimum-kanal.minimum>.2,`Brak emisji: ${kanal.nazwa}`);
+    else {assert.equal(kanal.minimum,.85,`Przygaszone ACT: ${kanal.nazwa}`);assert.equal(kanal.maksimum,1,`Impuls ACT: ${kanal.nazwa}`);}
+    assert.equal(kanal.stan,'running',`Zatrzymana animacja: ${kanal.nazwa}`);
+  });
   for (const technologia of ['LAN', 'FIBER', 'AIR']) {
+    // Badamy nowe wejście kursora również po wyborach klawiaturą.
+    await strona.mouse.move(0,0);
     await strona.locator(`[data-rack-tech="${technologia}"]`).hover();
     await sprawdzWybor(strona, technologia, poczatek);
     const czasy = await strona.locator('.hero-rack-stage [data-speed]').evaluateAll(kanaly => kanaly.map(kanal => kanal.querySelector('.rj-link,.fiber-activity,.wi').getAnimations()[0].currentTime));
@@ -395,6 +428,7 @@ try {
 
   const dotyk = await przegladarka.newPage({ viewport: { width: 390, height: 1100 }, hasTouch: true, isMobile: true });
   sledzBledy(dotyk); await dotyk.goto(adres);
+  await przygotujPomiarGeometrii(dotyk,'dotyk');
   const poczatekDotyku = await geometria(dotyk);
   for (let powtorzenie = 0; powtorzenie < 3; powtorzenie++) {
     for (const technologia of ['LAN', 'FIBER', 'AIR']) {
@@ -421,7 +455,7 @@ try {
   assert.deepEqual(konsola, [], 'Błędy konsoli');
   console.log(`PASS klawiatura, dotyk, scroll, ograniczony ruch, 13 kanałów; ${liczbaTras} tras bez kolizji`);
 } finally {
-  await writeFile(new URL('wyniki.json', katalog), JSON.stringify({ pomiary, liczbaTras, animacjeKanalow, bledy, konsola, siec }, null, 2));
+  await writeFile(new URL('wyniki.json', katalog), JSON.stringify({ pomiary, liczbaTras, animacjeKanalow, pomiaryGotowosci, pomiaryWyborow, czcionkiPlatformy, bledy, konsola, siec }, null, 2));
   await przegladarka?.close();
   serwer.kill();
 }

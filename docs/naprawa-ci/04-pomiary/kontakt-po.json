@@ -1,0 +1,418 @@
+[
+  {
+    "profil": "system",
+    "szerokosc": 320,
+    "przycisk": {
+      "lewo": 17,
+      "prawo": 206.46875,
+      "szerokosc": 189.46875,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 35,
+          "prawo": 188.46875
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 17,
+      "prawo": 303,
+      "szerokosc": 286,
+      "font": "34px",
+      "fragmenty": [
+        {
+          "lewo": 17,
+          "prawo": 266.609375
+        },
+        {
+          "lewo": 266.609375,
+          "prawo": 266.609375
+        },
+        {
+          "lewo": 17,
+          "prawo": 155.96875
+        },
+        {
+          "lewo": 17,
+          "prawo": 198.5
+        },
+        {
+          "lewo": 17,
+          "prawo": 155.96875
+        },
+        {
+          "lewo": 17,
+          "prawo": 198.5
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "Segoe UI Black",
+        "postScriptName": "SegoeUIBlack",
+        "isCustomFont": false,
+        "glyphCount": 32
+      }
+    ]
+  },
+  {
+    "profil": "system",
+    "szerokosc": 390,
+    "przycisk": {
+      "lewo": 17,
+      "prawo": 206.46875,
+      "szerokosc": 189.46875,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 35,
+          "prawo": 188.46875
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 17,
+      "prawo": 373,
+      "szerokosc": 356,
+      "font": "40.95px",
+      "fragmenty": [
+        {
+          "lewo": 17,
+          "prawo": 317.625
+        },
+        {
+          "lewo": 317.625,
+          "prawo": 317.625
+        },
+        {
+          "lewo": 17,
+          "prawo": 184.375
+        },
+        {
+          "lewo": 17,
+          "prawo": 235.59375
+        },
+        {
+          "lewo": 17,
+          "prawo": 184.375
+        },
+        {
+          "lewo": 17,
+          "prawo": 235.59375
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "Segoe UI Black",
+        "postScriptName": "SegoeUIBlack",
+        "isCustomFont": false,
+        "glyphCount": 32
+      }
+    ]
+  },
+  {
+    "profil": "system",
+    "szerokosc": 768,
+    "przycisk": {
+      "lewo": 20,
+      "prawo": 209.46875,
+      "szerokosc": 189.46875,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 38,
+          "prawo": 191.46875
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 20,
+      "prawo": 748,
+      "szerokosc": 728,
+      "font": "41.472px",
+      "fragmenty": [
+        {
+          "lewo": 20,
+          "prawo": 324.453125
+        },
+        {
+          "lewo": 324.453125,
+          "prawo": 324.453125
+        },
+        {
+          "lewo": 20,
+          "prawo": 420.53125
+        },
+        {
+          "lewo": 20,
+          "prawo": 420.53125
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "Segoe UI Black",
+        "postScriptName": "SegoeUIBlack",
+        "isCustomFont": false,
+        "glyphCount": 33
+      }
+    ]
+  },
+  {
+    "profil": "system",
+    "szerokosc": 1440,
+    "przycisk": {
+      "lewo": 38,
+      "prawo": 227.46875,
+      "szerokosc": 189.46875,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 56,
+          "prawo": 209.46875
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 38,
+      "prawo": 978,
+      "szerokosc": 940,
+      "font": "76px",
+      "fragmenty": [
+        {
+          "lewo": 38,
+          "prawo": 595.9375
+        },
+        {
+          "lewo": 595.9375,
+          "prawo": 595.9375
+        },
+        {
+          "lewo": 38,
+          "prawo": 772.03125
+        },
+        {
+          "lewo": 38,
+          "prawo": 772.03125
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "Segoe UI Black",
+        "postScriptName": "SegoeUIBlack",
+        "isCustomFont": false,
+        "glyphCount": 33
+      }
+    ]
+  },
+  {
+    "profil": "DejaVu Sans",
+    "szerokosc": 320,
+    "przycisk": {
+      "lewo": 17,
+      "prawo": 226.65625,
+      "szerokosc": 209.65625,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 35,
+          "prawo": 208.65625
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 17,
+      "prawo": 303,
+      "szerokosc": 286,
+      "font": "34px",
+      "fragmenty": [
+        {
+          "lewo": 17,
+          "prawo": 298.9375
+        },
+        {
+          "lewo": 298.9375,
+          "prawo": 298.9375
+        },
+        {
+          "lewo": 17,
+          "prawo": 170.203125
+        },
+        {
+          "lewo": 17,
+          "prawo": 228.296875
+        },
+        {
+          "lewo": 17,
+          "prawo": 170.203125
+        },
+        {
+          "lewo": 17,
+          "prawo": 228.296875
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "DejaVu Sans",
+        "postScriptName": "DejaVuSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 32
+      }
+    ]
+  },
+  {
+    "profil": "DejaVu Sans",
+    "szerokosc": 390,
+    "przycisk": {
+      "lewo": 17,
+      "prawo": 226.65625,
+      "szerokosc": 209.65625,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 35,
+          "prawo": 208.65625
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 17,
+      "prawo": 373,
+      "szerokosc": 356,
+      "font": "40.95px",
+      "fragmenty": [
+        {
+          "lewo": 17,
+          "prawo": 356.5625
+        },
+        {
+          "lewo": 356.5625,
+          "prawo": 356.5625
+        },
+        {
+          "lewo": 17,
+          "prawo": 201.515625
+        },
+        {
+          "lewo": 17,
+          "prawo": 271.484375
+        },
+        {
+          "lewo": 17,
+          "prawo": 201.515625
+        },
+        {
+          "lewo": 17,
+          "prawo": 271.484375
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "DejaVu Sans",
+        "postScriptName": "DejaVuSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 32
+      }
+    ]
+  },
+  {
+    "profil": "DejaVu Sans",
+    "szerokosc": 768,
+    "przycisk": {
+      "lewo": 20,
+      "prawo": 229.65625,
+      "szerokosc": 209.65625,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 38,
+          "prawo": 211.65625
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 20,
+      "prawo": 748,
+      "szerokosc": 728,
+      "font": "41.472px",
+      "fragmenty": [
+        {
+          "lewo": 20,
+          "prawo": 363.875
+        },
+        {
+          "lewo": 363.875,
+          "prawo": 363.875
+        },
+        {
+          "lewo": 20,
+          "prawo": 477.140625
+        },
+        {
+          "lewo": 20,
+          "prawo": 477.140625
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "DejaVu Sans",
+        "postScriptName": "DejaVuSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 33
+      }
+    ]
+  },
+  {
+    "profil": "DejaVu Sans",
+    "szerokosc": 1440,
+    "przycisk": {
+      "lewo": 38,
+      "prawo": 247.65625,
+      "szerokosc": 209.65625,
+      "font": "11px",
+      "fragmenty": [
+        {
+          "lewo": 56,
+          "prawo": 229.65625
+        }
+      ]
+    },
+    "tytul": {
+      "lewo": 38,
+      "prawo": 978,
+      "szerokosc": 940,
+      "font": "76px",
+      "fragmenty": [
+        {
+          "lewo": 38,
+          "prawo": 668.203125
+        },
+        {
+          "lewo": 668.203125,
+          "prawo": 668.203125
+        },
+        {
+          "lewo": 38,
+          "prawo": 875.78125
+        },
+        {
+          "lewo": 38,
+          "prawo": 875.78125
+        }
+      ]
+    },
+    "fontyRzeczywiste": [
+      {
+        "familyName": "DejaVu Sans",
+        "postScriptName": "DejaVuSans-Bold",
+        "isCustomFont": false,
+        "glyphCount": 33
+      }
+    ]
+  }
+]

@@ -1,0 +1,2334 @@
+{
+  "czas": "2026-11-02T19:28:02.656Z",
+  "shaKodu": "b86891e083a0538776158ea2373df5de57af8ed9",
+  "v20": {
+    "liczbaTras": 286,
+    "szerokosci": [
+      320,
+      360,
+      375,
+      380,
+      390,
+      400,
+      414,
+      430,
+      480,
+      560,
+      760,
+      768,
+      800,
+      1024,
+      1100,
+      1230,
+      1231,
+      1280,
+      1440,
+      1500,
+      1510,
+      1920
+    ],
+    "liczbaWyborow": 112,
+    "maksymalnySkokGeometrii": 0,
+    "animacje": [
+      {
+        "nazwa": "LAN – 10 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "LAN – 20 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "LAN – 40 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "LAN – 60 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "LAN – 80 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "FIBER – 50 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "FIBER – 100 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "FIBER – 300 Mbit/s",
+        "minimum": 0.19,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "AIR – 10 Mbit/s",
+        "minimum": 0.14,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "AIR – 20 Mbit/s",
+        "minimum": 0.14,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "AIR – 40 Mbit/s",
+        "minimum": 0.14,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "AIR – 60 Mbit/s",
+        "minimum": 0.14,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      },
+      {
+        "nazwa": "AIR – 80 Mbit/s",
+        "minimum": 0.14,
+        "maksimum": 1,
+        "czas": 11416.825000003108,
+        "stan": "running"
+      }
+    ],
+    "bledy": [],
+    "konsola": [],
+    "siec": [],
+    "czcionki": [
+      {
+        "familyName": "Segoe UI",
+        "postScriptName": "SegoeUI",
+        "isCustomFont": false,
+        "glyphCount": 65
+      }
+    ]
+  },
+  "home": {
+    "szerokosci": [
+      320,
+      360,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1366,
+      1440,
+      1920,
+      2560
+    ],
+    "porownaniaSekcji": [
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 320,
+        "porownanie": {
+          "szerokosc": 320,
+          "wysokosc": 1424,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 320,
+        "porownanie": {
+          "szerokosc": 320,
+          "wysokosc": 1104,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 320,
+        "porownanie": {
+          "szerokosc": 320,
+          "wysokosc": 696,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 320,
+        "porownanie": {
+          "szerokosc": 320,
+          "wysokosc": 519,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 320,
+        "porownanie": {
+          "szerokosc": 320,
+          "wysokosc": 851,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 320,
+        "porownanie": {
+          "szerokosc": 320,
+          "wysokosc": 471,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 320,
+        "porownanie": {
+          "szerokosc": 320,
+          "wysokosc": 206,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 360,
+        "porownanie": {
+          "szerokosc": 360,
+          "wysokosc": 1378,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 360,
+        "porownanie": {
+          "szerokosc": 360,
+          "wysokosc": 1081,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 360,
+        "porownanie": {
+          "szerokosc": 360,
+          "wysokosc": 626,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 360,
+        "porownanie": {
+          "szerokosc": 360,
+          "wysokosc": 503,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 360,
+        "porownanie": {
+          "szerokosc": 360,
+          "wysokosc": 779,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 360,
+        "porownanie": {
+          "szerokosc": 360,
+          "wysokosc": 471,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 360,
+        "porownanie": {
+          "szerokosc": 360,
+          "wysokosc": 206,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 375,
+        "porownanie": {
+          "szerokosc": 375,
+          "wysokosc": 1378,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 375,
+        "porownanie": {
+          "szerokosc": 375,
+          "wysokosc": 1046,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 375,
+        "porownanie": {
+          "szerokosc": 375,
+          "wysokosc": 626,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 375,
+        "porownanie": {
+          "szerokosc": 375,
+          "wysokosc": 503,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 375,
+        "porownanie": {
+          "szerokosc": 375,
+          "wysokosc": 779,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 375,
+        "porownanie": {
+          "szerokosc": 375,
+          "wysokosc": 471,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 375,
+        "porownanie": {
+          "szerokosc": 375,
+          "wysokosc": 206,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 390,
+        "porownanie": {
+          "szerokosc": 390,
+          "wysokosc": 1378,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 390,
+        "porownanie": {
+          "szerokosc": 390,
+          "wysokosc": 1023,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 390,
+        "porownanie": {
+          "szerokosc": 390,
+          "wysokosc": 625,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 390,
+        "porownanie": {
+          "szerokosc": 390,
+          "wysokosc": 503,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 390,
+        "porownanie": {
+          "szerokosc": 390,
+          "wysokosc": 779,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 390,
+        "porownanie": {
+          "szerokosc": 390,
+          "wysokosc": 472,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 390,
+        "porownanie": {
+          "szerokosc": 390,
+          "wysokosc": 206,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 430,
+        "porownanie": {
+          "szerokosc": 430,
+          "wysokosc": 1363,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 430,
+        "porownanie": {
+          "szerokosc": 430,
+          "wysokosc": 1023,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 430,
+        "porownanie": {
+          "szerokosc": 430,
+          "wysokosc": 626,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 430,
+        "porownanie": {
+          "szerokosc": 430,
+          "wysokosc": 468,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 430,
+        "porownanie": {
+          "szerokosc": 430,
+          "wysokosc": 779,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 430,
+        "porownanie": {
+          "szerokosc": 430,
+          "wysokosc": 451,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 430,
+        "porownanie": {
+          "szerokosc": 430,
+          "wysokosc": 206,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 768,
+        "porownanie": {
+          "szerokosc": 768,
+          "wysokosc": 1232,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 768,
+        "porownanie": {
+          "szerokosc": 768,
+          "wysokosc": 889,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 768,
+        "porownanie": {
+          "szerokosc": 768,
+          "wysokosc": 458,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 768,
+        "porownanie": {
+          "szerokosc": 768,
+          "wysokosc": 305,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 768,
+        "porownanie": {
+          "szerokosc": 768,
+          "wysokosc": 439,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 768,
+        "porownanie": {
+          "szerokosc": 768,
+          "wysokosc": 286,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 768,
+        "porownanie": {
+          "szerokosc": 768,
+          "wysokosc": 170,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 1024,
+        "porownanie": {
+          "szerokosc": 1024,
+          "wysokosc": 915,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 1024,
+        "porownanie": {
+          "szerokosc": 1024,
+          "wysokosc": 564,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 1024,
+        "porownanie": {
+          "szerokosc": 1024,
+          "wysokosc": 458,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 1024,
+        "porownanie": {
+          "szerokosc": 1024,
+          "wysokosc": 249,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 1024,
+        "porownanie": {
+          "szerokosc": 1024,
+          "wysokosc": 439,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 1024,
+        "porownanie": {
+          "szerokosc": 1024,
+          "wysokosc": 294,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 1024,
+        "porownanie": {
+          "szerokosc": 1024,
+          "wysokosc": 170,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 1366,
+        "porownanie": {
+          "szerokosc": 1366,
+          "wysokosc": 546,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 1366,
+        "porownanie": {
+          "szerokosc": 1366,
+          "wysokosc": 564,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 1366,
+        "porownanie": {
+          "szerokosc": 1366,
+          "wysokosc": 321,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 1366,
+        "porownanie": {
+          "szerokosc": 1366,
+          "wysokosc": 241,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 1366,
+        "porownanie": {
+          "szerokosc": 1366,
+          "wysokosc": 302,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 1366,
+        "porownanie": {
+          "szerokosc": 1366,
+          "wysokosc": 207,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 1366,
+        "porownanie": {
+          "szerokosc": 1366,
+          "wysokosc": 170,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 1440,
+        "porownanie": {
+          "szerokosc": 1440,
+          "wysokosc": 548,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 1440,
+        "porownanie": {
+          "szerokosc": 1440,
+          "wysokosc": 564,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 1440,
+        "porownanie": {
+          "szerokosc": 1440,
+          "wysokosc": 324,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 1440,
+        "porownanie": {
+          "szerokosc": 1440,
+          "wysokosc": 244,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 1440,
+        "porownanie": {
+          "szerokosc": 1440,
+          "wysokosc": 306,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 1440,
+        "porownanie": {
+          "szerokosc": 1440,
+          "wysokosc": 210,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 1440,
+        "porownanie": {
+          "szerokosc": 1440,
+          "wysokosc": 170,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 1920,
+        "porownanie": {
+          "szerokosc": 1920,
+          "wysokosc": 550,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 1920,
+        "porownanie": {
+          "szerokosc": 1920,
+          "wysokosc": 564,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 1920,
+        "porownanie": {
+          "szerokosc": 1920,
+          "wysokosc": 324,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 1920,
+        "porownanie": {
+          "szerokosc": 1920,
+          "wysokosc": 246,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 1920,
+        "porownanie": {
+          "szerokosc": 1920,
+          "wysokosc": 309,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 1920,
+        "porownanie": {
+          "szerokosc": 1920,
+          "wysokosc": 211,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 1920,
+        "porownanie": {
+          "szerokosc": 1920,
+          "wysokosc": 170,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-uslugi",
+        "szerokosc": 2560,
+        "porownanie": {
+          "szerokosc": 2560,
+          "wysokosc": 550,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-obszar",
+        "szerokosc": 2560,
+        "porownanie": {
+          "szerokosc": 2560,
+          "wysokosc": 564,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-powody",
+        "szerokosc": 2560,
+        "porownanie": {
+          "szerokosc": 2560,
+          "wysokosc": 324,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-proces",
+        "szerokosc": 2560,
+        "porownanie": {
+          "szerokosc": 2560,
+          "wysokosc": 246,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-relacje",
+        "szerokosc": 2560,
+        "porownanie": {
+          "szerokosc": 2560,
+          "wysokosc": 309,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".sekcja-kontakt",
+        "szerokosc": 2560,
+        "porownanie": {
+          "szerokosc": 2560,
+          "wysokosc": 211,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      },
+      {
+        "strona": ".wspolna-stopka",
+        "szerokosc": 2560,
+        "porownanie": {
+          "szerokosc": 2560,
+          "wysokosc": 170,
+          "roznePiksele": 0,
+          "maksymalnaRoznica": 0,
+          "obszar": null
+        }
+      }
+    ],
+    "kontrolaUjemna": {
+      "strona": "kontrola ujemna koloru nagłówka",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 564,
+        "roznePiksele": 3299,
+        "maksymalnaRoznica": 248,
+        "obszar": {
+          "lewo": 40,
+          "prawo": 208,
+          "gora": 100,
+          "dol": 130
+        }
+      }
+    },
+    "bledy": [],
+    "konsola": []
+  },
+  "fiber": {
+    "pomiary": [
+      {
+        "szerokosc": 320,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2967.533447265625,
+        "kolizje": 0,
+        "bladKonca": 0.046951333617155505,
+        "bladPoczatku": 0.015625,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 320,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 1015.0556030273438,
+        "kolizje": 0,
+        "bladKonca": 0.0125732421875,
+        "bladPoczatku": 0.003204345703125,
+        "bladOsi": 0.00000762939453125,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 360,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2973.932373046875,
+        "kolizje": 0,
+        "bladKonca": 0.02817531165278103,
+        "bladPoczatku": 0.0438874950476092,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 360,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 1051.6646728515625,
+        "kolizje": 0,
+        "bladKonca": 0.01177978515625,
+        "bladPoczatku": 0.003814697265625,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 390,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2934.73291015625,
+        "kolizje": 0,
+        "bladKonca": 0.030031839898832735,
+        "bladPoczatku": 0.04385972961269515,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 390,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 1081.6646728515625,
+        "kolizje": 0,
+        "bladKonca": 0.0126953125,
+        "bladPoczatku": 0.0031280517578125,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 430,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2496.432861328125,
+        "kolizje": 0,
+        "bladKonca": 0.032888945584223256,
+        "bladPoczatku": 0.017913818359375,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 430,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 715.2855224609375,
+        "kolizje": 0,
+        "bladKonca": 0.06953790289950529,
+        "bladPoczatku": 0.0173797607421875,
+        "bladOsi": 0.0000152587890625,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 768,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2143.948486328125,
+        "kolizje": 0,
+        "bladKonca": 0.054059682397791506,
+        "bladPoczatku": 0.016021728515625,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 768,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 837.485595703125,
+        "kolizje": 0,
+        "bladKonca": 0.038177490234375,
+        "bladPoczatku": 0.01678466796875,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1024,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2083.848388671875,
+        "kolizje": 0,
+        "bladKonca": 0.00408935546875,
+        "bladPoczatku": 0.017730712890625,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1024,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 838.0855102539062,
+        "kolizje": 0,
+        "bladKonca": 0.013671875,
+        "bladPoczatku": 0.0172576904296875,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1280,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2160.848388671875,
+        "kolizje": 0,
+        "bladKonca": 0.019919003485379463,
+        "bladPoczatku": 0.017547607421875,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1280,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 838.0855712890625,
+        "kolizje": 0,
+        "bladKonca": 0.049957275390625,
+        "bladPoczatku": 0.018310546875,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1440,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2228.1484375,
+        "kolizje": 0,
+        "bladKonca": 0.039581098828071475,
+        "bladPoczatku": 0.016326904296875,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1440,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 837.9857177734375,
+        "kolizje": 0,
+        "bladKonca": 0.006134033203125,
+        "bladPoczatku": 0.01812744140625,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1920,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2233.848388671875,
+        "kolizje": 0,
+        "bladKonca": 0.052050786975624104,
+        "bladPoczatku": 0.016571044921875,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1920,
+        "zrodlo": "card",
+        "id": "FIBER-100M",
+        "dlugosc": 837.8856201171875,
+        "kolizje": 0,
+        "bladKonca": 0.031158447265625,
+        "bladPoczatku": 0.01806640625,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1440,
+        "zrodlo": "table",
+        "id": "FIBER-300M",
+        "dlugosc": 3158.048828125,
+        "kolizje": 0,
+        "bladKonca": 0.028515635451223473,
+        "bladPoczatku": 0.027008056640625,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 390,
+        "zrodlo": "table",
+        "id": "FIBER-300M",
+        "dlugosc": 3086.93359375,
+        "kolizje": 0,
+        "bladKonca": 0.044205070075420044,
+        "bladPoczatku": 0.04441288056558141,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.864996",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1440,
+        "zrodlo": "table",
+        "id": "FIBER-300M",
+        "dlugosc": 3127.848388671875,
+        "kolizje": 0,
+        "bladKonca": 0.03760974243897436,
+        "bladPoczatku": 0,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1440,
+        "zrodlo": "table",
+        "id": "FIBER-300M",
+        "dlugosc": 3127.848388671875,
+        "kolizje": 0,
+        "bladKonca": 0.03760974243897436,
+        "bladPoczatku": 0,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1440,
+        "zrodlo": "table",
+        "id": "FIBER-100M",
+        "dlugosc": 2659.848388671875,
+        "kolizje": 0,
+        "bladKonca": 0.03760974243897436,
+        "bladPoczatku": 0,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 1440,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2197.948486328125,
+        "kolizje": 0,
+        "bladKonca": 0.04200992653117286,
+        "bladPoczatku": 0,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 390,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2934.73291015625,
+        "kolizje": 0,
+        "bladKonca": 0.03064682105257925,
+        "bladPoczatku": 0.043964077334034256,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 844,
+        "zrodlo": "table",
+        "id": "FIBER-50M",
+        "dlugosc": 2114.748779296875,
+        "kolizje": 0,
+        "bladKonca": 0.05199425152264939,
+        "bladPoczatku": 0,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      },
+      {
+        "szerokosc": 844,
+        "zrodlo": "table",
+        "id": "FIBER-100M",
+        "dlugosc": 2456.048095703125,
+        "kolizje": 0,
+        "bladKonca": 0.048600697158789535,
+        "bladPoczatku": 0.017913818359375,
+        "bladOsi": 0,
+        "ferrulaSchowana": true,
+        "wtykNaZewnatrz": true,
+        "widocznyPrzewod": "0.92",
+        "przepelnienie": 0
+      }
+    ],
+    "bledy": []
+  },
+  "led": {
+    "wyniki": [
+      {
+        "szerokosc": 320,
+        "technologia": "LAN",
+        "przed": [
+          {
+            "okres": "1.25s",
+            "czas": 883.4009999977126,
+            "kolor": "rgb(95, 237, 134)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 0,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 0,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 0,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ],
+        "po": [
+          {
+            "taSama": true,
+            "okres": "1.25s",
+            "czas": 2075.0689999977126,
+            "kolor": "rgb(95, 237, 134)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1225.018999996793,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1225.018999996793,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1225.018999996793,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ]
+      },
+      {
+        "szerokosc": 320,
+        "technologia": "FIBER",
+        "przed": [
+          {
+            "okres": "0.333s",
+            "czas": 208.39099999908316,
+            "kolor": "rgb(183, 255, 166)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 16.704000000445696,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 16.704000000445696,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 16.704000000445696,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ],
+        "po": [
+          {
+            "taSama": true,
+            "okres": "0.333s",
+            "czas": 1449.9909999990832,
+            "kolor": "rgb(183, 255, 166)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1258.3040000004457,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1258.3040000004457,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1258.3040000004457,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ]
+      },
+      {
+        "szerokosc": 390,
+        "technologia": "LAN",
+        "przed": [
+          {
+            "okres": "1.25s",
+            "czas": 166.68299999589985,
+            "kolor": "rgb(95, 237, 134)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 0,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 0,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 0,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ],
+        "po": [
+          {
+            "taSama": true,
+            "okres": "1.25s",
+            "czas": 1200.0849999958998,
+            "kolor": "rgb(95, 237, 134)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1050.0590000001946,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1050.0590000001946,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1050.0590000001946,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ]
+      },
+      {
+        "szerokosc": 390,
+        "technologia": "FIBER",
+        "przed": [
+          {
+            "okres": "0.333s",
+            "czas": 141.62999999619785,
+            "kolor": "rgb(183, 255, 166)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 8.319999998761318,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 8.319999998761318,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 8.319999998761318,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ],
+        "po": [
+          {
+            "taSama": true,
+            "okres": "0.333s",
+            "czas": 1408.329999996198,
+            "kolor": "rgb(183, 255, 166)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1275.0199999987615,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1275.0199999987615,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1275.0199999987615,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ]
+      },
+      {
+        "szerokosc": 1440,
+        "technologia": "LAN",
+        "przed": [
+          {
+            "okres": "1.25s",
+            "czas": 200.02999999356362,
+            "kolor": "rgb(95, 237, 134)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 25.03499999962189,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 25.03499999962189,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.833s",
+            "czas": 25.03499999962189,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ],
+        "po": [
+          {
+            "taSama": true,
+            "okres": "1.25s",
+            "czas": 1374.9639999935637,
+            "kolor": "rgb(95, 237, 134)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1199.968999999622,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1199.968999999622,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.833s",
+            "czas": 1199.968999999622,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ]
+      },
+      {
+        "szerokosc": 1440,
+        "technologia": "FIBER",
+        "przed": [
+          {
+            "okres": "0.333s",
+            "czas": 166.7109999978331,
+            "kolor": "rgb(183, 255, 166)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 16.6889999962061,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 16.6889999962061,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "okres": "0.222s",
+            "czas": 16.6889999962061,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ],
+        "po": [
+          {
+            "taSama": true,
+            "okres": "0.333s",
+            "czas": 1400.0109999978329,
+            "kolor": "rgb(183, 255, 166)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1249.9889999962058,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1249.9889999962058,
+            "kolor": "rgb(221, 160, 68)"
+          },
+          {
+            "taSama": true,
+            "okres": "0.222s",
+            "czas": 1249.9889999962058,
+            "kolor": "rgb(221, 160, 68)"
+          }
+        ]
+      }
+    ],
+    "bledy": []
+  },
+  "integracja": {
+    "adres": "http://127.0.0.1:58568/",
+    "wyniki": [
+      {
+        "plik": "index.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "index.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "index.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "index.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "index.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "index.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "cennik.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "cennik.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "cennik.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "cennik.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "cennik.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "cennik.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "uslugi.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "uslugi.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "uslugi.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "uslugi.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "uslugi.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "uslugi.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "kontakt.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "kontakt.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "kontakt.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "kontakt.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "kontakt.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "kontakt.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "internet.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "internet.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "internet.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "internet.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "internet.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "internet.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "monitoring-alarmy.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "monitoring-alarmy.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "monitoring-alarmy.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "monitoring-alarmy.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "monitoring-alarmy.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "monitoring-alarmy.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "sieci-it.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "sieci-it.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "sieci-it.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "sieci-it.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "sieci-it.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "sieci-it.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "strony-www-hosting.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "strony-www-hosting.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "strony-www-hosting.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "strony-www-hosting.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "strony-www-hosting.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "strony-www-hosting.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      },
+      {
+        "plik": "instalacje-tv-sat.html",
+        "szerokosc": 320,
+        "status": "PASS"
+      },
+      {
+        "plik": "instalacje-tv-sat.html",
+        "szerokosc": 390,
+        "status": "PASS"
+      },
+      {
+        "plik": "instalacje-tv-sat.html",
+        "szerokosc": 768,
+        "status": "PASS"
+      },
+      {
+        "plik": "instalacje-tv-sat.html",
+        "szerokosc": 1024,
+        "status": "PASS"
+      },
+      {
+        "plik": "instalacje-tv-sat.html",
+        "szerokosc": 1440,
+        "status": "PASS"
+      },
+      {
+        "plik": "instalacje-tv-sat.html",
+        "szerokosc": 1920,
+        "status": "PASS"
+      }
+    ],
+    "bledy": [],
+    "zasoby": {
+      "index.html": {
+        "status": 200,
+        "sha256": "e0a82500c4142a613de05119ae8d58b1795ae7ece051a17e0986812c8470000c",
+        "cache": "no-store"
+      },
+      "assets/css/nawigacja.css": {
+        "status": 200,
+        "sha256": "6ac6db77370580e6063e7bd7759a0523562bd882aa3bdd0d58492234b3e55544",
+        "cache": "no-store"
+      },
+      "assets/css/hero.css": {
+        "status": 200,
+        "sha256": "33db5eb0e8c53a7e453147d125b35d09e5f9e28f50be4d5d6b8c34a02a1071d5",
+        "cache": "no-store"
+      },
+      "assets/css/home.css": {
+        "status": 200,
+        "sha256": "ee39a6fe1102ecee2757298b5b70683e7562316b43d15702acb2606e048fed4a",
+        "cache": "no-store"
+      },
+      "assets/img/mad-net-logo.png": {
+        "status": 200,
+        "sha256": "c4e1212686db659038f85ce9788f40912e09b522da320475c1ba794776f5c575",
+        "cache": "no-store"
+      },
+      "assets/js/stare-adresy.js": {
+        "status": 200,
+        "sha256": "c4088039686b8369371b27cf7ec38efbfe9315a678b87fe18fe692ad014ec401",
+        "cache": "no-store"
+      },
+      "assets/img/home/latarnia-hero.jpg": {
+        "status": 200,
+        "sha256": "50acdb685c79ba3bfce25e35d56922ab95fdbf4eb5af89a09a291caa67b97852",
+        "cache": "no-store"
+      },
+      "assets/js/home.js": {
+        "status": 200,
+        "sha256": "2f91655e873fa65faafb3b27351b4e6fc268835c4c726e126b01c26b5915e733",
+        "cache": "no-store"
+      },
+      "assets/js/nawigacja.js": {
+        "status": 200,
+        "sha256": "131d5308aaa4f427291b956a8e48b4d746a4dbfc5d832ada69d3ea0bc43134af",
+        "cache": "no-store"
+      },
+      "assets/img/home/pcb.svg": {
+        "status": 200,
+        "sha256": "0908f1101aaa1c97c64d0357e1aab343cf39c5c330c170d07805cf7145e077fa",
+        "cache": "no-store"
+      },
+      "assets/img/home/latarnia-tlo.jpg": {
+        "status": 200,
+        "sha256": "c365a962637171d66ce3f8b292199a1ae1bb4dd6c643ba9b6d6ab1b114ea5e7f",
+        "cache": "no-store"
+      },
+      "assets/img/home/usluga-internet.jpg": {
+        "status": 200,
+        "sha256": "61968ae3c93ff7bc21ee39ea278fe48004ce4e8f3d92123c57a9b7dc4ae9660c",
+        "cache": "no-store"
+      },
+      "assets/img/home/usluga-monitoring.jpg": {
+        "status": 200,
+        "sha256": "5effb57ed007e35bd8cf994a7b829012e24d9ce784e887f1c3668b283135252d",
+        "cache": "no-store"
+      },
+      "assets/img/home/usluga-www.jpg": {
+        "status": 200,
+        "sha256": "05a9b843673aa86dff77cc2040a80343218ed8d3b18c23ffbc75ff7660ba24ed",
+        "cache": "no-store"
+      },
+      "assets/img/home/usluga-it.jpg": {
+        "status": 200,
+        "sha256": "8aa2e3c498e69198bef87715916d94bebcc0d62094bebe53add2bf2b69d7ad15",
+        "cache": "no-store"
+      },
+      "assets/img/home/usluga-anteny.jpg": {
+        "status": 200,
+        "sha256": "878cc33a9b7f65e97a41cde4ddd6ab6cc7a08069a35059977dd2e1c3a3b463f2",
+        "cache": "no-store"
+      },
+      "assets/img/home/logo.png": {
+        "status": 200,
+        "sha256": "c2b70cc3a29016f058abbd589efd83d3af8711357cc5c6d2d9689ad1f6e096c4",
+        "cache": "no-store"
+      },
+      "cennik.html": {
+        "status": 200,
+        "sha256": "6a32ef09b3099ac371ffef31b8ed9917e949abeb7db2cb98f6358b76440e7aa7",
+        "cache": "no-store"
+      },
+      "assets/css/sprzet-fiber.css": {
+        "status": 200,
+        "sha256": "ac1daf4dff7444615bd2bcec1a61729b852f7a4e3e77e2016168beee9b769375",
+        "cache": "no-store"
+      },
+      "assets/css/hero-hybryda.css": {
+        "status": 200,
+        "sha256": "fd8d05d6a0e34138b81039f331b1123936cd9c0dd471894864c7ed5706689742",
+        "cache": "no-store"
+      },
+      "assets/css/styles.css": {
+        "status": 200,
+        "sha256": "5f405c68b63c73f4cede9526016ef182887d62026436cf69134dcb8e730d0a4d",
+        "cache": "no-store"
+      },
+      "assets/img/hero-rack-baza.svg": {
+        "status": 200,
+        "sha256": "ce21c9859295ba2dd9c8b2359c8263d2907eb134103f86f1de1ed344d069c91c",
+        "cache": "no-store"
+      },
+      "assets/img/hero-rack.png": {
+        "status": 200,
+        "sha256": "15ddd4ba9fe261f63076a93e317e73b081e031ffd57b6bffd8ef9c32af1a1b91",
+        "cache": "no-store"
+      },
+      "assets/js/sprzet-fiber.js": {
+        "status": 200,
+        "sha256": "a44f3ec09c2fa16bd4558adc66b5f574017f1411212e5855b7ad6b635ede2bc3",
+        "cache": "no-store"
+      },
+      "assets/img/hero/plyta-pcb.webp": {
+        "status": 200,
+        "sha256": "dc0496bcef5649a6405e0a2368a317b29188447177922a78bd70eaa2a4ccc171",
+        "cache": "no-store"
+      },
+      "assets/js/dostepnosc.js": {
+        "status": 200,
+        "sha256": "e473368ac64f83fc99b819ad8239ecbd83dee608174a2373c3cd075d151798cf",
+        "cache": "no-store"
+      },
+      "assets/js/wybor-technologii.js": {
+        "status": 200,
+        "sha256": "e74fa0ac2df15bd4461f5e37ab4d60c111e68f1dc2929166cf66bf45c5687f49",
+        "cache": "no-store"
+      },
+      "assets/js/hero-rack.js": {
+        "status": 200,
+        "sha256": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
+        "cache": "no-store"
+      },
+      "assets/js/cennik.js": {
+        "status": 200,
+        "sha256": "d638c99979cb11126176ff995ef5ec5432d264c26b9cf918a80d44980a8775a0",
+        "cache": "no-store"
+      },
+      "uslugi.html": {
+        "status": 200,
+        "sha256": "dc9e41462ae144f8a3b1182758070baf292f1316a9969cc947b2a3656cdac153",
+        "cache": "no-store"
+      },
+      "assets/css/uslugi.css": {
+        "status": 200,
+        "sha256": "60c3c8dff3bec2b4f91eae25ad3c9ea192590bcd86fcd68cfee669d9de532ebb",
+        "cache": "no-store"
+      },
+      "kontakt.html": {
+        "status": 200,
+        "sha256": "c6b16ff7722f62f6ae2f248eca596bbb45a3f6bdb4fd6384de8943266ab1d400",
+        "cache": "no-store"
+      },
+      "internet.html": {
+        "status": 200,
+        "sha256": "a0c63da264d2ad68b32a8537dc59903fde46708e2316e6dedef5fe2e583252ec",
+        "cache": "no-store"
+      },
+      "assets/css/oferta.css": {
+        "status": 200,
+        "sha256": "5ac752204a3325d0604aa8910a8c9900c3cf18876ebdb492b2b77d67c87afd7b",
+        "cache": "no-store"
+      },
+      "monitoring-alarmy.html": {
+        "status": 200,
+        "sha256": "0544f3fc61fc5da421738eb35e62b0f7333200ff614b65ef3e6a7736719910ee",
+        "cache": "no-store"
+      },
+      "sieci-it.html": {
+        "status": 200,
+        "sha256": "2d05ea637691c1a92a6025e3c9cd8d1cb89f4987f1336e78993f162c024a4f55",
+        "cache": "no-store"
+      },
+      "strony-www-hosting.html": {
+        "status": 200,
+        "sha256": "8a795a432e203a8cf41bc65049aaa3fe2da4757daeec9e12f0ac51eb99a9a18b",
+        "cache": "no-store"
+      },
+      "instalacje-tv-sat.html": {
+        "status": 200,
+        "sha256": "238e164c78e6cf3d2e073312be97e2cd9c1ec1b083fc04e55dbcde475605be92",
+        "cache": "no-store"
+      }
+    }
+  },
+  "pcb": {
+    "baza": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "silnik": "chromium",
+    "bledy": [],
+    "wydajnosc": {
+      "medianaMs": 8.300000000000182,
+      "p95Ms": 8.400000000000091,
+      "klatkiPonad50ms": 0
+    },
+    "pomiary": [
+      {
+        "szerokosc": 360,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 3
+      },
+      {
+        "szerokosc": 390,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 3
+      },
+      {
+        "szerokosc": 430,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 3
+      },
+      {
+        "szerokosc": 768,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 5
+      },
+      {
+        "szerokosc": 1024,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 5
+      },
+      {
+        "szerokosc": 1280,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 5
+      },
+      {
+        "szerokosc": 1440,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 5
+      },
+      {
+        "szerokosc": 1920,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 5
+      },
+      {
+        "szerokosc": 2560,
+        "przepelnienie": 0,
+        "liczbaPlytek": 3,
+        "liczbaTras": 54,
+        "poprawneTrasy": true,
+        "skosy": 90,
+        "poprawneKaty": true,
+        "proporcje": true,
+        "rozdzieloneKadry": true,
+        "kolizje": [],
+        "niezalezneDiody": true,
+        "bezPrzechwytywania": true,
+        "diody": 5
+      }
+    ]
+  }
+}

@@ -1,14 +1,15 @@
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
 import {chromium} from 'playwright-core';
 import assert from 'node:assert/strict';
 import {spawn,execFileSync} from 'node:child_process';
 import {mkdir} from 'node:fs/promises';
 const katalog='test-results/v21';await mkdir(katalog+'/po',{recursive:true});await mkdir(katalog+'/przed',{recursive:true});
-const port=process.env.MADNET_PORT_TESTOW_V21 || '4182';
+const port=await wybierzPort('MADNET_PORT_TESTOW_V21');
 const serwer=spawn(process.execPath,['scripts/serve.mjs','--root','dist','--no-live'],{env:{...process.env,PORT:port}});
 let przegladarka;
 try{
- await new Promise((ok,blad)=>{serwer.stdout.once('data',ok);serwer.once('error',blad)});
- przegladarka=await chromium.launch({headless:true,...(process.platform==='win32'?{channel:'msedge'}:{})});
+ await poczekajNaSerwer(serwer);
+ przegladarka=await uruchomPrzegladarke(chromium);
  const strona=await przegladarka.newPage();const bledy=[];strona.on('pageerror',e=>bledy.push(e.message));
  for(const szerokosc of [360,390,430,768,1024,1280,1440,1920]){
  await strona.setViewportSize({width:szerokosc,height:1100});
@@ -29,7 +30,8 @@ try{
  assert.equal(await strona.evaluate(()=>document.documentElement.scrollWidth),szerokosc);
  }
  assert.equal(await strona.locator('.compare-head-port').count(),13);
- assert.equal(await strona.locator('.compare-head-port button,.compare-head-port [tabindex]').count(),0);
+ assert.equal(await strona.locator('button.compare-head-port--FIBER').count(),3);
+ assert.equal(await strona.locator('.compare-head-port--LAN button,.compare-head-port--AIR button,.compare-head-port [tabindex]').count(),0);
  for(const technologia of ['FIBER','LAN','AIR']){
  const okresy=await strona.locator(`#comparison-${technologia} .compare-head-port`).evaluateAll(e=>e.map(t=>parseFloat(getComputedStyle(t).getPropertyValue('--pulse-ms'))));assert.ok(okresy.every((v,i)=>v>0&&(!i||v<okresy[i-1])));
  }
@@ -100,5 +102,6 @@ try{
  assert.equal(zapytania[1].position,null);assert.equal(zapytania[1].town,'Trzebiatów');
  
  await strona.emulateMedia({reducedMotion:'reduce'});assert.equal(await strona.locator('.compare-head-port .port-leds i:last-child').first().evaluate(e=>getComputedStyle(e).animationName),'none');
+ assert.equal(await strona.locator('#comparison-FIBER .sc-wskaznik').first().evaluate(e=>getComputedStyle(e).animationName),'none');
  assert.deepEqual(bledy,[]);console.log('PASS V21 geokodowanie, mapa, przeciąganie, status, dane zapytania, awaria mapy, reduced motion, brak wyjątków JS');
 }finally{await przegladarka?.close();serwer.kill()}

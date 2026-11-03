@@ -11,7 +11,7 @@
  const geosearchButton=$('availability-address-search'),submitButton=$('availability-submit');
  const interestRoot=$('availability-interests'),summary=$('availability-choice-summary');
  const MAP_CENTER=[54.063203,15.266009];
- const INTEREST_TECHS={FIBER:{name:'Światłowód',symbol:'✦',hint:'Złącze SC/UPC simplex'},LAN:{name:'Kablowy',symbol:'▣',hint:'Ethernet RJ-45'},AIR:{name:'Bezprzewodowy',symbol:'◉',hint:'Sieć radiowa'}};
+ const INTEREST_TECHS={FIBER:{name:'Światłowód',symbol:'✦',hint:'Złącze SC/APC simplex'},LAN:{name:'Kablowy',symbol:'▣',hint:'Ethernet RJ-45'},AIR:{name:'Bezprzewodowy',symbol:'◉',hint:'Sieć radiowa'}};
  const interestState={FIBER:{on:false,packages:new Set()},LAN:{on:false,packages:new Set()},AIR:{on:false,packages:new Set()}};
  let locationPoint=null, map=null, marker=null, mapLoading=false, pinSource=null, lastAddressQuery='';
  let geocoding=false,autoGeoTimer=null, previousGeoTime=0;
@@ -65,12 +65,12 @@
   updateInterestUI();
  });
  form.querySelectorAll('input[name="umowa"]').forEach(el=>el.addEventListener('change',updateInterestUI));
- // Jeżeli użytkownik wybierze pakiet na urządzeniu, dodaj go także do formularza.
- const zoneNode=$('connection-zone');
- zoneNode.addEventListener('click',ev=>{
-  const hit=ev.target.closest('[data-port-plan-id],[data-select-plan]');
+ // Wybór na urządzeniu, karcie lub gnieździe tabeli dodaje pakiet do formularza.
+ const strefaPakietow=$('cennik');
+ strefaPakietow.addEventListener('click',ev=>{
+  const hit=ev.target.closest('[data-port-plan-id],[data-select-plan],[data-gniazdo-pakiet]');
   if(!hit)return;
-  const id=hit.dataset.portPlanId||hit.dataset.selectPlan;
+  const id=hit.dataset.portPlanId||hit.dataset.selectPlan||hit.dataset.gniazdoPakiet;
   const tech=id.split('-')[0];
   if(!interestState[tech]||!PLAN_DATA[tech].some(p=>p.id===id))return;
   const state=interestState[tech];state.on=true;state.packages.add(id);updateInterestUI();

@@ -1,0 +1,31 @@
+{
+  "commit": "73d47ffd6bb892ebd6f40b86d67f922fb0d52855",
+  "V20": {
+    "liczbaTras": 286,
+    "wybory": 112,
+    "maksymalnaZmianaGeometrii": 0,
+    "czcionki": [
+      {
+        "familyName": "Segoe UI",
+        "postScriptName": "SegoeUI",
+        "isCustomFont": false,
+        "glyphCount": 65
+      }
+    ],
+    "bledy": [],
+    "konsola": []
+  },
+  "FIBER": {
+    "klucze": [
+      "pomiary",
+      "przebiegi",
+      "bledy"
+    ],
+    "geometrie": 27,
+    "bledy": []
+  },
+  "LED": {
+    "uklady": 6,
+    "bledy": []
+  }
+}

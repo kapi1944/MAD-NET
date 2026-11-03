@@ -3,7 +3,7 @@
 - **Produkt:** oficjalna strona MAD-NET, rozwijana na bazie V18 (HERO RACK 3D), bez zaczynania od zera.
 - **Kolory:** LAN czerwony, FIBER pomarańcz `#FF7B19`, AIR niebieski. Tło bardzo ciemnoszare, nie płaska czerń.
 - **Technologie i warianty:** LAN = 5; FIBER = 3; AIR = 5. Jeden centralny moduł demonstracyjny w cenniku zależny od wyboru, a w HERO trzy urządzenia ustawione w szafie RACK.
-- **Porty:** LAN RJ-45; FIBER SC/UPC **Simplex**, z zaślepkami; AIR fale radiowe, **bez fizycznych portów**.
+- **Porty (Etap 05):** LAN RJ-45; FIBER zielone SC/APC **Simplex**, polerowanie 8°, z zaślepkami panelowymi i klapkami gniazd naściennych; AIR fale radiowe, **bez fizycznych portów**. Pomarańczowy `#FF7B19` pozostaje kolorem oferty FIBER.
 - **HERO:** po lewej komunikat „Wybierz łącze. Zobacz różnicę.”, w centrum szafa RACK obrócona w 3D, po prawej kontekst technologii zależny od ostatniego wskazania.
 - **Ruch:** prędkość migania kontrolek i fal adekwatna do szybkości pakietu. Ograniczony ruch systemowy musi być respektowany.
 - **Dotyk:** scroll palcem bez przypadkowego hover; świadome przytrzymanie = podgląd, tap = wybór. Niepodłączający się gest scrollowania.

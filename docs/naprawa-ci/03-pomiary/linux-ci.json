@@ -1,0 +1,55 @@
+{
+  "run": 41399243912,
+  "sha": "e1d4b2f810df025e9e4c908ef966190d38f6075c",
+  "platforma": "Linux / Chromium",
+  "gotowosc": {
+    "przed": {
+      "szerokosc": 1440,
+      "wysokoscWidoku": 1100,
+      "przewiniecie": 0,
+      "fonty": "loaded",
+      "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "panel": {
+        "x": 1051.71875,
+        "y": 206.328125,
+        "szerokosc": 356.28125,
+        "wysokosc": 376.390625
+      },
+      "zmienne": {
+        "gora": "115.33px",
+        "lewo": "1051.72px",
+        "wysokosc": "360.16px"
+      },
+      "fokus": null,
+      "animacje": []
+    },
+    "po": {
+      "szerokosc": 1440,
+      "wysokoscWidoku": 1100,
+      "przewiniecie": 0,
+      "fonty": "loaded",
+      "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+      "panel": {
+        "x": 1051.71875,
+        "y": 206.328125,
+        "szerokosc": 356.28125,
+        "wysokosc": 376.390625
+      },
+      "zmienne": {
+        "gora": "115.33px",
+        "lewo": "1051.72px",
+        "wysokosc": "360.16px"
+      },
+      "fokus": null,
+      "animacje": []
+    }
+  },
+  "czcionki": [
+    {
+      "familyName": "DejaVu Sans",
+      "postScriptName": "DejaVuSans",
+      "isCustomFont": false,
+      "glyphCount": 65
+    }
+  ]
+}

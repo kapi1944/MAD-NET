@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
@@ -25,14 +26,37 @@ jobs:
         run: test -s dist/index.html && test -s dist/cennik.html && test -s dist/assets/js/home.js && test -s dist/assets/js/hero-rack.js
       - name: Chromium do testów V20
         run: npx playwright-core install --with-deps chromium
+      - name: Diagnostyka sieci ofert — trzy próby
+        env:
+          MADNET_DEBUG_NETWORK: '1'
+        run: |
+          mkdir -p test-results/finalizacja
+          wynik=0
+          for proba in 1 2 3; do
+            kod=0
+            node tests/oferta.browser.mjs > "test-results/finalizacja/oferta-linux-${proba}.log" 2>&1 || kod=$?
+            cp test-results/finalizacja/oferta-network.json "test-results/finalizacja/oferta-linux-${proba}.json"
+            cat "test-results/finalizacja/oferta-linux-${proba}.log"
+            echo "Próba ${proba}: exit=${kod} HEAD=$(git rev-parse HEAD)"
+            if [ "$kod" -ne 0 ]; then wynik=1; fi
+          done
+          exit "$wynik"
       - name: Regresja geometrii i interakcji V20
         run: npm run test:browser
+      - name: Regresja PCB
+        run: npm run test:pcb
+      - name: Regresja dziewięciu stron
+        run: npm run test:integracja
       - name: Zrzuty i pomiary V20
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: mad-net-v20-przegladarka
           path: |
+            test-results/finalizacja
+            test-results/integracja
+            test-results/fiber
+            test-results/pcb-4-1
             test-results/v20/po
             test-results/panel
             test-results/integracja-home-v3/04

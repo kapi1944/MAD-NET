@@ -1,0 +1,234 @@
+{
+  "czas": "2026-11-02T20:19:23.255Z",
+  "sha": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+  "main": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+  "worktree": "worktree C:/GitHub/Projects/MAD-NET\nHEAD 7d8b447a3cd7c79aceb5604bb254918b92623dec\nbranch refs/heads/codex/fiber-sc-apc-etap05\n\nworktree C:/GitHub/Projects/MAD-NET-fiber-clean\nHEAD 3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73\nbranch refs/heads/feat/fiber-sc-apc-clean\n\nworktree C:/GitHub/Projects/MAD-NET-hero-v4\nHEAD 21aa43e859c38c7d3522846abea15af19079ec69\nbranch refs/heads/feat/home-hero-premium-v4\n\nworktree C:/GitHub/Projects/MAD-NET-hover\nHEAD 2c1070655b08d5dc3fc79ba7c5b330e987004e70\nbranch refs/heads/codex/pcb-red-traces-4-1\n\nworktree C:/GitHub/Projects/MAD-NET-integracja\nHEAD 99a96ca1b3284b12b00d9a7b6addcb265b22db5b\nbranch refs/heads/feat/integracja-hero-v4-fiber\n\nworktree C:/Users/Kacper/.codex/artifacts/madnet-etap05-weryfikacja\nHEAD 49c54f831eb69a54b7023366a8437f3368b4f202\ndetached",
+  "macierz": [
+    {
+      "galaz": "codex/fiber-sc-apc-etap05",
+      "sha": "7d8b447a3cd7c79aceb5604bb254918b92623dec",
+      "ahead": 6,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": false,
+      "cherry": "+ 49c54f831eb69a54b7023366a8437f3368b4f202 Przebuduj sprzęt FIBER na SC/APC i dodaj gniazda z klapkami\n+ fd8bbae408b2fbe82a05a0ba31677b4e9ba307c2 APC SC\n+ 261f11f99c9d812cccdcf1740aeb50d307e68bb3 ustalanie cen\n+ 1cf5bf434ce8ba40b6b244cbda6e52afa619dad1 formularze\n+ c36cfad21655bb8966bbe808b2e62e317786f554 Synchronizuj LINK i bursztynowy ACT portów LAN oraz FIBER\n+ 7d8b447a3cd7c79aceb5604bb254918b92623dec instrukcja merge"
+    },
+    {
+      "galaz": "codex/hero-3-0-integracja",
+      "sha": "f9f1cc8cd8119ec219ecc57fafcaf3acaeb828ac",
+      "ahead": 0,
+      "behind": 38,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "codex/hero-3-0-proof",
+      "sha": "3dd55ce67c18e73ff17d661fd48e45265b991af0",
+      "ahead": 0,
+      "behind": 43,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "codex/hero-rack-realism-2",
+      "sha": "e3bb144bab56e58f60aee2abbcacd3cd5f3b3240",
+      "ahead": 0,
+      "behind": 49,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "codex/hero-rack-realism-2-1",
+      "sha": "245d2118eadfb98d855b38a1ef7df9db09c54577",
+      "ahead": 0,
+      "behind": 48,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "codex/home-hero-premium-v4-isolated",
+      "sha": "21aa43e859c38c7d3522846abea15af19079ec69",
+      "ahead": 4,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "codex/pcb-red-traces-4-1",
+      "sha": "2c1070655b08d5dc3fc79ba7c5b330e987004e70",
+      "ahead": 0,
+      "behind": 25,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "feat/fiber-sc-apc-clean",
+      "sha": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73",
+      "ahead": 7,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "feat/home-hero-premium-v4",
+      "sha": "21aa43e859c38c7d3522846abea15af19079ec69",
+      "ahead": 4,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "feat/integracja-hero-v4-fiber",
+      "sha": "99a96ca1b3284b12b00d9a7b6addcb265b22db5b",
+      "ahead": 18,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "feat/madnet-integracja-home-v3",
+      "sha": "8807b5587d9a43805e4c3cfb29ebedfb07f25091",
+      "ahead": 0,
+      "behind": 1,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "feat/v20-hero-rack-refinement",
+      "sha": "d232de82802ae843a3093b62ca37fd2a396e0b20",
+      "ahead": 0,
+      "behind": 50,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "main",
+      "sha": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+      "ahead": 0,
+      "behind": 0,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/codex/fiber-sc-apc-etap05",
+      "sha": "7d8b447a3cd7c79aceb5604bb254918b92623dec",
+      "ahead": 6,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": false,
+      "cherry": "+ 49c54f831eb69a54b7023366a8437f3368b4f202 Przebuduj sprzęt FIBER na SC/APC i dodaj gniazda z klapkami\n+ fd8bbae408b2fbe82a05a0ba31677b4e9ba307c2 APC SC\n+ 261f11f99c9d812cccdcf1740aeb50d307e68bb3 ustalanie cen\n+ 1cf5bf434ce8ba40b6b244cbda6e52afa619dad1 formularze\n+ c36cfad21655bb8966bbe808b2e62e317786f554 Synchronizuj LINK i bursztynowy ACT portów LAN oraz FIBER\n+ 7d8b447a3cd7c79aceb5604bb254918b92623dec instrukcja merge"
+    },
+    {
+      "galaz": "origin/codex/hero-3-0-integracja",
+      "sha": "f9f1cc8cd8119ec219ecc57fafcaf3acaeb828ac",
+      "ahead": 0,
+      "behind": 38,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/codex/hero-3-0-proof",
+      "sha": "3dd55ce67c18e73ff17d661fd48e45265b991af0",
+      "ahead": 0,
+      "behind": 43,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/codex/hero-rack-realism-2",
+      "sha": "e3bb144bab56e58f60aee2abbcacd3cd5f3b3240",
+      "ahead": 0,
+      "behind": 49,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/codex/hero-rack-realism-2-1",
+      "sha": "245d2118eadfb98d855b38a1ef7df9db09c54577",
+      "ahead": 0,
+      "behind": 48,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/codex/pcb-red-traces-4-1",
+      "sha": "2c1070655b08d5dc3fc79ba7c5b330e987004e70",
+      "ahead": 0,
+      "behind": 25,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/feat/fiber-sc-apc-clean",
+      "sha": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73",
+      "ahead": 7,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/feat/home-hero-premium-v4",
+      "sha": "21aa43e859c38c7d3522846abea15af19079ec69",
+      "ahead": 4,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/feat/integracja-hero-v4-fiber",
+      "sha": "6b7cf20834906ded5e809c511764c4763f9f304b",
+      "ahead": 17,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/feat/madnet-integracja-home-v3",
+      "sha": "8807b5587d9a43805e4c3cfb29ebedfb07f25091",
+      "ahead": 0,
+      "behind": 1,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/feat/v20-hero-rack-refinement",
+      "sha": "d232de82802ae843a3093b62ca37fd2a396e0b20",
+      "ahead": 0,
+      "behind": 50,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    },
+    {
+      "galaz": "origin/main",
+      "sha": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+      "ahead": 0,
+      "behind": 0,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": ""
+    }
+  ],
+  "obcaZmiana": "Główny worktree przeszedł z c36cfad na 7d8b447a3cd7c79aceb5604bb254918b92623dec (instrukcja merge) poza operacjami tego agenta. Plik instrukcji: ten sam SHA-256; zachowany i teraz śledzony. Innych worktree nie zmieniano."
+}

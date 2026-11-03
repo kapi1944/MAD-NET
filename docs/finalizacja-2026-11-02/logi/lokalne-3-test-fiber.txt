@@ -1,0 +1,24 @@
+
+> mad-net@0.1.0 test:fiber
+> npm run build && node tests/fiber.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS SC/APC 320px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 360px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 390px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 430px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 768px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 1024px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 1280px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 1440px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC 1920px: sekwencja, geometria, 2 trasy, ceny bez zmian
+PASS SC/APC szybkie przełączanie
+PASS SC/APC filtry tabel i klawiatura
+PASS SC/APC anulowanie i ograniczony ruch
+PASS SC/APC zrzuty stanów desktop
+PASS szybkie przełączanie, anulowanie, klawiatura, zachowanie tabel, reduced motion, tap/long press/scroll, orientacja i brak błędów JS

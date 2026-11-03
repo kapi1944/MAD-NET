@@ -1,0 +1,114 @@
+[
+  {
+    "plik": "assets/js/cennik.js",
+    "exit": 0
+  },
+  {
+    "plik": "assets/js/dostepnosc.js",
+    "exit": 0
+  },
+  {
+    "plik": "assets/js/hero-rack.js",
+    "exit": 0
+  },
+  {
+    "plik": "assets/js/home.js",
+    "exit": 0
+  },
+  {
+    "plik": "assets/js/nawigacja.js",
+    "exit": 0
+  },
+  {
+    "plik": "assets/js/sprzet-fiber.js",
+    "exit": 0
+  },
+  {
+    "plik": "assets/js/stare-adresy.js",
+    "exit": 0
+  },
+  {
+    "plik": "assets/js/wybor-technologii.js",
+    "exit": 0
+  },
+  {
+    "plik": "scripts/build.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "scripts/serve.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/build.test.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/diagnostyka-panelu.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/fiber.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/fiber.test.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/geometria-rack.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/home.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/home.test.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/integracja.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/led.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/nawigacja.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/nawigacja.test.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/oferta.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/pcb.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/projekt.test.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/srodowisko.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/srodowisko.test.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/v20.browser.mjs",
+    "exit": 0
+  },
+  {
+    "plik": "tests/v21.browser.mjs",
+    "exit": 0
+  }
+]

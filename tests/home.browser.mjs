@@ -1,4 +1,5 @@
-/* Regresja wydzielenia HOME V3: dwie strony, obrazy i rzeczywiste interakcje. */
+import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
+/* HERO V4: świadomy redesign HERO; ścisła regresja pozostałych sekcji i cennika. */
 import assert from 'node:assert/strict';
 import {readFile, mkdir, writeFile, access} from 'node:fs/promises';
 import {spawn, execFileSync} from 'node:child_process';
@@ -6,25 +7,30 @@ import {chromium} from 'playwright-core';
 
 const katalog = 'test-results/integracja-home-v3/03/home';
 await mkdir(katalog, {recursive:true});
-const port = process.env.MADNET_PORT_HOME || '4184';
+const port=await wybierzPort('MADNET_PORT_HOME');
 const adres = `http://127.0.0.1:${port}`;
-const oryginal = await readFile('docs/archiwum/MAD-NET_HOME_V3_JEDEN_PLIK_ORIGINAL.html', 'utf8');
+const bazaHero = '1987ad3';
+const oryginal = execFileSync('git', ['show', bazaHero + ':index.html'], {encoding:'utf8'}).replace('./assets/css/home.css', './assets/css/oryginal-home.css');
+const oryginalnyCss = execFileSync('git', ['show', bazaHero + ':assets/css/home.css'], {encoding:'utf8'});
 const serwer = spawn(process.execPath, ['scripts/serve.mjs', '--root', 'dist', '--no-live'], {
   env:{...process.env, PORT:port}, stdio:['ignore','pipe','pipe'],
 });
-const wyniki = [], smoke = [], bledy = [], konsola = [], kafelki = new Map();
+const wyniki = [], smoke = [], bledy = [], konsola = [], kafelki = new Map(), pomiaryZrzutow=[];
 let przegladarka;
+let argumentyPrzegladarki=[];
 
 async function przygotuj(strona, url) {
   await strona.goto(url, {waitUntil:'networkidle'});
+  await strona.mouse.move(0,0);
   await strona.evaluate(async () => {
     await document.fonts.ready;
     for (let y = 0; y < document.body.scrollHeight; y += 800) {
-      scrollTo(0, y); await new Promise(koniec => setTimeout(koniec, 30));
+      scrollTo({top:y,left:0,behavior:'instant'}); await new Promise(koniec => setTimeout(koniec, 30));
     }
-    scrollTo(0, 0);
+    scrollTo({top:0,left:0,behavior:'instant'});
   });
   await strona.waitForFunction(() => [...document.images].every(obraz => obraz.complete && obraz.naturalWidth > 0));
+  await strona.evaluate(()=>Promise.all([...document.images].map(obraz=>obraz.decode())));
 }
 
 async function porownajPiksele(strona, przed, po) {
@@ -37,7 +43,7 @@ async function porownajPiksele(strona, przed, po) {
     };
     const a = await odczytaj(pierwszy), b = await odczytaj(drugi);
     if (a.szerokosc !== b.szerokosc || a.wysokosc !== b.wysokosc) return {rozneWymiary:true};
-    let roznePiksele = 0, maksymalnaRoznica = 0;
+    let roznePiksele = 0, maksymalnaRoznica = 0, lewo=a.szerokosc, prawo=0, gora=a.wysokosc, dol=0;
     for (let i = 0; i < a.dane.length; i += 4) {
       let inny = false;
       for (let j = 0; j < 4; j++) {
@@ -45,20 +51,100 @@ async function porownajPiksele(strona, przed, po) {
         if (roznica) inny = true;
         maksymalnaRoznica = Math.max(maksymalnaRoznica, roznica);
       }
-      if (inny) roznePiksele++;
+      if (inny) {
+        roznePiksele++;const x=(i/4)%a.szerokosc,y=Math.floor(i/4/a.szerokosc);
+        lewo=Math.min(lewo,x);prawo=Math.max(prawo,x);gora=Math.min(gora,y);dol=Math.max(dol,y);
+      }
     }
-    return {szerokosc:a.szerokosc, wysokosc:a.wysokosc, roznePiksele, maksymalnaRoznica};
+    return {szerokosc:a.szerokosc, wysokosc:a.wysokosc, roznePiksele, maksymalnaRoznica,obszar:roznePiksele?{lewo,prawo,gora,dol}:null};
   }, [przed.toString('base64'), po.toString('base64')]);
+}
+
+async function zrzutSekcji(strona, selektor) {
+  // Ten sam stan wejścia i położenie viewportu w obu porównywanych dokumentach.
+  await strona.mouse.move(0,0);
+  const cel=await strona.locator(selektor).evaluate(element=>{
+    const cel=Math.min(Math.floor(element.getBoundingClientRect().top+scrollY),Math.max(0,document.documentElement.scrollHeight-innerHeight));
+    scrollTo({top:cel,left:0,behavior:'instant'});return cel;
+  });
+  await strona.evaluate(()=>new Promise(koniec=>requestAnimationFrame(()=>requestAnimationFrame(koniec))));
+  const pomiar=await strona.locator(selektor).evaluate(element=>{
+    const r=element.getBoundingClientRect();
+    return {przewiniecie:scrollY,x:r.x,y:r.y,szerokosc:r.width,wysokosc:r.height,zachowanieScroll:getComputedStyle(document.documentElement).scrollBehavior,
+      hover:[...document.querySelectorAll(':hover')].map(wezel=>wezel.tagName+'#'+wezel.id+'.'+wezel.className),
+      aktywnyElement:document.activeElement?.id||document.activeElement?.tagName};
+  });
+  assert.ok(Math.abs(pomiar.przewiniecie-cel)<1,'Ustalony viewport zrzutu '+selektor);
+  pomiaryZrzutow.push({adres:strona.url(),selektor,cel,...pomiar});
+  return strona.locator(selektor).screenshot({animations:'disabled',
+    // Mapa online ma niezależną kontrolę geometrii, CSS, treści i interakcji.
+    ...(selektor==='.sekcja-obszar'?{mask:[strona.locator('.mapa-otoczenie'),strona.locator('.mapa-ramka')]}:{}),
+  });
+}
+
+async function zrzutyPozaHero(kontekst,html,szerokosc,styl,selektory,wariant){
+  const strona=await kontekst.newPage();
+  strona.on('pageerror',blad=>bledy.push(blad.message));
+  strona.on('console',wpis=>{if(wpis.type()==='error')konsola.push(wpis.text());});
+  try{
+    await strona.setViewportSize({width:szerokosc,height:1000});
+    const url=`${adres}/porownanie-home-${wariant}.html`;
+    // Dotychczasowa normalizacja działa od pierwszego renderowania, bez historii wysokości HERO.
+    await strona.route(url,trasa=>trasa.fulfill({body:html.replace('</head>',`<style>${styl}</style></head>`),contentType:'text/html; charset=utf-8'}));
+    await przygotuj(strona,url);
+    const obrazy=[];
+    for(const selektor of selektory)obrazy.push(await zrzutSekcji(strona,selektor));
+    return obrazy;
+  }finally{await strona.close();}
 }
 
 async function geometriaHero(strona) {
   return strona.locator('.sekcja-hero').evaluate(sekcja => {
     const baza = sekcja.getBoundingClientRect();
-    return ['h1','.hero-glowne>p','.hero-przyciski','.hero-fotografia','.podpis-lokalny'].map(selektor => {
+    return ['h1','.hero-glowne>p','.hero-przyciski','.hero-fotografia','.hero-obraz'].map(selektor => {
       const element = sekcja.querySelector(selektor), r = element.getBoundingClientRect();
       if (!element.getClientRects().length) return {selektor,ukryty:true};
       const styl = getComputedStyle(element);
       return {selektor,x:r.x-baza.x,y:r.y-baza.y,szerokosc:r.width,wysokosc:r.height,font:styl.font,color:styl.color};
+    });
+  });
+}
+
+async function sprawdzHero(strona, szerokosc) {
+  const pomiary = await strona.locator('.sekcja-hero').evaluate(sekcja => {
+    const prostokat = element => {const r=element.getBoundingClientRect();return {x:r.x,y:r.y,prawa:r.right,dol:r.bottom,szerokosc:r.width,wysokosc:r.height};};
+    const tekst=sekcja.querySelector('.hero-glowne'),obraz=sekcja.querySelector('.hero-obraz'),zdjecie=sekcja.querySelector('img');
+    const elementy=[...sekcja.querySelectorAll('h1,.hero-glowne>p,.hero-przyciski a,.zaleta')];
+    return {tekst:prostokat(tekst),obraz:prostokat(obraz),zdjecie:{naturalnaSzerokosc:zdjecie.naturalWidth,naturalnaWysokosc:zdjecie.naturalHeight,dopasowanie:getComputedStyle(zdjecie).objectFit},
+      elementy:elementy.map(element=>({...prostokat(element),przewija:element.scrollWidth>element.clientWidth+1})),
+      animacja:getComputedStyle(sekcja.querySelector('.pcb-puls')).animationName};
+  });
+  const kolizja=(a,b)=>a.x<b.prawa&&a.prawa>b.x&&a.y<b.dol&&a.dol>b.y;
+  assert.ok(!kolizja(pomiary.tekst,pomiary.obraz),'Fotografia i dekoracje poza tekstem/CTA');
+  if(szerokosc<=600)assert.ok(pomiary.obraz.y>=pomiary.tekst.dol,'Na telefonie tekst i CTA przed fotografią');
+  assert.equal(pomiary.zdjecie.naturalnaSzerokosc,1145);assert.equal(pomiary.zdjecie.naturalnaWysokosc,546);
+  assert.equal(pomiary.zdjecie.dopasowanie,'cover');assert.equal(pomiary.animacja,'none');
+  for(const element of pomiary.elementy){assert.ok(element.x>=0&&element.prawa<=szerokosc+1,'HERO poza ekranem');assert.ok(!element.przewija,'Tekst/CTA przycięte');}
+  for(let numer=1;numer<pomiary.elementy.length;numer++)assert.ok(!kolizja(pomiary.elementy[numer-1],pomiary.elementy[numer]),'Kolizja treści HERO');
+  assert.equal(await strona.locator('.hero-boczny,.podpis-lokalny').count(),0);
+  assert.equal(await strona.locator('.zaleta').count(),5);
+  await strona.locator('.hero-przyciski a').first().focus();
+  await strona.keyboard.press('Tab');
+  assert.equal(await strona.evaluate(()=>document.activeElement.getAttribute('href')),'./kontakt.html');
+  await strona.emulateMedia({reducedMotion:'no-preference'});
+  assert.equal(await strona.locator('.sciezki-hero .pcb-puls').evaluate(element=>getComputedStyle(element).animationName),'hero-sygnal');
+  const przed=await strona.locator('.sciezki-hero .pcb-puls').evaluate(element=>getComputedStyle(element).strokeDashoffset);
+  await strona.waitForTimeout(100);
+  assert.notEqual(await strona.locator('.sciezki-hero .pcb-puls').evaluate(element=>getComputedStyle(element).strokeDashoffset),przed);
+  await strona.emulateMedia({reducedMotion:'reduce'});
+}
+
+async function geometriaMapy(strona) {
+  return strona.locator('.sekcja-obszar').evaluate(sekcja=>{
+    const baza=sekcja.getBoundingClientRect();
+    return [...sekcja.querySelectorAll('.mapa-ramka,.lista-miejscowosci,.lista-miejscowosci button,.etykieta-mapy,.mapa-kontrolki,.mapa-tryby,.mapa-gps-badge,.punkt-mapy')].map(element=>{
+      const r=element.getBoundingClientRect(),styl=getComputedStyle(element);
+      return {x:r.x-baza.x,y:r.y-baza.y,szerokosc:r.width,wysokosc:r.height,font:styl.font,color:styl.color,background:styl.background,transform:styl.transform,backdropFilter:styl.backdropFilter};
     });
   });
 }
@@ -84,15 +170,11 @@ async function geometriaCennika(strona) {
 }
 
 try {
-  await new Promise((gotowe, odrzuc) => {
-    const zegar = setTimeout(() => odrzuc(new Error('Brak podglądu HOME')), 8000);
-    serwer.stdout.on('data', dane => {if (String(dane).includes('MAD-NET PREVIEW')) {clearTimeout(zegar); gotowe();}});
-    serwer.once('error', odrzuc);
-  });
-  przegladarka = await chromium.launch({headless:true, args:['--disable-gpu'],
-    ...(process.env.MADNET_PRZEGLADARKA ? {executablePath:process.env.MADNET_PRZEGLADARKA}
-      : process.platform === 'win32' ? {channel:'msedge'} : {}),
-  });
+  await poczekajNaSerwer(serwer);
+  przegladarka = await uruchomPrzegladarke(chromium,{args:['--disable-gpu','--disable-skia-runtime-opts','--enable-automation']});
+  const sesjaPrzegladarki=await przegladarka.newBrowserCDPSession();
+  argumentyPrzegladarki=(await sesjaPrzegladarki.send('Browser.getBrowserCommandLine')).arguments.filter(argument=>['--disable-gpu','--disable-skia-runtime-opts','--enable-automation'].includes(argument));
+  await sesjaPrzegladarki.detach();
   const kontekst = await przegladarka.newContext({deviceScaleFactor:1, reducedMotion:'reduce'});
   // Obie strony otrzymują te same bajty prawdziwych kafelków pobranych online.
   await kontekst.route(/https:\/\/(server\.arcgisonline\.com|a\.basemaps\.cartocdn\.com)\//, async trasa => {
@@ -104,37 +186,89 @@ try {
     })());
     await trasa.fulfill(await kafelki.get(url));
   });
+  await kontekst.route(`${adres}/assets/css/oryginal-home.css`, trasa => trasa.fulfill({body:oryginalnyCss, contentType:'text/css'}));
   await kontekst.route(`${adres}/oryginal-home-v3.html`, trasa => trasa.fulfill({body:oryginal, contentType:'text/html; charset=utf-8'}));
-  const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'});
+  // Wzorzec migracji używa aktualnych skryptów: uwzględnia zatwierdzony sprzęt Etapu 05.
+  const aktualnyCennik = await readFile('cennik.html','utf8');
+  const cennikPrzed = execFileSync('git', ['show', 'a6a146b4fa2bf1d46bbebc38e79f68eaf68f2d9a:index.html'], {encoding:'utf8'})
+    .replace('<script src="./assets/js/cennik.js">','<script src="./assets/js/sprzet-fiber.js"></script><script src="./assets/js/cennik.js">')
+    .replace('</head>','<link rel="stylesheet" href="./assets/css/sprzet-fiber.css"></head>')
+    .replaceAll('SC/UPC','SC/APC')
+    .replace(/<p class="compare-sub">[\s\S]*?<\/p>/,aktualnyCennik.match(/<p class="compare-sub">[\s\S]*?<\/p>/)[0]);
   await kontekst.route(`${adres}/oryginal-cennik.html`, trasa => trasa.fulfill({body:cennikPrzed, contentType:'text/html; charset=utf-8'}));
   // Symulacja montowania niezmienionego dist w podkatalogu GitHub Pages.
   await kontekst.route(`${adres}/MAD-NET/**`, async trasa => {
     await trasa.fulfill({response:await trasa.fetch({url:trasa.request().url().replace('/MAD-NET/', '/')})});
   });
   const strona = await kontekst.newPage();
+  const reguly = await strona.evaluate(teksty => teksty.map(tekst => {
+    const arkusz = new CSSStyleSheet();arkusz.replaceSync(tekst);const wynik=[];
+    function odczytaj(reguly, warunek='') {
+      for(const regula of reguly) {
+        if(regula.name==='plynacy-sygnal')continue;
+        if(regula.cssRules)odczytaj(regula.cssRules,regula.conditionText||regula.name||warunek);
+        else if(regula.selectorText?.includes(':not(.sekcja-hero)') || !/hero|zaleta|podpis-lokalny|sciezki/.test(regula.selectorText||''))wynik.push(warunek+' '+regula.cssText);
+      }
+    }
+    odczytaj(arkusz.cssRules);return wynik;
+  }), [oryginalnyCss, await readFile('assets/css/home.css','utf8')]);
+  assert.deepEqual(reguly[1],reguly[0],'Reguły CSS poza HERO zachowują treść i kolejność V3');
   strona.on('pageerror', blad => bledy.push(blad.message));
   strona.on('console', wpis => {if (wpis.type() === 'error') konsola.push(wpis.text());});
-  for (const szerokosc of [390, 768, 1024, 1440, 1920]) {
+  for (const szerokosc of [320, 360, 375, 390, 430, 768, 1024, 1366, 1440, 1920, 2560]) {
     await strona.setViewportSize({width:szerokosc, height:1000});
     await przygotuj(strona, `${adres}/oryginal-home-v3.html`);
-    const geometriaPrzed = await geometriaHero(strona);
+
     const kartyGeometriaPrzed = await geometriaKart(strona);
+    const mapaPrzed = await geometriaMapy(strona);
     const stylPorownania = '.naglowek,.nav,.wspolny-naglowek{visibility:hidden!important}';
-    const przed = await strona.locator('.sekcja-hero').screenshot({path:`${katalog}/hero-przed-${szerokosc}.png`, style:stylPorownania});
+    const selektorySekcji = ['.sekcja-uslugi','.sekcja-obszar','.sekcja-powody','.sekcja-proces','.sekcja-relacje','.sekcja-kontakt','.wspolna-stopka'];
+    // Usunięcie HERO wyłącznie na czas porównania normalizuje pionowe przesunięcie sekcji.
+    const stylSekcji = stylPorownania + '.sekcja-hero{display:none!important}';
+    await strona.locator('.sekcja-hero').screenshot({path:`${katalog}/hero-przed-${szerokosc}.png`, style:stylPorownania});
     const kartyPrzed = await strona.locator('.siatka-uslug').screenshot({style:stylPorownania});
     await przygotuj(strona, `${adres}/index.html`);
     const geometriaPo = await geometriaHero(strona);
     const kartyGeometriaPo = await geometriaKart(strona);
-    const po = await strona.locator('.sekcja-hero').screenshot({path:`${katalog}/hero-po-${szerokosc}.png`, style:stylPorownania});
+    const mapaPo = await geometriaMapy(strona);
+    for(const [numer,element] of mapaPo.entries()){
+      for(const pole of ['x','y','szerokosc','wysokosc'])assert.ok(Math.abs(element[pole]-mapaPrzed[numer][pole])<.01,'Geometria mapy '+szerokosc+' '+numer+'.'+pole);
+      for(const pole of ['font','color','background','transform','backdropFilter'])assert.equal(element[pole],mapaPrzed[numer][pole],'Style mapy '+numer+'.'+pole);
+    }
+    await strona.locator('.sekcja-hero').screenshot({path:`${katalog}/hero-po-${szerokosc}.png`, style:stylPorownania});
     const kartyPo = await strona.locator('.siatka-uslug').screenshot({style:stylPorownania});
-    const porownanie = await porownajPiksele(strona, przed, po);
-    wyniki.push({szerokosc, porownanie, geometriaPrzed, geometriaPo});
-    assert.equal(porownanie.rozneWymiary, undefined, 'Wymiary oryginału i HOME');
-    for (let numer=0;numer<geometriaPrzed.length;numer++) {
-      if (geometriaPrzed[numer].ukryty) { assert.equal(geometriaPo[numer].ukryty,true); continue; }
-      for (const pole of ['x','y','szerokosc','wysokosc']) assert.ok(Math.abs(geometriaPrzed[numer][pole]-geometriaPo[numer][pole])<0.01,`Geometria HERO ${szerokosc}: ${geometriaPrzed[numer].selektor}.${pole}`);
-      assert.equal(geometriaPo[numer].font,geometriaPrzed[numer].font);
-      assert.equal(geometriaPo[numer].color,geometriaPrzed[numer].color);
+    wyniki.push({strona:'HERO V4', szerokosc, geometriaPo});
+    await sprawdzHero(strona, szerokosc);
+    const sekcjePrzed=[];
+    for (const [numer,selektor] of selektorySekcji.entries()) {
+      // Każda para zaczyna od świeżych dokumentów, bez wcześniejszych zrzutów innych sekcji.
+      const [obrazPrzed]=await zrzutyPozaHero(kontekst,oryginal,szerokosc,stylSekcji,[selektor],'v3');
+      const [obrazPo]=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,stylSekcji,[selektor],'v4');
+      sekcjePrzed.push(obrazPrzed);
+      const roznica = await porownajPiksele(strona, sekcjePrzed[numer], obrazPo);
+      wyniki.push({strona:selektor,szerokosc,porownanie:roznica});
+      if(roznica.roznePiksele||roznica.rozneWymiary){
+        const nazwa=selektor.replace(/[^a-z0-9-]/gi,'');
+        await writeFile(katalog+'/blad-'+nazwa+'-'+szerokosc+'-przed.png',sekcjePrzed[numer]);
+        await writeFile(katalog+'/blad-'+nazwa+'-'+szerokosc+'-po.png',obrazPo);
+        console.error('Różnica sekcji:',JSON.stringify({selektor,szerokosc,roznica,pomiary:pomiaryZrzutow.filter(wpis=>wpis.selektor===selektor).slice(-2)}));
+      }
+      assert.equal(roznica.rozneWymiary, undefined, selektor + ': wymiary');
+      assert.equal(roznica.roznePiksele,0,selektor+': regresja poza HERO '+szerokosc);
+    }
+    if(szerokosc===1440){
+      const [kontrola]=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,
+        stylSekcji+'.sekcja-obszar h2{color:#00ff00!important}',['.sekcja-obszar'],'kontrola');
+      const roznica=await porownajPiksele(strona,sekcjePrzed[1],kontrola);
+      assert.ok(roznica.roznePiksele>0,'Kontrola ujemna musi wykrywać zmianę tekstu poza mapą');
+      wyniki.push({strona:'kontrola ujemna koloru nagłówka',szerokosc,porownanie:roznica});
+    }
+    if(szerokosc===1366){
+      const [kontrola]=await zrzutyPozaHero(kontekst,await readFile('dist/index.html','utf8'),szerokosc,
+        stylSekcji+'.zdjecie-uslugi img{filter:grayscale(1)!important}',['.sekcja-uslugi'],'kontrola-obrazu');
+      const roznica=await porownajPiksele(strona,sekcjePrzed[0],kontrola);
+      assert.ok(roznica.roznePiksele>0,'Bazowa ścieżka Skia nadal musi wykrywać zmianę filtrów obrazów');
+      wyniki.push({strona:'kontrola ujemna filtra obrazów',szerokosc,porownanie:roznica});
     }
     const porownanieKart = await porownajPiksele(strona, kartyPrzed, kartyPo);
     wyniki.push({strona:'karty HOME', szerokosc, porownanie:porownanieKart, kartyGeometriaPrzed, kartyGeometriaPo});
@@ -183,7 +317,7 @@ try {
     await strona.waitForTimeout(150);
     assert.notEqual(await impuls.evaluate(element => getComputedStyle(element).strokeDashoffset), przedRuchem);
     await strona.emulateMedia({reducedMotion:'reduce'});
-    console.log(`PASS HOME ${szerokosc}px: geometria i typografia HERO bez zmian; różne piksele HERO=${porownanie.roznePiksele}, karty=${porownanieKart.roznePiksele}; mapa/PCB/linki`);
+    console.log(`PASS HOME ${szerokosc}px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki`);
   }
   for (const szerokosc of [390, 768, 1024, 1440, 1920]) {
     await strona.setViewportSize({width:szerokosc, height:1000});
@@ -229,7 +363,7 @@ try {
     const selektory = czyCennik ? ['#hero-rack-stage', '#cennik', '#oplaty', '#availability-form'] : ['#tytul-glowny', '#nawigacja', '#mapa-ramka', '.karta-uslugi'];
     for (const selektor of selektory) assert.ok(await strona.locator(selektor).count(), `${sciezka}: brak selektora ${selektor}`);
     const skrypty = await strona.locator('script[src]').evaluateAll(elementy => elementy.map(element => element.getAttribute('src')));
-    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js', './assets/js/nawigacja.js', './assets/js/wybor-technologii.js'] : ['./assets/js/stare-adresy.js', './assets/js/home.js', './assets/js/nawigacja.js']);
+    assert.deepEqual(skrypty, czyCennik ? ['./assets/js/sprzet-fiber.js', './assets/js/cennik.js', './assets/js/dostepnosc.js', './assets/js/hero-rack.js', './assets/js/nawigacja.js', './assets/js/wybor-technologii.js'] : ['./assets/js/stare-adresy.js', './assets/js/home.js', './assets/js/nawigacja.js']);
     assert.equal(await strona.locator(czyCennik ? 'link[href="./assets/css/home.css"]' : 'link[href="./assets/css/styles.css"]').count(), 0);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.css')), `${sciezka}: nie pobrano CSS`);
     assert.ok(zasoby.some(zasob => zasob.url.endsWith('.js')), `${sciezka}: nie pobrano JS`);
@@ -239,11 +373,19 @@ try {
     strona.off('response', sledz);
     console.log(`PASS smoke ${sciezka}: selektory i ${zasoby.length} odpowiedzi HTTP 200, rozdzielone CSS/JS`);
   }
+  await przygotuj(strona, adres+'/index.html');
+  await strona.locator('.hero-przyciski a').first().focus();await strona.keyboard.press('Enter');
+  await strona.waitForURL('**/cennik.html#kontakt');
+  assert.equal(await strona.locator('#availability-form').count(),1,'Pierwsze CTA prowadzi do formularza');
+  await przygotuj(strona, adres+'/index.html');
+  await strona.locator('.hero-przyciski a').last().click();await strona.waitForURL('**/kontakt.html');
+  assert.equal(await strona.locator('.tymczasowa-informacja').count(),1,'Drugie CTA zachowuje stronę kontaktową');
+  console.log('PASS CTA HERO: klawiatura → dostępność internetu; kliknięcie → kontakt');
   await assert.rejects(access('dist/docs/archiwum/MAD-NET_HOME_V3_JEDEN_PLIK_ORIGINAL.html'));
   await assert.rejects(access('dist/home.html'));
   assert.deepEqual(bledy, []); assert.deepEqual(konsola, []);
   console.log('PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli');
 } finally {
-  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, smoke, bledy, konsola, kafelkiOnline:kafelki.size}, null, 2));
+  await writeFile(`${katalog}/wyniki.json`, JSON.stringify({wyniki, smoke, bledy, konsola, pomiaryZrzutow, argumentyPrzegladarki, kafelkiOnline:kafelki.size}, null, 2));
   await przegladarka?.close(); serwer.kill();
 }

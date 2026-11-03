@@ -1,0 +1,143 @@
+
+> mad-net@0.1.0 test:browser
+> npm run build && node tests/diagnostyka-panelu.mjs && node tests/v20.browser.mjs && node tests/v21.browser.mjs && node tests/home.browser.mjs && node tests/nawigacja.browser.mjs && node tests/oferta.browser.mjs
+
+
+> mad-net@0.1.0 build
+> node scripts/build.mjs
+
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS panel 320 LAN
+PASS panel 320 FIBER
+PASS panel 320 AIR
+PASS panel 360 LAN
+PASS panel 360 FIBER
+PASS panel 360 AIR
+PASS panel 375 LAN
+PASS panel 375 FIBER
+PASS panel 375 AIR
+PASS panel 380 LAN
+PASS panel 380 FIBER
+PASS panel 380 AIR
+PASS panel 390 LAN
+PASS panel 390 FIBER
+PASS panel 390 AIR
+PASS panel 400 LAN
+PASS panel 400 FIBER
+PASS panel 400 AIR
+PASS panel 414 LAN
+PASS panel 414 FIBER
+PASS panel 414 AIR
+PASS panel 430 LAN
+PASS panel 430 FIBER
+PASS panel 430 AIR
+PASS panel 480 LAN
+PASS panel 480 FIBER
+PASS panel 480 AIR
+PASS panel 560 LAN
+PASS panel 560 FIBER
+PASS panel 560 AIR
+PASS panel 768 LAN
+PASS panel 768 FIBER
+PASS panel 768 AIR
+PASS panel 800 LAN
+PASS panel 800 FIBER
+PASS panel 800 AIR
+PASS panel 1024 LAN
+PASS panel 1024 FIBER
+PASS panel 1024 AIR
+PASS panel 1230 LAN
+PASS panel 1230 FIBER
+PASS panel 1230 AIR
+PASS panel 1231 LAN
+PASS panel 1231 FIBER
+PASS panel 1231 AIR
+PASS panel 1440 LAN
+PASS panel 1440 FIBER
+PASS panel 1440 AIR
+PASS panel 1920 LAN
+PASS panel 1920 FIBER
+PASS panel 1920 AIR
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 390px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 768px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1024px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=true
+PASS 320px: HERO, ceny, okresy, tabela i 13 tras
+PASS 360px: HERO, ceny, okresy, tabela i 13 tras
+PASS 375px: HERO, ceny, okresy, tabela i 13 tras
+PASS 380px: HERO, ceny, okresy, tabela i 13 tras
+PASS 390px: HERO, ceny, okresy, tabela i 13 tras
+PASS 400px: HERO, ceny, okresy, tabela i 13 tras
+PASS 414px: HERO, ceny, okresy, tabela i 13 tras
+PASS 430px: HERO, ceny, okresy, tabela i 13 tras
+PASS 480px: HERO, ceny, okresy, tabela i 13 tras
+PASS 560px: HERO, ceny, okresy, tabela i 13 tras
+PASS 760px: HERO, ceny, okresy, tabela i 13 tras
+PASS 768px: HERO, ceny, okresy, tabela i 13 tras
+PASS 800px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1024px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1100px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1230px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1231px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1280px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1440px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1500px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1510px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1920px: HERO, ceny, okresy, tabela i 13 tras
+PASS klawiatura, dotyk, scroll, ograniczony ruch, 13 kanałów; 286 tras bez kolizji
+PASS V21 360px / 8 kombinacji / 13 miniportów
+PASS V21 390px / 8 kombinacji / 13 miniportów
+PASS V21 430px / 8 kombinacji / 13 miniportów
+PASS V21 768px / 8 kombinacji / 13 miniportów
+PASS V21 1024px / 8 kombinacji / 13 miniportów
+PASS V21 1280px / 8 kombinacji / 13 miniportów
+PASS V21 1440px / 8 kombinacji / 13 miniportów
+PASS V21 1920px / 8 kombinacji / 13 miniportów
+PASS V21 geokodowanie, mapa, przeciąganie, status, dane zapytania, awaria mapy, reduced motion, brak wyjątków JS
+PASS HOME 320px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 360px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 375px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 390px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 430px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 768px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1024px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1366px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1440px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 1920px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS HOME 2560px: HERO V4 bez kolizji; 7 obszarów poza HERO zgodnych z bazą; mapa sprawdzana geometrycznie; mapa/PCB/linki
+PASS cennik 390px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 768px: geometria i typografia bez zmian, różne piksele=1875
+PASS cennik 1024px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1440px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1920px: geometria i typografia bez zmian, różne piksele=0
+PASS smoke /: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /cennik.html: selektory i 14 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/cennik.html: selektory i 14 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS CTA HERO: klawiatura → dostępność internetu; kliknięcie → kontakt
+PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli
+PASS linki: 238 lokalnych odnośników, 9 celów HTTP 200 i istniejące fragmenty
+PASS menu index.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS stare URL: 12 przekierowań pod / i /MAD-NET/, hashchange; inne hashe bez przekierowania
+PASS dotyk: tap, scroll bez otwierania, niskie menu HOME/cennika/katalogu, działający link usługi
+PASS internet: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS monitoring-alarmy: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS sieci-it: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS strony-www-hosting: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS instalacje-tv-sat: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS pięć stron: 30 układów, dotyk/klawiatura, CTA, brak błędów JS/konsoli/HTTP

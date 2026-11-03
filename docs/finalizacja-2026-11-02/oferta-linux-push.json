@@ -1,0 +1,158 @@
+[
+  {
+    "plik": "oferta-linux-1.json",
+    "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "shaZdarzenia": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "platforma": "linux",
+    "wersja": "156.0.8078.4",
+    "zdarzenia": 2010,
+    "bledy": [],
+    "serwer": [
+      {
+        "czas": "2026-11-02T19:22:17.520Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "MAD-NET PREVIEW: http://127.0.0.1:34843\n"
+      },
+      {
+        "czas": "2026-11-02T19:22:17.530Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "Zatrzymaj: Ctrl+C\n"
+      },
+      {
+        "czas": "2026-11-02T19:23:00.741Z",
+        "typ": "serwer-exit",
+        "plik": "instalacje-tv-sat",
+        "szerokosc": 390,
+        "href": null,
+        "scenariusz": "sprzatanie",
+        "kod": null,
+        "sygnal": "SIGTERM"
+      }
+    ]
+  },
+  {
+    "plik": "oferta-linux-2.json",
+    "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "shaZdarzenia": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "platforma": "linux",
+    "wersja": "156.0.8078.4",
+    "zdarzenia": 2080,
+    "bledy": [],
+    "serwer": [
+      {
+        "czas": "2026-11-02T19:23:01.213Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "MAD-NET PREVIEW: http://127.0.0.1:45173\n"
+      },
+      {
+        "czas": "2026-11-02T19:23:01.222Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "Zatrzymaj: Ctrl+C\n"
+      },
+      {
+        "czas": "2026-11-02T19:23:44.610Z",
+        "typ": "serwer-exit",
+        "plik": "instalacje-tv-sat",
+        "szerokosc": 390,
+        "href": null,
+        "scenariusz": "sprzatanie",
+        "kod": null,
+        "sygnal": "SIGTERM"
+      }
+    ]
+  },
+  {
+    "plik": "oferta-linux-3.json",
+    "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "shaZdarzenia": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "platforma": "linux",
+    "wersja": "156.0.8078.4",
+    "zdarzenia": 2066,
+    "bledy": [],
+    "serwer": [
+      {
+        "czas": "2026-11-02T19:23:45.084Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "MAD-NET PREVIEW: http://127.0.0.1:39291\n"
+      },
+      {
+        "czas": "2026-11-02T19:23:45.093Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "Zatrzymaj: Ctrl+C\n"
+      },
+      {
+        "czas": "2026-11-02T19:24:26.433Z",
+        "typ": "serwer-exit",
+        "plik": "instalacje-tv-sat",
+        "szerokosc": 390,
+        "href": null,
+        "scenariusz": "sprzatanie",
+        "kod": null,
+        "sygnal": "SIGTERM"
+      }
+    ]
+  },
+  {
+    "plik": "oferta-network.json",
+    "sha": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "shaZdarzenia": "b86891e083a0538776158ea2373df5de57af8ed9",
+    "platforma": "linux",
+    "wersja": "156.0.8078.4",
+    "zdarzenia": 256,
+    "bledy": [],
+    "serwer": [
+      {
+        "czas": "2026-11-02T19:36:12.185Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "MAD-NET PREVIEW: http://127.0.0.1:35115\n"
+      },
+      {
+        "czas": "2026-11-02T19:36:12.194Z",
+        "typ": "serwer-stdout",
+        "plik": null,
+        "szerokosc": null,
+        "href": null,
+        "scenariusz": "start",
+        "tekst": "Zatrzymaj: Ctrl+C\n"
+      },
+      {
+        "czas": "2026-11-02T19:36:53.003Z",
+        "typ": "serwer-exit",
+        "plik": "instalacje-tv-sat",
+        "szerokosc": 390,
+        "href": null,
+        "scenariusz": "sprzatanie",
+        "kod": null,
+        "sygnal": "SIGTERM"
+      }
+    ]
+  }
+]

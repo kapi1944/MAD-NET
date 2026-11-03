@@ -1,0 +1,101 @@
+{
+  "czcionkiPlatformy": [
+    {
+      "familyName": "Segoe UI",
+      "postScriptName": "SegoeUI",
+      "isCustomFont": false,
+      "glyphCount": 65
+    }
+  ],
+  "liczbaPomiarowWyboru": 112,
+  "maksymalnaZmianaPoInterakcji": 0,
+  "gotowosc": [
+    {
+      "etap": "klawiatura",
+      "przed": {
+        "szerokosc": 1440,
+        "wysokoscWidoku": 1100,
+        "przewiniecie": 0,
+        "fonty": "loaded",
+        "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "panel": {
+          "x": 1051.71875,
+          "y": 206.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 381.390625
+        },
+        "zmienne": {
+          "gora": "115.33px",
+          "lewo": "1051.72px",
+          "wysokosc": "360.16px"
+        },
+        "fokus": null,
+        "animacje": []
+      },
+      "po": {
+        "szerokosc": 1440,
+        "wysokoscWidoku": 1100,
+        "przewiniecie": 0,
+        "fonty": "loaded",
+        "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "panel": {
+          "x": 1051.71875,
+          "y": 206.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 381.390625
+        },
+        "zmienne": {
+          "gora": "115.33px",
+          "lewo": "1051.72px",
+          "wysokosc": "360.16px"
+        },
+        "fokus": null,
+        "animacje": []
+      }
+    },
+    {
+      "etap": "dotyk",
+      "przed": {
+        "szerokosc": 390,
+        "wysokoscWidoku": 1100,
+        "przewiniecie": 0,
+        "fonty": "loaded",
+        "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "panel": {
+          "x": 18,
+          "y": 596.96875,
+          "szerokosc": 354,
+          "wysokosc": 294.734375
+        },
+        "zmienne": {
+          "gora": "",
+          "lewo": "",
+          "wysokosc": ""
+        },
+        "fokus": null,
+        "animacje": []
+      },
+      "po": {
+        "szerokosc": 390,
+        "wysokoscWidoku": 1100,
+        "przewiniecie": 0,
+        "fonty": "loaded",
+        "czcionka": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "panel": {
+          "x": 18,
+          "y": 596.96875,
+          "szerokosc": 354,
+          "wysokosc": 294.734375
+        },
+        "zmienne": {
+          "gora": "",
+          "lewo": "",
+          "wysokosc": ""
+        },
+        "fokus": null,
+        "animacje": []
+      }
+    }
+  ],
+  "liczbaTras": 286
+}

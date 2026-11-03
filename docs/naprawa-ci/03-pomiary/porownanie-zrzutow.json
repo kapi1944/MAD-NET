@@ -1,0 +1,37 @@
+[
+  {
+    "szerokosc": 390,
+    "zatwierdzony": "933b6fadf21ca0e97a637ac8e6cf56c0db007492132224a5357d9f90daad5fed",
+    "aktualny": "933b6fadf21ca0e97a637ac8e6cf56c0db007492132224a5357d9f90daad5fed",
+    "identyczneBajty": true,
+    "roznePiksele": 0
+  },
+  {
+    "szerokosc": 768,
+    "zatwierdzony": "60e5ee3bb41978e932475734956c545d7d7f0e0acc308771a6bcef850dad89c1",
+    "aktualny": "60e5ee3bb41978e932475734956c545d7d7f0e0acc308771a6bcef850dad89c1",
+    "identyczneBajty": true,
+    "roznePiksele": 0
+  },
+  {
+    "szerokosc": 1366,
+    "zatwierdzony": "fd41ee59e8bd574f80f23969c4a767005850c2f8547da774797c528aab56a9f7",
+    "aktualny": "fd41ee59e8bd574f80f23969c4a767005850c2f8547da774797c528aab56a9f7",
+    "identyczneBajty": true,
+    "roznePiksele": 0
+  },
+  {
+    "szerokosc": 1920,
+    "zatwierdzony": "536312c1c5516afae364dc07377b294438be583c22367aaa061ff9a3731ee7ac",
+    "aktualny": "f2363fab8c50ace1ef9302e966375a6032dcca60a440e1859755d9de52849537",
+    "identyczneBajty": false,
+    "roznePiksele": 2,
+    "maksymalnaRoznica": 1,
+    "obszar": {
+      "lewo": 345,
+      "prawo": 810,
+      "gora": 980,
+      "dol": 990
+    }
+  }
+]

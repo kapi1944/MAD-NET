@@ -7,7 +7,7 @@ Ten plik obowiązuje przy pracach Codexa w repo.
 - Zaczynaj od `README.md`, `docs/PLAN_ROZWOJU.md`, `docs/DECYZJE.md` i `docs/ARCHITEKTURA.md`.
 - Nie rób refaktoru „dla porządku” kosztem wyglądu. Najpierw odtwórz błąd, potem popraw i sprawdź regresję.
 - Utrzymaj 13 pakietów: LAN 5, FIBER 3, AIR 5. Nie zmieniaj cen bez weryfikacji u właściciela.
-- LAN czerwony; FIBER `#FF7B19`; AIR niebieski. Światłowód SC/UPC SIMPLEX, AIR bez gniazd fizycznych.
+- LAN czerwony; FIBER `#FF7B19`; AIR niebieski. Światłowód SC/APC SIMPLEX (zielone złącza, polerowanie APC 8°), AIR bez gniazd fizycznych.
 - RACK HERO ma trzy urządzenia w jednej szafie, delikatną perspektywę, widoczne mocowania i dynamiczny prawy panel technologii.
 - Zapewnij hover, dotyk, klawiaturę, poprawne przewijanie na telefonie i `prefers-reduced-motion`.
 - Przewody i kropki muszą omijać inne kafelki, bez kolizji; nie zamykaj zadania bez testów na wielu szerokościach.

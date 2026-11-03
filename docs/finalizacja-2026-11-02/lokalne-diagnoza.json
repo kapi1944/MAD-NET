@@ -1,0 +1,92 @@
+[
+  {
+    "log": "test-results/finalizacja/lokalne-verify.log",
+    "koniec": "2026-11-02T19:16:30.2383440+01:00",
+    "start": "2026-11-02T19:16:26.9602576+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run verify",
+    "exit": 0
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-browser.log",
+    "koniec": "2026-11-02T19:17:14.2167613+01:00",
+    "start": "2026-11-02T19:16:30.3183371+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:browser",
+    "exit": 1
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-pcb.log",
+    "koniec": "2026-11-02T19:17:30.4649010+01:00",
+    "start": "2026-11-02T19:17:14.2687740+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:pcb",
+    "exit": 0
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-integracja.log",
+    "koniec": "2026-11-02T19:18:20.3807388+01:00",
+    "start": "2026-11-02T19:17:30.4988303+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:integracja",
+    "exit": 0
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-home.log",
+    "koniec": "2026-11-02T19:19:05.9222267+01:00",
+    "start": "2026-11-02T19:18:20.4187281+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:home",
+    "exit": 1
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-fiber.log",
+    "koniec": "2026-11-02T19:20:02.1912604+01:00",
+    "start": "2026-11-02T19:19:05.9666604+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:fiber",
+    "exit": 0
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-led.log",
+    "koniec": "2026-11-02T19:20:27.8947756+01:00",
+    "start": "2026-11-02T19:20:02.2288187+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:led",
+    "exit": 0
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-oferta.log",
+    "koniec": "2026-11-02T19:21:06.2345077+01:00",
+    "start": "2026-11-02T19:20:27.9287328+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:oferta",
+    "exit": 0
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-test-nawigacja.log",
+    "koniec": "2026-11-02T19:21:45.4449789+01:00",
+    "start": "2026-11-02T19:21:06.2731451+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "npm run test:nawigacja",
+    "exit": 0
+  },
+  {
+    "log": "test-results/finalizacja/lokalne-git-diff---check.log",
+    "koniec": "2026-11-02T19:21:46.2025762+01:00",
+    "start": "2026-11-02T19:21:45.4786040+01:00",
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "srodowisko": "Windows / Node 24.16.0 / Edge",
+    "polecenie": "git diff --check",
+    "exit": 0
+  }
+]

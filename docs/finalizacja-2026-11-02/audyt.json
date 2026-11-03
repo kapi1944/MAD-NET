@@ -1,0 +1,2256 @@
+{
+  "czas": "2026-11-02T18:13:04.445Z",
+  "main": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+  "integracja": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+  "mergeBase": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+  "worktree": "worktree C:/GitHub/Projects/MAD-NET\nHEAD c36cfad21655bb8966bbe808b2e62e317786f554\nbranch refs/heads/codex/fiber-sc-apc-etap05\n\nworktree C:/GitHub/Projects/MAD-NET-fiber-clean\nHEAD 3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73\nbranch refs/heads/feat/fiber-sc-apc-clean\n\nworktree C:/GitHub/Projects/MAD-NET-hero-v4\nHEAD 21aa43e859c38c7d3522846abea15af19079ec69\nbranch refs/heads/feat/home-hero-premium-v4\n\nworktree C:/GitHub/Projects/MAD-NET-hover\nHEAD 2c1070655b08d5dc3fc79ba7c5b330e987004e70\nbranch refs/heads/codex/pcb-red-traces-4-1\n\nworktree C:/GitHub/Projects/MAD-NET-integracja\nHEAD 1828bb8697769ef019de7a932f1dc3dd2b4e791b\nbranch refs/heads/feat/integracja-hero-v4-fiber\n\nworktree C:/Users/Kacper/.codex/artifacts/madnet-etap05-weryfikacja\nHEAD 49c54f831eb69a54b7023366a8437f3368b4f202\ndetached",
+  "repo": {
+    "nameWithOwner": "kapi1944/MAD-NET",
+    "url": "https://github.com/kapi1944/MAD-NET",
+    "viewerPermission": "ADMIN",
+    "visibility": "PUBLIC"
+  },
+  "pages": {
+    "url": "https://api.github.com/repos/kapi1944/MAD-NET/pages",
+    "status": "built",
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://kapi1944.github.io/MAD-NET/",
+    "build_type": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "rulesets": [],
+  "ochrona": "GET branches/main/protection: HTTP 404 Branch not protected; brak required checks",
+  "pr": [
+    {
+      "baseRefName": "main",
+      "commits": [
+        {
+          "authoredDate": "2026-11-01T16:02:37Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T16:02:37Z",
+          "messageBody": "",
+          "messageHeadline": "Przebuduj sprzęt FIBER na SC/APC i dodaj gniazda z klapkami",
+          "oid": "49c54f831eb69a54b7023366a8437f3368b4f202"
+        },
+        {
+          "authoredDate": "2026-11-01T16:37:50Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T16:37:50Z",
+          "messageBody": "",
+          "messageHeadline": "APC SC",
+          "oid": "fd8bbae408b2fbe82a05a0ba31677b4e9ba307c2"
+        },
+        {
+          "authoredDate": "2026-11-01T18:15:39Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T18:15:39Z",
+          "messageBody": "",
+          "messageHeadline": "ustalanie cen",
+          "oid": "261f11f99c9d812cccdcf1740aeb50d307e68bb3"
+        },
+        {
+          "authoredDate": "2026-11-01T21:09:07Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T21:09:07Z",
+          "messageBody": "",
+          "messageHeadline": "formularze",
+          "oid": "1cf5bf434ce8ba40b6b244cbda6e52afa619dad1"
+        },
+        {
+          "authoredDate": "2026-11-01T21:17:23Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T21:17:23Z",
+          "messageBody": "",
+          "messageHeadline": "Synchronizuj LINK i bursztynowy ACT portów LAN oraz FIBER",
+          "oid": "c36cfad21655bb8966bbe808b2e62e317786f554"
+        }
+      ],
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "MAD-NET_Cennik_4x3_Scenariusze_i_Decyzje.xlsx",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "MAD-NET_Cennik_4x3_Umowy_12_24_Bezterminowo_v2.xlsx",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "MAD-NET_Formularz_Decyzyjny_4x3_VIP_Korzysci_v4.html",
+          "additions": 235,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "MAD-NET_Panel_Decyzyjny_Cennik_4x3.html",
+          "additions": 173,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "README.md",
+          "additions": 2,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/hero.css",
+          "additions": 74,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "assets/css/home.css",
+          "additions": 18,
+          "deletions": 86,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/sprzet-fiber.css",
+          "additions": 83,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "assets/js/cennik.js",
+          "additions": 258,
+          "deletions": 26,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/dostepnosc.js",
+          "additions": 5,
+          "deletions": 5,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/hero-rack.js",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/sprzet-fiber.js",
+          "additions": 85,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "cennik.html",
+          "additions": 5,
+          "deletions": 3,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/ARCHITEKTURA.md",
+          "additions": 2,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/DECYZJE.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/fiber-etap05/RAPORT.md",
+          "additions": 42,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/360.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/360.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "index.html",
+          "additions": 8,
+          "deletions": 9,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "package.json",
+          "additions": 2,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/fiber.browser.mjs",
+          "additions": 232,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/home.browser.mjs",
+          "additions": 77,
+          "deletions": 16,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/home.test.mjs",
+          "additions": 4,
+          "deletions": 4,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/led.browser.mjs",
+          "additions": 15,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/v20.browser.mjs",
+          "additions": 3,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/v21.browser.mjs",
+          "additions": 3,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        }
+      ],
+      "headRefName": "codex/fiber-sc-apc-etap05",
+      "headRefOid": "c36cfad21655bb8966bbe808b2e62e317786f554",
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "number": 3,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-11-01T21:21:41Z",
+          "conclusion": "FAILURE",
+          "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41351248073/job/124981669457",
+          "name": "static-checks",
+          "startedAt": "2026-11-01T21:17:33Z",
+          "status": "COMPLETED",
+          "workflowName": "MAD-NET / jakość"
+        }
+      ],
+      "title": "Codex/fiber sc apc etap05"
+    },
+    {
+      "baseRefName": "main",
+      "commits": [
+        {
+          "authoredDate": "2026-11-01T21:14:15Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T21:14:15Z",
+          "messageBody": "",
+          "messageHeadline": "Przeprojektuj HERO HOME V4 i zachowaj regresję pozostałych sekcji",
+          "oid": "3146838e19f3838fd955b50c6d4063bf3977e387"
+        },
+        {
+          "authoredDate": "2026-11-02T06:19:56Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T06:19:56Z",
+          "messageBody": "… HERO V4",
+          "messageHeadline": "Synchronizuj pomiary RACK po inicjalizacji i zachowaj ścisłą regresję…",
+          "oid": "e1d4b2f810df025e9e4c908ef966190d38f6075c"
+        },
+        {
+          "authoredDate": "2026-11-02T06:39:59Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T06:39:59Z",
+          "messageBody": "",
+          "messageHeadline": "test: ustal stan wejścia i renderowania zrzutów HOME",
+          "oid": "56236389dc34f03623c83f6503cdd62374745ae8"
+        },
+        {
+          "authoredDate": "2026-11-02T06:45:30Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T06:45:30Z",
+          "messageBody": "",
+          "messageHeadline": "docs: zapisz pomiary i regresję RECOVERY 03 HERO V4",
+          "oid": "21aa43e859c38c7d3522846abea15af19079ec69"
+        }
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/hero.css",
+          "additions": 74,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "assets/css/home.css",
+          "additions": 18,
+          "deletions": 86,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/ARCHITEKTURA.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/hero-v4/README.md",
+          "additions": 68,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/WERYFIKACJA.md",
+          "additions": 22,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/360.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/360.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/browser.txt",
+          "additions": 143,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/home.txt",
+          "additions": 34,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/nawigacja.txt",
+          "additions": 25,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/pcb.txt",
+          "additions": 9,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/verify.txt",
+          "additions": 36,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-hero-v4.md",
+          "additions": 99,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/linux-ci.json",
+          "additions": 55,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/porownanie-zrzutow.json",
+          "additions": 37,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/windows-inicjalizacja.json",
+          "additions": 74,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/windows-regresja.json",
+          "additions": 101,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/windows-scroll.json",
+          "additions": 6,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "index.html",
+          "additions": 8,
+          "deletions": 9,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "package.json",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/home.browser.mjs",
+          "additions": 137,
+          "deletions": 23,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/home.test.mjs",
+          "additions": 9,
+          "deletions": 0,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/v20.browser.mjs",
+          "additions": 33,
+          "deletions": 3,
+          "changeType": "MODIFIED"
+        }
+      ],
+      "headRefName": "feat/home-hero-premium-v4",
+      "headRefOid": "21aa43e859c38c7d3522846abea15af19079ec69",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "mergeable": "MERGEABLE",
+      "number": 4,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-11-02T06:54:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41401950355/job/125135468575",
+          "name": "static-checks",
+          "startedAt": "2026-11-02T06:45:41Z",
+          "status": "COMPLETED",
+          "workflowName": "MAD-NET / jakość"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-11-02T06:55:09Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41401943958/job/125135449029",
+          "name": "static-checks",
+          "startedAt": "2026-11-02T06:45:47Z",
+          "status": "COMPLETED",
+          "workflowName": "MAD-NET / jakość"
+        }
+      ],
+      "title": "HOME: profesjonalna kompozycja HERO V4"
+    },
+    {
+      "baseRefName": "main",
+      "commits": [
+        {
+          "authoredDate": "2026-11-01T22:55:21Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T22:55:21Z",
+          "messageBody": "",
+          "messageHeadline": "Wyizoluj Etap 05 FIBER i LINK/ACT na bazie HOME V3",
+          "oid": "c726f655e82bbb7dd9c655c23ecc44cedecc1a49"
+        },
+        {
+          "authoredDate": "2026-11-01T23:12:33Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:12:33Z",
+          "messageBody": "",
+          "messageHeadline": "Ujednolić SC/APC oraz sprawdzanie geometrii i LINK/ACT w Windows i CI",
+          "oid": "d9f4f331ee4b198a5c1f638da5b465e598fbddb1"
+        },
+        {
+          "authoredDate": "2026-11-01T23:28:01Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:28:01Z",
+          "messageBody": "",
+          "messageHeadline": "Ustabilizuj bazowy pomiar RACK i nowe wejście kursora w regresji V20",
+          "oid": "57591c19a80db23d043a09368e72a720f9b3e1f0"
+        },
+        {
+          "authoredDate": "2026-11-01T23:38:56Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:38:56Z",
+          "messageBody": "…dotyku",
+          "messageHeadline": "Synchronizuj regresję FIBER z renderowaniem kabla i stabilnym gestem …",
+          "oid": "5f4169588abbe1fe3d3d212f5250e5d74832faf0"
+        },
+        {
+          "authoredDate": "2026-11-01T23:49:55Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:49:55Z",
+          "messageBody": "… jako pierwszą",
+          "messageHeadline": "Zapisz diagnostykę zdarzeń dotyku FIBER i uruchamiaj regresję sprzętu…",
+          "oid": "036defe961ff21eddee0df830ac30c85abbfd242"
+        },
+        {
+          "authoredDate": "2026-11-02T00:03:17Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T00:03:17Z",
+          "messageBody": "…mania",
+          "messageHeadline": "Utrzymaj wysokość instrukcji FIBER, aby podgląd nie anulował przytrzy…",
+          "oid": "9eae3324eb8ef9258ee5756c3e81149415c7a8f5"
+        },
+        {
+          "authoredDate": "2026-11-02T00:15:11Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T00:15:11Z",
+          "messageBody": "",
+          "messageHeadline": "Udokumentuj finalizację FIBER, przyczyny błędów i zielone CI RECOVERY 02",
+          "oid": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73"
+        }
+      ],
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "additions": 4,
+          "deletions": 0,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "AGENTS.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "README.md",
+          "additions": 5,
+          "deletions": 3,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/oferta.css",
+          "additions": 3,
+          "deletions": 0,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/sprzet-fiber.css",
+          "additions": 85,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "assets/css/styles.css",
+          "additions": 7,
+          "deletions": 7,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/cennik.js",
+          "additions": 258,
+          "deletions": 26,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/dostepnosc.js",
+          "additions": 6,
+          "deletions": 6,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/hero-rack.js",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/sprzet-fiber.js",
+          "additions": 85,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "cennik.html",
+          "additions": 5,
+          "deletions": 3,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/ARCHITEKTURA.md",
+          "additions": 2,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/DECYZJE.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/TESTY_MANUALNE.md",
+          "additions": 2,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/fiber-etap05/RAPORT.md",
+          "additions": 44,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/01-izolacja.md",
+          "additions": 130,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-fiber.md",
+          "additions": 149,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/fiber-led-320.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/lan-led-1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/tabela-desktop.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/tabela-mobile-390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "internet.html",
+          "additions": 5,
+          "deletions": 5,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "package.json",
+          "additions": 4,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/diagnostyka-panelu.mjs",
+          "additions": 8,
+          "deletions": 9,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/fiber.browser.mjs",
+          "additions": 256,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/fiber.test.mjs",
+          "additions": 9,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/geometria-rack.mjs",
+          "additions": 29,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/home.browser.mjs",
+          "additions": 12,
+          "deletions": 12,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/home.test.mjs",
+          "additions": 13,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/led.browser.mjs",
+          "additions": 84,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/nawigacja.browser.mjs",
+          "additions": 4,
+          "deletions": 8,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/oferta.browser.mjs",
+          "additions": 4,
+          "deletions": 8,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/pcb.browser.mjs",
+          "additions": 4,
+          "deletions": 12,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/srodowisko.mjs",
+          "additions": 42,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/srodowisko.test.mjs",
+          "additions": 22,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/v20.browser.mjs",
+          "additions": 38,
+          "deletions": 28,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/v21.browser.mjs",
+          "additions": 7,
+          "deletions": 4,
+          "changeType": "MODIFIED"
+        }
+      ],
+      "headRefName": "feat/fiber-sc-apc-clean",
+      "headRefOid": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "mergeable": "MERGEABLE",
+      "number": 5,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-11-02T00:25:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41366150059/job/125026618882",
+          "name": "static-checks",
+          "startedAt": "2026-11-02T00:15:21Z",
+          "status": "COMPLETED",
+          "workflowName": "MAD-NET / jakość"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-11-02T00:25:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41366144180/job/125026602211",
+          "name": "static-checks",
+          "startedAt": "2026-11-02T00:15:18Z",
+          "status": "COMPLETED",
+          "workflowName": "MAD-NET / jakość"
+        }
+      ],
+      "title": "Etap 05: izolowany FIBER SC/APC, LINK/ACT i regresja CI"
+    },
+    {
+      "baseRefName": "main",
+      "commits": [
+        {
+          "authoredDate": "2026-11-01T21:14:15Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T21:14:15Z",
+          "messageBody": "",
+          "messageHeadline": "Przeprojektuj HERO HOME V4 i zachowaj regresję pozostałych sekcji",
+          "oid": "3146838e19f3838fd955b50c6d4063bf3977e387"
+        },
+        {
+          "authoredDate": "2026-11-01T22:55:21Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T22:55:21Z",
+          "messageBody": "",
+          "messageHeadline": "Wyizoluj Etap 05 FIBER i LINK/ACT na bazie HOME V3",
+          "oid": "c726f655e82bbb7dd9c655c23ecc44cedecc1a49"
+        },
+        {
+          "authoredDate": "2026-11-01T23:12:33Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:12:33Z",
+          "messageBody": "",
+          "messageHeadline": "Ujednolić SC/APC oraz sprawdzanie geometrii i LINK/ACT w Windows i CI",
+          "oid": "d9f4f331ee4b198a5c1f638da5b465e598fbddb1"
+        },
+        {
+          "authoredDate": "2026-11-01T23:28:01Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:28:01Z",
+          "messageBody": "",
+          "messageHeadline": "Ustabilizuj bazowy pomiar RACK i nowe wejście kursora w regresji V20",
+          "oid": "57591c19a80db23d043a09368e72a720f9b3e1f0"
+        },
+        {
+          "authoredDate": "2026-11-01T23:38:56Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:38:56Z",
+          "messageBody": "…dotyku",
+          "messageHeadline": "Synchronizuj regresję FIBER z renderowaniem kabla i stabilnym gestem …",
+          "oid": "5f4169588abbe1fe3d3d212f5250e5d74832faf0"
+        },
+        {
+          "authoredDate": "2026-11-01T23:49:55Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-01T23:49:55Z",
+          "messageBody": "… jako pierwszą",
+          "messageHeadline": "Zapisz diagnostykę zdarzeń dotyku FIBER i uruchamiaj regresję sprzętu…",
+          "oid": "036defe961ff21eddee0df830ac30c85abbfd242"
+        },
+        {
+          "authoredDate": "2026-11-02T00:03:17Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T00:03:17Z",
+          "messageBody": "…mania",
+          "messageHeadline": "Utrzymaj wysokość instrukcji FIBER, aby podgląd nie anulował przytrzy…",
+          "oid": "9eae3324eb8ef9258ee5756c3e81149415c7a8f5"
+        },
+        {
+          "authoredDate": "2026-11-02T00:15:11Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T00:15:11Z",
+          "messageBody": "",
+          "messageHeadline": "Udokumentuj finalizację FIBER, przyczyny błędów i zielone CI RECOVERY 02",
+          "oid": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73"
+        },
+        {
+          "authoredDate": "2026-11-02T06:19:56Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T06:19:56Z",
+          "messageBody": "… HERO V4",
+          "messageHeadline": "Synchronizuj pomiary RACK po inicjalizacji i zachowaj ścisłą regresję…",
+          "oid": "e1d4b2f810df025e9e4c908ef966190d38f6075c"
+        },
+        {
+          "authoredDate": "2026-11-02T06:39:59Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T06:39:59Z",
+          "messageBody": "",
+          "messageHeadline": "test: ustal stan wejścia i renderowania zrzutów HOME",
+          "oid": "56236389dc34f03623c83f6503cdd62374745ae8"
+        },
+        {
+          "authoredDate": "2026-11-02T06:45:30Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T06:45:30Z",
+          "messageBody": "",
+          "messageHeadline": "docs: zapisz pomiary i regresję RECOVERY 03 HERO V4",
+          "oid": "21aa43e859c38c7d3522846abea15af19079ec69"
+        },
+        {
+          "authoredDate": "2026-11-02T07:01:18Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T07:01:18Z",
+          "messageBody": "",
+          "messageHeadline": "merge: zintegruj HERO V4 ze sprzętem SC/APC i LINK/ACT",
+          "oid": "73d47ffd6bb892ebd6f40b86d67f922fb0d52855"
+        },
+        {
+          "authoredDate": "2026-11-02T07:10:59Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T07:10:59Z",
+          "messageBody": "",
+          "messageHeadline": "fix: zabezpiecz tekst kontaktu i udokumentuj regresję integracji",
+          "oid": "4a68a7829e5884d1a18ca57cae42219f4c00a790"
+        },
+        {
+          "authoredDate": "2026-11-02T07:30:30Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T07:30:30Z",
+          "messageBody": "",
+          "messageHeadline": "fix: ustabilizuj porównanie HOME i tytuł kontaktu na Linuxie",
+          "oid": "61561afba644bf3c41b76a6307ed402c2d20280b"
+        },
+        {
+          "authoredDate": "2026-11-02T07:45:47Z",
+          "authors": [
+            {
+              "email": "kacper.madej.97@gmail.com",
+              "id": "U_kgDOEVfglA",
+              "login": "kapi1944",
+              "name": "kapi1944"
+            }
+          ],
+          "committedDate": "2026-11-02T07:45:47Z",
+          "messageBody": "",
+          "messageHeadline": "docs: potwierdź zielone CI i końcowe pomiary RECOVERY 04",
+          "oid": "1828bb8697769ef019de7a932f1dc3dd2b4e791b"
+        }
+      ],
+      "files": [
+        {
+          "path": ".github/workflows/ci.yml",
+          "additions": 7,
+          "deletions": 0,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "AGENTS.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "README.md",
+          "additions": 7,
+          "deletions": 4,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/hero.css",
+          "additions": 74,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "assets/css/home.css",
+          "additions": 18,
+          "deletions": 86,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/oferta.css",
+          "additions": 3,
+          "deletions": 0,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/sprzet-fiber.css",
+          "additions": 85,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "assets/css/styles.css",
+          "additions": 7,
+          "deletions": 7,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/css/uslugi.css",
+          "additions": 2,
+          "deletions": 0,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/cennik.js",
+          "additions": 258,
+          "deletions": 26,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/dostepnosc.js",
+          "additions": 6,
+          "deletions": 6,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/hero-rack.js",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "assets/js/sprzet-fiber.js",
+          "additions": 85,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "cennik.html",
+          "additions": 5,
+          "deletions": 3,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/ARCHITEKTURA.md",
+          "additions": 3,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/DECYZJE.md",
+          "additions": 1,
+          "deletions": 1,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/TESTY_MANUALNE.md",
+          "additions": 2,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "docs/fiber-etap05/RAPORT.md",
+          "additions": 44,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/README.md",
+          "additions": 68,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/WERYFIKACJA.md",
+          "additions": 22,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/360.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/po/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/porownania/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/360.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/przed/768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/browser.txt",
+          "additions": 143,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/home.txt",
+          "additions": 34,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/nawigacja.txt",
+          "additions": 25,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/pcb.txt",
+          "additions": 9,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/hero-v4/wyniki/verify.txt",
+          "additions": 36,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/01-izolacja.md",
+          "additions": 130,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-fiber.md",
+          "additions": 149,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/fiber-led-320.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/lan-led-1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/tabela-desktop.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/02-zrzuty/tabela-mobile-390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-hero-v4.md",
+          "additions": 99,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/linux-ci.json",
+          "additions": 55,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/porownanie-zrzutow.json",
+          "additions": 37,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/windows-inicjalizacja.json",
+          "additions": 74,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/windows-regresja.json",
+          "additions": 101,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-pomiary/windows-scroll.json",
+          "additions": 6,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-1366.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/03-zrzuty/home-768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-integracja.md",
+          "additions": 108,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/ci-roznica-tla.json",
+          "additions": 143,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/ci-roznica-tla.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/dziewiec-stron.json",
+          "additions": 468,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/home-kanoniczny.json",
+          "additions": 22,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/kontakt-dejavu.json",
+          "additions": 72,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/kontakt-po.json",
+          "additions": 418,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/kontakt-przed.json",
+          "additions": 58,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/kontakt-tytul-przed.json",
+          "additions": 36,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/linux-ci.json",
+          "additions": 233,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-pomiary/regresja-lokalna.json",
+          "additions": 31,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/dziewiec-stron-1024.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/dziewiec-stron-1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/dziewiec-stron-1920.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/dziewiec-stron-320.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/dziewiec-stron-390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/dziewiec-stron-768.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/fiber-led-390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/lan-led-1440.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/tabela-desktop.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "docs/naprawa-ci/04-zrzuty/tabela-mobile-390.png",
+          "additions": 0,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "index.html",
+          "additions": 8,
+          "deletions": 9,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "internet.html",
+          "additions": 5,
+          "deletions": 5,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "package.json",
+          "additions": 5,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/diagnostyka-panelu.mjs",
+          "additions": 8,
+          "deletions": 9,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/fiber.browser.mjs",
+          "additions": 257,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/fiber.test.mjs",
+          "additions": 9,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/geometria-rack.mjs",
+          "additions": 29,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/home.browser.mjs",
+          "additions": 164,
+          "deletions": 35,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/home.test.mjs",
+          "additions": 22,
+          "deletions": 2,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/integracja.browser.mjs",
+          "additions": 80,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/led.browser.mjs",
+          "additions": 85,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/nawigacja.browser.mjs",
+          "additions": 4,
+          "deletions": 8,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/oferta.browser.mjs",
+          "additions": 4,
+          "deletions": 8,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/pcb.browser.mjs",
+          "additions": 4,
+          "deletions": 12,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/srodowisko.mjs",
+          "additions": 42,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/srodowisko.test.mjs",
+          "additions": 22,
+          "deletions": 0,
+          "changeType": "ADDED"
+        },
+        {
+          "path": "tests/v20.browser.mjs",
+          "additions": 59,
+          "deletions": 29,
+          "changeType": "MODIFIED"
+        },
+        {
+          "path": "tests/v21.browser.mjs",
+          "additions": 7,
+          "deletions": 4,
+          "changeType": "MODIFIED"
+        }
+      ],
+      "headRefName": "feat/integracja-hero-v4-fiber",
+      "headRefOid": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+      "isDraft": true,
+      "mergeStateStatus": "UNSTABLE",
+      "mergeable": "MERGEABLE",
+      "number": 6,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-11-02T07:57:24Z",
+          "conclusion": "FAILURE",
+          "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41408400330/job/125155574433",
+          "name": "static-checks",
+          "startedAt": "2026-11-02T07:45:57Z",
+          "status": "COMPLETED",
+          "workflowName": "MAD-NET / jakość"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-11-02T07:58:32Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/kapi1944/MAD-NET/actions/runs/41408393673/job/125155553470",
+          "name": "static-checks",
+          "startedAt": "2026-11-02T07:45:54Z",
+          "status": "COMPLETED",
+          "workflowName": "MAD-NET / jakość"
+        }
+      ],
+      "title": "Integracja HERO V4 + FIBER SC/APC i LINK/ACT"
+    }
+  ],
+  "runy": [
+    {
+      "conclusion": "failure",
+      "databaseId": 41408400330,
+      "event": "pull_request",
+      "headSha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+      "status": "completed",
+      "url": "https://github.com/kapi1944/MAD-NET/actions/runs/41408400330"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 41408393673,
+      "event": "push",
+      "headSha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+      "status": "completed",
+      "url": "https://github.com/kapi1944/MAD-NET/actions/runs/41408393673"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 41406756932,
+      "event": "pull_request",
+      "headSha": "61561afba644bf3c41b76a6307ed402c2d20280b",
+      "status": "completed",
+      "url": "https://github.com/kapi1944/MAD-NET/actions/runs/41406756932"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 41406752257,
+      "event": "push",
+      "headSha": "61561afba644bf3c41b76a6307ed402c2d20280b",
+      "status": "completed",
+      "url": "https://github.com/kapi1944/MAD-NET/actions/runs/41406752257"
+    },
+    {
+      "conclusion": "failure",
+      "databaseId": 41404677398,
+      "event": "pull_request",
+      "headSha": "4a68a7829e5884d1a18ca57cae42219f4c00a790",
+      "status": "completed",
+      "url": "https://github.com/kapi1944/MAD-NET/actions/runs/41404677398"
+    },
+    {
+      "conclusion": "failure",
+      "databaseId": 41404643136,
+      "event": "push",
+      "headSha": "4a68a7829e5884d1a18ca57cae42219f4c00a790",
+      "status": "completed",
+      "url": "https://github.com/kapi1944/MAD-NET/actions/runs/41404643136"
+    }
+  ],
+  "macierz": [
+    {
+      "galaz": "codex/fiber-sc-apc-etap05",
+      "sha": "c36cfad21655bb8966bbe808b2e62e317786f554",
+      "ahead": 5,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": false,
+      "cherry": "+ 49c54f831eb69a54b7023366a8437f3368b4f202 Przebuduj sprzęt FIBER na SC/APC i dodaj gniazda z klapkami\n+ fd8bbae408b2fbe82a05a0ba31677b4e9ba307c2 APC SC\n+ 261f11f99c9d812cccdcf1740aeb50d307e68bb3 ustalanie cen\n+ 1cf5bf434ce8ba40b6b244cbda6e52afa619dad1 formularze\n+ c36cfad21655bb8966bbe808b2e62e317786f554 Synchronizuj LINK i bursztynowy ACT portów LAN oraz FIBER",
+      "pliki": "M\tAGENTS.md\nA\tMAD-NET_Cennik_4x3_Scenariusze_i_Decyzje.xlsx\nA\tMAD-NET_Cennik_4x3_Umowy_12_24_Bezterminowo_v2.xlsx\nA\tMAD-NET_Formularz_Decyzyjny_4x3_VIP_Korzysci_v4.html\nA\tMAD-NET_Panel_Decyzyjny_Cennik_4x3.html\nM\tREADME.md\nA\tassets/css/hero.css\nM\tassets/css/home.css\nA\tassets/css/sprzet-fiber.css\nM\tassets/js/cennik.js\nM\tassets/js/dostepnosc.js\nM\tassets/js/hero-rack.js\nA\tassets/js/sprzet-fiber.js\nM\tcennik.html\nM\tdocs/ARCHITEKTURA.md\nM\tdocs/DECYZJE.md\nA\tdocs/fiber-etap05/RAPORT.md\nA\tdocs/hero-v4/po/1366.png\nA\tdocs/hero-v4/po/1440.png\nA\tdocs/hero-v4/po/1920.png\nA\tdocs/hero-v4/po/360.png\nA\tdocs/hero-v4/po/390.png\nA\tdocs/hero-v4/po/768.png\nA\tdocs/hero-v4/przed/1366.png\nA\tdocs/hero-v4/przed/1440.png\nA\tdocs/hero-v4/przed/1920.png\nA\tdocs/hero-v4/przed/360.png\nA\tdocs/hero-v4/przed/390.png\nA\tdocs/hero-v4/przed/768.png\nM\tindex.html\nM\tpackage.json\nA\ttests/fiber.browser.mjs\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nA\ttests/led.browser.mjs\nM\ttests/v20.browser.mjs\nM\ttests/v21.browser.mjs",
+      "commity": "c36cfad Synchronizuj LINK i bursztynowy ACT portów LAN oraz FIBER\n1cf5bf4 formularze\n261f11f ustalanie cen\nfd8bbae APC SC\n49c54f8 Przebuduj sprzęt FIBER na SC/APC i dodaj gniazda z klapkami"
+    },
+    {
+      "galaz": "codex/hero-3-0-integracja",
+      "sha": "f9f1cc8cd8119ec219ecc57fafcaf3acaeb828ac",
+      "ahead": 0,
+      "behind": 38,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "codex/hero-3-0-proof",
+      "sha": "3dd55ce67c18e73ff17d661fd48e45265b991af0",
+      "ahead": 0,
+      "behind": 43,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "codex/hero-rack-realism-2",
+      "sha": "e3bb144bab56e58f60aee2abbcacd3cd5f3b3240",
+      "ahead": 0,
+      "behind": 49,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "codex/hero-rack-realism-2-1",
+      "sha": "245d2118eadfb98d855b38a1ef7df9db09c54577",
+      "ahead": 0,
+      "behind": 48,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "codex/home-hero-premium-v4-isolated",
+      "sha": "21aa43e859c38c7d3522846abea15af19079ec69",
+      "ahead": 4,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "M\tREADME.md\nA\tassets/css/hero.css\nM\tassets/css/home.css\nM\tdocs/ARCHITEKTURA.md\nA\tdocs/hero-v4/README.md\nA\tdocs/hero-v4/WERYFIKACJA.md\nA\tdocs/hero-v4/po/1366.png\nA\tdocs/hero-v4/po/1440.png\nA\tdocs/hero-v4/po/1920.png\nA\tdocs/hero-v4/po/360.png\nA\tdocs/hero-v4/po/390.png\nA\tdocs/hero-v4/po/768.png\nA\tdocs/hero-v4/porownania/1366.png\nA\tdocs/hero-v4/porownania/1920.png\nA\tdocs/hero-v4/porownania/390.png\nA\tdocs/hero-v4/porownania/768.png\nA\tdocs/hero-v4/przed/1366.png\nA\tdocs/hero-v4/przed/1440.png\nA\tdocs/hero-v4/przed/1920.png\nA\tdocs/hero-v4/przed/360.png\nA\tdocs/hero-v4/przed/390.png\nA\tdocs/hero-v4/przed/768.png\nA\tdocs/hero-v4/wyniki/browser.txt\nA\tdocs/hero-v4/wyniki/home.txt\nA\tdocs/hero-v4/wyniki/nawigacja.txt\nA\tdocs/hero-v4/wyniki/pcb.txt\nA\tdocs/hero-v4/wyniki/verify.txt\nA\tdocs/naprawa-ci/03-hero-v4.md\nA\tdocs/naprawa-ci/03-pomiary/linux-ci.json\nA\tdocs/naprawa-ci/03-pomiary/porownanie-zrzutow.json\nA\tdocs/naprawa-ci/03-pomiary/windows-inicjalizacja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-regresja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-scroll.json\nA\tdocs/naprawa-ci/03-zrzuty/home-1366.png\nA\tdocs/naprawa-ci/03-zrzuty/home-1920.png\nA\tdocs/naprawa-ci/03-zrzuty/home-390.png\nA\tdocs/naprawa-ci/03-zrzuty/home-768.png\nM\tindex.html\nM\tpackage.json\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nM\ttests/v20.browser.mjs",
+      "commity": "21aa43e docs: zapisz pomiary i regresję RECOVERY 03 HERO V4\n5623638 test: ustal stan wejścia i renderowania zrzutów HOME\ne1d4b2f Synchronizuj pomiary RACK po inicjalizacji i zachowaj ścisłą regresję HERO V4\n3146838 Przeprojektuj HERO HOME V4 i zachowaj regresję pozostałych sekcji"
+    },
+    {
+      "galaz": "codex/pcb-red-traces-4-1",
+      "sha": "2c1070655b08d5dc3fc79ba7c5b330e987004e70",
+      "ahead": 0,
+      "behind": 25,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "feat/fiber-sc-apc-clean",
+      "sha": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73",
+      "ahead": 7,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "M\t.github/workflows/ci.yml\nM\tAGENTS.md\nM\tREADME.md\nM\tassets/css/oferta.css\nA\tassets/css/sprzet-fiber.css\nM\tassets/css/styles.css\nM\tassets/js/cennik.js\nM\tassets/js/dostepnosc.js\nM\tassets/js/hero-rack.js\nA\tassets/js/sprzet-fiber.js\nM\tcennik.html\nM\tdocs/ARCHITEKTURA.md\nM\tdocs/DECYZJE.md\nM\tdocs/TESTY_MANUALNE.md\nA\tdocs/fiber-etap05/RAPORT.md\nA\tdocs/naprawa-ci/01-izolacja.md\nA\tdocs/naprawa-ci/02-fiber.md\nA\tdocs/naprawa-ci/02-zrzuty/fiber-led-320.png\nA\tdocs/naprawa-ci/02-zrzuty/lan-led-1440.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-desktop.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-mobile-390.png\nM\tinternet.html\nM\tpackage.json\nM\ttests/diagnostyka-panelu.mjs\nA\ttests/fiber.browser.mjs\nA\ttests/fiber.test.mjs\nA\ttests/geometria-rack.mjs\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nA\ttests/led.browser.mjs\nM\ttests/nawigacja.browser.mjs\nM\ttests/oferta.browser.mjs\nM\ttests/pcb.browser.mjs\nA\ttests/srodowisko.mjs\nA\ttests/srodowisko.test.mjs\nM\ttests/v20.browser.mjs\nM\ttests/v21.browser.mjs",
+      "commity": "3b3d7b4 Udokumentuj finalizację FIBER, przyczyny błędów i zielone CI RECOVERY 02\n9eae332 Utrzymaj wysokość instrukcji FIBER, aby podgląd nie anulował przytrzymania\n036defe Zapisz diagnostykę zdarzeń dotyku FIBER i uruchamiaj regresję sprzętu jako pierwszą\n5f41695 Synchronizuj regresję FIBER z renderowaniem kabla i stabilnym gestem dotyku\n57591c1 Ustabilizuj bazowy pomiar RACK i nowe wejście kursora w regresji V20\nd9f4f33 Ujednolić SC/APC oraz sprawdzanie geometrii i LINK/ACT w Windows i CI\nc726f65 Wyizoluj Etap 05 FIBER i LINK/ACT na bazie HOME V3"
+    },
+    {
+      "galaz": "feat/home-hero-premium-v4",
+      "sha": "21aa43e859c38c7d3522846abea15af19079ec69",
+      "ahead": 4,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "M\tREADME.md\nA\tassets/css/hero.css\nM\tassets/css/home.css\nM\tdocs/ARCHITEKTURA.md\nA\tdocs/hero-v4/README.md\nA\tdocs/hero-v4/WERYFIKACJA.md\nA\tdocs/hero-v4/po/1366.png\nA\tdocs/hero-v4/po/1440.png\nA\tdocs/hero-v4/po/1920.png\nA\tdocs/hero-v4/po/360.png\nA\tdocs/hero-v4/po/390.png\nA\tdocs/hero-v4/po/768.png\nA\tdocs/hero-v4/porownania/1366.png\nA\tdocs/hero-v4/porownania/1920.png\nA\tdocs/hero-v4/porownania/390.png\nA\tdocs/hero-v4/porownania/768.png\nA\tdocs/hero-v4/przed/1366.png\nA\tdocs/hero-v4/przed/1440.png\nA\tdocs/hero-v4/przed/1920.png\nA\tdocs/hero-v4/przed/360.png\nA\tdocs/hero-v4/przed/390.png\nA\tdocs/hero-v4/przed/768.png\nA\tdocs/hero-v4/wyniki/browser.txt\nA\tdocs/hero-v4/wyniki/home.txt\nA\tdocs/hero-v4/wyniki/nawigacja.txt\nA\tdocs/hero-v4/wyniki/pcb.txt\nA\tdocs/hero-v4/wyniki/verify.txt\nA\tdocs/naprawa-ci/03-hero-v4.md\nA\tdocs/naprawa-ci/03-pomiary/linux-ci.json\nA\tdocs/naprawa-ci/03-pomiary/porownanie-zrzutow.json\nA\tdocs/naprawa-ci/03-pomiary/windows-inicjalizacja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-regresja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-scroll.json\nA\tdocs/naprawa-ci/03-zrzuty/home-1366.png\nA\tdocs/naprawa-ci/03-zrzuty/home-1920.png\nA\tdocs/naprawa-ci/03-zrzuty/home-390.png\nA\tdocs/naprawa-ci/03-zrzuty/home-768.png\nM\tindex.html\nM\tpackage.json\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nM\ttests/v20.browser.mjs",
+      "commity": "21aa43e docs: zapisz pomiary i regresję RECOVERY 03 HERO V4\n5623638 test: ustal stan wejścia i renderowania zrzutów HOME\ne1d4b2f Synchronizuj pomiary RACK po inicjalizacji i zachowaj ścisłą regresję HERO V4\n3146838 Przeprojektuj HERO HOME V4 i zachowaj regresję pozostałych sekcji"
+    },
+    {
+      "galaz": "feat/integracja-hero-v4-fiber",
+      "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+      "ahead": 15,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "M\t.github/workflows/ci.yml\nM\tAGENTS.md\nM\tREADME.md\nA\tassets/css/hero.css\nM\tassets/css/home.css\nM\tassets/css/oferta.css\nA\tassets/css/sprzet-fiber.css\nM\tassets/css/styles.css\nM\tassets/css/uslugi.css\nM\tassets/js/cennik.js\nM\tassets/js/dostepnosc.js\nM\tassets/js/hero-rack.js\nA\tassets/js/sprzet-fiber.js\nM\tcennik.html\nM\tdocs/ARCHITEKTURA.md\nM\tdocs/DECYZJE.md\nM\tdocs/TESTY_MANUALNE.md\nA\tdocs/fiber-etap05/RAPORT.md\nA\tdocs/hero-v4/README.md\nA\tdocs/hero-v4/WERYFIKACJA.md\nA\tdocs/hero-v4/po/1366.png\nA\tdocs/hero-v4/po/1440.png\nA\tdocs/hero-v4/po/1920.png\nA\tdocs/hero-v4/po/360.png\nA\tdocs/hero-v4/po/390.png\nA\tdocs/hero-v4/po/768.png\nA\tdocs/hero-v4/porownania/1366.png\nA\tdocs/hero-v4/porownania/1920.png\nA\tdocs/hero-v4/porownania/390.png\nA\tdocs/hero-v4/porownania/768.png\nA\tdocs/hero-v4/przed/1366.png\nA\tdocs/hero-v4/przed/1440.png\nA\tdocs/hero-v4/przed/1920.png\nA\tdocs/hero-v4/przed/360.png\nA\tdocs/hero-v4/przed/390.png\nA\tdocs/hero-v4/przed/768.png\nA\tdocs/hero-v4/wyniki/browser.txt\nA\tdocs/hero-v4/wyniki/home.txt\nA\tdocs/hero-v4/wyniki/nawigacja.txt\nA\tdocs/hero-v4/wyniki/pcb.txt\nA\tdocs/hero-v4/wyniki/verify.txt\nA\tdocs/naprawa-ci/01-izolacja.md\nA\tdocs/naprawa-ci/02-fiber.md\nA\tdocs/naprawa-ci/02-zrzuty/fiber-led-320.png\nA\tdocs/naprawa-ci/02-zrzuty/lan-led-1440.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-desktop.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-mobile-390.png\nA\tdocs/naprawa-ci/03-hero-v4.md\nA\tdocs/naprawa-ci/03-pomiary/linux-ci.json\nA\tdocs/naprawa-ci/03-pomiary/porownanie-zrzutow.json\nA\tdocs/naprawa-ci/03-pomiary/windows-inicjalizacja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-regresja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-scroll.json\nA\tdocs/naprawa-ci/03-zrzuty/home-1366.png\nA\tdocs/naprawa-ci/03-zrzuty/home-1920.png\nA\tdocs/naprawa-ci/03-zrzuty/home-390.png\nA\tdocs/naprawa-ci/03-zrzuty/home-768.png\nA\tdocs/naprawa-ci/04-integracja.md\nA\tdocs/naprawa-ci/04-pomiary/ci-roznica-tla.json\nA\tdocs/naprawa-ci/04-pomiary/ci-roznica-tla.png\nA\tdocs/naprawa-ci/04-pomiary/dziewiec-stron.json\nA\tdocs/naprawa-ci/04-pomiary/home-kanoniczny.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-dejavu.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-po.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-przed.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-tytul-przed.json\nA\tdocs/naprawa-ci/04-pomiary/linux-ci.json\nA\tdocs/naprawa-ci/04-pomiary/regresja-lokalna.json\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-1024.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-1440.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-1920.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-320.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-390.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-768.png\nA\tdocs/naprawa-ci/04-zrzuty/fiber-led-390.png\nA\tdocs/naprawa-ci/04-zrzuty/lan-led-1440.png\nA\tdocs/naprawa-ci/04-zrzuty/tabela-desktop.png\nA\tdocs/naprawa-ci/04-zrzuty/tabela-mobile-390.png\nM\tindex.html\nM\tinternet.html\nM\tpackage.json\nM\ttests/diagnostyka-panelu.mjs\nA\ttests/fiber.browser.mjs\nA\ttests/fiber.test.mjs\nA\ttests/geometria-rack.mjs\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nA\ttests/integracja.browser.mjs\nA\ttests/led.browser.mjs\nM\ttests/nawigacja.browser.mjs\nM\ttests/oferta.browser.mjs\nM\ttests/pcb.browser.mjs\nA\ttests/srodowisko.mjs\nA\ttests/srodowisko.test.mjs\nM\ttests/v20.browser.mjs\nM\ttests/v21.browser.mjs",
+      "commity": "1828bb8 docs: potwierdź zielone CI i końcowe pomiary RECOVERY 04\n61561af fix: ustabilizuj porównanie HOME i tytuł kontaktu na Linuxie\n4a68a78 fix: zabezpiecz tekst kontaktu i udokumentuj regresję integracji\n73d47ff merge: zintegruj HERO V4 ze sprzętem SC/APC i LINK/ACT\n21aa43e docs: zapisz pomiary i regresję RECOVERY 03 HERO V4\n5623638 test: ustal stan wejścia i renderowania zrzutów HOME\ne1d4b2f Synchronizuj pomiary RACK po inicjalizacji i zachowaj ścisłą regresję HERO V4\n3b3d7b4 Udokumentuj finalizację FIBER, przyczyny błędów i zielone CI RECOVERY 02\n9eae332 Utrzymaj wysokość instrukcji FIBER, aby podgląd nie anulował przytrzymania\n036defe Zapisz diagnostykę zdarzeń dotyku FIBER i uruchamiaj regresję sprzętu jako pierwszą\n5f41695 Synchronizuj regresję FIBER z renderowaniem kabla i stabilnym gestem dotyku\n57591c1 Ustabilizuj bazowy pomiar RACK i nowe wejście kursora w regresji V20\nd9f4f33 Ujednolić SC/APC oraz sprawdzanie geometrii i LINK/ACT w Windows i CI\nc726f65 Wyizoluj Etap 05 FIBER i LINK/ACT na bazie HOME V3\n3146838 Przeprojektuj HERO HOME V4 i zachowaj regresję pozostałych sekcji"
+    },
+    {
+      "galaz": "feat/madnet-integracja-home-v3",
+      "sha": "8807b5587d9a43805e4c3cfb29ebedfb07f25091",
+      "ahead": 0,
+      "behind": 1,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "feat/v20-hero-rack-refinement",
+      "sha": "d232de82802ae843a3093b62ca37fd2a396e0b20",
+      "ahead": 0,
+      "behind": 50,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "main",
+      "sha": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+      "ahead": 0,
+      "behind": 0,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/codex/fiber-sc-apc-etap05",
+      "sha": "c36cfad21655bb8966bbe808b2e62e317786f554",
+      "ahead": 5,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": false,
+      "cherry": "+ 49c54f831eb69a54b7023366a8437f3368b4f202 Przebuduj sprzęt FIBER na SC/APC i dodaj gniazda z klapkami\n+ fd8bbae408b2fbe82a05a0ba31677b4e9ba307c2 APC SC\n+ 261f11f99c9d812cccdcf1740aeb50d307e68bb3 ustalanie cen\n+ 1cf5bf434ce8ba40b6b244cbda6e52afa619dad1 formularze\n+ c36cfad21655bb8966bbe808b2e62e317786f554 Synchronizuj LINK i bursztynowy ACT portów LAN oraz FIBER",
+      "pliki": "M\tAGENTS.md\nA\tMAD-NET_Cennik_4x3_Scenariusze_i_Decyzje.xlsx\nA\tMAD-NET_Cennik_4x3_Umowy_12_24_Bezterminowo_v2.xlsx\nA\tMAD-NET_Formularz_Decyzyjny_4x3_VIP_Korzysci_v4.html\nA\tMAD-NET_Panel_Decyzyjny_Cennik_4x3.html\nM\tREADME.md\nA\tassets/css/hero.css\nM\tassets/css/home.css\nA\tassets/css/sprzet-fiber.css\nM\tassets/js/cennik.js\nM\tassets/js/dostepnosc.js\nM\tassets/js/hero-rack.js\nA\tassets/js/sprzet-fiber.js\nM\tcennik.html\nM\tdocs/ARCHITEKTURA.md\nM\tdocs/DECYZJE.md\nA\tdocs/fiber-etap05/RAPORT.md\nA\tdocs/hero-v4/po/1366.png\nA\tdocs/hero-v4/po/1440.png\nA\tdocs/hero-v4/po/1920.png\nA\tdocs/hero-v4/po/360.png\nA\tdocs/hero-v4/po/390.png\nA\tdocs/hero-v4/po/768.png\nA\tdocs/hero-v4/przed/1366.png\nA\tdocs/hero-v4/przed/1440.png\nA\tdocs/hero-v4/przed/1920.png\nA\tdocs/hero-v4/przed/360.png\nA\tdocs/hero-v4/przed/390.png\nA\tdocs/hero-v4/przed/768.png\nM\tindex.html\nM\tpackage.json\nA\ttests/fiber.browser.mjs\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nA\ttests/led.browser.mjs\nM\ttests/v20.browser.mjs\nM\ttests/v21.browser.mjs",
+      "commity": "c36cfad Synchronizuj LINK i bursztynowy ACT portów LAN oraz FIBER\n1cf5bf4 formularze\n261f11f ustalanie cen\nfd8bbae APC SC\n49c54f8 Przebuduj sprzęt FIBER na SC/APC i dodaj gniazda z klapkami"
+    },
+    {
+      "galaz": "origin/codex/hero-3-0-integracja",
+      "sha": "f9f1cc8cd8119ec219ecc57fafcaf3acaeb828ac",
+      "ahead": 0,
+      "behind": 38,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/codex/hero-3-0-proof",
+      "sha": "3dd55ce67c18e73ff17d661fd48e45265b991af0",
+      "ahead": 0,
+      "behind": 43,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/codex/hero-rack-realism-2",
+      "sha": "e3bb144bab56e58f60aee2abbcacd3cd5f3b3240",
+      "ahead": 0,
+      "behind": 49,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/codex/hero-rack-realism-2-1",
+      "sha": "245d2118eadfb98d855b38a1ef7df9db09c54577",
+      "ahead": 0,
+      "behind": 48,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/codex/pcb-red-traces-4-1",
+      "sha": "2c1070655b08d5dc3fc79ba7c5b330e987004e70",
+      "ahead": 0,
+      "behind": 25,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/feat/fiber-sc-apc-clean",
+      "sha": "3b3d7b4bed91b13cf2c7f9d0cb4fd392680cfd73",
+      "ahead": 7,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "M\t.github/workflows/ci.yml\nM\tAGENTS.md\nM\tREADME.md\nM\tassets/css/oferta.css\nA\tassets/css/sprzet-fiber.css\nM\tassets/css/styles.css\nM\tassets/js/cennik.js\nM\tassets/js/dostepnosc.js\nM\tassets/js/hero-rack.js\nA\tassets/js/sprzet-fiber.js\nM\tcennik.html\nM\tdocs/ARCHITEKTURA.md\nM\tdocs/DECYZJE.md\nM\tdocs/TESTY_MANUALNE.md\nA\tdocs/fiber-etap05/RAPORT.md\nA\tdocs/naprawa-ci/01-izolacja.md\nA\tdocs/naprawa-ci/02-fiber.md\nA\tdocs/naprawa-ci/02-zrzuty/fiber-led-320.png\nA\tdocs/naprawa-ci/02-zrzuty/lan-led-1440.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-desktop.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-mobile-390.png\nM\tinternet.html\nM\tpackage.json\nM\ttests/diagnostyka-panelu.mjs\nA\ttests/fiber.browser.mjs\nA\ttests/fiber.test.mjs\nA\ttests/geometria-rack.mjs\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nA\ttests/led.browser.mjs\nM\ttests/nawigacja.browser.mjs\nM\ttests/oferta.browser.mjs\nM\ttests/pcb.browser.mjs\nA\ttests/srodowisko.mjs\nA\ttests/srodowisko.test.mjs\nM\ttests/v20.browser.mjs\nM\ttests/v21.browser.mjs",
+      "commity": "3b3d7b4 Udokumentuj finalizację FIBER, przyczyny błędów i zielone CI RECOVERY 02\n9eae332 Utrzymaj wysokość instrukcji FIBER, aby podgląd nie anulował przytrzymania\n036defe Zapisz diagnostykę zdarzeń dotyku FIBER i uruchamiaj regresję sprzętu jako pierwszą\n5f41695 Synchronizuj regresję FIBER z renderowaniem kabla i stabilnym gestem dotyku\n57591c1 Ustabilizuj bazowy pomiar RACK i nowe wejście kursora w regresji V20\nd9f4f33 Ujednolić SC/APC oraz sprawdzanie geometrii i LINK/ACT w Windows i CI\nc726f65 Wyizoluj Etap 05 FIBER i LINK/ACT na bazie HOME V3"
+    },
+    {
+      "galaz": "origin/feat/home-hero-premium-v4",
+      "sha": "21aa43e859c38c7d3522846abea15af19079ec69",
+      "ahead": 4,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "M\tREADME.md\nA\tassets/css/hero.css\nM\tassets/css/home.css\nM\tdocs/ARCHITEKTURA.md\nA\tdocs/hero-v4/README.md\nA\tdocs/hero-v4/WERYFIKACJA.md\nA\tdocs/hero-v4/po/1366.png\nA\tdocs/hero-v4/po/1440.png\nA\tdocs/hero-v4/po/1920.png\nA\tdocs/hero-v4/po/360.png\nA\tdocs/hero-v4/po/390.png\nA\tdocs/hero-v4/po/768.png\nA\tdocs/hero-v4/porownania/1366.png\nA\tdocs/hero-v4/porownania/1920.png\nA\tdocs/hero-v4/porownania/390.png\nA\tdocs/hero-v4/porownania/768.png\nA\tdocs/hero-v4/przed/1366.png\nA\tdocs/hero-v4/przed/1440.png\nA\tdocs/hero-v4/przed/1920.png\nA\tdocs/hero-v4/przed/360.png\nA\tdocs/hero-v4/przed/390.png\nA\tdocs/hero-v4/przed/768.png\nA\tdocs/hero-v4/wyniki/browser.txt\nA\tdocs/hero-v4/wyniki/home.txt\nA\tdocs/hero-v4/wyniki/nawigacja.txt\nA\tdocs/hero-v4/wyniki/pcb.txt\nA\tdocs/hero-v4/wyniki/verify.txt\nA\tdocs/naprawa-ci/03-hero-v4.md\nA\tdocs/naprawa-ci/03-pomiary/linux-ci.json\nA\tdocs/naprawa-ci/03-pomiary/porownanie-zrzutow.json\nA\tdocs/naprawa-ci/03-pomiary/windows-inicjalizacja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-regresja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-scroll.json\nA\tdocs/naprawa-ci/03-zrzuty/home-1366.png\nA\tdocs/naprawa-ci/03-zrzuty/home-1920.png\nA\tdocs/naprawa-ci/03-zrzuty/home-390.png\nA\tdocs/naprawa-ci/03-zrzuty/home-768.png\nM\tindex.html\nM\tpackage.json\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nM\ttests/v20.browser.mjs",
+      "commity": "21aa43e docs: zapisz pomiary i regresję RECOVERY 03 HERO V4\n5623638 test: ustal stan wejścia i renderowania zrzutów HOME\ne1d4b2f Synchronizuj pomiary RACK po inicjalizacji i zachowaj ścisłą regresję HERO V4\n3146838 Przeprojektuj HERO HOME V4 i zachowaj regresję pozostałych sekcji"
+    },
+    {
+      "galaz": "origin/feat/integracja-hero-v4-fiber",
+      "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+      "ahead": 15,
+      "behind": 0,
+      "przodekMain": false,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "M\t.github/workflows/ci.yml\nM\tAGENTS.md\nM\tREADME.md\nA\tassets/css/hero.css\nM\tassets/css/home.css\nM\tassets/css/oferta.css\nA\tassets/css/sprzet-fiber.css\nM\tassets/css/styles.css\nM\tassets/css/uslugi.css\nM\tassets/js/cennik.js\nM\tassets/js/dostepnosc.js\nM\tassets/js/hero-rack.js\nA\tassets/js/sprzet-fiber.js\nM\tcennik.html\nM\tdocs/ARCHITEKTURA.md\nM\tdocs/DECYZJE.md\nM\tdocs/TESTY_MANUALNE.md\nA\tdocs/fiber-etap05/RAPORT.md\nA\tdocs/hero-v4/README.md\nA\tdocs/hero-v4/WERYFIKACJA.md\nA\tdocs/hero-v4/po/1366.png\nA\tdocs/hero-v4/po/1440.png\nA\tdocs/hero-v4/po/1920.png\nA\tdocs/hero-v4/po/360.png\nA\tdocs/hero-v4/po/390.png\nA\tdocs/hero-v4/po/768.png\nA\tdocs/hero-v4/porownania/1366.png\nA\tdocs/hero-v4/porownania/1920.png\nA\tdocs/hero-v4/porownania/390.png\nA\tdocs/hero-v4/porownania/768.png\nA\tdocs/hero-v4/przed/1366.png\nA\tdocs/hero-v4/przed/1440.png\nA\tdocs/hero-v4/przed/1920.png\nA\tdocs/hero-v4/przed/360.png\nA\tdocs/hero-v4/przed/390.png\nA\tdocs/hero-v4/przed/768.png\nA\tdocs/hero-v4/wyniki/browser.txt\nA\tdocs/hero-v4/wyniki/home.txt\nA\tdocs/hero-v4/wyniki/nawigacja.txt\nA\tdocs/hero-v4/wyniki/pcb.txt\nA\tdocs/hero-v4/wyniki/verify.txt\nA\tdocs/naprawa-ci/01-izolacja.md\nA\tdocs/naprawa-ci/02-fiber.md\nA\tdocs/naprawa-ci/02-zrzuty/fiber-led-320.png\nA\tdocs/naprawa-ci/02-zrzuty/lan-led-1440.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-desktop.png\nA\tdocs/naprawa-ci/02-zrzuty/tabela-mobile-390.png\nA\tdocs/naprawa-ci/03-hero-v4.md\nA\tdocs/naprawa-ci/03-pomiary/linux-ci.json\nA\tdocs/naprawa-ci/03-pomiary/porownanie-zrzutow.json\nA\tdocs/naprawa-ci/03-pomiary/windows-inicjalizacja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-regresja.json\nA\tdocs/naprawa-ci/03-pomiary/windows-scroll.json\nA\tdocs/naprawa-ci/03-zrzuty/home-1366.png\nA\tdocs/naprawa-ci/03-zrzuty/home-1920.png\nA\tdocs/naprawa-ci/03-zrzuty/home-390.png\nA\tdocs/naprawa-ci/03-zrzuty/home-768.png\nA\tdocs/naprawa-ci/04-integracja.md\nA\tdocs/naprawa-ci/04-pomiary/ci-roznica-tla.json\nA\tdocs/naprawa-ci/04-pomiary/ci-roznica-tla.png\nA\tdocs/naprawa-ci/04-pomiary/dziewiec-stron.json\nA\tdocs/naprawa-ci/04-pomiary/home-kanoniczny.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-dejavu.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-po.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-przed.json\nA\tdocs/naprawa-ci/04-pomiary/kontakt-tytul-przed.json\nA\tdocs/naprawa-ci/04-pomiary/linux-ci.json\nA\tdocs/naprawa-ci/04-pomiary/regresja-lokalna.json\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-1024.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-1440.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-1920.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-320.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-390.png\nA\tdocs/naprawa-ci/04-zrzuty/dziewiec-stron-768.png\nA\tdocs/naprawa-ci/04-zrzuty/fiber-led-390.png\nA\tdocs/naprawa-ci/04-zrzuty/lan-led-1440.png\nA\tdocs/naprawa-ci/04-zrzuty/tabela-desktop.png\nA\tdocs/naprawa-ci/04-zrzuty/tabela-mobile-390.png\nM\tindex.html\nM\tinternet.html\nM\tpackage.json\nM\ttests/diagnostyka-panelu.mjs\nA\ttests/fiber.browser.mjs\nA\ttests/fiber.test.mjs\nA\ttests/geometria-rack.mjs\nM\ttests/home.browser.mjs\nM\ttests/home.test.mjs\nA\ttests/integracja.browser.mjs\nA\ttests/led.browser.mjs\nM\ttests/nawigacja.browser.mjs\nM\ttests/oferta.browser.mjs\nM\ttests/pcb.browser.mjs\nA\ttests/srodowisko.mjs\nA\ttests/srodowisko.test.mjs\nM\ttests/v20.browser.mjs\nM\ttests/v21.browser.mjs",
+      "commity": "1828bb8 docs: potwierdź zielone CI i końcowe pomiary RECOVERY 04\n61561af fix: ustabilizuj porównanie HOME i tytuł kontaktu na Linuxie\n4a68a78 fix: zabezpiecz tekst kontaktu i udokumentuj regresję integracji\n73d47ff merge: zintegruj HERO V4 ze sprzętem SC/APC i LINK/ACT\n21aa43e docs: zapisz pomiary i regresję RECOVERY 03 HERO V4\n5623638 test: ustal stan wejścia i renderowania zrzutów HOME\ne1d4b2f Synchronizuj pomiary RACK po inicjalizacji i zachowaj ścisłą regresję HERO V4\n3b3d7b4 Udokumentuj finalizację FIBER, przyczyny błędów i zielone CI RECOVERY 02\n9eae332 Utrzymaj wysokość instrukcji FIBER, aby podgląd nie anulował przytrzymania\n036defe Zapisz diagnostykę zdarzeń dotyku FIBER i uruchamiaj regresję sprzętu jako pierwszą\n5f41695 Synchronizuj regresję FIBER z renderowaniem kabla i stabilnym gestem dotyku\n57591c1 Ustabilizuj bazowy pomiar RACK i nowe wejście kursora w regresji V20\nd9f4f33 Ujednolić SC/APC oraz sprawdzanie geometrii i LINK/ACT w Windows i CI\nc726f65 Wyizoluj Etap 05 FIBER i LINK/ACT na bazie HOME V3\n3146838 Przeprojektuj HERO HOME V4 i zachowaj regresję pozostałych sekcji"
+    },
+    {
+      "galaz": "origin/feat/madnet-integracja-home-v3",
+      "sha": "8807b5587d9a43805e4c3cfb29ebedfb07f25091",
+      "ahead": 0,
+      "behind": 1,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/feat/v20-hero-rack-refinement",
+      "sha": "d232de82802ae843a3093b62ca37fd2a396e0b20",
+      "ahead": 0,
+      "behind": 50,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    },
+    {
+      "galaz": "origin/main",
+      "sha": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+      "ahead": 0,
+      "behind": 0,
+      "przodekMain": true,
+      "przodekIntegracji": true,
+      "cherry": "",
+      "pliki": "",
+      "commity": ""
+    }
+  ],
+  "porownanieZrodel": {
+    "hero": "git diff origin/feat/home-hero-premium-v4 HEAD -- index.html assets/css/hero.css assets/css/home.css: puste",
+    "fiber": "git diff origin/feat/fiber-sc-apc-clean HEAD -- cennik.html assets/js/cennik.js assets/js/hero-rack.js assets/js/sprzet-fiber.js assets/css/sprzet-fiber.css assets/js/dostepnosc.js: puste",
+    "historia": "Oba HEAD #4/#5 są przodkami #6; git cherry puste. home.browser i v20 zachowują scalone asercje; npm obejmuje oba źródła."
+  },
+  "biznes": {
+    "pr3": "PUBLIC: cztery materiały 4x3 obecne w drzewie PR #3; właściciel: zdecydować o prywatnym przechowaniu i dalszej ekspozycji. Bez przepisywania historii.",
+    "pr6": "Cztery wskazane materiały nieobecne w drzewie #6. Istniejąca MAD-NET_ANKIETA_DECYZYJNA_INTEGRACJA_V3.html pochodzi z main; build jej nie kopiuje."
+  },
+  "pagesBuild": {
+    "status": "built",
+    "commit": "1987ad3aa8a65fd1aa86f077af1addf3225bb228",
+    "created_at": "2026-11-01T15:16:56Z",
+    "updated_at": "2026-11-01T15:18:07Z",
+    "error": null
+  },
+  "ochronaLokalnychZmian": {
+    "plik": "C:/GitHub/Projects/MAD-NET/MAD-NET_CODEX_FINAL_RECOVERY_MERGE.md",
+    "sha256": "191d8a8ed4fcf2699e8c02a301ce873a4ee7c3e7f1dfe90874b8de2a0f466600",
+    "sposob": "Główny worktree pozostawiono nietknięty. Praca wyłącznie w czystym worktree integracji; bez checkout/stash/reset/usuwania."
+  }
+}

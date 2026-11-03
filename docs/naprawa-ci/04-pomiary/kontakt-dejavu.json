@@ -1,0 +1,72 @@
+[
+  {
+    "szerokosc": 320,
+    "font": "43px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 373.5625,
+    "prawaKontenera": 303
+  },
+  {
+    "szerokosc": 320,
+    "font": "38px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 332.109375,
+    "prawaKontenera": 303
+  },
+  {
+    "szerokosc": 320,
+    "font": "36px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 315.515625,
+    "prawaKontenera": 303
+  },
+  {
+    "szerokosc": 320,
+    "font": "34px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 298.9375,
+    "prawaKontenera": 303
+  },
+  {
+    "szerokosc": 320,
+    "font": "32px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 282.34375,
+    "prawaKontenera": 303
+  },
+  {
+    "szerokosc": 390,
+    "font": "43px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 373.5625,
+    "prawaKontenera": 373
+  },
+  {
+    "szerokosc": 390,
+    "font": "38px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 332.109375,
+    "prawaKontenera": 373
+  },
+  {
+    "szerokosc": 390,
+    "font": "36px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 315.515625,
+    "prawaKontenera": 373
+  },
+  {
+    "szerokosc": 390,
+    "font": "34px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 298.9375,
+    "prawaKontenera": 373
+  },
+  {
+    "szerokosc": 390,
+    "font": "32px",
+    "fontRodzina": "\"DejaVu Sans\"",
+    "krawedzTekstu": 369.75,
+    "prawaKontenera": 373
+  }
+]

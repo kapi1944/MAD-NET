@@ -1,0 +1,112 @@
+[
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-npm-ci.log",
+    "start": "2026-11-02T19:30:18.4198448+01:00",
+    "koniec": "2026-11-02T19:30:20.9934248+01:00",
+    "polecenie": "npm ci",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-npm-ci.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-verify.log",
+    "start": "2026-11-02T19:30:21.0636687+01:00",
+    "koniec": "2026-11-02T19:30:23.9066211+01:00",
+    "polecenie": "npm run verify",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-verify.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-browser.log",
+    "start": "2026-11-02T19:30:23.9445003+01:00",
+    "koniec": "2026-11-02T19:41:49.1734391+01:00",
+    "polecenie": "npm run test:browser",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-browser.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-pcb.log",
+    "start": "2026-11-02T19:41:49.2091407+01:00",
+    "koniec": "2026-11-02T19:42:06.1546503+01:00",
+    "polecenie": "npm run test:pcb",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-pcb.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-integracja.log",
+    "start": "2026-11-02T19:42:06.1947758+01:00",
+    "koniec": "2026-11-02T19:42:57.0933280+01:00",
+    "polecenie": "npm run test:integracja",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-integracja.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-home.log",
+    "start": "2026-11-02T19:42:57.1304787+01:00",
+    "koniec": "2026-11-02T19:46:48.7435485+01:00",
+    "polecenie": "npm run test:home",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-home.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-fiber.log",
+    "start": "2026-11-02T19:46:48.8118376+01:00",
+    "koniec": "2026-11-02T19:47:45.9191965+01:00",
+    "polecenie": "npm run test:fiber",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-fiber.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-led.log",
+    "start": "2026-11-02T19:47:45.9593455+01:00",
+    "koniec": "2026-11-02T19:48:12.7001291+01:00",
+    "polecenie": "npm run test:led",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-led.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-oferta.log",
+    "start": "2026-11-02T19:48:12.7439291+01:00",
+    "koniec": "2026-11-02T19:48:52.9413013+01:00",
+    "polecenie": "npm run test:oferta",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-oferta.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-test-nawigacja.log",
+    "start": "2026-11-02T19:48:52.9805014+01:00",
+    "koniec": "2026-11-02T19:49:34.6098505+01:00",
+    "polecenie": "npm run test:nawigacja",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-test-nawigacja.txt"
+  },
+  {
+    "exit": 0,
+    "sha": "1828bb8697769ef019de7a932f1dc3dd2b4e791b",
+    "log": "test-results/finalizacja/lokalne-2-git-diff---check.log",
+    "start": "2026-11-02T19:49:34.6486379+01:00",
+    "koniec": "2026-11-02T19:49:35.4201907+01:00",
+    "polecenie": "git diff --check",
+    "srodowisko": "Windows / Node 24.16.0 / Edge; patch diagnostyczny + pary HOME",
+    "logZarchiwizowany": "logi/lokalne-2-git-diff---check.txt"
+  }
+]
