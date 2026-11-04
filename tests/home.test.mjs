@@ -44,7 +44,7 @@ test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z basel
   const skrotyEtapu05 = {
   "assets/css/hero-hybryda.css": "bfd2165094d6bb39ce53236f554731b0e1b4354ee6f1a40cf0324b089a7dcc1b",
   "assets/css/styles.css": "ed95b7d0065ee14a8662773b5792df72366e5d944e93a80a913b481f98750721",
-  "assets/js/cennik.js": "dd37973f5c65ad3e816d03e1714341a31c30668723753a7a7880e3a404abca1c",
+  "assets/js/cennik.js": "3350adc77c6547b6f1579732f3033c3e254e19efd7bb90900a25b5e00a4d65e7",
   "assets/js/hero-rack.js": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
   "assets/js/dostepnosc.js": "e7cbb3a8c562bf2c48eb99710384613e13ff3485ae0f1b467cd06f1bbfb8f041"
 };

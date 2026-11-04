@@ -103,20 +103,24 @@ async function sprawdzGeometrie(strona,id){
   const koniec=przewod.getPointAtLength(dlugosc),poczatek=przewod.getPointAtLength(0);
   const dalej=przewod.getPointAtLength(10),przedKoncem=przewod.getPointAtLength(dlugosc-10);
   const punktZrodla=document.querySelector(`[data-port-plan-id="${id}"] .sc-kabel-punkt`).getBoundingClientRect();
-  const karty=[...document.querySelectorAll('#plans .plan')].filter(karta=>karta.dataset.planId!==id).map(karta=>karta.getBoundingClientRect());
-  const teksty=[...document.querySelectorAll('#plans .plan-body,#plans .plan-bottom,#plans .card-terminal-label')].map(element=>element.getBoundingClientRect());
+  const karty=[...document.querySelectorAll('#plans .plan')].filter(karta=>karta.dataset.planId!==id);
+  const przeszkody=[...karty,...document.querySelectorAll('#plans .plan-body,#plans .plan-bottom,#plans .card-terminal-label')]
+   .map(element=>({nazwa:element.className,prostokat:element.getBoundingClientRect()}));
   const zakres=document.createRange();
   for(const element of document.querySelectorAll('#device-guide,.device-hint,.device-foot span')){
-   zakres.selectNodeContents(element);teksty.push(...zakres.getClientRects());
+   zakres.selectNodeContents(element);
+   for(const prostokat of zakres.getClientRects())przeszkody.push({nazwa:element.textContent,prostokat});
   }
-  let kolizje=0;
+  const kolizje=new Set();
   for(let odleglosc=0;odleglosc<=dlugosc;odleglosc+=2){
    const punkt=przewod.getPointAtLength(odleglosc),x=punkt.x+strefa.left,y=punkt.y+strefa.top;
-   if([...karty,...teksty].some(prostokat=>x>prostokat.left+1&&x<prostokat.right-1&&y>prostokat.top+1&&y<prostokat.bottom-1))kolizje++;
+   for(const {nazwa,prostokat} of przeszkody){
+    if(x>prostokat.left+1&&x<prostokat.right-1&&y>prostokat.top+1&&y<prostokat.bottom-1)kolizje.add(nazwa);
+   }
   }
   const adapter=cel.querySelector('.sc-simplex').getBoundingClientRect(),wtyk=cel.querySelector('.sc-konektor').getBoundingClientRect(),tor=cel.querySelector('.sc-wtyk-tor').getBoundingClientRect();
   // Przód ferruli zajmuje pierwsze 13/112 wysokości modelu; po wsunięciu jest schowany za wargą adaptera.
-  return {szerokosc:innerWidth,id,dlugosc,kolizje,
+  return {szerokosc:innerWidth,id,dlugosc,kolizje:[...kolizje],
    pionowyPoczatek:Math.abs(dalej.x-poczatek.x)<.1&&dalej.y-poczatek.y>9.9,
    pionowyKoniec:Math.abs(przedKoncem.x-koniec.x)<.1&&przedKoncem.y-koniec.y>9.9,
    bladKonca:Math.hypot(koniec.x+strefa.left-punkt.x,koniec.y+strefa.top-punkt.y),
@@ -131,7 +135,7 @@ async function sprawdzGeometrie(strona,id){
  assert.ok(pomiar.pionowyPoczatek&&pomiar.pionowyKoniec,'Przewód musi wychodzić dołem z obu wtyków: '+JSON.stringify(pomiar));
  assert.ok(pomiar.bladKonca<1&&pomiar.bladPoczatku<1&&pomiar.bladOsi<1,JSON.stringify(pomiar));
  assert.ok(pomiar.ferrulaSchowana&&pomiar.wtykNaZewnatrz,JSON.stringify(pomiar));
- assert.equal(pomiar.kolizje,0,JSON.stringify(pomiar));
+ assert.deepEqual(pomiar.kolizje,[],JSON.stringify(pomiar));
  assert.equal(pomiar.przepelnienie,0);
  assert.ok(Number(pomiar.widocznyPrzewod)>.8);
  pomiary.push(pomiar);
@@ -180,6 +184,12 @@ try{
   assert.equal(await strona.locator('#central-device .jack-rj').count(),5);
   await strona.locator('.device-tech-tabs [data-technology="FIBER"]').click();
   await strona.emulateMedia({reducedMotion:'reduce'});
+  // Szeroka czcionka zastępcza przy 430 px zajmuje część domyślnego korytarza w karcie.
+  if(szerokosc===430)await strona.addStyleTag({content:`
+   .card-terminal-label{letter-spacing:.12em}
+   #device-guide,#device-guide b{width:100%}
+   #device-guide b{display:inline-block}
+  `});
   for(const id of [50,100,300]){
    await strona.locator(`[data-select-plan="FIBER-${id}M"]`).click();await stan(strona,'CONNECTED');
    await sprawdzGeometrie(strona,id);

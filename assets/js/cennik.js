@@ -152,9 +152,10 @@ function locate(id){
  const punktKarty=sprzetPodlaczony?cardSocket.querySelector('.sc-kabel-punkt').getBoundingClientRect():null;
  const origin=punktUrzadzenia?pos(punktUrzadzenia.x,punktUrzadzenia.y):pos(src.left+src.width/2,src.bottom-2);
  const endpoint=punktKarty?pos(punktKarty.x,punktKarty.y):pos(dst.left+dst.width/2,dst.bottom-1);
- // Wskazane na rysunku dwa punkty: połowy odstępów między obrysem portu a obrysem kafelka.
- const entryLeft=(cardRect.left+interfaceRect.left)/2-z.left;
- const entryRight=(interfaceRect.right+cardRect.right)/2-z.left;
+ // Połowy odstępów między portem a kartą, z korektą na rzeczywistą szerokość podpisu.
+ const podpis=terminalLabel?.getBoundingClientRect();
+ const entryLeft=Math.min((cardRect.left+interfaceRect.left)/2,(podpis?.left??Infinity)-6)-z.left;
+ const entryRight=Math.max((interfaceRect.right+cardRect.right)/2,(podpis?.right??-Infinity)+6)-z.left;
  const rects=[...plansRoot.querySelectorAll('.plan')].map(el=>({el,rect:el.getBoundingClientRect()}));
  const rows=[];
  for(const item of rects){
@@ -171,7 +172,7 @@ function locate(id){
  if(targetRow<0)return '';
  // Wewnątrz KARTY: po wejściu jednym z dopuszczonych punktów schodzimy,
  // skręcamy pod złączem i wpinamy od dołu, nie przecinając opisu, ceny ani CTA.
- const labelTop=terminalLabel?terminalLabel.getBoundingClientRect().top-z.top:Infinity;
+ const labelTop=podpis?podpis.top-z.top:Infinity;
  const insideY=technology==='FIBER'?endpoint.y+odsunieciePrzewoduFiber(cardSocket):Math.max(endpoint.y+5,Math.min(endpoint.y+11,labelTop-4));
  const firstRowTop=rows[0].top;
  const centralBottom=document.getElementById('central-area').getBoundingClientRect().bottom-z.top;
@@ -214,23 +215,25 @@ function locate(id){
 function wyjsciePrzewodu(poczatek,korytarz,obszar){
  // Omijamy napisy, mierząc rzeczywiste wiersze tekstu zamiast całej obudowy.
  const odstep=6;
+ const lewyBrzeg=3,prawyBrzeg=obszar.width-lewyBrzeg;
  const zakres=document.createRange();
  const przeszkody=[...zone.querySelectorAll('.device-foot span,.device-hint,#device-guide')].flatMap(element=>{
   zakres.selectNodeContents(element);
   return [...zakres.getClientRects()].map(prostokat=>({
-   lewo:prostokat.left-obszar.left-odstep,prawo:prostokat.right-obszar.left+odstep,
+   // Zapas może wejść w boczny margines, ale oś przewodu mieści się w SVG.
+   lewo:Math.max(lewyBrzeg,prostokat.left-obszar.left-odstep),
+   prawo:Math.min(prawyBrzeg,prostokat.right-obszar.left+odstep),
    gora:prostokat.top-obszar.top-odstep,dol:prostokat.bottom-obszar.top+odstep
   }));
  }).filter(prostokat=>prostokat.dol>poczatek.y&&prostokat.gora<korytarz);
  const wolnyPion=x=>przeszkody.every(prostokat=>x<=prostokat.lewo||x>=prostokat.prawo);
  if(wolnyPion(poczatek.x))return [poczatek,{x:poczatek.x,y:korytarz}];
- const osie=przeszkody.flatMap(prostokat=>[prostokat.lewo,prostokat.prawo])
-  .filter(x=>x>=3&&x<=obszar.width-3&&wolnyPion(x))
+ const [x]=przeszkody.flatMap(prostokat=>[prostokat.lewo,prostokat.prawo])
+  .filter(wolnyPion)
   .sort((lewa,prawa)=>Math.abs(lewa-poczatek.x)-Math.abs(prawa-poczatek.x));
- const x=osie[0]??poczatek.x;
  const przeciete=przeszkody.filter(prostokat=>prostokat.lewo<Math.max(x,poczatek.x)&&prostokat.prawo>Math.min(x,poczatek.x));
  const skret=Math.min(...przeciete.map(prostokat=>prostokat.gora));
- return x===poczatek.x?[poczatek,{x,y:korytarz}]:[poczatek,{x:poczatek.x,y:skret},{x,y:skret},{x,y:korytarz}];
+ return [poczatek,{x:poczatek.x,y:skret},{x,y:skret},{x,y:korytarz}];
 }
 // Promień gięcia wynika z szerokości fizycznego wtyku także podczas jego ruchu.
 function odsunieciePrzewoduFiber(gniazdo){
