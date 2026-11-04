@@ -13,7 +13,7 @@ Rozdzielenie pliku HTML **bez przebudowy funkcji**:
 | Struktura i sekcje cennika | `cennik.html` | Nawigacja, HERO RACK, cennik, opłaty, formularz |
 | Stylowanie | `assets/css/styles.css` | Wszystkie style V18, animacje, media queries |
 | Logika cennika | `assets/js/cennik.js` | Dane pakietów, centralne urządzenie, połączenia, tabele |
-| Sprzęt FIBER (Etap 05) | `assets/js/sprzet-fiber.js`, `assets/css/sprzet-fiber.css` | Wspólne symbole adaptera i konektora SC/APC, gniazdo z klapką, nakładka panelu HERO. Jeden kontroler stanów w `cennik.js`; cel przewodu wynika z DOM wybranej karty lub gniazda tabeli |
+| Sprzęt FIBER (Etap 05) | `assets/js/sprzet-fiber.js`, `assets/css/sprzet-fiber.css` | Wspólny symbol adaptera SC/APC dla urządzenia, kart, tabeli i panelu HERO. Kontroler w `cennik.js` łączy urządzenie z wybraną kartą. W tabeli adapter ma statyczną klapkę, wygaszoną diodę LINK i animowaną diodę ACT |
 | Formularz i mapa | `assets/js/dostepnosc.js` | Obsługa formularza, mapy, geokodowanie, POST do API |
 | RACK HERO | `assets/js/hero-rack.js` | Hover/touch/focus i płynne zmiany opisu techn. |
 | Logo | `assets/img/mad-net-logo.png` | Bezpośrednio z grafiki zakodowanej w V18 |

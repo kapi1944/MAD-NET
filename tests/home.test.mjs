@@ -43,10 +43,10 @@ test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z basel
   // Kontrakt portów, pionowych przewodów i lokalnej biblioteki mapy po konsolidacji.
   const skrotyEtapu05 = {
   "assets/css/hero-hybryda.css": "bfd2165094d6bb39ce53236f554731b0e1b4354ee6f1a40cf0324b089a7dcc1b",
-  "assets/css/styles.css": "4f2abe561c719053450d2068f98ebb0c483c5ad6789f5056523e2029cd1c9830",
-  "assets/js/cennik.js": "c626c1a6c48f4fcb5ac9a2e8ad48e165512b2a34f4aea65e2078115dfb30e210",
+  "assets/css/styles.css": "ed95b7d0065ee14a8662773b5792df72366e5d944e93a80a913b481f98750721",
+  "assets/js/cennik.js": "dd37973f5c65ad3e816d03e1714341a31c30668723753a7a7880e3a404abca1c",
   "assets/js/hero-rack.js": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
-  "assets/js/dostepnosc.js": "f9d2d5de60530fe46aeafdcab1b1150c17384c1c3e9022bc601255d5620b5986"
+  "assets/js/dostepnosc.js": "e7cbb3a8c562bf2c48eb99710384613e13ff3485ae0f1b467cd06f1bbfb8f041"
 };
   for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/'))) {
     // Git może zmieniać końce linii tekstu między Windows a Linux.
@@ -55,7 +55,7 @@ test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z basel
     else assert.ok([wpis.sha256Git, wpis.sha256Lokalny].includes(skrot(/\.(css|js|svg)$/.test(wpis.plik) ? bajty.toString().replaceAll('\r\n', '\n') : bajty)), wpis.plik);
   }
   const przed = execFileSync('git', ['show', '603ecb6b34509db80b46d659b0eeb1368eb2f275:cennik.html'], {encoding:'utf8'});
-  const opisEtapu05 = "<p class=\"compare-sub\">Zaznacz dowolną liczbę technologii — jedną, dwie lub wszystkie trzy. Wybrane cenniki pojawią się poniżej, jeden pod drugim, z oddzielnymi kolorami i pełnymi parametrami. Kliknij gniazdo FIBER w nagłówku, aby podłączyć wybrany pakiet. Ponowne kliknięcie odłącza przewód. Miniporty LAN i AIR ilustrują prędkość pakietów.</p>";
+  const opisEtapu05 = "<p class=\"compare-sub\">Zaznacz dowolną liczbę technologii — jedną, dwie lub wszystkie trzy. Wybrane cenniki pojawią się poniżej, jeden pod drugim, z oddzielnymi kolorami i pełnymi parametrami. Diody ACT w portach LAN i FIBER oraz symbole Wi-Fi w tabeli AIR pokazują tempo odpowiadające prędkości pakietu.</p>";
   const opisBazowy = przed.match(/<p class="compare-sub">[\s\S]*?<\/p>/)[0];
   const daneBazowe = execFileSync('git', ['show', '1987ad3aa8a65fd1aa86f077af1addf3225bb228:assets/js/cennik.js'], {encoding:'utf8'}).replaceAll('\r\n', '\n');
   assert.equal(czytaj('assets/js/cennik.js').toString().replaceAll('\r\n', '\n').split('const TITLES=')[0], daneBazowe.split('const TITLES=')[0], '13 pakietów, ceny i opłaty bez zmian');

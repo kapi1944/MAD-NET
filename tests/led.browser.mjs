@@ -10,10 +10,13 @@ const serwer=publiczny?null:spawn(process.execPath,['scripts/serve.mjs','--root'
 const wyniki=[],bledy=[];
 let przegladarka;
 async function sprawdzWspolnyStan(strona,id){
- const stany=await strona.locator('[data-link="connected"]').evaluateAll(elementy=>elementy.map(element=>element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet||element.dataset.gniazdoPakiet));
- assert.ok(stany.length>=4,JSON.stringify(stany));
- assert.ok(stany.every(wartosc=>wartosc===id),JSON.stringify(stany));
- for(const selektor of [`[data-port-plan-id="${id}"]`,`.plan[data-plan-id="${id}"]`,`.grafika-hybrydowa [data-led-pakiet="${id}"]`,`.compare-head-port[data-led-pakiet="${id}"],.compare-head-port[data-gniazdo-pakiet="${id}"]`])assert.equal(await strona.locator(selektor).getAttribute('data-link'),'connected');
+ const stany=await strona.locator('[data-link="connected"]').evaluateAll(elementy=>elementy.map(element=>element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet));
+ assert.deepEqual(stany,[id,id,id]);
+ const portTabeli=strona.locator(`.compare-head-port[data-led-pakiet="${id}"]`);
+ assert.equal(await portTabeli.getAttribute('data-link'),null);
+ assert.deepEqual(await portTabeli.locator('.port-leds').evaluate(element=>[
+  getComputedStyle(element).filter,getComputedStyle(element.firstElementChild).backgroundColor
+ ]),['brightness(0.7)','rgb(41, 74, 52)']);
 }
 await mkdir('test-results/fiber/led',{recursive:true});
 try{
@@ -44,11 +47,11 @@ try{
    assert.equal(przygaszenie.filtr,'brightness(0.7)','Niepodłączony ACT zachowuje 70% jasności');
    assert.ok(przygaszenie.szerokosc>=8&&przygaszenie.wysokosc>=5.5,'Większe diody LINK/ACT');
    assert.equal(await strona.locator(`.grafika-hybrydowa [data-led-pakiet="${id}"] .rj-link,.grafika-hybrydowa [data-led-pakiet="${id}"] .fiber-activity`).evaluate(element=>Math.min(...element.getAnimations()[0].effect.getKeyframes().map(klatka=>Number(klatka.opacity)))),.85,'RACK zachowuje ten sam czytelny stan ACT');
-   const jasnosci=await strona.locator(`[data-port-plan-id="${id}"] .port-leds,.plan[data-plan-id="${id}"] .port-leds,.compare-head-port[data-led-pakiet="${id}"] .port-leds,.compare-head-port[data-gniazdo-pakiet="${id}"] .port-leds,.grafika-hybrydowa [data-led-pakiet="${id}"] :is(.rj-link,.fiber-activity)`).evaluateAll(elementy=>elementy.map(element=>Number(getComputedStyle(element).filter.match(/brightness\(([0-9.]+)\)/)[1])));
+   const jasnosci=await strona.locator(`[data-port-plan-id="${id}"] .port-leds,.plan[data-plan-id="${id}"] .port-leds,.compare-head-port[data-led-pakiet="${id}"] .port-leds,.grafika-hybrydowa [data-led-pakiet="${id}"] :is(.rj-link,.fiber-activity)`).evaluateAll(elementy=>elementy.map(element=>Number(getComputedStyle(element).filter.match(/brightness\(([0-9.]+)\)/)[1])));
    assert.ok(jasnosci.length>=4&&jasnosci.every(jasnosc=>jasnosc===.7),'70% we wszystkich reprezentacjach ACT');
    const przed=await strona.evaluate(id=>{
-    const nalezy=element=>(element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet||element.dataset.gniazdoPakiet)===id;
-    const reprezentacje=[...document.querySelectorAll('[data-link]')].filter(nalezy);
+    const nalezy=element=>(element.dataset.portPlanId||element.dataset.planId||element.dataset.ledPakiet)===id;
+    const reprezentacje=[...document.querySelectorAll('[data-link],.compare-head-port')].filter(nalezy);
     window.animacjeActTest=reprezentacje.map(element=>element.querySelector('.port-leds i:last-child,.rj-link,.fiber-activity')).map(element=>({element,animacja:element.getAnimations()[0]}));
     window.probkiLink=[];window.mierzLink=true;
     function zmierz(){if(!window.mierzLink)return;window.probkiLink.push({stan:document.querySelector('#connection-zone').dataset.fiberState,link:document.querySelector(`[data-port-plan-id="${id}"]`).dataset.link});requestAnimationFrame(zmierz);}
@@ -69,7 +72,7 @@ try{
    if(technologia==='FIBER'){
     await strona.waitForFunction(()=>document.querySelector('#connection-zone').dataset.fiberState==='IDLE');
     const probki=await strona.evaluate(()=>{window.mierzLink=false;return window.probkiLink;});
-    for(const stan of ['CONNECTOR_APPROACH','INSERTING']){const etap=probki.filter(probka=>probka.stan===stan);assert.ok(etap.length>0);assert.ok(etap.every(probka=>probka.link==='disconnected'));}
+    for(const stan of ['CONNECTOR_APPROACH','INSERTING','ROUTING_CABLE']){const etap=probki.filter(probka=>probka.stan===stan);assert.ok(etap.length>0);assert.ok(etap.every(probka=>probka.link==='disconnected'));}
     const rozlaczanie=probki.filter(probka=>probka.stan==='DISCONNECTING');assert.ok(rozlaczanie.length>0&&rozlaczanie.every(probka=>probka.link==='connected'));
    }else await strona.evaluate(()=>window.mierzLink=false);
    const pierwszy=technologia==='LAN'?'LAN-10M':'FIBER-50M';

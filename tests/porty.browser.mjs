@@ -15,7 +15,7 @@ await mkdir(katalog,{recursive:true});
 try{
  await poczekajNaSerwer(serwer);
  przegladarka=await uruchomPrzegladarke(chromium);
- for(const szerokosc of etap==='przed'?[390,1440]:[320,360,390,430,768,1024,1440,1920]){
+ for(const szerokosc of etap==='przed'?[390,1440]:[320,360,390,430,768,1024,1366,1440,1920]){
   const strona=await przegladarka.newPage({viewport:{width:szerokosc,height:1100},hasTouch:szerokosc<768});
   strona.on('pageerror',blad=>bledy.push(blad.message));
   strona.on('console',wpis=>{if(wpis.type()==='error'&&!wpis.location().url.startsWith('https://'))bledy.push(wpis.text());});
@@ -51,7 +51,7 @@ try{
      return macierz.a!==1||macierz.d!==1;
     }).length;
     if(portySzafy.some((obrys,numer)=>numer&&obrys.left<portySzafy[numer-1].right))kolizje.push('Porty RACK nachodzą na siebie');
-    return {szerokosc:innerWidth,technologia,centralny:rozmiar('#central-device '+klasa),karta:rozmiar('#plans '+klasa),tabela:rozmiar(`#comparison-${technologia} `+klasa),dioda:rozmiar('#central-device .port-leds i'),portySzafy:portySzafy.length,przeskalowanePorty,kolizje,przepelnienie:document.documentElement.scrollWidth-innerWidth};
+    return {szerokosc:innerWidth,technologia,centralny:rozmiar('#central-device '+klasa),karta:rozmiar('#plans '+klasa),tabela:rozmiar(`#comparison-${technologia} .compare-head-port`),dioda:rozmiar('#central-device .port-leds i'),portySzafy:portySzafy.length,przeskalowanePorty,kolizje,przepelnienie:document.documentElement.scrollWidth-innerWidth};
    },technologia);
    pomiary.push(pomiar);
    if(etap!=='przed'){
@@ -72,11 +72,7 @@ try{
      await strona.evaluate(()=>{
       for(const element of document.querySelectorAll('.port-leds i:last-child,.rj-link,.fiber-activity'))for(const animacja of element.getAnimations()){animacja.pause();animacja.currentTime=Number(animacja.effect.getTiming().duration)*.9;}
      });
-     for(const [nazwa,selektor] of Object.entries({urzadzenie:'#central-area',karta:`[data-plan-id="${id}"] .card-terminal`,tabela:`#comparison-${technologia} .plan-head:has([data-led-pakiet="${id}"],[data-gniazdo-pakiet="${id}"])`,rack:'.rack-box'})){
-      if(nazwa==='tabela'&&stan==='aktywny'&&technologia==='FIBER'){
-       await strona.locator(`[data-gniazdo-pakiet="${id}"]`).click();
-       await strona.waitForFunction(id=>document.querySelector(`[data-gniazdo-pakiet="${id}"]`).dataset.stanPolaczenia==='CONNECTED',id);
-      }
+     for(const [nazwa,selektor] of Object.entries({urzadzenie:'#central-area',karta:`[data-plan-id="${id}"] .card-terminal`,tabela:`#comparison-${technologia} .plan-head:has([data-led-pakiet="${id}"])`,rack:'.rack-box'})){
       await strona.locator(selektor).first().screenshot({path:`${katalog}/${technologia}-${szerokosc}-${stan}-${nazwa}.png`});
      }
     }

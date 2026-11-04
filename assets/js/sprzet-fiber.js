@@ -45,11 +45,11 @@ document.body.prepend(definicjeSprzetuFiber);
 function rysunekSprzetuFiber(nazwa,klasa=''){
  return `<svg class="${klasa}" viewBox="0 0 ${nazwa==='konektor'?'48 112':'48 40'}" aria-hidden="true"><use href="#sc-apc-${nazwa}"/></svg>`;
 }
-function adapterFiber(zZaslepka=true){
- return `<span class="sc-simplex" data-stan-polaczenia="IDLE" aria-hidden="true">${rysunekSprzetuFiber('adapter','sc-adapter')}${zZaslepka?rysunekSprzetuFiber('zaslepka','sc-zaslepka'):''}<span class="sc-wtyk-tor"><span class="sc-konektor">${rysunekSprzetuFiber('konektor')}<i class="sc-kabel-punkt"></i></span></span></span>`;
+function adapterFiber(){
+ return `<span class="sc-simplex" data-stan-polaczenia="IDLE" aria-hidden="true">${rysunekSprzetuFiber('adapter','sc-adapter')}${rysunekSprzetuFiber('zaslepka','sc-zaslepka')}<span class="sc-wtyk-tor"><span class="sc-konektor">${rysunekSprzetuFiber('konektor')}<i class="sc-kabel-punkt"></i></span></span></span>`;
 }
-function gniazdoScienneFiber(){
- return `<span class="gniazdo-sc" aria-hidden="true"><span class="gniazdo-sc-ramka"><span class="gniazdo-sc-wklad">${adapterFiber(false)}</span><span class="sc-zawias"></span><span class="sc-pokrywa"><span></span></span></span><span class="gniazdo-sc-opis">SC/APC</span></span>`;
+function adapterTabeliFiber(){
+ return `<span class="adapter-tabeli-fiber">${rysunekSprzetuFiber('adapter','sc-adapter')}<span class="sc-zawias"></span><span class="sc-klapka-statyczna"></span></span>`;
 }
 
 // Lokalne wycinki RJ-45 zachowują metal, zagłębienie i osiem styków bitmapy RACK.

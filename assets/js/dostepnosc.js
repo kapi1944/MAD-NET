@@ -65,12 +65,12 @@
   updateInterestUI();
  });
  form.querySelectorAll('input[name="umowa"]').forEach(el=>el.addEventListener('change',updateInterestUI));
- // Wybór na urządzeniu, karcie lub gnieździe tabeli dodaje pakiet do formularza.
+ // Wybór na urządzeniu lub karcie dodaje pakiet do formularza.
  const strefaPakietow=$('cennik');
  strefaPakietow.addEventListener('click',ev=>{
-  const hit=ev.target.closest('[data-port-plan-id],[data-select-plan],[data-gniazdo-pakiet]');
+  const hit=ev.target.closest('[data-port-plan-id],[data-select-plan]');
   if(!hit)return;
-  const id=hit.dataset.portPlanId||hit.dataset.selectPlan||hit.dataset.gniazdoPakiet;
+  const id=hit.dataset.portPlanId||hit.dataset.selectPlan;
   const tech=id.split('-')[0];
   if(!interestState[tech]||!PLAN_DATA[tech].some(p=>p.id===id))return;
   const state=interestState[tech];state.on=true;state.packages.add(id);updateInterestUI();

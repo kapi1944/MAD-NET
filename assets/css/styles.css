@@ -955,17 +955,16 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
 .compare-head-port .jack-rj{width:43px;height:37px;border-width:2px;flex:0 0 auto}
 .compare-head-port .jack-rj:after{left:12%;right:12%}
 .compare-head-port .rj-mouth{left:4px;right:4px;top:6px;bottom:2px}
-.compare-head-port .sc-simplex{width:38px;height:34px;flex:0 0 auto;border-width:2px}
-.compare-head-port .sc-bays,.compare-head-port .sc-dustcaps{inset:4px 6px}
 .compare-head-port--AIR{justify-content:center;box-shadow:inset 0 1px 0 #83c8ff42,0 2px 7px #001322a0}
 .compare-head-port--AIR .air-virtual{width:44px;height:38px;flex:0 0 auto}
 .compare-head-port--AIR .air-virtual svg{width:43px;height:38px}
 @media(max-width:350px){.nav-in{gap:5px}.brand{width:136px}.nav-cta{font-size:9px;padding:9px 7px}}
 /* Ruch zawsze zgodny z globalnym przełącznikiem animacji i preferencjami systemowymi. */
 .mot-off .compare-head-port .port-leds i:last-child{animation:none!important;opacity:.85!important;filter:none!important}
-.mot-off .compare-head-port--AIR svg path{animation:none!important;opacity:.7!important}
+.mot-off .compare-head-port--AIR .air-virtual svg path{animation:none!important;opacity:.7!important}
 @media(prefers-reduced-motion:reduce){
- .compare-head-port .port-leds i:last-child{animation:none!important;opacity:.85!important}.compare-head-port--AIR svg path{animation:none!important;opacity:.7!important}
+ .compare-head-port .port-leds i:last-child{animation:none!important;opacity:.85!important}
+ .compare-head-port--AIR .air-virtual svg path{animation:none!important;opacity:.7!important}
 }
 /* Przy >= 1100px szerokości kontenera tabela ma miejsce na port obok nazwy.
    Gdy CSS container queries nie są wspierane, zostaje bezpieczny układ pionowy. */
@@ -973,6 +972,9 @@ body.tech-FIBER .link-active{stroke:#ffd04a!important}
  .compare-package-inner{flex-direction:row;gap:8px;min-height:58px}
  .compare-table .plan-head{padding:8px 5px}
  .compare-table .compare-package-name,.compare-block[data-tech="FIBER"] .compare-package-name{font-size:17px}
+}
+@container (min-width:730px){
+ .compare-tech-panel[data-tech="FIBER"] .compare-package-inner{flex-direction:row;gap:8px;min-height:58px}
 }
 @media(max-width:760px){
  .compare-table .plan-head{height:auto;padding:8px 5px}
