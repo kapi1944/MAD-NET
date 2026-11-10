@@ -19,7 +19,7 @@ Otwórz **http://127.0.0.1:4173**. Serwer odświeża stronę po zmianach HTML/CS
 
 Strona główna HOME V5: **http://127.0.0.1:4173/** (`index.html`). Cennik: **http://127.0.0.1:4173/cennik.html**. Dawny `home.html` usunięto; HOME ma jedno źródło. Test obu stron i porównanie z oryginałami: `npm run test:home`; raport migracji: [etap 02](docs/integracja-home-v3/02-raport-migracji.md). Kompozycja, zakres regresji i zrzuty PRZED/PO: [HOME V5](docs/home-v5/README.md); poprzedni etap: [HERO V4](docs/hero-v4/README.md).
 
-Katalog: **http://127.0.0.1:4173/uslugi.html**. Pięć podstron usług i Kontakt są jawnie oznaczonymi stronami tymczasowymi. Wspólne menu, linki i stare hashe sprawdza `npm run test:nawigacja`. [Raport etapu 03](docs/integracja-home-v3/03-raport-nawigacji.md) zawiera mapę nawigacji, wyniki i screenshoty. Jeśli port jest zajęty, ustaw wolny `PORT`; nie zatrzymuj innych projektów.
+Katalog: **http://127.0.0.1:4173/uslugi.html**. Pięć podstron usług ma indywidualne kompozycje, ilustracyjne schematy, FAQ i drogi kontaktu: [raport etapu 07](docs/etap-07/README.md). Kontakt pozostaje stroną tymczasową. Wspólne menu, linki i stare hashe sprawdza `npm run test:nawigacja`. [Raport etapu 03](docs/integracja-home-v3/03-raport-nawigacji.md) zawiera mapę nawigacji. Jeśli port jest zajęty, ustaw wolny `PORT`; nie zatrzymuj innych projektów.
 
 ```powershell
 npm test            # testy struktury + sprawdzenie składni JS

@@ -1,5 +1,5 @@
 import {wybierzPort,poczekajNaSerwer,uruchomPrzegladarke} from './srodowisko.mjs';
-/* Etap 04: rzeczywiste CTA, sześć szerokości, dotyk, klawiatura i ruch. */
+/* Etap 07: rzeczywiste CTA, dziewięć szerokości, schematy, dotyk i klawiatura. */
 import assert from 'node:assert/strict';
 import {mkdir, writeFile} from 'node:fs/promises';
 import {spawn,execFileSync} from 'node:child_process';
@@ -61,7 +61,7 @@ try{
   assert.equal(await strona.locator('link[href*="unpkg.com"],link[href*="jsdelivr.net"]').count(),0,'Ładowanie cennika nie wymaga CDN');
   const tytuly=new Set(),opisy=new Set();
   for(const plik of strony){
-    for(const szerokosc of [320,390,768,1024,1440,1920]){
+    for(const szerokosc of [320,360,390,430,768,1024,1366,1440,1920]){
       Object.assign(faza,{plik,szerokosc,href:null,scenariusz:'uklad-klawiatura'});
       await strona.setViewportSize({width:szerokosc,height:1000});
       assert.equal((await przejdz(strona,`${adres}/${plik}.html`,{waitUntil:'networkidle'})).status(),200);
@@ -82,6 +82,21 @@ try{
         return [...zakres.getClientRects()].every(tekst=>tekst.left>=r.left-1&&tekst.right<=r.right+1&&tekst.top>=r.top-1&&tekst.bottom<=r.bottom+1);
       })),`${plik} ${szerokosc}: tekst CTA wykracza poza przycisk`);
       assert.ok(await strona.locator('img').evaluateAll(elementy=>elementy.every(obraz=>obraz.complete&&obraz.naturalWidth>0)));
+      const kolizje=await strona.locator('.urzadzenie-www,.wezel-sieci,.droga-internetu,.tor-telewizji').evaluateAll(elementy=>elementy.flatMap(element=>{
+        const ramka=element.getBoundingClientRect();
+        return [...element.querySelectorAll('b,strong,p,small,.projekt-przycisk')].filter(tekst=>{
+          const r=tekst.getBoundingClientRect();return r.left<ramka.left-1||r.right>ramka.right+1||tekst.scrollWidth>tekst.clientWidth+1;
+        }).map(tekst=>tekst.textContent);
+      }));
+      assert.deepEqual(kolizje,[],`${plik} ${szerokosc}: tekst poza urządzeniem lub schematem`);
+      if(plik==='strony-www-hosting'){
+        const urzadzenia=await strona.locator('.urzadzenie-www').evaluateAll(elementy=>elementy.map(element=>{const r=element.getBoundingClientRect();return {x:r.x,y:r.y,prawa:r.right,dol:r.bottom};}));
+        assert.equal(urzadzenia.length,3,'Komputer, tablet i telefon');
+        for(let a=0;a<urzadzenia.length;a++)for(let b=a+1;b<urzadzenia.length;b++){
+          const pierwsze=urzadzenia[a],drugie=urzadzenia[b];
+          assert.ok(!(pierwsze.x<drugie.prawa&&pierwsze.prawa>drugie.x&&pierwsze.y<drugie.dol&&pierwsze.dol>drugie.y),'Urządzenia nie zasłaniają swoich ekranów');
+        }
+      }
       assert.ok(await strona.locator('.katalog-pcb').evaluate(element=>getComputedStyle(element).pointerEvents==='none'));
       assert.ok(await strona.locator('.sygnal,.impuls-katalogu').evaluateAll(elementy=>elementy.every(element=>getComputedStyle(element).animationName==='none')));
       // Kursor pozostaje poza menu podczas niezależnego scenariusza klawiatury.
@@ -122,6 +137,10 @@ try{
     // Klikamy każdą treściową drogę wyjścia, nie tylko sprawdzamy href.
     const linki=await strona.locator('main a').evaluateAll(elementy=>[...new Set(elementy.map(element=>element.getAttribute('href')))]);
     for(const href of linki){
+      if(href.startsWith('tel:')){
+        assert.equal(href,'tel:+48913874500','Bezpośredni kontakt telefoniczny');
+        cele.push({plik,href,status:'PASS'});continue;
+      }
       Object.assign(faza,{href,scenariusz:'CTA'});
       await przejdz(strona,`${adres}/${plik}.html`);
       zapis('klik-CTA',{url:strona.url(),href});
@@ -140,7 +159,7 @@ try{
     await przejdz(strona,`${adres}/MAD-NET/${plik}.html`,{waitUntil:'networkidle'});
     assert.equal(await strona.locator('.oferta-hero').count(),1);
     assert.ok(await strona.locator('img').evaluateAll(elementy=>elementy.every(obraz=>obraz.complete&&obraz.naturalWidth>0)));
-    console.log(`PASS ${plik}: 6 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/`);
+    console.log(`PASS ${plik}: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/`);
   }
   assert.equal(tytuly.size,5);assert.equal(opisy.size,5);
   for(const wartosc of ['BRAK','lan','<script>']){
@@ -161,11 +180,11 @@ try{
     await telefon.locator('summary').first().tap();
     assert.equal(await telefon.locator('details').first().evaluate(element=>element.open),true);
     zapis('tap-CTA',{url:telefon.url()});await telefon.locator('.oferta-hero .wspolne-cta').tap();
-    await telefon.waitForURL(new URL(plik==='internet'?'./cennik.html#cennik':'./kontakt.html',`${adres}/${plik}.html`).href);
+    await telefon.waitForURL(new URL(plik==='internet'?'./cennik.html#kontakt':'./kontakt.html',`${adres}/${plik}.html`).href);
   }
   zapis('zamykanie-mobile',{aktywne:[...aktywne.values()],strony:[...stanStron.values()]});await dotyk.close();
   assert.deepEqual(bledy,[]);assert.deepEqual(konsola,[]);assert.deepEqual(zasoby,[]);
-  console.log('PASS pięć stron: 30 układów, dotyk/klawiatura, CTA, brak błędów JS/konsoli/HTTP');
+  console.log('PASS pięć stron: 45 układów, dotyk/klawiatura, CTA, brak błędów JS/konsoli/HTTP');
 }finally{
   await writeFile(`${katalog}/wyniki.json`,JSON.stringify({wyniki,cele,bledy,konsola,zasoby},null,2));
   faza.scenariusz='sprzatanie';zapis('zamykanie',{aktywne:[...aktywne.values()],strony:[...stanStron.values()],serwerExit:serwer.exitCode});

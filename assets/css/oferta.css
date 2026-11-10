@@ -18,3 +18,134 @@
 
 /* Zielone złącze SC/APC; pomarańczowy pozostaje kolorem oferty FIBER. */
 .schemat-oferty .zlacze-fiber{stroke:#78b86a}.technologia-oferty.fiber .port{border-color:#78b86a;color:#a4d38f}
+
+/* Etap 07 — pięć lokalnych kompozycji, wspólna typografia i stany interakcji. */
+.oferta .skok-do-oferty{position:fixed;left:15px;top:-100px;z-index:200;padding:12px 16px;background:#fff;color:#121820;font-size:14px;border-radius:4px}.oferta .skok-do-oferty:focus{top:12px}
+.oferta .katalog-hero{background:#101318;border-bottom:1px solid #2d3540;padding-top:30px}
+.oferta .katalog-pcb{opacity:.1}
+.oferta .okruszki{font-size:11px;margin-bottom:42px;color:#a6b0bc}
+.oferta-hero{gap:55px;padding-bottom:55px}
+.oferta-hero h1{font-size:clamp(42px,4.7vw,66px);line-height:1.09;letter-spacing:-.045em;font-weight:750;max-width:740px;margin-block:23px}
+.oferta-wstep{font-size:15px;line-height:1.8;color:#b8c1cc;max-width:490px;text-wrap:pretty}
+.oferta .oferta-akcje{gap:16px 24px}
+.oferta main .wspolne-cta{background:#df2541;border-color:#e73c55;box-shadow:none;border-radius:5px;font-weight:650;transform:none}
+.oferta .oferta-akcje>a:not(.wspolne-cta){min-height:44px;display:inline-flex;align-items:center;line-height:1.6}
+.oferta-rozdzial{padding-block:58px}.oferta-rozdzial h2{font-size:clamp(28px,2.8vw,39px);font-weight:700;max-width:900px}
+.oferta-rozdzial p{line-height:1.8;max-width:760px}.oferta-dwie-kolumny{gap:60px}
+.oferta-rozdzial .oferta-obraz>img{height:auto;aspect-ratio:1.45;filter:saturate(.6);border:1px solid #35414d;border-radius:7px}
+.potrzeby-oferty{border-radius:5px;background:#141c25;border-color:#70404b}
+.zakres-oferty b{font-size:18px}.zakres-oferty li{border-color:#303b47}
+.oferta-final{background:#141b24;border-color:#3e4652;padding-block:50px}
+.oferta-final h2{font-size:clamp(29px,3vw,43px);font-weight:700;line-height:1.2}
+.oferta-faq{max-width:1000px}.oferta-faq summary{padding-right:15px}.oferta-faq details[open]{background:#131b24;padding-inline:18px;border-radius:5px}
+.naglowek-wizualizacji{display:flex;justify-content:space-between;gap:15px;padding-bottom:18px;border-bottom:1px solid #35404a;font-size:9px;line-height:1.7;letter-spacing:.09em;color:#b3bec8}
+.oferta-podpis{font-size:11px;line-height:1.7;letter-spacing:0;color:#97a5b3}
+.oferta .sygnal{fill:none;stroke:#be8390;stroke-width:2;stroke-dasharray:7 30;animation:przeplyw-oferty 6s linear infinite}
+.oferta .sygnal.lan{stroke:#ff203e}.oferta .sygnal.fiber{stroke:#FF7B19}.oferta .sygnal.air{stroke:#3fa8ff}
+
+/* Internet: trzy fizycznie różne media, etykiety pozostają tekstem HTML. */
+.oferta-internet .scena-internetu{padding:25px;border:1px solid #35414d;border-radius:8px;background:#141b23;box-shadow:0 20px 45px #0003}
+.droga-internetu{--kolor-medium:#ff203e;padding:20px 0;border-bottom:1px solid #303a45}
+.droga-fiber{--kolor-medium:#FF7B19}.droga-air{--kolor-medium:#3fa8ff}
+.droga-internetu>div{display:flex;align-items:baseline;gap:15px}.droga-internetu b{font-size:20px;color:var(--kolor-medium);letter-spacing:-.02em}.droga-internetu span{font-size:12px;color:#bfc9d3}
+.droga-internetu svg{display:block;width:100%;height:auto;max-height:100px;margin-block:8px}
+.droga-internetu small{font-size:11px;line-height:1.7;color:#a8b5c2}
+.przewod-lan{fill:none;stroke:#bb3c4e;stroke-width:5}.przewod-fiber{fill:none;stroke:#db9b49;stroke-width:3}
+.dom-odbiorcy{fill:#263441;stroke:#8094a5;stroke-width:1.5}.fale-air{fill:none;stroke:#578dad;stroke-width:2}
+.scena-internetu .oferta-podpis{margin-bottom:0}
+.technologia-oferty{grid-template-columns:155px 1fr auto;gap:30px;margin-bottom:12px;border:1px solid #34404d;border-left:3px solid var(--akcent);border-radius:7px;padding:25px;background:#131b24}
+.technologia-oferty .port{border-radius:4px}.technologia-oferty p{font-size:13px}
+
+/* Monitoring: plan stref, kamery z polem obserwacji i oddzielny tor alarmu. */
+.scena-zabezpieczen{padding:24px;background:#141c25;border:1px solid #3b4650;border-radius:8px}
+.plan-obiektu{display:block;width:100%;height:auto;margin-block:12px;filter:drop-shadow(0 14px 14px #0004)}
+.tor-alarmu{fill:none;stroke:#b79c70;stroke-width:2;stroke-dasharray:4 5}
+.legenda-zabezpieczen{display:flex;gap:12px 25px;flex-wrap:wrap;border-top:1px solid #35404a;padding-top:16px}
+.legenda-zabezpieczen span{display:flex;gap:8px;align-items:center;font-size:11px;line-height:1.7;color:#bdc7d2}
+.legenda-zabezpieczen i{display:block;width:9px;height:9px;border-radius:2px;flex-shrink:0}
+.znacznik-kamery{background:#83aebb}.znacznik-alarmu{background:#b79c70}
+
+/* Sieci: układ poziomy ma własne korytarze przewodów, na telefonie biegnie pionowo. */
+.oferta-it .oferta-hero{grid-template-columns:1fr;gap:30px}
+.oferta-it .oferta-hero>div:first-child{display:grid;grid-template-columns:1.1fr 1fr;gap:0 60px;align-items:center}
+.oferta-it .etykieta-uslug{grid-column:1/-1}.oferta-it .oferta-hero h1{grid-column:1;grid-row:2/4}
+.oferta-it .oferta-wstep{grid-column:2;grid-row:2;margin-bottom:0}.oferta-it .oferta-akcje{grid-column:2;grid-row:3;margin-top:15px}
+.oferta-it .scena-sieci{max-width:none;padding:25px 30px;background:#141c25;border:1px solid #35424e;border-radius:8px}
+.topologia-sieci{display:grid;grid-template-columns:1fr 50px 1fr 50px 1.4fr;align-items:center;padding-block:30px}
+.wezel-sieci{min-width:0;text-align:center;background:#19232e;border:1px solid #3e4d5b;border-radius:7px;padding:22px 15px;position:relative}
+.wezel-sieci b{display:block;font-size:16px;font-weight:650;line-height:1.5;color:#eef2f5}.wezel-sieci span{display:block;font-size:12px;color:#acbac7;line-height:1.6;margin-top:4px}
+.sprzet-oferty{display:block;width:min(100%,170px);height:auto;margin:0 auto 15px;filter:drop-shadow(0 9px 8px #0005)}
+.wezel-glowny{border-color:#7a4854}
+.lacze-topologii{height:2px;background:#788c9e;position:relative}.lacze-topologii i{position:absolute;left:40%;top:-2px;width:7px;height:6px;background:#d69aa5}
+.odbiorcy-sieci{display:grid;gap:16px;position:relative;margin-left:0}
+.odbiorcy-sieci::before{content:"";position:absolute;left:-25px;top:16.66%;bottom:16.66%;width:1px;background:#788c9e}
+.odbiorcy-sieci .wezel-sieci{display:grid;grid-template-columns:95px 1fr;gap:16px;align-items:center;text-align:left;padding:14px 20px}
+.odbiorcy-sieci .wezel-sieci::before{content:"";position:absolute;left:-25px;top:50%;width:24px;height:1px;background:#788c9e}
+.odbiorcy-sieci .sprzet-oferty{width:95px;margin:0}
+
+/* WWW: jeden projekt na trzech urządzeniach, bez pozorowanego portfolio. */
+.oferta-www .oferta-hero{grid-template-columns:1fr;gap:36px;text-align:center}
+.oferta-www .oferta-hero>div:first-child{max-width:780px;margin-inline:auto}
+.oferta-www .oferta-hero h1,.oferta-www .oferta-wstep{max-width:740px;margin-inline:auto}.oferta-www .oferta-akcje{justify-content:center}
+.oferta-www .scena-www{max-width:1120px;width:100%;padding:0;margin:auto}
+.oferta .makieta-www{display:grid;grid-template-columns:1fr .48fr .28fr;align-items:end;gap:25px;position:relative;padding:25px 0 0;text-align:left}
+.urzadzenie-www{position:relative;min-width:0}.nazwa-ekranu{display:block;color:#a9b7c4;font-size:10px;letter-spacing:.14em;text-align:center;margin-bottom:18px}
+.oferta .makieta-www .tablet-www{position:relative;left:auto;bottom:auto;transform:none;width:auto;align-self:center}
+.oferta .ekran-www{padding:9px;border:1px solid #6a7680;border-radius:11px;background:linear-gradient(135deg,#64707a,#17212b 15%,#090f15 90%);box-shadow:0 18px 25px #0005}
+.ekran-pasek{display:flex;gap:15px;align-items:center;font-size:8px;line-height:1.5;padding:8px 10px;color:#677b78;background:#dce4de;border:0;border-radius:4px 4px 0 0}
+.ekran-pasek span{font-size:7px;color:#798d82}
+.projekt-www{color:#19352e;background:#edf0e7;padding:20px;font-family:Arial,sans-serif;min-width:0}
+.projekt-menu{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-bottom:20px;border-bottom:1px solid #b8c8b9;font-size:7px}
+.projekt-menu b{font-size:10px;letter-spacing:.03em}.projekt-menu span{font-size:7px;white-space:nowrap}
+.projekt-uklad{display:grid;grid-template-columns:1.1fr .8fr;gap:15px;padding-block:25px}
+.projekt-uklad small{font-size:6px;letter-spacing:.1em;display:block;line-height:1.8;color:#466354}
+.projekt-uklad strong{display:block;font-size:clamp(15px,1.75vw,24px);line-height:1.12;letter-spacing:-.04em;margin:12px 0;font-weight:700}
+.projekt-uklad p{font-size:8px;line-height:1.7;color:#466354;margin:0 0 15px}
+.projekt-przycisk{display:inline-block;padding:8px 10px;background:#244c3b;color:#f1f0df;font-size:7px;line-height:1.5}
+.projekt-grafika{display:flex;align-items:end;justify-content:center;gap:7px;min-height:130px;padding:15px 8px;background:#d5ddc7;border-radius:65px 65px 2px 2px;overflow:hidden}
+.projekt-grafika i{display:block;width:27%;height:60%;border-radius:40px 40px 0 0;background:#789878;box-shadow:inset -6px 0 #244c3b33}
+.projekt-grafika i:nth-child(2){height:90%;background:#4f7357}.projekt-grafika i:nth-child(3){height:75%;background:#9aae88}
+.projekt-stopka{display:flex;justify-content:space-between;border-top:1px solid #b8c8b9;padding-top:12px;font-size:7px}
+.podstawa-monitora{width:32%;height:25px;background:linear-gradient(90deg,#56616a,#9aa4aa,#3c4750);margin:auto;clip-path:polygon(30% 0,70% 0,76% 85%,100% 90%,100% 100%,0 100%,0 90%,24% 85%)}
+.tablet-www .ekran-www{padding:9px;border-radius:16px}.tablet-www .projekt-www{padding:12px}
+.tablet-www .projekt-uklad{grid-template-columns:1fr;padding-block:16px;gap:18px}.tablet-www .projekt-uklad strong{font-size:20px}.tablet-www .projekt-grafika{min-height:90px;height:100px;border-radius:50px 50px 0 0}
+.telefon-www .ekran-www{border-radius:20px;padding:13px 6px 8px}.telefon-www .projekt-www{padding:9px;border-radius:9px;min-height:310px}
+.telefon-www .projekt-menu{padding-block:6px 12px}.telefon-www .projekt-menu b{font-size:7px}.telefon-www .projekt-uklad{grid-template-columns:1fr;padding-block:16px;gap:16px}.telefon-www .projekt-uklad strong{font-size:15px}.telefon-www .projekt-uklad small{font-size:5px}.telefon-www .projekt-przycisk{font-size:6px;padding:7px 6px}.telefon-www .projekt-grafika{min-height:80px;height:80px;padding:8px}
+.scena-www .oferta-podpis{text-align:center;margin-top:24px}
+
+/* TV/SAT: oddzielne tory odbioru, fotografia i czytelne elementy instalacji. */
+.oferta-tv .oferta-hero{grid-template-columns:.9fr 1.1fr}
+.scena-telewizji{display:grid;grid-template-columns:1fr;gap:20px;background:#141c25;border:1px solid #35424e;border-radius:8px;padding:20px}
+.kadr-anteny{position:relative;min-height:300px;border-radius:4px;overflow:hidden;background:#263440}
+.kadr-anteny img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.55) brightness(.65)}
+.kadr-anteny>span{position:absolute;bottom:15px;left:12px;right:12px;font-size:9px;line-height:1.8;letter-spacing:.1em;color:#fff}
+.tory-telewizji{min-width:0}.tory-telewizji .naglowek-wizualizacji{flex-direction:column;gap:4px;padding-bottom:15px}
+.tor-telewizji{padding-top:18px}.tor-telewizji+.tor-telewizji{margin-top:20px;border-top:1px solid #35404a}
+.tor-telewizji>b{font-size:14px;font-weight:650;color:#d8e1e8}.tor-telewizji svg{display:block;width:100%;height:auto;margin-top:15px}
+.kabel-telewizji{fill:none;stroke:#b6a384;stroke-width:3}
+.opis-toru{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:7px;color:#aebdca;font-size:9px;line-height:1.6;margin-top:10px}.opis-toru span:last-child{text-align:right}
+.scena-telewizji>figcaption{grid-column:1/-1;margin:0}
+.scena-telewizji .kadr-anteny{min-height:115px}.scena-telewizji .kadr-anteny img{object-position:center 45%}.scena-telewizji .kadr-anteny>span{max-width:240px;font-size:10px}
+.scena-telewizji .tory-telewizji .naglowek-wizualizacji{flex-direction:row}
+.kolejnosc-instalacji{display:grid;gap:15px}.kolejnosc-instalacji>div{padding:20px 24px;background:#151f29;border:1px solid #35414d;border-radius:5px}.kolejnosc-instalacji span{display:block;color:#ba8390;font-size:11px;margin-bottom:9px}.kolejnosc-instalacji b{font-size:18px}.kolejnosc-instalacji p{margin-bottom:0}
+
+@media(hover:hover) and (pointer:fine){.oferta main .wspolne-cta:hover{background:#bd1e37;border-color:#ef667c}.technologia-oferty:hover{border-color:var(--akcent)}.oferta-faq summary:hover{color:#e89aab}}
+@media(max-width:1100px){
+ .oferta-hero{gap:30px}.oferta-hero h1{font-size:clamp(42px,4.7vw,58px)}.oferta-it .oferta-hero>div:first-child{gap:0 35px}
+ .scena-telewizji{grid-template-columns:1fr}.kadr-anteny{min-height:100px}.kadr-anteny img{object-position:center 38%}.kadr-anteny>span{max-width:200px;font-size:10px}.tory-telewizji .naglowek-wizualizacji{flex-direction:row}.technologia-oferty{grid-template-columns:130px 1fr;gap:20px}.technologia-oferty>a{grid-column:2}
+ .topologia-sieci{grid-template-columns:1fr 35px 1fr 40px 1.3fr}.odbiorcy-sieci .wezel-sieci{grid-template-columns:70px 1fr;gap:10px;padding:14px 10px}.odbiorcy-sieci .sprzet-oferty{width:70px}.wezel-sieci span{font-size:11px}
+ .projekt-www{padding:15px}.projekt-uklad{gap:10px}.oferta .makieta-www{gap:18px}.tablet-www .projekt-uklad strong{font-size:17px}
+}
+@media(max-width:760px){
+ .oferta .katalog-hero{padding-top:25px}.oferta .okruszki{margin-bottom:30px}.oferta-hero,.oferta-tv .oferta-hero{grid-template-columns:1fr;gap:28px;padding-bottom:35px}.oferta-hero h1{font-size:clamp(38px,8.5vw,56px);overflow-wrap:normal}
+ .oferta-wstep{font-size:14px}.oferta-rozdzial{padding-block:40px}.oferta-dwie-kolumny{gap:28px}.oferta-final{padding-block:38px}.oferta .oferta-akcje{gap:8px 20px}
+ .oferta-internet .scena-internetu,.scena-zabezpieczen{padding:20px}.oferta-obraz{max-width:none}.naglowek-wizualizacji{font-size:8px;gap:12px}.droga-internetu b{font-size:19px}.droga-internetu small{font-size:11px}
+ .technologia-oferty{grid-template-columns:1fr;gap:15px;padding:22px}.technologia-oferty>a{grid-column:1}.technologia-oferty .port{float:none;margin-top:12px}.technologia-oferty>div:first-child{display:flex;align-items:center;justify-content:space-between}.technologia-oferty .port{margin:0;width:70px;height:42px}
+ .oferta-it .oferta-hero>div:first-child{display:block}.oferta-it .oferta-wstep{margin-bottom:16px}.oferta-it .scena-sieci{padding:20px}.topologia-sieci{grid-template-columns:1fr;padding-block:22px}
+ .wezel-sieci{padding:18px}.wezel-sieci span{font-size:12px}.lacze-topologii{height:28px;width:1px;margin:auto}.lacze-topologii i{left:-2px;top:40%;width:5px;height:7px}
+ .odbiorcy-sieci{margin-left:30px;gap:14px}.odbiorcy-sieci::before{left:-15px;top:0;bottom:16.66%}.odbiorcy-sieci::after{content:"";position:absolute;top:0;left:-15px;right:50%;height:1px;background:#788c9e}.odbiorcy-sieci .wezel-sieci::before{width:14px;left:-15px}.odbiorcy-sieci .wezel-sieci{grid-template-columns:80px 1fr;padding:12px}.odbiorcy-sieci .sprzet-oferty{width:80px}.wezel-sieci .sprzet-oferty{max-width:140px}
+ .oferta-www .oferta-hero{text-align:left;gap:25px}.oferta-www .oferta-akcje{justify-content:flex-start}.oferta .makieta-www{grid-template-columns:1fr .6fr;gap:24px 20px;padding-top:15px;align-items:start}.komputer-www{grid-column:1/-1}.tablet-www{grid-column:1}.telefon-www{grid-column:2;margin-top:28px}.projekt-uklad strong{font-size:27px}.projekt-uklad p{font-size:10px}.projekt-uklad small{font-size:8px}.projekt-menu b{font-size:13px}.projekt-menu span{font-size:9px}.projekt-przycisk{font-size:9px}.projekt-stopka{font-size:8px}.tablet-www .projekt-uklad strong{font-size:22px}.telefon-www .projekt-uklad strong{font-size:17px}.telefon-www .projekt-menu b{font-size:8px}.telefon-www .projekt-uklad small{font-size:6px}.telefon-www .projekt-uklad p{font-size:9px}.telefon-www .projekt-przycisk{font-size:7px}.scena-www .oferta-podpis{text-align:left}
+ .scena-telewizji{padding:20px;gap:18px}.kadr-anteny{min-height:130px}.tor-telewizji>b{font-size:15px}.opis-toru{font-size:10px}
+}
+@media(max-width:360px){.oferta-hero h1{font-size:36px}.oferta-internet .scena-internetu,.scena-zabezpieczen,.oferta-it .scena-sieci,.scena-telewizji{padding:15px}.naglowek-wizualizacji{font-size:7px}.wezel-sieci b{font-size:14px}.odbiorcy-sieci .wezel-sieci{grid-template-columns:60px 1fr;gap:8px;padding:12px 9px}.odbiorcy-sieci .sprzet-oferty{width:60px}.projekt-www{padding:12px}.projekt-uklad strong{font-size:24px}.projekt-grafika{min-height:110px}.tablet-www .projekt-www{padding:9px}.tablet-www .projekt-uklad strong{font-size:18px}.telefon-www .projekt-uklad strong{font-size:14px}.telefon-www .projekt-menu b{font-size:6px}.telefon-www .projekt-przycisk{font-size:6px;padding-inline:4px}.oferta .makieta-www{gap:22px 12px}.opis-toru{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.oferta .sygnal{animation:none!important}}

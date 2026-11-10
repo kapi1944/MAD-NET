@@ -8,7 +8,7 @@ Rozdzielenie pliku HTML **bez przebudowy funkcji**:
 |---|---|---|
 | Strona główna HOME V5 | `index.html`, `assets/css/home.css`, `assets/css/hero.css`, `assets/js/home.js`, `assets/img/home/` | HERO ma odrębny arkusz i lokalny podgląd LAN/FIBER/AIR. Karty technologii i usług oraz mapa pozostają odizolowane od cennika. Współdzielona bitmapa RACK, bez kopiowania danych pakietów ani mechaniki przewodów. [Raport V5](home-v5/README.md) |
 | Wspólna nawigacja | `assets/css/nawigacja.css`, `assets/js/nawigacja.js` | Nagłówek, menu dotykowe/klawiaturowe, dropdown i stopka na dziewięciu stronach |
-| Katalog i strony tymczasowe | `uslugi.html`, pięć podstron usług, `kontakt.html`, `assets/css/uslugi.css` | Pięć bannerów; jawne strony tymczasowe do dalszych etapów |
+| Katalog i podstrony usług | `uslugi.html`, pięć podstron usług, `kontakt.html`, `assets/css/uslugi.css`, `assets/css/oferta.css` | Katalog i pięć indywidualnych ofert: lokalne SVG/CSS, breadcrumbs, natywne FAQ i CTA. Wspólna nawigacja pozostaje niezależna od wizualizacji; brak nowych skryptów. Kontakt jest stroną tymczasową. [Etap 07](etap-07/README.md) |
 | Zgodność dawnych hashy | `assets/js/stare-adresy.js` wyłącznie w index | Tylko #cennik/#oplaty/#kontakt → cennik.html z tym samym fragmentem |
 | Struktura i sekcje cennika | `cennik.html` | Nawigacja, HERO RACK, cennik, opłaty, formularz |
 | Stylowanie | `assets/css/styles.css` | Wszystkie style V18, animacje, media queries |
