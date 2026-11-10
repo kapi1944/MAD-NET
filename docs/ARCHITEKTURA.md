@@ -6,9 +6,9 @@ Rozdzielenie pliku HTML **bez przebudowy funkcji**:
 
 | Moduł | Lokalizacja | Odpowiedzialność |
 |---|---|---|
-| Strona główna HOME V5 | `index.html`, `assets/css/home.css`, `assets/css/hero.css`, `assets/js/home.js`, `assets/img/home/` | HERO ma odrębny arkusz i lokalny podgląd LAN/FIBER/AIR. Karty technologii i usług oraz mapa pozostają odizolowane od cennika. Współdzielona bitmapa RACK, bez kopiowania danych pakietów ani mechaniki przewodów. [Raport V5](home-v5/README.md) |
+| Strona główna HOME V5 | `index.html`, `assets/css/home.css`, `assets/css/hero.css`, `assets/js/home.js`, `assets/img/home/` | HERO ma odrębny arkusz i fotografię lokalnej latarni. Karty technologii i usług oraz mapa pozostają odizolowane od cennika. HOME nie zawiera RACK ani panelu wyboru technologii. [Raport V5](home-v5/README.md) |
 | Wspólna nawigacja | `assets/css/nawigacja.css`, `assets/js/nawigacja.js` | Nagłówek, menu dotykowe/klawiaturowe, dropdown i stopka na dziewięciu stronach |
-| Katalog i podstrony usług | `uslugi.html`, pięć podstron usług, `kontakt.html`, `assets/css/uslugi.css`, `assets/css/oferta.css` | Katalog i pięć indywidualnych ofert: lokalne SVG/CSS, breadcrumbs, natywne FAQ i CTA. Wspólna nawigacja pozostaje niezależna od wizualizacji; brak nowych skryptów. Kontakt jest stroną tymczasową. [Etap 07](etap-07/README.md) |
+| Katalog i podstrony usług | `uslugi.html`, pięć podstron usług, `kontakt.html`, `assets/css/uslugi.css`, `assets/css/oferta.css` | Katalog i pięć indywidualnych ofert: lokalne SVG/CSS, breadcrumbs, natywne FAQ i CTA. Internet ładuje lokalne `internet-rack.css` i `internet-rack.js`: przeniesiony z HOME podgląd RACK i wybór LAN/FIBER/AIR, bez mechaniki przewodów. Schemat trzech mediów pozostaje w dalszej sekcji. Wspólna nawigacja pozostaje niezależna od wizualizacji. Kontakt jest stroną tymczasową. [Etap 07](etap-07/README.md) |
 | Zgodność dawnych hashy | `assets/js/stare-adresy.js` wyłącznie w index | Tylko #cennik/#oplaty/#kontakt → cennik.html z tym samym fragmentem |
 | Struktura i sekcje cennika | `cennik.html` | Nawigacja, HERO RACK, cennik, opłaty, formularz |
 | Stylowanie | `assets/css/styles.css` | Wszystkie style V18, animacje, media queries |

@@ -114,16 +114,16 @@ async function geometriaHero(strona) {
 async function sprawdzHero(strona, szerokosc) {
   const pomiary = await strona.locator('.sekcja-hero').evaluate(sekcja => {
     const prostokat = element => {const r=element.getBoundingClientRect();return {x:r.x,y:r.y,prawa:r.right,dol:r.bottom,szerokosc:r.width,wysokosc:r.height};};
-    const tekst=sekcja.querySelector('.hero-glowne'),obraz=sekcja.querySelector('.hero-obraz'),zdjecie=sekcja.querySelector('.hero-infrastruktura');
+    const tekst=sekcja.querySelector('.hero-glowne'),obraz=sekcja.querySelector('.hero-obraz'),zdjecie=sekcja.querySelector('.hero-latarnia');
     const elementy=[...sekcja.querySelectorAll('h1,.hero-glowne>p,.hero-przyciski a,.zaleta')];
-    return {tekst:prostokat(tekst),obraz:prostokat(obraz),zdjecie:{proporcje:zdjecie.getAttribute('viewBox')},
+    return {tekst:prostokat(tekst),obraz:prostokat(obraz),zdjecie:{plik:zdjecie.getAttribute('src'),zaladowane:zdjecie.complete&&zdjecie.naturalWidth>0},
       elementy:elementy.map(element=>({...prostokat(element),przewija:element.scrollWidth>element.clientWidth+1})),
       animacja:getComputedStyle(sekcja.querySelector('.pcb-puls')).animationName};
   });
   const kolizja=(a,b)=>a.x<b.prawa&&a.prawa>b.x&&a.y<b.dol&&a.dol>b.y;
   assert.ok(!kolizja(pomiary.tekst,pomiary.obraz),'Fotografia i dekoracje poza tekstem/CTA');
   if(szerokosc<=600)assert.ok(pomiary.obraz.y>=pomiary.tekst.dol,'Na telefonie tekst i CTA przed fotografią');
-  assert.equal(pomiary.zdjecie.proporcje,'100 40 1350 970');assert.equal(pomiary.animacja,'none');
+  assert.equal(pomiary.zdjecie.plik,'./assets/img/home/latarnia-hero.jpg');assert.ok(pomiary.zdjecie.zaladowane);assert.equal(pomiary.animacja,'none');
   for(const element of pomiary.elementy){assert.ok(element.x>=0&&element.prawa<=szerokosc+1,'HERO poza ekranem');assert.ok(!element.przewija,'Tekst/CTA przycięte');}
   for(let numer=1;numer<pomiary.elementy.length;numer++)assert.ok(!kolizja(pomiary.elementy[numer-1],pomiary.elementy[numer]),'Kolizja treści HERO');
   assert.equal(await strona.locator('.hero-boczny,.podpis-lokalny').count(),0);
@@ -160,7 +160,7 @@ try {
   await kontekst.route(/https:\/\/(server\.arcgisonline\.com|a\.basemaps\.cartocdn\.com)\//, async trasa => {
     const url = trasa.request().url();
     if (!kafelki.has(url)) kafelki.set(url, (async () => {
-      const odpowiedz = await trasa.fetch();
+      const odpowiedz = await trasa.fetch({maxRetries:2});
       assert.equal(odpowiedz.status(), 200, `Kafelek online: ${url}`);
       return {body:await odpowiedz.body(), contentType:odpowiedz.headers()['content-type'], status:200};
     })());
@@ -224,18 +224,7 @@ try {
       }
     }
     assert.equal(await strona.locator('.technologia-karta').count(),3);
-    assert.equal(await strona.locator('.hero-obraz[aria-hidden=true]').count(),0,'Panel dostępny dla czytnika');
-    for(const technologia of ['LAN','FIBER','AIR']){
-      const przycisk=strona.locator('[data-home-technologia='+technologia+']');
-      await przycisk.focus();await strona.keyboard.press('Enter');
-      assert.equal(await przycisk.getAttribute('aria-pressed'),'true');
-      assert.match(await strona.locator('.hero-panel strong').innerText(),new RegExp(technologia));
-      assert.equal(await strona.locator('.hero-panel a').getAttribute('href'),'./cennik.html?technologia='+technologia+'#cennik');
-      const wysokosc=await strona.locator('.hero-obraz').evaluate(element=>element.getBoundingClientRect().height);
-      wyniki.push({strona:'panel '+technologia,szerokosc,wysokosc});
-    }
-    const wysokosci=wyniki.filter(wpis=>wpis.szerokosc===szerokosc&&wpis.strona.startsWith('panel ')).map(wpis=>wpis.wysokosc);
-    assert.ok(Math.max(...wysokosci)-Math.min(...wysokosci)<1,'Brak skoku panelu');
+    assert.equal(await strona.locator('.hero-infrastruktura,.hero-panel,[data-home-technologia],[data-rack-technologia]').count(),0,'HOME bez RACK i panelu technologii');
     const kolizje=await strona.locator('.technologia-karta,.karta-uslugi').evaluateAll(karty=>karty.flatMap(karta=>{
       const obszar=karta.getBoundingClientRect();
       return [...karta.querySelectorAll('h3,p,a')].filter(element=>{
@@ -366,12 +355,11 @@ try {
   const telefon=await dotyk.newPage();
   telefon.on('pageerror',blad=>bledy.push(blad.message));
   await przygotuj(telefon,adres+'/index.html');
-  await telefon.locator('[data-home-technologia=FIBER]').tap();
-  assert.equal(await telefon.locator('[data-home-technologia=FIBER]').getAttribute('aria-pressed'),'true');
   assert.equal(await telefon.locator('.medium-air rect').count(),0,'AIR bez portów');
   assert.equal(await telefon.locator('.mapa-podklad').evaluate(element=>getComputedStyle(element).touchAction),'pan-y');
+  await telefon.locator('.hero-fotografia').scrollIntoViewIfNeeded();
   const przedPrzewijaniem=await telefon.evaluate(()=>scrollY);
-  const pole=await telefon.locator('[data-home-technologia=FIBER]').boundingBox();
+  const pole=await telefon.locator('.hero-fotografia').boundingBox();
   const sesjaDotyku=await dotyk.newCDPSession(telefon);
   const x=Math.round(pole.x+pole.width/2),y=Math.round(pole.y+pole.height/2);
   await sesjaDotyku.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});
@@ -382,7 +370,6 @@ try {
   await sesjaDotyku.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
   await telefon.waitForTimeout(400);
   assert.ok(await telefon.evaluate(()=>scrollY)>przedPrzewijaniem);
-  assert.equal(await telefon.locator('[data-home-technologia=FIBER]').getAttribute('aria-pressed'),'true','Przewijanie nie zmienia technologii');
   await sesjaDotyku.detach();
   await dotyk.close();
   console.log('PASS CTA HERO: klawiatura → dostępność internetu; kliknięcie → pakiety');

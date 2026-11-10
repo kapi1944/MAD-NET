@@ -67,6 +67,28 @@ try{
       assert.equal((await przejdz(strona,`${adres}/${plik}.html`,{waitUntil:'networkidle'})).status(),200);
       await strona.evaluate(()=>document.fonts.ready);
       assert.equal(await strona.locator('h1').count(),1);
+      if(plik==='internet'){
+        assert.equal(await strona.locator('.oferta-hero .hero-infrastruktura').count(),1,'RACK w HERO Internet');
+        assert.equal(await strona.locator('.oferta-hero .scena-internetu').count(),0);
+        assert.equal(await strona.locator('.oferta-rozdzial .droga-internetu').count(),3,'Zachowany schemat trzech mediów');
+        assert.equal(await strona.locator('.porty-szafy-lan>svg').count(),5);
+        assert.equal(await strona.locator('.adapter-szafy-fiber').count(),3);
+        assert.equal(await strona.locator('[data-technologia-kanalu="AIR"]').count(),5);
+        const wysokosci=[];
+        for(const technologia of ['LAN','FIBER','AIR']){
+          const przycisk=strona.locator('[data-rack-technologia='+technologia+']');
+          await przycisk.focus();await strona.keyboard.press('Enter');
+          assert.equal(await przycisk.getAttribute('aria-pressed'),'true');
+          assert.equal(await strona.locator('.hero-wybor [aria-pressed=true]').count(),1);
+          assert.match(await strona.locator('.hero-panel strong').innerText(),new RegExp(technologia));
+          assert.equal(await strona.locator('.hero-panel a').getAttribute('href'),'./cennik.html?technologia='+technologia+'#cennik');
+          wysokosci.push(await strona.locator('.rack-internetu').evaluate(element=>element.getBoundingClientRect().height));
+        }
+        assert.ok(Math.max(...wysokosci)-Math.min(...wysokosci)<1,'Stabilna wysokość RACK i panelu');
+        await strona.locator('[data-rack-technologia=LAN]').hover();
+        assert.equal(await strona.locator('.hero-panel').getAttribute('data-technologia'),'LAN','Podgląd myszą');
+        assert.ok(await strona.locator('.rack-internetu .rj-link,.rack-internetu .wi').evaluateAll(elementy=>elementy.every(element=>getComputedStyle(element).animationName==='none')),'RACK respektuje reduced motion');
+      }
       assert.equal(await strona.locator('html').getAttribute('lang'),'pl');
       assert.equal(await strona.locator('.strona-tymczasowa').count(),0);
       assert.equal(await strona.locator('.wspolny-naglowek').count(),1);
@@ -74,6 +96,14 @@ try{
       assert.equal(await strona.evaluate(()=>document.documentElement.scrollWidth),szerokosc,`${plik} ${szerokosc}: overflow`);
       const wystajace=await strona.locator('main :is(h1,h2,h3,p,a,figure,svg,details)').evaluateAll(elementy=>elementy.filter(element=>{
         if(element.classList.contains('katalog-pcb'))return false;
+        // Zagnieżdżony SVG przycina pełną bitmapę do własnego viewportu portu.
+        // getBoundingClientRect zwraca także niewidoczny obszar elementu <use>.
+        if(element instanceof SVGSVGElement&&element.ownerSVGElement){
+          const macierz=element.parentElement.getScreenCTM();
+          const lewy=new DOMPoint(element.x.baseVal.value,element.y.baseVal.value).matrixTransform(macierz);
+          const prawy=new DOMPoint(element.x.baseVal.value+element.width.baseVal.value,element.y.baseVal.value+element.height.baseVal.value).matrixTransform(macierz);
+          return lewy.x<-.5||prawy.x>innerWidth+.5;
+        }
         const r=element.getBoundingClientRect();return r.width>0&&(r.left<-.5||r.right>innerWidth+.5);
       }).map(element=>element.outerHTML.slice(0,150)));
       assert.deepEqual(wystajace,[],`${plik} ${szerokosc}: obcięta treść`);
@@ -129,6 +159,9 @@ try{
     }
     tytuly.add(await strona.title());opisy.add(await strona.locator('meta[name="description"]').getAttribute('content'));
     await strona.emulateMedia({reducedMotion:'no-preference'});
+    if(plik==='internet'){
+      assert.ok(await strona.locator('.rack-internetu .rj-link,.rack-internetu .wi').evaluateAll(elementy=>elementy.every(element=>getComputedStyle(element).animationName!=='none')),'Animowane kontrolki transmisji RACK');
+    }
     const impuls=strona.locator('.sygnal,.impuls-katalogu').first();
     const przed=await impuls.evaluate(element=>getComputedStyle(element).strokeDashoffset);
     await strona.waitForTimeout(180);
@@ -173,6 +206,25 @@ try{
   for(const plik of strony){
     Object.assign(faza,{plik,szerokosc:390,href:null,scenariusz:'dotyk'});
     await przejdz(telefon,`${adres}/${plik}.html`);
+    if(plik==='internet'){
+      await telefon.locator('[data-rack-technologia=FIBER]').tap();
+      assert.equal(await telefon.locator('.hero-panel').getAttribute('data-technologia'),'FIBER');
+      const przed=await telefon.evaluate(()=>scrollY);
+      const pole=await telefon.locator('[data-rack-technologia=FIBER]').boundingBox();
+      const sesja=await dotyk.newCDPSession(telefon);
+      const x=Math.round(pole.x+pole.width/2),y=Math.round(pole.y+pole.height/2);
+      await sesja.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});
+      for(let krok=1;krok<=12;krok++){
+        await sesja.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y:y-krok*15}]});
+        await telefon.waitForTimeout(20);
+      }
+      await sesja.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+      await telefon.waitForTimeout(300);await sesja.detach();
+      assert.ok(await telefon.evaluate(()=>scrollY)>przed,'Gest nad RACK przewija stronę');
+      assert.equal(await telefon.locator('.hero-panel').getAttribute('data-technologia'),'FIBER','Scroll zachowuje wybór');
+      await telefon.locator('[data-rack-technologia=AIR]').tap();
+      assert.equal(await telefon.locator('.hero-panel').getAttribute('data-technologia'),'AIR');
+    }
     await telefon.locator('#otworz-menu').tap();await telefon.locator('.rozwijanie-uslug').tap();
     assert.equal(await telefon.locator('.rozwijanie-uslug').getAttribute('aria-expanded'),'true');
     const r=await telefon.locator('#nawigacja').boundingBox();assert.ok(r.y+r.height<=651);

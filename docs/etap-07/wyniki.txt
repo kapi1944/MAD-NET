@@ -1,0 +1,343 @@
+=== npm run verify — PASS ===
+npm notice run mad-net@0.1.0 verify
+npm notice run npm run test && npm run build
+npm notice run mad-net@0.1.0 test
+npm notice run node --test tests/*.test.mjs
+✔ build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylko allowlistę (788.9117ms)
+✔ FIBER: aktualne interfejsy i instrukcje stosują SC/APC Simplex (7.3829ms)
+✔ HOME: archiwum i obrazy zachowują oryginalne bajty i MIME V3 (33.4992ms)
+✔ HOME: osobne zasoby, język polski, brak zależności od stylów cennika (106.1552ms)
+✔ cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline (163.1427ms)
+✔ HOME V5: nawigacja, stopka i sekcje poza zakresem zachowują treść (62.7256ms)
+✔ nawigacja: dziewięć stron ma wspólne elementy i istniejące względne cele (59.2645ms)
+✔ nawigacja: nowe skrypty mają poprawną składnię (190.8564ms)
+✔ strona główna HOME ma własne zasoby i sekcje (2.6161ms)
+✔ struktura startowa i poprawne odnośniki do rozdzielonych zasobów (1.6838ms)
+✔ skrypty wykonują się w pierwotnej kolejności (1.4424ms)
+✔ oryginalny szablon V18 jest zachowany do porównań i rollbacku (1.999ms)
+✔ 13 wariantów: 5 LAN, 3 FIBER i 5 AIR (0.6036ms)
+✔ zachowano sekcje i formularz, bez fikcyjnego backendu SMTP (2.6515ms)
+✔ poprawna składnia JavaScript we wszystkich trzech skryptach (294.609ms)
+✔ środowisko: zajęty jawny port zgłasza błąd i pozostawia obcy serwer (12.6219ms)
+✔ środowisko: przedwczesne wyjście własnego serwera nie zawiesza testu (71.9016ms)
+✔ środowisko: brak przeglądarki podaje instrukcję i respektuje MADNET_PRZEGLADARKA (15.6339ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 923.0272
+npm notice run mad-net@0.1.0 build
+npm notice run node scripts/build.mjs
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+
+
+=== npm run test:home — PASS ===
+npm notice run mad-net@0.1.0 test:home
+npm notice run npm run build && node tests/home.browser.mjs
+npm notice run mad-net@0.1.0 build
+npm notice run node scripts/build.mjs
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS HOME 320px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 360px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 390px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 430px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 768px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1024px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1366px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1440px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1920px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS cennik 390px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 768px: geometria i typografia bez zmian, różne piksele=1875
+PASS cennik 1024px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1440px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1920px: geometria i typografia bez zmian, różne piksele=0
+PASS smoke /: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /cennik.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/cennik.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS CTA HERO: klawiatura → dostępność internetu; kliknięcie → pakiety
+PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli
+
+
+=== npm run test:oferta — PASS ===
+npm notice run mad-net@0.1.0 test:oferta
+npm notice run npm run build && node tests/oferta.browser.mjs
+npm notice run mad-net@0.1.0 build
+npm notice run node scripts/build.mjs
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS internet: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS monitoring-alarmy: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS sieci-it: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS strony-www-hosting: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS instalacje-tv-sat: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS pięć stron: 45 układów, dotyk/klawiatura, CTA, brak błędów JS/konsoli/HTTP
+
+
+=== npm run test:nawigacja — PASS ===
+npm notice run mad-net@0.1.0 test:nawigacja
+npm notice run npm run build && node tests/nawigacja.browser.mjs
+npm notice run mad-net@0.1.0 build
+npm notice run node scripts/build.mjs
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS linki: 243 lokalnych odnośników, 9 celów HTTP 200 i istniejące fragmenty
+PASS menu index.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS stare URL: 12 przekierowań pod / i /MAD-NET/, hashchange; inne hashe bez przekierowania
+PASS dotyk: tap, scroll bez otwierania, niskie menu HOME/cennika/katalogu, działający link usługi
+
+
+=== npm run test:browser — PASS ===
+npm notice run mad-net@0.1.0 test:browser
+npm notice run npm run build && node tests/home.browser.mjs && node tests/fiber.browser.mjs && node tests/led.browser.mjs && node tests/diagnostyka-panelu.mjs && node tests/v20.browser.mjs && node tests/v21.browser.mjs && node tests/nawigacja.browser.mjs && node tests/oferta.browser.mjs && node tests/porty.browser.mjs
+npm notice run mad-net@0.1.0 build
+npm notice run node scripts/build.mjs
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS HOME 320px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 360px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 390px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 430px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 768px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1024px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1366px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1440px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS HOME 1920px: HOME V5 bez kolizji; 5 sekcji zgodnych pikselowo; technologie/mapa/PCB/linki
+PASS cennik 390px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 768px: geometria i typografia bez zmian, różne piksele=1875
+PASS cennik 1024px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1440px: geometria i typografia bez zmian, różne piksele=0
+PASS cennik 1920px: geometria i typografia bez zmian, różne piksele=0
+PASS smoke /: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /cennik.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/index.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS smoke /MAD-NET/cennik.html: selektory i 17 odpowiedzi HTTP 200, rozdzielone CSS/JS
+PASS CTA HERO: klawiatura → dostępność internetu; kliknięcie → pakiety
+PASS dwie strony w dist, zasoby HOME pod /MAD-NET/, archiwum poza dist, brak błędów JS/konsoli
+PASS SC/APC 320px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 360px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 390px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 430px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 768px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 1024px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 1280px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 1366px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 1440px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC 1920px: urządzenie, karty, sekwencja i geometria
+PASS SC/APC szybkie przełączanie
+PASS SC/APC filtry tabel i klawiatura
+PASS SC/APC anulowanie i ograniczony ruch
+PASS SC/APC zrzuty stanów desktop
+PASS szybkie przełączanie, anulowanie, klawiatura, zachowanie tabel, reduced motion, tap/long press/scroll, orientacja i brak błędów JS
+PASS LINK/ACT 320 LAN cztery reprezentacje, sekwencja, ciągłość ACT, anulowanie i reduced-motion
+PASS LINK/ACT 320 FIBER cztery reprezentacje, sekwencja, ciągłość ACT, anulowanie i reduced-motion
+PASS LINK/ACT 390 LAN cztery reprezentacje, sekwencja, ciągłość ACT, anulowanie i reduced-motion
+PASS LINK/ACT 390 FIBER cztery reprezentacje, sekwencja, ciągłość ACT, anulowanie i reduced-motion
+PASS LINK/ACT 1440 LAN cztery reprezentacje, sekwencja, ciągłość ACT, anulowanie i reduced-motion
+PASS LINK/ACT 1440 FIBER cztery reprezentacje, sekwencja, ciągłość ACT, anulowanie i reduced-motion
+PASS panel 320 LAN
+PASS panel 320 FIBER
+PASS panel 320 AIR
+PASS panel 360 LAN
+PASS panel 360 FIBER
+PASS panel 360 AIR
+PASS panel 375 LAN
+PASS panel 375 FIBER
+PASS panel 375 AIR
+PASS panel 380 LAN
+PASS panel 380 FIBER
+PASS panel 380 AIR
+PASS panel 390 LAN
+PASS panel 390 FIBER
+PASS panel 390 AIR
+PASS panel 400 LAN
+PASS panel 400 FIBER
+PASS panel 400 AIR
+PASS panel 414 LAN
+PASS panel 414 FIBER
+PASS panel 414 AIR
+PASS panel 430 LAN
+PASS panel 430 FIBER
+PASS panel 430 AIR
+PASS panel 480 LAN
+PASS panel 480 FIBER
+PASS panel 480 AIR
+PASS panel 560 LAN
+PASS panel 560 FIBER
+PASS panel 560 AIR
+PASS panel 768 LAN
+PASS panel 768 FIBER
+PASS panel 768 AIR
+PASS panel 800 LAN
+PASS panel 800 FIBER
+PASS panel 800 AIR
+PASS panel 1024 LAN
+PASS panel 1024 FIBER
+PASS panel 1024 AIR
+PASS panel 1230 LAN
+PASS panel 1230 FIBER
+PASS panel 1230 AIR
+PASS panel 1231 LAN
+PASS panel 1231 FIBER
+PASS panel 1231 AIR
+PASS panel 1440 LAN
+PASS panel 1440 FIBER
+PASS panel 1440 AIR
+PASS panel 1920 LAN
+PASS panel 1920 FIBER
+PASS panel 1920 AIR
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 390px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 768px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1024px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=false
+PASS trwałe podświetlenie 2/5 s, ruch i wyjście: 1440px, reduced-motion=true
+PASS 320px: HERO, ceny, okresy, tabela i 13 tras
+PASS 360px: HERO, ceny, okresy, tabela i 13 tras
+PASS 375px: HERO, ceny, okresy, tabela i 13 tras
+PASS 380px: HERO, ceny, okresy, tabela i 13 tras
+PASS 390px: HERO, ceny, okresy, tabela i 13 tras
+PASS 400px: HERO, ceny, okresy, tabela i 13 tras
+PASS 414px: HERO, ceny, okresy, tabela i 13 tras
+PASS 430px: HERO, ceny, okresy, tabela i 13 tras
+PASS 480px: HERO, ceny, okresy, tabela i 13 tras
+PASS 560px: HERO, ceny, okresy, tabela i 13 tras
+PASS 760px: HERO, ceny, okresy, tabela i 13 tras
+PASS 768px: HERO, ceny, okresy, tabela i 13 tras
+PASS 800px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1024px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1100px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1230px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1231px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1280px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1440px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1500px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1510px: HERO, ceny, okresy, tabela i 13 tras
+PASS 1920px: HERO, ceny, okresy, tabela i 13 tras
+POMIAR gotowości RACK: {"przed":{"szerokosc":1440,"wysokoscWidoku":1100,"przewiniecie":0,"fonty":"loaded","czcionka":"Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif","panel":{"x":1051.71875,"y":206.328125,"szerokosc":356.28125,"wysokosc":381.390625},"zmienne":{"gora":"115.33px","lewo":"1051.72px","wysokosc":"360.16px"},"fokus":null,"animacje":[]},"po":{"szerokosc":1440,"wysokoscWidoku":1100,"przewiniecie":0,"fonty":"loaded","czcionka":"Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif","panel":{"x":1051.71875,"y":206.328125,"szerokosc":356.28125,"wysokosc":381.390625},"zmienne":{"gora":"115.33px","lewo":"1051.72px","wysokosc":"360.16px"},"fokus":null,"animacje":[]}}
+CZCIONKI RACK: [{"familyName":"Segoe UI","postScriptName":"SegoeUI","isCustomFont":false,"glyphCount":65}]
+PASS klawiatura, dotyk, scroll, ograniczony ruch, 13 kanałów; 286 tras bez kolizji
+PASS V21 320px / 8 kombinacji / 13 miniportów
+PASS V21 360px / 8 kombinacji / 13 miniportów
+PASS V21 390px / 8 kombinacji / 13 miniportów
+PASS V21 430px / 8 kombinacji / 13 miniportów
+PASS V21 768px / 8 kombinacji / 13 miniportów
+PASS V21 1024px / 8 kombinacji / 13 miniportów
+PASS V21 1280px / 8 kombinacji / 13 miniportów
+PASS V21 1366px / 8 kombinacji / 13 miniportów
+PASS V21 1440px / 8 kombinacji / 13 miniportów
+PASS V21 1920px / 8 kombinacji / 13 miniportów
+PASS V21 geokodowanie, mapa, przeciąganie, status, dane zapytania, awaria mapy, reduced motion, brak wyjątków JS
+PASS linki: 243 lokalnych odnośników, 9 celów HTTP 200 i istniejące fragmenty
+PASS menu index.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 390px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 768px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1440px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu index.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu cennik.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS menu uslugi.html 1920px: hover/focus/Tab/Enter/Space/Escape, bez overflow
+PASS stare URL: 12 przekierowań pod / i /MAD-NET/, hashchange; inne hashe bez przekierowania
+PASS dotyk: tap, scroll bez otwierania, niskie menu HOME/cennika/katalogu, działający link usługi
+PASS internet: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS monitoring-alarmy: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS sieci-it: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS strony-www-hosting: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS instalacje-tv-sat: 9 szerokości, FAQ/klawiatura, animacja/reduced motion, CTA, /MAD-NET/
+PASS pięć stron: 45 układów, dotyk/klawiatura, CTA, brak błędów JS/konsoli/HTTP
+PASS porty po: 18 pomiarów, porównania LAN/FIBER, karty, tabele i RACK
+
+
+=== npm run test:integracja — PASS ===
+npm notice run mad-net@0.1.0 test:integracja
+npm notice run npm run build && node tests/integracja.browser.mjs
+npm notice run mad-net@0.1.0 build
+npm notice run node scripts/build.mjs
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
+PASS dziewięć stron: index.html 320
+PASS dziewięć stron: index.html 390
+PASS dziewięć stron: index.html 768
+PASS dziewięć stron: index.html 1024
+PASS dziewięć stron: index.html 1366
+PASS dziewięć stron: index.html 1440
+PASS dziewięć stron: index.html 1920
+PASS dziewięć stron: cennik.html 320
+PASS dziewięć stron: cennik.html 390
+PASS dziewięć stron: cennik.html 768
+PASS dziewięć stron: cennik.html 1024
+PASS dziewięć stron: cennik.html 1366
+PASS dziewięć stron: cennik.html 1440
+PASS dziewięć stron: cennik.html 1920
+PASS dziewięć stron: uslugi.html 320
+PASS dziewięć stron: uslugi.html 390
+PASS dziewięć stron: uslugi.html 768
+PASS dziewięć stron: uslugi.html 1024
+PASS dziewięć stron: uslugi.html 1366
+PASS dziewięć stron: uslugi.html 1440
+PASS dziewięć stron: uslugi.html 1920
+PASS dziewięć stron: kontakt.html 320
+PASS dziewięć stron: kontakt.html 390
+PASS dziewięć stron: kontakt.html 768
+PASS dziewięć stron: kontakt.html 1024
+PASS dziewięć stron: kontakt.html 1366
+PASS dziewięć stron: kontakt.html 1440
+PASS dziewięć stron: kontakt.html 1920
+PASS dziewięć stron: internet.html 320
+PASS dziewięć stron: internet.html 390
+PASS dziewięć stron: internet.html 768
+PASS dziewięć stron: internet.html 1024
+PASS dziewięć stron: internet.html 1366
+PASS dziewięć stron: internet.html 1440
+PASS dziewięć stron: internet.html 1920
+PASS dziewięć stron: monitoring-alarmy.html 320
+PASS dziewięć stron: monitoring-alarmy.html 390
+PASS dziewięć stron: monitoring-alarmy.html 768
+PASS dziewięć stron: monitoring-alarmy.html 1024
+PASS dziewięć stron: monitoring-alarmy.html 1366
+PASS dziewięć stron: monitoring-alarmy.html 1440
+PASS dziewięć stron: monitoring-alarmy.html 1920
+PASS dziewięć stron: sieci-it.html 320
+PASS dziewięć stron: sieci-it.html 390
+PASS dziewięć stron: sieci-it.html 768
+PASS dziewięć stron: sieci-it.html 1024
+PASS dziewięć stron: sieci-it.html 1366
+PASS dziewięć stron: sieci-it.html 1440
+PASS dziewięć stron: sieci-it.html 1920
+PASS dziewięć stron: strony-www-hosting.html 320
+PASS dziewięć stron: strony-www-hosting.html 390
+PASS dziewięć stron: strony-www-hosting.html 768
+PASS dziewięć stron: strony-www-hosting.html 1024
+PASS dziewięć stron: strony-www-hosting.html 1366
+PASS dziewięć stron: strony-www-hosting.html 1440
+PASS dziewięć stron: strony-www-hosting.html 1920
+PASS dziewięć stron: instalacje-tv-sat.html 320
+PASS dziewięć stron: instalacje-tv-sat.html 390
+PASS dziewięć stron: instalacje-tv-sat.html 768
+PASS dziewięć stron: instalacje-tv-sat.html 1024
+PASS dziewięć stron: instalacje-tv-sat.html 1366
+PASS dziewięć stron: instalacje-tv-sat.html 1440
+PASS dziewięć stron: instalacje-tv-sat.html 1920

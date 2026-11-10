@@ -1,31 +1,3 @@
-// HOME V5 — lokalny podgląd technologii bez kopiowania logiki cennika.
-(() => {
- const przyciski=[...document.querySelectorAll('[data-home-technologia]')];
- const panel=document.getElementById('hero-opis-technologii');
- if(!panel)return;
- const opisy={
-  LAN:['LAN / Ethernet','Transmisja kablem miedzianym. Złącza RJ-45.'],
-  FIBER:['FIBER / Światłowód','Transmisja światłem. Zielone złącza SC/APC Simplex, polerowanie 8°.'],
-  AIR:['AIR / Radio','Transmisja radiowa. Bez kabla pomiędzy punktami radiowymi.']
- };
- function pokazTechnologie(technologia){
-  przyciski.forEach(przycisk=>przycisk.setAttribute('aria-pressed',String(przycisk.dataset.homeTechnologia===technologia)));
-  panel.dataset.technologia=technologia;
-  panel.querySelector('strong').textContent=opisy[technologia][0];
-  panel.querySelector('p').textContent=opisy[technologia][1];
-  const link=panel.querySelector('a');
-  link.href=`./cennik.html?technologia=${technologia}#cennik`;
-  link.firstChild.textContent=`Poznaj pakiety ${technologia} `;
- }
- przyciski.forEach(przycisk=>{
-  przycisk.addEventListener('click',()=>pokazTechnologie(przycisk.dataset.homeTechnologia));
-  przycisk.addEventListener('focus',()=>pokazTechnologie(przycisk.dataset.homeTechnologia));
-  przycisk.addEventListener('pointerenter',zdarzenie=>{
-   if(zdarzenie.pointerType==='mouse'&&matchMedia('(hover:hover) and (pointer:fine)').matches)pokazTechnologie(przycisk.dataset.homeTechnologia);
-  });
- });
-})();
-
 // Boczne trasy PCB za treścią, aktywne impulsy bez nakładania na litery.
 // Trasy zaczynają się poza krawędzią i kończą w bezpiecznych strefach bocznych.
 (function dodajObwodyZImpulsami(){
