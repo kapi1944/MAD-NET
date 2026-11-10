@@ -188,3 +188,69 @@ body {background:#090e14;}
 .pcb-ornament .pcb-obrys{stroke:#e51a3c;stroke-width:1.9;opacity:.86}
 .pcb-ornament .pcb-iskra{stroke-width:3;filter:drop-shadow(0 0 4px #ff2244)}
 @media(max-width:780px){.pcb-ornament{opacity:.42}}
+
+/* HOME V5 — lokalne komponenty technologii i hierarchia pięciu usług. */
+.sekcja-technologie{background:#0c1118;border-bottom:1px solid #29313b;padding-block:62px}
+.sekcja-technologie .naglowek-z-opisem{grid-template-columns:1.1fr 1fr auto}
+.technologie-siatka{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:30px}
+.technologia-karta{--kolor-technologii:#ff203e;min-width:0;padding:26px;border:1px solid #303b47;border-top:2px solid var(--kolor-technologii);border-radius:7px;background:#131a23;display:flex;flex-direction:column}
+.technologia-fiber{--kolor-technologii:#FF7B19}.technologia-air{--kolor-technologii:#3fa8ff}
+.technologia-naglowek{display:flex;align-items:center;gap:10px;color:var(--kolor-technologii)}
+.technologia-naglowek span{font-size:10px;letter-spacing:.08em;font-weight:650}
+.technologia-naglowek .ikona{width:20px;height:20px}
+.technologia-karta h3{margin:24px 0 8px;font-size:28px;letter-spacing:-.03em;font-weight:700}
+.technologia-karta h3 span{display:block;margin-top:7px;font-size:14px;font-weight:500;letter-spacing:0;color:#bcc5cf}
+.medium-transmisji{width:100%;height:auto;max-height:100px;margin:14px 0;color:var(--kolor-technologii);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.medium-fiber .zlacze-apc{color:#75b96a;fill:#23462b;stroke:currentColor}
+.medium-lan rect{fill:#272c35;stroke:#9ca6b3}
+.technologia-karta p{font-size:13px;line-height:1.8;color:#b2bdc9;margin:0 0 24px;flex:1}
+.technologia-karta>a{display:flex;justify-content:space-between;align-items:center;min-height:44px;padding-top:14px;border-top:1px solid #303b47;font-size:12px;font-weight:650}
+.technologia-karta>a span{color:var(--kolor-technologii)}
+.sekcja-uslugi{background:#10151c}
+.sekcja-uslugi .siatka-uslug{grid-template-columns:1.2fr 1fr 1fr;gap:20px}
+.sekcja-uslugi .karta-uslugi{background:#151c25;border-color:#35404c;box-shadow:none;transform:none}
+.sekcja-uslugi #internet{grid-row:span 2;border-color:#85404d}
+.sekcja-uslugi .zdjecie-uslugi{height:auto;aspect-ratio:2.15}
+.sekcja-uslugi #internet .zdjecie-uslugi{aspect-ratio:1.15}
+.sekcja-uslugi .tresc-uslugi{padding:20px}
+.sekcja-uslugi .tresc-uslugi h3{font-size:17px;line-height:1.3;min-height:0}
+.sekcja-uslugi #internet h3{font-size:27px;letter-spacing:-.03em}
+.sekcja-uslugi .tresc-uslugi p{font-size:13px;line-height:1.75}
+.sekcja-uslugi .link-karty{min-height:44px;font-size:12px;font-weight:650;background:none;padding-inline:0}
+.usluga-wyroznienie{color:#ee8191;font-size:10px;letter-spacing:.1em;line-height:1.6;margin-bottom:14px}
+.sekcja-uslugi .karta-uslugi:last-child{max-width:none;grid-column:auto}
+.sekcja-obszar{background:#0c131b;border-block:1px solid #29313b}
+.sekcja-obszar .mapa-ramka{border-radius:7px}
+.sekcja-obszar .lista-miejscowosci{background:#131c26;border-color:#364451;box-shadow:0 12px 30px #0004}
+.sekcja-uslugi.obwod::after,.sekcja-obszar.obwod::after{opacity:.3}
+.sekcja-uslugi .pcb-ornament,.sekcja-obszar .pcb-ornament{opacity:.3}
+.sekcja-uslugi .pcb-iskra,.sekcja-obszar .pcb-iskra{filter:none;stroke-width:1.8}
+@media(hover:hover) and (pointer:fine){
+ .technologia-karta:hover{border-color:var(--kolor-technologii)}
+ .technologia-karta>a:hover{color:var(--kolor-technologii)}
+ .sekcja-uslugi .karta-uslugi:hover{border-color:#a34c5b;transform:translateY(-3px);box-shadow:0 12px 24px #0004}
+}
+.technologia-karta:focus-within,.sekcja-uslugi .karta-uslugi:focus-within{border-color:#b8c2ce}
+@media(hover:none){
+ .przycisk:hover,.karta-uslugi:hover,.karta-uslugi:hover img{transform:none}
+ .karta-uslugi:hover{box-shadow:none}
+}
+@media(max-width:1100px){.sekcja-technologie .naglowek-z-opisem{grid-template-columns:1fr 1fr}.sekcja-technologie .link-tekstowy{grid-column:1/-1}.technologia-karta{padding:20px}.sekcja-uslugi .siatka-uslug{grid-template-columns:1fr 1fr}.sekcja-uslugi #internet{grid-column:1/-1;grid-row:auto;display:grid;grid-template-columns:1fr 1fr}.sekcja-uslugi #internet .zdjecie-uslugi{aspect-ratio:auto;height:100%;min-height:260px}}
+@media(max-width:780px){.sekcja-technologie .naglowek-z-opisem{grid-template-columns:1fr}.technologie-siatka{grid-template-columns:1fr}.technologia-karta{display:grid;grid-template-columns:1fr 1fr;gap:0 25px}.technologia-naglowek,.technologia-karta h3{grid-column:1}.technologia-karta h3{margin-top:18px}.medium-transmisji{grid-column:2;grid-row:1/3;align-self:center}.technologia-karta p,.technologia-karta>a{grid-column:1/-1}.technologia-karta p{margin-top:18px}.sekcja-uslugi .tresc-uslugi{padding:18px}}
+@media(max-width:520px){.sekcja-technologie{padding-block:42px}.technologia-karta{display:flex;padding:22px}.medium-transmisji{margin:20px 0}.technologia-karta p{margin-top:0}.sekcja-uslugi .siatka-uslug{grid-template-columns:1fr;gap:16px}.sekcja-uslugi #internet{display:flex;grid-column:auto}.sekcja-uslugi #internet .zdjecie-uslugi{min-height:0;aspect-ratio:1.7;height:auto}.sekcja-uslugi .zdjecie-uslugi{aspect-ratio:2}.sekcja-uslugi .tresc-uslugi{padding:22px}.sekcja-uslugi #internet h3{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.technologia-karta,.sekcja-uslugi .karta-uslugi,.sekcja-uslugi img{transition:none}}
+/* Podpisy nie zmieniają współrzędnych punktów; mała mapa wymaga osobnych odstępów. */
+@media(max-width:520px){
+ .sekcja-obszar .mapa-gps-badge{left:60px;top:62px}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Pobierowo"] .napis-mapy{transform:translate(-30px,13px)}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Rewal"] .napis-mapy{transform:translate(-32px,-17px)}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Niechorze"] .napis-mapy{transform:translate(-15px,18px)}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Pogorzelica"] .napis-mapy{transform:translate(-25px,-30px)}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Trzebiatów"] .napis-mapy{transform:translate(-20px,20px)}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Mrzeżyno"] .napis-mapy{transform:translate(-25px,-22px)}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Rogowo"] .napis-mapy{transform:translate(-8px,16px)}
+}
+@media(max-width:340px){
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Pobierowo"] .napis-mapy{transform:translate(-40px,25px)}
+ .mapa-pinezki .punkt-mapy[data-mapa-miasto="Mrzeżyno"] .napis-mapy{transform:translate(-25px,-42px)}
+}

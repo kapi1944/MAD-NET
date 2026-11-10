@@ -62,6 +62,7 @@ jobs:
           path: |
             test-results/finalizacja
             test-results/integracja
+            test-results/home-v5
             test-results/fiber
             test-results/pcb-4-1
             test-results/v20/po

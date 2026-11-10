@@ -6,7 +6,7 @@ Rozdzielenie pliku HTML **bez przebudowy funkcji**:
 
 | Moduł | Lokalizacja | Odpowiedzialność |
 |---|---|---|
-| Strona główna z HERO V4 | `index.html`, `assets/css/home.css`, `assets/css/hero.css`, `assets/js/home.js`, `assets/img/home/` | HERO ma odrębny arkusz; pozostałe style HOME, karty, PCB i mapa regionu zachowują zakres V3. [Raport V4](hero-v4/README.md) |
+| Strona główna HOME V5 | `index.html`, `assets/css/home.css`, `assets/css/hero.css`, `assets/js/home.js`, `assets/img/home/` | HERO ma odrębny arkusz i lokalny podgląd LAN/FIBER/AIR. Karty technologii i usług oraz mapa pozostają odizolowane od cennika. Współdzielona bitmapa RACK, bez kopiowania danych pakietów ani mechaniki przewodów. [Raport V5](home-v5/README.md) |
 | Wspólna nawigacja | `assets/css/nawigacja.css`, `assets/js/nawigacja.js` | Nagłówek, menu dotykowe/klawiaturowe, dropdown i stopka na dziewięciu stronach |
 | Katalog i strony tymczasowe | `uslugi.html`, pięć podstron usług, `kontakt.html`, `assets/css/uslugi.css` | Pięć bannerów; jawne strony tymczasowe do dalszych etapów |
 | Zgodność dawnych hashy | `assets/js/stare-adresy.js` wyłącznie w index | Tylko #cennik/#oplaty/#kontakt → cennik.html z tym samym fragmentem |

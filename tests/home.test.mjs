@@ -64,10 +64,17 @@ test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z basel
 });
 
 
-test('HERO V4: pozostałe sekcje, nagłówek i stopka HOME zachowują treść bazową', () => {
-  const baza = execFileSync('git', ['show', '1987ad3:index.html'], {encoding:'utf8'});
-  const bezHero = tresc => tresc.replaceAll('\r\n', '\n')
-    .replace(/<section class="sekcja-hero[\s\S]*?<\/section>/, '')
-    .replace(/  <link rel="stylesheet" href=".\/assets\/css\/hero.css">\n/, '');
-  assert.equal(bezHero(html), bezHero(baza));
+test('HOME V5: nawigacja, stopka i sekcje poza zakresem zachowują treść', () => {
+  const baza = execFileSync('git', ['show', '201931a:index.html'], {encoding:'utf8'});
+  for(const klasa of ['sekcja-powody','sekcja-proces','sekcja-relacje','sekcja-kontakt']){
+    const wyrazenie=new RegExp('<section class="[^">]*'+klasa+'[\\s\\S]*?<\\/section>');
+    assert.equal(html.match(wyrazenie)[0].replaceAll('\r\n','\n'),baza.match(wyrazenie)[0].replaceAll('\r\n','\n'),klasa);
+  }
+  for(const znacznik of ['header','footer']){
+    const wyrazenie=new RegExp('<'+znacznik+'[\\s\\S]*?<\\/'+znacznik+'>');
+    assert.equal(html.match(wyrazenie)[0].replaceAll('\r\n','\n'),baza.match(wyrazenie)[0].replaceAll('\r\n','\n'),znacznik);
+  }
+  assert.match(html,/Internet\.<br><span>Po sąsiedzku\./);
+  assert.equal((html.match(/class="technologia-karta /g)||[]).length,3);
+  assert.match(html,/cennik.html\?technologia=FIBER#cennik/);
 });

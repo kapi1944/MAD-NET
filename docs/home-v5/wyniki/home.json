@@ -1,0 +1,4022 @@
+{
+  "wyniki": [
+    {
+      "strona": "HOME V5",
+      "szerokosc": 320,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 17,
+          "y": 74,
+          "szerokosc": 286,
+          "wysokosc": 92.875,
+          "font": "750 43px / 46.44px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 17,
+          "y": 188.875,
+          "szerokosc": 286,
+          "wysokosc": 100.75,
+          "font": "14px / 25.2px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 17,
+          "y": 317.625,
+          "szerokosc": 286,
+          "wysokosc": 114,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 17,
+          "y": 551.421875,
+          "szerokosc": 286,
+          "wysokosc": 205.484375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 17,
+          "y": 551.421875,
+          "szerokosc": 286,
+          "wysokosc": 429.484375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 695,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 520,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 850,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 472,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 320,
+      "porownanie": {
+        "szerokosc": 320,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 320,
+      "wysokosc": 429.484375
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 320,
+      "wysokosc": 429.484375
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 320,
+      "wysokosc": 429.484375
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 360,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 17,
+          "y": 74,
+          "szerokosc": 326,
+          "wysokosc": 92.875,
+          "font": "750 43px / 46.44px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 17,
+          "y": 188.875,
+          "szerokosc": 326,
+          "wysokosc": 100.75,
+          "font": "14px / 25.2px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 17,
+          "y": 317.625,
+          "szerokosc": 326,
+          "wysokosc": 114,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 17,
+          "y": 551.421875,
+          "szerokosc": 326,
+          "wysokosc": 234.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 17,
+          "y": 551.421875,
+          "szerokosc": 326,
+          "wysokosc": 458.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 625,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 503,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 779,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 472,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 360,
+      "porownanie": {
+        "szerokosc": 360,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 360,
+      "wysokosc": 458.234375
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 360,
+      "wysokosc": 458.234375
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 360,
+      "wysokosc": 458.234375
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 390,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 17,
+          "y": 74,
+          "szerokosc": 356,
+          "wysokosc": 92.875,
+          "font": "750 43px / 46.44px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 17,
+          "y": 188.875,
+          "szerokosc": 356,
+          "wysokosc": 100.75,
+          "font": "14px / 25.2px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 17,
+          "y": 317.625,
+          "szerokosc": 356,
+          "wysokosc": 114,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 17,
+          "y": 551.421875,
+          "szerokosc": 356,
+          "wysokosc": 255.78125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 17,
+          "y": 551.421875,
+          "szerokosc": 356,
+          "wysokosc": 479.78125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 625,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 503,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 779,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 472,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 390,
+      "wysokosc": 479.78125
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 390,
+      "wysokosc": 479.78125
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 390,
+      "wysokosc": 479.78125
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 430,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 17,
+          "y": 74,
+          "szerokosc": 396,
+          "wysokosc": 102.15625,
+          "font": "750 47.3px / 51.084px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 17,
+          "y": 198.15625,
+          "szerokosc": 396,
+          "wysokosc": 75.5625,
+          "font": "14px / 25.2px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 17,
+          "y": 301.71875,
+          "szerokosc": 396,
+          "wysokosc": 114,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 17,
+          "y": 535.515625,
+          "szerokosc": 396,
+          "wysokosc": 284.53125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 17,
+          "y": 535.515625,
+          "szerokosc": 396,
+          "wysokosc": 508.53125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 625,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 468,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 779,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 451,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 430,
+      "porownanie": {
+        "szerokosc": 430,
+        "wysokosc": 206,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 430,
+      "wysokosc": 508.53125
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 430,
+      "wysokosc": 508.53125
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 430,
+      "wysokosc": 508.53125
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 768,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 19,
+          "y": 74,
+          "szerokosc": 730,
+          "wysokosc": 141,
+          "font": "750 65.28px / 70.5024px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 19,
+          "y": 237,
+          "szerokosc": 510,
+          "wysokosc": 75.5625,
+          "font": "14px / 25.2px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 19,
+          "y": 340.5625,
+          "szerokosc": 730,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 104,
+          "y": 512.359375,
+          "szerokosc": 560,
+          "wysokosc": 402.359375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 104,
+          "y": 512.359375,
+          "szerokosc": 560,
+          "wysokosc": 586.359375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 458,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 305,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 439,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 286,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 768,
+      "wysokosc": 586.359375
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 768,
+      "wysokosc": 586.359375
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 768,
+      "wysokosc": 586.359375
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 1024,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 31,
+          "y": 104.984375,
+          "szerokosc": 466,
+          "wysokosc": 126.0625,
+          "font": "750 58.368px / 63.0374px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 31,
+          "y": 257.046875,
+          "szerokosc": 466,
+          "wysokosc": 81,
+          "font": "15px / 27px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 31,
+          "y": 366.046875,
+          "szerokosc": 466,
+          "wysokosc": 116,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 527,
+          "y": 44,
+          "szerokosc": 466,
+          "wysokosc": 334.828125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 527,
+          "y": 44,
+          "szerokosc": 466,
+          "wysokosc": 554.828125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 458,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 248,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 439,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 294,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 1024,
+      "wysokosc": 554.828125
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 1024,
+      "wysokosc": 554.828125
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 1024,
+      "wysokosc": 554.828125
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 1366,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 38,
+          "y": 167.25,
+          "szerokosc": 620,
+          "wysokosc": 168.15625,
+          "font": "750 77.862px / 84.091px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 38,
+          "y": 361.40625,
+          "szerokosc": 510,
+          "wysokosc": 81,
+          "font": "15px / 27px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 38,
+          "y": 470.40625,
+          "szerokosc": 620,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 708,
+          "y": 58,
+          "szerokosc": 620,
+          "wysokosc": 445.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 708,
+          "y": 58,
+          "szerokosc": 620,
+          "wysokosc": 629.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 320,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 242,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 302,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 207,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1366,
+      "porownanie": {
+        "szerokosc": 1366,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 1366,
+      "wysokosc": 629.46875
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 1366,
+      "wysokosc": 629.46875
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 1366,
+      "wysokosc": 629.46875
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 1440,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 38,
+          "y": 175.984375,
+          "szerokosc": 657,
+          "wysokosc": 177.28125,
+          "font": "750 82.08px / 88.6464px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 38,
+          "y": 379.265625,
+          "szerokosc": 510,
+          "wysokosc": 81,
+          "font": "15px / 27px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 38,
+          "y": 488.265625,
+          "szerokosc": 657,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 745,
+          "y": 58,
+          "szerokosc": 657,
+          "wysokosc": 472.0625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 745,
+          "y": 58,
+          "szerokosc": 657,
+          "wysokosc": 656.0625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 323,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 244,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 306,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 210,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 1440,
+      "wysokosc": 656.0625
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 1440,
+      "wysokosc": 656.0625
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 1440,
+      "wysokosc": 656.0625
+    },
+    {
+      "strona": "HOME V5",
+      "szerokosc": 1920,
+      "geometriaPo": [
+        {
+          "selektor": "h1",
+          "x": 270,
+          "y": 177.875,
+          "szerokosc": 665,
+          "wysokosc": 179.25,
+          "font": "750 83px / 89.64px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-glowne>p",
+          "x": 270,
+          "y": 383.125,
+          "szerokosc": 510,
+          "wysokosc": 81,
+          "font": "15px / 27px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(184, 190, 199)"
+        },
+        {
+          "selektor": ".hero-przyciski",
+          "x": 270,
+          "y": 492.125,
+          "szerokosc": 665,
+          "wysokosc": 52,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-fotografia",
+          "x": 985,
+          "y": 58,
+          "szerokosc": 665,
+          "wysokosc": 477.8125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".hero-obraz",
+          "x": 985,
+          "y": 58,
+          "szerokosc": 665,
+          "wysokosc": 661.8125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": ".sekcja-powody",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 324,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-proces",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 246,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-relacje",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 309,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".sekcja-kontakt",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 211,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": ".wspolna-stopka",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 170,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      }
+    },
+    {
+      "strona": "panel LAN",
+      "szerokosc": 1920,
+      "wysokosc": 661.8125
+    },
+    {
+      "strona": "panel FIBER",
+      "szerokosc": 1920,
+      "wysokosc": 661.8125
+    },
+    {
+      "strona": "panel AIR",
+      "szerokosc": 1920,
+      "wysokosc": 661.8125
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 390,
+      "porownanie": {
+        "szerokosc": 390,
+        "wysokosc": 8259,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 390,
+          "wysokosc": 967.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 18,
+          "y": 252.625,
+          "szerokosc": 354,
+          "wysokosc": 254.34375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 18,
+          "y": 518.96875,
+          "szerokosc": 354,
+          "wysokosc": 294.734375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 18,
+          "y": 1254.0625,
+          "szerokosc": 354,
+          "wysokosc": 1987.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 38,
+          "y": 1462.0625,
+          "szerokosc": 96,
+          "wysokosc": 27.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 18,
+          "y": 1814.203125,
+          "szerokosc": 354,
+          "wysokosc": 1427,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 33,
+          "y": 4066.984375,
+          "szerokosc": 324,
+          "wysokosc": 369.25,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 18,
+          "y": 5500.390625,
+          "szerokosc": 354,
+          "wysokosc": 2704.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 390,
+          "wysokosc": 967.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 18,
+          "y": 252.625,
+          "szerokosc": 354,
+          "wysokosc": 254.34375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 18,
+          "y": 518.96875,
+          "szerokosc": 354,
+          "wysokosc": 294.734375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 18,
+          "y": 1254.0625,
+          "szerokosc": 354,
+          "wysokosc": 1987.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 38,
+          "y": 1462.0625,
+          "szerokosc": 96,
+          "wysokosc": 27.140625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 18,
+          "y": 1814.203125,
+          "szerokosc": 354,
+          "wysokosc": 1427,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 33,
+          "y": 4066.984375,
+          "szerokosc": 324,
+          "wysokosc": 369.25,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 18,
+          "y": 5500.390625,
+          "szerokosc": 354,
+          "wysokosc": 2704.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 768,
+      "porownanie": {
+        "szerokosc": 768,
+        "wysokosc": 6527,
+        "roznePiksele": 1875,
+        "maksymalnaRoznica": 59,
+        "obszar": {
+          "lewo": 134,
+          "prawo": 243,
+          "gora": 1556,
+          "dol": 1582
+        }
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 768,
+          "wysokosc": 1094.3125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 104,
+          "y": 253.21875,
+          "szerokosc": 560,
+          "wysokosc": 402.359375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 667.578125,
+          "szerokosc": 704,
+          "wysokosc": 294.734375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1372.28125,
+          "szerokosc": 704,
+          "wysokosc": 1045,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 124,
+          "y": 1552.28125,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1919.28125,
+          "szerokosc": 704,
+          "wysokosc": 498,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 3098.265625,
+          "szerokosc": 658,
+          "wysokosc": 391.75,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 4353.796875,
+          "szerokosc": 704,
+          "wysokosc": 2100.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 768,
+          "wysokosc": 1094.3125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 104,
+          "y": 253.21875,
+          "szerokosc": 560,
+          "wysokosc": 402.359375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 667.578125,
+          "szerokosc": 704,
+          "wysokosc": 294.734375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1372.28125,
+          "szerokosc": 704,
+          "wysokosc": 1045,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 124,
+          "y": 1552.28125,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1919.28125,
+          "szerokosc": 704,
+          "wysokosc": 498,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 3098.265625,
+          "szerokosc": 658,
+          "wysokosc": 391.75,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 4353.796875,
+          "szerokosc": 704,
+          "wysokosc": 2100.703125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1024,
+      "porownanie": {
+        "szerokosc": 1024,
+        "wysokosc": 5222,
+        "roznePiksele": 1,
+        "maksymalnaRoznica": 1,
+        "obszar": {
+          "lewo": 411,
+          "prawo": 411,
+          "gora": 2019,
+          "dol": 2019
+        }
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1024,
+          "wysokosc": 736.953125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 480.90625,
+          "y": 64,
+          "szerokosc": 511.09375,
+          "wysokosc": 367.21875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 451.21875,
+          "szerokosc": 960,
+          "wysokosc": 242.734375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1019.09375,
+          "szerokosc": 960,
+          "wysokosc": 941,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 252,
+          "y": 1143.09375,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1510.09375,
+          "szerokosc": 960,
+          "wysokosc": 450,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 2467.75,
+          "szerokosc": 914,
+          "wysokosc": 376.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 3604.109375,
+          "szerokosc": 960,
+          "wysokosc": 1545.171875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1024,
+          "wysokosc": 736.953125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 480.90625,
+          "y": 64,
+          "szerokosc": 511.09375,
+          "wysokosc": 367.21875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 32,
+          "y": 451.21875,
+          "szerokosc": 960,
+          "wysokosc": 242.734375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 32,
+          "y": 1019.09375,
+          "szerokosc": 960,
+          "wysokosc": 941,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 252,
+          "y": 1143.09375,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 32,
+          "y": 1510.09375,
+          "szerokosc": 960,
+          "wysokosc": 450,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 55,
+          "y": 2467.75,
+          "szerokosc": 914,
+          "wysokosc": 376.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 32,
+          "y": 3604.109375,
+          "szerokosc": 960,
+          "wysokosc": 1545.171875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1440,
+      "porownanie": {
+        "szerokosc": 1440,
+        "wysokosc": 5027,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1440,
+          "wysokosc": 651,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 441.625,
+          "y": 67.59375,
+          "szerokosc": 655.25,
+          "wysokosc": 470.796875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1051.71875,
+          "y": 115.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 381.390625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 67,
+          "y": 947.921875,
+          "szerokosc": 1306,
+          "wysokosc": 947.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 460,
+          "y": 1071.921875,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 67,
+          "y": 1438.921875,
+          "szerokosc": 1306,
+          "wysokosc": 456.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 90,
+          "y": 2356.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 67,
+          "y": 3501.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1440,
+          "wysokosc": 651,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 441.625,
+          "y": 67.59375,
+          "szerokosc": 655.25,
+          "wysokosc": 470.796875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1051.71875,
+          "y": 115.328125,
+          "szerokosc": 356.28125,
+          "wysokosc": 381.390625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 67,
+          "y": 947.921875,
+          "szerokosc": 1306,
+          "wysokosc": 947.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 460,
+          "y": 1071.921875,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 67,
+          "y": 1438.921875,
+          "szerokosc": 1306,
+          "wysokosc": 456.234375,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 90,
+          "y": 2356.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 67,
+          "y": 3501.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    },
+    {
+      "strona": "cennik",
+      "szerokosc": 1920,
+      "porownanie": {
+        "szerokosc": 1920,
+        "wysokosc": 5136,
+        "roznePiksele": 0,
+        "maksymalnaRoznica": 0,
+        "obszar": null
+      },
+      "geometriaPrzed": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1920,
+          "wysokosc": 751,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 638.125,
+          "y": 82.171875,
+          "szerokosc": 753.84375,
+          "wysokosc": 541.640625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1345.125,
+          "y": 135.875,
+          "szerokosc": 418.875,
+          "wysokosc": 447.578125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 307,
+          "y": 1051.15625,
+          "szerokosc": 1306,
+          "wysokosc": 953,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 700,
+          "y": 1175.15625,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 307,
+          "y": 1542.15625,
+          "szerokosc": 1306,
+          "wysokosc": 462,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 330,
+          "y": 2465.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 307,
+          "y": 3610.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ],
+      "geometriaPo": [
+        {
+          "selektor": ".hero",
+          "x": 0,
+          "y": 0,
+          "szerokosc": 1920,
+          "wysokosc": 751,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".rack-box",
+          "x": 638.125,
+          "y": 82.171875,
+          "szerokosc": 753.84375,
+          "wysokosc": 541.640625,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#hero-tech-panel",
+          "x": 1345.125,
+          "y": 135.875,
+          "szerokosc": 418.875,
+          "wysokosc": 447.578125,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#connection-zone",
+          "x": 307,
+          "y": 1051.15625,
+          "szerokosc": 1306,
+          "wysokosc": 953,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": ".device-logo",
+          "x": 700,
+          "y": 1175.15625,
+          "szerokosc": 130,
+          "wysokosc": 35,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(243, 246, 250)"
+        },
+        {
+          "selektor": "#plans",
+          "x": 307,
+          "y": 1542.15625,
+          "szerokosc": 1306,
+          "wysokosc": 462,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#comparison-panel",
+          "x": 330,
+          "y": 2465.8125,
+          "szerokosc": 1260,
+          "wysokosc": 374.5,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        },
+        {
+          "selektor": "#availability-form",
+          "x": 307,
+          "y": 3610.75,
+          "szerokosc": 1306,
+          "wysokosc": 1452.46875,
+          "font": "16px Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+          "color": "rgb(245, 246, 248)"
+        }
+      ]
+    }
+  ],
+  "smoke": [
+    {
+      "sciezka": "/",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:49779/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/hero.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/pcb.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/index.html",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:49779/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/hero.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/pcb.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/cennik.html",
+      "selektory": [
+        "#hero-rack-stage",
+        "#cennik",
+        "#oplaty",
+        "#availability-form"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:49779/cennik.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/vendor/leaflet/leaflet.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/hero-hybryda.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/sprzet-fiber.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/hero-rack-baza.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/sprzet-fiber.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/hero/plyta-pcb.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/hero-rack.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/dostepnosc.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/wybor-technologii.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/js/cennik.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/assets/img/mad-net-logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/hero.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/pcb.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/index.html",
+      "selektory": [
+        "#tytul-glowny",
+        "#nawigacja",
+        "#mapa-ramka",
+        ".karta-uslugi"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/index.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/stare-adresy.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/home.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/hero.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/home.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/pcb.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/latarnia-tlo.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-internet.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-monitoring.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-it.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-www.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/usluga-anteny.jpg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/home/logo.png",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "sciezka": "/MAD-NET/cennik.html",
+      "selektory": [
+        "#hero-rack-stage",
+        "#cennik",
+        "#oplaty",
+        "#availability-form"
+      ],
+      "zasoby": [
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/cennik.html",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/vendor/leaflet/leaflet.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/styles.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/hero-hybryda.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/sprzet-fiber.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/css/nawigacja.css",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/sprzet-fiber.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/dostepnosc.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/hero-rack.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/cennik.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/nawigacja.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/hero-rack.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/js/wybor-technologii.js",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/hero-rack-baza.svg",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/hero/plyta-pcb.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:49779/MAD-NET/assets/img/mad-net-logo.png",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "bledy": [],
+  "konsola": [],
+  "pomiaryZrzutow": [
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 320,
+      "wysokosc": 694.984375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 320,
+      "wysokosc": 694.984375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 767,
+      "przewiniecie": 767,
+      "x": 0,
+      "y": 0.984375,
+      "szerokosc": 320,
+      "wysokosc": 518.390625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 767,
+      "przewiniecie": 767,
+      "x": 0,
+      "y": 0.984375,
+      "szerokosc": 320,
+      "wysokosc": 518.390625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1286,
+      "przewiniecie": 1286,
+      "x": 0,
+      "y": 0.375,
+      "szerokosc": 320,
+      "wysokosc": 849.40625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1286,
+      "przewiniecie": 1286,
+      "x": 0,
+      "y": 0.375,
+      "szerokosc": 320,
+      "wysokosc": 849.40625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1811,
+      "przewiniecie": 1811,
+      "x": 0,
+      "y": 324.78125,
+      "szerokosc": 320,
+      "wysokosc": 470.328125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1811,
+      "przewiniecie": 1811,
+      "x": 0,
+      "y": 324.78125,
+      "szerokosc": 320,
+      "wysokosc": 470.328125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1811,
+      "przewiniecie": 1811,
+      "x": 0,
+      "y": 795.109375,
+      "szerokosc": 320,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1811,
+      "przewiniecie": 1811,
+      "x": 0,
+      "y": 795.109375,
+      "szerokosc": 320,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 360,
+      "wysokosc": 624.78125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 360,
+      "wysokosc": 624.78125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 697,
+      "przewiniecie": 697,
+      "x": 0,
+      "y": 0.78125,
+      "szerokosc": 360,
+      "wysokosc": 502.046875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 697,
+      "przewiniecie": 697,
+      "x": 0,
+      "y": 0.78125,
+      "szerokosc": 360,
+      "wysokosc": 502.046875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1199,
+      "przewiniecie": 1199,
+      "x": 0,
+      "y": 0.828125,
+      "szerokosc": 360,
+      "wysokosc": 777.9375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1199,
+      "przewiniecie": 1199,
+      "x": 0,
+      "y": 0.828125,
+      "szerokosc": 360,
+      "wysokosc": 777.9375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 324.765625,
+      "szerokosc": 360,
+      "wysokosc": 470.328125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 324.765625,
+      "szerokosc": 360,
+      "wysokosc": 470.328125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 795.09375,
+      "szerokosc": 360,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 795.09375,
+      "szerokosc": 360,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 390,
+      "wysokosc": 624.78125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 390,
+      "wysokosc": 624.78125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 697,
+      "przewiniecie": 697,
+      "x": 0,
+      "y": 0.78125,
+      "szerokosc": 390,
+      "wysokosc": 502.046875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 697,
+      "przewiniecie": 697,
+      "x": 0,
+      "y": 0.78125,
+      "szerokosc": 390,
+      "wysokosc": 502.046875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1199,
+      "przewiniecie": 1199,
+      "x": 0,
+      "y": 0.828125,
+      "szerokosc": 390,
+      "wysokosc": 777.9375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1199,
+      "przewiniecie": 1199,
+      "x": 0,
+      "y": 0.828125,
+      "szerokosc": 390,
+      "wysokosc": 777.9375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 324.765625,
+      "szerokosc": 390,
+      "wysokosc": 470.328125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 324.765625,
+      "szerokosc": 390,
+      "wysokosc": 470.328125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 795.09375,
+      "szerokosc": 390,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1653,
+      "przewiniecie": 1653,
+      "x": 0,
+      "y": 795.09375,
+      "szerokosc": 390,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 430,
+      "wysokosc": 624.78125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 430,
+      "wysokosc": 624.78125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 697,
+      "przewiniecie": 697,
+      "x": 0,
+      "y": 0.78125,
+      "szerokosc": 430,
+      "wysokosc": 467.03125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 697,
+      "przewiniecie": 697,
+      "x": 0,
+      "y": 0.78125,
+      "szerokosc": 430,
+      "wysokosc": 467.03125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1164,
+      "przewiniecie": 1164,
+      "x": 0,
+      "y": 0.8125,
+      "szerokosc": 430,
+      "wysokosc": 777.9375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 1164,
+      "przewiniecie": 1164,
+      "x": 0,
+      "y": 0.8125,
+      "szerokosc": 430,
+      "wysokosc": 777.9375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1598,
+      "przewiniecie": 1598,
+      "x": 0,
+      "y": 344.75,
+      "szerokosc": 430,
+      "wysokosc": 450.0625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 1598,
+      "przewiniecie": 1598,
+      "x": 0,
+      "y": 344.75,
+      "szerokosc": 430,
+      "wysokosc": 450.0625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1598,
+      "przewiniecie": 1598,
+      "x": 0,
+      "y": 794.8125,
+      "szerokosc": 430,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 1598,
+      "przewiniecie": 1598,
+      "x": 0,
+      "y": 794.8125,
+      "szerokosc": 430,
+      "wysokosc": 205,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#relacje.sekcja sekcja-relacje obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 768,
+      "wysokosc": 457.015625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 73,
+      "przewiniecie": 73,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 768,
+      "wysokosc": 457.015625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 530,
+      "przewiniecie": 530,
+      "x": 0,
+      "y": 0.015625,
+      "szerokosc": 768,
+      "wysokosc": 304.015625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 530,
+      "przewiniecie": 530,
+      "x": 0,
+      "y": 0.015625,
+      "szerokosc": 768,
+      "wysokosc": 304.015625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 727,
+      "przewiniecie": 727,
+      "x": 0,
+      "y": 107.03125,
+      "szerokosc": 768,
+      "wysokosc": 438.21875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 727,
+      "przewiniecie": 727,
+      "x": 0,
+      "y": 107.03125,
+      "szerokosc": 768,
+      "wysokosc": 438.21875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 727,
+      "przewiniecie": 727,
+      "x": 0,
+      "y": 545.25,
+      "szerokosc": 768,
+      "wysokosc": 285.296875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 727,
+      "przewiniecie": 727,
+      "x": 0,
+      "y": 545.25,
+      "szerokosc": 768,
+      "wysokosc": 285.296875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 727,
+      "przewiniecie": 727,
+      "x": 0,
+      "y": 830.546875,
+      "szerokosc": 768,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 727,
+      "przewiniecie": 727,
+      "x": 0,
+      "y": 830.546875,
+      "szerokosc": 768,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1024,
+      "wysokosc": 457.015625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1024,
+      "wysokosc": 457.015625,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 546,
+      "przewiniecie": 546,
+      "x": 0,
+      "y": 0.015625,
+      "szerokosc": 1024,
+      "wysokosc": 247.359375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 546,
+      "przewiniecie": 546,
+      "x": 0,
+      "y": 0.015625,
+      "szerokosc": 1024,
+      "wysokosc": 247.359375,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 694,
+      "przewiniecie": 694,
+      "x": 0,
+      "y": 99.375,
+      "szerokosc": 1024,
+      "wysokosc": 438.21875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 694,
+      "przewiniecie": 694,
+      "x": 0,
+      "y": 99.375,
+      "szerokosc": 1024,
+      "wysokosc": 438.21875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 694,
+      "przewiniecie": 694,
+      "x": 0,
+      "y": 537.59375,
+      "szerokosc": 1024,
+      "wysokosc": 293.296875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 694,
+      "przewiniecie": 694,
+      "x": 0,
+      "y": 537.59375,
+      "szerokosc": 1024,
+      "wysokosc": 293.296875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 694,
+      "przewiniecie": 694,
+      "x": 0,
+      "y": 830.890625,
+      "szerokosc": 1024,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 694,
+      "przewiniecie": 694,
+      "x": 0,
+      "y": 830.890625,
+      "szerokosc": 1024,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#jak-dzialamy.sekcja sekcja-proces obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1366,
+      "wysokosc": 319.75,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1366,
+      "wysokosc": 319.75,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 83.75,
+      "szerokosc": 1366,
+      "wysokosc": 240.75,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 83.75,
+      "szerokosc": 1366,
+      "wysokosc": 240.75,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 324.5,
+      "szerokosc": 1366,
+      "wysokosc": 300.71875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 324.5,
+      "szerokosc": 1366,
+      "wysokosc": 300.71875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 625.21875,
+      "szerokosc": 1366,
+      "wysokosc": 206.1875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 625.21875,
+      "szerokosc": 1366,
+      "wysokosc": 206.1875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 831.40625,
+      "szerokosc": 1366,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 325,
+      "przewiniecie": 325,
+      "x": 0,
+      "y": 831.40625,
+      "szerokosc": 1366,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1440,
+      "wysokosc": 322.1875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1440,
+      "wysokosc": 322.1875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-kontrola.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1440,
+      "wysokosc": 322.1875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 74.1875,
+      "szerokosc": 1440,
+      "wysokosc": 243.1875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 74.1875,
+      "szerokosc": 1440,
+      "wysokosc": 243.1875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 317.375,
+      "szerokosc": 1440,
+      "wysokosc": 305.53125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 317.375,
+      "szerokosc": 1440,
+      "wysokosc": 305.53125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 622.90625,
+      "szerokosc": 1440,
+      "wysokosc": 208.453125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 622.90625,
+      "szerokosc": 1440,
+      "wysokosc": 208.453125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 831.359375,
+      "szerokosc": 1440,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 337,
+      "przewiniecie": 337,
+      "x": 0,
+      "y": 831.359375,
+      "szerokosc": 1440,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1920,
+      "wysokosc": 323.578125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-powody",
+      "cel": 89,
+      "przewiniecie": 89,
+      "x": 0,
+      "y": 0,
+      "szerokosc": 1920,
+      "wysokosc": 323.578125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-proces",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 68.578125,
+      "szerokosc": 1920,
+      "wysokosc": 244.578125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-proces",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 68.578125,
+      "szerokosc": 1920,
+      "wysokosc": 244.578125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 313.15625,
+      "szerokosc": 1920,
+      "wysokosc": 308.3125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-relacje",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 313.15625,
+      "szerokosc": 1920,
+      "wysokosc": 308.3125,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 621.46875,
+      "szerokosc": 1920,
+      "wysokosc": 209.71875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".sekcja-kontakt",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 621.46875,
+      "szerokosc": 1920,
+      "wysokosc": 209.71875,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v4.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 831.1875,
+      "szerokosc": 1920,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    },
+    {
+      "adres": "http://127.0.0.1:49779/porownanie-home-v5.html",
+      "selektor": ".wspolna-stopka",
+      "cel": 344,
+      "przewiniecie": 344,
+      "x": 0,
+      "y": 831.1875,
+      "szerokosc": 1920,
+      "wysokosc": 169,
+      "zachowanieScroll": "auto",
+      "hover": [
+        "HTML#.",
+        "BODY#poczatek.",
+        "MAIN#tresc.",
+        "SECTION#o-nas.sekcja sekcja-powody obwod"
+      ],
+      "aktywnyElement": "poczatek"
+    }
+  ],
+  "argumentyPrzegladarki": [
+    "--disable-gpu",
+    "--disable-skia-runtime-opts",
+    "--enable-automation"
+  ],
+  "kafelkiOnline": 80
+}

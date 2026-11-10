@@ -1,0 +1,34 @@
+npm notice run mad-net@0.1.0 verify
+npm notice run npm run test && npm run build
+npm notice run mad-net@0.1.0 test
+npm notice run node --test tests/*.test.mjs
+✔ build waliduje obie strony i zasoby przed zastąpieniem dist; kopiuje tylko allowlistę (1385.4668ms)
+✔ FIBER: aktualne interfejsy i instrukcje stosują SC/APC Simplex (18.4347ms)
+✔ HOME: archiwum i obrazy zachowują oryginalne bajty i MIME V3 (42.6294ms)
+✔ HOME: osobne zasoby, język polski, brak zależności od stylów cennika (223.075ms)
+✔ cennik: specjalistyczny main i chronione moduły pozostają zgodne z baseline (401.1495ms)
+✔ HOME V5: nawigacja, stopka i sekcje poza zakresem zachowują treść (139.3788ms)
+✔ nawigacja: dziewięć stron ma wspólne elementy i istniejące względne cele (214.9088ms)
+✔ nawigacja: nowe skrypty mają poprawną składnię (380.0289ms)
+✔ strona główna HOME ma własne zasoby i sekcje (6.173ms)
+✔ struktura startowa i poprawne odnośniki do rozdzielonych zasobów (5.3232ms)
+✔ skrypty wykonują się w pierwotnej kolejności (2.0419ms)
+✔ oryginalny szablon V18 jest zachowany do porównań i rollbacku (5.9874ms)
+✔ 13 wariantów: 5 LAN, 3 FIBER i 5 AIR (1.1249ms)
+✔ zachowano sekcje i formularz, bez fikcyjnego backendu SMTP (1.385ms)
+✔ poprawna składnia JavaScript we wszystkich trzech skryptach (539.9674ms)
+✔ środowisko: zajęty jawny port zgłasza błąd i pozostawia obcy serwer (20.346ms)
+✔ środowisko: przedwczesne wyjście własnego serwera nie zawiesza testu (122.8481ms)
+✔ środowisko: brak przeglądarki podaje instrukcję i respektuje MADNET_PRZEGLADARKA (17.3358ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1595.1849
+npm notice run mad-net@0.1.0 build
+npm notice run node scripts/build.mjs
+Gotowe: 9 stron z allowlisty + dist/assets/
+Uwaga: wysyłka zapytań e-mail wymaga osobno wdrożonego backendu.
