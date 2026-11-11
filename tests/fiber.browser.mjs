@@ -70,9 +70,10 @@ async function rozpocznijPomiar(strona){
    }
    for(const gniazdo of polaczenieFiber?.elementy??[]){
     const oslona=gniazdo.querySelector('.sc-zaslepka'),wtyk=gniazdo.querySelector('.sc-konektor');
-    const obrys=wtyk.getBoundingClientRect(),ramka=gniazdo.closest('.mini-interface,.speed-port').getBoundingClientRect();
+    // Wtyk działa w warstwie animacji poza ramką: mieści się w korytarzu pod nią, a ramka nie zmienia wysokości.
+    const obrys=wtyk.getBoundingClientRect(),ramkaEl=gniazdo.closest('.mini-interface,.speed-port'),korytarz=gniazdo.closest('.card-terminal,.device-mid').getBoundingClientRect();
     window.probkiFiber.push({stan:polaczenieFiber.stan,oslona:Number(getComputedStyle(oslona).opacity),
-     wtyk:Number(getComputedStyle(wtyk).opacity),miesciSie:obrys.bottom<=ramka.bottom});
+     wtyk:Number(getComputedStyle(wtyk).opacity),miesciSie:obrys.bottom<=korytarz.bottom,wysokoscRamki:ramkaEl.offsetHeight,rodzajRamki:ramkaEl.classList.contains('mini-interface')?'karta':'urzadzenie'});
    }
    // Pomiar po klatce kontrolera obejmuje bieżącą pozycję animowanego wtyku.
    requestAnimationFrame(()=>setTimeout(zmierz,0));
@@ -86,10 +87,10 @@ async function zakonczPomiar(strona){
   return {stany:window.stanyFiber.filter((stan,numer,lista)=>stan&&stan!==lista[numer-1]),probki:window.probkiFiber,przewody:window.przewodyFiber};
  });
 }
-function sprawdzPrzebiegPrzewodu(przebieg){
+function sprawdzPrzebiegPrzewodu(przebieg,szerokosc){
  assert.ok(przebieg.przewody.length>10,'Pomiar przewodu podczas animacji');
- assert.ok(przebieg.przewody.every(probka=>probka.pionowyPoczatek&&probka.pionowyKoniec&&probka.bladPoczatku<1&&probka.bladKonca<1),'Kierunek i kotwice podczas animacji: '+JSON.stringify(przebieg.przewody.filter(probka=>!probka.pionowyPoczatek||!probka.pionowyKoniec||probka.bladPoczatku>=1||probka.bladKonca>=1)));
- assert.ok(przebieg.przewody.every(probka=>probka.kolizje===0),'Kolizje podczas animacji: '+JSON.stringify(przebieg.przewody.filter(probka=>probka.kolizje)));
+ assert.ok(przebieg.przewody.every(probka=>probka.pionowyPoczatek&&probka.pionowyKoniec&&probka.bladPoczatku<1&&probka.bladKonca<1),'Kierunek i kotwice podczas animacji (szer. '+szerokosc+'): '+JSON.stringify(przebieg.przewody.filter(probka=>!probka.pionowyPoczatek||!probka.pionowyKoniec||probka.bladPoczatku>=1||probka.bladKonca>=1)));
+ assert.ok(przebieg.przewody.every(probka=>probka.kolizje===0),'Kolizje podczas animacji (szer. '+szerokosc+'): '+JSON.stringify(przebieg.przewody.filter(probka=>probka.kolizje)));
 }
 async function sprawdzGeometrie(strona,id){
  await strona.waitForFunction(()=>document.querySelector('#link-active').getAttribute('d')&&Number(getComputedStyle(document.querySelector('#link-active')).opacity)>.8,null,{timeout:5000});
@@ -166,12 +167,16 @@ try{
   assert.match(await strona.locator('#availability-choice-summary').textContent(),/FIBER-50/);
   await strona.locator(kartaFiber(50)).click();await stan(strona,'IDLE');
   const przebieg=await zakonczPomiar(strona);przebiegi.push({szerokosc,...przebieg});
-  sprawdzPrzebiegPrzewodu(przebieg);
+  sprawdzPrzebiegPrzewodu(przebieg,szerokosc);
   const etapy=['OPENING_COVER','COVER_OPEN','CONNECTOR_APPROACH','INSERTING','ROUTING_CABLE','CONNECTED','DISCONNECTING','COVER_OPEN','CLOSING_COVER'];
   assert.deepEqual(przebieg.stany.filter(etap=>etapy.includes(etap)),etapy);
   const wsuwanie=przebieg.probki.filter(probka=>['CONNECTOR_APPROACH','INSERTING','ROUTING_CABLE','CONNECTED','DISCONNECTING'].includes(probka.stan));
   assert.ok(wsuwanie.length>5);
   assert.ok(wsuwanie.every(probka=>probka.oslona<.01&&probka.miesciSie),'Wtyk wymaga odsłoniętego adaptera i miejsca na ruch');
+  for(const rodzaj of ['karta','urzadzenie']){
+   const wysokosci=przebieg.probki.filter(probka=>probka.rodzajRamki===rodzaj).map(probka=>probka.wysokoscRamki);
+   assert.ok(wysokosci.length>5&&Math.max(...wysokosci)===Math.min(...wysokosci),'Animowany wtyk nie zmienia wysokości ramki: '+rodzaj);
+  }
   assert.ok(przebieg.probki.filter(probka=>probka.stan==='CLOSING_COVER').every(probka=>probka.wtyk<.01),'Zaślepka zamyka się po wycofaniu wtyku');
   await strona.waitForFunction(()=>[...document.querySelectorAll('.sc-zaslepka')].every(oslona=>getComputedStyle(oslona).opacity==='1'));
   await strona.waitForFunction(()=>!document.querySelector('#link-active').getAttribute('d'));

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120">
+ <title>Konektor SC/APC Simplex w adapterze SC/APC</title>
+ <defs>
+  <linearGradient id="zielen" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#7fcf74"/>
+   <stop offset=".45" stop-color="#4fa64d"/>
+   <stop offset="1" stop-color="#2b6a33"/>
+  </linearGradient>
+  <linearGradient id="zielen-ciemna" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#4a9a4a"/>
+   <stop offset="1" stop-color="#1f512a"/>
+  </linearGradient>
+  <linearGradient id="oslona-f" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#ff9a4d"/>
+   <stop offset=".4" stop-color="#ff7b19"/>
+   <stop offset="1" stop-color="#b24d08"/>
+  </linearGradient>
+  <linearGradient id="ceramika" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#fbfbf6"/>
+   <stop offset="1" stop-color="#c9cdc4"/>
+  </linearGradient>
+  <clipPath id="okno"><rect x="226" y="40" width="88" height="40" rx="2"/></clipPath>
+ </defs>
+ <ellipse cx="190" cy="104" rx="150" ry="5" fill="#000" opacity=".35"/>
+ <!-- pojedynczy przewód światłowodowy -->
+ <rect x="0" y="52" width="92" height="16" fill="url(#oslona-f)"/>
+ <path d="M0 53.500H92" stroke="#ffc08c" stroke-width="1" opacity=".7"/>
+ <path d="M28 52v16M64 52v16" stroke="#8a3c05" stroke-width=".8" opacity=".4"/>
+ <!-- osłona zagięcia konektora -->
+ <path d="M86 52c8 0 12-5 24-5h20v26h-20c-12 0-16-5-24-5z" fill="url(#zielen-ciemna)"/>
+ <path d="M114 47.500v25M120 47.500v25M126 47.500v25" stroke="#143a1d" stroke-width="1.200" opacity=".7"/>
+ <path d="M90 52.500c8 0 12-4.500 24-4.500h16" fill="none" stroke="#8ddc82" stroke-width="1" opacity=".6"/>
+ <!-- cień adaptera -->
+ <rect x="203" y="33" width="125" height="64" rx="3" fill="#05080c" opacity=".55"/>
+ <!-- korpus konektora SC (zewnętrzna obudowa push-pull) -->
+ <rect x="130" y="38" width="96" height="44" rx="3" fill="url(#zielen)" stroke="#1f5a2a" stroke-width="1"/>
+ <path d="M133 41.500H224" stroke="#c4f0bb" stroke-width="1.200" opacity=".7"/>
+ <g stroke="#1f5a2a" stroke-width="1.100" opacity=".65"><path d="M142 41v38M148 41v38M154 41v38M160 41v38M166 41v38"/></g>
+ <rect x="172" y="34" width="26" height="4" rx="1" fill="#4fa64d" stroke="#1f5a2a" stroke-width=".8"/>
+ <path d="M174 82h22v4h-22z" fill="#2f7a38" stroke="#1f5a2a" stroke-width=".8"/>
+ <!-- adapter SC/APC (zielony) -->
+ <rect x="200" y="28" width="126" height="64" rx="3" fill="url(#zielen)" stroke="#1f5a2a" stroke-width="1.200"/>
+ <path d="M203 31.500H323" stroke="#c4f0bb" stroke-width="1.200" opacity=".7"/>
+ <!-- uszy montażowe -->
+ <rect x="244" y="21" width="30" height="8" rx="1.500" fill="#4fa64d" stroke="#1f5a2a" stroke-width="1"/>
+ <rect x="244" y="91" width="30" height="8" rx="1.500" fill="#2f7a38" stroke="#1f5a2a" stroke-width="1"/>
+ <circle cx="252" cy="25" r="1.800" fill="#14381c"/><circle cx="266" cy="25" r="1.800" fill="#14381c"/>
+ <!-- okno przekroju: tuleja i ferrula -->
+ <rect x="226" y="40" width="88" height="40" rx="2" fill="#0f1c14" stroke="#1f5a2a" stroke-width="1"/>
+ <g clip-path="url(#okno)">
+  <rect x="226" y="40" width="88" height="40" fill="#162a1b"/>
+  <!-- trzon konektora wewnątrz adaptera -->
+  <rect x="226" y="46" width="22" height="28" fill="url(#zielen)" stroke="#1f5a2a" stroke-width=".8"/>
+  <!-- tuleja ceramiczna -->
+  <rect x="262" y="52" width="40" height="16" rx="2" fill="#6b7f70" stroke="#a7b8ac" stroke-width=".8"/>
+  <path d="M262 60h40" stroke="#2c3a30" stroke-width="1"/>
+  <!-- ferrula SC/APC (czoło ścięte 8°) -->
+  <path d="M248 55.500h22l3.500 1.200v6.600l-3.500 1.200h-22z" fill="url(#ceramika)" stroke="#7d8379" stroke-width=".6"/>
+  <path d="M248 56.500h22" stroke="#fff" stroke-width=".8" opacity=".8"/>
+  <path d="M270 55.500l3.500 1.200v6.600l-3.500 1.200" fill="none" stroke="#3a7a43" stroke-width=".8"/>
+ </g>
+ <path d="M229 42.500h82" stroke="#fff" stroke-width=".8" opacity=".18"/>
+</svg>

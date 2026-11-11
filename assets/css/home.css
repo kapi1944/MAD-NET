@@ -200,9 +200,7 @@ body {background:#090e14;}
 .technologia-naglowek .ikona{width:20px;height:20px}
 .technologia-karta h3{margin:24px 0 8px;font-size:28px;letter-spacing:-.03em;font-weight:700}
 .technologia-karta h3 span{display:block;margin-top:7px;font-size:14px;font-weight:500;letter-spacing:0;color:#bcc5cf}
-.medium-transmisji{width:100%;height:auto;max-height:100px;margin:14px 0;color:var(--kolor-technologii);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.medium-fiber .zlacze-apc{color:#75b96a;fill:#23462b;stroke:currentColor}
-.medium-lan rect{fill:#272c35;stroke:#9ca6b3}
+.medium-transmisji{display:block;width:100%;height:auto;aspect-ratio:3/1;max-height:120px;margin:14px 0;object-fit:contain}
 .technologia-karta p{font-size:13px;line-height:1.8;color:#b2bdc9;margin:0 0 24px;flex:1}
 .technologia-karta>a{display:flex;justify-content:space-between;align-items:center;min-height:44px;padding-top:14px;border-top:1px solid #303b47;font-size:12px;font-weight:650}
 .technologia-karta>a span{color:var(--kolor-technologii)}

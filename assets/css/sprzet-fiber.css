@@ -6,15 +6,23 @@
 .sc-zaslepka{z-index:3;opacity:1;transform:translateY(0);transition:transform .22s ease,opacity .22s ease}
 .sc-simplex:not([data-stan-polaczenia="IDLE"]):not([data-stan-polaczenia="SELECTED"]):not([data-stan-polaczenia="CLOSING_COVER"]) .sc-zaslepka{transform:translateY(32.43%);opacity:0}
 .sc-wtyk-tor{position:absolute;z-index:2;top:37.84%;bottom:-175.68%;left:0;right:0;overflow:hidden;pointer-events:none}
-.sc-konektor{position:absolute;display:block;left:50%;top:0;width:var(--szerokosc-wtyku);height:auto;aspect-ratio:3/7;opacity:0;transform:translate(-50%,46.43%);transition:transform .28s cubic-bezier(.3,.1,.2,1),opacity .18s ease}
+.sc-konektor{position:absolute;display:block;left:50%;top:0;width:var(--szerokosc-wtyku);height:auto;aspect-ratio:3/7;opacity:0;transform:translate(-50%,12%);transition:transform .28s cubic-bezier(.3,.1,.2,1),opacity .18s ease}
 .sc-konektor svg{display:block;width:100%;height:100%}
 .sc-kabel-punkt{position:absolute;width:0;height:0;left:50%;bottom:0}
-.sc-simplex:is([data-stan-polaczenia="CONNECTOR_APPROACH"],[data-stan-polaczenia="DISCONNECTING"]) .sc-konektor{opacity:1;transform:translate(-50%,25%)}
+.sc-simplex:is([data-stan-polaczenia="CONNECTOR_APPROACH"],[data-stan-polaczenia="DISCONNECTING"]) .sc-konektor{opacity:1;transform:translate(-50%,8%)}
 .sc-simplex[data-stan-polaczenia="INSERTING"] .sc-konektor{opacity:1;transform:translate(-50%,-16.07%)}
 .sc-simplex:is([data-stan-polaczenia="ROUTING_CABLE"],[data-stan-polaczenia="CONNECTED"]) .sc-konektor{opacity:1;transform:translate(-50%,-14.286%);transition-timing-function:cubic-bezier(.2,.8,.3,1)}
 .mini-interface--FIBER .sc-simplex{--szerokosc-wtyku:22px;transform:none;width:45px;height:38px}
-.mini-interface--FIBER{height:120px;align-items:flex-start;padding-top:4px;background:linear-gradient(155deg,#303536,#13191a);box-shadow:inset 0 1px #b4beb13d,0 3px 6px #0006}
-.speed-port--FIBER{min-height:164px;justify-content:flex-start;gap:6px;padding-bottom:70px;touch-action:pan-y}
+/* Ramki FIBER mają wymiary zbliżone do LAN. Wysuwany konektor i przewód NIE należą do układu ramki:
+   .sc-wtyk-tor jest pozycjonowany absolutnie i wystaje poza obrys (overflow ramki pozostaje widoczny),
+   więc animacja nie zwiększa wysokości portu, karty ani urządzenia. */
+.mini-interface--FIBER{height:46px;align-items:flex-start;padding-top:3px;overflow:visible;background:linear-gradient(155deg,#303536,#13191a);box-shadow:inset 0 1px #b4beb13d,0 3px 6px #0006}
+.speed-port--FIBER{justify-content:space-between;gap:4px;padding-bottom:7px;overflow:visible;touch-action:pan-y}
+/* Korytarz przewodu leży POD ramką (poza jej wymiarem): wtyk wystaje z ramki, a pierwszy zakręt
+   przewodu ma miejsce dopiero poza obrysem portu i poza tekstem stopki / treścią karty. */
+.device-shell[data-technology="FIBER"] .device-mid{padding-bottom:46px}
+.plan[data-technology="FIBER"] .card-terminal{padding-bottom:54px}
+@media(max-width:560px){.mini-interface--FIBER{height:43px;padding-top:2px}.device-shell[data-technology="FIBER"] .device-mid{padding-bottom:46px}}
 .speed-port--FIBER .speed-label{order:-1}
 .speed-port--FIBER .port-leds{gap:5px}
 .speed-port--FIBER .port-leds i{width:8px;height:5.5px}

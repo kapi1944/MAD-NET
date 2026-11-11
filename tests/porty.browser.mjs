@@ -51,9 +51,21 @@ try{
      return macierz.a!==1||macierz.d!==1;
     }).length;
     if(portySzafy.some((obrys,numer)=>numer&&obrys.left<portySzafy[numer-1].right))kolizje.push('Porty RACK nachodzą na siebie');
-    return {szerokosc:innerWidth,technologia,centralny:rozmiar('#central-device '+klasa),karta:rozmiar('#plans '+klasa),tabela:rozmiar(`#comparison-${technologia} .compare-head-port`),dioda:rozmiar('#central-device .port-leds i'),portySzafy:portySzafy.length,przeskalowanePorty,kolizje,przepelnienie:document.documentElement.scrollWidth-innerWidth};
+    const wys=selektor=>{const e=document.querySelector(selektor);return e?e.getBoundingClientRect().height:null;};
+    const wysokosci={port:wys('#central-device .speed-port--'+technologia),mini:wys('#plans .mini-interface--'+technologia),urzadzenie:wys('#central-device .device-shell'),terminal:wys('#plans .card-terminal')};
+    return {szerokosc:innerWidth,technologia,wysokosci,centralny:rozmiar('#central-device '+klasa),karta:rozmiar('#plans '+klasa),tabela:rozmiar(`#comparison-${technologia} .compare-head-port`),dioda:rozmiar('#central-device .port-leds i'),portySzafy:portySzafy.length,przeskalowanePorty,kolizje,przepelnienie:document.documentElement.scrollWidth-innerWidth};
    },technologia);
    pomiary.push(pomiar);
+   if(etap!=='przed'){
+    // Regresja proporcji: FIBER nie wraca do 164/120/154 px ani nie rozciąga urządzenia ponad LAN.
+    const w=pomiar.wysokosci;
+    if(technologia==='FIBER'){
+     assert.ok(w.port<=120&&w.mini<=60&&w.terminal<=150&&w.urzadzenie<=270,'Nadmierne wysokosci FIBER: '+JSON.stringify(w));
+     const lan=pomiary.find(p=>p.technologia==='LAN'&&p.szerokosc===pomiar.szerokosc).wysokosci;
+     assert.ok(Math.abs(w.port-lan.port)/lan.port<=.1,`Ramka portu FIBER/LAN przy ${szerokosc}px: ${w.port}/${lan.port}`);
+     assert.ok(Math.abs(w.mini-lan.mini)/lan.mini<=.1,`Ramka karty FIBER/LAN przy ${szerokosc}px: ${w.mini}/${lan.mini}`);
+    }
+   }
    if(etap!=='przed'){
     assert.deepEqual(pomiar.kolizje,[],JSON.stringify(pomiar));assert.equal(pomiar.przepelnienie,0);
     assert.equal(pomiar.portySzafy,5);

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120">
+ <title>Radiolinia: antena sektorowa i zewnętrzne CPE</title>
+ <defs>
+  <linearGradient id="obudowa" x1="0" y1="0" x2="1" y2="0">
+   <stop offset="0" stop-color="#f4f6f8"/>
+   <stop offset=".6" stop-color="#d4dae0"/>
+   <stop offset="1" stop-color="#a3adb7"/>
+  </linearGradient>
+  <linearGradient id="obudowa-pion" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#f7f9fb"/>
+   <stop offset="1" stop-color="#b3bcc5"/>
+  </linearGradient>
+  <linearGradient id="maszt" x1="0" y1="0" x2="1" y2="0">
+   <stop offset="0" stop-color="#8d98a3"/>
+   <stop offset=".4" stop-color="#6b7580"/>
+   <stop offset="1" stop-color="#454d57"/>
+  </linearGradient>
+ </defs>
+ <ellipse cx="180" cy="110" rx="165" ry="4" fill="#000" opacity=".35"/>
+ <!-- fale radiowe: czoła fal w wiązce kierunkowej -->
+ <g fill="none" stroke="#3fa8ff" stroke-linecap="round">
+  <path d="M104 40q-14 20 0 40" stroke-width="1.300" opacity=".85"/>
+  <path d="M128 31q-22 29 0 58" stroke-width="1.300" opacity=".65"/>
+  <path d="M152 24q-30 36 0 72" stroke-width="1.200" opacity=".48"/>
+  <path d="M176 18q-38 42 0 84" stroke-width="1.100" opacity=".34"/>
+  <path d="M100 60h150" stroke-width="1" stroke-dasharray="1.500 6" opacity=".55"/>
+  <path d="M104 34 250 52M104 86 250 68" stroke-width=".7" opacity=".22"/>
+ </g>
+ <!-- lewy punkt: antena sektorowa na maszcie -->
+ <rect x="43" y="22" width="5" height="88" fill="url(#maszt)"/>
+ <rect x="36" y="94" width="19" height="4" rx="1" fill="#59626c"/>
+ <rect x="36" y="40" width="19" height="4" rx="1" fill="#59626c"/>
+ <path d="M52 14 62 18V92L52 96z" fill="#9aa4ae"/>
+ <path d="M52 14 80 24V90L52 96z" fill="url(#obudowa)" stroke="#8a949e" stroke-width=".8"/>
+ <path d="M54 16.500 78 25.500" stroke="#fff" stroke-width="1" opacity=".8"/>
+ <path d="M60 24 76 30V80L60 86z" fill="none" stroke="#b8c1ca" stroke-width=".8"/>
+ <circle cx="68" cy="56" r="1.500" fill="#3fa8ff"/>
+ <rect x="63" y="95" width="6" height="7" rx="1" fill="#454d57"/>
+ <path d="M66 102c0 6-4 8-8 8" fill="none" stroke="#2c333b" stroke-width="2" stroke-linecap="round"/>
+ <!-- prawy punkt: zewnętrzne CPE (anteny talerzowej z radiem) -->
+ <rect x="326" y="48" width="5" height="62" fill="url(#maszt)"/>
+ <rect x="318" y="94" width="21" height="4" rx="1" fill="#59626c"/>
+ <path d="M326 62h-10" stroke="#59626c" stroke-width="4" stroke-linecap="round"/>
+ <path d="M292 32c-4 0-6 3-6 6v44c0 3 2 6 6 6 14 0 24-13 24-28S306 32 292 32z" fill="url(#obudowa)" stroke="#8a949e" stroke-width=".9"/>
+ <ellipse cx="292" cy="60" rx="6" ry="28" fill="#e9edf1" stroke="#8a949e" stroke-width=".9"/>
+ <ellipse cx="290.500" cy="60" rx="3" ry="22" fill="none" stroke="#fff" stroke-width=".9" opacity=".7"/>
+ <path d="M296 38c8 2 14 8 16 16" fill="none" stroke="#fff" stroke-width="1.200" opacity=".7"/>
+ <rect x="301" y="86" width="10" height="9" rx="1.500" fill="#454d57"/>
+ <circle cx="312" cy="60" r="1.500" fill="#3fa8ff"/>
+ <path d="M306 95c0 8-6 11-12 11" fill="none" stroke="#2c333b" stroke-width="2" stroke-linecap="round"/>
+</svg>
