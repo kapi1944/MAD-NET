@@ -21,12 +21,18 @@ try{
   strona.on('console',wpis=>{if(wpis.type()==='error'&&!wpis.location().url.startsWith('https://'))bledy.push(wpis.text());});
   await strona.goto(`http://127.0.0.1:${port}/cennik.html`);
   await strona.evaluate(()=>document.fonts.ready);
-  await strona.locator('#compare-show-all').click();
   for(const technologia of ['LAN','FIBER']){
    await strona.locator(`.device-tech-tabs [data-technology="${technologia}"]`).click();
+   await strona.locator(`#plans .plan[data-technology="${technologia}"]`).first().waitFor();
+   if(await strona.locator('#compare-show-all').isEnabled())await strona.locator('#compare-show-all').click();
    await strona.mouse.move(0,0);
-   const pomiar=await strona.evaluate(technologia=>{
-    const rozmiar=selektor=>{const element=document.querySelector(selektor),styl=getComputedStyle(element);return {szerokosc:parseFloat(styl.width),wysokosc:parseFloat(styl.height)};};
+   const pomiar=await strona.evaluate(({technologia,etap})=>{
+    const rozmiar=selektor=>{
+     const element=document.querySelector(selektor);
+     if(!element)throw new Error('Brak elementu do pomiaru: '+selektor);
+     const styl=getComputedStyle(element);
+     return {szerokosc:parseFloat(styl.width),wysokosc:parseFloat(styl.height)};
+    };
     const klasa=technologia==='LAN'?'.jack-rj':'.sc-simplex';
     const porty=[...document.querySelectorAll('#central-device .speed-port')];
     const kolizje=[];
@@ -38,6 +44,11 @@ try{
     for(const dioda of document.querySelectorAll('#central-device .port-leds i,#plans .port-leds i,.compare-head-port .port-leds i')){
      const obrys=dioda.getBoundingClientRect(),ramka=dioda.closest('.jack-rj,.mini-interface,.speed-port,.compare-head-port').getBoundingClientRect();
      if(obrys.left<ramka.left||obrys.right>ramka.right||obrys.top<ramka.top||obrys.bottom>ramka.bottom)kolizje.push('Dioda poza obudową');
+    }
+    if(etap!=='przed')for(const port of document.querySelectorAll('.compare-head-port--FIBER')){
+     const adapter=port.querySelector('.adapter-tabeli-fiber').getBoundingClientRect();
+     const diody=[...port.querySelectorAll('.port-leds i')];
+     if(diody.length!==2||diody.some(dioda=>dioda.getBoundingClientRect().bottom>adapter.top))kolizje.push('Kontrolki tabeli FIBER poza górnym pasem');
     }
     // Obrys zawartości SVG obejmuje całą bitmapę; mierzymy widoczne, przycięte okno portu.
     const portySzafy=[...document.querySelectorAll('.porty-szafy-lan svg')].map(element=>{
@@ -54,7 +65,7 @@ try{
     const wys=selektor=>{const e=document.querySelector(selektor);return e?e.getBoundingClientRect().height:null;};
     const wysokosci={port:wys('#central-device .speed-port--'+technologia),mini:wys('#plans .mini-interface--'+technologia),urzadzenie:wys('#central-device .device-shell'),terminal:wys('#plans .card-terminal')};
     return {szerokosc:innerWidth,technologia,wysokosci,centralny:rozmiar('#central-device '+klasa),karta:rozmiar('#plans '+klasa),tabela:rozmiar(`#comparison-${technologia} .compare-head-port`),dioda:rozmiar('#central-device .port-leds i'),portySzafy:portySzafy.length,przeskalowanePorty,kolizje,przepelnienie:document.documentElement.scrollWidth-innerWidth};
-   },technologia);
+   },{technologia,etap});
    pomiary.push(pomiar);
    if(etap!=='przed'){
     // Regresja proporcji: FIBER nie wraca do 164/120/154 px ani nie rozciąga urządzenia ponad LAN.

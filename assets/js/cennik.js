@@ -114,19 +114,33 @@ function makeCentralDevice(plans){
 function makePlan(p){
  const hz=blinkHz(p.down)*1.5;
  const interval=Math.round(1000/hz);
+ // Oba okresy umowy obok siebie. FIBER nie ma opublikowanej ceny rocznej.
  const phone=term==='none';
- const price=phone?null:term==='12'?p.monthly12:p.monthly24;
- const priceHtml=phone?'<strong class="individual-label">Wycena indywidualna</strong>':`<strong>${price}</strong><span>zł / mies.</span>`;
- const termText=phone?'Abonament — bezterminowo':`Abonament • ${term==='12'?'1 rok':'2 lata'}`;
+ const cenaWybranegoOkresu=term==='12'?p.monthly12:p.monthly24;
+ const cenaRoczna=p.monthly12==null
+  ?'<span class="price-placeholder">Na zapytanie</span>'
+  :`<strong>${p.monthly12}</strong><span>zł / mies.</span>`;
+ const priceHtml=phone?'<strong class="individual-label">Wycena indywidualna</strong>':`
+  <div class="price-comparison" role="group" aria-label="Abonament miesięczny: dwa lata ${p.monthly24} zł; rok ${p.monthly12==null?'cena na zapytanie':p.monthly12+' zł'}">
+   <div class="price-variant price-variant--24${term==='24'?' is-current':''}">
+    <div class="price-line"><strong>${p.monthly24}</strong><span>zł / mies.</span></div>
+    <span class="price-contract">Abonament · 2 lata</span>
+   </div>
+   <div class="price-variant price-variant--12${term==='12'?' is-current':''}${p.monthly12==null?' price-variant--unavailable':''}">
+    <div class="price-line">${cenaRoczna}</div>
+    <span class="price-contract">${p.monthly12==null?'1 rok · cena na zapytanie':'Abonament · 1 rok'}</span>
+   </div>
+  </div>`;
+ const termText=phone?'Abonament — bezterminowo':'';
  const selected=p.id===selectedPlanId;
  const etykietaPortu=technology==='AIR'?'<strong>WĘZEŁ RADIOWY</strong> <small>/ BEZ KABLA</small>':`<small>1 ×</small> <strong>${technology==='FIBER'?'SC/APC SIMPLEX':'RJ-45'}</strong>`;
  return `<article class="plan${selected?' is-selected':''}" data-plan-id="${escapeText(p.id)}" data-technology="${technology}" data-speed="${p.down}" data-port-count="1" data-blink-hz="${hz.toFixed(2)}" data-blink-ms="${interval}" aria-label="Pakiet ${escapeText(p.id)}: pobieranie ${p.down}, wysyłanie ${p.up} Mbit/s" style="--pulse-ms:${interval}ms;--wifi-period:${radioPeriod(p.down)}ms">
- <button class="plan-hit" type="button" data-select-plan="${escapeText(p.id)}" aria-pressed="${selected}" aria-label="Wybierz ${escapeText(p.id)}: ${p.down} Mbit/s, ${phone?'wycena indywidualna':price+' zł miesięcznie'}"></button>
+ <button class="plan-hit" type="button" data-select-plan="${escapeText(p.id)}" aria-pressed="${selected}" aria-label="Wybierz ${escapeText(p.id)}: ${p.down} Mbit/s, ${phone?'wycena indywidualna':cenaWybranegoOkresu+' zł miesięcznie'}"></button>
  <div class="card-terminal"><span class="card-terminal-label">${etykietaPortu}</span><div class="mini-interface mini-interface--${technology}" data-card-port="${escapeText(p.id)}">${technology==='FIBER'?diodyPortu():''}${socketHtml(technology,true)}</div></div>
  <div class="plan-body"><div class="plan-name"><span>● Pakiet MAD-NET</span></div>
  <div class="plan-speed"><span class="nazwa-technologii">${technology}</span>-${p.down}</div>
  <div class="specs"><div class="spec"><b class="predkosc-pobierania"><span aria-hidden="true">↓</span> <strong>${p.down}</strong> <small>Mbit/s</small></b><span>POBIERANIE</span></div><div class="spec"><b class="predkosc-wysylania"><span aria-hidden="true">↑</span> <strong>${p.up}</strong> Mbit/s</b><span>WYSYŁANIE</span></div></div></div>
- <div class="plan-bottom"><div class="price">${priceHtml}</div><div class="termline">${termText}</div><a class="ask" href="${emailLink(p.id)}">Zapytaj o dostępność <span aria-hidden="true">↗</span></a></div>
+ <div class="plan-bottom"><div class="price${phone?'':' price--dual'}">${priceHtml}</div>${phone?`<div class="termline">${termText}</div>`:''}<a class="ask" href="${emailLink(p.id)}">Zapytaj o dostępność <span aria-hidden="true">↗</span></a></div>
  </article>`;
 }
 // MAD-NET V17 — dwa dopuszczalne wejścia na górnej krawędzi każdego kafelka.

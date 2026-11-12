@@ -48,8 +48,9 @@ function rysunekSprzetuFiber(nazwa,klasa=''){
 function adapterFiber(){
  return `<span class="sc-simplex" data-stan-polaczenia="IDLE" aria-hidden="true">${rysunekSprzetuFiber('adapter','sc-adapter')}${rysunekSprzetuFiber('zaslepka','sc-zaslepka')}<span class="sc-wtyk-tor"><span class="sc-konektor">${rysunekSprzetuFiber('konektor')}<i class="sc-kabel-punkt"></i></span></span></span>`;
 }
+// MAD-NET UI PATCH 2026-11-12: bez dekoracyjnych poziomych listew ponad gniazdem.
 function adapterTabeliFiber(){
- return `<span class="adapter-tabeli-fiber">${rysunekSprzetuFiber('adapter','sc-adapter')}<span class="sc-zawias"></span><span class="sc-klapka-statyczna"></span></span>`;
+ return `<span class="adapter-tabeli-fiber">${rysunekSprzetuFiber('adapter','sc-adapter')}</span>`;
 }
 
 // Lokalne wycinki RJ-45 zachowują metal, zagłębienie i osiem styków bitmapy RACK.

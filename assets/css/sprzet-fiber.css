@@ -66,3 +66,118 @@
 [data-led-pakiet][data-link="connected"] .rj-link,[data-led-pakiet][data-link="connected"] .fiber-activity{filter:brightness(1) drop-shadow(0 0 3px #dda04466)!important}
 .mot-off .port-leds i:last-child{animation:none!important}
 @media(prefers-reduced-motion:reduce){.port-leds i:last-child{animation:none!important}.port-leds,.dioda-link-szafy{transition:none!important}}
+
+/* MAD-NET UI PATCH 2026-11-12 — porty tabel FIBER i ceny 24/12.
+   Nie zmieniamy fizycznych gabarytow ramek ani wysokosci urzadzenia FIBER. */
+/* Dwie kontrolki LINK/ACT sa w GORNYM pasie miniportu tabeli, nie pod adapterem. */
+.compare-head-port--FIBER{
+  position:relative;
+  justify-content:flex-end;
+  align-items:center;
+  padding:13px 3px 3px;
+}
+.compare-head-port--FIBER > .port-leds{
+  position:absolute;
+  top:3px;
+  left:7px;
+  right:7px;
+  width:auto;
+  height:7px;
+  min-height:7px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:0;
+  z-index:2;
+}
+.compare-head-port--FIBER .adapter-tabeli-fiber{
+  margin:0;
+}
+/* W duzym urzadzeniu i kartach diody FIBER juz sa nad adapterami. */
+
+/* Dwa abonamenty obok siebie: 2 lata dominujace po lewej, rok cichszy po prawej. */
+#plans .plan-bottom .price--dual{
+  display:block;
+  width:100%;
+  container-type:inline-size;
+}
+#plans .price-comparison{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  width:100%;
+  align-items:stretch;
+}
+#plans .price-variant{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  min-width:0;
+}
+#plans .price-variant--24{padding-right:9px;}
+#plans .price-variant--12{
+  padding-left:12px;
+  border-left:1px solid #3b4756;
+  color:#b0bac6;
+}
+#plans .price-variant--12.is-current{border-left-color:#8996a6;}
+#plans .price-line{
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  column-gap:4px;
+  row-gap:3px;
+  min-height:39px;
+}
+#plans .price-variant--24 .price-line strong{
+  font-size:clamp(33px,2.8vw,40px);
+  line-height:1;
+  letter-spacing:-.06em;
+  color:#f6f8fb;
+}
+#plans .price-variant--12 .price-line strong{
+  font-size:clamp(26px,2.2vw,30px);
+  line-height:1;
+  letter-spacing:-.05em;
+  color:#b4bdc9;
+  font-weight:800;
+}
+#plans .price-line > span:not(.price-placeholder){
+  font-size:11px;
+  white-space:nowrap;
+  color:#a9b4c1;
+}
+#plans .price-variant--12 .price-line > span:not(.price-placeholder){color:#8593a2;}
+#plans .price-contract{
+  display:block;
+  font-size:10px;
+  font-weight:500;
+  line-height:1.3;
+  color:#aab6c5;
+}
+#plans .price-variant--12 .price-contract{color:#8291a1;}
+#plans .price-variant--unavailable .price-placeholder{
+  font-size:12px;
+  font-weight:750;
+  line-height:1.3;
+  color:#93a0af;
+}
+#plans .price-variant--unavailable .price-contract{color:#8190a0;}
+@container (max-width: 145px){
+  #plans .price-comparison{grid-template-columns:1fr;gap:9px;}
+  #plans .price-variant--24{padding-right:0;}
+  #plans .price-variant--12{
+    padding:8px 0 0;
+    border-left:0;
+    border-top:1px solid #3b4756;
+  }
+  #plans .price-variant--12.is-current{border-top-color:#8996a6;}
+  #plans .price-line{min-height:0;}
+}
+@media(max-width:480px){
+  #plans .price-variant--24{padding-right:6px;}
+  #plans .price-variant--12{padding-left:8px;}
+  #plans .price-variant--24 .price-line strong{font-size:34px;}
+  #plans .price-variant--12 .price-line strong{font-size:26px;}
+  #plans .price-line > span:not(.price-placeholder){font-size:10px;}
+  #plans .price-contract{font-size:9px;}
+}

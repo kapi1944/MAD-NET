@@ -44,15 +44,18 @@ test('cennik: specjalistyczny main i chronione moduły pozostają zgodne z basel
   const skrotyEtapu05 = {
   "assets/css/hero-hybryda.css": "bfd2165094d6bb39ce53236f554731b0e1b4354ee6f1a40cf0324b089a7dcc1b",
   "assets/css/styles.css": "ed95b7d0065ee14a8662773b5792df72366e5d944e93a80a913b481f98750721",
-  "assets/js/cennik.js": "3350adc77c6547b6f1579732f3033c3e254e19efd7bb90900a25b5e00a4d65e7",
+  "assets/js/cennik.js": "fbab08d0eb3165ba5f6179cc3adc942baa563c863f046514db4789d7b1579371",
   "assets/js/hero-rack.js": "4c11a7d6bdc8da3ac38af32bcd09cd50d54dec15b647d4d56ffa1d424e8e91aa",
   "assets/js/dostepnosc.js": "e7cbb3a8c562bf2c48eb99710384613e13ff3485ae0f1b467cd06f1bbfb8f041"
 };
   for (const wpis of manifest.filter(wpis => wpis.plik.startsWith('assets/'))) {
     // Git może zmieniać końce linii tekstu między Windows a Linux.
     const bajty = czytaj(wpis.plik === 'index.html' ? 'cennik.html' : wpis.plik);
-    if (skrotyEtapu05[wpis.plik]) assert.equal(skrot(bajty.toString().replaceAll('\r\n', '\n')), skrotyEtapu05[wpis.plik], wpis.plik);
-    else assert.ok([wpis.sha256Git, wpis.sha256Lokalny].includes(skrot(/\.(css|js|svg)$/.test(wpis.plik) ? bajty.toString().replaceAll('\r\n', '\n') : bajty)), wpis.plik);
+    if (skrotyEtapu05[wpis.plik]) {
+      assert.equal(skrot(bajty.toString().replaceAll('\r\n', '\n')), skrotyEtapu05[wpis.plik], wpis.plik);
+    } else {
+      assert.ok([wpis.sha256Git, wpis.sha256Lokalny].includes(skrot(/\.(css|js|svg)$/.test(wpis.plik) ? bajty.toString().replaceAll('\r\n', '\n') : bajty)), wpis.plik);
+    }
   }
   const przed = execFileSync('git', ['show', '603ecb6b34509db80b46d659b0eeb1368eb2f275:cennik.html'], {encoding:'utf8'});
   const opisEtapu05 = "<p class=\"compare-sub\">Zaznacz dowolną liczbę technologii — jedną, dwie lub wszystkie trzy. Wybrane cenniki pojawią się poniżej, jeden pod drugim, z oddzielnymi kolorami i pełnymi parametrami. Diody ACT w portach LAN i FIBER oraz symbole Wi-Fi w tabeli AIR pokazują tempo odpowiadające prędkości pakietu.</p>";

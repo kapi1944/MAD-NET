@@ -260,7 +260,18 @@ try {
         await strona.locator(`[data-term="${okres}"]`).click();
         assert.equal(await strona.locator(`[data-term="${okres}"]`).getAttribute('aria-pressed'), 'true');
         assert.equal(await strona.locator('#availability-form input[name="umowa"]:checked').inputValue(), okres);
-        assert.deepEqual(await strona.locator('#plans .price strong').allTextContents(), pakiety.map(pakiet => okres === 'none' ? 'Wycena indywidualna' : String(pakiet[okres === '12' ? 3 : 2])));
+        // Sprawdź obie ceny oraz informację o braku ceny rocznej FIBER.
+        if (okres === 'none') {
+          assert.deepEqual(await strona.locator('#plans .price strong').allTextContents(), pakiety.map(() => 'Wycena indywidualna'));
+        } else {
+          assert.deepEqual(await strona.locator('#plans .price-variant--24 strong').allTextContents(), pakiety.map(pakiet => String(pakiet[2])));
+          assert.deepEqual(await strona.locator('#plans .price-variant--12 strong').allTextContents(), pakiety.filter(pakiet => pakiet[3] != null).map(pakiet => String(pakiet[3])));
+          assert.equal(await strona.locator('#plans .price-variant--12').count(), pakiety.length);
+          assert.deepEqual(await strona.locator('#plans .price-variant--12 .price-placeholder').allTextContents(), pakiety.filter(pakiet => pakiet[3] == null).map(() => 'Na zapytanie'));
+          assert.equal(await strona.locator('#plans .price-variant--24.is-current').count(), okres === '24' ? pakiety.length : 0);
+          assert.equal(await strona.locator('#plans .price-variant--12.is-current').count(), okres === '12' ? pakiety.length : 0);
+          assert.ok(await strona.locator('#plans .price-variant').evaluateAll(warianty=>warianty.every(wariant=>wariant.scrollWidth<=wariant.clientWidth+1)),`Ceny mieszczą się w kartach ${technologia} przy ${szerokosc}px`);
+        }
       }
       assert.equal(await strona.locator('[data-term="12"]').isDisabled(), technologia === 'FIBER');
       if (await strona.locator('#compare-show-all').isEnabled()) await strona.locator('#compare-show-all').click();
